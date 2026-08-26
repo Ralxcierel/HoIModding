@@ -1,0 +1,677 @@
+#Add to scripted triggers if more levels of hyper inflation is added
+USA_trade_bonus_to = {
+	#targeted_modifier = {
+    #    modifier = USA_trade_bonus_to
+    #    target = THIS   # THIS = the receiving country
+    #}
+}
+
+run_debug_event = {
+	country_event = { id = debug.1 }
+}
+
+USA_defense_readiness_boost_small = {
+	if = {
+		limit = {
+			has_any_power_balance = yes
+		}
+		add_power_balance_value = {
+			id = usa_defense_readiness_bop
+			value = 0.01
+		}
+	}
+	else = {
+		custom_effect_tooltip = should_add_defense_readiness_tt
+	}
+}
+USA_defense_readiness_boost_medium = {
+	if = {
+		limit = {
+			has_any_power_balance = yes
+		}
+		add_power_balance_value = {
+			id = usa_defense_readiness_bop
+			value = 0.015
+		}
+	}
+	else = {
+		custom_effect_tooltip = should_add_defense_readiness_tt
+	}
+}
+USA_defense_readiness_boost_large = {
+	if = {
+		limit = {
+			has_any_power_balance = yes
+		}
+		add_power_balance_value = {
+			id = usa_defense_readiness_bop
+			value = 0.02
+		}
+	}
+	else = {
+		custom_effect_tooltip = should_add_defense_readiness_tt
+	}
+}
+USA_defense_readiness_boost_huge = {
+	if = {
+		limit = {
+			has_any_power_balance = yes
+		}
+		add_power_balance_value = {
+			id = usa_defense_readiness_bop
+			value = 0.025
+		}
+	}
+	else = {
+		custom_effect_tooltip = should_add_defense_readiness_tt
+	}
+}
+USA_defense_readiness_boost_humungous = {
+	if = {
+		limit = {
+			has_any_power_balance = yes
+		}
+		add_power_balance_value = {
+			id = usa_defense_readiness_bop
+			value = 0.10
+		}
+	}
+	else = {
+		custom_effect_tooltip = should_add_defense_readiness_tt
+	}
+}
+
+USA_mil_spending_increase_small = {
+    custom_effect_tooltip = generic_skip_one_line_tt
+	custom_effect_tooltip = mil_spending_tt
+	add_to_variable = {
+		USA_eco_dy_consumer_goods_factor = 0.05
+		tooltip = special_consumer_goods_factor_tt
+	}
+	skip_line_tt = yes
+	USA_defense_readiness_boost_small = yes
+}
+USA_mil_spending_increase_medium = {
+    custom_effect_tooltip = generic_skip_one_line_tt
+	custom_effect_tooltip = mil_spending_tt
+	add_to_variable = {
+		USA_eco_dy_consumer_goods_factor = 0.10
+		tooltip = special_consumer_goods_factor_tt
+	}
+	skip_line_tt = yes
+	USA_defense_readiness_boost_medium = yes
+}
+USA_mil_spending_increase_large = {
+    custom_effect_tooltip = generic_skip_one_line_tt
+	custom_effect_tooltip = mil_spending_tt
+	add_to_variable = {
+		USA_eco_dy_consumer_goods_factor = 0.15
+		tooltip = special_consumer_goods_factor_tt
+	}
+	skip_line_tt = yes
+	USA_defense_readiness_boost_large = yes
+}
+USA_mil_spending_increase_huge = {
+    custom_effect_tooltip = generic_skip_one_line_tt
+	custom_effect_tooltip = mil_spending_tt
+	add_to_variable = {
+		USA_eco_dy_consumer_goods_factor = 0.20
+		tooltip = special_consumer_goods_factor_tt
+	}
+	skip_line_tt = yes
+	USA_defense_readiness_boost_huge = yes
+}
+
+USA_victory_act_opinions = {
+	custom_effect_tooltip = generic_skip_one_line_tt
+	if = {
+		limit = {
+			NOT = {
+				victory_act_taken = yes
+			}
+		}
+		every_country = {
+			limit = {
+				NOT = {
+					original_tag = USA
+				}
+				OR = {
+					is_in_faction_with = USA
+					has_war_with = USA
+				}
+			}
+			add_opinion_modifier = {
+				target = USA
+				modifier = usa_victory_act_modifier
+			}
+		}
+	}
+	else = {
+		every_country = {
+			limit = {
+				NOT = {
+					original_tag = USA
+				}
+				OR = {
+					is_in_faction_with = USA
+					has_war_with = USA
+				}
+			}
+			add_opinion_modifier = {
+				target = USA
+				modifier = usa_victory_act_more_modifier
+			}
+		}
+	}
+}
+
+add_infrastructure = {
+	if = {
+		limit = {
+			free_building_slots = {
+				building = infrastructure
+				size > 0
+			}
+		}
+		add_building_construction = {
+			type = infrastructure
+			level = 1
+			instant_build = yes
+		}
+	}
+}
+add_infrastructure_2 = {
+	if = {
+		limit = {
+			free_building_slots = {
+				building = infrastructure
+				size > 1
+			}
+		}
+		add_building_construction = {
+			type = infrastructure
+			level = 2
+			instant_build = yes
+		}
+	}
+	else = {
+		add_infrastructure = yes
+	}
+}
+add_infrastructure_3 = {
+	if = {
+		limit = {
+			free_building_slots = {
+				building = infrastructure
+				size > 2
+			}
+		}
+		add_building_construction = {
+			type = infrastructure
+			level = 3
+			instant_build = yes
+		}
+	}
+	else = {
+		add_infrastructure_2 = yes
+	}
+}
+
+add_civ = {
+	if = {
+		limit = {
+			free_building_slots = {
+				building = industrial_complex
+				size > 0
+			}
+		}
+		add_building_construction = {
+			type = industrial_complex
+			level = 1
+			instant_build = yes
+		}
+	}
+}
+
+add_mil = {
+	if = {
+		limit = {
+			free_building_slots = {
+				building = arms_factory
+				size > 0
+			}
+		}
+		add_building_construction = {
+			type = arms_factory
+			level = 1
+			instant_build = yes
+		}
+	}
+}
+
+add_dockyard = {
+	if = {
+		limit = {
+			free_building_slots = {
+				building = dockyard
+				size > 0
+			}
+		}
+		add_building_construction = {
+			type = dockyard
+			level = 1
+			instant_build = yes
+		}
+	}
+}
+
+add_air_base = {
+	if = {
+		limit = {
+			free_building_slots = {
+				building = air_base
+				size > 0
+			}
+		}
+		add_building_construction = {
+			type = air_base
+			level = 1
+			instant_build = yes
+		}
+	}
+}
+add_air_base_2 = {
+	if = {
+		limit = {
+			free_building_slots = {
+				building = air_base
+				size > 1
+			}
+		}
+		add_building_construction = {
+			type = air_base
+			level = 2
+			instant_build = yes
+		}
+	}
+	else = {
+		add_air_base = yes
+	}
+}
+add_air_base_3 = {
+	if = {
+		limit = {
+			free_building_slots = {
+				building = air_base
+				size > 2
+			}
+		}
+		add_building_construction = {
+			type = air_base
+			level = 3
+			instant_build = yes
+		}
+	}
+	else = {
+		add_air_base_2 = yes
+	}
+}
+add_air_base_4 = {
+	if = {
+		limit = {
+			free_building_slots = {
+				building = air_base
+				size > 3
+			}
+		}
+		add_building_construction = {
+			type = air_base
+			level = 4
+			instant_build = yes
+		}
+	}
+	else = {
+		add_air_base_3 = yes
+	}
+}
+
+USA_modify_gov = {
+	if = {
+		limit = {
+			NOT = {
+				has_dynamic_modifier = USA_government_dynamic_modifier
+			}
+		}
+		hidden_effect = {
+			add_dynamic_modifier = {
+				modifier = USA_government_dynamic_modifier
+			}
+		}
+		custom_effect_tooltip = USA_mod_gov_new_tt
+	}
+	else = {
+		custom_effect_tooltip = USA_mod_gov_tt
+	}
+}
+
+skip_line_tt = {
+	custom_effect_tooltip = generic_skip_one_line_tt
+}
+
+USA_modify_airforce = {
+	if = {
+		limit = {
+			has_dynamic_modifier = {
+				modifier = USA_air_dynamic_modifier_2
+			}
+		}
+		custom_effect_tooltip = air_mod_tt
+	}
+	else = {
+		custom_effect_tooltip = aircorp_mod_tt
+	}
+}
+
+USA_modify_army = {
+	custom_effect_tooltip = army_mod_tt
+}
+
+USA_modify_navy = {
+	custom_effect_tooltip = navy_mod_tt
+}
+
+USA_modify_oss = {
+	if = {
+		limit = {
+			has_dynamic_modifier = {
+				modifier = USA_agency_dynamic_modifier
+			}
+		}
+		if = {
+			limit = {
+				has_completed_focus = USA_the_central_intelligence_agency
+			}
+			custom_effect_tooltip = cia_mod_tt
+		}
+		else = {
+			custom_effect_tooltip = oss_mod_tt
+		}
+	}
+	else = {
+		add_dynamic_modifier = {
+			modifier = USA_agency_dynamic_modifier
+		}
+	}
+}
+
+USA_modify_eco = {
+	#skip_line_tt = yes
+	if = {
+		limit = {
+			has_dynamic_modifier = USA_economy_dynamic_modifier_great_depression
+		}
+		custom_effect_tooltip = great_depression_mod_tt
+	}
+	else = {
+		custom_effect_tooltip = econ_mod_tt
+	}
+}
+
+USA_modify_mic = {
+	custom_effect_tooltip = mic_mod_tt
+}
+
+USA_improve_eco_dynamic_modifier = {
+	hidden_effect = {
+		if = {
+			limit = {
+				has_dynamic_modifier = USA_economy_dynamic_modifier_great_depression
+			}
+			remove_dynamic_modifier = {
+				modifier = USA_economy_dynamic_modifier_great_depression
+			}
+			add_dynamic_modifier = {
+				modifier = USA_economy_dynamic_modifier_good
+			}
+		}
+		else_if = {
+			limit = {
+				has_dynamic_modifier = USA_economy_dynamic_modifier_bad
+			}
+			remove_dynamic_modifier = {
+				modifier = USA_economy_dynamic_modifier_bad
+			}
+			add_dynamic_modifier = {
+				modifier = USA_economy_dynamic_modifier_good
+			}
+		}
+		else_if = {
+			limit = {
+				has_dynamic_modifier = USA_economy_dynamic_modifier_good
+				not = { has_government = communism }
+			}
+			remove_dynamic_modifier = {
+				modifier = USA_economy_dynamic_modifier_good
+			}
+			add_dynamic_modifier = {
+				modifier = USA_economy_dynamic_modifier_great
+			}
+		}
+		else_if = {
+			limit = {
+				has_dynamic_modifier = USA_economy_dynamic_modifier_good
+				has_government = communism
+			}
+			remove_dynamic_modifier = {
+				modifier = USA_economy_dynamic_modifier_good
+			}
+			add_dynamic_modifier = {
+				modifier = USA_economy_dynamic_modifier_great_communist
+			}
+		}
+	}
+}
+
+USA_spawn_national_guard = {
+	create_unit = {
+		division = "division_template = \"National Guard Division\" start_experience_factor = 0.2 start_equipment_factor = 1.0"
+		owner = ROOT
+		count = 1
+	}
+}
+
+USA_create_2A_militia_template = {
+	if = {
+		limit = {
+			NOT = { has_template = "2A Militia" }
+		}
+		division_template = {
+			name = "2A Militia" 
+			division_names_group = USA_MILITIA_01
+			#override_model = ITA_cavalry_alt_1_entity
+			is_locked = yes
+
+			# Represents lesser-equipped colonial units
+			regiments = { 
+				militia = { x = 0 y = 0 }
+				militia = { x = 0 y = 1 }
+				militia = { x = 1 y = 0 }
+				militia = { x = 1 y = 1 }
+			} 
+
+			priority = 0 
+		}
+	}
+}
+USA_spawn_2A_militia = {
+	create_unit = {
+		division = "division_template = \"2A Militia\" start_experience_factor = 0.09 start_equipment_factor = 1.0"
+		owner = ROOT
+		count = 1
+	}
+}
+
+USA_NC_increase_conservative_resistance = {
+	if = { limit = { has_idea = usa_conservative_resistance_idea_1 }
+		custom_effect_tooltip = USA_NC_increase_conservative_resistance_tt
+		swap_ideas = {
+			remove_idea = usa_conservative_resistance_idea_1
+			add_idea = usa_conservative_resistance_idea_2
+		}
+	}
+	else_if = { limit = { has_idea = usa_conservative_resistance_idea_2 }
+		custom_effect_tooltip = USA_NC_increase_conservative_resistance_tt
+		swap_ideas = {
+			remove_idea = usa_conservative_resistance_idea_2
+			add_idea = usa_conservative_resistance_idea_3
+		}
+	}
+	else_if = { limit = { has_idea = usa_conservative_resistance_idea_3 }
+		custom_effect_tooltip = USA_NC_increase_conservative_resistance_tt
+		swap_ideas = {
+			remove_idea = usa_conservative_resistance_idea_3
+			add_idea = usa_conservative_resistance_idea_4
+		}
+	}
+	else_if = { limit = { has_idea = usa_conservative_resistance_idea_4 }
+		custom_effect_tooltip = USA_NC_increase_conservative_resistance_tt
+		swap_ideas = {
+			remove_idea = usa_conservative_resistance_idea_4
+			add_idea = usa_conservative_resistance_idea_5
+		}
+	}
+	else_if = { limit = { has_idea = usa_conservative_resistance_idea_5 }
+		# trigger event
+		USA_start_NC_civil_war = yes
+		custom_effect_tooltip = USA_NC_increase_conservative_resistance_tt_2
+	}
+}
+USA_NC_decrease_conservative_resistance = {
+	if = { limit = { has_idea = usa_conservative_resistance_idea_5 }
+		custom_effect_tooltip = USA_NC_decrease_conservative_resistance_tt
+		swap_ideas = {
+			remove_idea = usa_conservative_resistance_idea_5
+			add_idea = usa_conservative_resistance_idea_4
+		}
+	}
+	else_if = { limit = { has_idea = usa_conservative_resistance_idea_4 }
+		custom_effect_tooltip = USA_NC_decrease_conservative_resistance_tt
+		swap_ideas = {
+			remove_idea = usa_conservative_resistance_idea_4
+			add_idea = usa_conservative_resistance_idea_3
+		}
+	}
+	else_if = { limit = { has_idea = usa_conservative_resistance_idea_3 }
+		custom_effect_tooltip = USA_NC_decrease_conservative_resistance_tt
+		swap_ideas = {
+			remove_idea = usa_conservative_resistance_idea_3
+			add_idea = usa_conservative_resistance_idea_2
+		}
+	}
+	else_if = { limit = { has_idea = usa_conservative_resistance_idea_2 }
+		custom_effect_tooltip = USA_NC_decrease_conservative_resistance_tt
+		swap_ideas = {
+			remove_idea = usa_conservative_resistance_idea_2
+			add_idea = usa_conservative_resistance_idea_1
+		}
+	}
+	else_if = { limit = { has_idea = usa_conservative_resistance_idea_1 }
+		# trigger event
+		custom_effect_tooltip = USA_NC_decrease_conservative_resistance_tt_2
+		remove_ideas = usa_conservative_resistance_idea_1
+	}
+}
+
+USA_remove_all_BOP_modifiers = { # (1-18)
+	hidden_effect = { # Remove bop modifiers
+		country_event = { id = new_usa_remove_bop_mod.1 }
+		country_event = { id = new_usa_remove_bop_mod.2 }
+		country_event = { id = new_usa_remove_bop_mod.3 }
+		country_event = { id = new_usa_remove_bop_mod.4 }
+		country_event = { id = new_usa_remove_bop_mod.5 }
+		country_event = { id = new_usa_remove_bop_mod.6 }
+		country_event = { id = new_usa_remove_bop_mod.7 }
+		country_event = { id = new_usa_remove_bop_mod.8 }
+		country_event = { id = new_usa_remove_bop_mod.9 }
+		country_event = { id = new_usa_remove_bop_mod.10 }
+		country_event = { id = new_usa_remove_bop_mod.11 }
+		country_event = { id = new_usa_remove_bop_mod.12 }
+		country_event = { id = new_usa_remove_bop_mod.13 }
+		country_event = { id = new_usa_remove_bop_mod.14 }
+		country_event = { id = new_usa_remove_bop_mod.15 }
+		country_event = { id = new_usa_remove_bop_mod.16 }
+		country_event = { id = new_usa_remove_bop_mod.17 }
+		country_event = { id = new_usa_remove_bop_mod.18 }
+	}
+}
+
+USA_NC_remove_conservative_resistance = {
+	hidden_effect = {
+		if		= { limit = { has_idea = usa_conservative_resistance_idea_5 } remove_ideas = usa_conservative_resistance_idea_5 }
+		else_if = { limit = { has_idea = usa_conservative_resistance_idea_4 } remove_ideas = usa_conservative_resistance_idea_4 }
+		else_if = { limit = { has_idea = usa_conservative_resistance_idea_3 } remove_ideas = usa_conservative_resistance_idea_3 }
+		else_if = { limit = { has_idea = usa_conservative_resistance_idea_2 } remove_ideas = usa_conservative_resistance_idea_2 }
+		else_if = { limit = { has_idea = usa_conservative_resistance_idea_1 } remove_ideas = usa_conservative_resistance_idea_1 }
+	}
+}
+
+USA_start_NC_civil_war = {
+	hidden_effect = {
+		if = {
+			limit = { not = { has_global_flag = USA_NC_civil_war_started_flag } }
+			set_global_flag = USA_NC_civil_war_started_flag
+
+			if = {
+				limit = { communism > 0.65 }
+				set_global_flag = USA_NC_civil_war_high_support_flag
+			}
+			else_if = {
+				limit = { communism > 0.45 }
+				set_global_flag = USA_NC_civil_war_medium_support_flag
+			}
+			else = {
+				set_global_flag = USA_NC_civil_war_low_support_flag
+			}
+
+			USA_NC_remove_conservative_resistance = yes
+			country_event = { id = usa_new_nc_civil_war_event.1 } # starts the civil war
+		}
+	}
+}
+
+USA_NC_apply_surprise_ti = {
+	if = { limit = { has_global_flag = usa_nc_early_resist_nothing }
+		add_timed_idea = {
+			idea = usa_nc_taken_by_surprise_ti_4
+			days = 90
+		}
+	}
+	else_if = { limit = { has_global_flag = usa_nc_early_resist_low }
+		#random_other_country = {
+			#limit = {
+			#	tag = USA
+			#	has_government = democratic
+			#}
+		add_timed_idea = {
+			idea = usa_nc_taken_by_surprise_ti_3
+			days = 90
+		}
+		#}
+	}
+	else_if = { limit = { has_global_flag = usa_nc_early_resist_medium }
+		add_timed_idea = {
+			idea = usa_nc_taken_by_surprise_ti_2
+			days = 90
+		}
+	}
+	else_if = { limit = { has_global_flag = usa_nc_early_resist_high }
+		add_timed_idea = {
+			idea = usa_nc_taken_by_surprise_ti_1
+			days = 90
+		}
+	}
+}
+
+set_america_being_invaded = {
+	hidden_effect = { set_country_flag = america_is_being_invaded_flag set_country_flag = USA_has_completed_homeland_defense_emergency_act_focus_equivalent country_event = new_usa_mainland_invasion.1 }
+}

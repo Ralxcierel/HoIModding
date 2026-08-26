@@ -1,0 +1,184 @@
+spriteTypes = {	
+
+  # NEW IDEAS
+ 	spriteType = { # super_science
+		name = "GFX_idea_super_science"
+		texturefile = "gfx/interface/new_ideas/super_science.dds"
+	}
+	spriteType = { # usa_air_spirit
+		name = "GFX_idea_usa_air_spirit"
+		texturefile = "gfx/interface/new_ideas/usa_air_spirit.dds"
+	}
+	spriteType = { # usa_army_spirit
+		name = "GFX_idea_usa_army_spirit"
+		texturefile = "gfx/interface/new_ideas/usa_army_spirit.dds"
+	}
+	spriteType = { # usa_navy_spirit
+		name = "GFX_idea_usa_navy_spirit"
+		texturefile = "gfx/interface/new_ideas/usa_navy_spirit.dds"
+	}
+	spriteType = { # usa_mic_spirit
+		name = "GFX_idea_usa_mic_spirit"
+		texturefile = "gfx/interface/new_ideas/usa_mic_spirit.dds"
+	}
+	spriteType = { # usa_jpl_spirit
+		name = "GFX_idea_usa_jpl_spirit"
+		texturefile = "gfx/interface/new_ideas/usa_jpl_spirit.dds"
+	}
+	spriteType = { # usa_american_protectorate
+		name = "GFX_idea_usa_american_protectorate"
+		texturefile = "gfx/interface/new_ideas/usa_american_protectorate.dds"
+	}
+	spriteType = { # western_electric_mio
+		name = "GFX_idea_western_electric_mio"
+		texturefile = "gfx/interface/new_ideas/western_electric_mio.dds"
+	}
+	spriteType = { # home_of_the_free_2_idea
+		name = "GFX_idea_home_of_the_free_2_idea"
+		texturefile = "gfx/interface/new_ideas/home_of_the_free_2_idea.dds"
+	}
+	spriteType = { # idea_generic_conference_blue
+		name = "GFX_idea_generic_conference_blue"
+		texturefile = "gfx/interface/new_ideas/idea_generic_conference_blue.dds"
+	}
+	spriteType = { # idea_usa_new_world_order
+		name = "GFX_idea_usa_new_world_order"
+		texturefile = "gfx/interface/new_ideas/idea_usa_new_world_order.dds"
+	}
+	spriteType = { # idea_flank_the_maginot
+		name = "GFX_idea_flank_the_maginot"
+		texturefile = "gfx/interface/new_ideas/idea_flank_the_maginot.dds"
+	}
+	spriteType = { # idea_pentagon_icon
+		name = "GFX_idea_pentagon_icon"
+		texturefile = "gfx/interface/new_ideas/idea_pentagon_icon.dds"
+	}
+	spriteType = { # idea_cold_world
+		name = "GFX_idea_cold_world"
+		texturefile = "gfx/interface/new_ideas/idea_cold_world.dds"
+	}
+	spriteType = { # idea_american_super_economy
+		name = "GFX_idea_american_super_economy"
+		texturefile = "gfx/interface/new_ideas/idea_american_super_economy.dds"
+	}
+	spriteType = { # idea_communist_american_super_economy
+		name = "GFX_idea_communist_american_super_economy"
+		texturefile = "gfx/interface/new_ideas/idea_communist_american_super_economy.dds"
+	}
+
+  # NEW DECISIONS
+	spriteType = { # decision_category_usa_homeland_defense
+		name = "GFX_decision_category_usa_homeland_defense"
+		texturefile = "gfx/interface/new_decisions/decision_category_usa_homeland_defense.dds"
+	}
+	spriteType = { # decision_category_partner_in_arms
+		name = "GFX_decision_category_partner_in_arms"
+		texturefile = "gfx/interface/new_decisions/decision_category_partner_in_arms.dds"
+	}
+
+  # NEW TEXT ICONS
+  	spriteType = { # usa_war_credits_texticon
+		name = "GFX_usa_war_credits_texticon"
+		texturefile = "gfx/interface/new_ideas/usa_war_credits_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = { # usa_star_overlay_0_texticon
+		name = "GFX_usa_star_overlay_0_texticon"
+		texturefile = "gfx/interface/new_ideas/usa_star_overlay_0_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = { # usa_star_overlay_1_texticon
+		name = "GFX_usa_star_overlay_1_texticon"
+		texturefile = "gfx/interface/new_ideas/usa_star_overlay_1_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = { # usa_star_overlay_2_texticon
+		name = "GFX_usa_star_overlay_2_texticon"
+		texturefile = "gfx/interface/new_ideas/usa_star_overlay_2_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = { # usa_star_overlay_3_texticon
+		name = "GFX_usa_star_overlay_3_texticon"
+		texturefile = "gfx/interface/new_ideas/usa_star_overlay_3_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = { # usa_CGStar_text_icon
+		name = "GFX_usa_CGStar_text_icon"
+		texturefile = "gfx/interface/new_ideas/usa_CGStar_text_icon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = { # usa_CGStar_empty_text_icon
+		name = "GFX_usa_CGStar_empty_text_icon"
+		texturefile = "gfx/interface/new_ideas/usa_CGStar_empty_text_icon.dds"
+		legacy_lazy_load = no
+	}
+
+  # NEW PORTRAITS
+	spriteType = { # idea_william_friedman
+		name = "GFX_idea_william_friedman"
+		texturefile = "gfx/interface/new_leaders/idea_william_friedman.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = { # idea_ralph_van_deman
+		name = "GFX_idea_ralph_van_deman"
+		texturefile = "gfx/interface/new_leaders/idea_ralph_van_deman.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = { # idea_harry_hopkins
+		name = "GFX_idea_harry_hopkins"
+		texturefile = "gfx/interface/new_leaders/idea_harry_hopkins.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = { # idea_henry_kaiser
+		name = "GFX_idea_henry_kaiser"
+		texturefile = "gfx/interface/new_leaders/idea_henry_kaiser.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = { # idea_henry_cabot_lodge_jr
+		name = "GFX_idea_henry_cabot_lodge_jr"
+		texturefile = "gfx/interface/new_leaders/idea_henry_cabot_lodge_jr.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = { # idea_willis_lee
+		name = "GFX_idea_willis_lee"
+		texturefile = "gfx/interface/new_leaders/idea_willis_lee.dds"
+		legacy_lazy_load = no
+	}
+
+
+ # KR IDEAS
+ 	spriteType = { # ACW_usa_support
+		name = "GFX_idea_ACW_usa_support"
+		texturefile = "gfx/interface/kr_ideas/ACW_usa_support.dds"
+	}
+	spriteType = { # CZE_Uranium_Research_b
+		name = "GFX_idea_CZE_Uranium_Research_b"
+		texturefile = "gfx/interface/kr_ideas/CZE_Uranium_Research_b.dds"
+	}
+	spriteType = { # generic_lightbulb
+		name = "GFX_idea_generic_lightbulb"
+		texturefile = "gfx/interface/kr_ideas/generic_lightbulb.dds"
+	}
+
+
+ # R56 IDEAS
+  	spriteType = { # r56_idea_BRA_elet_pic
+		name = "GFX_idea_r56_idea_BRA_elet_pic"
+		texturefile = "gfx/interface/r56_ideas/r56_idea_BRA_elet_pic.dds"
+	}
+	spriteType = { # r56_idea_generic_research_by_example
+		name = "GFX_idea_r56_idea_generic_research_by_example"
+		texturefile = "gfx/interface/r56_ideas/r56_idea_generic_research_by_example.dds"
+	}
+	spriteType = { # 
+		name = "GFX_idea_r56_idea_TXS_cowboy_traditions"
+		texturefile = "gfx/interface/r56_ideas/r56_idea_TXS_cowboy_traditions.dds"
+	}
+
+ # NEW ECONOMY LAWS
+	spriteType = { # idea_the_eagles_might_economy
+		name = "GFX_idea_the_eagles_might_economy"
+		texturefile = "gfx/interface/new_ideas/idea_the_eagles_might_economy.dds"
+	}	
+
+}

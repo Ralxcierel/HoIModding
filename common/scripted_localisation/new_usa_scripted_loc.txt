@@ -1,0 +1,146 @@
+defined_text = { # USAGetCGLevelText
+	name = USAGetCGLevelText
+	text = {
+		trigger = {
+			check_variable = { var = USA_eco_dy_consumer_goods_factor value = 0.75 compare = greater_than_or_equals }
+		}
+		localization_key = usa_inlay_window_consumer_goods_5_tt
+	}
+	text = {
+		trigger = {
+			check_variable = { var = USA_eco_dy_consumer_goods_factor value = 0.5 compare = greater_than_or_equals }
+		}
+		localization_key = usa_inlay_window_consumer_goods_4_tt
+	}
+	text = {
+		trigger = {
+			check_variable = { var = USA_eco_dy_consumer_goods_factor value = 0.25 compare = greater_than_or_equals }
+		}
+		localization_key = usa_inlay_window_consumer_goods_3_tt
+	}
+	text = {
+		trigger = {
+			check_variable = { var = USA_eco_dy_consumer_goods_factor value = 0 compare = greater_than_or_equals }
+		}
+		localization_key = usa_inlay_window_consumer_goods_2_tt
+	}
+	text = {
+		trigger = {
+			check_variable = { var = USA_eco_dy_consumer_goods_factor value = -0.25 compare = greater_than_or_equals }
+		}
+		localization_key = usa_inlay_window_consumer_goods_1_tt
+	}
+	text = {
+		trigger = {
+			check_variable = { var = USA_eco_dy_consumer_goods_factor value = -0.25 compare = less_than }
+		}
+		localization_key = usa_inlay_window_consumer_goods_0_tt
+	}
+	#text = {
+	#	trigger = {
+	#		OR = {
+	#			has_dynamic_modifier = { modifier = GER_mefo_bills_modifier }
+	#			has_dynamic_modifier = { modifier = GER_economy_of_conquest_modifier }
+	#		}
+	#		check_variable = { GER_industrial_consumer_goods_factor < 1 }
+	#	}
+	#	localization_key = GER_increasing_cg_tt 
+	#}
+}
+
+defined_text = { # USAGetRecoveryLevelText
+	name = USAGetRecoveryLevelText
+	text = {
+		trigger = {
+			has_country_flag = {
+				flag = usa_core_recovery_flag
+				value > 3
+			}
+		}
+		localization_key = usa_inlay_window_recovery_4_tt
+	}
+	text = {
+		trigger = {
+			has_country_flag = {
+				flag = usa_core_recovery_flag
+				value > 2
+			}
+		}
+		localization_key = usa_inlay_window_recovery_3_tt
+	}
+	text = {
+		trigger = {
+			has_country_flag = {
+				flag = usa_core_recovery_flag
+				value > 1
+			}
+		}
+		localization_key = usa_inlay_window_recovery_2_tt
+	}
+	text = {
+		trigger = {
+			has_country_flag = {
+				flag = usa_core_recovery_flag
+				value > 0
+			}
+		}
+		localization_key = usa_inlay_window_recovery_1_tt
+	}
+	text = {
+		trigger = {
+			NOT = {
+				has_country_flag = usa_core_recovery_flag
+			}
+		}
+		localization_key = usa_inlay_window_recovery_0_tt
+	}
+}
+
+defined_text = { # USAGetResistanceText
+	name = USAGetResistanceText
+	text = {
+		trigger = {
+			has_idea = usa_conservative_resistance_idea_5
+		}
+		localization_key = usa_inlay_window_CRB_tt_2
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_idea = usa_conservative_resistance_idea_4
+				has_idea = usa_conservative_resistance_idea_3
+				has_idea = usa_conservative_resistance_idea_2
+				has_idea = usa_conservative_resistance_idea_1
+			}
+		}
+		localization_key = usa_inlay_window_CRB_tt_1
+	}
+	text = {
+		trigger = {
+			has_conservative_resistance = no
+		}
+		localization_key = usa_inlay_window_CRB_tt_0
+	}
+}
+
+#defined_text = { # USAGetConsumerGoodsTooltip
+#	name = USAGetConsumerGoodsTooltip
+#	text = {
+#		trigger = {
+#			has_country_flag = {
+#				flag = usa_core_recovery_flag
+#				value > 3
+#			}
+#		}
+#		localization_key = usa_inlay_window_recovery_4_tt
+#	}
+#	text = {
+#		trigger = {
+#			has_country_flag = {
+#				flag = usa_core_recovery_flag
+#				value > 2
+#			}
+#		}
+#		localization_key = usa_inlay_window_recovery_3_tt
+#	}
+#}

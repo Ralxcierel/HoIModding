@@ -1,0 +1,20 @@
+{
+    "background.editor": {
+
+
+        "useFront": false,
+        "style": {
+            "background-position": "0% 0%",
+            "background-size": "120%",
+            "opacity": 0.0
+        },
+        "styles": [
+            {},
+            {},
+            {}
+        ],
+        "images": ["C:/Users/homes/Desktop/6bec6d4720a638ff6886defc28195cddbc4e1f64.png"],
+        "interval": 0,
+        "random": false
+    }
+}

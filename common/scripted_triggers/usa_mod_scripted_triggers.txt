@@ -1,0 +1,862 @@
+#	Example:
+# 
+#	example_trigger = {
+#		tag = GER
+#		is_ai = no
+#	}
+#
+#
+#	In a script file:
+#
+#	trigger = {
+#		example_trigger = yes
+#	}
+#
+
+
+spurred_growth_short = {
+	custom_trigger_tooltip = {
+		tooltip = spurred_growth_half_year_tt
+		check_variable = { var = senators_support value = quorum_low compare = greater_than_or_equals }
+		check_variable = { var = representatives_support value = 174 compare = greater_than_or_equals }
+	}
+}
+
+
+nav_caps_ready = {
+    custom_trigger_tooltip = {
+        tooltip = nav_caps_ready_tt
+        check_variable = {
+            var = usa_nav_caps_var
+            value = 3
+            compare = greater_than_or_equals
+        }
+    }
+}
+
+mios_chosen_ready = {
+    custom_trigger_tooltip = {
+        tooltip = mios_chosen_ready_tt
+        check_variable = {
+            var = usa_mios_chosen
+            value = 2
+            compare = greater_than_or_equals
+        }
+    }
+}
+
+usa_south_american_protectorate_req = {
+    custom_trigger_tooltip = {
+        tooltip = usa_south_american_protectorate_req_tt
+        OR = {
+			COL = {
+				is_puppet_of = USA
+			}
+			VEN = {
+				is_puppet_of = USA
+			}
+			BRA = {
+				is_puppet_of = USA
+			}
+			PRU = {
+				is_puppet_of = USA
+			}
+			ECU = {
+				is_puppet_of = USA
+			}
+			BOL = {
+				is_puppet_of = USA
+			}
+			CHL = {
+				is_puppet_of = USA
+			}
+			ARG = {
+				is_puppet_of = USA
+			}
+			URG = {
+				is_puppet_of = USA
+			}
+			PAR = {
+				is_puppet_of = USA
+			}
+			GYA = {
+				is_puppet_of = USA
+			}
+			SUR = {
+				is_puppet_of = USA
+			}
+			CAY = {
+				is_puppet_of = USA
+			}
+		}
+    }
+}
+
+usa_sa_states_req = {
+    custom_trigger_tooltip = {
+        tooltip = usa_sa_states_req_tt
+        OR = {
+			COL = {
+				is_puppet_of = USA
+			}
+			VEN = {
+				is_puppet_of = USA
+			}
+			BRA = {
+				is_puppet_of = USA
+			}
+			PRU = {
+				is_puppet_of = USA
+			}
+			ECU = {
+				is_puppet_of = USA
+			}
+			BOL = {
+				is_puppet_of = USA
+			}
+			CHL = {
+				is_puppet_of = USA
+			}
+			ARG = {
+				is_puppet_of = USA
+			}
+			URG = {
+				is_puppet_of = USA
+			}
+			PAR = {
+				is_puppet_of = USA
+			}
+			GYA = {
+				is_puppet_of = USA
+			}
+			SUR = {
+				is_puppet_of = USA
+			}
+			CAY = {
+				is_puppet_of = USA
+			}
+            MEX = {
+				is_puppet_of = USA
+			}
+            NIC = {
+				is_puppet_of = USA
+			}
+            GUA = {
+				is_puppet_of = USA
+			}
+            HON = {
+				is_puppet_of = USA
+			}
+            PAN = {
+				is_puppet_of = USA
+			}
+            ELS = {
+				is_puppet_of = USA
+			}
+            BLZ = {
+				is_puppet_of = USA
+			}
+            COS = {
+				is_puppet_of = USA
+			}
+            CUB = {
+				is_puppet_of = USA
+			}
+            HAI = {
+				is_puppet_of = USA
+			}
+            DOM = {
+				is_puppet_of = USA
+			}
+            JAM = {
+				is_puppet_of = USA
+			}
+            CRC = {
+				is_puppet_of = USA
+			}
+            TRI = {
+				is_puppet_of = USA
+			}
+            BAS = {
+				is_puppet_of = USA
+			}
+            GDL = {
+				is_puppet_of = USA
+			}
+            BAH = {
+				is_puppet_of = USA
+			}
+		}
+    }
+}
+
+victory_act_taken = {
+    OR = {
+		has_completed_focus = USA_victory_act
+		has_completed_focus = USA_victory_act_americas
+		has_completed_focus = USA_victory_act_asia
+	}
+}
+
+is_american_nation = {
+	OR = {
+		original_tag = CAN
+		original_tag = USA
+		original_tag = COL
+		original_tag = VEN
+		original_tag = BRA
+		original_tag = PRU
+		original_tag = ECU
+		original_tag = BOL
+		original_tag = CHL
+		original_tag = ARG
+		original_tag = URG
+		original_tag = PAR
+		original_tag = GYA
+		original_tag = SUR
+		original_tag = CAY
+		original_tag = MEX
+		original_tag = NIC
+		original_tag = GUA
+		original_tag = HON
+		original_tag = PAN
+		original_tag = ELS
+		original_tag = BLZ
+		original_tag = COS
+		original_tag = CUB
+		original_tag = HAI
+		original_tag = DOM
+		original_tag = JAM
+		original_tag = CRC
+		original_tag = TRI
+		original_tag = BAS
+		original_tag = GDL
+		original_tag = BAH
+	}
+}
+
+is_european_nation = { # starting nations
+	OR = {
+		original_tag = GER
+		original_tag = IRE
+		original_tag = ENG
+		original_tag = FRA
+		original_tag = SPA
+		original_tag = POR
+		original_tag = ITA
+		original_tag = BEL
+		original_tag = LUX
+		original_tag = HOL
+		original_tag = DEN
+		original_tag = SWI
+		original_tag = AUS
+		original_tag = YUG
+		original_tag = POL
+		original_tag = CZE
+		original_tag = LIT
+		original_tag = LAT
+		original_tag = EST
+		original_tag = ROM
+		original_tag = HUN
+		original_tag = BUL
+		original_tag = GRE
+		original_tag = SOV
+		original_tag = ALB
+		original_tag = TUR
+		original_tag = FIN
+		original_tag = SWE
+		original_tag = NOR
+		original_tag = ICE
+	}
+}
+
+is_asian_nation = {
+	OR = {
+		original_tag = JAP
+		original_tag = CHI
+		original_tag = BHU
+		original_tag = BRM
+		original_tag = RAJ
+		original_tag = PRC
+		original_tag = GSM #Gansu Ma
+		original_tag = GDC #Guangdong Clique
+		original_tag = GXC
+		original_tag = HBC # Hebei Chahar
+		original_tag = KHM # Khotan Ma
+		original_tag = MAN
+		original_tag = MEN 
+		original_tag = MON
+		original_tag = NEP
+		original_tag = NXM # Ningxia Ma
+		original_tag = XIC # Northeastern Army
+		original_tag = XSM # Qinghai Ma
+		original_tag = SND # Shandong Clique
+		original_tag = SHX
+		original_tag = SIA
+		original_tag = SIC # Sichuan Clique
+		original_tag = SIK
+		original_tag = TAN
+		original_tag = TIB
+		original_tag = XSM
+		original_tag = YUN
+
+		# releasables
+		original_tag = CAM
+		original_tag = KOR
+		original_tag = LAO
+		original_tag = SNG # Singapore
+		original_tag = FOR # Taiwan
+		original_tag = VIN
+	}
+}
+
+is_oceanic_nation = {
+	OR = {
+		original_tag = AST
+		original_tag = NZL
+		original_tag = PHI
+		original_tag = MAL
+		original_tag = INS
+
+		# releasables
+		original_tag = HAW
+		original_tag = GUM
+		original_tag = FSM
+		original_tag = PLU # Palau
+		original_tag = PNG
+		original_tag = SAM
+		original_tag = RAP
+		original_tag = SOL
+		original_tag = TAH
+	}
+}
+
+is_chinese_nation = {
+	OR = {
+		original_tag = CHI
+		original_tag = PRC
+		original_tag = GSM #Gansu Ma
+		original_tag = GDC #Guangdong Clique
+		original_tag = GXC
+		original_tag = HBC # Hebei Chahar
+		original_tag = KHM # Khotan Ma
+		original_tag = MAN
+		original_tag = MEN 
+		original_tag = NXM # Ningxia Ma
+		original_tag = XIC # Northeastern Army
+		original_tag = XSM # Qinghai Ma
+		original_tag = SND # Shandong Clique
+		original_tag = SHX
+		original_tag = SIC # Sichuan Clique
+		original_tag = SIK
+		original_tag = XSM
+		original_tag = YUN
+	}	
+}
+
+is_oceanic_state = {
+	OR = {
+		# Dutch East Indies
+		state = 672 # Sumatra
+		state = 335 # Java
+		state = 667 # Lesser Sundra Islands
+		state = 1022 # Interior Borneo
+		state = 334 # Kalimantan
+		state = 673 # Sulawesi
+		state = 668 # The Moluccas
+		state = 738 # Aru Islands
+		state = 669 # West Papua
+
+		# British Malayan Islands
+		state = 333 # Sarawak
+		state = 1024 # Sabah
+
+		# British Islands past Indonesia
+		state = 712 # Cocos Islands
+		state = 711 # Christmas Island
+		state = 733 # Andaman
+
+		# British Territories
+		state = 636 # Fiji
+		state = 643 # Ellice Islands
+		state = 725 # Nauru
+		state = 639 # Gilbert Islands
+		state = 270 # Pitcairn Island
+
+		# Portuguese Territories
+		state = 721 # Portuguese Timor
+
+		# Australian Territories
+		state = 523 # Papua
+		state = 979 # Kaiser-Wilhelmsland
+		state = 737 # Bismarck
+		state = 634 # Solomon Islands
+
+		# Australia
+		state = 522 # Western Australia
+		state = 871 # South West Australia
+		state = 519 # South Australia
+		state = 517 # Victoria
+		state = 518 # Tasmania
+		state = 285 # New South Wales
+		state = 521 # Queensland
+		state = 873 # South West Queensland
+		state = 872 # North Queensland
+		state = 674 # Central Australia
+		state = 520 # Northern Territory
+		state = 870 # North West Australia
+
+		# French Islands
+		state = 734 # Nendo
+		state = 635 # New Caledonia
+		state = 641 # Tahiti
+
+		# New Zealand Territories
+		state = 726 # Samoa
+
+		# New Zealand
+		state = 284 # North Island
+		state = 723 # South Island
+
+		# American Islands
+		state = 642 # Phoenix Island
+		state = 727 # Line Islands
+		state = 630 # Johnston Atoll
+		state = 629 # Hawaii
+		state = 631 # Midway Island
+		state = 632 # Wake Island
+		state = 638 # Guam
+		state = 650 # Attu Island
+
+		# Phillipines
+		state = 623 # Luzon
+		state = 1027 # Bataan
+		state = 327 # Manila
+		state = 624 # Central Islands
+		state = 625 # Eastern Visayas
+		state = 628 # Western Visayas
+		state = 1026 # Northern Mindanao
+		state = 1025 # Zamboanga
+		state = 627 # Davao
+		state = 626 # Palawan
+
+		# Japanese Islands
+		state = 524 # Taiwan
+		state = 526 # Okinawa
+		state = 647 # Palau
+		state = 684 # Caroline Islands
+		state = 646 # Saipan
+		state = 633 # Marshall Islands
+		state = 645 # Iwo Jima
+		state = 648 # Minamitorishima
+	}
+}
+
+is_australian_state = {
+	OR = {
+		# Australia
+		state = 522 # Western Australia
+		state = 871 # South West Australia
+		state = 519 # South Australia
+		state = 517 # Victoria
+		state = 518 # Tasmania
+		state = 285 # New South Wales
+		state = 521 # Queensland
+		state = 873 # South West Queensland
+		state = 872 # North Queensland
+		state = 674 # Central Australia
+		state = 520 # Northern Territory
+		state = 870 # North West Australia
+	}
+}
+
+is_indian_state = { # starting states
+	OR = {
+		# Starting India + French and Portuguese
+		state = 982 # Madras States
+		state = 423 # Southern Madras
+		state = 425 # Mysore
+		state = 320 # French India
+		state = 321 # Goa
+		state = 983 # Kolhapur and Deccan
+		state = 424 # Northern Madras
+		state = 429 # Bombay
+		state = 427 # Hyderabad
+		state = 426 # Orissa
+		state = 984 # Bastar
+		state = 436 # Central Provinces
+		state = 437 # Central India
+		state = 428 # Gujarat
+		state = 443 # Sind
+		state = 444 # South Baluchistan
+		state = 988 # North Baluchistan
+		state = 1012 # Kalat
+		state = 445 # Sibi
+		state = 989 # Bahawalpur
+		state = 433 # Rajahsthan
+		state = 991 # Gwalior
+		state = 987 # Waziristan
+		state = 442 # Peshawar
+		state = 787 # Northern Kashmir
+		state = 441 # Kashmir
+		state = 440 # West Punjab
+		state = 986 # East Punjab
+		state = 439 # Delhi
+		state = 438 # United Provinces
+		state = 435 # Bihar
+		state = 431 # West Bengal
+		state = 430 # East Bengal
+		state = 985 # Sikkim
+		state = 432 # Assam
+		state = 434 # Arunachal Pradesh
+		state = 990 # Manipur
+	}
+}
+
+is_not_pacifist = {
+	NOT = {
+		has_country_flag = usa_pacifist_flag
+	}
+}
+
+has_written_war_plans = {
+	custom_trigger_tooltip = {
+		tooltip = has_written_war_plans_tt
+	}
+	hidden_trigger = {
+		OR = {
+			has_completed_focus = USA_write_war_plan_black
+			has_completed_focus = USA_write_war_plan_crimson
+			has_completed_focus = USA_write_war_plan_diamond
+			has_completed_focus = USA_write_war_plan_chrome
+			has_completed_focus = USA_write_war_plan_gold
+			has_completed_focus = USA_write_war_plan_green
+			has_completed_focus = USA_write_war_plan_jade
+			has_completed_focus = USA_write_war_plan_lime
+			has_completed_focus = USA_write_war_plan_mint
+			has_completed_focus = USA_write_war_plan_onyx
+			has_completed_focus = USA_write_war_plan_orange
+			has_completed_focus = USA_write_war_plan_red
+			has_completed_focus = USA_write_war_plan_ruby
+			has_completed_focus = USA_write_war_plan_scarlet_garnet
+			has_completed_focus = USA_write_war_plan_silver
+			has_completed_focus = USA_write_war_plan_teal
+			has_completed_focus = USA_write_war_plan_turquoise
+			has_completed_focus = USA_write_war_plan_vermilion
+			has_completed_focus = USA_write_war_plan_white
+			has_completed_focus = USA_write_war_plan_yellow
+		}
+	}
+}
+
+is_mexican_state = {
+	custom_trigger_tooltip = {
+		tooltip = is_mexican_state_tt
+	}
+	hidden_trigger = {
+		OR = {
+			# Mexico
+			state = 484 # Baja
+			state = 483 # Sonora
+			state = 482 # Chihuahua
+			state = 481 # Durango
+			state = 480 # Coahuila
+			state = 479 # Tamaulipas
+			state = 478 # Jalisco
+			state = 477 # Veracruz
+			state = 476 # Oaxaca
+			state = 485 # Guerrero
+			state = 475 # Chiapas
+			state = 474 # Yucatan
+		}
+	}
+}
+is_canadian_state = {
+	custom_trigger_tooltip = {
+		tooltip = is_canadian_state_tt
+	}
+	hidden_trigger = {
+		OR = {
+			# Canada
+			state = 864 # Yukon Territory
+			state = 472 # N. W. Territories
+			state = 471 # Prince Rupert
+			state = 739 # Haida Gwaii
+			state = 473 # British Columbia
+			state = 740 # Vancouver Island
+			state = 470 # Alberta
+			state = 469 # Saskatchewan
+			state = 865 # N. Saskatchewan
+			state = 683 # Nunavut
+			state = 867 # Northern Manitoba
+			state = 467 # Manitoba
+			state = 682 # Northern Ontario
+			state = 866 # Districts of Ontario
+			state = 276 # Southern Ontario
+			state = 468 # Saint Lawrence
+			state = 862 # Ouest du Quebec
+			state = 465 # New Brunswick
+			state = 464 # Nova Scotia
+			state = 863 # Maurice
+			state = 466 # Nord du Quebec
+			state = 861 # Saguenay
+			state = 860 # Cote-Nord
+			state = 332 # Labrador
+			state = 331 # Newfoundland
+		}
+	}
+}
+
+is_mainland_american_state = {
+	custom_trigger_tooltip = {
+		tooltip = is_mainland_american_state_tt
+	}
+	hidden_trigger = {
+		OR = {
+			# USA Mainland
+			state = 386 # Washington
+			state = 385 # Oregon
+			state = 378 # California
+			state = 377 # Arizona
+			state = 379 # Nevada
+			state = 387 # Idaho
+			state = 388 # Montana
+			state = 381 # Wyoming
+			state = 380 # Utah
+			state = 376 # New Mexico
+			state = 382 # Colorado
+			state = 381 # Wyoming
+			state = 389 # North Dakota
+			state = 390 # South Dakota
+			state = 384 # Nebraska
+			state = 383 # Kansas
+			state = 374 # Oklahoma
+			state = 375 # Texas
+			state = 371 # Louisiana
+			state = 372 # Arkansas
+			state = 373 # Missouri
+			state = 392 # Iowa
+			state = 391 # Minnesota
+			state = 394 # Wisconsin
+			state = 395 # Illinois
+			state = 370 # Mississippi
+			state = 368 # Tennessee
+			state = 369 # Kentucky
+			state = 396 # Indiana
+			state = 393 # Michigan
+			state = 261 # Ohio
+			state = 367 # Alabama
+			state = 366 # Florida
+			state = 365 # Georgia
+			state = 364 # South Carolina
+			state = 363 # North Carolina
+			state = 362 # Virginia
+			state = 816 # West Virginia
+			state = 361 # Maryland
+			state = 360 # Pennsylvania
+			state = 358 # New York
+			state = 359 # New Jersey
+			state = 357 # New England
+		}
+	}
+}
+is_secure_mainland_american_state = {
+	is_core_of = USA
+	is_fully_controlled_by = USA
+	is_mainland_american_state = yes
+}
+america_is_being_invaded = { # Checks the mainland
+	custom_trigger_tooltip = {
+		tooltip = america_is_being_invaded_tt
+		hidden_trigger = {
+			#OR = {
+			#	NOT = {
+			#		any_core_state = {
+			#			OR = {
+			#				is_mainland_american_state = yes
+			#				#is_mexican_state = yes
+			#				#is_canadian_state = yes
+			#			}
+			#			is_fully_controlled_by = USA
+			#		}
+			#	}
+			#	any_core_state = {
+			#		is_mainland_american_state = yes
+			#		OR = {
+			#			has_contested_owner = prev
+			#			
+			#		}
+			#	}
+			#}
+			any_state = {
+				is_mainland_american_state = yes
+				or = {
+					has_contested_owner = prev
+					NOT = { is_fully_controlled_by = USA }
+				}
+			}
+			
+		}
+	}
+	
+}
+
+recovery_past_stage_0 = {
+	custom_trigger_tooltip = {
+		tooltip = recovery_past_stage_0_tt
+		hidden_trigger = {
+			#OR = {
+			#	has_completed_focus = USA_double_down_on_the_new_deal
+			#	has_completed_focus = USA_rebalancing_finances
+			#	has_completed_focus = USA_repeal_the_new_deal
+			#}
+			OR = {
+				has_country_flag = {
+					flag = usa_core_recovery_flag
+					value > 0
+				}
+			}
+		}
+	}
+}
+recovery_past_stage_1 = {
+	custom_trigger_tooltip = {
+		tooltip = recovery_past_stage_1_tt
+		hidden_trigger = {
+			#OR = {
+			#	has_completed_focus = USA_spurred_growth
+			#	has_completed_focus = USA_new_adjusted_compensation_act
+			#	has_completed_focus = USA_new_agricultural_adjustment_act
+			#}
+			OR = {
+				has_country_flag = {
+					flag = usa_core_recovery_flag
+					value > 1
+				}
+			}
+		}
+	}
+}
+recovery_past_stage_2 = {
+	custom_trigger_tooltip = {
+		tooltip = recovery_past_stage_2_tt
+		hidden_trigger = {
+			#OR = {
+			#	has_completed_focus = USA_accelerated_recovery
+			#	has_completed_focus = USA_natural_recovery
+			#	has_completed_focus = USA_new_protectionist_tariffs
+			#	has_completed_focus = USA_guns_and_shovels
+			#	has_completed_focus = USA_new_fair_labour_standards_act
+			#	has_completed_focus = USA_union_defense_act
+			#}
+			OR = {
+				has_country_flag = {
+					flag = usa_core_recovery_flag
+					value > 2
+				}
+			}
+		}
+	}
+}
+recovery_past_stage_3 = {
+	custom_trigger_tooltip = {
+		tooltip = recovery_past_stage_3_tt
+		hidden_trigger = {
+			#OR = {
+			#	has_completed_focus = USA_eagle_of_the_free_market
+			#	has_completed_focus = USA_timely_intervention
+			#	has_completed_focus = USA_new_income_tax_reform
+			#	has_completed_focus = USA_military_pensions
+			#	has_completed_focus = USA_new_federal_housing_act
+			#	has_completed_focus = USA_federal_zoning_reform
+			#}
+			OR = {
+				has_country_flag = {
+					flag = usa_core_recovery_flag
+					value > 3
+				}
+			}
+		}
+	}
+}
+
+low_num_states_evac = {
+   # custom_trigger_tooltip = {
+       #tooltip = nav_caps_ready_tt
+    check_variable = {
+        var = usa_num_states_evac
+        value = 4
+        compare = less_than
+    }
+    #}
+}
+medium_num_states_evac = {
+    check_variable = {
+        var = usa_num_states_evac
+        value = 10
+        compare = less_than
+    }
+}
+high_num_states_evac = {
+    check_variable = {
+        var = usa_num_states_evac
+        value = 10
+        compare = greater_than_or_equals
+    }
+}
+
+a_truly_democratic_economy_trigger = {
+    custom_trigger_tooltip = {
+        tooltip = a_truly_democratic_economy_ready_tt
+        check_variable = {
+            var = usa_a_truly_democratic_economy_var
+            value = 3
+            compare = greater_than_or_equals
+        }
+    }
+}
+
+has_taken_core_path_democratic = {
+	OR = {
+		has_completed_focus = USA_new_continue_the_new_deal
+		has_completed_focus = USA_restore_the_gold_standard
+		has_completed_focus = USA_government_de_intervention
+	}
+}
+has_taken_core_path_communist = {
+	OR = {
+		has_completed_focus = USA_an_american_five_year_plan
+	}
+}
+has_taken_core_path_non_democratic = {
+	OR = {
+		has_taken_core_path_communist = yes
+	}
+}
+
+does_not_have_conservative_resistance = {
+	Not = {
+		has_idea = usa_conservative_resistance_idea_1
+		has_idea = usa_conservative_resistance_idea_2
+		has_idea = usa_conservative_resistance_idea_3
+		has_idea = usa_conservative_resistance_idea_4
+		has_idea = usa_conservative_resistance_idea_5
+	}
+}
+has_conservative_resistance = {
+	Or = {
+		has_idea = usa_conservative_resistance_idea_1
+		has_idea = usa_conservative_resistance_idea_2
+		has_idea = usa_conservative_resistance_idea_3
+		has_idea = usa_conservative_resistance_idea_4
+		has_idea = usa_conservative_resistance_idea_5
+	}
+}
+
+USA_has_completed_homeland_defense_emergency_act_focus_equivalent = {
+	OR = {
+		has_completed_focus = USA_homeland_defense_emergency_act_focus
+		has_completed_focus = USA_homeland_defense_emergency_act_focus_NC
+	}
+}
+

@@ -1,0 +1,151 @@
+@tier1_cp_cap_increase = 10
+@tier2_cp_cap_increase = 20
+@tier3_cp_cap_increase = 30
+
+@tier1_cp_cost = 0
+@tier2_cp_cost = 0
+@tier3_cp_cost = 0
+
+@experience_gain_low = 0.03
+@experience_gain_medium = 0.06
+@experience_gain_high = 0.08
+
+@chief_experience_gain_low = 0.20
+@chief_experience_gain_medium = 0.30
+@chief_experience_gain_high = 0.40
+
+@army_chief_factor_1 = 0.42
+@army_chief_factor_2 = 0.68
+@army_chief_factor_3 = 0.84
+
+@navy_chief_factor_1 = 0.31
+@navy_chief_factor_2 = 0.57
+@navy_chief_factor_3 = 0.73
+
+@air_chief_factor_1 = 0.10
+@air_chief_factor_2 = 0.13
+@air_chief_factor_3 = 0.16
+
+@army_command_factor_1 = 0.42
+@army_command_factor_2 = 0.64
+@army_command_factor_3 = 0.86
+
+@navy_command_factor_1 = 0.41
+@navy_command_factor_2 = 0.62
+@navy_command_factor_3 = 0.83
+
+@air_command_factor_1 = 0.40
+@air_command_factor_2 = 0.60
+@air_command_factor_3 = 0.80
+
+
+
+leader_traits = {
+ # NEW
+	free_marketeer = { # For Landon Upgraded
+		random = no
+		
+		consumer_goods_factor = -0.10
+		democratic_acceptance = 10
+	}
+
+	architect_of_the_new_deal = { # For Roosevelt
+		random = no
+		
+		political_power_factor = 0.10
+		democratic_acceptance = 10
+	}
+	architect_of_the_new_deal_2 = { # For Roosevelt Upgraded
+		random = no
+		
+		political_power_factor = 0.15
+		democratic_acceptance = 10
+		stability_factor = 0.05
+	}
+	architect_of_the_new_deal_3 = { # For Roosevelt in the Nationalist Communist Path
+		random = no
+		
+		political_power_factor = 0.10
+		democratic_acceptance = 10
+		communism_acceptance = 10
+	}
+	architect_of_the_new_deal_4 = { # For Roosevelt in the Nationalist Communist Civil War Path
+		random = no
+		
+		political_power_factor = 0.05
+		democratic_acceptance = 5
+		communism_acceptance = 25
+		ai_focus_peaceful_factor = 0.20
+	}
+
+	head_of_army_signal_intelligence_service = {
+		random = no
+		sprite = 15
+		civilian_intel_factor = 0.05
+		army_intel_factor = 0.10
+		navy_intel_factor = 0.03
+		airforce_intel_factor = 0.03		
+		initiative_factor = 0.02
+
+		#experience_gain_army = @experience_gain_low
+
+		command_cap_increase = @tier2_cp_cap_increase
+		command_power = @tier2_cp_cost
+
+		#ai_will_do = {
+		#	factor = @army_command_factor_2
+		#	modifier = {
+		#		factor = 0
+		#		command_power < @tier1_cp_cost
+		#	}
+		#}
+	}
+
+	defensive_spymaster = {
+		random = no
+		sprite = 15
+		#operative_slot = 1
+		agency_upgrade_time = 0.15 # counters illusive gentleman
+		intelligence_agency_defense = 1
+		intel_network_gain_factor = 0.2
+	}
+
+	interventionist_strategist = {
+		random = no
+		sprite = 13
+		political_power_factor = 0.05
+		justify_war_goal_time = -0.15
+		lend_lease_tension = -0.25
+	}
+
+	liberty_ship_architect = {
+		random = no
+		sprite = 3
+		production_speed_dockyard_factor = 0.10
+		equipment_bonus = {
+			convoy = {
+				build_cost_ic = -0.15
+			}
+		}
+	}
+
+	war_hawk = {
+		random = no
+		sprite = 7
+		war_support_factor = 0.05
+		offensive_war_stability_factor = 0.05
+		mobilization_speed = 0.10
+	}
+
+	naval_gunnery_innovator = {
+		random = no
+		sprite = 3
+		naval_hit_chance = 0.15
+		naval_night_attack = 0.10
+		navy_anti_air_attack_factor = 0.10
+
+		command_cap_increase = @tier2_cp_cap_increase
+		command_power = @tier2_cp_cost
+	}
+
+}
