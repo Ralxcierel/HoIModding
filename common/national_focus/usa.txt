@@ -44,6 +44,7 @@
 # Fix mod-compatibility sub mods
 # Have Ching Lee added to admirals once Gunnery Innovations is taken
 # Have a FREE visual indicator that shows how funds are being distributed
+# Check the invasion event checker that it actually makes sense
 
 
 #########################################################

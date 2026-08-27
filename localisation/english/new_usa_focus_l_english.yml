@@ -24,6 +24,8 @@
  USA_regional_strategic_commands-general_title: "Regional Strategic Commands"
  USA_regional_strategic_commands-general_desc: "In order to better secure our vast homeland and provide unassailable hurdles for our attackers, we will establish regional strategic commands that can closely support and coordinate their local defensive operations and make way for decisive counterpushes. Each command will be a bastion for our leadership and a source of refuge for our hurt and injured soldiers and civilians."
 
+ TBA_TT: "§Y*Text to be added!*§!"
+
 # Stealth / Fake / Side-Message Focuses
  USA_SM_NC_decrease_conservative_resistance: "Conservative Resistance"
 
@@ -1864,3 +1866,30 @@
 
  USA_industrial_recovery_AN: "Industrial Recovery"
  USA_industrial_recovery_AN_desc: "The gears of industry, the steam of engines, the pace of the country is returning to a lively state once again. It has been greatly helped by those groups of Americans who have set upon themselves to work for their communities and cooperate with those groups beyond their towns."
+
+ USA_homeland_defense_emergency_act_focus_AN: "$USA_homeland_defense_emergency_act_focus-general_title$"
+ USA_homeland_defense_emergency_act_focus_AN_desc: "$USA_homeland_defense_emergency_act_focus-general_desc$"
+
+ USA_coordinate_militia_defenses_AN: "$USA_coordinate_militia_defenses-general_title$"
+ USA_coordinate_militia_defenses_AN_desc: "$USA_coordinate_militia_defenses-general_desc$"
+
+ USA_establish_strongholds_in_the_rockies_AN: "$USA_establish_strongholds_in_the_rockies-general_title$"
+ USA_establish_strongholds_in_the_rockies_AN_desc: "$USA_establish_strongholds_in_the_rockies-general_desc$"
+
+ USA_the_mississippi_bastions_AN: "$USA_the_mississippi_bastions-general_title$"
+ USA_the_mississippi_bastions_AN_desc: "$USA_the_mississippi_bastions-general_desc$"
+
+ USA_evacuate_civilians_and_industry_AN: "$USA_evacuate_civilians_and_industry-general_title$"
+ USA_evacuate_civilians_and_industry_AN_desc: "$USA_evacuate_civilians_and_industry-general_desc$"
+
+ USA_launch_the_counteroffensive_AN: "$USA_launch_the_counteroffensive-general_title$"
+ USA_launch_the_counteroffensive_AN_desc: "$USA_launch_the_counteroffensive-general_desc$"
+
+ USA_spirit_of_defiance_AN: "$USA_spirit_of_defiance-general_title$"
+ USA_spirit_of_defiance_AN_desc: "$USA_spirit_of_defiance-general_desc$"
+
+ USA_regional_strategic_commands_AN: "$USA_regional_strategic_commands-general_title$"
+ USA_regional_strategic_commands_AN_desc: "$USA_regional_strategic_commands-general_desc$"
+
+ USA_defend_our_homeland: "Defend Our Homeland!"
+ USA_defend_our_homeland_desc: "The hour has arrived: it is time to expel our foes from our homeland once and for all! We will deliver justice against the invaders and drown them in the waters that flank our country. They will not be able to resist us."
