@@ -13281,6 +13281,7 @@ focus_tree = {
  	focus = { # Tend to the Nation
 		id = USA_tend_to_the_nation
 		icon = GFX_focus_BRA_rio_protocol
+		overlay = GFX_new_focus_overlay_ideo_authoritarian
 		relative_position_id = USA_industrial_recovery_AN
 		#prerequisite = { focus = USA_stars_on_the_horizon }
 
@@ -13309,7 +13310,7 @@ focus_tree = {
 
 	focus = { # The Goldstar Network
 		id = USA_the_goldstar_network
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_generic_phoenix
 		relative_position_id = USA_tend_to_the_nation
 		prerequisite = { focus = USA_tend_to_the_nation }
 
@@ -13396,7 +13397,7 @@ focus_tree = {
 
 	focus = { # Properly Account for the Carpetbaggers
 		id = USA_properly_account_for_the_carpetbaggers
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_RAJ_go_into_hiding
 		relative_position_id = USA_tend_to_the_nation
 		prerequisite = { focus = USA_community_aid_programs }
 
@@ -33242,7 +33243,7 @@ focus_tree = {
    # Core
 	focus = { # Stars on the Horizon
 		id = USA_stars_on_the_horizon
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_RAJ_the_sun_sets
 		overlay = GFX_focus_fast_overlay_america
 		relative_position_id = USA_industrial_recovery_AN
 		prerequisite = { focus = USA_industrial_recovery_AN }
@@ -33272,7 +33273,7 @@ focus_tree = {
 
 	focus = { # The Eagle Lifts its Wings
 		id = USA_the_eagle_lifts_its_wings
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_generic_swooping_falcon
 		overlay = GFX_focus_fast_overlay_america
 		relative_position_id = USA_industrial_recovery_AN
 		prerequisite = { focus = USA_stars_on_the_horizon }
@@ -33302,7 +33303,7 @@ focus_tree = {
 
 	focus = { # Lady Liberty's Arsenal
 		id = USA_lady_libertys_arsenal
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_RUS_american_liberty
 		#overlay = GFX_focus_fast_overlay_america
 		relative_position_id = USA_industrial_recovery_AN
 		prerequisite = { focus = USA_the_eagle_lifts_its_wings }
@@ -33334,7 +33335,8 @@ focus_tree = {
    	focus = { # Federal Recovery Emergency Enterprise
 		id = USA_federal_recovery_emergency_enterprise
 		icon = GFX_focus_ARG_the_american_push
-		overlay = GFX_new_focus_fast_overlay_clock_reducer
+		#overlay = GFX_new_focus_fast_overlay_clock_reducer
+		overlay = GFX_new_focus_overlay_ideo_authoritarian
 		relative_position_id = USA_stars_on_the_horizon
 		#prerequisite = { focus = USA_stars_on_the_horizon }
 
@@ -33720,6 +33722,7 @@ focus_tree = {
 	focus = { # Crisis of Dependency
 		id = USA_crisis_of_dependency
 		icon = GFX_focus_BRA_end_the_state_of_emergency
+		overlay = GFX_new_focus_overlay_ideo_authoritarian
 		relative_position_id = USA_stars_on_the_horizon
 		#prerequisite = { focus = USA_stars_on_the_horizon }
 
@@ -33777,7 +33780,7 @@ focus_tree = {
 
 	focus = { # Invest in Infrastructure
 		id = USA_invest_in_infrastructure
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_generic_pipeline
 		relative_position_id = USA_crisis_of_dependency
 		prerequisite = { focus = USA_the_bay_otzen_plan }
 
@@ -33806,7 +33809,7 @@ focus_tree = {
 
 	focus = { # Reinforce Interstate Routes
 		id = USA_reinforce_interstate_routes
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_generic_road_investment
 		relative_position_id = USA_crisis_of_dependency
 		prerequisite = { focus = USA_invest_in_infrastructure }
 
@@ -33835,7 +33838,7 @@ focus_tree = {
 
 	focus = { # Finance New Mines and Refineries
 		id = USA_finance_new_mines_and_refineries
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_generic_autarky
 		relative_position_id = USA_crisis_of_dependency
 		prerequisite = { focus = USA_invest_in_infrastructure }
 
@@ -33864,7 +33867,7 @@ focus_tree = {
 
 	focus = { # Establish New Forestry Zones
 		id = USA_establish_new_forestry_zones
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_CHL_expand_the_forestry
 		relative_position_id = USA_crisis_of_dependency
 		prerequisite = { focus = USA_finance_new_mines_and_refineries }
 
@@ -33893,7 +33896,7 @@ focus_tree = {
 
 	focus = { # Tap Old Gold Mines
 		id = USA_tap_old_gold_mines
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_generic_expand_gold_mining
 		relative_position_id = USA_crisis_of_dependency
 		prerequisite = { focus = USA_finance_new_mines_and_refineries }
 
@@ -33922,7 +33925,7 @@ focus_tree = {
 
 	focus = { # The Continental Grid
 		id = USA_the_continental_grid
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_PHI_fortify_corregidor
 		relative_position_id = USA_crisis_of_dependency
 		prerequisite = { focus = USA_establish_new_forestry_zones }
 
@@ -33951,7 +33954,7 @@ focus_tree = {
 
 	focus = { # American Wellspring Administration
 		id = USA_american_wellspring_administration
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_SIA_the_midnight_meeting
 		relative_position_id = USA_crisis_of_dependency
 		prerequisite = { focus = USA_the_continental_grid }
 		mutually_exclusive = {
@@ -33983,7 +33986,7 @@ focus_tree = {
 
 	focus = { # American Architectural Administration
 		id = USA_american_architectural_administration
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_AFG_promote_the_counter_elite
 		relative_position_id = USA_crisis_of_dependency
 		prerequisite = { focus = USA_reinforce_interstate_routes }
 		mutually_exclusive = {
@@ -34015,7 +34018,7 @@ focus_tree = {
 
 	focus = { # Ohio Mechanical Complex
 		id = USA_ohio_mechanical_complex
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_SWE_landsverk
 		relative_position_id = USA_crisis_of_dependency
 		prerequisite = { focus = USA_the_bay_otzen_plan }
 
@@ -34044,7 +34047,7 @@ focus_tree = {
 	
 	focus = { # Strive for the Present
 		id = USA_strive_for_the_present
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_SIA_prepare_for_a_short_war
 		relative_position_id = USA_crisis_of_dependency
 		prerequisite = { focus = USA_ohio_mechanical_complex }
 		mutually_exclusive = {
@@ -34077,7 +34080,7 @@ focus_tree = {
 
 	focus = { # Rapid Growth
 		id = USA_rapid_growth
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_SIA_the_hammers_that_strike
 		relative_position_id = USA_crisis_of_dependency
 		prerequisite = { focus = USA_strive_for_the_present }
 
@@ -34106,7 +34109,7 @@ focus_tree = {
 
 	focus = { # Protect Our Tomorrow
 		id = USA_protect_our_tomorrow
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_SIA_intermediate_war_preparation
 		relative_position_id = USA_crisis_of_dependency
 		prerequisite = { focus = USA_ohio_mechanical_complex }
 		mutually_exclusive = {
@@ -34139,7 +34142,7 @@ focus_tree = {
 
 	focus = { # Promote the National Will
 		id = USA_promote_the_national_will
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_JAP_remove_the_weeds_from_the_crop
 		relative_position_id = USA_crisis_of_dependency
 		prerequisite = { focus = USA_protect_our_tomorrow }
 
@@ -34168,7 +34171,7 @@ focus_tree = {
 
 	focus = { # Steady Economic Policies
 		id = USA_steady_economic_policies
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_generic_cash_stimulus_plan
 		relative_position_id = USA_crisis_of_dependency
 		prerequisite = { focus = USA_promote_the_national_will }
 
@@ -34197,7 +34200,7 @@ focus_tree = {
 
 	focus = { # Plan for the Future
 		id = USA_plan_for_the_future
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_SIA_prepare_for_a_long_war
 		relative_position_id = USA_crisis_of_dependency
 		prerequisite = { focus = USA_ohio_mechanical_complex }
 		mutually_exclusive = {
@@ -34230,7 +34233,7 @@ focus_tree = {
 
 	focus = { # Invest in Long-Term Schemes
 		id = USA_invest_in_long_term_schemes
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_AFG_a_modern_economy
 		relative_position_id = USA_crisis_of_dependency
 		prerequisite = { focus = USA_plan_for_the_future }
 
@@ -34259,7 +34262,7 @@ focus_tree = {
 
 	focus = { # Blue Districts
 		id = USA_blue_districts
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_JAP_further_urban_investments
 		relative_position_id = USA_crisis_of_dependency
 		prerequisite = { focus = USA_invest_in_long_term_schemes }
 
@@ -34288,7 +34291,7 @@ focus_tree = {
 
 	focus = { # Increase Technological Funding
 		id = USA_increase_technological_funding
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_RAJ_special_economic_zones
 		relative_position_id = USA_crisis_of_dependency
 		prerequisite = { focus = USA_blue_districts }
 
@@ -34317,7 +34320,7 @@ focus_tree = {
 
 	focus = { # North American Autarky
 		id = USA_north_american_autarky
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_GER_autarky_achieved
 		relative_position_id = USA_crisis_of_dependency
 		prerequisite = { focus = USA_increase_technological_funding focus = USA_steady_economic_policies focus = USA_rapid_growth }
 		prerequisite = { focus = USA_american_architectural_administration focus = USA_american_wellspring_administration }
@@ -34349,6 +34352,7 @@ focus_tree = {
 	focus = { # Kickstart the Steel Belt
 		id = USA_kickstart_the_steel_belt
 		icon = GFX_focus_DEN_no_regulations
+		overlay = GFX_new_focus_overlay_ideo_authoritarian
 		relative_position_id = USA_stars_on_the_horizon
 		#prerequisite = { focus = USA_stars_on_the_horizon }
 
@@ -34377,7 +34381,7 @@ focus_tree = {
 
 	focus = { # Focus on our Fleets
 		id = USA_focus_on_our_fleets
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_PHI_gunboat_diplomacy
 		relative_position_id = USA_kickstart_the_steel_belt
 		prerequisite = { focus = USA_kickstart_the_steel_belt }
 
@@ -34406,7 +34410,7 @@ focus_tree = {
 
 	focus = { # Increase Naval Funding
 		id = USA_increase_naval_funding
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_PHI_thats_not_an_island
 		relative_position_id = USA_kickstart_the_steel_belt
 		prerequisite = { focus = USA_focus_on_our_army focus = USA_focus_on_our_fleets }
 		prerequisite = { focus = USA_industrial_funding }
@@ -34436,7 +34440,7 @@ focus_tree = {
 
 	focus = { # Shipwreckers
 		id = USA_shipwreckers
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_EUYL_generic_ship_repair_icon
 		relative_position_id = USA_kickstart_the_steel_belt
 		prerequisite = { focus = USA_increase_naval_funding focus = USA_increase_army_funding }
 		prerequisite = { focus = USA_yeomen_associations }
@@ -34466,7 +34470,7 @@ focus_tree = {
 
 	focus = { # Special Investments in Annapolis
 		id = USA_special_investments_in_annapolis
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_PHI_war_for_the_oceans
 		relative_position_id = USA_kickstart_the_steel_belt
 		prerequisite = { focus = USA_shipwreckers focus = USA_precision_mechanisms }
 		prerequisite = { focus = USA_improve_military_training }
@@ -34496,7 +34500,7 @@ focus_tree = {
 
 	focus = { # Focus on our Army
 		id = USA_focus_on_our_army
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_PHI_battalion_combat_teams
 		relative_position_id = USA_kickstart_the_steel_belt
 		prerequisite = { focus = USA_kickstart_the_steel_belt }
 
@@ -34525,7 +34529,7 @@ focus_tree = {
 
 	focus = { # Increase Army Funding
 		id = USA_increase_army_funding
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_generic_tank_production
 		relative_position_id = USA_kickstart_the_steel_belt
 		prerequisite = { focus = USA_focus_on_our_army focus = USA_focus_on_our_fleets }
 		prerequisite = { focus = USA_industrial_funding }
@@ -34555,7 +34559,7 @@ focus_tree = {
 
 	focus = { # Precision Mechanisms
 		id = USA_precision_mechanisms
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_SIA_night_time_training
 		relative_position_id = USA_kickstart_the_steel_belt
 		prerequisite = { focus = USA_increase_naval_funding focus = USA_increase_army_funding }
 		prerequisite = { focus = USA_yeomen_associations }
@@ -34585,7 +34589,7 @@ focus_tree = {
 
 	focus = { # Special Investments in Westpoint
 		id = USA_special_investments_in_westpoint
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_PHI_i_shall_return
 		relative_position_id = USA_kickstart_the_steel_belt
 		prerequisite = { focus = USA_shipwreckers focus = USA_precision_mechanisms }
 		prerequisite = { focus = USA_improve_military_training }
@@ -34615,7 +34619,7 @@ focus_tree = {
 
 	focus = { # Industrialize California
 		id = USA_industrialize_california
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_PER_feat_of_engineering
 		relative_position_id = USA_kickstart_the_steel_belt
 		prerequisite = { focus = USA_kickstart_the_steel_belt }
 
@@ -34644,7 +34648,7 @@ focus_tree = {
 
 	focus = { # Industrial Funding
 		id = USA_industrial_funding
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_JAP_expand_coal_islands
 		relative_position_id = USA_kickstart_the_steel_belt
 		prerequisite = { focus = USA_industrialize_california }
 
@@ -34673,7 +34677,7 @@ focus_tree = {
 	
 	focus = { # Yeomen Associations
 		id = USA_yeomen_associations
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_generic_public_works
 		relative_position_id = USA_kickstart_the_steel_belt
 		prerequisite = { focus = USA_industrial_funding }
 
@@ -34702,7 +34706,7 @@ focus_tree = {
 
 	focus = { # Improve Military Training
 		id = USA_improve_military_training
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_generic_soldier_salute
 		relative_position_id = USA_kickstart_the_steel_belt
 		prerequisite = { focus = USA_yeomen_associations }
 

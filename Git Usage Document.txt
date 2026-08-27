@@ -1,0 +1,10 @@
+The process is:
+1 : git pull
+    # This grabs everything from the repo and updates this one
+2 : *do work*
+3 : git add .
+    # This selects everything in the folder directory to be pushed later. Can also specify certain items to be pushed instead of . (the whole directory)
+4 : git commit -m "Message of what changed"
+    # This takes a snapshot of everything in 'add'
+5 : git push
+    # This pushes the work up to the Git repo
