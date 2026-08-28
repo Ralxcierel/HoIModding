@@ -18,8 +18,6 @@
 
 # 10 mils, 128 civs, 22 navs --> 14 mils, 162 civs, 24 navs [done using offmap factories to maintain compatibility with map mods]
 
-# Check events for transfer states
-
 # Add agency icons (including CIA)
 # Make AI simplified Chinese translation and french translation + update russian translation
 # Add new unique traits to MIOs
@@ -38,13 +36,12 @@
 # Redefine all of the election checks and events, as well as congress. (elections won't fire if five year plan is taken)
 
 # Update localizations
-# Check 'Purchase Colonial Holdovers' actually always transfers territory when a country accepts, and don't call the USA
 # Check 'dynamism unlocked' auto-completion (complaints that it ran for 240+ days)
 # Maybe add a NATO focus for the democratic tree
 # Fix mod-compatibility sub mods
 # Have Ching Lee added to admirals once Gunnery Innovations is taken
 # Have a FREE visual indicator that shows how funds are being distributed
-# Check the invasion event checker that it actually makes sense
+# Check the invasion event checker that it actually makes sense [seems good]
 
 
 #########################################################
@@ -4520,7 +4517,7 @@ focus_tree = {
 
 	focus = { # The Question of Our National Character
 		id = USA_the_question_of_our_national_character
-		icon = GFX_RUS_american_liberty
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
 		overlay = GFX_new_Star-Auto-overlay-1
 		prerequisite = { focus = USA_banner_clubs }
 		relative_position_id = USA_southern_crisis
@@ -13282,7 +13279,7 @@ focus_tree = {
  	focus = { # Tend to the Nation
 		id = USA_tend_to_the_nation
 		icon = GFX_focus_BRA_rio_protocol
-		overlay = GFX_new_focus_overlay_ideo_authoritarian
+		overlay = GFX_new_overlay_star_with_ideo_authoritarian
 		relative_position_id = USA_industrial_recovery_AN
 		#prerequisite = { focus = USA_stars_on_the_horizon }
 
@@ -13311,7 +13308,7 @@ focus_tree = {
 
 	focus = { # The Goldstar Network
 		id = USA_the_goldstar_network
-		icon = GFX_focus_generic_phoenix
+		icon = GFX_focus_PLACEHOLDER
 		relative_position_id = USA_tend_to_the_nation
 		prerequisite = { focus = USA_tend_to_the_nation }
 
@@ -13340,7 +13337,7 @@ focus_tree = {
 
 	focus = { # Community Aid Programs
 		id = USA_community_aid_programs
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_generic_welfare
 		relative_position_id = USA_tend_to_the_nation
 		prerequisite = { focus = USA_tend_to_the_nation }
 
@@ -13369,7 +13366,7 @@ focus_tree = {
 
 	focus = { # Our Place in the World
 		id = USA_our_place_in_the_world
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_BRA_north_and_south_america
 		relative_position_id = USA_tend_to_the_nation
 		prerequisite = { focus = USA_community_aid_programs }
 
@@ -13427,7 +13424,7 @@ focus_tree = {
 
 	focus = { # The Gettysburg Debate
 		id = USA_the_gettysburg_debate
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_INS_work_with_oil_barons
 		relative_position_id = USA_tend_to_the_nation
 		prerequisite = { focus = USA_properly_account_for_the_carpetbaggers }
 
@@ -13456,7 +13453,7 @@ focus_tree = {
 
 	focus = { # A Question of Confidence
 		id = USA_a_question_of_confidence
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_generic_sympathetic_judges
 		relative_position_id = USA_tend_to_the_nation
 		prerequisite = { focus = USA_community_aid_programs }
 
@@ -13485,7 +13482,7 @@ focus_tree = {
 
 	focus = { # America On Its Own
 		id = USA_america_on_its_own
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_usa_flag
 		relative_position_id = USA_tend_to_the_nation
 		prerequisite = { focus = USA_a_question_of_confidence }
 		mutually_exclusive = {
@@ -13517,7 +13514,7 @@ focus_tree = {
 
 	focus = { # First Among Equals
 		id = USA_first_among_equals
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_new_america_on_its_own
 		relative_position_id = USA_tend_to_the_nation
 		prerequisite = { focus = USA_a_question_of_confidence }
 		prerequisite = { focus = USA_our_place_in_the_world }
@@ -13550,7 +13547,7 @@ focus_tree = {
 
 	focus = { # Patriot Parades
 		id = USA_patriot_parades
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_spr_torchbearers_of_tomorrow
 		relative_position_id = USA_tend_to_the_nation
 		prerequisite = { focus = USA_america_on_its_own }
 
@@ -13579,7 +13576,7 @@ focus_tree = {
 
 	focus = { # Patriots Stand Ready
 		id = USA_patriots_stand_ready
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_NOR_empower_sivorg
 		relative_position_id = USA_tend_to_the_nation
 		prerequisite = { focus = USA_first_among_equals }
 
@@ -13637,7 +13634,7 @@ focus_tree = {
 
 	focus = { # The Parkerite Act
 		id = USA_the_parkerite_act
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_goal_generic_forceful_treaty
 		relative_position_id = USA_tend_to_the_nation
 		prerequisite = { focus = USA_the_philadelphia_fiasco }
 		prerequisite = { focus = USA_america_on_its_own }
@@ -13670,7 +13667,7 @@ focus_tree = {
 
 	focus = { # What the Future Holds
 		id = USA_what_the_future_holds
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_SIA_united_against_aggresion
 		relative_position_id = USA_tend_to_the_nation
 		prerequisite = { focus = USA_the_philadelphia_fiasco }
 		prerequisite = { focus = USA_first_among_equals }
@@ -13790,18 +13787,693 @@ focus_tree = {
 
 		}
 	}
+
+	focus = { # Swift and Lethal
+		id = USA_swift_and_lethal
+		icon = GFX_focus_RAJ_give_me_blood_and_i_will_grant_you_freedom
+		relative_position_id = USA_tend_to_the_nation
+		prerequisite = { focus = USA_paul_revere_rides_again }
+
+		x = 1
+		y = 7
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {
+			FOCUS_FILTER_Attending_to
+		}
+		available = {
+			has_civil_war = yes
+		}
+		
+		bypass = {
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = { # Peace Guarantees for Our Neighbors
+		id = USA_peace_guarantees_for_our_neighbors
+		icon = GFX_focus_generic_world_peace
+		relative_position_id = USA_tend_to_the_nation
+		prerequisite = { focus = USA_the_second_confederation focus = USA_the_goldstar_federation }
+		prerequisite = { focus = USA_the_parkerite_act }
+		mutually_exclusive = {
+			focus = USA_our_safety_before_yours
+			focus = USA_the_sun_has_already_set
+		}
+
+		x = -8
+		y = 8
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {
+			FOCUS_FILTER_Attending_to
+		}
+		available = {
+			#has_completed_focus = USA_the_parkerite_act
+		}
+		
+		bypass = {
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = { # Our Safety Before Yours
+		id = USA_our_safety_before_yours
+		icon = GFX_focus_GER_establish_protectorates_in_america
+		relative_position_id = USA_tend_to_the_nation
+		prerequisite = { focus = USA_the_second_confederation focus = USA_the_goldstar_federation }
+		mutually_exclusive = {
+			focus = USA_peace_guarantees_for_our_neighbors
+			focus = USA_the_sun_has_already_set
+		}
+
+		x = -3
+		y = 8
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {
+			FOCUS_FILTER_Attending_to
+		}
+		available = {
+			#has_completed_focus = USA_the_parkerite_act
+		}
+		
+		bypass = {
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = { # The Sun Has Already Set
+		id = USA_the_sun_has_already_set
+		icon = GFX_focus_SWE_as_the_barometer_falls
+		relative_position_id = USA_tend_to_the_nation
+		prerequisite = { focus = USA_the_second_confederation focus = USA_the_goldstar_federation }
+		prerequisite = { focus = USA_paul_revere_rides_again }
+		mutually_exclusive = {
+			focus = USA_peace_guarantees_for_our_neighbors
+			focus = USA_our_safety_before_yours
+		}
+
+		x = 2
+		y = 8
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {
+			FOCUS_FILTER_Attending_to
+		}
+		available = {
+			#has_completed_focus = USA_the_parkerite_act
+		}
+		
+		bypass = {
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = { # America's Rightful Claims
+		id = USA_americas_rightful_claims
+		icon = GFX_focus_usa_manifest_destiny
+		relative_position_id = USA_tend_to_the_nation
+		prerequisite = { focus = USA_peace_guarantees_for_our_neighbors focus = USA_our_safety_before_yours }
+		mutually_exclusive = {
+			focus = USA_golden_opportunities
+		}
+
+		x = -6
+		y = 9
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {
+			FOCUS_FILTER_Attending_to
+		}
+		available = {
+			#has_completed_focus = USA_the_parkerite_act
+		}
+		
+		bypass = {
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = { # Golden Opportunities
+		id = USA_golden_opportunities
+		icon = GFX_focus_NOR_lurk_in_the_shadows
+		relative_position_id = USA_tend_to_the_nation
+		prerequisite = { focus = USA_the_sun_has_already_set focus = USA_our_safety_before_yours }
+		mutually_exclusive = {
+			focus = USA_americas_rightful_claims
+		}
+
+		x = 0
+		y = 9
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {
+			FOCUS_FILTER_Attending_to
+		}
+		available = {
+			#has_completed_focus = USA_the_parkerite_act
+		}
+		
+		bypass = {
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = { # Ballads Between Brothers
+		id = USA_ballads_between_brothers
+		icon = GFX_focus_generic_happy_cheer
+		relative_position_id = USA_tend_to_the_nation
+		prerequisite = { focus = USA_peace_guarantees_for_our_neighbors }
+
+		x = -8
+		y = 10
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {
+			FOCUS_FILTER_Attending_to
+		}
+		available = {
+			#has_completed_focus = USA_the_parkerite_act
+		}
+		
+		bypass = {
+		}
+
+		completion_reward = {
+			# gives bonuses to neighbors and makes them like us
+		}
+	}
+
+	focus = { # Establish the Rio Grande
+		id = USA_establish_the_rio_grande
+		icon = GFX_focus_mex_caudillo_private_armies
+		relative_position_id = USA_tend_to_the_nation
+		prerequisite = { focus = USA_peace_guarantees_for_our_neighbors }
+
+		x = -9
+		y = 11
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {
+			FOCUS_FILTER_Attending_to
+		}
+		available = {
+			#has_completed_focus = USA_the_parkerite_act
+		}
+		
+		bypass = {
+		}
+
+		completion_reward = {
+			# creates an integrated puppet out of Tamaulipas and Coahuila
+		}
+	}
+
+	focus = { # Country Roads Through the North
+		id = USA_country_roads_through_the_north
+		icon = GFX_r56_goal_generic_foreign_diplomacy2
+		relative_position_id = USA_tend_to_the_nation
+		prerequisite = { focus = USA_peace_guarantees_for_our_neighbors }
+
+		x = -7
+		y = 11
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {
+			FOCUS_FILTER_Attending_to
+		}
+		available = {
+			#has_completed_focus = USA_the_parkerite_act
+		}
+		
+		bypass = {
+		}
+
+		completion_reward = {
+			# Canadian Corridor
+		}
+	}
+
+	focus = { # Prudence Across the Land
+		id = USA_prudence_across_the_land
+		icon = GFX_focus_SIA_built_to_withstand_every_flame
+		relative_position_id = USA_tend_to_the_nation
+		prerequisite = { focus = USA_establish_the_rio_grande focus = USA_country_roads_through_the_north }
+
+		x = -8
+		y = 12
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {
+			FOCUS_FILTER_Attending_to
+		}
+		available = {
+			#At least one of Canada and Mexico agreed
+		}
+		
+		bypass = {
+		}
+
+		completion_reward = {
+			# Grant bonuses to building defenses and defense in general
+		}
+	}
+
+	focus = { # Secure the Gulf
+		id = USA_secure_the_gulf
+		icon = GFX_focus_SIA_use_ships_as_generators
+		relative_position_id = USA_tend_to_the_nation
+		prerequisite = { focus = USA_the_sun_has_already_set }
+
+		x = 1
+		y = 10
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {
+			FOCUS_FILTER_Attending_to
+		}
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		completion_reward = {
+			# Grant bonuses to fighting in the Gulf of Mexico or just some navy bonuses in general. Grant invasion bonuses for a time too.
+		}
+	}
+
+	focus = { # The Rush for the Canal
+		id = USA_the_rush_for_the_canal
+		icon = GFX_PAN_future_of_the_canal_icon
+		relative_position_id = USA_tend_to_the_nation
+		prerequisite = { focus = USA_the_sun_has_already_set }
+
+		x = 3
+		y = 10
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {
+			FOCUS_FILTER_Attending_to
+		}
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		completion_reward = {
+			# Grant bonuses to fighting in the Gulf of Mexico or just some navy bonuses in general. Grant invasion bonuses for a time too.
+		}
+	}
+
+	focus = { # Seize the Great Flanks
+		id = USA_seize_the_great_flanks
+		icon = GFX_focus_usa_monroe
+		relative_position_id = USA_tend_to_the_nation
+		prerequisite = { focus = USA_the_sun_has_already_set }
+
+		x = 5
+		y = 10
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {
+			FOCUS_FILTER_Attending_to
+		}
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		completion_reward = {
+			# Grant bonuses to deep sea fighting and invading areas in the near pacific and atlantic
+		}
+	}
+
+	focus = { # Realize the Golden Circle
+		id = USA_realize_the_golden_circle
+		icon = GFX_focus_generic_phoenix
+		relative_position_id = USA_tend_to_the_nation
+		prerequisite = { focus = USA_secure_the_gulf focus = USA_the_rush_for_the_canal focus = USA_seize_the_great_flanks }
+
+		x = 3
+		y = 11
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {
+			FOCUS_FILTER_Attending_to
+		}
+		available = {
+			# Controls all of North America
+		}
+		
+		bypass = {
+		}
+
+		completion_reward = {
+			# Grants cores on most of North and Central America and grants a major spirit; spirit prevents joining other factions
+		}
+	}
+
+	focus = { # No Place for Traitors
+		id = USA_no_place_for_traitors
+		icon = GFX_focus_generic_secret_agent_operative
+		relative_position_id = USA_tend_to_the_nation
+		prerequisite = { focus = USA_the_sun_has_already_set }
+
+		x = 4
+		y = 9
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {
+			FOCUS_FILTER_Attending_to
+		}
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		completion_reward = {
+			# Grants compliance bonuses, spy slots, and spy defense
+		}
+	}
+
+	focus = { # Pledge for the New Order
+		id = USA_pledge_for_the_new_order
+		icon = GFX_focus_chi_mission_to_germany
+		relative_position_id = USA_tend_to_the_nation
+		prerequisite = { focus = USA_our_safety_before_yours focus = USA_the_sun_has_already_set focus = USA_peace_guarantees_for_our_neighbors }
+		mutually_exclusive = {
+			focus = USA_the_eagle_flies_alone
+			focus = USA_throw_in_with_the_old
+		}
+
+		x = -1
+		y = 10
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {
+			FOCUS_FILTER_Attending_to
+		}
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = { # Renaissance and Retribution
+		id = USA_renaissance_and_retribution
+		icon = GFX_Goal_USA_Global_Hegemony
+		relative_position_id = USA_tend_to_the_nation
+		prerequisite = { focus = USA_pledge_for_the_new_order }
+
+		x = -1
+		y = 11
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {
+			FOCUS_FILTER_Attending_to
+		}
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = { # Throw in with the Old
+		id = USA_throw_in_with_the_old
+		icon = GFX_focus_ARG_join_the_allies
+		relative_position_id = USA_tend_to_the_nation
+		prerequisite = { focus = USA_our_safety_before_yours focus = USA_the_sun_has_already_set focus = USA_peace_guarantees_for_our_neighbors }
+		mutually_exclusive = {
+			focus = USA_pledge_for_the_new_order
+			focus = USA_the_eagle_flies_alone
+		}
+
+		x = -5
+		y = 10
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {
+			FOCUS_FILTER_Attending_to
+		}
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = { # Do Our Part
+		id = USA_do_our_part
+		icon = GFX_fixed_r56_USA_double_victory
+		relative_position_id = USA_tend_to_the_nation
+		prerequisite = { focus = USA_throw_in_with_the_old }
+
+		x = -5
+		y = 11
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {
+			FOCUS_FILTER_Attending_to
+		}
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = { # The Eagle Flies Alone
+		id = USA_the_eagle_flies_alone
+		icon = GFX_focus_new_the_eagle_flies_alone
+		relative_position_id = USA_tend_to_the_nation
+		prerequisite = { focus = USA_our_safety_before_yours focus = USA_the_sun_has_already_set focus = USA_peace_guarantees_for_our_neighbors }
+		mutually_exclusive = {
+			focus = USA_pledge_for_the_new_order
+			focus = USA_throw_in_with_the_old
+		}
+
+		x = -3
+		y = 10
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {
+			FOCUS_FILTER_Attending_to
+		}
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = { # Imperial Roost
+		id = USA_imperial_roost
+		icon = GFX_focus_new_imperial_roost
+		relative_position_id = USA_tend_to_the_nation
+		prerequisite = { focus = USA_the_eagle_flies_alone }
+		mutually_exclusive = {
+			focus = USA_a_song_for_the_horizon
+		}
+
+		x = -4
+		y = 12
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {
+			FOCUS_FILTER_Attending_to
+		}
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		completion_reward = {
+			# Huge bonuses to bringing american countries into the faction or under overlordship, huge defensive bonuses
+		}
+	}
+
+	focus = { # A Song for the Horizon
+		id = USA_a_song_for_the_horizon
+		icon = GFX_focus_new_a_song_for_the_horizon
+		relative_position_id = USA_tend_to_the_nation
+		prerequisite = { focus = USA_the_eagle_flies_alone }
+		prerequisite = {
+			focus = USA_realize_the_golden_circle
+		}
+		mutually_exclusive = {
+			focus = USA_imperial_roost
+		}
+
+		x = -2
+		y = 12
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {
+			FOCUS_FILTER_Attending_to
+		}
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		completion_reward = {
+			# World conquest bonuses and decisions
+		}
+	}
+
+	# Non-civil war will be more peaceful, paying attention to its own needs. Bargain with Canada and Mexico for guarantees and land, build up resources and defenses.
+	# As far as foreign policy goes, maybe more willing to join the axis or allies, or monarchist states too.
+	# Also an option to threaten neighbors for land or try to steal it sneakily.
+	
+	# The civil war path will aim at total north-american control. It can do so by asking and then backstabbing, threatening directly, or rushing in early and taking them by surprise.
+	# It will be far more interested in joining the Axis, and it may even try to usurp it.
+
    ###########################################
   # Homeland Defense
-	focus = { # D1
-		id = USA_D1
-		icon = GFX_focus_PLACEHOLDER
+	focus = { # County Militias
+		id = USA_county_militias
+		icon = GFX_focus_GER_afrikakorps
 		#overlay = GFX_new_overlay_star
 		overlay = GFX_new_overlay_star_with_reducer
 		prerequisite = { focus = USA_tend_to_the_nation }
 		relative_position_id = USA_tend_to_the_nation
 
-		x = 7
-		y = 5
+		x = 6
+		y = 1
 
 		cost = 3
 
@@ -13818,17 +14490,46 @@ focus_tree = {
 
 		}
 
-
 		completion_reward = {
-
+			custom_effect_tooltip = policy_focus_lock_tt
+			skip_line_tt = yes
+			hidden_effect = {
+				set_country_flag = {
+					flag = policy_focus_lock_flag
+					value = 1
+					days = 180
+				}
+			}
+			add_command_power = 25
+			skip_line_tt = yes
+			set_power_balance = {
+					id = usa_defense_readiness_bop
+					left_side = usa_low_preparedness_side
+					right_side = usa_high_preparedness_side
+					set_value = -1
+				}
+			skip_line_tt = yes
+			add_power_balance_modifier = {
+				id = usa_defense_readiness_bop
+				modifier = USA_militia_readiness_act_bop_mod
+			}
+			custom_override_tooltip = { tooltip = { REMOVE_YEARS = 4 localization_key = remove_timed_bop_mod_years_tt } }
+			hidden_effect = {
+				country_event = { id = new_usa_remove_bop_mod.4 days = 1460 }
+			}
+			skip_line_tt = yes
+			reduce_focus_completion_cost = {
+				focus = { USA_modern_crew_training USA_semper_fi USA_encourage_civilian_air_industry USA_exotic_conditions_training USA_special_service_branch USA_recruitment_drive USA_westpoint_expansion }
+				cost = 14
+			}
 		}
 	}
 
 	focus = { # D2
 		id = USA_D2
-		icon = GFX_focus_PLACEHOLDER
-		prerequisite = { focus = USA_D1 }
-		relative_position_id = USA_D1
+		icon = GFX_focus_SWI_issue_war_bonds
+		prerequisite = { focus = USA_county_militias }
+		relative_position_id = USA_county_militias
 
 		x = 0
 		y = 1
@@ -13853,9 +14554,9 @@ focus_tree = {
 
 	focus = { # D3
 		id = USA_d3
-		icon = GFX_focus_PLACEHOLDER
-		prerequisite = { focus = USA_D1 }
-		relative_position_id = USA_D1
+		icon = GFX_focus_SOV_the_road_of_life
+		prerequisite = { focus = USA_county_militias }
+		relative_position_id = USA_county_militias
 
 		x = -2
 		y = 1
@@ -13878,9 +14579,9 @@ focus_tree = {
 
 	focus = { # D4
 		id = USA_d4
-		icon = GFX_focus_PLACEHOLDER
-		prerequisite = { focus = USA_D1 }
-		relative_position_id = USA_D1
+		icon = GFX_focus_SWE_beneath_sticks_and_stone
+		prerequisite = { focus = USA_county_militias }
+		relative_position_id = USA_county_militias
 
 		x = 2
 		y = 1
@@ -13901,9 +14602,9 @@ focus_tree = {
 
 	focus = { # D5
 		id = USA_d5
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_SWE_varnplikt
 		prerequisite = { focus = USA_D2 focus = USA_d3 focus = USA_d4 }
-		relative_position_id = USA_D1
+		relative_position_id = USA_county_militias
 
 		x = 1
 		y = 2
@@ -13928,9 +14629,9 @@ focus_tree = {
 
 	focus = { # D6
 		id = USA_d6
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_SWE_defense_act
 		prerequisite = { focus = USA_D2 focus = USA_d3 focus = USA_d4 }
-		relative_position_id = USA_D1
+		relative_position_id = USA_county_militias
 
 		x = -1
 		y = 2
@@ -13955,7 +14656,7 @@ focus_tree = {
 		id = USA_homeland_defense_emergency_act_focus_AN
 		icon = GFX_USA_domain
 		prerequisite = { focus = USA_d5 focus = USA_d6 }
-		relative_position_id = USA_D1
+		relative_position_id = USA_county_militias
 
 		x = 0
 		y = 3
@@ -14616,7 +15317,7 @@ focus_tree = {
 			add_war_support = -0.05
 			skip_line_tt = yes
 			add_timed_idea = {
-				idea = usa_throw_out_the_forces_of_tyrrany_ti
+				idea = usa_defend_our_homeland_ti
 				days = 90
 			}
 			skip_line_tt = yes
@@ -33337,7 +34038,7 @@ focus_tree = {
 		id = USA_federal_recovery_emergency_enterprise
 		icon = GFX_focus_ARG_the_american_push
 		#overlay = GFX_new_focus_fast_overlay_clock_reducer
-		overlay = GFX_new_focus_overlay_ideo_authoritarian
+		overlay = GFX_new_overlay_star_with_ideo_authoritarian
 		relative_position_id = USA_stars_on_the_horizon
 		#prerequisite = { focus = USA_stars_on_the_horizon }
 
@@ -33723,7 +34424,7 @@ focus_tree = {
 	focus = { # Crisis of Dependency
 		id = USA_crisis_of_dependency
 		icon = GFX_focus_BRA_end_the_state_of_emergency
-		overlay = GFX_new_focus_overlay_ideo_authoritarian
+		overlay = GFX_new_overlay_star_with_ideo_authoritarian
 		relative_position_id = USA_stars_on_the_horizon
 		#prerequisite = { focus = USA_stars_on_the_horizon }
 
@@ -33839,7 +34540,7 @@ focus_tree = {
 
 	focus = { # Finance New Mines and Refineries
 		id = USA_finance_new_mines_and_refineries
-		icon = GFX_generic_autarky
+		icon = GFX_r56_goal_generic_industrial_planning
 		relative_position_id = USA_crisis_of_dependency
 		prerequisite = { focus = USA_invest_in_infrastructure }
 
@@ -34353,7 +35054,7 @@ focus_tree = {
 	focus = { # Kickstart the Steel Belt
 		id = USA_kickstart_the_steel_belt
 		icon = GFX_focus_DEN_no_regulations
-		overlay = GFX_new_focus_overlay_ideo_authoritarian
+		overlay = GFX_new_overlay_star_with_ideo_authoritarian
 		relative_position_id = USA_stars_on_the_horizon
 		#prerequisite = { focus = USA_stars_on_the_horizon }
 

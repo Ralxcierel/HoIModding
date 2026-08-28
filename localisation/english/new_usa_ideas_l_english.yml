@@ -206,6 +206,10 @@
   usa_nc_taken_by_surprise_ti_3: "Taken by Surprise!"
   usa_nc_taken_by_surprise_ti_4: "Taken by Surprise!"
 
+  usa_defend_our_homeland_ti: "Defend Our Homeland!"
+  usa_defend_our_homeland_ti_2: "Defend Our Homeland!"
+  usa_defend_our_homeland_ti_3: "Defend Our Homeland!"
+
  # FAKE IDEAS
   usa_army_fake_tgs1936: "United States Army"
   usa_army_fake_tgs1936_desc: "$USA_arm_dynamic_modifier_desc$"

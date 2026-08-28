@@ -5432,73 +5432,85 @@ add_namespace = new_usa_purchase_holdovers
 			if = { # SUR
 			    limit = { owns_state = 309 }
 			    FROM = {
-					puppet = SUR
+					transfer_state = 309
+					#puppet = SUR
 				}
 			}
 			if = { # GYA
 			    limit = { owns_state = 687 }
 			    FROM = {
-					puppet = GYA
+					transfer_state = 687
+					#puppet = GYA
 				}
 			}
 			if = { # CAY
 			    limit = { owns_state = 310 }
 			    FROM = {
-					puppet = CAY
+					transfer_state = 310
+					#puppet = CAY
 				}
 			}
 			if = { # BLZ
 			    limit = { owns_state = 311 }
 			    FROM = {
-					puppet = BLZ
+					transfer_state = 311
+					#puppet = BLZ
 				}
 			}
 			if = { # JAM
 			    limit = { owns_state = 689 }
 			    FROM = {
-					puppet = JAM
+					transfer_state = 689
+					#puppet = JAM
 				}
 			}
 			if = { # BAS
 			    limit = { owns_state = 692 }
 			    FROM = {
-					puppet = BAS
+					transfer_state = 692
+					#puppet = BAS
 				}
 			}
 			if = { # BAS
 			    limit = { owns_state = 308 }
 			    FROM = {
-					puppet = BAS
+					transfer_state = 308
+					#puppet = BAS
 				}
 			}
 			if = { # TRI
 			    limit = { owns_state = 691 }
 			    FROM = {
-					puppet = TRI
+					transfer_state = 691
+					#puppet = TRI
 				}
 			}
 			if = { # CRC
 			    limit = { owns_state = 695 }
 			    FROM = {
-					puppet = CRC
+					transfer_state = 695
+					#puppet = CRC
 				}
 			}
 			if = { # GDL
 			    limit = { owns_state = 694 }
 			    FROM = {
-					puppet = GDL
+					transfer_state = 694
+					#puppet = GDL
 				}
 			}
 			if = { # BAH
 			    limit = { owns_state = 690 }
 			    FROM = {
-					puppet = BAH
+					transfer_state = 690
+					#puppet = BAH
 				}
 			}
 			if = { # BAH
 			    limit = { owns_state = 693 }
 			    FROM = {
-					puppet = BAH
+					transfer_state = 693
+					#puppet = BAH
 				}
 			}
 			add_timed_idea = {
@@ -5535,6 +5547,18 @@ add_namespace = new_usa_purchase_holdovers
 					idea = usa_us_purchase_colonial_holdovers_ti
 					days = 120
 				}
+			}
+			hidden_effect = {
+				release_puppet_on_controlled = BAH
+				release_puppet_on_controlled = SUR
+				release_puppet_on_controlled = GYA
+				release_puppet_on_controlled = CAY
+				release_puppet_on_controlled = BLZ
+				release_puppet_on_controlled = JAM
+				release_puppet_on_controlled = BAS
+				release_puppet_on_controlled = TRI
+				release_puppet_on_controlled = CRC
+				release_puppet_on_controlled = GDL
 			}
 		}
 	}

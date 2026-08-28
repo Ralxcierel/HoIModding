@@ -3312,6 +3312,133 @@ ideas = {
                 war_support_factor = -0.15
             }
         }
+        usa_defend_our_homeland_ti = { # Defend Our Homeland Timed Idea (America the Proud AN)
+            picture = ARG_anti_american_propaganda
+        
+            allowed = {
+            }
+        
+            available = {
+                #america_is_being_invaded = yes
+                #USA = { has_war = yes }
+            }
+
+            cancel = {
+                #surrender_progress < 0.2
+            }
+        
+            allowed_civil_war = {
+            }
+
+            on_remove = {
+                if = {
+                    limit = {
+                        america_is_being_invaded = yes
+                        USA = { has_war = yes NOT = { surrender_progress < 0.2 } }
+                    }
+                    add_timed_idea = {
+                        idea = usa_defend_our_homeland_ti_2
+                        days = 90
+                    }
+                }
+            }
+
+            modifier = {
+                army_core_defence_factor = 0.15
+                army_core_attack_factor = 0.15
+                attrition = -0.25
+                resistance_growth_on_our_occupied_states = 0.50
+                resistance_target_on_our_occupied_states = 0.25
+                training_time_factor = -0.30
+                recruitable_population_factor = 0.25
+            }
+        }
+        usa_defend_our_homeland_ti_2 = { # Defend Our Homeland Timed Idea 2 (America the Proud AN)
+            picture = ARG_anti_american_propaganda
+        
+            allowed = {
+            }
+        
+            available = {
+                #america_is_being_invaded = yes
+                #USA = { has_war = yes }
+            }
+
+            cancel = {
+                #surrender_progress < 0.2
+            }
+        
+            allowed_civil_war = {
+            }
+
+            on_remove = {
+                if = {
+                    limit = {
+                        america_is_being_invaded = yes
+                        USA = { has_war = yes NOT = { surrender_progress < 0.2 } }
+                    }
+                    add_timed_idea = {
+                        idea = usa_defend_our_homeland_ti_3
+                        days = 90
+                    }
+                    add_war_support = -0.10
+                    add_stability = -0.10
+                }
+            }
+
+            modifier = {
+                army_core_defence_factor = 0.10
+                army_core_attack_factor = 0.10
+                attrition = -0.20
+                resistance_growth_on_our_occupied_states = 0.50
+                resistance_target_on_our_occupied_states = 0.25
+                training_time_factor = -0.20
+                recruitable_population_factor = 0.20
+                stability_factor = -0.10
+                war_support_factor = -0.10
+            }
+        }
+        usa_defend_our_homeland_ti_3 = { # Defend Our Homeland Timed Idea 3 (America the Proud AN)
+            picture = ARG_anti_american_propaganda
+        
+            allowed = {
+            }
+        
+            available = {
+                #america_is_being_invaded = yes
+                #USA = { has_war = yes }
+            }
+
+            cancel = {
+                #surrender_progress < 0.2
+            }
+        
+            allowed_civil_war = {
+            }
+
+            on_remove = {
+                if = {
+                    limit = {
+                        america_is_being_invaded = yes
+                        USA = { has_war = yes NOT = { surrender_progress < 0.2 } }
+                    }
+                    add_stability = -0.15
+                    add_war_support = -0.15
+                }
+            }
+
+            modifier = {
+                army_core_defence_factor = 0.05
+                army_core_attack_factor = 0.05
+                attrition = -0.10
+                resistance_growth_on_our_occupied_states = 0.50
+                resistance_target_on_our_occupied_states = 0.25
+                training_time_factor = -0.10
+                recruitable_population_factor = 0.10
+                stability_factor = -0.15
+                war_support_factor = -0.15
+            }
+        }
 
         usa_rebalancing_finances_ti = { # Rebalancing Finances Timed Idea
             picture = ARG_political_corruption_modifier

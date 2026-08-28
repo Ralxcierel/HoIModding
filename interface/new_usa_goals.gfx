@@ -125,6 +125,22 @@ spriteTypes = {
 		name = "GFX_focus_the_jeep"
 		texturefile = "gfx/interface/new_goals/focus_the_jeep.dds"			
 	}
+	SpriteType = { # focus_new_america_on_its_own
+		name = "GFX_focus_new_america_on_its_own"
+		texturefile = "gfx/interface/new_goals/focus_new_america_on_its_own.dds"			
+	}
+	SpriteType = { # focus_new_imperial_roost
+		name = "GFX_focus_new_imperial_roost"
+		texturefile = "gfx/interface/new_goals/focus_new_imperial_roost.dds"			
+	}
+	SpriteType = { # focus_new_the_eagle_flies_alone
+		name = "GFX_focus_new_the_eagle_flies_alone"
+		texturefile = "gfx/interface/new_goals/focus_new_the_eagle_flies_alone.dds"			
+	}
+	SpriteType = { # focus_new_a_song_for_the_horizon
+		name = "GFX_focus_new_a_song_for_the_horizon"
+		texturefile = "gfx/interface/new_goals/focus_new_a_song_for_the_horizon.dds"			
+	}
 
   # NEW OVERLAYS
 	# Debug overlay
