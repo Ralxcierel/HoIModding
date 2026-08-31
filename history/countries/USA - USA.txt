@@ -1828,10 +1828,35 @@ add_dynamic_modifier = {
 	modifier = USA_mic_dynamic_modifier
 }
 #add_dynamic_modifier = {
+#	modifier = USA_FREE_dynamic_modifier
+#}
+#add_dynamic_modifier = {
 #	modifier = USA_agency_dynamic_modifier
 #}
 #add_dynamic_modifier = {
 #	modifier = USA_government_dynamic_modifier
 #}
 
+#add_ideas = {
+#	usa_free_civilian_industry_si_0
+#	usa_free_military_industry_si_0
+#}
 
+# FREE Variables
+ set_variable = { USA_FREE_civ_points 	= -3 } # They all start at (-1), able to be improved with a single small boost
+ set_variable = { USA_FREE_mil_points 	= -3 }
+ set_variable = { USA_FREE_arm_points 	= -3 }
+ set_variable = { USA_FREE_nav_points 	= -3 }
+ set_variable = { USA_FREE_air_points 	= -3 }
+ set_variable = { USA_FREE_sci_points 	= -3 }
+ set_variable = { FREE_points_A 	= 5 }
+ set_variable = { FREE_points_AA 	= 10 }
+ set_variable = { FREE_points_AAA	= 15 }
+ set_variable = { FREE_points_V 	= -1 }
+ set_variable = { FREE_points_VV 	= -2 }
+ set_variable = { FREE_points_VVV 	= -3 }
+ set_variable = { FREE_points_VVVV 	= -6 }
+ set_variable = { FREE_expert_guidance_P	= 5 } # The points given to positive sectors by Expert Guidance
+ set_variable = { FREE_expert_guidance_S	= 1 } # The points given to negative sectors by Expert Guidance
+ set_variable = { FREE_recovery_funds_P		= 1 } # The points given to positive sectors by Recovery Funds
+ set_variable = { FREE_recovery_funds_S		= 3 } # The points given to negative sectors by Recovery Funds

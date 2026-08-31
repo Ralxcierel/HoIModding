@@ -42,6 +42,10 @@
 # Have Ching Lee added to admirals once Gunnery Innovations is taken
 # Have a FREE visual indicator that shows how funds are being distributed
 # Check the invasion event checker that it actually makes sense [seems good]
+# Add Baldwin locomotive works to focuses that mess with MIOs
+# Update def readiness text for other ideologies
+# Fix 'america_is_being_invaded flag'
+# Bury the robberbarons is causing crazy errors when hovered over
 
 
 #########################################################
@@ -978,6 +982,66 @@ focus_tree = {
 			tooltip = special_v_consumer_goods_factor_tt
 		}
 	}
+ }
+ focus = { # FREE CHECK 
+	id = USA_FREE_CHECK
+	icon = GFX_focus_PLACEHOLDER
+	relative_position_id = USA_DEBUG_BRANCH
+	prerequisite = { focus = USA_DEBUG_BRANCH }
+	x = 22
+	y = 1
+	cost = 1
+	ai_will_do = {
+		factor = 0
+	}
+	#allow_branch = {
+	#	always = no
+	#}
+	available = {
+	}
+	bypass = {
+	}
+	completion_reward = {
+			USA_AN_FREE_civ_up_low = yes
+			USA_AN_FREE_civ_up_med = yes
+			USA_AN_FREE_civ_up_hih = yes
+			USA_AN_FREE_mil_up_low = yes
+			USA_AN_FREE_mil_up_med = yes
+			USA_AN_FREE_mil_up_hih = yes
+			USA_AN_FREE_arm_up_low = yes
+			USA_AN_FREE_arm_up_med = yes
+			USA_AN_FREE_arm_up_hih = yes
+			USA_AN_FREE_nav_up_low = yes
+			USA_AN_FREE_nav_up_med = yes
+			USA_AN_FREE_nav_up_hih = yes
+			USA_AN_FREE_air_up_low = yes
+			USA_AN_FREE_air_up_med = yes
+			USA_AN_FREE_air_up_hih = yes
+			USA_AN_FREE_sci_up_low = yes
+			USA_AN_FREE_sci_up_med = yes
+			USA_AN_FREE_sci_up_hih = yes
+			#if = {
+			#	limit = {
+			#		has_dynamic_modifier = USA_FREE_dynamic_modifier
+			#	}
+			#	USA_AN_FREE_civ_up_hih = yes
+			#	#custom_override_tooltip = { tooltip = { localization_key = FREE_focus_loc_tt_AAA LOC_TYPE = usa_free_civilian_industry_si_tt } }
+			#}
+			#set_temp_variable = {
+			#	new_amount = USA_FREE_civ_points
+			#}
+			#add_to_temp_variable = {
+			#	new_amount = FREE_points_A
+			#}
+			#custom_override_tooltip = {
+			#	tooltip = {
+			#		localization_key = FREE_loc_tt
+			#		LOC_TYPE = usa_free_civilian_industry_si_tt
+			#		CURRENT_SCORE = [?USA_FREE_civ_points]
+			#		NEW_SCORE = [?new_amount]
+			#	}
+			#}
+		}
  }
 # STEALTH/FAKE/SIDE-MESSAGE FOCUSES
  focus = { # Decrease conservative resistance [unused]
@@ -13295,7 +13359,7 @@ focus_tree = {
 			FOCUS_FILTER_Attending_to
 		}
 		available = {
-
+			has_completed_focus = USA_federal_recovery_emergency_enterprise
 		}
 		
 		bypass = {
@@ -13752,7 +13816,12 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			set_cosmetic_tag = USA_goldstar
+			set_politics = {
+				ruling_party = fascism
+				elections_allowed = yes
+				election_frequency = 48
+			}
 		}
 	}
 
@@ -13784,7 +13853,12 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			set_cosmetic_tag = USA_american_nationalist
+			set_politics = {
+				ruling_party = fascism
+				elections_allowed = yes
+				election_frequency = 48
+			}
 		}
 	}
 
@@ -14525,8 +14599,8 @@ focus_tree = {
 		}
 	}
 
-	focus = { # D2
-		id = USA_D2
+	focus = { # Independently-Funded Armories
+		id = USA_independently_funded_armories
 		icon = GFX_focus_SWI_issue_war_bonds
 		prerequisite = { focus = USA_county_militias }
 		relative_position_id = USA_county_militias
@@ -14552,8 +14626,8 @@ focus_tree = {
 		}
 	}
 
-	focus = { # D3
-		id = USA_d3
+	focus = { # Civilian Logistics Contracts
+		id = USA_civilian_logistics_contracts
 		icon = GFX_focus_SOV_the_road_of_life
 		prerequisite = { focus = USA_county_militias }
 		relative_position_id = USA_county_militias
@@ -14577,8 +14651,8 @@ focus_tree = {
 		}
 	}
 
-	focus = { # D4
-		id = USA_d4
+	focus = { # Terrain Navigation Courses
+		id = USA_terrain_navigation_courses
 		icon = GFX_focus_SWE_beneath_sticks_and_stone
 		prerequisite = { focus = USA_county_militias }
 		relative_position_id = USA_county_militias
@@ -14600,10 +14674,10 @@ focus_tree = {
 		completion_reward = {}
 	}
 
-	focus = { # D5
-		id = USA_d5
+	focus = { # Cloth and Rope Ramparts
+		id = USA_cloth_and_rope_ramparts
 		icon = GFX_focus_SWE_varnplikt
-		prerequisite = { focus = USA_D2 focus = USA_d3 focus = USA_d4 }
+		prerequisite = { focus = USA_independently_funded_armories focus = USA_civilian_logistics_contracts focus = USA_terrain_navigation_courses }
 		relative_position_id = USA_county_militias
 
 		x = 1
@@ -14627,10 +14701,10 @@ focus_tree = {
 		}
 	}
 
-	focus = { # D6
-		id = USA_d6
+	focus = { # Confederalized Asset Procurement
+		id = USA_confederalized_asset_procurement
 		icon = GFX_focus_SWE_defense_act
-		prerequisite = { focus = USA_D2 focus = USA_d3 focus = USA_d4 }
+		prerequisite = { focus = USA_independently_funded_armories focus = USA_civilian_logistics_contracts focus = USA_terrain_navigation_courses }
 		relative_position_id = USA_county_militias
 
 		x = -1
@@ -14655,7 +14729,7 @@ focus_tree = {
 	focus = { # Homeland Defense Emergency Act (AN)
 		id = USA_homeland_defense_emergency_act_focus_AN
 		icon = GFX_USA_domain
-		prerequisite = { focus = USA_d5 focus = USA_d6 }
+		prerequisite = { focus = USA_cloth_and_rope_ramparts focus = USA_confederalized_asset_procurement }
 		relative_position_id = USA_county_militias
 
 		x = 0
@@ -24939,6 +25013,7 @@ focus_tree = {
 			add_political_power = 75
 			skip_line_tt = yes
 			add_ideas = usa_innovation_prizes_idea
+			USA_AN_FREE_sci_up_low = yes
 		}
 	}
 
@@ -24976,6 +25051,7 @@ focus_tree = {
 				remove_idea = usa_innovation_prizes_idea
 				add_idea = usa_innovation_prizes_idea_2
 			}
+			USA_AN_FREE_sci_up_low = yes
 		}
 	}
 
@@ -25010,6 +25086,7 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 50
 			USA_congress_small_support = yes
+			USA_AN_FREE_sci_up_low = yes
 		}
 	}
 
@@ -25116,7 +25193,7 @@ focus_tree = {
 			}
 			skip_line_tt = yes
 			add_research_slot = 1
-
+			USA_AN_FREE_sci_up_med = yes
 		}
 	}
 
@@ -25175,6 +25252,7 @@ focus_tree = {
 			}
 			skip_line_tt = yes
 			add_research_slot = 1
+			USA_AN_FREE_sci_up_med = yes
 		}
 	}
 
@@ -25234,7 +25312,7 @@ focus_tree = {
 					days = 120
 				}
 			}
-	
+			USA_AN_FREE_sci_up_hih = yes
 		}
 	}
 
@@ -25242,7 +25320,7 @@ focus_tree = {
 	focus = { # Accelerated Research Industries
 		id = USA_accelerated_research_industries
 		icon = GFX_r56_goal_generic_research_silver
-		overlay = GFX_focus_fast_overlay_generic_clock
+		#overlay = GFX_focus_fast_overlay_generic_clock
 		overlay = GFX_new_overlay_star_with_clock
 		prerequisite = { focus = USA_school_funding_used focus = USA_us_science_network }
 		#prerequisite = { focus = USA_spurred_growth focus = USA_new_agricultural_adjustment_act focus = USA_new_adjusted_compensation_act }
@@ -25282,6 +25360,7 @@ focus_tree = {
 				USA_eco_dy_research_speed_factor = 0.05
 				tooltip = research_speed_factor_tt
 			}
+			USA_AN_FREE_sci_up_low = yes
 		}
 	}
 
@@ -25337,6 +25416,7 @@ focus_tree = {
 			#	USA_eco_dy_research_speed_factor = 0.03
 			#	tooltip = research_speed_factor_tt
 			#}
+			USA_AN_FREE_sci_up_med = yes
 		}
 	}
 
@@ -25397,6 +25477,7 @@ focus_tree = {
 			}
 			skip_line_tt = yes
 			add_research_slot = 1
+			USA_AN_FREE_sci_up_hih = yes
 		}
 	}
 
@@ -25444,6 +25525,7 @@ focus_tree = {
 				USA_dy_mic_special_project_speed_factor = 0.05
 				tooltip = special_project_speed_factor_tt
 			}
+			USA_AN_FREE_sci_up_med = yes
 		}
 	}
 
@@ -25494,6 +25576,7 @@ focus_tree = {
 				uses = 1
 				category = nuclear
 			}
+			USA_AN_FREE_sci_up_med = yes
 		}
 	}
 
@@ -25585,6 +25668,7 @@ focus_tree = {
 				USA_eco_dy_consumer_goods_factor = 0.10
 				tooltip = special_consumer_goods_factor_tt
 			}
+			USA_AN_FREE_sci_up_hih = yes
 		}
 	}
 
@@ -25631,6 +25715,8 @@ focus_tree = {
 				USA_eco_dy_consumer_goods_factor = -0.15
 				tooltip = special_v_consumer_goods_factor_tt
 			}
+			USA_AN_FREE_civ_up_low = yes
+			USA_AN_FREE_sci_up_low = yes
 		}
 	}
 
@@ -25678,6 +25764,7 @@ focus_tree = {
 				USA_eco_dy_consumer_goods_factor = 0.05
 				tooltip = special_consumer_goods_factor_tt
 			}
+			USA_AN_FREE_sci_up_med = yes
 		}
 	}
 
@@ -25732,6 +25819,7 @@ focus_tree = {
 				USA_eco_dy_consumer_goods_factor = 0.05
 				tooltip = special_consumer_goods_factor_tt
 			}
+			USA_AN_FREE_sci_up_low = yes
 		}
 	}
 
@@ -25768,6 +25856,7 @@ focus_tree = {
 			}
 			skip_line_tt = yes
 			add_ideas = usa_jpl_idea
+			USA_AN_FREE_sci_up_low = yes
 		}
 	}
 
@@ -25806,6 +25895,7 @@ focus_tree = {
 				remove_idea = usa_jpl_idea
 				add_idea = usa_jpl_idea_2
 			}
+			USA_AN_FREE_sci_up_low = yes
 		}
 	}
 
@@ -25845,6 +25935,7 @@ focus_tree = {
 				remove_idea = usa_jpl_idea_2
 				add_idea = usa_jpl_idea_3
 			}
+			USA_AN_FREE_sci_up_low = yes
 		}
 	}
 
@@ -25910,6 +26001,7 @@ focus_tree = {
 				USA_eco_dy_consumer_goods_factor = 0.10
 				tooltip = special_consumer_goods_factor_tt
 			}
+			USA_AN_FREE_sci_up_hih = yes
 		}
 	}
 
@@ -25968,6 +26060,7 @@ focus_tree = {
 			}
 			skip_line_tt = yes
 			USA_defense_readiness_boost_small = yes
+			USA_AN_FREE_mil_up_low = yes
 		}
 	}
 
@@ -26019,6 +26112,7 @@ focus_tree = {
 			}
 			skip_line_tt = yes
 			USA_defense_readiness_boost_small = yes
+			USA_AN_FREE_mil_up_low = yes
 		}
 	}
 
@@ -26099,6 +26193,7 @@ focus_tree = {
 			}
 			skip_line_tt = yes
 			USA_defense_readiness_boost_small = yes
+			USA_AN_FREE_mil_up_low = yes
 		}
 	}
 
@@ -26258,7 +26353,7 @@ focus_tree = {
 			}
 			skip_line_tt = yes
 			USA_defense_readiness_boost_medium = yes
-
+			USA_AN_FREE_mil_up_med = yes
 		}
 	}
 
@@ -26360,6 +26455,7 @@ focus_tree = {
 			}
 			skip_line_tt = yes
 			USA_defense_readiness_boost_small = yes
+			USA_AN_FREE_mil_up_low = yes
 		}
 	}
 
@@ -26453,6 +26549,7 @@ focus_tree = {
 			}
 			skip_line_tt = yes
 			USA_defense_readiness_boost_small = yes
+			USA_AN_FREE_mil_up_low = yes
 		}
 	}
 
@@ -26562,6 +26659,7 @@ focus_tree = {
 			}
 			skip_line_tt = yes
 			USA_defense_readiness_boost_small = yes
+			USA_AN_FREE_mil_up_low = yes
 		}
 	}
 
@@ -26663,6 +26761,7 @@ focus_tree = {
 			}
 			skip_line_tt = yes
 			USA_defense_readiness_boost_small = yes
+			USA_AN_FREE_mil_up_low = yes
 		}
 	}
 
@@ -26741,6 +26840,7 @@ focus_tree = {
 				category = electronics
 
 			}
+			USA_AN_FREE_mil_up_low = yes
 		}
 	}
 
@@ -26797,6 +26897,7 @@ focus_tree = {
 					value = 0
 				}
 			}
+			USA_AN_FREE_mil_up_low = yes
 		}
 	}
 
@@ -27025,6 +27126,7 @@ focus_tree = {
 			}
 			skip_line_tt = yes
 			USA_defense_readiness_boost_medium = yes
+			USA_AN_FREE_mil_up_med = yes
 		}
 	}
 
@@ -27334,6 +27436,7 @@ focus_tree = {
 					}
 				}
 			}
+			USA_AN_FREE_mil_up_med = yes
 		}
 	}
 
@@ -34033,10 +34136,10 @@ focus_tree = {
 		}
 	}
 
-   # Recovery (Top Right)
+   # FREE (Top Right)
    	focus = { # Federal Recovery Emergency Enterprise
 		id = USA_federal_recovery_emergency_enterprise
-		icon = GFX_focus_ARG_the_american_push
+		icon = GFX_focus_usa_FREE
 		#overlay = GFX_new_focus_fast_overlay_clock_reducer
 		overlay = GFX_new_overlay_star_with_ideo_authoritarian
 		relative_position_id = USA_stars_on_the_horizon
@@ -34045,7 +34148,7 @@ focus_tree = {
 		x = 7
 		y = -6
 
-		cost = 10
+		cost = 4
 
 		ai_will_do = {
 			factor = 1
@@ -34054,27 +34157,55 @@ focus_tree = {
 			FOCUS_FILTER_Attending_to
 		}
 		available = {
-
+			recovery_past_stage_0 = yes
+			has_completed_focus = USA_southern_crisis
+			or = {
+				has_government = fascism
+				has_government = democratic
+			}
 		}
 		
 		bypass = {
 		}
 
 		completion_reward = {
-
+			#add_dynamic_modifier = {
+			#	modifier = USA_FREE_dynamic_modifier
+			#}
+			#USA_AN_FREE_civ_up_low = yes
+			if = {
+				limit = {
+					NOT = { has_completed_focus = USA_federal_recovery_emergency_enterprise }
+				}	
+				custom_effect_tooltip = USA_federal_recovery_emergency_enterprise_tt
+			}
+			custom_effect_tooltip = USA_federal_recovery_emergency_enterprise_tt_2
+			hidden_effect = {
+				add_dynamic_modifier = {
+					modifier = USA_FREE_dynamic_modifier
+				}
+				add_ideas = {
+					usa_free_civilian_industry_si_-1
+					usa_free_military_industry_si_-1
+					usa_free_army_si_-1
+					usa_free_navy_si_-1
+					usa_free_air_si_-1
+					usa_free_science_si_-1
+				}
+			}
 		}
 	}
 
-	focus = { # C1 
-		id = USA_TBD_c1
-		icon = GFX_focus_PLACEHOLDER
+	focus = { # (FREE) Department Expansion
+		id = USA_FREE_department_expansion
+		icon = GFX_focus_generic_improve_the_administration_2
 		relative_position_id = USA_federal_recovery_emergency_enterprise
 		prerequisite = { focus = USA_federal_recovery_emergency_enterprise }
 
 		x = 0
 		y = 1
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -34090,20 +34221,43 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			USA_modify_eco = yes
+			add_to_variable = {
+				USA_eco_dy_consumer_goods_factor = 0.05
+				tooltip = consumer_goods_factor_tt
+			}
+			skip_line_tt = yes
+			custom_effect_tooltip = USA_FREE_department_expansion_tt
+			USA_AN_FREE_all_V = yes
+			USA_AN_check_FREE_all = yes
 
+			#custom_override_tooltip = {
+			#	tooltip = {
+			#		A = [?USA_FREE_civ_points]
+			#		B = [?USA_FREE_mil_points]
+			#		C = [?USA_FREE_arm_points]
+			#		D = [?USA_FREE_nav_points]
+			#		E = [?USA_FREE_air_points]
+			#		F = [?USA_FREE_sci_points]
+			#		localization_key = VALLEY_tt
+			#	}
+			#}
 		}
 	}
 
-	focus = { # C2 
-		id = USA_TBD_c2
-		icon = GFX_focus_PLACEHOLDER
+	focus = { # (FREE) Raise Taxes for Reinvestment
+		id = USA_FREE_raise_taxes_for_reinvestment
+		icon = GFX_generic_price_controls
 		relative_position_id = USA_federal_recovery_emergency_enterprise
-		prerequisite = { focus = USA_TBD_c1 }
+		prerequisite = { focus = USA_FREE_department_expansion }
+		mutually_exclusive = {
+			focus = USA_FREE_print_money_to_fund_FREE
+		}
 
 		x = -1
 		y = 2
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -34119,20 +34273,26 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			add_political_power = -25
+			add_stability = -0.05
+			skip_line_tt = yes
+			custom_effect_tooltip = USA_FREE_raise_taxes_for_reinvestment_tt
 		}
 	}
 
-	focus = { # C3 
-		id = USA_TBD_c3
-		icon = GFX_focus_PLACEHOLDER
+	focus = { # (FREE) Print Money to Fund FREE
+		id = USA_FREE_print_money_to_fund_FREE
+		icon = GFX_generic_debt_negotiations
 		relative_position_id = USA_federal_recovery_emergency_enterprise
-		prerequisite = { focus = USA_TBD_c1 }
+		prerequisite = { focus = USA_FREE_department_expansion }
+		mutually_exclusive = {
+			focus = USA_FREE_raise_taxes_for_reinvestment
+		}
 
 		x = 1
 		y = 2
 
-		cost = 10
+		cost = 4
 
 		ai_will_do = {
 			factor = 1
@@ -34148,20 +34308,26 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			USA_modify_eco = yes
+			add_to_variable = {
+				USA_eco_dy_consumer_goods_factor = 0.125
+				tooltip = consumer_goods_factor_tt
+			}
+			skip_line_tt = yes
+			custom_effect_tooltip = USA_FREE_print_money_to_fund_FREE_tt
 		}
 	}
 
-	focus = { # C4 
-		id = USA_TBD_c4
-		icon = GFX_focus_PLACEHOLDER
+	focus = { # (FREE) Undersecretariat for Sectoral Administration
+		id = USA_FREE_undersecretariat_for_sectoral_administration
+		icon = GFX_focus_generic_industrialists
 		relative_position_id = USA_federal_recovery_emergency_enterprise
-		prerequisite = { focus = USA_TBD_c2 focus = USA_TBD_c3 }
+		prerequisite = { focus = USA_FREE_raise_taxes_for_reinvestment focus = USA_FREE_print_money_to_fund_FREE }
 
 		x = 0
 		y = 3
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -34177,16 +34343,34 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			USA_modify_eco = yes
+			add_to_variable = {
+				USA_eco_dy_consumer_goods_factor = 0.05
+				tooltip = consumer_goods_factor_tt
+			}
+			skip_line_tt = yes
+			custom_effect_tooltip = USA_FREE_undersecretariat_for_sectoral_administration_tt
+			hidden_effect = {
+				remove_dynamic_modifier = {
+					modifier = USA_FREE_dynamic_modifier
+				}
+				add_dynamic_modifier = {
+					modifier = USA_FREE_dynamic_modifier_2
+				}
+			}
+			USA_AN_FREE_all_V = yes
+			USA_AN_check_FREE_all = yes
 
 		}
 	}
 
-	focus = { # C5
-		id = USA_TBD_c5
-		icon = GFX_focus_PLACEHOLDER
+	focus = { # (FREE) Recovery Achieved
+		id = USA_FREE_recovery_achieved
+		icon = GFX_aus_destiny
+		overlay = GFX_new_overlay_star
 		relative_position_id = USA_federal_recovery_emergency_enterprise
-		prerequisite = { focus = USA_TBD_c4 }
-		prerequisite = { focus = USA_TBD_r3 focus = USA_TBD_l3 focus = USA_TBD_r4 }
+		prerequisite = { focus = USA_FREE_undersecretariat_for_sectoral_administration }
+		prerequisite = { focus = USA_FREE_top_end_funds_management focus = USA_FREE_improved_focus_II focus = USA_FREE_lower_end_funds_management }
 
 		x = 0
 		y = 5
@@ -34200,27 +34384,89 @@ focus_tree = {
 			FOCUS_FILTER_Attending_to
 		}
 		available = {
-
+			recovery_past_stage_3 = yes
+			has_completed_focus = USA_lady_libertys_arsenal
+			has_government = fascism
+			or = {
+				has_completed_focus = USA_the_second_confederation
+				has_completed_focus = USA_the_goldstar_federation
+			}
 		}
 		
 		bypass = {
 		}
 
 		completion_reward = {
-
+			# Get 0.5% consumer goods per point, 2 pp per positive point, remove slight penalty from FREE-USA focus
+			custom_effect_tooltip = USA_FREE_recovery_achieved_tt
+			if = {
+				limit = { or = { has_dynamic_modifier = USA_FREE_dynamic_modifier has_dynamic_modifier = USA_FREE_dynamic_modifier_2 } }
+				
+				set_temp_variable = { TOTAL_POINTS = 0 }
+				set_temp_variable = { POSITIVE_POINTS = 0 }
+				add_to_temp_variable = { TOTAL_POINTS = USA_FREE_civ_points }
+				add_to_temp_variable = { TOTAL_POINTS = USA_FREE_mil_points }
+				add_to_temp_variable = { TOTAL_POINTS = USA_FREE_arm_points }
+				add_to_temp_variable = { TOTAL_POINTS = USA_FREE_nav_points }
+				add_to_temp_variable = { TOTAL_POINTS = USA_FREE_air_points }
+				add_to_temp_variable = { TOTAL_POINTS = USA_FREE_sci_points }
+				if = {
+					limit = { check_variable = { var = USA_FREE_civ_points value = 0 compare = greater_than_or_equals } } add_to_temp_variable = { POSITIVE_POINTS = USA_FREE_civ_points }
+				}
+				if = {
+					limit = { check_variable = { var = USA_FREE_mil_points value = 0 compare = greater_than_or_equals } } add_to_temp_variable = { POSITIVE_POINTS = USA_FREE_mil_points }
+				}
+				if = {
+					limit = { check_variable = { var = USA_FREE_arm_points value = 0 compare = greater_than_or_equals } } add_to_temp_variable = { POSITIVE_POINTS = USA_FREE_arm_points }
+				}
+				if = {
+					limit = { check_variable = { var = USA_FREE_nav_points value = 0 compare = greater_than_or_equals } } add_to_temp_variable = { POSITIVE_POINTS = USA_FREE_nav_points }
+				}
+				if = {
+					limit = { check_variable = { var = USA_FREE_air_points value = 0 compare = greater_than_or_equals } } add_to_temp_variable = { POSITIVE_POINTS = USA_FREE_air_points }
+				}
+				if = {
+					limit = { check_variable = { var = USA_FREE_sci_points value = 0 compare = greater_than_or_equals } } add_to_temp_variable = { POSITIVE_POINTS = USA_FREE_sci_points }
+				}
+				set_temp_variable = { NEW_PP = POSITIVE_POINTS }
+				multiply_temp_variable = { NEW_PP = 2 }
+				add_political_power = NEW_PP
+				skip_line_tt = yes
+				set_temp_variable = { NEW_CC = TOTAL_POINTS }
+				multiply_temp_variable = { NEW_CC = -0.005 }
+				USA_modify_eco = yes
+				add_to_variable = {
+					USA_eco_dy_consumer_goods_factor = NEW_CC
+					tooltip = consumer_goods_factor_tt
+				}
+				skip_line_tt = yes
+				custom_effect_tooltip = USA_FREE_recovery_achieved_tt_2
+				add_to_variable = {
+					FREE_points_A = 1
+				}
+				add_to_variable = {
+					FREE_points_AA = 1
+				}
+				add_to_variable = {
+					FREE_points_AAA = 1
+				}
+				add_to_variable = {
+					FREE_points_V = 1
+				}
+			}
 		}
 	}
 
-	focus = { # L1 
-		id = USA_TBD_l1
-		icon = GFX_focus_PLACEHOLDER
+	focus = { # (FREE) Improved Focus
+		id = USA_FREE_improved_focus
+		icon = GFX_focus_usa_FREE_improved_focus
 		relative_position_id = USA_federal_recovery_emergency_enterprise
 		prerequisite = { focus = USA_federal_recovery_emergency_enterprise }
 
 		x = -2
 		y = 1
 
-		cost = 10
+		cost = 4
 
 		ai_will_do = {
 			factor = 1
@@ -34229,27 +34475,41 @@ focus_tree = {
 			FOCUS_FILTER_Attending_to
 		}
 		available = {
-
+			has_completed_focus = USA_FREE_department_expansion
+			OR = {
+				NOT = { has_completed_focus = USA_FREE_funds_management }
+				has_completed_focus = USA_FREE_top_end_funds_management
+				has_completed_focus = USA_FREE_lower_end_funds_management
+			}
 		}
 		
 		bypass = {
 		}
 
 		completion_reward = {
-
+			custom_effect_tooltip = USA_FREE_improved_focus_tt
+			add_to_variable = {
+				FREE_points_A = 1
+			}
+			add_to_variable = {
+				FREE_points_AA = 2
+			}
+			add_to_variable = {
+				FREE_points_AAA = 3
+			}
 		}
 	}
 
-	focus = { # civ boost
-		id = USA_TBD_civ_boost
-		icon = GFX_focus_PLACEHOLDER
+	focus = { # (FREE) Expert Guidance
+		id = USA_FREE_expert_guidance
+		icon = GFX_focus_generic_advisors
 		relative_position_id = USA_federal_recovery_emergency_enterprise
-		prerequisite = { focus = USA_TBD_l1 }
+		prerequisite = { focus = USA_FREE_improved_focus }
 
 		x = -3
 		y = 2
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -34265,20 +34525,89 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			add_political_power = 50
+			skip_line_tt = yes
+			set_temp_variable = { PROSPER = 0 }
+			set_temp_variable = { SUFFER = 0 }
+			if = {
+				limit = { check_variable = { var = USA_FREE_civ_points value = 0 compare = greater_than_or_equals } }
+				add_to_variable = { USA_FREE_civ_points = FREE_expert_guidance_P } add_to_temp_variable = { PROSPER = 1 }
+			}
+			else = {
+				add_to_variable = { USA_FREE_civ_points = FREE_expert_guidance_S } add_to_temp_variable = { SUFFER = 1 }
+			}
+			if = {
+				limit = { check_variable = { var = USA_FREE_mil_points value = 0 compare = greater_than_or_equals } }
+				add_to_variable = { USA_FREE_mil_points = FREE_expert_guidance_P } add_to_temp_variable = { PROSPER = 1 }
+			}
+			else = {
+				add_to_variable = { USA_FREE_mil_points = FREE_expert_guidance_S } add_to_temp_variable = { SUFFER = 1 }
+			}
+			if = {
+				limit = { check_variable = { var = USA_FREE_arm_points value = 0 compare = greater_than_or_equals } }
+				add_to_variable = { USA_FREE_arm_points = FREE_expert_guidance_P } add_to_temp_variable = { PROSPER = 1 }
+			}
+			else = {
+				add_to_variable = { USA_FREE_arm_points = FREE_expert_guidance_S } add_to_temp_variable = { SUFFER = 1 }
+			}
+			if = {
+				limit = { check_variable = { var = USA_FREE_nav_points value = 0 compare = greater_than_or_equals } }
+				add_to_variable = { USA_FREE_nav_points = FREE_expert_guidance_P } add_to_temp_variable = { PROSPER = 1 }
+			}
+			else = {
+				add_to_variable = { USA_FREE_nav_points = FREE_expert_guidance_S } add_to_temp_variable = { SUFFER = 1 }
+			}
+			if = {
+				limit = { check_variable = { var = USA_FREE_air_points value = 0 compare = greater_than_or_equals } }
+				add_to_variable = { USA_FREE_air_points = FREE_expert_guidance_P } add_to_temp_variable = { PROSPER = 1 }
+			}
+			else = {
+				add_to_variable = { USA_FREE_air_points = FREE_expert_guidance_S } add_to_temp_variable = { SUFFER = 1 }
+			}
+			if = {
+				limit = { check_variable = { var = USA_FREE_sci_points value = 0 compare = greater_than_or_equals } }
+				add_to_variable = { USA_FREE_sci_points = FREE_expert_guidance_P } add_to_temp_variable = { PROSPER = 1 }
+			}
+			else = {
+				add_to_variable = { USA_FREE_sci_points = FREE_expert_guidance_S } add_to_temp_variable = { SUFFER = 1 }
+			}
 
+			multiply_temp_variable = { PROSPER = FREE_expert_guidance_P }
+			multiply_temp_variable = { SUFFER = FREE_expert_guidance_S }
+
+			if = {
+				limit = {
+					or = {
+						has_dynamic_modifier = USA_FREE_dynamic_modifier
+						has_dynamic_modifier = USA_FREE_dynamic_modifier_2
+					}
+					NOT = { has_completed_focus = USA_FREE_expert_guidance }
+				}
+				custom_override_tooltip = {
+					tooltip = {
+						P_LOC = [?PROSPER]
+						S_LOC = [?SUFFER]
+						localization_key = USA_FREE_expert_guidance_tt
+					}
+				}
+			}
+			#custom_effect_tooltip = USA_FREE_expert_guidance_tt
+			hidden_effect = {
+				USA_AN_check_FREE_all = yes
+			}
 		}
 	}
 
-	focus = { # L3
-		id = USA_TBD_l3
-		icon = GFX_focus_PLACEHOLDER
+	focus = { # (FREE) Improved Focus II
+		id = USA_FREE_improved_focus_II
+		icon = GFX_focus_usa_FREE_improved_focus_II
 		relative_position_id = USA_federal_recovery_emergency_enterprise
-		prerequisite = { focus = USA_TBD_civ_boost }
+		prerequisite = { focus = USA_FREE_expert_guidance }
 
 		x = -3
 		y = 4
 
-		cost = 10
+		cost = 6
 
 		ai_will_do = {
 			factor = 1
@@ -34287,27 +34616,43 @@ focus_tree = {
 			FOCUS_FILTER_Attending_to
 		}
 		available = {
-
+			OR = {
+				has_completed_focus = USA_FREE_raise_taxes_for_reinvestment
+				has_completed_focus = USA_FREE_print_money_to_fund_FREE
+			}
+			OR = {
+				not = { or = { has_completed_focus = USA_FREE_top_end_funds_management has_completed_focus = USA_FREE_lower_end_funds_management } }
+				has_completed_focus = USA_FREE_undersecretariat_for_sectoral_administration
+			}
 		}
 		
 		bypass = {
 		}
 
 		completion_reward = {
-
+			custom_effect_tooltip = USA_FREE_improved_focus_II_tt
+			add_to_variable = {
+				FREE_points_A = 1
+			}
+			add_to_variable = {
+				FREE_points_AA = 2
+			}
+			add_to_variable = {
+				FREE_points_AAA = 3
+			}
 		}
 	}
 
-	focus = { # R1
-		id = USA_TBD_r1
-		icon = GFX_focus_PLACEHOLDER
+	focus = { # (FREE) Funds Management
+		id = USA_FREE_funds_management
+		icon = GFX_focus_usa_FREE_funds_management
 		relative_position_id = USA_federal_recovery_emergency_enterprise
 		prerequisite = { focus = USA_federal_recovery_emergency_enterprise }
 
 		x = 2
 		y = 1
 
-		cost = 10
+		cost = 4
 
 		ai_will_do = {
 			factor = 1
@@ -34316,27 +34661,46 @@ focus_tree = {
 			FOCUS_FILTER_Attending_to
 		}
 		available = {
-
+			has_completed_focus = USA_FREE_department_expansion
+			OR = {
+				NOT = { has_completed_focus = USA_FREE_improved_focus}
+				has_completed_focus = USA_FREE_improved_focus_II
+			}
 		}
 		
 		bypass = {
 		}
 
 		completion_reward = {
-
+			add_political_power = 25
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+			skip_line_tt = yes
+			custom_effect_tooltip = USA_FREE_funds_management_tt
+			add_to_variable = {
+				FREE_points_V = 0
+			}
+			add_to_variable = {
+				FREE_points_VV = 0
+			}
+			add_to_variable = {
+				FREE_points_VVV = 1
+			}
 		}
 	}
 
-	focus = { # R2
-		id = USA_TBD_r2
-		icon = GFX_focus_PLACEHOLDER
+	focus = { # (FREE) Recovery Funds
+		id = USA_FREE_recovery_funds
+		icon = GFX_bag_of_money
 		relative_position_id = USA_federal_recovery_emergency_enterprise
-		prerequisite = { focus = USA_TBD_r1 }
+		prerequisite = { focus = USA_FREE_funds_management }
 
 		x = 3
 		y = 2
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -34352,23 +34716,91 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			add_political_power = 50
+			skip_line_tt = yes
+			set_temp_variable = { PROSPER = 0 }
+			set_temp_variable = { SUFFER = 0 }
+			if = {
+				limit = { check_variable = { var = USA_FREE_civ_points value = 0 compare = less_than } }
+				add_to_variable = { USA_FREE_civ_points = FREE_expert_guidance_P } add_to_temp_variable = { SUFFER = 1 }
+			}
+			else = {
+				add_to_variable = { USA_FREE_civ_points = FREE_expert_guidance_S } add_to_temp_variable = { PROSPER = 1 }
+			}
+			if = {
+				limit = { check_variable = { var = USA_FREE_mil_points value = 0 compare = less_than } }
+				add_to_variable = { USA_FREE_mil_points = FREE_expert_guidance_P } add_to_temp_variable = { SUFFER = 1 }
+			}
+			else = {
+				add_to_variable = { USA_FREE_mil_points = FREE_expert_guidance_S } add_to_temp_variable = { PROSPER = 1 }
+			}
+			if = {
+				limit = { check_variable = { var = USA_FREE_arm_points value = 0 compare = less_than } }
+				add_to_variable = { USA_FREE_arm_points = FREE_expert_guidance_P } add_to_temp_variable = { SUFFER = 1 }
+			}
+			else = {
+				add_to_variable = { USA_FREE_arm_points = FREE_expert_guidance_S } add_to_temp_variable = { PROSPER = 1 }
+			}
+			if = {
+				limit = { check_variable = { var = USA_FREE_nav_points value = 0 compare = less_than } }
+				add_to_variable = { USA_FREE_nav_points = FREE_expert_guidance_P } add_to_temp_variable = { SUFFER = 1 }
+			}
+			else = {
+				add_to_variable = { USA_FREE_nav_points = FREE_expert_guidance_S } add_to_temp_variable = { PROSPER = 1 }
+			}
+			if = {
+				limit = { check_variable = { var = USA_FREE_air_points value = 0 compare = less_than } }
+				add_to_variable = { USA_FREE_air_points = FREE_expert_guidance_P } add_to_temp_variable = { SUFFER = 1 }
+			}
+			else = {
+				add_to_variable = { USA_FREE_air_points = FREE_expert_guidance_S } add_to_temp_variable = { PROSPER = 1 }
+			}
+			if = {
+				limit = { check_variable = { var = USA_FREE_sci_points value = 0 compare = less_than } }
+				add_to_variable = { USA_FREE_sci_points = FREE_expert_guidance_P } add_to_temp_variable = { SUFFER = 1 }
+			}
+			else = {
+				add_to_variable = { USA_FREE_sci_points = FREE_expert_guidance_S } add_to_temp_variable = { PROSPER = 1 }
+			}
 
+			multiply_temp_variable = { PROSPER = FREE_recovery_funds_P }
+			multiply_temp_variable = { SUFFER = FREE_recovery_funds_S }
+
+			if = {
+				limit = {
+					or = {
+						has_dynamic_modifier = USA_FREE_dynamic_modifier
+						has_dynamic_modifier = USA_FREE_dynamic_modifier_2
+					}
+					NOT = { has_completed_focus = USA_FREE_recovery_funds }
+				}
+				custom_override_tooltip = {
+					tooltip = {
+						P_LOC = [?PROSPER]
+						S_LOC = [?SUFFER]
+						localization_key = USA_FREE_recovery_funds_tt
+					}
+				}
+			}
+			hidden_effect = {
+				USA_AN_check_FREE_all = yes
+			}
 		}
 	}
 
-	focus = { # R3
-		id = USA_TBD_r3
-		icon = GFX_focus_PLACEHOLDER
+	focus = { # (FREE) Top-End Funds Management
+		id = USA_FREE_top_end_funds_management
+		icon = GFX_focus_usa_FREE_top_end_funds_management
 		relative_position_id = USA_federal_recovery_emergency_enterprise
-		prerequisite = { focus = USA_TBD_r2 }
+		prerequisite = { focus = USA_FREE_recovery_funds }
 		mutually_exclusive = {
-			focus = USA_TBD_r4
+			focus = USA_FREE_lower_end_funds_management
 		}
 
 		x = 2
 		y = 4
 
-		cost = 10
+		cost = 6
 
 		ai_will_do = {
 			factor = 1
@@ -34377,30 +34809,52 @@ focus_tree = {
 			FOCUS_FILTER_Attending_to
 		}
 		available = {
-
+			OR = {
+				has_completed_focus = USA_FREE_raise_taxes_for_reinvestment
+				has_completed_focus = USA_FREE_print_money_to_fund_FREE
+			}
+			OR = {
+				not = { has_completed_focus = USA_FREE_improved_focus_II }
+				has_completed_focus = USA_FREE_undersecretariat_for_sectoral_administration
+			}
 		}
 		
 		bypass = {
 		}
 
 		completion_reward = {
-
+			add_political_power = 25
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+			skip_line_tt = yes
+			custom_effect_tooltip = USA_FREE_top_end_funds_management_tt
+			add_to_variable = {
+				FREE_points_V = 0
+			}
+			add_to_variable = {
+				FREE_points_VV = 0
+			}
+			add_to_variable = {
+				FREE_points_VVV = 1
+			}
 		}
 	}
 
-	focus = { # R4
-		id = USA_TBD_r4
-		icon = GFX_focus_PLACEHOLDER
+	focus = { # (FREE) Lower-End Funds Management
+		id = USA_FREE_lower_end_funds_management
+		icon = GFX_focus_usa_FREE_lower_end_funds_management
 		relative_position_id = USA_federal_recovery_emergency_enterprise
-		prerequisite = { focus = USA_TBD_r2 }
+		prerequisite = { focus = USA_FREE_recovery_funds }
 		mutually_exclusive = {
-			focus = USA_TBD_r3
+			focus = USA_FREE_top_end_funds_management
 		}
 
 		x = 4
 		y = 4
 
-		cost = 10
+		cost = 6
 
 		ai_will_do = {
 			factor = 1
@@ -34409,14 +34863,36 @@ focus_tree = {
 			FOCUS_FILTER_Attending_to
 		}
 		available = {
-
+			OR = {
+				has_completed_focus = USA_FREE_raise_taxes_for_reinvestment
+				has_completed_focus = USA_FREE_print_money_to_fund_FREE
+			}
+			OR = {
+				not = { has_completed_focus = USA_FREE_improved_focus_II }
+				has_completed_focus = USA_FREE_undersecretariat_for_sectoral_administration
+			}
 		}
 		
 		bypass = {
 		}
 
 		completion_reward = {
-
+			add_political_power = 25
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+			skip_line_tt = yes
+			custom_effect_tooltip = USA_FREE_lower_end_funds_management_tt
+			add_to_variable = {
+				FREE_points_V = 0
+			}
+			add_to_variable = {
+				FREE_points_VV = 1
+			}
+			add_to_variable = {
+				FREE_points_VVV = 0
+			}
 		}
 	}
 
@@ -34440,7 +34916,7 @@ focus_tree = {
 			FOCUS_FILTER_Attending_to
 		}
 		available = {
-
+			has_completed_focus = USA_federal_recovery_emergency_enterprise
 		}
 		
 		bypass = {
@@ -35070,7 +35546,7 @@ focus_tree = {
 			FOCUS_FILTER_Attending_to
 		}
 		available = {
-
+			has_completed_focus = USA_federal_recovery_emergency_enterprise
 		}
 		
 		bypass = {
@@ -35482,6 +35958,7 @@ focus_tree = {
 				USA_dy_air_experience_gain_air_factor = 0.05
 				tooltip = experience_gain_air_factor_tt
 			}
+			USA_AN_FREE_air_up_low = yes
 		}
 	}
 
@@ -35581,6 +36058,7 @@ focus_tree = {
 				USA_dy_air_air_doctrine_cost_factor = -0.10
 				tooltip = air_doctrine_cost_factor_tt
 			}
+			USA_AN_FREE_air_up_low = yes
 		}
 	}
 
@@ -35623,6 +36101,7 @@ focus_tree = {
 				uses = 2
 				category = radar_tech
 			}
+			USA_AN_FREE_air_up_low = yes
 		}
 	}
 
@@ -35734,6 +36213,7 @@ focus_tree = {
 				USA_dy_air_air_accidents_factor = -0.05
 				tooltip = air_accidents_factor_tt
 			}
+			USA_AN_FREE_air_up_hih = yes
 		}
 	}
 
@@ -35896,6 +36376,7 @@ focus_tree = {
 				add_mio_design_team_assign_cost = -0.15
 				add_mio_research_bonus = 0.05
 			}
+			USA_AN_FREE_air_up_med = yes
 		}
 	}
 
@@ -35935,7 +36416,7 @@ focus_tree = {
 				add_mio_design_team_assign_cost = -0.20
 				add_mio_research_bonus = 0.25
 			}
-
+			USA_AN_FREE_air_up_low = yes
 		}
 	}
 
@@ -35982,6 +36463,7 @@ focus_tree = {
 			}
 
 			USA_mil_spending_increase_medium = yes
+			USA_AN_FREE_air_up_med = yes
 		}
 	}
 
@@ -36027,6 +36509,7 @@ focus_tree = {
 				USA_dy_air_air_cas_efficiency = 0.10
 				tooltip = air_cas_efficiency_tt
 			}
+			USA_AN_FREE_air_up_low = yes
 		}
 	}
 
@@ -36119,6 +36602,7 @@ focus_tree = {
 				USA_dy_air_air_night_penalty = -0.10
 				tooltip = air_night_penalty_tt
 			}
+			USA_AN_FREE_air_up_low = yes
 		}
 	}
 
@@ -36177,6 +36661,7 @@ focus_tree = {
 				USA_dy_air_air_ace_generation_chance_factor = 0.05
 				tooltip = air_ace_generation_chance_factor_tt
 			}
+			USA_AN_FREE_air_up_low = yes
 		}
 	}
 
@@ -36235,6 +36720,7 @@ focus_tree = {
 				USA_dy_air_air_superiority_efficiency = 0.10
 				tooltip = air_superiority_efficiency_tt
 			}
+			USA_AN_FREE_air_up_low = yes
 		}
 	}
 
@@ -36303,6 +36789,7 @@ focus_tree = {
 				USA_dy_air_air_ace_generation_chance_factor = 0.05
 				tooltip = air_ace_generation_chance_factor_tt
 			}
+			USA_AN_FREE_air_up_low = yes
 		}
 	}
 
@@ -36346,6 +36833,7 @@ focus_tree = {
 				USA_dy_air_air_range_factor = 0.05
 				tooltip = air_range_factor_tt
 			}
+			USA_AN_FREE_air_up_low = yes
 		}
 	}
 
@@ -36394,6 +36882,7 @@ focus_tree = {
 				USA_dy_arm_special_forces_cap = 0.05
 				tooltip = special_forces_cap_tt
 			}
+			USA_AN_FREE_air_up_med = yes
 		}
 	}
 
@@ -36453,6 +36942,7 @@ focus_tree = {
 				add_mio_size = 1
 				add_mio_funds_gain_factor = 0.10
 			}
+			USA_AN_FREE_air_up_hih = yes
 		}
 	}
 
@@ -36526,6 +37016,7 @@ focus_tree = {
 				USA_dy_air_air_maximum_speed_factor = 0.05
 				tooltip = air_maximum_speed_factor_tt
 			}
+			USA_AN_FREE_air_up_med = yes
 		}
 	}
 
@@ -36559,6 +37050,7 @@ focus_tree = {
 
 		completion_reward = {
 			air_experience = 75
+			USA_AN_FREE_air_up_low = yes
 		}
 	}
 
@@ -36599,6 +37091,7 @@ focus_tree = {
 				USA_dy_air_naval_strike_targetting_factor = 0.15
 				tooltip = naval_strike_targetting_factor_tt
 			}
+			USA_AN_FREE_air_up_low = yes
 		}
 	}
 
@@ -36650,6 +37143,7 @@ focus_tree = {
 					modifier = USA_air_dynamic_modifier_2
 				}
 			}
+			USA_AN_FREE_air_up_low = yes
 		}
 	}
 
@@ -36773,6 +37267,7 @@ focus_tree = {
 				add_mio_funds = 1500
 				add_mio_funds_gain_factor = 0.05
 			}
+			USA_AN_FREE_air_up_hih = yes
 		}
 	}
 
@@ -36828,6 +37323,7 @@ focus_tree = {
 				USA_dy_air_air_strategic_bomber_bombing_factor = 0.10
 				tooltip = air_strategic_bomber_bombing_factor_tt
 			}
+			USA_AN_FREE_air_up_med = yes
 		}
 	}
 
@@ -36869,7 +37365,7 @@ focus_tree = {
 				uses = 1
 				category = jet_technology
 			}
-
+			USA_AN_FREE_air_up_med = yes
 		}
 	}
 
@@ -36942,6 +37438,7 @@ focus_tree = {
 				USA_dy_air_air_strategic_bomber_bombing_factor = 0.15
 				tooltip = air_strategic_bomber_bombing_factor_tt
 			}
+			USA_AN_FREE_air_up_low = yes
 		}
 	}
 
@@ -36997,6 +37494,7 @@ focus_tree = {
 				add_mio_size = 1
 				add_mio_funds = 1000
 			}
+			USA_AN_FREE_air_up_med = yes
 		}
 	}
 
@@ -37126,6 +37624,8 @@ focus_tree = {
 			}
 
 			USA_mil_spending_increase_medium = yes
+			USA_AN_FREE_air_up_med = yes
+			USA_AN_FREE_arm_up_med = yes
 		}
 	}
 
@@ -37169,6 +37669,7 @@ focus_tree = {
 				USA_dy_arm_training_time_factor = -0.10
 				tooltip = training_time_factor_tt
 			}
+			USA_AN_FREE_arm_up_low = yes
 		}
 	}
 
@@ -37230,6 +37731,7 @@ focus_tree = {
 				USA_dy_arm_army_org_factor = 0.05
 				tooltip = army_org_factor_tt
 			}
+			USA_AN_FREE_arm_up_low = yes
 		}
 	}
 
@@ -37290,6 +37792,7 @@ focus_tree = {
 				USA_eco_dy_conscription_factor = 0.05 # Was 0.10
 				tooltip = conscription_factor_tt
 			}
+			USA_AN_FREE_arm_up_low = yes
 		}
 	}
 
@@ -37345,6 +37848,7 @@ focus_tree = {
 				USA_dy_arm_land_doctrine_cost_factor = -0.10
 				tooltip = land_doctrine_cost_factor_tt
 			}
+			USA_AN_FREE_arm_up_low = yes
 		}
 	}
 
@@ -37420,6 +37924,7 @@ focus_tree = {
 				USA_dy_arm_planning_speed = 0.10
 				tooltip = planning_speed_factor_tt
 			}
+			USA_AN_FREE_arm_up_low = yes
 
 			#skip_line_tt = yes
 			#custom_effect_tooltip = USA_officer_focus_tt
@@ -37513,7 +38018,7 @@ focus_tree = {
 
 			#skip_line_tt = yes
 			#custom_effect_tooltip = USA_officer_focus_tt
-
+			USA_AN_FREE_arm_up_low = yes
 		}
 	}
 
@@ -37592,7 +38097,7 @@ focus_tree = {
 
 			#skip_line_tt = yes
 			#custom_effect_tooltip = USA_officer_focus_tt
-
+			USA_AN_FREE_arm_up_low = yes
 		}
 	}
 
@@ -37695,6 +38200,7 @@ focus_tree = {
 				USA_dy_arm_initiative_factor = 0.05
 				tooltip = initiative_factor_tt
 			}
+			USA_AN_FREE_arm_up_low = yes
 		}
 	}
 
@@ -37740,6 +38246,7 @@ focus_tree = {
 			}
 
 			USA_mil_spending_increase_small = yes
+			USA_AN_FREE_arm_up_med = yes
 		}
 	}
 
@@ -37780,6 +38287,7 @@ focus_tree = {
 				add_mio_size = 1
 				add_mio_funds_gain_factor = 0.10
 			}
+			USA_AN_FREE_arm_up_low = yes
 		}
 	}
 
@@ -37823,6 +38331,7 @@ focus_tree = {
 			#	USA_dy_arm_coordination_bonus = 0.05
 			#	tooltip = coordination_bonus_tt
 			#}
+			USA_AN_FREE_arm_up_low = yes
 		}
 	}
 
@@ -37881,6 +38390,7 @@ focus_tree = {
 			}
 
 			USA_mil_spending_increase_small = yes
+			USA_AN_FREE_arm_up_hih = yes
 		}
 	}
 
@@ -38008,6 +38518,7 @@ focus_tree = {
 				add_mio_funds_gain_factor = 0.10
 				add_mio_research_bonus = 0.05
 			}
+			USA_AN_FREE_arm_up_med = yes
 		}
 	}
 
@@ -38068,6 +38579,7 @@ focus_tree = {
 			}
 
 			USA_mil_spending_increase_small = yes
+			USA_AN_FREE_arm_up_low = yes
 		}
 	}
 
@@ -38152,6 +38664,7 @@ focus_tree = {
 			}
 
 			USA_mil_spending_increase_medium = yes
+			USA_AN_FREE_arm_up_med = yes
 		}
 	}
 
@@ -38202,6 +38715,7 @@ focus_tree = {
 			}
 
 			USA_mil_spending_increase_medium = yes
+			USA_AN_FREE_arm_up_low = yes
 		}
 	}
 
@@ -38247,6 +38761,7 @@ focus_tree = {
 				USA_eco_dy_conscription_factor = 0.20
 				tooltip = conscription_factor_tt
 			}
+			USA_AN_FREE_arm_up_low = yes
 		}
 	}
 
@@ -38311,6 +38826,7 @@ focus_tree = {
 				focus = { USA_logistical_focus }
 				cost = 14
 			}
+			USA_AN_FREE_arm_up_med = yes
 		}
 	}
 
@@ -38362,6 +38878,7 @@ focus_tree = {
 				focus = { USA_democracys_vanguard }
 				cost = 14
 			}
+			USA_AN_FREE_arm_up_med = yes	
 		}
 	}
 
@@ -38397,6 +38914,7 @@ focus_tree = {
 				USA_eco_dy_industrial_capacity_factory = -0.05
 				tooltip = industrial_capacity_factory_tt
 			}
+			USA_AN_FREE_arm_up_low = yes
 		}
 	}
 
@@ -38441,6 +38959,7 @@ focus_tree = {
 				USA_dy_arm_training_time_factor = 0.15
 				tooltip = training_time_factor_tt
 			}
+			USA_AN_FREE_arm_up_low = yes
 		}
 	}
 
@@ -38501,6 +39020,7 @@ focus_tree = {
 				USA_eco_dy_conscription_factor = -0.15
 				tooltip = conscription_factor_tt
 			}
+			USA_AN_FREE_arm_up_med = yes
 		}
 	}
 
@@ -38537,7 +39057,7 @@ focus_tree = {
 					popup = no
 				}
 			}
-			
+			USA_AN_FREE_arm_up_low = yes
 		}
 	}
 
@@ -38577,6 +39097,7 @@ focus_tree = {
 				category = artillery
 				category = infantry_weapons
 			}
+			USA_AN_FREE_arm_up_med = yes
 		}
 	}
 
@@ -38623,6 +39144,7 @@ focus_tree = {
 				tooltip = military_industrial_organization_research_bonus_tt
 			}
 			USA_mil_spending_increase_small = yes
+			USA_AN_FREE_arm_up_hih = yes
 		}
 	}
 
@@ -38689,6 +39211,7 @@ focus_tree = {
 				USA_eco_dy_conscription_factor = -0.05
 				tooltip = conscription_factor_tt
 			}
+			USA_AN_FREE_arm_up_hih = yes
 		}
 	}
   # American Juggernaut
@@ -38752,6 +39275,7 @@ focus_tree = {
 				USA_dy_air_experience_gain_air_factor = 0.05
 				tooltip = air_exp_gain_factor_5_tt
 			}
+			USA_AN_FREE_arm_up_low = yes
 		}
 	}
 
@@ -38791,6 +39315,7 @@ focus_tree = {
 				USA_dy_arm_army_artillery_attack_factor = 0.05
 				tooltip = army_artillery_attack_factor_tt
 			}
+			USA_AN_FREE_arm_up_low = yes
 		}
 	}
 
@@ -38830,6 +39355,7 @@ focus_tree = {
 				USA_dy_arm_recon_factor = 0.10
 				tooltip = recon_factor_tt
 			}
+			USA_AN_FREE_arm_up_low = yes
 		}
 	}
 
@@ -38868,6 +39394,7 @@ focus_tree = {
 				USA_dy_arm_dig_in_speed_factor = 0.10
 				tooltip = dig_in_speed_factor_tt
 			}
+			USA_AN_FREE_arm_up_low = yes
 		}
 	}
 
@@ -38914,6 +39441,7 @@ focus_tree = {
 				USA_dy_arm_army_artillery_attack_factor = 0.10
 				tooltip = army_artillery_attack_factor_tt
 			}
+			USA_AN_FREE_arm_up_low = yes
 		}
 	}
 
@@ -38965,6 +39493,7 @@ focus_tree = {
 				USA_dy_arm_breakthrough_factor = 0.05
 				tooltip = breakthrough_factor_tt
 			}
+			USA_AN_FREE_arm_up_low = yes
 		}
 	}
 
@@ -39023,6 +39552,7 @@ focus_tree = {
 				USA_eco_dy_conscription_factor = 0.15
 				tooltip = conscription_factor_tt
 			}
+			USA_AN_FREE_arm_up_low = yes
 		}
 	}
 
@@ -39053,6 +39583,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = usa_mass_production_idea
+			USA_AN_FREE_arm_up_med = yes
 		}
 	}
 
@@ -39093,6 +39624,7 @@ focus_tree = {
 				USA_dy_arm_experience_loss_factor = 0.05
 				tooltip = experience_loss_factor_tt
 			}
+			USA_AN_FREE_arm_up_low = yes
 		}
 	}
 
@@ -39144,6 +39676,7 @@ focus_tree = {
 				USA_eco_dy_conscription_factor = 0.15
 				tooltip = conscription_factor_tt
 			}
+			USA_AN_FREE_arm_up_med = yes
 		}
 	}
 
@@ -39198,6 +39731,7 @@ focus_tree = {
 			}
 			skip_line_tt = yes
 			USA_congress_small_opposition = yes
+			USA_AN_FREE_nav_up_low = yes
 
 			hidden_effect = {
 				set_variable = {
@@ -39394,6 +39928,7 @@ focus_tree = {
 				USA_dy_nav_experience_gain_navy_factor = 0.10
 				tooltip = experience_gain_navy_factor_tt
 			}
+			USA_AN_FREE_nav_up_low = yes
 		}
 	}
 
@@ -39461,6 +39996,7 @@ focus_tree = {
 				USA_dy_arm_special_forces_cap = 0.05
 				tooltip = special_forces_cap_tt
 			}
+			USA_AN_FREE_nav_up_low = yes
 		}
 	}
 
@@ -39498,6 +40034,7 @@ focus_tree = {
 				uses = 2
 				category = tp_tech
 			}
+			USA_AN_FREE_nav_up_low = yes
 		}
 	}
 
@@ -39561,6 +40098,7 @@ focus_tree = {
 					usa_nav_caps_var = 1
 				}
 			}
+			USA_AN_FREE_nav_up_med = yes
 		}
 	}
 
@@ -39612,6 +40150,7 @@ focus_tree = {
 				USA_dy_nav_naval_accidents_chance = -0.05
 				tooltip = naval_accidents_chance_tt
 			}
+			USA_AN_FREE_nav_up_low = yes
 		}
 	}
 
@@ -39666,6 +40205,7 @@ focus_tree = {
 				USA_dy_nav_navy_org_factor = 0.05
 				tooltip = navy_org_factor_tt
 			}
+			USA_AN_FREE_nav_up_low = yes
 		}
 	}
 
@@ -39722,6 +40262,7 @@ focus_tree = {
 				USA_dy_nav_navy_org_factor = 0.05
 				tooltip = navy_org_factor_tt
 			}
+			USA_AN_FREE_nav_up_low = yes
 		}
 	}
 
@@ -39772,6 +40313,7 @@ focus_tree = {
 			#	USA_dy_nav_navy_org_factor = 0.05
 			#	tooltip = navy_org_factor_tt
 			#}
+			USA_AN_FREE_nav_up_med = yes
 		}
 	}
 
@@ -39876,6 +40418,7 @@ focus_tree = {
 					usa_nav_caps_var = 1
 				}
 			}
+			USA_AN_FREE_nav_up_med = yes
 		}
 	}
 
@@ -39914,6 +40457,7 @@ focus_tree = {
 				USA_dy_nav_naval_morale_factor = 0.10
 				tooltip = naval_morale_factor_tt
 			}
+			USA_AN_FREE_nav_up_low = yes
 		}
 	}
 
@@ -39988,7 +40532,8 @@ focus_tree = {
 				#ahead_reduction = 1
 				uses = 1
 				category = naval_equipment
-			}			
+			}
+			USA_AN_FREE_nav_up_med = yes
 		}
 	}
 
@@ -40045,6 +40590,7 @@ focus_tree = {
 				add_mio_size = 1
 				add_mio_funds_gain_factor = 0.10
 			}
+			USA_AN_FREE_nav_up_hih = yes
 		}
 	}
 
@@ -40160,6 +40706,7 @@ focus_tree = {
 				add_mio_funds = 500
 				add_mio_funds_gain_factor = 0.10
 			}
+			USA_AN_FREE_nav_up_med = yes
 		}
 	}
 
@@ -40270,6 +40817,7 @@ focus_tree = {
 				add_mio_funds = 150
 				add_mio_design_team_assign_cost = -0.10
 			}
+			USA_AN_FREE_nav_up_med = yes
 		}
 	}
 
@@ -40314,6 +40862,7 @@ focus_tree = {
 				USA_dy_nav_repair_speed_factor = 0.10
 				tooltip = repair_speed_factor_tt
 			}
+			USA_AN_FREE_nav_up_med = yes
 		}
 	}
 
@@ -40382,6 +40931,7 @@ focus_tree = {
 				idea = usa_shipping_investment_ti
 				days = 360
 			}
+			USA_AN_FREE_nav_up_low = yes
 		}
 	}
 
@@ -40481,6 +41031,7 @@ focus_tree = {
 				}
 			}
 			USA_mil_spending_increase_small = yes
+			USA_AN_FREE_nav_up_med = yes
 		}
 	}
 
@@ -40574,6 +41125,7 @@ focus_tree = {
 					usa_nav_caps_var = 1
 				}
 			}
+			USA_AN_FREE_nav_up_hih = yes
 		}
 	}
 
@@ -40628,6 +41180,7 @@ focus_tree = {
 			USA_congress_small_opposition = yes
 
 			USA_mil_spending_increase_small = yes
+			USA_AN_FREE_nav_up_med = yes
 		}
 	}
 
@@ -40692,6 +41245,7 @@ focus_tree = {
 				tooltip = industrial_capacity_dockyard_tt
 			}
 			USA_mil_spending_increase_small = yes
+			USA_AN_FREE_nav_up_med = yes
 		}
 	}
 
@@ -40756,6 +41310,7 @@ focus_tree = {
 			#	USA_eco_dy_industrial_capacity_dockyard = -0.10
 			#	tooltip = industrial_capacity_dockyard_tt
 			#}
+			USA_AN_FREE_nav_up_med = yes
 		}
 	}
 
@@ -40818,6 +41373,7 @@ focus_tree = {
 				add_mio_funds = 1000
 				add_mio_research_bonus = 0.10
 			}
+			USA_AN_FREE_nav_up_low = yes
 		}
 	}
 
@@ -40865,6 +41421,7 @@ focus_tree = {
 				USA_dy_nav_naval_torpedo_reveal_chance_factor = -0.05
 				tooltip = naval_torpedo_reveal_chance_factor_tt
 			}
+			USA_AN_FREE_nav_up_low = yes
 		}
 	}
 
@@ -40926,6 +41483,7 @@ focus_tree = {
 			mio:USA_electric_boat_company_organization = {
 				add_mio_funds_gain_factor = 0.10
 			}
+			USA_AN_FREE_nav_up_low = yes
 		}
 	}
 
@@ -40984,6 +41542,7 @@ focus_tree = {
 				USA_dy_nav_convoy_escort_efficiency = 0.05
 				tooltip = convoy_escort_efficiency_tt
 			}
+			USA_AN_FREE_nav_up_low = yes
 		}
 	}
 
@@ -41046,6 +41605,7 @@ focus_tree = {
 			mio:USA_electric_boat_company_organization = {
 				add_mio_funds_gain_factor = 0.10
 			}
+			USA_AN_FREE_nav_up_low = yes
 		}
 	}
 
@@ -41110,6 +41670,7 @@ focus_tree = {
 				add_mio_funds_gain_factor = 0.10
 				add_mio_research_bonus = 0.05
 			}
+			USA_AN_FREE_nav_up_low = yes
 		}
 	}
 
@@ -41275,6 +41836,7 @@ focus_tree = {
 			mio:USA_newport_news_shipbuilding_organization = {
 				add_mio_size = 1
 			}
+			USA_AN_FREE_nav_up_hih = yes
 		}
 	}
 
@@ -41324,6 +41886,7 @@ focus_tree = {
 				USA_dy_air_naval_strike_targetting_factor = 0.05
 				tooltip = naval_strike_targetting_factor_tt
 			}
+			USA_AN_FREE_nav_up_low = yes
 		}
 	}
 
@@ -41379,6 +41942,7 @@ focus_tree = {
 				USA_dy_nav_sortie_efficiency = 0.10
 				tooltip = sortie_efficiency_tt
 			}
+			USA_AN_FREE_nav_up_low = yes
 		}
 	}
 
@@ -41532,6 +42096,7 @@ focus_tree = {
 			mio:USA_newport_news_shipbuilding_organization = {
 				add_mio_size = 1
 			}
+			USA_AN_FREE_nav_up_med = yes
 		}
 	}
 
@@ -41579,6 +42144,7 @@ focus_tree = {
 				specialization = specialization_naval
 			}
 			USA_mil_spending_increase_small = yes
+			USA_AN_FREE_nav_up_hih = yes
 		}
 	}
 

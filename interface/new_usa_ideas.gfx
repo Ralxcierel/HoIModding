@@ -65,6 +65,10 @@ spriteTypes = {
 		name = "GFX_idea_communist_american_super_economy"
 		texturefile = "gfx/interface/new_ideas/idea_communist_american_super_economy.dds"
 	}
+	spriteType = { # idea_usa_federal_recovery_emergency_enterprise
+		name = "GFX_idea_usa_federal_recovery_emergency_enterprise"
+		texturefile = "gfx/interface/new_ideas/idea_usa_federal_recovery_emergency_enterprise.dds"
+	}
 
   # NEW DECISIONS
 	spriteType = { # decision_category_usa_homeland_defense
@@ -110,6 +114,51 @@ spriteTypes = {
 	spriteType = { # usa_CGStar_empty_text_icon
 		name = "GFX_usa_CGStar_empty_text_icon"
 		texturefile = "gfx/interface/new_ideas/usa_CGStar_empty_text_icon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = { # usa_free_right_text_icon
+		name = "GFX_usa_free_right_text_icon"
+		texturefile = "gfx/interface/new_ideas/usa_free_right_text_icon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = { # usa_free_left_text_icon
+		name = "GFX_usa_free_left_text_icon"
+		texturefile = "gfx/interface/new_ideas/usa_free_left_text_icon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = { # usa_free_cat_text_icon
+		name = "GFX_usa_free_cat_text_icon"
+		texturefile = "gfx/interface/new_ideas/usa_free_cat_text_icon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = { # usa_free_cat_air_text_icon
+		name = "GFX_usa_free_cat_air_text_icon"
+		texturefile = "gfx/interface/new_ideas/usa_free_cat_air_text_icon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = { # usa_free_cat_arm_text_icon
+		name = "GFX_usa_free_cat_arm_text_icon"
+		texturefile = "gfx/interface/new_ideas/usa_free_cat_arm_text_icon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = { # usa_free_cat_civ_text_icon
+		name = "GFX_usa_free_cat_civ_text_icon"
+		texturefile = "gfx/interface/new_ideas/usa_free_cat_civ_text_icon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = { # usa_free_cat_mil_text_icon
+		name = "GFX_usa_free_cat_mil_text_icon"
+		texturefile = "gfx/interface/new_ideas/usa_free_cat_mil_text_icon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = { # usa_free_cat_nav_text_icon
+		name = "GFX_usa_free_cat_nav_text_icon"
+		texturefile = "gfx/interface/new_ideas/usa_free_cat_nav_text_icon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = { # usa_free_cat_sci_text_icon
+		name = "GFX_usa_free_cat_sci_text_icon"
+		texturefile = "gfx/interface/new_ideas/usa_free_cat_sci_text_icon.dds"
 		legacy_lazy_load = no
 	}
 

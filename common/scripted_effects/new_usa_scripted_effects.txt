@@ -675,3 +675,1232 @@ USA_NC_apply_surprise_ti = {
 set_america_being_invaded = {
 	hidden_effect = { set_country_flag = america_is_being_invaded_flag set_country_flag = USA_has_completed_homeland_defense_emergency_act_focus_equivalent country_event = new_usa_mainland_invasion.1 }
 }
+
+# FREE
+USA_AN_FREE_remove_civ_si = {
+	hidden_effect = {
+		remove_ideas = {
+			usa_free_civilian_industry_si_-3
+			usa_free_civilian_industry_si_-2
+			usa_free_civilian_industry_si_-1
+			usa_free_civilian_industry_si_0
+			usa_free_civilian_industry_si_1
+			usa_free_civilian_industry_si_2
+			usa_free_civilian_industry_si_3
+			usa_free_civilian_industry_si_4
+			usa_free_civilian_industry_si_5
+		}
+	}
+}
+USA_AN_check_FREE_civ_score = {
+	if = {
+		limit = { USA_AN_has_FREE_civ_si = yes }
+		if = { # -30 -> -21 (-3)
+			limit = {
+				check_variable = {
+					var = USA_FREE_civ_points
+					value = -20
+					compare = less_than
+				}
+			}
+			if = {
+				limit = { NOT = { has_idea = usa_free_civilian_industry_si_-3 } }
+				USA_AN_FREE_remove_civ_si = yes
+				hidden_effect = { add_ideas = usa_free_civilian_industry_si_-3 }
+			}
+		}
+		else_if = { # -20 -> -11 (-2)
+			limit = {
+				check_variable = {
+					var = USA_FREE_civ_points
+					value = -10
+					compare = less_than
+				}
+			}
+			if = {
+				limit = { NOT = { has_idea = usa_free_civilian_industry_si_-2 } }
+				USA_AN_FREE_remove_civ_si = yes
+				hidden_effect = { add_ideas = usa_free_civilian_industry_si_-2 }
+			}
+		}
+		else_if = { # -10 -> -1 (-1)
+			limit = {
+				check_variable = {
+					var = USA_FREE_civ_points
+					value = 0
+					compare = less_than
+				}
+			}
+			if = {
+				limit = { NOT = { has_idea = usa_free_civilian_industry_si_-1 } }
+				USA_AN_FREE_remove_civ_si = yes
+				hidden_effect = { add_ideas = usa_free_civilian_industry_si_-1 }
+			}
+		}
+		else_if = { # 0 -> 9 (0)
+			limit = {
+				check_variable = {
+					var = USA_FREE_civ_points
+					value = 10
+					compare = less_than
+				}
+			}
+			if = {
+				limit = { NOT = { has_idea = usa_free_civilian_industry_si_0 } }
+				USA_AN_FREE_remove_civ_si = yes
+				hidden_effect = { add_ideas = usa_free_civilian_industry_si_0 }
+			}
+		}
+		else_if = { # 10 -> 19 (1)
+			limit = {
+				check_variable = {
+					var = USA_FREE_civ_points
+					value = 20
+					compare = less_than
+				}
+			}
+			if = {
+				limit = { NOT = { has_idea = usa_free_civilian_industry_si_1 } }
+				USA_AN_FREE_remove_civ_si = yes
+				hidden_effect = { add_ideas = usa_free_civilian_industry_si_1 }
+			}
+		}
+		else_if = { # 20 -> 29 (2)
+			limit = {
+				check_variable = {
+					var = USA_FREE_civ_points
+					value = 30
+					compare = less_than
+				}
+			}
+			if = {
+				limit = { NOT = { has_idea = usa_free_civilian_industry_si_2 } }
+				USA_AN_FREE_remove_civ_si = yes
+				hidden_effect = { add_ideas = usa_free_civilian_industry_si_2 }
+			}
+		}
+		else_if = { # 30 -> 39 (3)
+			limit = {
+				check_variable = {
+					var = USA_FREE_civ_points
+					value = 40
+					compare = less_than
+				}
+			}
+			if = {
+				limit = { NOT = { has_idea = usa_free_civilian_industry_si_3 } }
+				USA_AN_FREE_remove_civ_si = yes
+				hidden_effect = { add_ideas = usa_free_civilian_industry_si_3 }
+			}
+		}
+		else_if = { # 40 -> 49 (4)
+			limit = {
+				check_variable = {
+					var = USA_FREE_civ_points
+					value = 50
+					compare = less_than
+				}
+			}
+			if = {
+				limit = { NOT = { has_idea = usa_free_civilian_industry_si_4 } }
+				USA_AN_FREE_remove_civ_si = yes
+				hidden_effect = { add_ideas = usa_free_civilian_industry_si_4 }
+			}
+		}
+		else_if = { # 50 -> 59 (5)
+			limit = {
+				check_variable = {
+					var = USA_FREE_civ_points
+					value = 49
+					compare = greater_than
+				}
+			}
+			if = {
+				limit = { NOT = { has_idea = usa_free_civilian_industry_si_5 } }
+				USA_AN_FREE_remove_civ_si = yes
+				hidden_effect = { add_ideas = usa_free_civilian_industry_si_5 }
+			}
+		}
+	}
+}
+
+USA_AN_FREE_remove_mil_si = {
+	hidden_effect = {
+		remove_ideas = {
+			usa_free_military_industry_si_-3
+			usa_free_military_industry_si_-2
+			usa_free_military_industry_si_-1
+			usa_free_military_industry_si_0
+			usa_free_military_industry_si_1
+			usa_free_military_industry_si_2
+			usa_free_military_industry_si_3
+			usa_free_military_industry_si_4
+			usa_free_military_industry_si_5
+		}		
+	}
+}
+USA_AN_check_FREE_mil_score = {
+	if = {
+		limit = { USA_AN_has_FREE_mil_si = yes }
+		if = { # -30 -> -21 (-3)
+			limit = {
+				check_variable = {
+					var = USA_FREE_mil_points
+					value = -20
+					compare = less_than
+				}
+			}
+			if = {
+				limit = { NOT = { has_idea = usa_free_military_industry_si_-3 } }
+				USA_AN_FREE_remove_mil_si = yes
+				hidden_effect = { add_ideas = usa_free_military_industry_si_-3 }
+			}
+		}
+		else_if = { # -20 -> -11 (-2)
+			limit = {
+				check_variable = {
+					var = USA_FREE_mil_points
+					value = -10
+					compare = less_than
+				}
+			}
+			if = {
+				limit = { NOT = { has_idea = usa_free_military_industry_si_-2 } }
+				USA_AN_FREE_remove_mil_si = yes
+				hidden_effect = { add_ideas = usa_free_military_industry_si_-2 }
+			}
+		}
+		else_if = { # -10 -> -1 (-1)
+			limit = {
+				check_variable = {
+					var = USA_FREE_mil_points
+					value = 0
+					compare = less_than
+				}
+			}
+			if = {
+				limit = { NOT = { has_idea = usa_free_military_industry_si_-1 } }
+				USA_AN_FREE_remove_mil_si = yes
+				hidden_effect = { add_ideas = usa_free_military_industry_si_-1 }
+			}
+		}
+		else_if = { # 0 -> 9 (0)
+			limit = {
+				check_variable = {
+					var = USA_FREE_mil_points
+					value = 10
+					compare = less_than
+				}
+			}
+			if = {
+				limit = { NOT = { has_idea = usa_free_military_industry_si_0 } }
+				USA_AN_FREE_remove_mil_si = yes
+				hidden_effect = { add_ideas = usa_free_military_industry_si_0 }
+			}
+		}
+		else_if = { # 10 -> 19 (1)
+			limit = {
+				check_variable = {
+					var = USA_FREE_mil_points
+					value = 20
+					compare = less_than
+				}
+			}
+			if = {
+				limit = { NOT = { has_idea = usa_free_military_industry_si_1 } }
+				USA_AN_FREE_remove_mil_si = yes
+				hidden_effect = { add_ideas = usa_free_military_industry_si_1 }
+			}
+		}
+		else_if = { # 20 -> 29 (2)
+			limit = {
+				check_variable = {
+					var = USA_FREE_mil_points
+					value = 30
+					compare = less_than
+				}
+			}
+			if = {
+				limit = { NOT = { has_idea = usa_free_military_industry_si_2 } }
+				USA_AN_FREE_remove_mil_si = yes
+				hidden_effect = { add_ideas = usa_free_military_industry_si_2 }
+			}
+		}
+		else_if = { # 30 -> 39 (3)
+			limit = {
+				check_variable = {
+					var = USA_FREE_mil_points
+					value = 40
+					compare = less_than
+				}
+			}
+			if = {
+				limit = { NOT = { has_idea = usa_free_military_industry_si_3 } }
+				USA_AN_FREE_remove_mil_si = yes
+				hidden_effect = { add_ideas = usa_free_military_industry_si_3 }
+			}
+		}
+		else_if = { # 40 -> 49 (4)
+			limit = {
+				check_variable = {
+					var = USA_FREE_mil_points
+					value = 50
+					compare = less_than
+				}
+			}
+			if = {
+				limit = { NOT = { has_idea = usa_free_military_industry_si_4 } }
+				USA_AN_FREE_remove_mil_si = yes
+				hidden_effect = { add_ideas = usa_free_military_industry_si_4 }
+			}
+		}
+		else_if = { # 50 -> 59 (5)
+			limit = {
+				check_variable = {
+					var = USA_FREE_mil_points
+					value = 49
+					compare = greater_than
+				}
+			}
+			if = {
+				limit = { NOT = { has_idea = usa_free_military_industry_si_5 } }
+				USA_AN_FREE_remove_mil_si = yes
+				hidden_effect = { add_ideas = usa_free_military_industry_si_5 }
+			}
+		}
+	}
+}
+
+USA_AN_FREE_remove_arm_si = {
+	hidden_effect = {
+		remove_ideas = {
+			usa_free_army_si_-3
+			usa_free_army_si_-2
+			usa_free_army_si_-1
+			usa_free_army_si_0
+			usa_free_army_si_1
+			usa_free_army_si_2
+			usa_free_army_si_3
+			usa_free_army_si_4
+			usa_free_army_si_5
+		}
+	}
+}
+USA_AN_check_FREE_arm_score = {
+	if = {
+		limit = { USA_AN_has_FREE_arm_si = yes }
+		if = { # -30 -> -21 (-3)
+			limit = {
+				check_variable = {
+					var = USA_FREE_arm_points
+					value = -20
+					compare = less_than
+				}
+			}
+			if = {
+				limit = { NOT = { has_idea = usa_free_army_si_-3 } }
+				USA_AN_FREE_remove_arm_si = yes
+				hidden_effect = { add_ideas = usa_free_army_si_-3 }
+			}
+		}
+		else_if = { # -20 -> -11 (-2)
+			limit = {
+				check_variable = {
+					var = USA_FREE_arm_points
+					value = -10
+					compare = less_than
+				}
+			}
+			if = {
+				limit = { NOT = { has_idea = usa_free_army_si_-2 } }
+				USA_AN_FREE_remove_arm_si = yes
+				hidden_effect = { add_ideas = usa_free_army_si_-2 }
+			}
+		}
+		else_if = { # -10 -> -1 (-1)
+			limit = {
+				check_variable = {
+					var = USA_FREE_arm_points
+					value = 0
+					compare = less_than
+				}
+			}
+			if = {
+				limit = { NOT = { has_idea = usa_free_army_si_-1 } }
+				USA_AN_FREE_remove_arm_si = yes
+				hidden_effect = { add_ideas = usa_free_army_si_-1 }
+			}
+		}
+		else_if = { # 0 -> 9 (0)
+			limit = {
+				check_variable = {
+					var = USA_FREE_arm_points
+					value = 10
+					compare = less_than
+				}
+			}
+			if = {
+				limit = { NOT = { has_idea = usa_free_army_si_0 } }
+				USA_AN_FREE_remove_arm_si = yes
+				hidden_effect = { add_ideas = usa_free_army_si_0 }
+			}
+		}
+		else_if = { # 10 -> 19 (1)
+			limit = {
+				check_variable = {
+					var = USA_FREE_arm_points
+					value = 20
+					compare = less_than
+				}
+			}
+			if = {
+				limit = { NOT = { has_idea = usa_free_army_si_1 } }
+				USA_AN_FREE_remove_arm_si = yes
+				hidden_effect = { add_ideas = usa_free_army_si_1 }
+			}
+		}
+		else_if = { # 20 -> 29 (2)
+			limit = {
+				check_variable = {
+					var = USA_FREE_arm_points
+					value = 30
+					compare = less_than
+				}
+			}
+			if = {
+				limit = { NOT = { has_idea = usa_free_army_si_2 } }
+				USA_AN_FREE_remove_arm_si = yes
+				hidden_effect = { add_ideas = usa_free_army_si_2 }
+			}
+		}
+		else_if = { # 30 -> 39 (3)
+			limit = {
+				check_variable = {
+					var = USA_FREE_arm_points
+					value = 40
+					compare = less_than
+				}
+			}
+			if = {
+				limit = { NOT = { has_idea = usa_free_army_si_3 } }
+				USA_AN_FREE_remove_arm_si = yes
+				hidden_effect = { add_ideas = usa_free_army_si_3 }
+			}
+		}
+		else_if = { # 40 -> 49 (4)
+			limit = {
+				check_variable = {
+					var = USA_FREE_arm_points
+					value = 50
+					compare = less_than
+				}
+			}
+			if = {
+				limit = { NOT = { has_idea = usa_free_army_si_4 } }
+				USA_AN_FREE_remove_arm_si = yes
+				hidden_effect = { add_ideas = usa_free_army_si_4 }
+			}
+		}
+		else_if = { # 50 -> 59 (5)
+			limit = {
+				check_variable = {
+					var = USA_FREE_arm_points
+					value = 49
+					compare = greater_than
+				}
+			}
+			if = {
+				limit = { NOT = { has_idea = usa_free_army_si_5 } }
+				USA_AN_FREE_remove_arm_si = yes
+				hidden_effect = { add_ideas = usa_free_army_si_5 }
+			}
+		}
+	}
+}
+
+USA_AN_FREE_remove_nav_si = {
+	hidden_effect = {
+		remove_ideas = {
+			usa_free_navy_si_-3
+			usa_free_navy_si_-2
+			usa_free_navy_si_-1
+			usa_free_navy_si_0
+			usa_free_navy_si_1
+			usa_free_navy_si_2
+			usa_free_navy_si_3
+			usa_free_navy_si_4
+			usa_free_navy_si_5
+		}
+	}
+}
+USA_AN_check_FREE_nav_score = {
+	if = {
+		limit = { USA_AN_has_FREE_nav_si = yes }
+		if = { # -30 -> -21 (-3)
+			limit = {
+				check_variable = {
+					var = USA_FREE_nav_points
+					value = -20
+					compare = less_than
+				}
+			}
+			if = {
+				limit = { NOT = { has_idea = usa_free_navy_si_-3 } }
+				USA_AN_FREE_remove_nav_si = yes
+				hidden_effect = { add_ideas = usa_free_navy_si_-3 }
+			}
+		}
+		else_if = { # -20 -> -11 (-2)
+			limit = {
+				check_variable = {
+					var = USA_FREE_nav_points
+					value = -10
+					compare = less_than
+				}
+			}
+			if = {
+				limit = { NOT = { has_idea = usa_free_navy_si_-2 } }
+				USA_AN_FREE_remove_nav_si = yes
+				hidden_effect = { add_ideas = usa_free_navy_si_-2 }
+			}
+		}
+		else_if = { # -10 -> -1 (-1)
+			limit = {
+				check_variable = {
+					var = USA_FREE_nav_points
+					value = 0
+					compare = less_than
+				}
+			}
+			if = {
+				limit = { NOT = { has_idea = usa_free_navy_si_-1 } }
+				USA_AN_FREE_remove_nav_si = yes
+				hidden_effect = { add_ideas = usa_free_navy_si_-1 }
+			}
+		}
+		else_if = { # 0 -> 9 (0)
+			limit = {
+				check_variable = {
+					var = USA_FREE_nav_points
+					value = 10
+					compare = less_than
+				}
+			}
+			if = {
+				limit = { NOT = { has_idea = usa_free_navy_si_0 } }
+				USA_AN_FREE_remove_nav_si = yes
+				hidden_effect = { add_ideas = usa_free_navy_si_0 }
+			}
+		}
+		else_if = { # 10 -> 19 (1)
+			limit = {
+				check_variable = {
+					var = USA_FREE_nav_points
+					value = 20
+					compare = less_than
+				}
+			}
+			if = {
+				limit = { NOT = { has_idea = usa_free_navy_si_1 } }
+				USA_AN_FREE_remove_nav_si = yes
+				hidden_effect = { add_ideas = usa_free_navy_si_1 }
+			}
+		}
+		else_if = { # 20 -> 29 (2)
+			limit = {
+				check_variable = {
+					var = USA_FREE_nav_points
+					value = 30
+					compare = less_than
+				}
+			}
+			if = {
+				limit = { NOT = { has_idea = usa_free_navy_si_2 } }
+				USA_AN_FREE_remove_nav_si = yes
+				hidden_effect = { add_ideas = usa_free_navy_si_2 }
+			}
+		}
+		else_if = { # 30 -> 39 (3)
+			limit = {
+				check_variable = {
+					var = USA_FREE_nav_points
+					value = 40
+					compare = less_than
+				}
+			}
+			if = {
+				limit = { NOT = { has_idea = usa_free_navy_si_3 } }
+				USA_AN_FREE_remove_nav_si = yes
+				hidden_effect = { add_ideas = usa_free_navy_si_3 }
+			}
+		}
+		else_if = { # 40 -> 49 (4)
+			limit = {
+				check_variable = {
+					var = USA_FREE_nav_points
+					value = 50
+					compare = less_than
+				}
+			}
+			if = {
+				limit = { NOT = { has_idea = usa_free_navy_si_4 } }
+				USA_AN_FREE_remove_nav_si = yes
+				hidden_effect = { add_ideas = usa_free_navy_si_4 }
+			}
+		}
+		else_if = { # 50 -> 59 (5)
+			limit = {
+				check_variable = {
+					var = USA_FREE_nav_points
+					value = 49
+					compare = greater_than
+				}
+			}
+			if = {
+				limit = { NOT = { has_idea = usa_free_navy_si_5 } }
+				USA_AN_FREE_remove_nav_si = yes
+				hidden_effect = { add_ideas = usa_free_navy_si_5 }
+			}
+		}
+	}
+}
+
+USA_AN_FREE_remove_air_si = {
+	hidden_effect = {
+		remove_ideas = {
+			usa_free_air_si_-3
+			usa_free_air_si_-2
+			usa_free_air_si_-1
+			usa_free_air_si_0
+			usa_free_air_si_1
+			usa_free_air_si_2
+			usa_free_air_si_3
+			usa_free_air_si_4
+			usa_free_air_si_5
+		}
+	}
+}
+USA_AN_check_FREE_air_score = {
+	if = {
+		limit = { USA_AN_has_FREE_air_si = yes }
+		if = { # -30 -> -21 (-3)
+			limit = {
+				check_variable = {
+					var = USA_FREE_air_points
+					value = -20
+					compare = less_than
+				}
+			}
+			if = {
+				limit = { NOT = { has_idea = usa_free_air_si_-3 } }
+				USA_AN_FREE_remove_air_si = yes
+				hidden_effect = { add_ideas = usa_free_air_si_-3 }
+			}
+		}
+		else_if = { # -20 -> -11 (-2)
+			limit = {
+				check_variable = {
+					var = USA_FREE_air_points
+					value = -10
+					compare = less_than
+				}
+			}
+			if = {
+				limit = { NOT = { has_idea = usa_free_air_si_-2 } }
+				USA_AN_FREE_remove_air_si = yes
+				hidden_effect = { add_ideas = usa_free_air_si_-2 }
+			}
+		}
+		else_if = { # -10 -> -1 (-1)
+			limit = {
+				check_variable = {
+					var = USA_FREE_air_points
+					value = 0
+					compare = less_than
+				}
+			}
+			if = {
+				limit = { NOT = { has_idea = usa_free_air_si_-1 } }
+				USA_AN_FREE_remove_air_si = yes
+				hidden_effect = { add_ideas = usa_free_air_si_-1 }
+			}
+		}
+		else_if = { # 0 -> 9 (0)
+			limit = {
+				check_variable = {
+					var = USA_FREE_air_points
+					value = 10
+					compare = less_than
+				}
+			}
+			if = {
+				limit = { NOT = { has_idea = usa_free_air_si_0 } }
+				USA_AN_FREE_remove_air_si = yes
+				hidden_effect = { add_ideas = usa_free_air_si_0 }
+			}
+		}
+		else_if = { # 10 -> 19 (1)
+			limit = {
+				check_variable = {
+					var = USA_FREE_air_points
+					value = 20
+					compare = less_than
+				}
+			}
+			if = {
+				limit = { NOT = { has_idea = usa_free_air_si_1 } }
+				USA_AN_FREE_remove_air_si = yes
+				hidden_effect = { add_ideas = usa_free_air_si_1 }
+			}
+		}
+		else_if = { # 20 -> 29 (2)
+			limit = {
+				check_variable = {
+					var = USA_FREE_air_points
+					value = 30
+					compare = less_than
+				}
+			}
+			if = {
+				limit = { NOT = { has_idea = usa_free_air_si_2 } }
+				USA_AN_FREE_remove_air_si = yes
+				hidden_effect = { add_ideas = usa_free_air_si_2 }
+			}
+		}
+		else_if = { # 30 -> 39 (3)
+			limit = {
+				check_variable = {
+					var = USA_FREE_air_points
+					value = 40
+					compare = less_than
+				}
+			}
+			if = {
+				limit = { NOT = { has_idea = usa_free_air_si_3 } }
+				USA_AN_FREE_remove_air_si = yes
+				hidden_effect = { add_ideas = usa_free_air_si_3 }
+			}
+		}
+		else_if = { # 40 -> 49 (4)
+			limit = {
+				check_variable = {
+					var = USA_FREE_air_points
+					value = 50
+					compare = less_than
+				}
+			}
+			if = {
+				limit = { NOT = { has_idea = usa_free_air_si_4 } }
+				USA_AN_FREE_remove_air_si = yes
+				hidden_effect = { add_ideas = usa_free_air_si_4 }
+			}
+		}
+		else_if = { # 50 -> 59 (5)
+			limit = {
+				check_variable = {
+					var = USA_FREE_air_points
+					value = 49
+					compare = greater_than
+				}
+			}
+			if = {
+				limit = { NOT = { has_idea = usa_free_air_si_5 } }
+				USA_AN_FREE_remove_air_si = yes
+				hidden_effect = { add_ideas = usa_free_air_si_5 }
+			}
+		}
+	}
+}
+
+USA_AN_FREE_remove_sci_si = {
+	hidden_effect = {
+		remove_ideas = {
+			usa_free_science_si_-3
+			usa_free_science_si_-2
+			usa_free_science_si_-1
+			usa_free_science_si_0
+			usa_free_science_si_1
+			usa_free_science_si_2
+			usa_free_science_si_3
+			usa_free_science_si_4
+			usa_free_science_si_5
+		}
+	}
+}
+USA_AN_check_FREE_sci_score = {
+	if = {
+		limit = { USA_AN_has_FREE_sci_si = yes }
+		if = { # -30 -> -21 (-3)
+			limit = {
+				check_variable = {
+					var = USA_FREE_sci_points
+					value = -20
+					compare = less_than
+				}
+			}
+			if = {
+				limit = { NOT = { has_idea = usa_free_science_si_-3 } }
+				USA_AN_FREE_remove_sci_si = yes
+				hidden_effect = { add_ideas = usa_free_science_si_-3 }
+			}
+		}
+		else_if = { # -20 -> -11 (-2)
+			limit = {
+				check_variable = {
+					var = USA_FREE_sci_points
+					value = -10
+					compare = less_than
+				}
+			}
+			if = {
+				limit = { NOT = { has_idea = usa_free_science_si_-2 } }
+				USA_AN_FREE_remove_sci_si = yes
+				hidden_effect = { add_ideas = usa_free_science_si_-2 }
+			}
+		}
+		else_if = { # -10 -> -1 (-1)
+			limit = {
+				check_variable = {
+					var = USA_FREE_sci_points
+					value = 0
+					compare = less_than
+				}
+			}
+			if = {
+				limit = { NOT = { has_idea = usa_free_science_si_-1 } }
+				USA_AN_FREE_remove_sci_si = yes
+				hidden_effect = { add_ideas = usa_free_science_si_-1 }
+			}
+		}
+		else_if = { # 0 -> 9 (0)
+			limit = {
+				check_variable = {
+					var = USA_FREE_sci_points
+					value = 10
+					compare = less_than
+				}
+			}
+			if = {
+				limit = { NOT = { has_idea = usa_free_science_si_0 } }
+				USA_AN_FREE_remove_sci_si = yes
+				hidden_effect = { add_ideas = usa_free_science_si_0 }
+			}
+		}
+		else_if = { # 10 -> 19 (1)
+			limit = {
+				check_variable = {
+					var = USA_FREE_sci_points
+					value = 20
+					compare = less_than
+				}
+			}
+			if = {
+				limit = { NOT = { has_idea = usa_free_science_si_1 } }
+				USA_AN_FREE_remove_sci_si = yes
+				hidden_effect = { add_ideas = usa_free_science_si_1 }
+			}
+		}
+		else_if = { # 20 -> 29 (2)
+			limit = {
+				check_variable = {
+					var = USA_FREE_sci_points
+					value = 30
+					compare = less_than
+				}
+			}
+			if = {
+				limit = { NOT = { has_idea = usa_free_science_si_2 } }
+				USA_AN_FREE_remove_sci_si = yes
+				hidden_effect = { add_ideas = usa_free_science_si_2 }
+			}
+		}
+		else_if = { # 30 -> 39 (3)
+			limit = {
+				check_variable = {
+					var = USA_FREE_sci_points
+					value = 40
+					compare = less_than
+				}
+			}
+			if = {
+				limit = { NOT = { has_idea = usa_free_science_si_3 } }
+				USA_AN_FREE_remove_sci_si = yes
+				hidden_effect = { add_ideas = usa_free_science_si_3 }
+			}
+		}
+		else_if = { # 40 -> 49 (4)
+			limit = {
+				check_variable = {
+					var = USA_FREE_sci_points
+					value = 50
+					compare = less_than
+				}
+			}
+			if = {
+				limit = { NOT = { has_idea = usa_free_science_si_4 } }
+				USA_AN_FREE_remove_sci_si = yes
+				hidden_effect = { add_ideas = usa_free_science_si_4 }
+			}
+		}
+		else_if = { # 50 -> 59 (5)
+			limit = {
+				check_variable = {
+					var = USA_FREE_sci_points
+					value = 49
+					compare = greater_than
+				}
+			}
+			if = {
+				limit = { NOT = { has_idea = usa_free_science_si_5 } }
+				USA_AN_FREE_remove_sci_si = yes
+				hidden_effect = { add_ideas = usa_free_science_si_5 }
+			}
+		}
+	}
+}
+
+USA_AN_check_FREE_all = {
+	USA_AN_check_FREE_civ_score = yes
+	USA_AN_check_FREE_mil_score = yes
+	USA_AN_check_FREE_arm_score = yes
+	USA_AN_check_FREE_nav_score = yes
+	USA_AN_check_FREE_air_score = yes
+	USA_AN_check_FREE_sci_score = yes
+}
+USA_AN_FREE_all_V = {
+	add_to_variable = { USA_FREE_civ_points = FREE_points_V }
+	add_to_variable = { USA_FREE_mil_points = FREE_points_V }
+	add_to_variable = { USA_FREE_arm_points = FREE_points_V }
+	add_to_variable = { USA_FREE_nav_points = FREE_points_V }
+	add_to_variable = { USA_FREE_air_points = FREE_points_V }
+	add_to_variable = { USA_FREE_sci_points = FREE_points_V }
+}
+USA_AN_FREE_all_VV = {
+	add_to_variable = { USA_FREE_civ_points = FREE_points_VV }
+	add_to_variable = { USA_FREE_mil_points = FREE_points_VV }
+	add_to_variable = { USA_FREE_arm_points = FREE_points_VV }
+	add_to_variable = { USA_FREE_nav_points = FREE_points_VV }
+	add_to_variable = { USA_FREE_air_points = FREE_points_VV }
+	add_to_variable = { USA_FREE_sci_points = FREE_points_VV }
+}
+USA_AN_FREE_all_VVV = {
+	add_to_variable = { USA_FREE_civ_points = FREE_points_VVV }
+	add_to_variable = { USA_FREE_mil_points = FREE_points_VVV }
+	add_to_variable = { USA_FREE_arm_points = FREE_points_VVV }
+	add_to_variable = { USA_FREE_nav_points = FREE_points_VVV }
+	add_to_variable = { USA_FREE_air_points = FREE_points_VVV }
+	add_to_variable = { USA_FREE_sci_points = FREE_points_VVV }
+}
+
+USA_AN_FREE_civ_up_low = {
+	#hidden_effect = {
+	if = {
+		limit = {
+			or = {
+				has_dynamic_modifier = USA_FREE_dynamic_modifier
+				has_dynamic_modifier = USA_FREE_dynamic_modifier_2
+			}
+		}
+		add_to_variable = { USA_FREE_civ_points = FREE_points_A }
+		
+		subtract_from_variable = { USA_FREE_civ_points = FREE_points_V }
+		USA_AN_FREE_all_V = yes
+		USA_AN_check_FREE_all = yes
+		custom_override_tooltip = { tooltip = { localization_key = FREE_focus_loc_tt_A LOC_TYPE = usa_free_civilian_industry_si_tt } }
+		#custom_effect_tooltip = USA_AN_FREE_civ_up_low_tt
+	}
+		
+	#}
+
+}
+USA_AN_FREE_civ_up_med = {
+	if = {
+		limit = {
+			or = {
+				has_dynamic_modifier = USA_FREE_dynamic_modifier
+				has_dynamic_modifier = USA_FREE_dynamic_modifier_2
+			}
+		}
+		add_to_variable = { USA_FREE_civ_points = FREE_points_AA }
+		
+		subtract_from_variable = { USA_FREE_civ_points = FREE_points_VV }
+		USA_AN_FREE_all_VV = yes
+		USA_AN_check_FREE_all = yes
+		custom_override_tooltip = { tooltip = { localization_key = FREE_focus_loc_tt_AA LOC_TYPE = usa_free_civilian_industry_si_tt } }
+	}
+}
+USA_AN_FREE_civ_up_hih = {
+	if = {
+		limit = {
+			or = {
+				has_dynamic_modifier = USA_FREE_dynamic_modifier
+				has_dynamic_modifier = USA_FREE_dynamic_modifier_2
+			}
+		}
+		add_to_variable = { USA_FREE_civ_points = FREE_points_AAA }
+		
+		subtract_from_variable = { USA_FREE_civ_points = FREE_points_VVV }
+		USA_AN_FREE_all_VVV = yes
+		USA_AN_check_FREE_all = yes
+		custom_override_tooltip = { tooltip = { localization_key = FREE_focus_loc_tt_AAA LOC_TYPE = usa_free_civilian_industry_si_tt } }
+	}
+}
+
+USA_AN_FREE_mil_up_low = {
+	if = {
+		limit = {
+			or = {
+				has_dynamic_modifier = USA_FREE_dynamic_modifier
+				has_dynamic_modifier = USA_FREE_dynamic_modifier_2
+			}
+		}
+
+		add_to_variable = { USA_FREE_mil_points = FREE_points_A }
+		
+		subtract_from_variable = { USA_FREE_mil_points = FREE_points_V }
+		USA_AN_FREE_all_V = yes
+		USA_AN_check_FREE_all = yes
+		custom_override_tooltip = { tooltip = { localization_key = FREE_focus_loc_tt_A LOC_TYPE = usa_free_military_industry_si_tt } }
+	}
+}
+USA_AN_FREE_mil_up_med = {
+	if = {
+		limit = {
+			or = {
+				has_dynamic_modifier = USA_FREE_dynamic_modifier
+				has_dynamic_modifier = USA_FREE_dynamic_modifier_2
+			}
+		}
+
+		add_to_variable = { USA_FREE_mil_points = FREE_points_AA }
+		
+		subtract_from_variable = { USA_FREE_mil_points = FREE_points_VV }
+		USA_AN_FREE_all_VV = yes
+		USA_AN_check_FREE_all = yes
+		custom_override_tooltip = { tooltip = { localization_key = FREE_focus_loc_tt_AA LOC_TYPE = usa_free_military_industry_si_tt } }
+	}
+}
+USA_AN_FREE_mil_up_hih = {
+	if = {
+		limit = {
+			or = {
+				has_dynamic_modifier = USA_FREE_dynamic_modifier
+				has_dynamic_modifier = USA_FREE_dynamic_modifier_2
+			}
+		}
+
+		add_to_variable = { USA_FREE_mil_points = FREE_points_AAA }
+		
+		subtract_from_variable = { USA_FREE_mil_points = FREE_points_VVV }
+		USA_AN_FREE_all_VVV = yes
+		USA_AN_check_FREE_all = yes
+		custom_override_tooltip = { tooltip = { localization_key = FREE_focus_loc_tt_AAA LOC_TYPE = usa_free_military_industry_si_tt } }
+	}
+}
+
+USA_AN_FREE_arm_up_low = {
+	if = {
+		limit = {
+			or = {
+				has_dynamic_modifier = USA_FREE_dynamic_modifier
+				has_dynamic_modifier = USA_FREE_dynamic_modifier_2
+			}
+		}
+
+		add_to_variable = { USA_FREE_arm_points = FREE_points_A }
+		
+		subtract_from_variable = { USA_FREE_arm_points = FREE_points_V }
+		USA_AN_FREE_all_V = yes
+		USA_AN_check_FREE_all = yes
+		custom_override_tooltip = { tooltip = { localization_key = FREE_focus_loc_tt_A LOC_TYPE = usa_free_army_si_tt } }
+	}
+}
+USA_AN_FREE_arm_up_med = {
+	if = {
+		limit = {
+			or = {
+				has_dynamic_modifier = USA_FREE_dynamic_modifier
+				has_dynamic_modifier = USA_FREE_dynamic_modifier_2
+			}
+		}
+
+		add_to_variable = { USA_FREE_arm_points = FREE_points_AA }
+		
+		subtract_from_variable = { USA_FREE_arm_points = FREE_points_VV }
+		USA_AN_FREE_all_VV = yes
+		USA_AN_check_FREE_all = yes
+		custom_override_tooltip = { tooltip = { localization_key = FREE_focus_loc_tt_AA LOC_TYPE = usa_free_army_si_tt } }
+	}
+}
+USA_AN_FREE_arm_up_hih = {
+	if = {
+		limit = {
+			or = {
+				has_dynamic_modifier = USA_FREE_dynamic_modifier
+				has_dynamic_modifier = USA_FREE_dynamic_modifier_2
+			}
+		}
+
+		add_to_variable = { USA_FREE_arm_points = FREE_points_AAA }
+		
+		subtract_from_variable = { USA_FREE_arm_points = FREE_points_VVV }
+		USA_AN_FREE_all_VVV = yes
+		USA_AN_check_FREE_all = yes
+		custom_override_tooltip = { tooltip = { localization_key = FREE_focus_loc_tt_AAA LOC_TYPE = usa_free_army_si_tt } }
+	}
+}
+
+USA_AN_FREE_nav_up_low = {
+	if = {
+		limit = {
+			or = {
+				has_dynamic_modifier = USA_FREE_dynamic_modifier
+				has_dynamic_modifier = USA_FREE_dynamic_modifier_2
+			}
+		}
+		add_to_variable = { USA_FREE_nav_points = FREE_points_A }
+		
+		subtract_from_variable = { USA_FREE_nav_points = FREE_points_V }
+		USA_AN_FREE_all_V = yes
+		USA_AN_check_FREE_all = yes
+		custom_override_tooltip = { tooltip = { localization_key = FREE_focus_loc_tt_A LOC_TYPE = usa_free_navy_si_tt } }
+	}
+}
+USA_AN_FREE_nav_up_med = {
+	if = {
+		limit = {
+			or = {
+				has_dynamic_modifier = USA_FREE_dynamic_modifier
+				has_dynamic_modifier = USA_FREE_dynamic_modifier_2
+			}
+		}
+		add_to_variable = { USA_FREE_nav_points = FREE_points_AA }
+
+		subtract_from_variable = { USA_FREE_nav_points = FREE_points_VV }
+		USA_AN_FREE_all_VV = yes
+		USA_AN_check_FREE_all = yes
+		custom_override_tooltip = { tooltip = { localization_key = FREE_focus_loc_tt_AA LOC_TYPE = usa_free_navy_si_tt } }
+	}
+}
+USA_AN_FREE_nav_up_hih = {
+	if = {
+		limit = {
+			or = {
+				has_dynamic_modifier = USA_FREE_dynamic_modifier
+				has_dynamic_modifier = USA_FREE_dynamic_modifier_2
+			}
+		}
+
+		add_to_variable = { USA_FREE_nav_points = FREE_points_AAA }
+		
+		subtract_from_variable = { USA_FREE_nav_points = FREE_points_VVV }
+		USA_AN_FREE_all_VVV = yes
+		USA_AN_check_FREE_all = yes
+		custom_override_tooltip = { tooltip = { localization_key = FREE_focus_loc_tt_AAA LOC_TYPE = usa_free_navy_si_tt } }
+	}
+}
+
+USA_AN_FREE_air_up_low = {
+	if = {
+		limit = {
+			or = {
+				has_dynamic_modifier = USA_FREE_dynamic_modifier
+				has_dynamic_modifier = USA_FREE_dynamic_modifier_2
+			}
+		}
+
+		add_to_variable = { USA_FREE_air_points = FREE_points_A }
+		
+		subtract_from_variable = { USA_FREE_air_points = FREE_points_V }
+		USA_AN_FREE_all_V = yes
+		USA_AN_check_FREE_all = yes
+		custom_override_tooltip = { tooltip = { localization_key = FREE_focus_loc_tt_A LOC_TYPE = usa_free_air_si_tt } }
+	}
+}
+USA_AN_FREE_air_up_med = {
+	if = {
+		limit = {
+			or = {
+				has_dynamic_modifier = USA_FREE_dynamic_modifier
+				has_dynamic_modifier = USA_FREE_dynamic_modifier_2
+			}
+		}
+
+		add_to_variable = { USA_FREE_air_points = FREE_points_AA }
+		
+		subtract_from_variable = { USA_FREE_air_points = FREE_points_VV }
+		USA_AN_FREE_all_VV = yes
+		USA_AN_check_FREE_all = yes
+		custom_override_tooltip = { tooltip = { localization_key = FREE_focus_loc_tt_AA LOC_TYPE = usa_free_air_si_tt } }
+	}
+}
+USA_AN_FREE_air_up_hih = {
+	if = {
+		limit = {
+			or = {
+				has_dynamic_modifier = USA_FREE_dynamic_modifier
+				has_dynamic_modifier = USA_FREE_dynamic_modifier_2
+			}
+		}
+
+		add_to_variable = { USA_FREE_air_points = FREE_points_AAA }
+		
+		subtract_from_variable = { USA_FREE_air_points = FREE_points_VVV }
+		USA_AN_FREE_all_VVV = yes
+		USA_AN_check_FREE_all = yes
+		custom_override_tooltip = { tooltip = { localization_key = FREE_focus_loc_tt_AAA LOC_TYPE = usa_free_air_si_tt } }
+	}
+}
+
+USA_AN_FREE_sci_up_low = {
+	if = {
+		limit = {
+			or = {
+				has_dynamic_modifier = USA_FREE_dynamic_modifier
+				has_dynamic_modifier = USA_FREE_dynamic_modifier_2
+			}
+		}
+
+		add_to_variable = { USA_FREE_sci_points = FREE_points_A }
+		
+		subtract_from_variable = { USA_FREE_sci_points = FREE_points_V }
+		USA_AN_FREE_all_V = yes
+		USA_AN_check_FREE_all = yes
+		custom_override_tooltip = { tooltip = { localization_key = FREE_focus_loc_tt_A LOC_TYPE = usa_free_science_si_tt } }
+	}
+}
+USA_AN_FREE_sci_up_med = {
+	if = {
+		limit = {
+			or = {
+				has_dynamic_modifier = USA_FREE_dynamic_modifier
+				has_dynamic_modifier = USA_FREE_dynamic_modifier_2
+			}
+		}
+
+		add_to_variable = { USA_FREE_sci_points = FREE_points_AA }
+		
+		subtract_from_variable = { USA_FREE_sci_points = FREE_points_VV }
+		USA_AN_FREE_all_VV = yes
+		USA_AN_check_FREE_all = yes
+		custom_override_tooltip = { tooltip = { localization_key = FREE_focus_loc_tt_AA LOC_TYPE = usa_free_science_si_tt } }
+	}
+}
+USA_AN_FREE_sci_up_hih = {
+	if = {
+		limit = {
+			or = {
+				has_dynamic_modifier = USA_FREE_dynamic_modifier
+				has_dynamic_modifier = USA_FREE_dynamic_modifier_2
+			}
+		}
+		add_to_variable = { USA_FREE_sci_points = FREE_points_AAA }
+		
+		subtract_from_variable = { USA_FREE_sci_points = FREE_points_VVV }
+		USA_AN_FREE_all_VVV = yes
+		USA_AN_check_FREE_all = yes
+		custom_override_tooltip = { tooltip = { localization_key = FREE_focus_loc_tt_AAA LOC_TYPE = usa_free_science_si_tt } }
+	}
+}
+
+

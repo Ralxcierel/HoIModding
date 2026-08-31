@@ -2010,3 +2010,186 @@
 
  USA_a_song_for_the_horizon: "A Song for the Horizon"
  USA_a_song_for_the_horizon_desc: "$TBA_TT$"
+
+ USA_stars_on_the_horizon: "Stars on the Horizon"
+ USA_stars_on_the_horizon_desc: ""
+
+ USA_the_eagle_lifts_its_wings: "The Eagle Lifts its Wings"
+ USA_the_eagle_lifts_its_wings_desc: ""
+
+ USA_lady_libertys_arsenal: "Lady Liberty's Arsenal"
+ USA_lady_libertys_arsenal_desc: ""
+
+ USA_federal_recovery_emergency_enterprise: "Federal Recovery Emergency Enterprise"
+ USA_federal_recovery_emergency_enterprise_desc: ""
+ USA_federal_recovery_emergency_enterprise_tt: "Adds §Y$USA_FREE_dynamic_modifier$§!, which grants the current [USAGetFREETitle] policies:\n  §Y(-3)§! [USA_federal_recovery_emergency_enterprise_SL_a]\n  §Y(-3)§! [USA_federal_recovery_emergency_enterprise_SL_b]\n  §Y(-3)§! [USA_federal_recovery_emergency_enterprise_SL_c]\n  §Y(-3)§! [USA_federal_recovery_emergency_enterprise_SL_d]\n  §Y(-3)§! [USA_federal_recovery_emergency_enterprise_SL_e]\n  §Y(-3)§! [USA_federal_recovery_emergency_enterprise_SL_f]\n"
+ USA_federal_recovery_emergency_enterprise_tt_2: "Every §Y10 points§! of §Yfunding§! can modify a §9Sector§!, from §R-30§! to §G+50§! points. Most §Yfocuses§! will §Yshift funding§!."
+
+ USA_crisis_of_dependency: "Crisis of Dependency"
+ USA_crisis_of_dependency_desc: ""
+
+ USA_the_bay_otzen_plan: "The Bay-Otzen Plan"
+ USA_the_bay_otzen_plan_desc: ""
+
+ USA_invest_in_infrastructure: "Invest in Infrastructure"
+ USA_invest_in_infrastructure_desc: ""
+
+ USA_reinforce_interstate_routes: "Reinforce Interstate Routes"
+ USA_reinforce_interstate_routes_desc: ""
+
+ USA_finance_new_mines_and_refineries: "Finance New Mines and Refineries"
+ USA_finance_new_mines_and_refineries_desc: ""
+
+ USA_establish_new_forestry_zones: "Establish New Forestry Zones"
+ USA_establish_new_forestry_zones_desc: ""
+
+ USA_tap_old_gold_mines: "Tap Old Gold Mines"
+ USA_tap_old_gold_mines_desc: ""
+
+ USA_the_continental_grid: "The Continental Grid"
+ USA_the_continental_grid_desc: ""
+
+ USA_american_wellspring_administration: "American Wellspring Administration"
+ USA_american_wellspring_administration_desc: ""
+
+ USA_american_architectural_administration: "American Architectural Administration"
+ USA_american_architectural_administration_desc: ""
+
+ USA_ohio_mechanical_complex: "Ohio Mechanical Complex"
+ USA_ohio_mechanical_complex_desc: ""
+
+ USA_strive_for_the_present: "Strive for the Present"
+ USA_strive_for_the_present_desc: ""
+
+ USA_rapid_growth: "Rapid Growth"
+ USA_rapid_growth_desc: ""
+
+ USA_protect_our_tomorrow: "Protect Our Tomorrow"
+ USA_protect_our_tomorrow_desc: ""
+
+ USA_promote_the_national_will: "Promote the National Will"
+ USA_promote_the_national_will_desc: ""
+
+ USA_steady_economic_policies: "Steady Economic Policies"
+ USA_steady_economic_policies_desc: ""
+
+ USA_plan_for_the_future: "Plan for the Future"
+ USA_plan_for_the_future_desc: ""
+
+ USA_invest_in_long_term_schemes: "Invest in Long-Term Schemes"
+ USA_invest_in_long_term_schemes_desc: ""
+
+ USA_blue_districts: "Blue Districts"
+ USA_blue_districts_desc: ""
+
+ USA_increase_technological_funding: "Increase Technological Funding"
+ USA_increase_technological_funding_desc: ""
+
+ USA_north_american_autarky: "North American Autarky"
+ USA_north_american_autarky_desc: ""
+
+ USA_kickstart_the_steel_belt: "Kickstart the Steel Belt"
+ USA_kickstart_the_steel_belt_desc: ""
+
+ USA_focus_on_our_fleets: "Focus on our Fleets"
+ USA_focus_on_our_fleets_desc: ""
+
+ USA_increase_naval_funding: "Increase Naval Funding"
+ USA_increase_naval_funding_desc: ""
+
+ USA_shipwreckers: "Shipwreckers"
+ USA_shipwreckers_desc: ""
+
+ USA_special_investments_in_annapolis: "Special Investments in Annapolis"
+ USA_special_investments_in_annapolis_desc: ""
+
+ USA_focus_on_our_army: "Focus on our Army"
+ USA_focus_on_our_army_desc: ""
+
+ USA_increase_army_funding: "Increase Army Funding"
+ USA_increase_army_funding_desc: ""
+
+ USA_precision_mechanisms: "Precision Mechanisms"
+ USA_precision_mechanisms_desc: ""
+
+ USA_special_investments_in_westpoint: "Special Investments in Westpoint"
+ USA_special_investments_in_westpoint_desc: ""
+
+ USA_industrialize_california: "Industrialize California"
+ USA_industrialize_california_desc: ""
+
+ USA_industrial_funding: "Industrial Funding"
+ USA_industrial_funding_desc: ""
+
+ USA_yeomen_associations: "Yeomen Associations"
+ USA_yeomen_associations_desc: ""
+
+ USA_improve_military_training: "Improve Military Training"
+ USA_improve_military_training_desc: ""
+
+ USA_county_militias: "County Militias"
+ USA_county_militias_desc: ""
+
+ USA_independently_funded_armories: "Independently-Funded Armories"
+ USA_independently_funded_armories_desc: ""
+
+ USA_civilian_logistics_contracts: "Civilian Logistics Contracts"
+ USA_civilian_logistics_contracts_desc: ""
+
+ USA_terrain_navigation_courses: "Terrain Navigation Courses"
+ USA_terrain_navigation_courses_desc: ""
+
+ USA_cloth_and_rope_ramparts: "Cloth and Rope Ramparts"
+ USA_cloth_and_rope_ramparts_desc: ""
+
+ USA_confederalized_asset_procurement: "Confederalized Asset Procurement"
+ USA_confederalized_asset_procurement_desc: ""
+
+ USA_FREE_improved_focus: "Improved Focus"
+ USA_FREE_improved_focus_desc: ""
+ USA_FREE_improved_focus_tt: "§GImproves the value§! of [USAGetFREETitle]'s §Yfocus§! by §Y(+1§!,§Y+2§!,§Y+3)§! respectively going forward.\n§R(Does not modify existing funds)§!"
+
+ USA_FREE_recovery_funds: "Recovery Funds"
+ USA_FREE_recovery_funds_desc: ""
+ USA_FREE_recovery_funds_tt: "Every §9Sector§! that is currently §Ysuffering§! under [USAGetFREETitle] will receive §Gadditional funding§! §Y(+[?FREE_recovery_funds_S])§! (§G$S_LOC$§!). \n§9Sectors§! that are currently §Yprospering§! will receive a §Gsmall amount of funding§! §Y(+[?FREE_recovery_funds_P])§! (§G$P_LOC$§!)."
+
+ USA_FREE_expert_guidance: "Expert Guidance"
+ USA_FREE_expert_guidance_desc: ""
+ USA_FREE_expert_guidance_tt: "Every §9Sector§! that is currently §Yprospering§! under [USAGetFREETitle] will receive §Gadditional funding§! §Y(+[?FREE_expert_guidance_P])§! (§G$P_LOC$§!). \n§9Sectors§! that are currently §Ysuffering§! will receive a §Gsmall amount of funding§! §Y(+[?FREE_expert_guidance_S])§! (§G$S_LOC$§!)."
+
+ USA_FREE_improved_focus_II: "Improved Focus II"
+ USA_FREE_improved_focus_II_desc: ""
+ USA_FREE_improved_focus_II_tt: "§GFurther improves the value§! of [USAGetFREETitle]'s §Yfocus§! by §Y(+1§!,§Y+2§!,§Y+3)§! respectively going forward.\n§R(Does not modify existing funds)§!"
+
+ USA_FREE_funds_management: "Funds Management"
+ USA_FREE_funds_management_desc: ""
+ USA_FREE_funds_management_tt: "§GReduces the severe penalty§! of [USAGetFREETitle]'s §Yfocus§! by §Y(-1)§! going forward.\n§R(Does not modify existing funds)§!"
+
+ USA_FREE_top_end_funds_management: "Top-End Funds Management"
+ USA_FREE_top_end_funds_management_desc: ""
+ USA_FREE_top_end_funds_management_tt: "§GFurther reduces the severe penalty§! of [USAGetFREETitle]'s §Yfocus§! by §Y(-1)§! going forward.\n§R(Does not modify existing funds)§!"
+
+ USA_FREE_lower_end_funds_management: "Lower-End Funds Management"
+ USA_FREE_lower_end_funds_management_desc: ""
+ USA_FREE_lower_end_funds_management_tt: "§GReduces the sizeable penalty§! of [USAGetFREETitle]'s §Yfocus§! by §Y(-1)§! going forward.\n§R(Does not modify existing funds)§!"
+
+ USA_FREE_department_expansion: "Department Expansion"
+ USA_FREE_department_expansion_desc: ""
+ USA_FREE_department_expansion_tt: "Allows for [USAGetFREETitle] to have its §Yfocus§! or its §Yfunds management§! §Gimproved§!.\n\nAll §9Sectors§! suffer a §Rslight penalty§! §Y([?FREE_points_V])§!."
+
+ USA_FREE_raise_taxes_for_reinvestment: "Raise Taxes for Reinvestment"
+ USA_FREE_raise_taxes_for_reinvestment_desc: ""
+ USA_FREE_raise_taxes_for_reinvestment_tt: "Allows for [USAGetFREETitle] to have its §Yfocus§! or its §Yfunds management§! §Gfurther improved§!."
+
+ USA_FREE_print_money_to_fund_FREE: "Print Money to Fund FREE"
+ USA_FREE_print_money_to_fund_FREE_desc: ""
+ USA_FREE_print_money_to_fund_FREE_tt: "Allows for [USAGetFREETitle] to have its §Yfocus§! or its §Yfunds management§! §Gfurther improved§!."
+
+ USA_FREE_undersecretariat_for_sectoral_administration: "Undersecretariat for Sectoral Administration"
+ USA_FREE_undersecretariat_for_sectoral_administration_desc: ""
+ USA_FREE_undersecretariat_for_sectoral_administration_tt: "The §Y$USA_FREE_dynamic_modifier$§! becomes the §Y$USA_FREE_dynamic_modifier_2$§!.\n\nAllows for [USAGetFREETitle] to have its §Yfocus§! and its §Yfunds management§! §Gfully improved§!.\n\nAll §9Sectors§! suffer a §Rslight penalty§! §Y([?FREE_points_V])§!."
+
+ USA_FREE_recovery_achieved: "Recovery Achieved"
+ USA_FREE_recovery_achieved_desc: ""
+ USA_FREE_recovery_achieved_tt: "This focus will give §Ylarger benefits§! the more §Ypositive funding§! from [USAGetFREETitle] is in play.\n\n"
+ USA_FREE_recovery_achieved_tt_2: "§GImproves all the values§! of [USAGetFREETitle]'s §Yfocus§! by §Y(+1)§! going forward.\n§GRemoves all slight penalties§! of [USAGetFREETitle]'s §Yfocus§! going forward.\n§R(Does not modify existing funds)§!"

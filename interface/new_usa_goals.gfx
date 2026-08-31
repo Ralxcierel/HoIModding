@@ -137,9 +137,33 @@ spriteTypes = {
 		name = "GFX_focus_new_the_eagle_flies_alone"
 		texturefile = "gfx/interface/new_goals/focus_new_the_eagle_flies_alone.dds"			
 	}
+	SpriteType = { # focus_usa_FREE_funds_management
+		name = "GFX_focus_usa_FREE_funds_management"
+		texturefile = "gfx/interface/new_goals/focus_usa_FREE_funds_management.dds"			
+	}
+	SpriteType = { # focus_usa_FREE_improved_focus
+		name = "GFX_focus_usa_FREE_improved_focus"
+		texturefile = "gfx/interface/new_goals/focus_usa_FREE_improved_focus.dds"			
+	}
+	SpriteType = { # focus_usa_FREE_improved_focus_II
+		name = "GFX_focus_usa_FREE_improved_focus_II"
+		texturefile = "gfx/interface/new_goals/focus_usa_FREE_improved_focus_II.dds"			
+	}
+	SpriteType = { # focus_usa_FREE_lower_end_funds_management
+		name = "GFX_focus_usa_FREE_lower_end_funds_management"
+		texturefile = "gfx/interface/new_goals/focus_usa_FREE_lower_end_funds_management.dds"			
+	}
+	SpriteType = { # focus_usa_FREE_top_end_funds_management
+		name = "GFX_focus_usa_FREE_top_end_funds_management"
+		texturefile = "gfx/interface/new_goals/focus_usa_FREE_top_end_funds_management.dds"			
+	}
 	SpriteType = { # focus_new_a_song_for_the_horizon
 		name = "GFX_focus_new_a_song_for_the_horizon"
 		texturefile = "gfx/interface/new_goals/focus_new_a_song_for_the_horizon.dds"			
+	}
+	SpriteType = { # focus_usa_FREE
+		name = "GFX_focus_usa_FREE"
+		texturefile = "gfx/interface/new_goals/focus_usa_FREE.dds"			
 	}
 
   # NEW OVERLAYS

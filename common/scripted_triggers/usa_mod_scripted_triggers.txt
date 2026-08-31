@@ -860,3 +860,82 @@ USA_has_completed_homeland_defense_emergency_act_focus_equivalent = {
 	}
 }
 
+USA_AN_has_FREE_civ_si = {
+	OR = {
+		has_idea = usa_free_civilian_industry_si_-3
+		has_idea = usa_free_civilian_industry_si_-2
+		has_idea = usa_free_civilian_industry_si_-1
+		has_idea = usa_free_civilian_industry_si_0
+		has_idea = usa_free_civilian_industry_si_1
+		has_idea = usa_free_civilian_industry_si_2
+		has_idea = usa_free_civilian_industry_si_3
+		has_idea = usa_free_civilian_industry_si_4
+		has_idea = usa_free_civilian_industry_si_5
+	}
+}
+USA_AN_has_FREE_mil_si = {
+	OR = {
+		has_idea = usa_free_military_industry_si_-3
+		has_idea = usa_free_military_industry_si_-2
+		has_idea = usa_free_military_industry_si_-1
+		has_idea = usa_free_military_industry_si_0
+		has_idea = usa_free_military_industry_si_1
+		has_idea = usa_free_military_industry_si_2
+		has_idea = usa_free_military_industry_si_3
+		has_idea = usa_free_military_industry_si_4
+		has_idea = usa_free_military_industry_si_5
+	}
+}
+USA_AN_has_FREE_arm_si = {
+	OR = {
+		has_idea = usa_free_army_si_-3
+		has_idea = usa_free_army_si_-2
+		has_idea = usa_free_army_si_-1
+		has_idea = usa_free_army_si_0
+		has_idea = usa_free_army_si_1
+		has_idea = usa_free_army_si_2
+		has_idea = usa_free_army_si_3
+		has_idea = usa_free_army_si_4
+		has_idea = usa_free_army_si_5
+	}
+}
+USA_AN_has_FREE_nav_si = {
+	OR = {
+		has_idea = usa_free_navy_si_-3
+		has_idea = usa_free_navy_si_-2
+		has_idea = usa_free_navy_si_-1
+		has_idea = usa_free_navy_si_0
+		has_idea = usa_free_navy_si_1
+		has_idea = usa_free_navy_si_2
+		has_idea = usa_free_navy_si_3
+		has_idea = usa_free_navy_si_4
+		has_idea = usa_free_navy_si_5
+	}
+}
+USA_AN_has_FREE_air_si = {
+	OR = {
+		has_idea = usa_free_air_si_-3
+		has_idea = usa_free_air_si_-2
+		has_idea = usa_free_air_si_-1
+		has_idea = usa_free_air_si_0
+		has_idea = usa_free_air_si_1
+		has_idea = usa_free_air_si_2
+		has_idea = usa_free_air_si_3
+		has_idea = usa_free_air_si_4
+		has_idea = usa_free_air_si_5
+	}
+}
+USA_AN_has_FREE_sci_si = {
+	OR = {
+		has_idea = usa_free_science_si_-3
+		has_idea = usa_free_science_si_-2
+		has_idea = usa_free_science_si_-1
+		has_idea = usa_free_science_si_0
+		has_idea = usa_free_science_si_1
+		has_idea = usa_free_science_si_2
+		has_idea = usa_free_science_si_3
+		has_idea = usa_free_science_si_4
+		has_idea = usa_free_science_si_5
+	}
+}
+

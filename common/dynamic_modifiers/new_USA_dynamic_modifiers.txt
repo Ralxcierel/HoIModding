@@ -670,6 +670,27 @@ USA_air_dynamic_modifier_2 = { # US Airforce
 
 }
 
+USA_FREE_dynamic_modifier = { # FREE Dynamic Modifier (American Nationalist)
+	enable = { always = yes }
+
+	icon = GFX_idea_usa_federal_recovery_emergency_enterprise
+
+    custom_modifier_tooltip = USA_FREE_dynamic_modifier_tt
+
+	#INITIAL
+
+}
+USA_FREE_dynamic_modifier_2 = { # FREE USA Dynamic Modifier (American Nationalist)
+	enable = { always = yes }
+
+	icon = GFX_idea_usa_federal_recovery_emergency_enterprise
+
+    custom_modifier_tooltip = USA_FREE_dynamic_modifier_tt
+
+	#INITIAL
+
+}
+
 #custom_modifier_tooltip = FIN_finnish_army_dynamic_modifier_tt #Bonuses applied via hidden NS or tech (molotov_cocktails_tech)
 
 ############################

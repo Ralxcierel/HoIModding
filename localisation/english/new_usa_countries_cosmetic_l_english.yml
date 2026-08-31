@@ -4,3 +4,15 @@
  USA_american_nationalist_communist_ADJ: "American"
  USA_american_nationalist_communist_communism: "United States People's Republic"
  USA_american_nationalist_communist_communism_DEF: "the United States People's Republic"
+
+ USA_american_nationalist: "Second Confederation of the United States"
+ USA_american_nationalist_DEF: "the Second Confederation of the United States"
+ USA_american_nationalist_ADJ: "Confederate"
+ USA_american_nationalist_fascism: "Second Confederation of the United States"
+ USA_american_nationalist_fascism_DEF: "the Second Confederation of the United States"
+
+ USA_goldstar: "Goldstar Federation of North America"
+ USA_goldstar_DEF: "the Goldstar Federation of North America"
+ USA_goldstar_ADJ: "American"
+ USA_goldstar_fascism: "Goldstar Federation of North America"
+ USA_goldstar_fascism_DEF: "the Goldstar Federation of North America"

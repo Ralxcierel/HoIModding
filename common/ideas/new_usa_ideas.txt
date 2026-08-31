@@ -5074,6 +5074,540 @@ ideas = {
                 army_core_defence_factor = -0.10
             }
         }
+
+    }
+
+    hidden_ideas = {
+        # FREE Sub-Ideas
+         # Civ
+         usa_free_civilian_industry_si_-3 = { # Civilian Industry Sub-Idea
+           allowed = { always = no } allowed_civil_war = { always = yes } removal_cost = -1 picture = usa_federal_recovery_emergency_enterprise
+			
+            modifier = {
+                production_speed_industrial_complex_factor = -0.05
+                production_speed_buildings_factor = -0.05
+                political_power_cost = 0.3
+                stability_factor = -0.10
+            }
+         }
+         usa_free_civilian_industry_si_-2 = { # Civilian Industry Sub-Idea
+           allowed = { always = no } allowed_civil_war = { always = yes } removal_cost = -1 picture = usa_federal_recovery_emergency_enterprise
+			
+            modifier = {
+                production_speed_industrial_complex_factor = -0.05
+                political_power_cost = 0.2
+                stability_factor = -0.05
+            }
+         }
+         usa_free_civilian_industry_si_-1 = { # Civilian Industry Sub-Idea
+           allowed = { always = no } allowed_civil_war = { always = yes } removal_cost = -1 picture = usa_federal_recovery_emergency_enterprise
+			
+            modifier = {
+                production_speed_industrial_complex_factor = -0.05
+            }
+         }
+         usa_free_civilian_industry_si_0 = { # Civilian Industry Sub-Idea
+           allowed = { always = no } allowed_civil_war = { always = yes } removal_cost = -1 picture = usa_federal_recovery_emergency_enterprise
+			
+            modifier = {
+                production_speed_industrial_complex_factor = 0.05
+            }
+         }
+         usa_free_civilian_industry_si_1 = { # Civilian Industry Sub-Idea
+           allowed = { always = no } allowed_civil_war = { always = yes } removal_cost = -1 picture = usa_federal_recovery_emergency_enterprise
+
+            modifier = {
+                production_speed_industrial_complex_factor = 0.05
+                stability_factor = 0.02
+                political_power_factor = 0.05
+            }
+         }
+         usa_free_civilian_industry_si_2 = { # Civilian Industry Sub-Idea
+            picture = usa_federal_recovery_emergency_enterprise allowed = { always = yes }
+
+            equipment_bonus = {
+                motorized_equipment = {
+                    build_cost_ic = -0.05
+                }
+            }
+
+            modifier = {
+                production_speed_industrial_complex_factor = 0.05
+                stability_factor = 0.05
+                political_power_factor = 0.10
+            }
+         }
+         usa_free_civilian_industry_si_3 = { # Civilian Industry Sub-Idea
+            picture = usa_federal_recovery_emergency_enterprise allowed = { always = yes }
+
+            equipment_bonus = {
+                motorized_equipment = {
+                    build_cost_ic = -0.05
+                }
+            }
+            research_bonus = {
+                industry = 0.05
+            }
+            modifier = {
+                production_speed_industrial_complex_factor = 0.10
+                stability_factor = 0.05
+                political_power_factor = 0.10
+            }
+         }
+         usa_free_civilian_industry_si_4 = { # Civilian Industry Sub-Idea
+            picture = usa_federal_recovery_emergency_enterprise allowed = { always = yes }
+
+            equipment_bonus = {
+                motorized_equipment = {
+                    build_cost_ic = -0.05
+                }
+            }
+            research_bonus = {
+                industry = 0.05
+            }
+            modifier = {
+                production_speed_industrial_complex_factor = 0.10
+                stability_factor = 0.05
+                political_power_factor = 0.15
+                consumer_goods_factor = -0.05
+            }
+         }
+         usa_free_civilian_industry_si_5 = { # Civilian Industry Sub-Idea
+            picture = usa_federal_recovery_emergency_enterprise allowed = { always = yes }
+
+            equipment_bonus = {
+                motorized_equipment = {
+                    build_cost_ic = -0.05
+                }
+            }
+            research_bonus = {
+                industry = 0.05
+            }
+            modifier = {
+                production_speed_industrial_complex_factor = 0.10
+                stability_factor = 0.075
+                political_power_factor = 0.20
+                consumer_goods_factor = -0.10
+            }
+         }
+        
+         # Mil
+         usa_free_military_industry_si_-3 = { # Military Industry Sub-Idea
+            allowed = { always = no } allowed_civil_war = { always = yes } removal_cost = -1 picture = usa_federal_recovery_emergency_enterprise
+
+            modifier = {
+                production_speed_arms_factory_factor = -0.05
+                war_support_factor = -0.10
+                production_factory_efficiency_gain_factor = -0.05
+                command_power_gain_mult = -0.15
+            }
+         }
+         usa_free_military_industry_si_-2 = { # Military Industry Sub-Idea
+            allowed = { always = no } allowed_civil_war = { always = yes } removal_cost = -1 picture = usa_federal_recovery_emergency_enterprise
+
+            modifier = {
+                production_speed_arms_factory_factor = -0.05
+                war_support_factor = -0.05
+                production_factory_efficiency_gain_factor = -0.05
+            }
+         }
+         usa_free_military_industry_si_-1 = { # Military Industry Sub-Idea
+            allowed = { always = no } allowed_civil_war = { always = yes } removal_cost = -1 picture = usa_federal_recovery_emergency_enterprise
+
+            modifier = {
+                production_speed_arms_factory_factor = -0.05
+            }
+         }
+         usa_free_military_industry_si_0 = { # Military Industry Sub-Idea
+            allowed = { always = no } allowed_civil_war = { always = yes } removal_cost = -1 picture = usa_federal_recovery_emergency_enterprise
+
+            modifier = {
+                production_speed_arms_factory_factor = 0.05
+            }
+         }
+         usa_free_military_industry_si_1 = { # Military Industry Sub-Idea
+            allowed = { always = no } allowed_civil_war = { always = yes } removal_cost = -1 picture = usa_federal_recovery_emergency_enterprise
+
+            modifier = {
+                production_speed_arms_factory_factor = 0.05
+                war_support_factor = 0.03
+            }
+         }
+         usa_free_military_industry_si_2 = { # Military Industry Sub-Idea
+            allowed = { always = no } allowed_civil_war = { always = yes } removal_cost = -1 picture = usa_federal_recovery_emergency_enterprise
+
+            modifier = {
+                production_speed_arms_factory_factor = 0.05
+                war_support_factor = 0.05
+                production_factory_efficiency_gain_factor = 0.03
+            }
+         }
+         usa_free_military_industry_si_3 = { # Military Industry Sub-Idea
+            allowed = { always = no } allowed_civil_war = { always = yes } removal_cost = -1 picture = usa_federal_recovery_emergency_enterprise
+
+            modifier = {
+                production_speed_arms_factory_factor = 0.10
+                war_support_factor = 0.05
+                production_factory_efficiency_gain_factor = 0.05
+            }
+         }
+         usa_free_military_industry_si_4 = { # Military Industry Sub-Idea
+            allowed = { always = no } allowed_civil_war = { always = yes } removal_cost = -1 picture = usa_federal_recovery_emergency_enterprise
+            research_bonus = {
+                infantry_tech = 0.05
+            }
+            modifier = {
+                production_speed_arms_factory_factor = 0.10
+                war_support_factor = 0.05
+                production_factory_efficiency_gain_factor = 0.05
+                military_industrial_organization_funds_gain = 0.05
+            }
+         }
+         usa_free_military_industry_si_5 = { # Military Industry Sub-Idea
+            allowed = { always = no } allowed_civil_war = { always = yes } removal_cost = -1 picture = usa_federal_recovery_emergency_enterprise
+            research_bonus = {
+                infantry_tech = 0.05
+            }
+            modifier = {
+                production_speed_arms_factory_factor = 0.15
+                war_support_factor = 0.05
+                production_factory_efficiency_gain_factor = 0.05
+                military_industrial_organization_funds_gain = 0.05
+                production_factory_max_efficiency_factor = 0.05
+            }
+         }
+
+         # Arm
+         usa_free_army_si_-3 = { # Army Sub-Idea
+           allowed = { always = no } allowed_civil_war = { always = yes } removal_cost = -1 picture = usa_federal_recovery_emergency_enterprise
+			
+            modifier = {
+                experience_gain_army = 0.03
+                land_doctrine_cost_factor = 0.15
+                army_attack_factor = -0.05
+                army_defence_factor = -0.05
+            }
+         }
+         usa_free_army_si_-2 = { # Army Sub-Idea
+           allowed = { always = no } allowed_civil_war = { always = yes } removal_cost = -1 picture = usa_federal_recovery_emergency_enterprise
+			
+            modifier = {
+                experience_gain_army = 0.03
+                land_doctrine_cost_factor = 0.10
+                army_attack_factor = -0.05
+            }
+         }
+         usa_free_army_si_-1 = { # Army Sub-Idea
+           allowed = { always = no } allowed_civil_war = { always = yes } removal_cost = -1 picture = usa_federal_recovery_emergency_enterprise
+			
+            modifier = {
+                experience_gain_army = 0.05
+                land_doctrine_cost_factor = 0.10
+            }
+         }
+         usa_free_army_si_0 = { # Army Sub-Idea
+           allowed = { always = no } allowed_civil_war = { always = yes } removal_cost = -1 picture = usa_federal_recovery_emergency_enterprise
+			
+            modifier = {
+                experience_gain_army = 0.05
+            }
+         }
+         usa_free_army_si_1 = { # Army Sub-Idea
+           allowed = { always = no } allowed_civil_war = { always = yes } removal_cost = -1 picture = usa_federal_recovery_emergency_enterprise
+			
+            modifier = {
+                experience_gain_army = 0.05
+                training_time_factor = -0.05
+            }
+         }
+         usa_free_army_si_2 = { # Army Sub-Idea
+           allowed = { always = no } allowed_civil_war = { always = yes } removal_cost = -1 picture = usa_federal_recovery_emergency_enterprise
+			
+            modifier = {
+                experience_gain_army = 0.05
+                training_time_factor = -0.10
+            }
+         }
+         usa_free_army_si_3 = { # Army Sub-Idea
+           allowed = { always = no } allowed_civil_war = { always = yes } removal_cost = -1 picture = usa_federal_recovery_emergency_enterprise
+			
+            modifier = {
+                experience_gain_army = 0.08
+                training_time_factor = -0.15
+                experience_gain_army_unit_factor = 0.05
+            }
+         }
+         usa_free_army_si_4 = { # Army Sub-Idea
+           allowed = { always = no } allowed_civil_war = { always = yes } removal_cost = -1 picture = usa_federal_recovery_emergency_enterprise
+			
+            modifier = {
+                experience_gain_army = 0.10
+                training_time_factor = -0.15
+                experience_gain_army_unit_factor = 0.05
+                army_attack_speed_factor = 0.05
+            }
+         }
+         usa_free_army_si_5 = { # Army Sub-Idea
+           allowed = { always = no } allowed_civil_war = { always = yes } removal_cost = -1 picture = usa_federal_recovery_emergency_enterprise
+			
+            modifier = {
+                experience_gain_army = 0.15
+                training_time_factor = -0.15
+                experience_gain_army_unit_factor = 0.05
+                army_attack_speed_factor = 0.05
+                supply_node_range = 0.05
+            }
+         }
+
+         # Nav
+         usa_free_navy_si_-3 = { # Navy Sub-Idea
+           allowed = { always = no } allowed_civil_war = { always = yes } removal_cost = -1 picture = usa_federal_recovery_emergency_enterprise
+
+            modifier = {
+                experience_gain_navy = 0.03
+                naval_doctrine_cost_factor = 0.15
+                navy_org_factor = -0.05
+                navy_weather_penalty = 0.10
+            }
+         }
+         usa_free_navy_si_-2 = { # Navy Sub-Idea
+           allowed = { always = no } allowed_civil_war = { always = yes } removal_cost = -1 picture = usa_federal_recovery_emergency_enterprise
+
+            modifier = {
+                experience_gain_navy = 0.03
+                naval_doctrine_cost_factor = 0.10
+                navy_org_factor = -0.05
+            }
+         }
+         usa_free_navy_si_-1 = { # Navy Sub-Idea
+           allowed = { always = no } allowed_civil_war = { always = yes } removal_cost = -1 picture = usa_federal_recovery_emergency_enterprise
+
+            modifier = {
+                experience_gain_navy = 0.05
+                naval_doctrine_cost_factor = 0.10
+            }
+         }
+         usa_free_navy_si_0 = { # Navy Sub-Idea
+           allowed = { always = no } allowed_civil_war = { always = yes } removal_cost = -1 picture = usa_federal_recovery_emergency_enterprise
+
+            modifier = {
+                experience_gain_navy = 0.05
+            }
+         }
+         usa_free_navy_si_1 = { # Navy Sub-Idea
+           allowed = { always = no } allowed_civil_war = { always = yes } removal_cost = -1 picture = usa_federal_recovery_emergency_enterprise
+
+            modifier = {
+                experience_gain_navy = 0.05
+                naval_speed_factor = 0.05
+            }
+         }
+         usa_free_navy_si_2 = { # Navy Sub-Idea
+           allowed = { always = no } allowed_civil_war = { always = yes } removal_cost = -1 picture = usa_federal_recovery_emergency_enterprise
+
+            modifier = {
+                experience_gain_navy = 0.05
+                naval_speed_factor = 0.05
+                naval_detection = 0.05
+            }
+         }
+         usa_free_navy_si_3 = { # Navy Sub-Idea
+           allowed = { always = no } allowed_civil_war = { always = yes } removal_cost = -1 picture = usa_federal_recovery_emergency_enterprise
+
+            modifier = {
+                experience_gain_navy = 0.08
+                naval_speed_factor = 0.10
+                naval_detection = 0.05
+            }
+         }
+         usa_free_navy_si_4 = { # Navy Sub-Idea
+           allowed = { always = no } allowed_civil_war = { always = yes } removal_cost = -1 picture = usa_federal_recovery_emergency_enterprise
+
+            modifier = {
+                experience_gain_navy = 0.10
+                naval_speed_factor = 0.10
+                naval_detection = 0.05
+                navy_weather_penalty = -0.10
+            }
+         }
+         usa_free_navy_si_5 = { # Navy Sub-Idea
+           allowed = { always = no } allowed_civil_war = { always = yes } removal_cost = -1 picture = usa_federal_recovery_emergency_enterprise
+
+            modifier = {
+                experience_gain_navy = 0.15
+                naval_speed_factor = 0.15
+                naval_detection = 0.10
+                navy_weather_penalty = -0.10
+            }
+         }
+
+         # Air
+         usa_free_air_si_-3 = { # Air Sub-Idea
+           allowed = { always = no } allowed_civil_war = { always = yes } removal_cost = -1 picture = usa_federal_recovery_emergency_enterprise
+			
+            modifier = {
+                experience_gain_air = 0.03
+                air_doctrine_cost_factor = 0.15
+                air_accidents_factor = 0.15
+                air_power_projection_factor = -0.10
+            }
+         }
+         usa_free_air_si_-2 = { # Air Sub-Idea
+           allowed = { always = no } allowed_civil_war = { always = yes } removal_cost = -1 picture = usa_federal_recovery_emergency_enterprise
+			
+            modifier = {
+                experience_gain_air = 0.03
+                air_doctrine_cost_factor = 0.10
+                air_accidents_factor = 0.10
+            }
+         }
+         usa_free_air_si_-1 = { # Air Sub-Idea
+           allowed = { always = no } allowed_civil_war = { always = yes } removal_cost = -1 picture = usa_federal_recovery_emergency_enterprise
+			
+            modifier = {
+                experience_gain_air = 0.05
+                air_doctrine_cost_factor = 0.10
+            }
+         }
+         usa_free_air_si_0 = { # Air Sub-Idea
+           allowed = { always = no } allowed_civil_war = { always = yes } removal_cost = -1 picture = usa_federal_recovery_emergency_enterprise
+			
+            modifier = {
+                experience_gain_air = 0.05
+            }
+         }
+         usa_free_air_si_1 = { # Air Sub-Idea
+           allowed = { always = no } allowed_civil_war = { always = yes } removal_cost = -1 picture = usa_federal_recovery_emergency_enterprise
+			
+            modifier = {
+                experience_gain_air = 0.05
+                air_ace_generation_chance_factor = 0.05
+            }
+         }
+         usa_free_air_si_2 = { # Air Sub-Idea
+           allowed = { always = no } allowed_civil_war = { always = yes } removal_cost = -1 picture = usa_federal_recovery_emergency_enterprise
+			
+            modifier = {
+                experience_gain_air = 0.05
+                air_ace_generation_chance_factor = 0.05
+                air_accidents_factor = -0.05
+            }
+         }
+         usa_free_air_si_3 = { # Air Sub-Idea
+           allowed = { always = no } allowed_civil_war = { always = yes } removal_cost = -1 picture = usa_federal_recovery_emergency_enterprise
+			
+            modifier = {
+                experience_gain_air = 0.08
+                air_ace_generation_chance_factor = 0.10
+                air_accidents_factor = -0.05
+            }
+         }
+         usa_free_air_si_4 = { # Air Sub-Idea
+           allowed = { always = no } allowed_civil_war = { always = yes } removal_cost = -1 picture = usa_federal_recovery_emergency_enterprise
+			
+            modifier = {
+                experience_gain_air = 0.10
+                air_ace_generation_chance_factor = 0.10
+                air_accidents_factor = -0.10
+            }
+         }
+         usa_free_air_si_5 = { # Air Sub-Idea
+           allowed = { always = no } allowed_civil_war = { always = yes } removal_cost = -1 picture = usa_federal_recovery_emergency_enterprise
+			
+            modifier = {
+                experience_gain_air = 0.15
+                air_ace_generation_chance_factor = 0.10
+                air_accidents_factor = -0.15
+                air_detection = 0.10
+            }
+         }
+        
+         # Sci
+         usa_free_science_si_-3 = { # Science Sub-Idea
+            allowed = { always = no } allowed_civil_war = { always = yes } removal_cost = -1 picture = usa_federal_recovery_emergency_enterprise
+
+            modifier = {
+                research_speed_factor = -0.05
+                production_speed_facility_factor = -0.15
+            }
+         }
+         usa_free_science_si_-2 = { # Science Sub-Idea
+            allowed = { always = no } allowed_civil_war = { always = yes } removal_cost = -1 picture = usa_federal_recovery_emergency_enterprise
+
+            modifier = {
+                research_speed_factor = -0.03
+            }
+         }
+         usa_free_science_si_-1 = { # Science Sub-Idea
+            allowed = { always = no } allowed_civil_war = { always = yes } removal_cost = -1 picture = usa_federal_recovery_emergency_enterprise
+
+            modifier = {
+                research_speed_factor = -0.01
+            }
+         }
+         usa_free_science_si_0 = { # Science Sub-Idea
+            allowed = { always = no } allowed_civil_war = { always = yes } removal_cost = -1 picture = usa_federal_recovery_emergency_enterprise
+
+            modifier = {
+                research_speed_factor = 0.01
+            }
+         }
+         usa_free_science_si_1 = { # Science Sub-Idea
+            allowed = { always = no } allowed_civil_war = { always = yes } removal_cost = -1 picture = usa_federal_recovery_emergency_enterprise
+            
+            research_bonus = {
+                electronics = 0.02
+            }
+            modifier = {
+                research_speed_factor = 0.02
+            }
+         }
+         usa_free_science_si_2 = { # Science Sub-Idea
+            allowed = { always = no } allowed_civil_war = { always = yes } removal_cost = -1 picture = usa_federal_recovery_emergency_enterprise
+            
+            research_bonus = {
+                electronics = 0.02
+            }
+            modifier = {
+                research_speed_factor = 0.03
+                special_project_speed_factor = 0.03
+            }
+         }
+         usa_free_science_si_3 = { # Science Sub-Idea
+            allowed = { always = no } allowed_civil_war = { always = yes } removal_cost = -1 picture = usa_federal_recovery_emergency_enterprise
+            
+            research_bonus = {
+                electronics = 0.05
+            }
+            modifier = {
+                research_speed_factor = 0.05
+                special_project_speed_factor = 0.03
+            }
+         }
+         usa_free_science_si_4 = { # Science Sub-Idea
+            allowed = { always = no } allowed_civil_war = { always = yes } removal_cost = -1 picture = usa_federal_recovery_emergency_enterprise
+            
+            research_bonus = {
+                electronics = 0.05
+            }
+            modifier = {
+                research_speed_factor = 0.05
+                special_project_speed_factor = 0.05
+                production_speed_facility_factor = 0.10
+            }
+         }
+         usa_free_science_si_5 = { # Science Sub-Idea
+            allowed = { always = no } allowed_civil_war = { always = yes } removal_cost = -1 picture = usa_federal_recovery_emergency_enterprise
+            
+            research_bonus = {
+                electronics = 0.05
+            }
+            modifier = {
+                research_speed_factor = 0.05
+                special_project_speed_factor = 0.10
+                production_speed_facility_factor = 0.15
+            }
+         }
     }
 
     industrial_concern = {
