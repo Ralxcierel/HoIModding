@@ -19,10 +19,10 @@ first, then CLAUDE.md, before touching any files.
   dynamic-modifier scale. A FREE sub-tree of focuses (center = bigger
   magnitude, right = fewer downsides, left = better upsides) modifies it.
   See notes below for the full mechanism.
-- The running in-repo TODO list lives at the top of
+- The running in-repo general TODO list lives at the top of
   [common/national_focus/usa.txt](common/national_focus/usa.txt) (lines
   ~19–48) — that list, not this file, is the authoritative backlog. Update
-  it in place as items are finished or added; don't fork a second TODO list
+  it in the Work section as items are finished or added; don't fork a second TODO list
   here.
 
 ## Session log

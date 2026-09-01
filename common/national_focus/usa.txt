@@ -18,34 +18,43 @@
 
 # 10 mils, 128 civs, 22 navs --> 14 mils, 162 civs, 24 navs [done using offmap factories to maintain compatibility with map mods]
 
-# Add agency icons (including CIA)
-# Make AI simplified Chinese translation and french translation + update russian translation
-# Add new unique traits to MIOs
-# Add some more general pezaz
-# Add at least 2 more congress buttons (add stuff that gets unlocked)
-# Add to the capability of coring states using Congress
-# Add some spies?
-# Unique Formable for North America, maybe some others as well for certain paths
-# AI focus paths? maybe?
-# Need flavor events
+### General Mod To-Do List
+ # Add agency icons (including CIA)
+ # Make AI simplified Chinese translation and french translation + update russian translation
+ # Add new unique traits to MIOs
+ # Add some more general pezaz
+ # Add at least 2 more congress buttons (add stuff that gets unlocked)
+ # Add to the capability of coring states using Congress
+ # Add some spies?
+ # Unique Formable for North America, maybe some others as well for certain paths
+ # AI focus paths? maybe?
+ # Need flavor events
 
-# Need new characters for different ideologies
-# Need to add in the marines dude (and other dudes)
-# Add characters for civil war and other ideologies - Harry White, Earl Browder, Victor Perlo, Whittaker Chambers, 
-# Shorten focus times (maybe)
-# Redefine all of the election checks and events, as well as congress. (elections won't fire if five year plan is taken)
+ # Need new characters for different ideologies
+ # Need to add in the marines dude (and other dudes)
+ # Add characters for civil war and other ideologies - Harry White, Earl Browder, Victor Perlo, Whittaker Chambers, 
+ # Shorten focus times (maybe)
+ # Redefine all of the election checks and events, as well as congress. (elections won't fire if five year plan is taken)
 
-# Update localizations
-# Check 'dynamism unlocked' auto-completion (complaints that it ran for 240+ days)
-# Maybe add a NATO focus for the democratic tree
-# Fix mod-compatibility sub mods
-# Have Ching Lee added to admirals once Gunnery Innovations is taken
-# Have a FREE visual indicator that shows how funds are being distributed
-# Check the invasion event checker that it actually makes sense [seems good]
-# Add Baldwin locomotive works to focuses that mess with MIOs
-# Update def readiness text for other ideologies
-# Fix 'america_is_being_invaded flag'
-# Bury the robberbarons is causing crazy errors when hovered over
+ # Update localizations
+ # Check 'dynamism unlocked' auto-completion (complaints that it ran for 240+ days)
+ # Maybe add a NATO focus for the democratic tree
+ # Fix mod-compatibility sub mods
+ # Have Ching Lee added to admirals once Gunnery Innovations is taken
+ # Have a FREE visual indicator that shows how funds are being distributed
+ # Check the invasion event checker that it actually makes sense [seems good]
+ # Add Baldwin locomotive works to focuses that mess with MIOs
+ # Update def readiness text for other ideologies
+ # Fix 'america_is_being_invaded flag'
+ # Bury the robberbarons is causing crazy errors when hovered over
+
+### Work To-Do List
+ # Fill in Nationalist tree code
+ # Fill in Nationalist tree localisation
+ # Finish making focus icons
+ # Make new idea icons
+ # Balance testing
+###
 
 
 #########################################################
@@ -42152,11 +42161,19 @@ focus_tree = {
 
 
 
-
 ################################################################################################################################################
+################################################################################################################################################
+################################################################################################################################################
+################################################################################################################################################
+###############                                                                                             ####################################
 ############### ALL CODE BELOW THIS LINE IS FROM THE VANILLA FOCUS TREE AND IS HERE TO PREVENT CHECK ERRORS ####################################
+###############                                                                                             ####################################
+###############                                        DO NOT MODIFY                                        ####################################
+###############                                                                                             ####################################
 ################################################################################################################################################
-
+################################################################################################################################################
+################################################################################################################################################
+################################################################################################################################################
 
 
 

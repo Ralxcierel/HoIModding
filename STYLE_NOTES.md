@@ -57,10 +57,9 @@ tier-ladder system. The chain, in order:
    (`FREE_points_A`, `FREE_points_V`, etc. — scripted constants, not magic
    numbers written inline) into a running score variable per category
    (e.g. `USA_FREE_civ_points`).
-3. It calls `USA_AN_check_FREE_all`, which re-resolves the score into the
-   active tier.
-4. The tier itself is one of seven `hidden_ideas` per category, named
-   `usa_free_<category>_si_-3` through `_si_3` (civ, mil, arm, nav, air,
+3. It calls `USA_AN_check_FREE_all`, which re-resolves the    score into the active tier.
+4. The tier itself is one of nine `hidden_ideas` per category, named
+   `usa_free_<category>_si_-3` through `_si_5` (civ, mil, arm, nav, air,
    sci — negative = penalty tiers, positive = bonus tiers), defined in
    [common/ideas/new_usa_ideas.txt](common/ideas/new_usa_ideas.txt). Every
    tier idea is `allowed = { always = no }` with `removal_cost = -1`,
@@ -78,6 +77,8 @@ tier-ladder system. The chain, in order:
    (`ai_will_do = { factor = 0 }`, `allow_branch = { always = no }`) that
    fires every tier-up effect at once, purely for manual testing. Don't
    remove it; it's a dev tool, not dead content.
+7. Scripted localisation is used extensively for the FREE visual output. These pieces span both new_usa_countries_cosmetic_l_english.yml and new_usa_scripted_loc.txt.
+8. The initial variables are defined in history/countries/'USA - USA'.txt.
 
 New FREE sub-tree focuses (the center/right/left magnitude-and-shape
 branches mentioned in CLAUDE.md) should hook into this exact chain —
@@ -123,7 +124,7 @@ new points constants if needed, no parallel scaling system.
   behind and shouldn't be treated as a style reference or kept in sync
   automatically.
 - Two live key conventions coexist in the same focus localisation file:
-  older/simple entries use bare `KEY` (title) + `KEY_desc`; newer
+  unique entries use bare `KEY` (title) + `KEY_desc`; duplicate
   "modular" sections use `KEY-general_title` / `KEY-general_desc`. Match
   whichever convention borders the focus you're adding — don't normalize
   the whole file to one style.

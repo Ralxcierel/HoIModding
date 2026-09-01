@@ -102,6 +102,9 @@ sideways.
   it and use it for the current session. As you work, leave short comments for
   that session logging steps. Once a session is finished, update the Progress file.
 - If a Progress file does not exist when a session is started, create one.
+- At the top of common/national_focus/usa.txt are a pair of sections detailing a
+  'general to-do list' and a 'work to-do list'. Keep the former in mind, but the
+  latter list is the primary focus of Claude Code's work.
 
 ## Reference
 
@@ -111,7 +114,7 @@ sideways.
 - Most work will occur in common/national_focus/usa, which is the file
   containing the central focus tree. The vanilla focus tree is included at the
   bottom of the file as a necessary measure for internal checks, but it
-  has no effect.
+  has no effect and should not be modified.
 - Many different related systems are overlapped inside of shared files.
   For instance, all new events are stored in events/USA_new_events, within which
   they are organized.
@@ -126,3 +129,4 @@ sideways.
 - Don't restructure or refactor existing systems without being asked.
 - Don't invent new naming or ID conventions — follow what's already there.
 - Don't skip the file-list-and-confirm step, even for small tasks.
+- Don't modify the vanilla focus tree at the bottom of common/national_focus/usa.
