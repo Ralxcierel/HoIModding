@@ -63,6 +63,9 @@ sideways.
 
 ### Style
 
+- Reference the STYLE_NOTES.md file at the root. This file contains guides
+  for how to format and design your work. When new styles are recognized,
+  ask about them and give me an option to add them to the guide.
 - Match my existing code style exactly unless I say otherwise. Don't "clean
   up," refactor, or reorganize formatting, structure, or naming on your own
   initiative — even if you think it's an improvement.
@@ -87,6 +90,18 @@ sideways.
 - Favor comments that help future debugging: what triggers this, what it
   depends on, what depends on it. Assume future-me is picking this up cold
   after time away and needs the comment to reorient fast.
+
+### Progress-Keeping
+
+- One of the main goals of this project is for Claude to be able to stop working
+  on it and save its current work in a Progress file that a new instance of
+  Claude will be able to read from and immediately pick up where the last
+  instance left off.
+- Every time you start working initially, go through the existing Progress file
+  and make sure you understand where the project currently stands, then clean
+  it and use it for the current session. As you work, leave short comments for
+  that session logging steps. Once a session is finished, update the Progress file.
+- If a Progress file does not exist when a session is started, create one.
 
 ## Reference
 
