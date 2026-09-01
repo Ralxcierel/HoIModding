@@ -34373,99 +34373,6 @@ focus_tree = {
 		}
 	}
 
-	focus = { # (FREE) Recovery Achieved
-		id = USA_FREE_recovery_achieved
-		icon = GFX_aus_destiny
-		overlay = GFX_new_overlay_star
-		relative_position_id = USA_federal_recovery_emergency_enterprise
-		prerequisite = { focus = USA_FREE_undersecretariat_for_sectoral_administration }
-		prerequisite = { focus = USA_FREE_top_end_funds_management focus = USA_FREE_improved_focus_II focus = USA_FREE_lower_end_funds_management }
-
-		x = 0
-		y = 5
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-		search_filters = {
-			FOCUS_FILTER_Attending_to
-		}
-		available = {
-			recovery_past_stage_3 = yes
-			has_completed_focus = USA_lady_libertys_arsenal
-			has_government = fascism
-			or = {
-				has_completed_focus = USA_the_second_confederation
-				has_completed_focus = USA_the_goldstar_federation
-			}
-		}
-		
-		bypass = {
-		}
-
-		completion_reward = {
-			# Get 0.5% consumer goods per point, 2 pp per positive point, remove slight penalty from FREE-USA focus
-			custom_effect_tooltip = USA_FREE_recovery_achieved_tt
-			if = {
-				limit = { or = { has_dynamic_modifier = USA_FREE_dynamic_modifier has_dynamic_modifier = USA_FREE_dynamic_modifier_2 } }
-				
-				set_temp_variable = { TOTAL_POINTS = 0 }
-				set_temp_variable = { POSITIVE_POINTS = 0 }
-				add_to_temp_variable = { TOTAL_POINTS = USA_FREE_civ_points }
-				add_to_temp_variable = { TOTAL_POINTS = USA_FREE_mil_points }
-				add_to_temp_variable = { TOTAL_POINTS = USA_FREE_arm_points }
-				add_to_temp_variable = { TOTAL_POINTS = USA_FREE_nav_points }
-				add_to_temp_variable = { TOTAL_POINTS = USA_FREE_air_points }
-				add_to_temp_variable = { TOTAL_POINTS = USA_FREE_sci_points }
-				if = {
-					limit = { check_variable = { var = USA_FREE_civ_points value = 0 compare = greater_than_or_equals } } add_to_temp_variable = { POSITIVE_POINTS = USA_FREE_civ_points }
-				}
-				if = {
-					limit = { check_variable = { var = USA_FREE_mil_points value = 0 compare = greater_than_or_equals } } add_to_temp_variable = { POSITIVE_POINTS = USA_FREE_mil_points }
-				}
-				if = {
-					limit = { check_variable = { var = USA_FREE_arm_points value = 0 compare = greater_than_or_equals } } add_to_temp_variable = { POSITIVE_POINTS = USA_FREE_arm_points }
-				}
-				if = {
-					limit = { check_variable = { var = USA_FREE_nav_points value = 0 compare = greater_than_or_equals } } add_to_temp_variable = { POSITIVE_POINTS = USA_FREE_nav_points }
-				}
-				if = {
-					limit = { check_variable = { var = USA_FREE_air_points value = 0 compare = greater_than_or_equals } } add_to_temp_variable = { POSITIVE_POINTS = USA_FREE_air_points }
-				}
-				if = {
-					limit = { check_variable = { var = USA_FREE_sci_points value = 0 compare = greater_than_or_equals } } add_to_temp_variable = { POSITIVE_POINTS = USA_FREE_sci_points }
-				}
-				set_temp_variable = { NEW_PP = POSITIVE_POINTS }
-				multiply_temp_variable = { NEW_PP = 2 }
-				add_political_power = NEW_PP
-				skip_line_tt = yes
-				set_temp_variable = { NEW_CC = TOTAL_POINTS }
-				multiply_temp_variable = { NEW_CC = -0.005 }
-				USA_modify_eco = yes
-				add_to_variable = {
-					USA_eco_dy_consumer_goods_factor = NEW_CC
-					tooltip = consumer_goods_factor_tt
-				}
-				skip_line_tt = yes
-				custom_effect_tooltip = USA_FREE_recovery_achieved_tt_2
-				add_to_variable = {
-					FREE_points_A = 1
-				}
-				add_to_variable = {
-					FREE_points_AA = 1
-				}
-				add_to_variable = {
-					FREE_points_AAA = 1
-				}
-				add_to_variable = {
-					FREE_points_V = 1
-				}
-			}
-		}
-	}
-
 	focus = { # (FREE) Improved Focus
 		id = USA_FREE_improved_focus
 		icon = GFX_focus_usa_FREE_improved_focus
@@ -34901,6 +34808,99 @@ focus_tree = {
 			}
 			add_to_variable = {
 				FREE_points_VVV = 0
+			}
+		}
+	}
+
+	focus = { # (FREE) Recovery Achieved
+		id = USA_FREE_recovery_achieved
+		icon = GFX_aus_destiny
+		overlay = GFX_new_overlay_star
+		relative_position_id = USA_federal_recovery_emergency_enterprise
+		prerequisite = { focus = USA_FREE_undersecretariat_for_sectoral_administration }
+		prerequisite = { focus = USA_FREE_top_end_funds_management focus = USA_FREE_improved_focus_II focus = USA_FREE_lower_end_funds_management }
+
+		x = 0
+		y = 5
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {
+			FOCUS_FILTER_Attending_to
+		}
+		available = {
+			recovery_past_stage_3 = yes
+			has_completed_focus = USA_lady_libertys_arsenal
+			has_government = fascism
+			or = {
+				has_completed_focus = USA_the_second_confederation
+				has_completed_focus = USA_the_goldstar_federation
+			}
+		}
+		
+		bypass = {
+		}
+
+		completion_reward = {
+			# Get 0.5% consumer goods per point, 2 pp per positive point, remove slight penalty from FREE-USA focus
+			custom_effect_tooltip = USA_FREE_recovery_achieved_tt
+			if = {
+				limit = { or = { has_dynamic_modifier = USA_FREE_dynamic_modifier has_dynamic_modifier = USA_FREE_dynamic_modifier_2 } }
+				
+				set_temp_variable = { TOTAL_POINTS = 0 }
+				set_temp_variable = { POSITIVE_POINTS = 0 }
+				add_to_temp_variable = { TOTAL_POINTS = USA_FREE_civ_points }
+				add_to_temp_variable = { TOTAL_POINTS = USA_FREE_mil_points }
+				add_to_temp_variable = { TOTAL_POINTS = USA_FREE_arm_points }
+				add_to_temp_variable = { TOTAL_POINTS = USA_FREE_nav_points }
+				add_to_temp_variable = { TOTAL_POINTS = USA_FREE_air_points }
+				add_to_temp_variable = { TOTAL_POINTS = USA_FREE_sci_points }
+				if = {
+					limit = { check_variable = { var = USA_FREE_civ_points value = 0 compare = greater_than_or_equals } } add_to_temp_variable = { POSITIVE_POINTS = USA_FREE_civ_points }
+				}
+				if = {
+					limit = { check_variable = { var = USA_FREE_mil_points value = 0 compare = greater_than_or_equals } } add_to_temp_variable = { POSITIVE_POINTS = USA_FREE_mil_points }
+				}
+				if = {
+					limit = { check_variable = { var = USA_FREE_arm_points value = 0 compare = greater_than_or_equals } } add_to_temp_variable = { POSITIVE_POINTS = USA_FREE_arm_points }
+				}
+				if = {
+					limit = { check_variable = { var = USA_FREE_nav_points value = 0 compare = greater_than_or_equals } } add_to_temp_variable = { POSITIVE_POINTS = USA_FREE_nav_points }
+				}
+				if = {
+					limit = { check_variable = { var = USA_FREE_air_points value = 0 compare = greater_than_or_equals } } add_to_temp_variable = { POSITIVE_POINTS = USA_FREE_air_points }
+				}
+				if = {
+					limit = { check_variable = { var = USA_FREE_sci_points value = 0 compare = greater_than_or_equals } } add_to_temp_variable = { POSITIVE_POINTS = USA_FREE_sci_points }
+				}
+				set_temp_variable = { NEW_PP = POSITIVE_POINTS }
+				multiply_temp_variable = { NEW_PP = 2 }
+				add_political_power = NEW_PP
+				skip_line_tt = yes
+				set_temp_variable = { NEW_CC = TOTAL_POINTS }
+				multiply_temp_variable = { NEW_CC = -0.005 }
+				USA_modify_eco = yes
+				add_to_variable = {
+					USA_eco_dy_consumer_goods_factor = NEW_CC
+					tooltip = consumer_goods_factor_tt
+				}
+				skip_line_tt = yes
+				custom_effect_tooltip = USA_FREE_recovery_achieved_tt_2
+				add_to_variable = {
+					FREE_points_A = 1
+				}
+				add_to_variable = {
+					FREE_points_AA = 1
+				}
+				add_to_variable = {
+					FREE_points_AAA = 1
+				}
+				add_to_variable = {
+					FREE_points_V = 1
+				}
 			}
 		}
 	}
