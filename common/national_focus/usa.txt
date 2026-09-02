@@ -81,17 +81,27 @@
 	@income_timer = 				42 # weeks																						# used to be 38
 	@pensions_timer = 				42 # weeks																						# used to be 38
  ########################################################
- # Red July Timers									
+ # Red July Timers
 	@graduated_timer = 				22 # weeks # was 20 weeks
 	@representation_timer = 		40 # weeks # was 35 weeks
 	@aeio_timer = 					40 # weeks # was 35 weeks
 	@property_timer = 				40 # weeks # was 35 weeks
 	@soviet_style_timer = 			48 # weeks # was 46 weeks
  ########################################################
+ # Southern Crisis Timers								# Started as copies of the Red July timers, retune later
+ #	@national_character_timer = 	22 # weeks
+ #	@new_frontier_timer = 			40 # weeks
+ #	@autarky_timer = 				40 # weeks
+ #	@new_america_timer = 			40 # weeks
+ #	@brotherhood_timer = 			48 # weeks
+	@national_character_timer = 	10 # weeks
+	@new_frontier_timer = 			10 # weeks
+	@autarky_timer = 				10 # weeks
+	@new_america_timer = 			10 # weeks
+	@brotherhood_timer = 			10 # weeks
+ ########################################################
  # Auto Focus Timers
-  # Democratic & Generic
-	@dynamism_unlocked_timer = 		30 # weeks
-	@industrial_expansion_timer =	20 # weeks
+  # Generic
 	@washington_ioms_timer = 		80 # weeks
 	@air_training_timer = 			24 # weeks
 	@officer_focus_timer = 			24 # weeks
@@ -99,9 +109,15 @@
 	@joint_action_timer =			36 # weeks
 	@two_ocean_navy_timer =			20 # weeks
 	@defense_symposium_timer =		15 # weeks
+  # Democratic
+	@dynamism_unlocked_timer = 		30 # weeks
+	@industrial_expansion_timer =	20 # weeks
   # National Communist
     @red_new_deal_timer =			30 # weeks
 	@engines_of_industry_timer =	20 # weeks
+  # American Nationalist
+	@stars_on_the_horizon_timer =	30 # weeks
+	@eagle_lifts_its_wings_timer =	20 # weeks
  ########################################################
  # Focus Time Controls
 	@write_war_plan_timer = 		3 # weeks
@@ -133,7 +149,7 @@ focus_tree = {
 	}
 	inlay_window = { # new_usa_star_and_econ_inlay_window
 		id = new_usa_star_and_econ_inlay_window
-		position = { x = 7000 y = 100 }
+		position = { x = 7000 y = 100 } # was 7000, 100
 
 		override_position = {
 			x = 6500
@@ -147,6 +163,13 @@ focus_tree = {
 			y = 100
 			trigger = {
 				has_taken_core_path_communist = yes
+			}
+		}
+		override_position = {
+			x = 6025
+			y = 100
+			trigger = {
+				has_taken_core_path_nationalist = yes
 			}
 		}
 	}
@@ -190,6 +213,24 @@ focus_tree = {
 		}
 	}
 
+	shortcut = { # Politics - American Nationalist
+		name = USA_path_shortcut_politics
+		target = USA_our_safety_before_yours 
+		scroll_wheel_factor = 0.9
+		trigger = {
+			has_taken_core_path_nationalist = yes
+		}
+	}
+
+	shortcut = { # FREE - American Nationalist
+		name = USA_path_shortcut_FREE
+		target = USA_federal_recovery_emergency_enterprise
+		scroll_wheel_factor = 0.7
+		trigger = {
+			has_taken_core_path_nationalist = yes
+		}
+	}
+
 	shortcut = { # Industry - Democratic
 		name = USA_path_shortcut_industry
 		target = USA_wartime_economy
@@ -205,6 +246,15 @@ focus_tree = {
 		scroll_wheel_factor = 0.6
 		trigger = {
 			has_taken_core_path_communist = yes
+		}
+	}
+
+	shortcut = { # Industry - American Nationalist
+		name = USA_path_shortcut_industry
+		target = USA_north_american_autarky
+		scroll_wheel_factor = 0.7
+		trigger = {
+			has_taken_core_path_nationalist = yes
 		}
 	}
 
@@ -224,6 +274,15 @@ focus_tree = {
 		#trigger = {
 		#	has_completed_focus = JAP_support_the_kodoha_faction
 		#}
+	}
+
+	shortcut = { # Recovery - American Nationalist
+		name = USA_path_shortcut_recovery
+		target = USA_banner_clubs
+		scroll_wheel_factor = 0.4 #Optional parameter, if left unset will use existing zoomlevel. arning: #there's no good way for this to respect client resolution.
+		trigger = {
+			has_taken_core_path_nationalist = yes
+		}
 	}
 
 	shortcut = { # Army
@@ -3674,6 +3733,7 @@ focus_tree = {
 		allow_branch = {
 			if = { limit = { has_game_rule = { rule = obsolete_focus_branches_visibility option = HIDE } }
 				has_taken_core_path_democratic = no
+				has_taken_core_path_nationalist = no
 			}
 		}
 		
@@ -4539,12 +4599,28 @@ focus_tree = {
 		x = 70
 		y = 0
 
+		offset = {
+			x = -20
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = USA_southern_crisis
+			}
+		}
+
 		cost = 5
 
 		ai_will_do = {
 			factor = 1
 		}
-		#allow_branch = { always = no }
+		allow_branch = {
+			if = { limit = { has_game_rule = { rule = obsolete_focus_branches_visibility option = HIDE } }
+				has_taken_core_path_non_nationalist = no
+			}
+		}
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_Attending_to
 		}
 		available = {
@@ -4556,7 +4632,31 @@ focus_tree = {
 		completion_reward = {
 			custom_override_tooltip = { tooltip = { TEMP_PATH = ideo_path_nationalist_tt localization_key = starting_path_ideology_tt } }
 			skip_line_tt = yes
-
+			add_political_power = 100
+			add_stability = -0.10
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+			skip_line_tt = yes
+			USA_modify_eco = yes
+			add_to_variable = {
+				USA_eco_dy_stability_factor = -0.15
+				tooltip = stability_factor_tt
+			}
+			add_to_variable = {
+				USA_eco_dy_war_support_factor = -0.15
+				tooltip = war_support_factor_tt
+			}
+			add_to_variable = {
+				USA_eco_dy_production_speed_buildings_factor = -0.10
+				tooltip = production_speed_buildings_factor_tt
+			}
+			add_to_variable = {
+				USA_eco_dy_local_resources_factor = -0.05
+				tooltip = local_resources_factor_tt
+			}
+			hidden_effect = { if = { limit = { has_game_rule = { rule = obsolete_focus_branches_visibility option = HIDE } } mark_focus_tree_layout_dirty = yes } }
 		}
 	}
 
@@ -4570,6 +4670,18 @@ focus_tree = {
 		x = 0
 		y = 1
 
+		offset = {
+			x = 0
+			y = 1
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = USA_southern_crisis
+			}
+		}
+
 		cost = 5
 
 		ai_will_do = {
@@ -4584,7 +4696,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			hidden_effect = { set_country_flag = { flag = usa_core_recovery_flag value = 1 } }
+			hidden_effect = { country_event = { id = new_usa_southern_crisis_1.1 days = 2 } }
 		}
 	}
 
@@ -4598,7 +4711,19 @@ focus_tree = {
 		x = 0
 		y = 2
 
-		cost = 5
+		offset = {
+			x = 0
+			y = 5
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = USA_southern_crisis
+			}
+		}
+
+		cost = @national_character_timer
 
 		ai_will_do = {
 			factor = 1
@@ -4606,13 +4731,49 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_Attending_to
 		}
 		available = {
+			if = {
+				limit = { has_country_flag = USA_econ_recovery_in_progress_flag has_country_flag = running_qonc_flag }
+				set_temp_variable = { temp_focus_days = @national_character_timer } #For tooltip purposes
+				multiply_temp_variable = { temp_focus_days = 7 } #The constant uses focus cost which is in weeks, so convert to days
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = USA_southern_crisis_in_progress_tt
+						FLAG_DAYS = [?USA_econ_recovery_in_progress_flag:days]
+						TIME_DAYS = [?temp_focus_days]
+					}
+					always = no
+				}
+			}
+			else = {
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = USA_southern_crisis_cant_do_tt
+					}
+					always = no
+				}
+			}
 		}
 
 		bypass = {
 		}
 
 		completion_reward = {
-
+			hidden_effect = { set_country_flag = { flag = usa_core_recovery_flag value = 2 } }
+			hidden_effect = {
+				if = { # run Visions of a New Frontier
+					limit = {
+						has_country_flag = SC_new_frontier_chosen_flag
+					}
+					country_event = { id = new_usa_southern_crisis_2.1 days = 2 }
+				}
+				else_if = { # run A New America
+					limit = {
+						has_country_flag = SC_new_america_chosen_flag
+					}
+					country_event = { id = new_usa_southern_crisis_3.1 days = 2 }
+				}
+				else = { add_political_power = -1000 } # debug
+			}
 		}
 	}
 
@@ -4622,11 +4783,26 @@ focus_tree = {
 		overlay = GFX_new_Star-Auto-overlay-2
 		prerequisite = { focus = USA_the_question_of_our_national_character }
 		relative_position_id = USA_southern_crisis
+		mutually_exclusive = {
+			focus = USA_a_new_america
+		}
 
 		x = -1
 		y = 3
 
-		cost = 5
+		offset = {
+			x = 0
+			y = 5
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = USA_southern_crisis
+			}
+		}
+
+		cost = @new_frontier_timer
 
 		ai_will_do = {
 			factor = 1
@@ -4634,13 +4810,49 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_Attending_to
 		}
 		available = {
+			if = {
+				limit = { has_country_flag = USA_econ_recovery_in_progress_flag has_country_flag = running_vnf_flag }
+				set_temp_variable = { temp_focus_days = @new_frontier_timer } #For tooltip purposes
+				multiply_temp_variable = { temp_focus_days = 7 } #The constant uses focus cost which is in weeks, so convert to days
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = USA_southern_crisis_in_progress_tt
+						FLAG_DAYS = [?USA_econ_recovery_in_progress_flag:days]
+						TIME_DAYS = [?temp_focus_days]
+					}
+					always = no
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						has_country_flag = SC_new_america_chosen_flag
+						has_completed_focus = USA_a_new_america
+					}
+				}
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = USA_southern_crisis_cant_do_exclusive_tt
+					}
+					always = no
+				}
+			}
+			else = {
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = USA_southern_crisis_cant_do_tt
+					}
+					always = no
+				}
+			}
 		}
 
 		bypass = {
 		}
 
 		completion_reward = {
-
+			hidden_effect = { set_country_flag = { flag = usa_core_recovery_flag value = 3 } }
+			hidden_effect = { country_event = { id = new_usa_southern_crisis_4.1 days = 2 } }
 		}
 	}
 
@@ -4654,7 +4866,19 @@ focus_tree = {
 		x = -1
 		y = 4
 
-		cost = 5
+		offset = {
+			x = 0
+			y = 8
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = USA_southern_crisis
+			}
+		}
+
+		cost = @autarky_timer
 
 		ai_will_do = {
 			factor = 1
@@ -4662,13 +4886,48 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_Attending_to
 		}
 		available = {
+			if = {
+				limit = { has_country_flag = USA_econ_recovery_in_progress_flag has_country_flag = running_sam_flag }
+				set_temp_variable = { temp_focus_days = @autarky_timer } #For tooltip purposes
+				multiply_temp_variable = { temp_focus_days = 7 } #The constant uses focus cost which is in weeks, so convert to days
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = USA_southern_crisis_in_progress_tt
+						FLAG_DAYS = [?USA_econ_recovery_in_progress_flag:days]
+						TIME_DAYS = [?temp_focus_days]
+					}
+					always = no
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						has_country_flag = SC_new_america_chosen_flag
+						has_completed_focus = USA_a_new_america
+					}
+				}
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = USA_southern_crisis_cant_do_exclusive_tt
+					}
+					always = no
+				}
+			}
+			else = {
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = USA_southern_crisis_cant_do_tt
+					}
+					always = no
+				}
+			}
 		}
 
 		bypass = {
 		}
 
 		completion_reward = {
-
+			hidden_effect = { set_country_flag = { flag = usa_core_recovery_flag value = 4 } }
 		}
 	}
 
@@ -4678,11 +4937,26 @@ focus_tree = {
 		overlay = GFX_new_Star-Auto-overlay-2
 		prerequisite = { focus = USA_the_question_of_our_national_character }
 		relative_position_id = USA_southern_crisis
+		mutually_exclusive = {
+			focus = USA_visions_of_a_new_frontier
+		}
 
 		x = 1
 		y = 3
 
-		cost = 5
+		offset = {
+			x = 0
+			y = 5
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = USA_southern_crisis
+			}
+		}
+
+		cost = @new_america_timer
 
 		ai_will_do = {
 			factor = 1
@@ -4690,13 +4964,49 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_Attending_to
 		}
 		available = {
+			if = {
+				limit = { has_country_flag = USA_econ_recovery_in_progress_flag has_country_flag = running_ana_flag }
+				set_temp_variable = { temp_focus_days = @new_america_timer } #For tooltip purposes
+				multiply_temp_variable = { temp_focus_days = 7 } #The constant uses focus cost which is in weeks, so convert to days
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = USA_southern_crisis_in_progress_tt
+						FLAG_DAYS = [?USA_econ_recovery_in_progress_flag:days]
+						TIME_DAYS = [?temp_focus_days]
+					}
+					always = no
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						has_country_flag = SC_new_frontier_chosen_flag
+						has_completed_focus = USA_visions_of_a_new_frontier
+					}
+				}
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = USA_southern_crisis_cant_do_exclusive_tt
+					}
+					always = no
+				}
+			}
+			else = {
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = USA_southern_crisis_cant_do_tt
+					}
+					always = no
+				}
+			}
 		}
 
 		bypass = {
 		}
 
 		completion_reward = {
-
+			hidden_effect = { set_country_flag = { flag = usa_core_recovery_flag value = 3 } }
+			hidden_effect = { country_event = { id = new_usa_southern_crisis_5.1 days = 2 } }
 		}
 	}
 
@@ -4710,7 +5020,19 @@ focus_tree = {
 		x = 1
 		y = 4
 
-		cost = 5
+		offset = {
+			x = 0
+			y = 8
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = USA_southern_crisis
+			}
+		}
+
+		cost = @brotherhood_timer
 
 		ai_will_do = {
 			factor = 1
@@ -4718,13 +5040,48 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_Attending_to
 		}
 		available = {
+			if = {
+				limit = { has_country_flag = USA_econ_recovery_in_progress_flag has_country_flag = running_bhs_flag }
+				set_temp_variable = { temp_focus_days = @brotherhood_timer } #For tooltip purposes
+				multiply_temp_variable = { temp_focus_days = 7 } #The constant uses focus cost which is in weeks, so convert to days
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = USA_southern_crisis_in_progress_tt
+						FLAG_DAYS = [?USA_econ_recovery_in_progress_flag:days]
+						TIME_DAYS = [?temp_focus_days]
+					}
+					always = no
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						has_country_flag = SC_new_frontier_chosen_flag
+						has_completed_focus = USA_visions_of_a_new_frontier
+					}
+				}
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = USA_southern_crisis_cant_do_exclusive_tt
+					}
+					always = no
+				}
+			}
+			else = {
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = USA_southern_crisis_cant_do_tt
+					}
+					always = no
+				}
+			}
 		}
 
 		bypass = {
 		}
 
 		completion_reward = {
-
+			hidden_effect = { set_country_flag = { flag = usa_core_recovery_flag value = 4 } }
 		}
 	}
 
@@ -4737,6 +5094,18 @@ focus_tree = {
 
 		x = 0
 		y = 5
+
+		offset = {
+			x = 0
+			y = 9
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = USA_southern_crisis
+			}
+		}
 
 		cost = 5
 
@@ -4762,11 +5131,11 @@ focus_tree = {
 		overlay = GFX_new_overlay_star_with_ideo_authoritarian
 		#relative_position_id = USA_an_american_five_year_plan
 
-		x = 70
-		y = 35
+		x = 42 # Final position is 65
+		y = 20 # Final position is 7
 
 		offset = {
-			x = -9
+			x = 23
 			y = -13
 			trigger = {
 				has_game_rule = {
@@ -4790,8 +5159,7 @@ focus_tree = {
 						option = HIDE
 					}
 				}
-				has_taken_core_path_democratic = no
-				has_taken_core_path_communist = no
+				has_taken_core_path_non_nationalist = no
 			}
 		}
 		search_filters = {
@@ -4804,13 +5172,16 @@ focus_tree = {
 				has_government = fascism
 			}
 			has_completed_focus = USA_southern_crisis
-			
+
 		}
-		
+
 		bypass = {
 		}
 
 		completion_reward = {
+			hidden_effect = { # start Stars on the Horizon
+				country_event = { id = new_usa_stars_on_the_horizon.1 days = 1 }
+			}
 			add_political_power = 25
 			skip_line_tt = yes
 			random_owned_controlled_state = {
@@ -10351,7 +10722,7 @@ focus_tree = {
 						option = HIDE
 					}
 				}
-				has_taken_core_path_democratic = no
+				has_taken_core_path_non_communist = no
 			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -11458,7 +11829,7 @@ focus_tree = {
 						option = HIDE
 					}
 				}
-				has_taken_core_path_democratic = no
+				has_taken_core_path_non_communist = no
 			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -13367,7 +13738,19 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_Attending_to
 		}
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				has_taken_core_path_non_nationalist = no
+			}
+		}
 		available = {
+			recovery_past_stage_0 = yes
 			has_completed_focus = USA_federal_recovery_emergency_enterprise
 		}
 		
@@ -13556,6 +13939,7 @@ focus_tree = {
 	focus = { # America On Its Own
 		id = USA_america_on_its_own
 		icon = GFX_focus_usa_flag
+		overlay = GFX_new_overlay_star_with_ideo_authoritarian
 		relative_position_id = USA_tend_to_the_nation
 		prerequisite = { focus = USA_a_question_of_confidence }
 		mutually_exclusive = {
@@ -13574,7 +13958,8 @@ focus_tree = {
 			FOCUS_FILTER_Attending_to
 		}
 		available = {
-
+			recovery_past_stage_1 = yes
+			has_country_flag = SC_new_frontier_chosen_flag
 		}
 		
 		bypass = {
@@ -13588,6 +13973,7 @@ focus_tree = {
 	focus = { # First Among Equals
 		id = USA_first_among_equals
 		icon = GFX_focus_new_america_on_its_own
+		overlay = GFX_new_overlay_star_with_ideo_authoritarian
 		relative_position_id = USA_tend_to_the_nation
 		prerequisite = { focus = USA_a_question_of_confidence }
 		prerequisite = { focus = USA_our_place_in_the_world }
@@ -13607,7 +13993,8 @@ focus_tree = {
 			FOCUS_FILTER_Attending_to
 		}
 		available = {
-
+			recovery_past_stage_1 = yes
+			has_country_flag = SC_new_america_chosen_flag
 		}
 		
 		bypass = {
@@ -24998,7 +25385,18 @@ focus_tree = {
 					rule = obsolete_focus_branches_visibility
 					option = HIDE
 				}
-				has_completed_focus = USA_an_american_five_year_plan
+				has_taken_core_path_communist = yes
+			}
+		}
+		offset = {
+			x = 2
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_taken_core_path_nationalist = yes
 			}
 		}
 
@@ -31580,7 +31978,7 @@ focus_tree = {
 						option = HIDE
 					}
 				}
-				has_taken_core_path_democratic = no
+				has_taken_core_path_non_communist = no
 			}
 		}
 		search_filters = {
@@ -34055,6 +34453,8 @@ focus_tree = {
 	}
 
    # Core
+	# Industrial Recovery is in the CORE section at the top.
+
 	focus = { # Stars on the Horizon
 		id = USA_stars_on_the_horizon
 		icon = GFX_focus_RAJ_the_sun_sets
@@ -34065,7 +34465,7 @@ focus_tree = {
 		x = 0
 		y = 2
 
-		cost = 10
+		cost = @stars_on_the_horizon_timer
 
 		ai_will_do = {
 			factor = 1
@@ -34074,14 +34474,36 @@ focus_tree = {
 			FOCUS_FILTER_Attending_to
 		}
 		available = {
-
+			if = {
+				limit = { has_country_flag = USA_stars_on_the_horizon_in_progress_flag }
+				set_temp_variable = { temp_focus_days = @stars_on_the_horizon_timer } #For tooltip purposes
+				multiply_temp_variable = { temp_focus_days = 7 } #The constant uses focus cost which is in weeks, so convert to days
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = USA_stars_on_the_horizon_in_progress_tt
+						FLAG_DAYS = [?USA_stars_on_the_horizon_in_progress_flag:days]
+						TIME_DAYS = [?temp_focus_days]
+					}
+					always = no
+				}
+			}
+			else = {
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = USA_stars_on_the_horizon_cant_do_tt
+					}
+					always = no
+				}
+			}
 		}
-		
+
 		bypass = {
 		}
 
 		completion_reward = {
-
+			hidden_effect = { # start The Eagle Lifts its Wings
+				country_event = { id = new_usa_the_eagle_lifts_its_wings.1 days = 1 }
+			}
 		}
 	}
 
@@ -34095,7 +34517,7 @@ focus_tree = {
 		x = 0
 		y = 4
 
-		cost = 10
+		cost = @eagle_lifts_its_wings_timer
 
 		ai_will_do = {
 			factor = 1
@@ -34104,9 +34526,29 @@ focus_tree = {
 			FOCUS_FILTER_Attending_to
 		}
 		available = {
-
+			if = {
+				limit = { has_country_flag = USA_the_eagle_lifts_its_wings_in_progress_flag }
+				set_temp_variable = { temp_focus_days = @eagle_lifts_its_wings_timer } #For tooltip purposes
+				multiply_temp_variable = { temp_focus_days = 7 } #The constant uses focus cost which is in weeks, so convert to days
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = USA_the_eagle_lifts_its_wings_in_progress_tt
+						FLAG_DAYS = [?USA_the_eagle_lifts_its_wings_in_progress_flag:days]
+						TIME_DAYS = [?temp_focus_days]
+					}
+					always = no
+				}
+			}
+			else = {
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = USA_the_eagle_lifts_its_wings_cant_do_tt
+					}
+					always = no
+				}
+			}
 		}
-		
+
 		bypass = {
 		}
 
@@ -34164,6 +34606,17 @@ focus_tree = {
 		}
 		search_filters = {
 			FOCUS_FILTER_Attending_to
+		}
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				has_taken_core_path_non_nationalist = no
+			}
 		}
 		available = {
 			recovery_past_stage_0 = yes
@@ -34924,7 +35377,20 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_Attending_to
 		}
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				has_taken_core_path_non_nationalist = no
+			}
+		}
 		available = {
+			recovery_past_stage_1 = yes
+			has_completed_focus = USA_industrial_recovery_AN
 			has_completed_focus = USA_federal_recovery_emergency_enterprise
 		}
 		
@@ -35554,7 +36020,20 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_Attending_to
 		}
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				has_taken_core_path_non_nationalist = no
+			}
+		}
 		available = {
+			recovery_past_stage_1 = yes
+			has_completed_focus = USA_industrial_recovery_AN
 			has_completed_focus = USA_federal_recovery_emergency_enterprise
 		}
 		

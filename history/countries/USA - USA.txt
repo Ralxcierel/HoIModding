@@ -1859,4 +1859,4 @@ add_dynamic_modifier = {
  set_variable = { FREE_expert_guidance_P	= 5 } # The points given to positive sectors by Expert Guidance
  set_variable = { FREE_expert_guidance_S	= 1 } # The points given to negative sectors by Expert Guidance
  set_variable = { FREE_recovery_funds_P		= 1 } # The points given to positive sectors by Recovery Funds
- set_variable = { FREE_recovery_funds_S		= 3 } # The points given to negative sectors by Recovery Funds
+ set_variable = { FREE_recovery_funds_S		= 2 } # The points given to negative sectors by Recovery Funds

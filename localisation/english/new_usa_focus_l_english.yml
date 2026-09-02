@@ -24,7 +24,7 @@
  USA_regional_strategic_commands-general_title: "Regional Strategic Commands"
  USA_regional_strategic_commands-general_desc: "In order to better secure our vast homeland and provide unassailable hurdles for our attackers, we will establish regional strategic commands that can closely support and coordinate their local defensive operations and make way for decisive counterpushes. Each command will be a bastion for our leadership and a source of refuge for our hurt and injured soldiers and civilians."
 
- TBA_TT: "§Y*Text to be added!*§!"
+ TBA_TT: "§CTO-COMPLETE§!"
 
 # Stealth / Fake / Side-Message Focuses
  USA_SM_NC_decrease_conservative_resistance: "Conservative Resistance"
@@ -1543,6 +1543,27 @@
 
  USA_southern_crisis: "Southern Crisis"
  USA_southern_crisis_desc: "The famine caused by the Dust Bowl is causing unsustainable damage to communities across the country, but now it has received a response from several major communities in the south. In the face of these crises, a new unified spirit is taking hold in the South, and spreading."
+
+ USA_banner_clubs: "Banner Clubs"
+ USA_banner_clubs_desc: "§CTO-COMPLETE§!"
+
+ USA_the_question_of_our_national_character: "The Question of Our National Character"
+ USA_the_question_of_our_national_character_desc: "§CTO-COMPLETE§!"
+
+ USA_visions_of_a_new_frontier: "Visions of a New Frontier"
+ USA_visions_of_a_new_frontier_desc: "§CTO-COMPLETE§!"
+
+ USA_state_autarky_movement: "State Autarky Movement"
+ USA_state_autarky_movement_desc: "§CTO-COMPLETE§!"
+
+ USA_a_new_america: "A New America"
+ USA_a_new_america_desc: "§CTO-COMPLETE§!"
+
+ USA_brotherhood_spirit: "Brotherhood Spirit"
+ USA_brotherhood_spirit_desc: "§CTO-COMPLETE§!"
+
+ USA_a_golden_west: "A Golden West"
+ USA_a_golden_west_desc: "§CTO-COMPLETE§!"
 
  USA_the_george_may_proposal: "The George-May Proposal"
  USA_the_george_may_proposal_desc: "Despite the general collapse of both the American and world banking systems, Wall Street appears to have a plan for recovery. Various banks, realestate companies, fund groups, corporations and private businessmen have gathered in New York to draft a plan for the stabilization of the national economy, though the plan is, at best, experimental. Is it worth a shot?"

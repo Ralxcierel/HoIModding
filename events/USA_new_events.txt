@@ -34,6 +34,22 @@
  @red_new_deal_timer = 					210 # days
  @engines_of_industry_timer = 			140 # days
 ##########################################################
+# Constants for American Nationalist
+ @stars_on_the_horizon_timer = 			210 # days
+ @eagle_lifts_its_wings_timer = 		140 # days
+##########################################################
+# Constants for Southern Crisis
+# @national_character_timer = 			154 # days
+# @new_frontier_timer = 					280 # days
+# @autarky_timer = 						280 # days
+# @new_america_timer = 					280 # days
+# @brotherhood_timer = 					336 # days
+ @national_character_timer = 			70 # days
+ @new_frontier_timer = 					70 # days
+ @autarky_timer = 						70 # days
+ @new_america_timer = 					70 # days
+ @brotherhood_timer = 					70 # days
+##########################################################
 # Other Constants
  @dynamism_unlocked_timer = 			210 # days
  @industrial_expansion_unlocked_timer = 140 # days
@@ -679,6 +695,98 @@ news_event = { # Demand overlordship transferring debug
 				originator_name = "the USA"
 			}
 			clr_country_flag = USA_engines_of_industry_in_progress_flag
+		}
+	}
+  }
+ add_namespace = new_usa_stars_on_the_horizon
+  country_event = { # starts process of Stars on the Horizon
+	id = new_usa_stars_on_the_horizon.1
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = { has_completed_focus = USA_stars_on_the_horizon }
+			}
+			activate_shine_on_focus = USA_stars_on_the_horizon
+			set_country_flag = { flag = USA_stars_on_the_horizon_in_progress_flag days = @stars_on_the_horizon_timer value = 1 }
+			country_event = { id = new_usa_stars_on_the_horizon.2 days = @stars_on_the_horizon_timer } # finish
+		}
+	}
+  }
+  country_event = { # finish Stars on the Horizon
+	id = new_usa_stars_on_the_horizon.2
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				has_shine_effect_on_focus = USA_stars_on_the_horizon
+			}
+			complete_national_focus = {
+				focus = USA_stars_on_the_horizon
+				use_side_message = yes
+				originator_name = "the USA"
+			}
+			clr_country_flag = USA_stars_on_the_horizon_in_progress_flag
+		}
+	}
+  }
+ add_namespace = new_usa_the_eagle_lifts_its_wings
+  country_event = { # starts process of The Eagle Lifts its Wings
+	id = new_usa_the_eagle_lifts_its_wings.1
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = { has_completed_focus = USA_the_eagle_lifts_its_wings }
+			}
+			activate_shine_on_focus = USA_the_eagle_lifts_its_wings
+			set_country_flag = { flag = USA_the_eagle_lifts_its_wings_in_progress_flag days = @eagle_lifts_its_wings_timer value = 1 }
+			country_event = { id = new_usa_the_eagle_lifts_its_wings.2 days = @eagle_lifts_its_wings_timer } # finish
+		}
+	}
+  }
+  country_event = { # finish The Eagle Lifts its Wings
+	id = new_usa_the_eagle_lifts_its_wings.2
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				has_shine_effect_on_focus = USA_the_eagle_lifts_its_wings
+			}
+			complete_national_focus = {
+				focus = USA_the_eagle_lifts_its_wings
+				use_side_message = yes
+				originator_name = "the USA"
+			}
+			clr_country_flag = USA_the_eagle_lifts_its_wings_in_progress_flag
 		}
 	}
   }
@@ -2652,6 +2760,288 @@ country_event = { # undoes the stealth focus [unused]
 			}
 			complete_national_focus = {
 				focus = USA_soviet_style_policies
+				use_side_message = yes
+				originator_name = "the Government"
+			}
+			clr_country_flag = USA_econ_recovery_in_progress_flag
+		}
+	}
+ }
+
+#################################################
+
+#########################################################
+# Southern Crisis auto-progression chain (mirrors the Red July chain above)
+ add_namespace = new_usa_southern_crisis_1 # The Question of Our National Character
+ country_event = { # starts process of the Question
+ 	id = new_usa_southern_crisis_1.1
+
+ 	hidden = yes
+
+ 	is_triggered_only = yes
+
+ 	trigger = {
+ 		has_completed_focus = USA_banner_clubs
+ 	}
+
+ 	immediate = {
+ 		if = {
+ 			limit = {
+ 				NOT = { has_completed_focus = USA_the_question_of_our_national_character }
+ 			}
+ 			activate_shine_on_focus = USA_the_question_of_our_national_character
+ 			set_country_flag = { flag = USA_econ_recovery_in_progress_flag days = @national_character_timer value = 1 }
+			set_country_flag = { flag = running_qonc_flag days = @national_character_timer value = 1 }
+ 			country_event = { id = new_usa_southern_crisis_1.3 days = @national_character_timer } # finish
+ 			country_event = { id = new_usa_southern_crisis_1.2 days = 30 } # Choice
+ 		}
+ 	}
+ }
+ country_event = { # Visions of a New Frontier or A New America?
+	id = new_usa_southern_crisis_1.2
+	title = new_usa_southern_crisis_1.2.t
+	desc = new_usa_southern_crisis_1.2.desc
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = { # Visions of a New Frontier
+		name = new_usa_southern_crisis_1.2.a
+		ai_chance = {
+			base = 50
+		}
+		set_country_flag = SC_new_frontier_chosen_flag
+		custom_effect_tooltip = new_usa_southern_crisis_1.2.a.tt
+	}
+	option = { # A New America
+		name = new_usa_southern_crisis_1.2.b
+		ai_chance = {
+			base = 50
+		}
+		set_country_flag = SC_new_america_chosen_flag
+		custom_effect_tooltip = new_usa_southern_crisis_1.2.b.tt
+	}
+ }
+ country_event = { # finish the Question
+	id = new_usa_southern_crisis_1.3
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_completed_focus = USA_banner_clubs
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				has_shine_effect_on_focus = USA_the_question_of_our_national_character
+			}
+			complete_national_focus = {
+				focus = USA_the_question_of_our_national_character
+				use_side_message = yes
+				originator_name = "the Government"
+			}
+			clr_country_flag = USA_econ_recovery_in_progress_flag
+		}
+	}
+ }
+
+ #################################################
+ add_namespace = new_usa_southern_crisis_2 # Visions of a New Frontier
+ country_event = { # starts process of Visions of a New Frontier
+	id = new_usa_southern_crisis_2.1
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_completed_focus = USA_the_question_of_our_national_character
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = { has_completed_focus = USA_visions_of_a_new_frontier }
+			}
+			activate_shine_on_focus = USA_visions_of_a_new_frontier
+			set_country_flag = { flag = USA_econ_recovery_in_progress_flag days = @new_frontier_timer value = 1 }
+			set_country_flag = { flag = running_vnf_flag days = @new_frontier_timer value = 1 }
+			country_event = { id = new_usa_southern_crisis_2.3 days = @new_frontier_timer } # finish
+		}
+	}
+ }
+ country_event = { # finish Visions of a New Frontier
+	id = new_usa_southern_crisis_2.3
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_completed_focus = USA_the_question_of_our_national_character
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				has_shine_effect_on_focus = USA_visions_of_a_new_frontier
+			}
+			complete_national_focus = {
+				focus = USA_visions_of_a_new_frontier
+				use_side_message = yes
+				originator_name = "the Government"
+			}
+			clr_country_flag = USA_econ_recovery_in_progress_flag
+		}
+	}
+ }
+
+ #################################################
+ add_namespace = new_usa_southern_crisis_3 # A New America
+ country_event = { # starts process of A New America
+	id = new_usa_southern_crisis_3.1
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_completed_focus = USA_the_question_of_our_national_character
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = { has_completed_focus = USA_a_new_america }
+			}
+			activate_shine_on_focus = USA_a_new_america
+			set_country_flag = { flag = USA_econ_recovery_in_progress_flag days = @new_america_timer value = 1 }
+			set_country_flag = { flag = running_ana_flag days = @new_america_timer value = 1 }
+			country_event = { id = new_usa_southern_crisis_3.3 days = @new_america_timer } # finish
+		}
+	}
+ }
+ country_event = { # finish A New America
+	id = new_usa_southern_crisis_3.3
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_completed_focus = USA_the_question_of_our_national_character
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				has_shine_effect_on_focus = USA_a_new_america
+			}
+			complete_national_focus = {
+				focus = USA_a_new_america
+				use_side_message = yes
+				originator_name = "the Government"
+			}
+			clr_country_flag = USA_econ_recovery_in_progress_flag
+		}
+	}
+ }
+
+ #################################################
+ add_namespace = new_usa_southern_crisis_4 # State Autarky Movement
+ country_event = { # starts process of State Autarky Movement
+	id = new_usa_southern_crisis_4.1
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_completed_focus = USA_visions_of_a_new_frontier
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = { has_completed_focus = USA_state_autarky_movement }
+			}
+			activate_shine_on_focus = USA_state_autarky_movement
+			set_country_flag = { flag = USA_econ_recovery_in_progress_flag days = @autarky_timer value = 1 }
+			set_country_flag = { flag = running_sam_flag days = @autarky_timer value = 1 }
+			country_event = { id = new_usa_southern_crisis_4.3 days = @autarky_timer } # finish
+		}
+	}
+ }
+ country_event = { # finish State Autarky Movement
+	id = new_usa_southern_crisis_4.3
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_completed_focus = USA_visions_of_a_new_frontier
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				has_shine_effect_on_focus = USA_state_autarky_movement
+			}
+			complete_national_focus = {
+				focus = USA_state_autarky_movement
+				use_side_message = yes
+				originator_name = "the Government"
+			}
+			clr_country_flag = USA_econ_recovery_in_progress_flag
+		}
+	}
+ }
+
+ #################################################
+ add_namespace = new_usa_southern_crisis_5 # Brotherhood Spirit
+ country_event = { # starts process of Brotherhood Spirit
+	id = new_usa_southern_crisis_5.1
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_completed_focus = USA_a_new_america
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = { has_completed_focus = USA_brotherhood_spirit }
+			}
+			activate_shine_on_focus = USA_brotherhood_spirit
+			set_country_flag = { flag = USA_econ_recovery_in_progress_flag days = @brotherhood_timer value = 1 }
+			set_country_flag = { flag = running_bhs_flag days = @brotherhood_timer value = 1 }
+			country_event = { id = new_usa_southern_crisis_5.3 days = @brotherhood_timer } # finish
+		}
+	}
+ }
+ country_event = { # finish Brotherhood Spirit
+	id = new_usa_southern_crisis_5.3
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_completed_focus = USA_a_new_america
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				has_shine_effect_on_focus = USA_brotherhood_spirit
+			}
+			complete_national_focus = {
+				focus = USA_brotherhood_spirit
 				use_side_message = yes
 				originator_name = "the Government"
 			}

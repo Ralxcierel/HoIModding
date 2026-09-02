@@ -828,8 +828,26 @@ has_taken_core_path_communist = {
 		has_completed_focus = USA_an_american_five_year_plan
 	}
 }
+has_taken_core_path_nationalist = {
+	OR = {
+		has_completed_focus = USA_southern_crisis
+	}
+}
 has_taken_core_path_non_democratic = {
 	OR = {
+		has_taken_core_path_communist = yes
+		has_taken_core_path_nationalist = yes
+	}
+}
+has_taken_core_path_non_communist = {
+	OR = {
+		has_taken_core_path_democratic = yes
+		has_taken_core_path_nationalist = yes
+	}
+}
+has_taken_core_path_non_nationalist = {
+	OR = {
+		has_taken_core_path_democratic = yes
 		has_taken_core_path_communist = yes
 	}
 }

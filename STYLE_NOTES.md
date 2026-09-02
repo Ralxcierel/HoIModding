@@ -135,3 +135,11 @@ new points constants if needed, no parallel scaling system.
 - `custom_effect_tooltip`/`custom_override_tooltip` keys used by focuses
   live in the same localisation files as the focus text itself — search
   for the focus's id first to find its whole loc block in one place.
+- When writing new code (focus/event/decision logic) without writing its
+  flavor text in the same pass, still add the loc keys the code requires
+  (titles, descs, event option names/tooltips) with the literal placeholder
+  value `"§CTO-COMPLETE§!"` rather than leaving the key out of the .yml
+  entirely. This keeps the file structurally complete and makes every
+  pending block findable with a single search for `TO-COMPLETE` when a
+  later localisation pass comes through — an omitted key is silent and
+  easy to forget, a `TO-COMPLETE` key isn't.

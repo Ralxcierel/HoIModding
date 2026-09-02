@@ -346,6 +346,7 @@
 			}
 			NOT = {
 				has_completed_focus = USA_an_american_five_year_plan
+				has_taken_core_path_non_democratic = yes
 			}
 		}
 		if = {

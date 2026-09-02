@@ -479,6 +479,10 @@
   USA_red_new_deal_cant_do_tt: "This focus will complete §Gautomatically§! once at least §Ytwo prerequisite§! focuses are §Ycompleted§!."
   USA_engines_of_industry_in_progress_tt: "The economy is beginning to grow again, with the engines of industry spinning once more. \nProgress: §Y$FLAG_DAYS$§!/$TIME_DAYS$ days"
   USA_engines_of_industry_cant_do_tt: "This focus will complete §Gautomatically§! once at least §Ytwo prerequisite§! focuses are §Ycompleted§!."
+  USA_stars_on_the_horizon_in_progress_tt: "The nation is charting its new course. \nProgress: §Y$FLAG_DAYS$§!/$TIME_DAYS$ days"
+  USA_stars_on_the_horizon_cant_do_tt: "This focus will complete §Gautomatically§! once its §Yprerequisite§! focus is §Ycompleted§!."
+  USA_the_eagle_lifts_its_wings_in_progress_tt: "The nation is rallying behind its new direction. \nProgress: §Y$FLAG_DAYS$§!/$TIME_DAYS$ days"
+  USA_the_eagle_lifts_its_wings_cant_do_tt: "This focus will complete §Gautomatically§! once its §Yprerequisite§! focus is §Ycompleted§!."
 
   reduce_focus_time_generic_tt: "The §Ytime§! to complete this focus can be §Greduced§! by §Y$TEMP_DAYS$§! days by completing the §Y$TEMP_FOCUS$§! focus."
   reduce_focus_time_must_be_democratic_tt: "The §Ytime§! to complete this focus can be §Greduced§! by taking a focus in the §R$TEMP_PATH$§! focus tree."
@@ -513,6 +517,11 @@
   USA_red_july_cant_do_tt: "This focus will complete §Gautomatically§! once the nation is further §Yready to heal§!."
   USA_red_july_cant_do_exclusive_tt: "A different path has been committed to, so this focus is unavailable."
   USA_NC_civil_war_is_over: " The Nationalist Communist civil war is over"
+  USA_southern_crisis_in_progress_tt: "The Southern Crisis is currently running its course. \nProgress: §Y$FLAG_DAYS$§!/$TIME_DAYS$ days"
+  USA_southern_crisis_cant_do_tt: "This focus will complete §Gautomatically§! once the Southern Crisis has progressed far enough."
+  USA_southern_crisis_cant_do_exclusive_tt: "A different path has been committed to, so this focus is unavailable."
+  SC_new_america_chosen_flag: "Chose to forge a §YNew America§!"
+  SC_new_frontier_chosen_flag: "Chose to venture into a §YNew Frontier§!"
 
  # FOCUS FILTERS
   FOCUS_FILTER_LEFT_TO_COMPLETE: "Unfinished"
@@ -532,6 +541,7 @@
   USA_path_shortcut_science: "Science"
   USA_path_shortcut_foreign_policy: "Foreign Policy"
   USA_path_shortcut_recovery: "Recovery"
+  USA_path_shortcut_FREE: "FREE"
 
  # GENERIC TOOLTIPS
   fed_mod_tt: "§YThe Fed§! is modified by:"
