@@ -1953,6 +1953,7 @@ ideas = {
 				OR = {
 					has_completed_focus = USA_industrial_expansion
 					has_completed_focus = USA_engines_of_industry
+					has_completed_focus = USA_the_eagle_lifts_its_wings
 				}
 				
 			}

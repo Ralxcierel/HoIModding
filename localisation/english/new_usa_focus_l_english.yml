@@ -1545,10 +1545,10 @@
  USA_southern_crisis_desc: "The famine caused by the Dust Bowl is causing unsustainable damage to communities across the country, but now it has received a response from several major communities in the south. In the face of these crises, a new unified spirit is taking hold in the South, and spreading."
 
  USA_banner_clubs: "Banner Clubs"
- USA_banner_clubs_desc: "§CTO-COMPLETE§!"
+ USA_banner_clubs_desc: "Across the nation, states have begun directing local communities to come together and form 'banner clubs', localized support groups of people who are caring for and tending to the needs of one another. The Federal Government in DC has lost the confidence of the people, and the states have taken it upon themselves individually to pick up the slack."
 
  USA_the_question_of_our_national_character: "The Question of Our National Character"
- USA_the_question_of_our_national_character_desc: "§CTO-COMPLETE§!"
+ USA_the_question_of_our_national_character_desc: "As we rebuild our nation and recover from the Great Depression, we find a new purpose for the Federal Government. Whether or not it takes center stage or yields to the states now seems to favor the latter, but it's not the only new thing to consider. America is being reborn, but how shall the phoenix rise? Do we further isolate ourselves from the world, or do we dare to stake a revolutionary new claim?"
 
  USA_visions_of_a_new_frontier: "Visions of a New Frontier"
  USA_visions_of_a_new_frontier_desc: "§CTO-COMPLETE§!"
@@ -1561,6 +1561,7 @@
 
  USA_brotherhood_spirit: "Brotherhood Spirit"
  USA_brotherhood_spirit_desc: "§CTO-COMPLETE§!"
+ USA_brotherhood_spirit_tt: "If a §Rcivil war§! breaks out after this focus has been §Ycompleted§!, the fighting will §Ggreatly favor§! the §YAmerican Nationalists§!."
 
  USA_a_golden_west: "A Golden West"
  USA_a_golden_west_desc: "§CTO-COMPLETE§!"
@@ -2033,81 +2034,82 @@
  USA_a_song_for_the_horizon_desc: "$TBA_TT$"
 
  USA_stars_on_the_horizon: "Stars on the Horizon"
- USA_stars_on_the_horizon_desc: ""
+ USA_stars_on_the_horizon_desc: "In the last several years, despair has gripped the American people, but they did not give up- they held out and persevered. Now we are beginning to see the full fruits of that perseverance, which is not satisfied with a return to the status quo but which will only be satiated by the charting of a new, more glorious course."
 
  USA_the_eagle_lifts_its_wings: "The Eagle Lifts its Wings"
  USA_the_eagle_lifts_its_wings_desc: ""
+ USA_the_eagle_lifts_its_wings_tt: "§YUnlocks§! the §Y$USA_general_motors$§! industrial concern."
 
  USA_lady_libertys_arsenal: "Lady Liberty's Arsenal"
  USA_lady_libertys_arsenal_desc: ""
 
  USA_federal_recovery_emergency_enterprise: "Federal Recovery Emergency Enterprise"
- USA_federal_recovery_emergency_enterprise_desc: ""
+ USA_federal_recovery_emergency_enterprise_desc: "The Federal Recovery Emergency Enterprise, or FREE, will facilitate the allocation of federal funds and the focus and attention of the people's state towards the recovery, growth, and future protection of the American economy. It will be given sweeping authority both in what it can demand and in what it can allow."
  USA_federal_recovery_emergency_enterprise_tt: "Adds §Y$USA_FREE_dynamic_modifier$§!, which grants the current [USAGetFREETitle] policies:\n  §Y(-3)§! [USA_federal_recovery_emergency_enterprise_SL_a]\n  §Y(-3)§! [USA_federal_recovery_emergency_enterprise_SL_b]\n  §Y(-3)§! [USA_federal_recovery_emergency_enterprise_SL_c]\n  §Y(-3)§! [USA_federal_recovery_emergency_enterprise_SL_d]\n  §Y(-3)§! [USA_federal_recovery_emergency_enterprise_SL_e]\n  §Y(-3)§! [USA_federal_recovery_emergency_enterprise_SL_f]\n"
  USA_federal_recovery_emergency_enterprise_tt_2: "Every §Y10 points§! of §Yfunding§! can modify a §9Sector§!, from §R-30§! to §G+50§! points. Most §Yfocuses§! will §Yshift funding§!."
 
  USA_crisis_of_dependency: "Crisis of Dependency"
- USA_crisis_of_dependency_desc: ""
+ USA_crisis_of_dependency_desc: "With the collapse of global trade and the world's shared economies, we have been plunged into crisis here at home. While trade has great benefits when done conservatively, it's clear we cannot afford to lean our well-being on the industries of others."
 
  USA_the_bay_otzen_plan: "The Bay-Otzen Plan"
- USA_the_bay_otzen_plan_desc: ""
+ USA_the_bay_otzen_plan_desc: "The economist Oswald Bay has partnered with the newly-founded Otzen Institute of Economics to deliver a plan for the future to Congress. It details a radical departure from our historical policies: clamping down on exports, increasing tariffs, subsidizing root-level industries, and integrating FREE into public works projects across the nation. This plan may be our only hope for normalcy and stability."
 
  USA_invest_in_infrastructure: "Invest in Infrastructure"
- USA_invest_in_infrastructure_desc: ""
+ USA_invest_in_infrastructure_desc: "Every piece of the country interacts with every other piece by way of our shared infrastructure. If we are going to be able to rely on ourselves, we'll need to be able to reliably reach our neighbors."
 
  USA_reinforce_interstate_routes: "Reinforce Interstate Routes"
- USA_reinforce_interstate_routes_desc: ""
+ USA_reinforce_interstate_routes_desc: "We need a comprehensive network of high-speed roads and systems across our country. The Interstate Project will supply the necessary focus."
 
  USA_finance_new_mines_and_refineries: "Finance New Mines and Refineries"
- USA_finance_new_mines_and_refineries_desc: ""
+ USA_finance_new_mines_and_refineries_desc: "As our industries recover and our economy grows once more, we'll need more resources than ever before. The world of tomorrow is made of rubber tires, oil engines, and advanced alloys of the finest materials."
 
  USA_establish_new_forestry_zones: "Establish New Forestry Zones"
- USA_establish_new_forestry_zones_desc: ""
+ USA_establish_new_forestry_zones_desc: "By issuing a vast amount of new forestry liscenes, we can open up a significant portion of our natural resources to industrial use and employ tens of thousands of ready Americans. Our national parks will remain sacred realms of tranquility, but we will make use of our forests besides."
 
  USA_tap_old_gold_mines: "Tap Old Gold Mines"
- USA_tap_old_gold_mines_desc: ""
+ USA_tap_old_gold_mines_desc: "With new tools at our disposal, we can take another look at our old quarries and mines and try accessing those resources that were, before, too difficult to extract."
 
  USA_the_continental_grid: "The Continental Grid"
- USA_the_continental_grid_desc: ""
+ USA_the_continental_grid_desc: "§CTO-COMPLETE§!"
 
  USA_american_wellspring_administration: "American Wellspring Administration"
- USA_american_wellspring_administration_desc: ""
+ USA_american_wellspring_administration_desc: "§CTO-COMPLETE§!"
 
  USA_american_architectural_administration: "American Architectural Administration"
- USA_american_architectural_administration_desc: ""
+ USA_american_architectural_administration_desc: "§CTO-COMPLETE§!"
 
  USA_ohio_mechanical_complex: "Ohio Mechanical Complex"
- USA_ohio_mechanical_complex_desc: ""
+ USA_ohio_mechanical_complex_desc: "§CTO-COMPLETE§!"
 
  USA_strive_for_the_present: "Strive for the Present"
- USA_strive_for_the_present_desc: ""
+ USA_strive_for_the_present_desc: "§CTO-COMPLETE§!"
 
  USA_rapid_growth: "Rapid Growth"
- USA_rapid_growth_desc: ""
+ USA_rapid_growth_desc: "§CTO-COMPLETE§!"
 
  USA_protect_our_tomorrow: "Protect Our Tomorrow"
- USA_protect_our_tomorrow_desc: ""
+ USA_protect_our_tomorrow_desc: "§CTO-COMPLETE§!"
 
  USA_promote_the_national_will: "Promote the National Will"
- USA_promote_the_national_will_desc: ""
+ USA_promote_the_national_will_desc: "§CTO-COMPLETE§!"
 
  USA_steady_economic_policies: "Steady Economic Policies"
- USA_steady_economic_policies_desc: ""
+ USA_steady_economic_policies_desc: "§CTO-COMPLETE§!"
 
  USA_plan_for_the_future: "Plan for the Future"
- USA_plan_for_the_future_desc: ""
+ USA_plan_for_the_future_desc: "§CTO-COMPLETE§!"
 
  USA_invest_in_long_term_schemes: "Invest in Long-Term Schemes"
- USA_invest_in_long_term_schemes_desc: ""
+ USA_invest_in_long_term_schemes_desc: "§CTO-COMPLETE§!"
 
  USA_blue_districts: "Blue Districts"
- USA_blue_districts_desc: ""
+ USA_blue_districts_desc: "§CTO-COMPLETE§!"
 
  USA_increase_technological_funding: "Increase Technological Funding"
- USA_increase_technological_funding_desc: ""
+ USA_increase_technological_funding_desc: "§CTO-COMPLETE§!"
 
  USA_north_american_autarky: "North American Autarky"
- USA_north_american_autarky_desc: ""
+ USA_north_american_autarky_desc: "§CTO-COMPLETE§!"
 
  USA_kickstart_the_steel_belt: "Kickstart the Steel Belt"
  USA_kickstart_the_steel_belt_desc: ""
@@ -2197,20 +2199,24 @@
  USA_FREE_department_expansion: "Department Expansion"
  USA_FREE_department_expansion_desc: ""
  USA_FREE_department_expansion_tt: "Allows for [USAGetFREETitle] to have its §Yfocus§! or its §Yfunds management§! §Gimproved§!.\n\nAll §9Sectors§! suffer a §Rslight penalty§! §Y([?FREE_points_V])§!."
+ USA_FREE_department_expansion_tt_2: "§YUnlocks§! the §YFREE§! industrial concern."
 
  USA_FREE_raise_taxes_for_reinvestment: "Raise Taxes for Reinvestment"
  USA_FREE_raise_taxes_for_reinvestment_desc: ""
  USA_FREE_raise_taxes_for_reinvestment_tt: "Allows for [USAGetFREETitle] to have its §Yfocus§! or its §Yfunds management§! §Gfurther improved§!."
+ USA_FREE_raise_taxes_for_reinvestment_tt_2: "§GImproves§! the §YFREE§! industrial concern."
 
  USA_FREE_print_money_to_fund_FREE: "Print Money to Fund FREE"
  USA_FREE_print_money_to_fund_FREE_desc: ""
  USA_FREE_print_money_to_fund_FREE_tt: "Allows for [USAGetFREETitle] to have its §Yfocus§! or its §Yfunds management§! §Gfurther improved§!."
+ USA_FREE_print_money_to_fund_FREE_tt_2: "§GImproves§! the §YFREE§! industrial concern."
 
  USA_FREE_undersecretariat_for_sectoral_administration: "Undersecretariat for Sectoral Administration"
  USA_FREE_undersecretariat_for_sectoral_administration_desc: ""
  USA_FREE_undersecretariat_for_sectoral_administration_tt: "The §Y$USA_FREE_dynamic_modifier$§! becomes the §Y$USA_FREE_dynamic_modifier_2$§!.\n\nAllows for [USAGetFREETitle] to have its §Yfocus§! and its §Yfunds management§! §Gfully improved§!.\n\nAll §9Sectors§! suffer a §Rslight penalty§! §Y([?FREE_points_V])§!."
+ USA_FREE_undersecretariat_for_sectoral_administration_tt_2: "§GImproves§! the §YFREE§! industrial concern."
 
  USA_FREE_recovery_achieved: "Recovery Achieved"
  USA_FREE_recovery_achieved_desc: ""
  USA_FREE_recovery_achieved_tt: "This focus will give §Ylarger benefits§! the more §Ypositive funding§! from [USAGetFREETitle] is in play.\n\n"
- USA_FREE_recovery_achieved_tt_2: "§GImproves all the values§! of [USAGetFREETitle]'s §Yfocus§! by §Y(+1)§! going forward.\n§GRemoves all slight penalties§! of [USAGetFREETitle]'s §Yfocus§! going forward.\n§R(Does not modify existing funds)§!"
+ USA_FREE_recovery_achieved_tt_2: "§GImproves all values§! of [USAGetFREETitle]'s §Yfocus§! by §Y(+1)§! going forward.\n§GRemoves all slight penalties§! of [USAGetFREETitle]'s §Yfocus§! going forward.\n§R(Does not modify existing funds)§!"

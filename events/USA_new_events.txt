@@ -3644,8 +3644,8 @@ country_event = { # undoes the stealth focus [unused]
 ############################################################################################################################################
 ############################################################################################################################################
 # DEMOCRATIC
-add_namespace = new_usa_pacify_mexican_turmoil
-# USA_pacify_mexican_turmoil event
+ add_namespace = new_usa_pacify_mexican_turmoil
+ # USA_pacify_mexican_turmoil event
 	country_event = { # intial event for Mexico
 		id = new_usa_pacify_mexican_turmoil.1
 		title = new_usa_pacify_mexican_turmoil.1.t
@@ -3754,8 +3754,8 @@ add_namespace = new_usa_pacify_mexican_turmoil
 	}
 
 
-add_namespace = new_usa_preempt_a_southern_invasion
-# USA_preempt_a_southern_invasion
+ add_namespace = new_usa_preempt_a_southern_invasion
+ # USA_preempt_a_southern_invasion
 	country_event = { # initial event
 		id = new_usa_preempt_a_southern_invasion.1
 		title = new_usa_preempt_a_southern_invasion.1.t
@@ -3865,8 +3865,8 @@ add_namespace = new_usa_preempt_a_southern_invasion
 	}
 
 
-add_namespace = new_usa_central_american_bastion
-# USA_central_american_bastion
+ add_namespace = new_usa_central_american_bastion
+ # USA_central_american_bastion
 	country_event = { # initial event
 		id = new_usa_central_american_bastion.1
 		title = new_usa_central_american_bastion.1.t
@@ -3973,8 +3973,8 @@ add_namespace = new_usa_central_american_bastion
 		}
 	}
 
-add_namespace = new_usa_dominate_south_america
-# USA_dominate_south_america
+ add_namespace = new_usa_dominate_south_america
+ # USA_dominate_south_america
 	country_event = { # initial event
 		id = new_usa_dominate_south_america.1
 		title = new_usa_dominate_south_america.1.t
@@ -4081,8 +4081,8 @@ add_namespace = new_usa_dominate_south_america
 		}
 	}
 
-add_namespace = new_usa_bribe_the_canadian_government
-# USA_bribe_the_canadian_government
+ add_namespace = new_usa_bribe_the_canadian_government
+ # USA_bribe_the_canadian_government
 	country_event = { # initial event
 		id = new_usa_bribe_the_canadian_government.1
 		title = new_usa_bribe_the_canadian_government.1.t
@@ -4260,8 +4260,8 @@ add_namespace = new_usa_bribe_the_canadian_government
 
 
 
-add_namespace = new_usa_secure_corridor
-# USA_secure_the_canadian_corridor
+ add_namespace = new_usa_secure_corridor
+ # USA_secure_the_canadian_corridor
 	country_event = { # initial event
 		id = new_usa_secure_corridor.1
 		title = new_usa_secure_corridor.1.t
@@ -4513,8 +4513,8 @@ add_namespace = new_usa_secure_corridor
 
 
 
-add_namespace = new_usa_bargain_canada
-# USA_bargain_for_canada
+ add_namespace = new_usa_bargain_canada
+ # USA_bargain_for_canada
 	country_event = { # initial event
 		id = new_usa_bargain_canada.1
 		title = new_usa_bargain_canada.1.t
@@ -4592,8 +4592,8 @@ add_namespace = new_usa_bargain_canada
 		}
 	}
 
-add_namespace = new_usa_propose_canadian_unification
-# USA_propose_canadian_unification
+ add_namespace = new_usa_propose_canadian_unification
+ # USA_propose_canadian_unification
 	country_event = { # initial event
 		id = new_usa_propose_canadian_unification.1
 		title = new_usa_propose_canadian_unification.1.t
@@ -4679,8 +4679,8 @@ add_namespace = new_usa_propose_canadian_unification
 
 
 
-add_namespace = new_usa_buy_newfoundland
-# USA_welcome_the_canadians (Newfoundland)
+ add_namespace = new_usa_buy_newfoundland
+ # USA_welcome_the_canadians (Newfoundland)
 	country_event = { # initial event
 		id = new_usa_buy_newfoundland.1
 		title = new_usa_buy_newfoundland.1.t
@@ -4775,8 +4775,8 @@ add_namespace = new_usa_buy_newfoundland
 
 
 
-add_namespace = new_usa_conquer_north
-# USA_conquer_the_north
+ add_namespace = new_usa_conquer_north
+ # USA_conquer_the_north
 	country_event = { # initial event
 		id = new_usa_conquer_north.1
 		title = new_usa_conquer_north.1.t
@@ -4872,8 +4872,8 @@ add_namespace = new_usa_conquer_north
 
 
 
-add_namespace = new_usa_carribean
-# USA_bring_in_the_carribean
+ add_namespace = new_usa_carribean
+ # USA_bring_in_the_carribean
 	country_event = { # initial event
 		id = new_usa_carribean.1
 		title = new_usa_carribean.1.t
@@ -4950,8 +4950,8 @@ add_namespace = new_usa_carribean
 	}
 
 
-add_namespace = new_usa_london_treaty
-# USA_the_treaty_of_london
+ add_namespace = new_usa_london_treaty
+ # USA_the_treaty_of_london
 	country_event = { # initial event
 		id = new_usa_london_treaty.1
 		title = new_usa_london_treaty.1.t
@@ -5210,8 +5210,8 @@ add_namespace = new_usa_london_treaty
 
 
 
-add_namespace = new_usa_shield_pan
-# USA_shield_the_panama_canal
+ add_namespace = new_usa_shield_pan
+ # USA_shield_the_panama_canal
 	country_event = { # initial event
 		id = new_usa_shield_pan.1
 		title = new_usa_shield_pan.1.t
@@ -5379,8 +5379,8 @@ add_namespace = new_usa_shield_pan
 
 
 
-add_namespace = new_usa_monroe_neutrality
-# USA_demand_peace_guarantees
+ add_namespace = new_usa_monroe_neutrality
+ # USA_demand_peace_guarantees
 	country_event = { # initial event
 		id = new_usa_monroe_neutrality.1
 		title = new_usa_monroe_neutrality.1.t
@@ -5449,8 +5449,8 @@ add_namespace = new_usa_monroe_neutrality
 
 
 
-add_namespace = new_usa_american_alliance
-# USA_american_alliance
+ add_namespace = new_usa_american_alliance
+ # USA_american_alliance
 	country_event = { # initial event
 		id = new_usa_american_alliance.1
 		title = new_usa_american_alliance.1.t
@@ -5531,8 +5531,8 @@ add_namespace = new_usa_american_alliance
 
 
 
-add_namespace = new_usa_vigilance_pact
-# USA_intercontinental_vigilance_pact
+ add_namespace = new_usa_vigilance_pact
+ # USA_intercontinental_vigilance_pact
 	country_event = { # initial event
 		id = new_usa_vigilance_pact.1
 		title = new_usa_vigilance_pact.1.t
@@ -5612,8 +5612,8 @@ add_namespace = new_usa_vigilance_pact
 
 
 
-add_namespace = new_usa_purchase_gap
-# USA_purchase_the_western_gap
+ add_namespace = new_usa_purchase_gap
+ # USA_purchase_the_western_gap
 	country_event = { # initial event
 		id = new_usa_purchase_gap.1
 		title = new_usa_purchase_gap.1.t
@@ -5788,8 +5788,8 @@ add_namespace = new_usa_purchase_gap
 
 
 
-add_namespace = new_usa_purchase_holdovers
-# USA_purchase_colonial_holdovers
+ add_namespace = new_usa_purchase_holdovers
+ # USA_purchase_colonial_holdovers
 	country_event = { # initial event
 		id = new_usa_purchase_holdovers.1
 		title = new_usa_purchase_holdovers.1.t
@@ -5968,8 +5968,8 @@ add_namespace = new_usa_purchase_holdovers
 
 
 
-add_namespace = new_usa_new_world_market
-# USA_new_world_market_system
+ add_namespace = new_usa_new_world_market
+ # USA_new_world_market_system
 	country_event = { # initial event
 		id = new_usa_new_world_market.1
 		title = new_usa_new_world_market.1.t
@@ -6052,8 +6052,8 @@ add_namespace = new_usa_new_world_market
 
 
 
-add_namespace = new_usa_continental_citadel
-# USA_continental_citadel
+ add_namespace = new_usa_continental_citadel
+ # USA_continental_citadel
 	country_event = { # initial event
 		id = new_usa_continental_citadel.1
 		title = new_usa_continental_citadel.1.t
@@ -6132,8 +6132,8 @@ add_namespace = new_usa_continental_citadel
 		}
 	}
 
-add_namespace = new_usa_acquire_pacific_territories
-# USA_acquire_pacific_territories
+ add_namespace = new_usa_acquire_pacific_territories
+ # USA_acquire_pacific_territories
 	country_event = { # Do you buy or do you threaten?
 		id = new_usa_acquire_pacific_territories.0
 		title = new_usa_acquire_pacific_territories.0.t
@@ -6445,8 +6445,8 @@ add_namespace = new_usa_acquire_pacific_territories
 		}
 	}
 
-add_namespace = new_usa_liberty_over_east_asia
-# USA_liberty_over_east_asia
+ add_namespace = new_usa_liberty_over_east_asia
+ # USA_liberty_over_east_asia
 	country_event = { # initial event for demanding overlordship
 		id = new_usa_liberty_over_east_asia.1
 		title = new_usa_liberty_over_east_asia.1.t
@@ -6713,8 +6713,8 @@ add_namespace = new_usa_liberty_over_east_asia
 		}
 	}
 
-add_namespace = new_usa_cross_pacific_alliance
-# USA_cross_pacific_alliance
+ add_namespace = new_usa_cross_pacific_alliance
+ # USA_cross_pacific_alliance
 	country_event = { # initial event for bringing in Japan
 		id = new_usa_cross_pacific_alliance.1
 		title = new_usa_cross_pacific_alliance.1.t
@@ -6847,8 +6847,8 @@ add_namespace = new_usa_cross_pacific_alliance
 	}
 
 
-add_namespace = new_usa_protect_the_pacific
-# USA_protect_the_pacific
+ add_namespace = new_usa_protect_the_pacific
+ # USA_protect_the_pacific
 	country_event = { # initial event for requesting mil and docking access
 		id = new_usa_protect_the_pacific.1
 		title = new_usa_protect_the_pacific.1.t
@@ -6938,8 +6938,8 @@ add_namespace = new_usa_protect_the_pacific
 	}
 
 
-add_namespace = new_usa_the_firestar_project
-# USA_the_firestar_project
+ add_namespace = new_usa_the_firestar_project
+ # USA_the_firestar_project
 	country_event = { # initial event for offering military aid
 		id = new_usa_the_firestar_project.1
 		title = new_usa_the_firestar_project.1.t
@@ -7056,8 +7056,8 @@ add_namespace = new_usa_the_firestar_project
 
 
 
-add_namespace = new_usa_alliance_with_a_united_china
-# USA_alliance_with_a_united_china
+ add_namespace = new_usa_alliance_with_a_united_china
+ # USA_alliance_with_a_united_china
 	country_event = { # initial event for offering alliance
 		id = new_usa_alliance_with_a_united_china.1
 		title = new_usa_alliance_with_a_united_china.1.t
@@ -7195,8 +7195,8 @@ add_namespace = new_usa_alliance_with_a_united_china
 
 
 
-add_namespace = new_usa_promote_peace
-# USA_promote_peace
+ add_namespace = new_usa_promote_peace
+ # USA_promote_peace
 	country_event = { # initial event for holding to peace
 		id = new_usa_promote_peace.1
 		title = new_usa_promote_peace.1.t
@@ -7294,8 +7294,8 @@ add_namespace = new_usa_promote_peace
 
 
 
-add_namespace = new_usa_overwhelming_material_support
-# USA_overwhelming_material_support
+ add_namespace = new_usa_overwhelming_material_support
+ # USA_overwhelming_material_support
 	country_event = { # initial event
 		id = new_usa_overwhelming_material_support.1
 		title = new_usa_overwhelming_material_support.1.t
@@ -7386,8 +7386,8 @@ add_namespace = new_usa_overwhelming_material_support
 		}
 	}
 
-add_namespace = new_usa_war_is_business
-# USA_war_is_business
+ add_namespace = new_usa_war_is_business
+ # USA_war_is_business
 	country_event = { # initial event
 		id = new_usa_war_is_business.1
 		title = new_usa_war_is_business.1.t

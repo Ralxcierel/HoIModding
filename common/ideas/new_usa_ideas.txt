@@ -5075,6 +5075,179 @@ ideas = {
             }
         }
 
+     # AMERICAN NATIONALIST
+        
+        usa_crisis_of_dependency_ti = { # Crisis of Dependency Timed Idea
+            picture = anti_soviet_pact
+
+            allowed = {
+            }
+
+            available = {
+
+            }
+
+            cancel = {
+            }
+
+            allowed_civil_war = {
+            }
+
+            modifier = {
+                political_power_gain = -0.05
+                production_speed_buildings_factor = 0.10
+            }
+        }
+
+        usa_invest_in_infrastructure_ti = { # Invest in Infrastructure Timed Idea
+            picture = generic_build_infrastructure
+
+            allowed = {
+            }
+
+            available = {
+
+            }
+
+            cancel = {
+            }
+
+            allowed_civil_war = {
+            }
+
+            modifier = {
+                production_speed_buildings_factor = 0.05
+                production_speed_infrastructure_factor = 0.15
+                consumer_goods_factor = 0.05
+            }
+        }
+
+        usa_reinforce_interstate_routes_ti = { # Reinforce Interstate Routes Timed Idea
+            picture = ARG_invest_in_roads
+
+            allowed = {
+            }
+
+            available = {
+
+            }
+
+            cancel = {
+            }
+
+            allowed_civil_war = {
+            }
+
+            modifier = {
+                production_speed_infrastructure_factor = 0.20
+                production_speed_rail_way_factor = 0.20
+                production_speed_supply_node_factor = 0.20
+            }
+        }
+
+        usa_grange_auxiliary_corps_idea = { # Grange Auxiliary Corps Idea
+            picture = fra_deluge
+
+            allowed = {
+            }
+
+            available = {
+
+            }
+
+            cancel = {
+            }
+
+            allowed_civil_war = {
+            }
+
+            modifier = {
+                political_power_factor = -0.05
+                industry_free_repair_factor = 0.30
+                industry_repair_factor = 0.30
+            }
+        }
+
+        usa_finance_new_mines_and_refineries_ti = { # Finance New Mines and Refineries Timed Idea
+            picture = ARG_resource_extration_focus
+
+            allowed = {
+            }
+
+            available = {
+
+            }
+
+            cancel = {
+            }
+
+            allowed_civil_war = {
+            }
+
+            research_bonus = {
+                excavation_tech = 0.05
+                synth_resources = 0.05
+            }
+
+            modifier = {
+                production_speed_synthetic_refinery_factor = 0.10
+                production_speed_infrastructure_factor = 0.05
+                consumer_goods_factor = 0.05
+            }
+        }
+
+        usa_banner_clubs_ti = { # Banner Clubs Timed Idea
+            picture = ARG_social_welfare_fund_ns
+
+            allowed = {
+            }
+
+            available = {
+            }
+
+            cancel = {
+            }
+
+            allowed_civil_war = {
+            }
+
+            modifier = {
+                political_power_factor = 0.05
+                stability_weekly_factor = 0.003
+                drift_defence_factor = -0.50
+                monthly_population = 0.15
+            }
+        }
+
+        usa_golden_west_idea = { # Golden West Idea
+            picture = AUS_phonix_insurance_variant
+
+            allowed = {
+            }
+
+            available = {
+            }
+
+            cancel = {
+            }
+
+            allowed_civil_war = {
+            }
+
+            modifier = {
+                conscription_factor = 0.10
+                resistance_target = -0.15
+                operative_slot = 1
+                fascism_drift = 0.05
+                resistance_activity = -0.25
+                stability_factor = 0.05
+                war_stability_factor = 0.05
+                #research_speed_factor = 0.05
+                war_support_factor = 0.05
+                compliance_growth = 0.01
+                army_core_defence_factor = 0.05
+            }
+        }
     }
 
     hidden_ideas = {
@@ -5611,7 +5784,7 @@ ideas = {
     }
 
     industrial_concern = {
-        international_development_company = { # Not available to National Communist
+        international_development_company = { # Only available to Democratic
 			picture = generic_improved_industries
 
 			allowed = {
@@ -5620,7 +5793,7 @@ ideas = {
 
 			visible = {
                 NOT = {
-                    has_completed_focus = USA_an_american_five_year_plan
+                    has_taken_core_path_non_democratic = yes
                 }
 				NOT = {
 					has_completed_focus = USA_spread_american_ideals
@@ -5639,8 +5812,8 @@ ideas = {
 				base = 1
 			}
 		
-			traits = { colonial_investments_company } 
-            #traits = {  territorial_investments_company } 
+			#traits = { colonial_investments_company } 
+            traits = {  usa_territorial_investments_company } 
 
 			modifier = {
 				non_core_manpower = 0.01
@@ -5672,7 +5845,7 @@ ideas = {
 				base = 1
 			}
 		
-			traits = { colonial_investments_company } 
+			traits = { usa_territorial_investments_company } 
 
 			modifier = {
 				non_core_manpower = 0.03
@@ -5705,7 +5878,7 @@ ideas = {
 				base = 1
 			}
 		
-			traits = { colonial_investments_company } 
+			traits = { usa_territorial_investments_company } 
 
 			modifier = {
 				non_core_manpower = 0.01
@@ -5713,6 +5886,190 @@ ideas = {
                 production_speed_buildings_factor = 0.05
 				resistance_target = -0.15
 				production_speed_infrastructure_factor = 0.05
+			}
+		}
+
+        FREE_federal_industry_trust = { # Only available to Nationalist
+			picture = usa_federal_recovery_emergency_enterprise
+
+			allowed = {
+				original_tag = USA
+			}
+
+			visible = {
+                #always = yes
+                has_completed_focus = USA_federal_recovery_emergency_enterprise
+                not = {
+                    has_completed_focus = USA_FREE_print_money_to_fund_FREE
+                    has_completed_focus = USA_FREE_raise_taxes_for_reinvestment
+                }
+			}
+
+			available = {
+				has_completed_focus = USA_FREE_department_expansion
+			}
+
+			research_bonus = {
+			}
+
+			ai_will_do = {
+				base = 1
+			}
+		
+			traits = { usa_free_federal_industry_trust } 
+            #traits = {  territorial_investments_company } 
+
+            on_add = {
+                custom_effect_tooltip = FREE_federal_industry_trust_add_tt
+                hidden_effect = {
+                    add_to_variable = { USA_FREE_civ_points = 6 }
+                    add_to_variable = { USA_FREE_mil_points = 6 }
+                    add_to_variable = { USA_FREE_arm_points = 6 }
+                    add_to_variable = { USA_FREE_nav_points = 6 }
+                    add_to_variable = { USA_FREE_air_points = 6 }
+                    add_to_variable = { USA_FREE_sci_points = 6 }
+                    USA_AN_check_FREE_all = yes
+                }
+            }
+            on_remove = {
+                custom_effect_tooltip = FREE_federal_industry_trust_remove_tt
+                hidden_effect = {
+                    add_to_variable = { USA_FREE_civ_points = -6 }
+                    add_to_variable = { USA_FREE_mil_points = -6 }
+                    add_to_variable = { USA_FREE_arm_points = -6 }
+                    add_to_variable = { USA_FREE_nav_points = -6 }
+                    add_to_variable = { USA_FREE_air_points = -6 }
+                    add_to_variable = { USA_FREE_sci_points = -6 }
+                    USA_AN_check_FREE_all = yes
+                }
+            }
+			modifier = {
+                consumer_goods_factor = 0.03
+				local_resources_factor = 0.03
+				production_speed_infrastructure_factor = 0.03
+                production_factory_efficiency_gain_factor = 0.03
+                political_power_factor = -0.08
+                
+			}
+		}
+        FREE_federal_industry_trust_2 = {
+			picture = usa_federal_recovery_emergency_enterprise
+
+			allowed = {
+				original_tag = USA
+			}
+
+			visible = {
+                or = {
+                    has_completed_focus = USA_FREE_raise_taxes_for_reinvestment
+                    has_completed_focus = USA_FREE_print_money_to_fund_FREE
+                }
+                not = { has_completed_focus = USA_FREE_undersecretariat_for_sectoral_administration }
+			}
+
+			available = {
+				has_completed_focus = USA_FREE_department_expansion
+			}
+
+			research_bonus = {
+			}
+
+			ai_will_do = {
+				base = 1
+			}
+		
+			traits = { usa_free_federal_industry_trust } 
+            #traits = {  territorial_investments_company } 
+
+            on_add = {
+                custom_effect_tooltip = FREE_federal_industry_trust_2_add_tt
+                hidden_effect = {
+                    add_to_variable = { USA_FREE_civ_points = 9 }
+                    add_to_variable = { USA_FREE_mil_points = 9 }
+                    add_to_variable = { USA_FREE_arm_points = 9 }
+                    add_to_variable = { USA_FREE_nav_points = 9 }
+                    add_to_variable = { USA_FREE_air_points = 9 }
+                    add_to_variable = { USA_FREE_sci_points = 9 }
+                    USA_AN_check_FREE_all = yes
+                }
+            }
+            on_remove = {
+                custom_effect_tooltip = FREE_federal_industry_trust_2_remove_tt
+                hidden_effect = {
+                    add_to_variable = { USA_FREE_civ_points = -9 }
+                    add_to_variable = { USA_FREE_mil_points = -9 }
+                    add_to_variable = { USA_FREE_arm_points = -9 }
+                    add_to_variable = { USA_FREE_nav_points = -9 }
+                    add_to_variable = { USA_FREE_air_points = -9 }
+                    add_to_variable = { USA_FREE_sci_points = -9 }
+                    USA_AN_check_FREE_all = yes
+                }
+            }
+			modifier = {
+                consumer_goods_factor = 0.03
+				local_resources_factor = 0.03
+				production_speed_infrastructure_factor = 0.03
+                production_factory_efficiency_gain_factor = 0.03
+                political_power_factor = -0.10
+                
+			}
+		}
+        FREE_federal_industry_trust_3 = {
+			picture = usa_federal_recovery_emergency_enterprise
+
+			allowed = {
+				original_tag = USA
+			}
+
+			visible = {
+                has_completed_focus = USA_FREE_undersecretariat_for_sectoral_administration
+			}
+
+			available = {
+				has_completed_focus = USA_FREE_department_expansion
+			}
+
+			research_bonus = {
+			}
+
+			ai_will_do = {
+				base = 1
+			}
+		
+			traits = { usa_free_federal_industry_trust } 
+            #traits = {  territorial_investments_company } 
+
+            on_add = {
+                custom_effect_tooltip = FREE_federal_industry_trust_3_add_tt
+                hidden_effect = {
+                    add_to_variable = { USA_FREE_civ_points = 12 }
+                    add_to_variable = { USA_FREE_mil_points = 12 }
+                    add_to_variable = { USA_FREE_arm_points = 12 }
+                    add_to_variable = { USA_FREE_nav_points = 12 }
+                    add_to_variable = { USA_FREE_air_points = 12 }
+                    add_to_variable = { USA_FREE_sci_points = 12 }
+                    USA_AN_check_FREE_all = yes
+                }
+            }
+            on_remove = {
+                custom_effect_tooltip = FREE_federal_industry_trust_3_remove_tt
+                hidden_effect = {
+                    add_to_variable = { USA_FREE_civ_points = -12 }
+                    add_to_variable = { USA_FREE_mil_points = -12 }
+                    add_to_variable = { USA_FREE_arm_points = -12 }
+                    add_to_variable = { USA_FREE_nav_points = -12 }
+                    add_to_variable = { USA_FREE_air_points = -12 }
+                    add_to_variable = { USA_FREE_sci_points = -12 }
+                    USA_AN_check_FREE_all = yes
+                }
+            }
+			modifier = {
+                consumer_goods_factor = 0.05
+				local_resources_factor = 0.05
+				production_speed_infrastructure_factor = 0.05
+                production_factory_efficiency_gain_factor = 0.05
+                political_power_factor = -0.12
+                
 			}
 		}
     }

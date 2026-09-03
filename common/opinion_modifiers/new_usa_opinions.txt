@@ -304,4 +304,14 @@ opinion_modifiers = {
 	usa_denounce_capitalism_bad_modifier = {
 		value = -50
 	}
+ # AMERICAN NATIONALIST
+	usa_bay_otzen_dem_modifier = {
+		value = -30
+		#decay = 0.125
+	}
+	usa_bay_otzen_not_dem_modifier = {
+		value = -15
+		#decay = 0.125
+	}
+
 }	

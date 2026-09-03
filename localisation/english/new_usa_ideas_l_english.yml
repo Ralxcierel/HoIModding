@@ -110,6 +110,9 @@
   usa_conservative_resistance_idea_5_desc: "Every §Y210 days§!, the momentum of the conservative resistance against socialism will §Glessen§!."
   usa_red_july_idea: "Red July"
 
+  usa_grange_auxiliary_corps_idea: "Grange Auxiliary Corps"
+  usa_golden_west_idea: "Golden West"
+
  # TIMED IDEAS
   usa_joint_wargaming_ti: "Joint Wargaming"
   usa_public_works_projects_ti: "Public Works Projects"
@@ -209,6 +212,11 @@
   usa_defend_our_homeland_ti: "Defend Our Homeland!"
   usa_defend_our_homeland_ti_2: "Defend Our Homeland!"
   usa_defend_our_homeland_ti_3: "Defend Our Homeland!"
+  usa_crisis_of_dependency_ti: "Crisis of Dependency"
+  usa_invest_in_infrastructure_ti: "Invest in Infrastructure"
+  usa_reinforce_interstate_routes_ti: "Reinforce Interstate Routes"
+  usa_finance_new_mines_and_refineries_ti: "Finance New Mines and Refineries"
+  usa_banner_clubs_ti: "Banner Clubs"
 
  # Federal Recovery Emegency Enterprise (FREE)
   NL_2s_tt: "\n  "
@@ -420,6 +428,9 @@
   usa_denounce_capitalism_good_modifier: "Denounced Capitalism"
   usa_denounce_capitalism_bad_modifier: "Denounced Capitalism"
 
+  usa_bay_otzen_dem_modifier: "Bay-Otzen Plan"
+  usa_bay_otzen_not_dem_modifier: "Bay-Otzen Plan"
+
  # FLAGS & TRIGGERS
   spurred_growth_cooldown_short_flag: " The economy hasn't been recovering for over half a year"
   spurred_growth_cooldown_long_flag: " The economy hasn't been recovering for more than a year"
@@ -479,10 +490,6 @@
   USA_red_new_deal_cant_do_tt: "This focus will complete §Gautomatically§! once at least §Ytwo prerequisite§! focuses are §Ycompleted§!."
   USA_engines_of_industry_in_progress_tt: "The economy is beginning to grow again, with the engines of industry spinning once more. \nProgress: §Y$FLAG_DAYS$§!/$TIME_DAYS$ days"
   USA_engines_of_industry_cant_do_tt: "This focus will complete §Gautomatically§! once at least §Ytwo prerequisite§! focuses are §Ycompleted§!."
-  USA_stars_on_the_horizon_in_progress_tt: "The nation is charting its new course. \nProgress: §Y$FLAG_DAYS$§!/$TIME_DAYS$ days"
-  USA_stars_on_the_horizon_cant_do_tt: "This focus will complete §Gautomatically§! once its §Yprerequisite§! focus is §Ycompleted§!."
-  USA_the_eagle_lifts_its_wings_in_progress_tt: "The nation is rallying behind its new direction. \nProgress: §Y$FLAG_DAYS$§!/$TIME_DAYS$ days"
-  USA_the_eagle_lifts_its_wings_cant_do_tt: "This focus will complete §Gautomatically§! once its §Yprerequisite§! focus is §Ycompleted§!."
 
   reduce_focus_time_generic_tt: "The §Ytime§! to complete this focus can be §Greduced§! by §Y$TEMP_DAYS$§! days by completing the §Y$TEMP_FOCUS$§! focus."
   reduce_focus_time_must_be_democratic_tt: "The §Ytime§! to complete this focus can be §Greduced§! by taking a focus in the §R$TEMP_PATH$§! focus tree."
@@ -517,8 +524,13 @@
   USA_red_july_cant_do_tt: "This focus will complete §Gautomatically§! once the nation is further §Yready to heal§!."
   USA_red_july_cant_do_exclusive_tt: "A different path has been committed to, so this focus is unavailable."
   USA_NC_civil_war_is_over: " The Nationalist Communist civil war is over"
-  USA_southern_crisis_in_progress_tt: "The Southern Crisis is currently running its course. \nProgress: §Y$FLAG_DAYS$§!/$TIME_DAYS$ days"
-  USA_southern_crisis_cant_do_tt: "This focus will complete §Gautomatically§! once the Southern Crisis has progressed far enough."
+
+  USA_stars_on_the_horizon_in_progress_tt: "The nation is charting its new course. \nProgress: §Y$FLAG_DAYS$§!/$TIME_DAYS$ days"
+  USA_stars_on_the_horizon_cant_do_tt: "This focus will complete §Gautomatically§! once either §Y$USA_invest_in_infrastructure$§! or §Y$USA_ohio_mechanical_complex$§! is §Ycompleted§!."
+  USA_the_eagle_lifts_its_wings_in_progress_tt: "The nation is charting its new course. \nProgress: §Y$FLAG_DAYS$§!/$TIME_DAYS$ days"
+  USA_the_eagle_lifts_its_wings_cant_do_tt: "This focus will complete §Gautomatically§! once its §Yprerequisite§! focus is §Ycompleted§!."
+  USA_southern_crisis_in_progress_tt: "The American people are striving forward. \nProgress: §Y$FLAG_DAYS$§!/$TIME_DAYS$ days"
+  USA_southern_crisis_cant_do_tt: "This focus will complete §Gautomatically§! once the American people are §Yready to venture further§!."
   USA_southern_crisis_cant_do_exclusive_tt: "A different path has been committed to, so this focus is unavailable."
   SC_new_america_chosen_flag: "Chose to forge a §YNew America§!"
   SC_new_frontier_chosen_flag: "Chose to venture into a §YNew Frontier§!"
@@ -531,6 +543,7 @@
   FOCUS_FILTER_FOCUS_TIME_REDUCTION: "Focus Time Reduction"
   FOCUS_FILTER_HOMELAND_DEFENSE: "Homeland Defense"
   FOCUS_FILTER_WARGOALS: "Wargoals"
+  FOCUS_FILTER_FREE: "FREE"
 
  # FOCUS TREE SHORTCUTS
   USA_path_shortcut_industry: "Industry"
@@ -570,7 +583,7 @@
   starting_path_ideology_tt: "£GFX_usa_star_overlay_3_texticon This §Grecovery path§! will unlock the §Y$TEMP_PATH$ focus trees§!."
   #starting_path_ideology_tt: "This §Grecovery path§! will unlock the §Y$TEMP_PATH$ focus trees§!.\n\n - §RAt present, only democratic paths are available.§!"
    ideo_path_democratic_tt: "democratic"
-   ideo_path_nationalist_tt: "nationalist"
+   ideo_path_nationalist_tt: "American nationalist"
    ideo_path_nationalist_communist_tt: "nationalist communist"
    ideo_path_socialist_tt: "communist"
    ideo_path_internationalist_tt: "internationalist"
@@ -881,7 +894,10 @@
   USA_national_security_initiative_bop_mod: "$USA_national_security_initiative$"
   USA_interstate_highways_bop_mod: "$USA_interstate_highways$"
   USA_homeland_defense_emergency_act_bop_mod: "$USA_homeland_defense_emergency_act_focus$"
-  should_add_defense_readiness_tt: "If the §Y$USA_militia_readiness_act$§! focus has already been taken, then §Y$usa_defense_readiness_bop$§! will be §Gimproved§!."
+  #should_add_defense_readiness_tt: "If the §Y$USA_militia_readiness_act$§! focus has already been taken, then §Y$usa_defense_readiness_bop$§! will be §Gimproved§!."
+  should_add_defense_readiness_democratic_tt: "If the §Y$USA_militia_readiness_act$§! focus has already been taken, then §Y$usa_defense_readiness_bop$§! will be §Gimproved§!."
+  should_add_defense_readiness_communist_tt: "If the §Y$USA_protecting_our_peace$§! focus has already been taken, then §Y$usa_defense_readiness_bop$§! will be §Gimproved§!."
+  should_add_defense_readiness_nationalist_tt: "If the §Y$USA_county_militias$§! focus has already been taken, then §Y$usa_defense_readiness_bop$§! will be §Gimproved§!."
   USA_coordinate_milita_defenses_bop_mod: "$USA_coordinate_militia_defenses$"
   USA_evacuate_civilians_and_industry_bop_mod: "$USA_evacuate_civilians_and_industry$"
   USA_regional_strategic_commands_bop_mod: "$USA_regional_strategic_commands$"
@@ -906,8 +922,20 @@
   international_development_company_spread: "International Development Company"
   international_development_company_administrations: "International Development Company"
 
-  territorial_investments_company: "Territorial Investments Company"
+  usa_territorial_investments_company: "Territorial Investments Company"
+  #usa_territorial_investments_company: "Territorial Investme"
   western_electric_organization: "Western Electric"
+
+  FREE_federal_industry_trust: "FREE"
+  FREE_federal_industry_trust_2: "FREE"
+  FREE_federal_industry_trust_3: "FREE-USA"
+  usa_free_federal_industry_trust: "Federal Industry Trust"
+  FREE_federal_industry_trust_add_tt: "§YEffects when added:§!\nAll §9Sectors§! §Greceive§! a small amount of funding §Y(+6)§!."
+  FREE_federal_industry_trust_remove_tt: "All §9Sectors§! §Rlose§! a small amount of funding §Y(-6)§!.\n"
+  FREE_federal_industry_trust_2_add_tt: "§YEffects when added:§!\nAll §9Sectors§! §Greceive§! a small amount of funding §Y(+9)§!."
+  FREE_federal_industry_trust_2_remove_tt: "All §9Sectors§! §Rlose§! a small amount of funding §Y(-9)§!.\n"
+  FREE_federal_industry_trust_3_add_tt: "§YEffects when added:§!\nAll §9Sectors§! §Greceive§! a small amount of funding §Y(+12)§!."
+  FREE_federal_industry_trust_3_remove_tt: "All §9Sectors§! §Rlose§! a small amount of funding §Y(-12)§!.\n"
 
  # ECONOMIES
   the_eagles_might_economy: "The Eagle's Might"

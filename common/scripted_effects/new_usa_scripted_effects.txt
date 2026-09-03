@@ -21,7 +21,7 @@ USA_defense_readiness_boost_small = {
 		}
 	}
 	else = {
-		custom_effect_tooltip = should_add_defense_readiness_tt
+		USA_add_def_readiness_check = yes
 	}
 }
 USA_defense_readiness_boost_medium = {
@@ -35,7 +35,7 @@ USA_defense_readiness_boost_medium = {
 		}
 	}
 	else = {
-		custom_effect_tooltip = should_add_defense_readiness_tt
+		USA_add_def_readiness_check = yes
 	}
 }
 USA_defense_readiness_boost_large = {
@@ -49,7 +49,7 @@ USA_defense_readiness_boost_large = {
 		}
 	}
 	else = {
-		custom_effect_tooltip = should_add_defense_readiness_tt
+		USA_add_def_readiness_check = yes
 	}
 }
 USA_defense_readiness_boost_huge = {
@@ -63,7 +63,7 @@ USA_defense_readiness_boost_huge = {
 		}
 	}
 	else = {
-		custom_effect_tooltip = should_add_defense_readiness_tt
+		USA_add_def_readiness_check = yes
 	}
 }
 USA_defense_readiness_boost_humungous = {
@@ -77,7 +77,7 @@ USA_defense_readiness_boost_humungous = {
 		}
 	}
 	else = {
-		custom_effect_tooltip = should_add_defense_readiness_tt
+		USA_add_def_readiness_check = yes
 	}
 }
 
@@ -120,6 +120,32 @@ USA_mil_spending_increase_huge = {
 	}
 	skip_line_tt = yes
 	USA_defense_readiness_boost_huge = yes
+}
+
+USA_add_def_readiness_check = {
+	if = {
+		limit = {
+			OR = {
+				has_taken_core_path_democratic = yes
+				has_taken_core_path_non_democratic = no
+			}
+		}
+		custom_effect_tooltip = should_add_defense_readiness_democratic_tt
+	}
+	else_if = {
+		limit = {
+			OR = {
+				has_taken_core_path_communist = yes
+			}
+		}
+		custom_effect_tooltip = should_add_defense_readiness_communist_tt
+	}
+	else_if = {
+		limit = {
+			has_taken_core_path_nationalist = yes
+		}
+		custom_effect_tooltip = should_add_defense_readiness_nationalist_tt
+	}
 }
 
 USA_victory_act_opinions = {

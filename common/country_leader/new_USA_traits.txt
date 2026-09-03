@@ -147,5 +147,17 @@ leader_traits = {
 		command_cap_increase = @tier2_cp_cap_increase
 		command_power = @tier2_cp_cost
 	}
+ # Industrial Concerns
+	usa_territorial_investments_company = {
+		random = no
+	}
+
+	usa_free_federal_industry_trust = {
+		random = no
+		#sprite = 3
+
+		#command_cap_increase = @tier2_cp_cap_increase
+		#command_power = @tier2_cp_cost
+	}
 
 }
