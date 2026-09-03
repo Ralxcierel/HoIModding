@@ -972,6 +972,7 @@
   usa_inlay_window_CRB_tt_0: "§GConservative Resistance§!"
 
  # PROGRAMMING TOOLTIPS
+  # Triggers
   nav_caps_ready: "Checks for naval paths being completed"
   mios_chosen_ready: "Checks if enough above focuses have been taken"
   usa_south_american_protectorate_req: "Checks if any south american puppets are had"
@@ -998,7 +999,23 @@
   low_num_states_evac: "Checks if a low number of states have already been evacuated"
   medium_num_states_evac: "Checks if a medium number of states have already been evacuated"
   high_num_states_evac: "Checks if a high number of states have already been evacuated"
+  has_taken_core_path_democratic: "Checks if one of the core democratic paths has been taken."
+  has_taken_core_path_communist: "Checks if one of the core communist paths has been taken."
+  has_taken_core_path_nationalist: "Checks if one of the core nationalist paths has been taken."
+  has_taken_core_path_non_democratic: "Checks if a non-democratic path has been taken."
+  has_taken_core_path_non_communist: "Checks if a non-communist path has been taken."
+  has_taken_core_path_non_nationalist: "Checks if a non-nationalist path has been taken."
+  does_not_have_conservative_resistance: "Checks if the 'conservative resistance' modifier is inactive."
+  has_conservative_resistance: "Checks if the 'conservative resistance' modifier is active."
+  USA_has_completed_homeland_defense_emergency_act_focus_equivalent: "Checks if a branch equivalent of the §YHDEA Focus§! has been taken."
+  USA_AN_has_FREE_civ_si: "Checks if the FREE civilian industry sub idea is active."
+  USA_AN_has_FREE_mil_si: "Checks if the FREE military industry sub idea is active."
+  USA_AN_has_FREE_arm_si: "Checks if the FREE army sub idea is active."
+  USA_AN_has_FREE_nav_si: "Checks if the FREE navy sub idea is active."
+  USA_AN_has_FREE_air_si: "Checks if the FREE air sub idea is active."
+  USA_AN_has_FREE_sci_si: "Checks if the FREE science sub idea is active."
 
+  # Effects
   run_debug_event: "Triggers a debug event"
   USA_defense_readiness_boost_small: "Grants a small bonus to defense readiness if that BOP is active. If it's not active, then it says to do so."
   USA_defense_readiness_boost_medium: "Grants a medium bonus to defense readiness if that BOP is active. If it's not active, then it says to do so."
@@ -1032,13 +1049,18 @@
   USA_spawn_2A_militia: "Spawns a 2A militia unit."
   USA_NC_increase_conservative_resistance: "Increases the 'conservative resistance' idea up 1 notch if active. If at 5, starts a civil war."
   USA_NC_decrease_conservative_resistance: "Decreases the 'conservative resistance' idea down 1 notch if active. If at 1, removes the idea."
-  usa_nc_homeless_relief_or_stand_up_flag: "Checks if one of the focuses $USA_homeless_relief_funds$ or $USA_stand_up_for_the_unemployed$ has been taken. If so, the other one doesn't decrease conservative resistance (only one of them does)."
-  usa_nc_bottom_branch_flag: "Checks if one of the focuses $USA_protect_productive_entrepreneurs$, $USA_american_worker_guilds$, or $USA_federal_honor_programs$ has been taken. If so, the other ones don't decrease conservative resistance (only one of them does)."
-  USA_NC_civil_war_started_flag: "Checks whether or not a nationalist communist civil war has already started or been started."
+  USA_NC_remove_conservative_resistance: "Removes any active 'conservative resistance' idea."
   USA_start_NC_civil_war: "Starts a nationalist communist civil war. If the flag is already present, does nothing. If 'conservative resistance' is active, removes it. Checks communism support and sets global flag accordingly for the war."
+  USA_NC_apply_surprise_ti: "Adds the appropriate 'taken by surprise' timed idea to the opposite side in the NC civil war."
   USA_AN_check_FREE_civ_score: "If FREE civ is active, sets the spirit to its correct points value type."
   USA_AN_check_FREE_mil_score: "If FREE mil is active, sets the spirit to its correct points value type."
   USA_AN_check_FREE_arm_score: "If FREE arm is active, sets the spirit to its correct points value type."
   USA_AN_check_FREE_nav_score: "If FREE nav is active, sets the spirit to its correct points value type."
   USA_AN_check_FREE_air_score: "If FREE air is active, sets the spirit to its correct points value type."
   USA_AN_check_FREE_sci_score: "If FREE sci is active, sets the spirit to its correct points value type."
+  USA_remove_all_BOP_modifiers: "Removes all currently active §YBalance of Power Modifiers§! for the §YDefense Readiness§! BOP (#1-18)."
+
+  # Flags
+  usa_nc_homeless_relief_or_stand_up_flag: "Checks if one of the focuses $USA_homeless_relief_funds$ or $USA_stand_up_for_the_unemployed$ has been taken. If so, the other one doesn't decrease conservative resistance (only one of them does)."
+  usa_nc_bottom_branch_flag: "Checks if one of the focuses $USA_protect_productive_entrepreneurs$, $USA_american_worker_guilds$, or $USA_federal_honor_programs$ has been taken. If so, the other ones don't decrease conservative resistance (only one of them does)."
+  USA_NC_civil_war_started_flag: "Checks whether or not a nationalist communist civil war has already started or been started."

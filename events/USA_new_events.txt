@@ -62,8 +62,9 @@
  @defense_symposium_timer =				105 # days
 ##########################################################
 
-add_namespace = error_debug
-country_event = { # Error debug
+# Debug events
+ add_namespace = error_debug
+ country_event = { # Error debug
 	id = error_debug.1
 	title = error_debug.1.t
 	desc = error_debug.1.desc
@@ -72,9 +73,9 @@ country_event = { # Error debug
 	option = { # Oh no
 		name = error_debug.2.a
 	}
-}
-add_namespace = debug
-country_event = { # Error debug
+ }
+ add_namespace = debug
+ country_event = { # Error debug
 	id = debug.1
 	title = debug.1.t
 	desc = debug.1.desc
@@ -83,8 +84,8 @@ country_event = { # Error debug
 	option = { # Gotcha
 		name = debug.1.a
 	}
-}
-news_event = { # Demand overlordship transferring debug
+ }
+ news_event = { # Demand overlordship transferring debug
 	id = debug.2
 	title = debug.2.t
 	desc = debug.2.desc
@@ -95,7 +96,8 @@ news_event = { # Demand overlordship transferring debug
 	option = { # Gotcha
 		name = debug.2.a
 	}
-}
+ }
+#
 
 ###########################################################
 # General Auto-Focuses

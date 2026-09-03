@@ -702,8 +702,8 @@ set_america_being_invaded = {
 	hidden_effect = { set_country_flag = america_is_being_invaded_flag set_country_flag = USA_has_completed_homeland_defense_emergency_act_focus_equivalent country_event = new_usa_mainland_invasion.1 }
 }
 
-# FREE
-USA_AN_FREE_remove_civ_si = {
+### FREE
+ USA_AN_FREE_remove_civ_si = {
 	hidden_effect = {
 		remove_ideas = {
 			usa_free_civilian_industry_si_-3
@@ -717,8 +717,8 @@ USA_AN_FREE_remove_civ_si = {
 			usa_free_civilian_industry_si_5
 		}
 	}
-}
-USA_AN_check_FREE_civ_score = {
+ }
+ USA_AN_check_FREE_civ_score = {
 	if = {
 		limit = { USA_AN_has_FREE_civ_si = yes }
 		if = { # -30 -> -21 (-3)
@@ -848,9 +848,9 @@ USA_AN_check_FREE_civ_score = {
 			}
 		}
 	}
-}
+ }
 
-USA_AN_FREE_remove_mil_si = {
+ USA_AN_FREE_remove_mil_si = {
 	hidden_effect = {
 		remove_ideas = {
 			usa_free_military_industry_si_-3
@@ -864,8 +864,8 @@ USA_AN_FREE_remove_mil_si = {
 			usa_free_military_industry_si_5
 		}		
 	}
-}
-USA_AN_check_FREE_mil_score = {
+ }
+ USA_AN_check_FREE_mil_score = {
 	if = {
 		limit = { USA_AN_has_FREE_mil_si = yes }
 		if = { # -30 -> -21 (-3)
@@ -995,9 +995,9 @@ USA_AN_check_FREE_mil_score = {
 			}
 		}
 	}
-}
+ }
 
-USA_AN_FREE_remove_arm_si = {
+ USA_AN_FREE_remove_arm_si = {
 	hidden_effect = {
 		remove_ideas = {
 			usa_free_army_si_-3
@@ -1011,8 +1011,8 @@ USA_AN_FREE_remove_arm_si = {
 			usa_free_army_si_5
 		}
 	}
-}
-USA_AN_check_FREE_arm_score = {
+ }
+ USA_AN_check_FREE_arm_score = {
 	if = {
 		limit = { USA_AN_has_FREE_arm_si = yes }
 		if = { # -30 -> -21 (-3)
@@ -1142,9 +1142,9 @@ USA_AN_check_FREE_arm_score = {
 			}
 		}
 	}
-}
+ }
 
-USA_AN_FREE_remove_nav_si = {
+ USA_AN_FREE_remove_nav_si = {
 	hidden_effect = {
 		remove_ideas = {
 			usa_free_navy_si_-3
@@ -1158,8 +1158,8 @@ USA_AN_FREE_remove_nav_si = {
 			usa_free_navy_si_5
 		}
 	}
-}
-USA_AN_check_FREE_nav_score = {
+ }
+ USA_AN_check_FREE_nav_score = {
 	if = {
 		limit = { USA_AN_has_FREE_nav_si = yes }
 		if = { # -30 -> -21 (-3)
@@ -1289,9 +1289,9 @@ USA_AN_check_FREE_nav_score = {
 			}
 		}
 	}
-}
+ }
 
-USA_AN_FREE_remove_air_si = {
+ USA_AN_FREE_remove_air_si = {
 	hidden_effect = {
 		remove_ideas = {
 			usa_free_air_si_-3
@@ -1305,8 +1305,8 @@ USA_AN_FREE_remove_air_si = {
 			usa_free_air_si_5
 		}
 	}
-}
-USA_AN_check_FREE_air_score = {
+ }
+ USA_AN_check_FREE_air_score = {
 	if = {
 		limit = { USA_AN_has_FREE_air_si = yes }
 		if = { # -30 -> -21 (-3)
@@ -1436,9 +1436,9 @@ USA_AN_check_FREE_air_score = {
 			}
 		}
 	}
-}
+ }
 
-USA_AN_FREE_remove_sci_si = {
+ USA_AN_FREE_remove_sci_si = {
 	hidden_effect = {
 		remove_ideas = {
 			usa_free_science_si_-3
@@ -1452,8 +1452,8 @@ USA_AN_FREE_remove_sci_si = {
 			usa_free_science_si_5
 		}
 	}
-}
-USA_AN_check_FREE_sci_score = {
+ }
+ USA_AN_check_FREE_sci_score = {
 	if = {
 		limit = { USA_AN_has_FREE_sci_si = yes }
 		if = { # -30 -> -21 (-3)
@@ -1583,42 +1583,42 @@ USA_AN_check_FREE_sci_score = {
 			}
 		}
 	}
-}
+ }
 
-USA_AN_check_FREE_all = {
+ USA_AN_check_FREE_all = {
 	USA_AN_check_FREE_civ_score = yes
 	USA_AN_check_FREE_mil_score = yes
 	USA_AN_check_FREE_arm_score = yes
 	USA_AN_check_FREE_nav_score = yes
 	USA_AN_check_FREE_air_score = yes
 	USA_AN_check_FREE_sci_score = yes
-}
-USA_AN_FREE_all_V = {
+ }
+ USA_AN_FREE_all_V = {
 	add_to_variable = { USA_FREE_civ_points = FREE_points_V }
 	add_to_variable = { USA_FREE_mil_points = FREE_points_V }
 	add_to_variable = { USA_FREE_arm_points = FREE_points_V }
 	add_to_variable = { USA_FREE_nav_points = FREE_points_V }
 	add_to_variable = { USA_FREE_air_points = FREE_points_V }
 	add_to_variable = { USA_FREE_sci_points = FREE_points_V }
-}
-USA_AN_FREE_all_VV = {
+ }
+ USA_AN_FREE_all_VV = {
 	add_to_variable = { USA_FREE_civ_points = FREE_points_VV }
 	add_to_variable = { USA_FREE_mil_points = FREE_points_VV }
 	add_to_variable = { USA_FREE_arm_points = FREE_points_VV }
 	add_to_variable = { USA_FREE_nav_points = FREE_points_VV }
 	add_to_variable = { USA_FREE_air_points = FREE_points_VV }
 	add_to_variable = { USA_FREE_sci_points = FREE_points_VV }
-}
-USA_AN_FREE_all_VVV = {
+ }
+ USA_AN_FREE_all_VVV = {
 	add_to_variable = { USA_FREE_civ_points = FREE_points_VVV }
 	add_to_variable = { USA_FREE_mil_points = FREE_points_VVV }
 	add_to_variable = { USA_FREE_arm_points = FREE_points_VVV }
 	add_to_variable = { USA_FREE_nav_points = FREE_points_VVV }
 	add_to_variable = { USA_FREE_air_points = FREE_points_VVV }
 	add_to_variable = { USA_FREE_sci_points = FREE_points_VVV }
-}
+ }
 
-USA_AN_FREE_civ_up_low = {
+ USA_AN_FREE_civ_up_low = {
 	#hidden_effect = {
 	if = {
 		limit = {
@@ -1638,8 +1638,8 @@ USA_AN_FREE_civ_up_low = {
 		
 	#}
 
-}
-USA_AN_FREE_civ_up_med = {
+ }
+ USA_AN_FREE_civ_up_med = {
 	if = {
 		limit = {
 			or = {
@@ -1654,8 +1654,8 @@ USA_AN_FREE_civ_up_med = {
 		USA_AN_check_FREE_all = yes
 		custom_override_tooltip = { tooltip = { localization_key = FREE_focus_loc_tt_AA LOC_TYPE = usa_free_civilian_industry_si_tt } }
 	}
-}
-USA_AN_FREE_civ_up_hih = {
+ }
+ USA_AN_FREE_civ_up_hih = {
 	if = {
 		limit = {
 			or = {
@@ -1670,9 +1670,9 @@ USA_AN_FREE_civ_up_hih = {
 		USA_AN_check_FREE_all = yes
 		custom_override_tooltip = { tooltip = { localization_key = FREE_focus_loc_tt_AAA LOC_TYPE = usa_free_civilian_industry_si_tt } }
 	}
-}
+ }
 
-USA_AN_FREE_mil_up_low = {
+ USA_AN_FREE_mil_up_low = {
 	if = {
 		limit = {
 			or = {
@@ -1688,8 +1688,8 @@ USA_AN_FREE_mil_up_low = {
 		USA_AN_check_FREE_all = yes
 		custom_override_tooltip = { tooltip = { localization_key = FREE_focus_loc_tt_A LOC_TYPE = usa_free_military_industry_si_tt } }
 	}
-}
-USA_AN_FREE_mil_up_med = {
+ }
+ USA_AN_FREE_mil_up_med = {
 	if = {
 		limit = {
 			or = {
@@ -1705,8 +1705,8 @@ USA_AN_FREE_mil_up_med = {
 		USA_AN_check_FREE_all = yes
 		custom_override_tooltip = { tooltip = { localization_key = FREE_focus_loc_tt_AA LOC_TYPE = usa_free_military_industry_si_tt } }
 	}
-}
-USA_AN_FREE_mil_up_hih = {
+ }
+ USA_AN_FREE_mil_up_hih = {
 	if = {
 		limit = {
 			or = {
@@ -1722,9 +1722,9 @@ USA_AN_FREE_mil_up_hih = {
 		USA_AN_check_FREE_all = yes
 		custom_override_tooltip = { tooltip = { localization_key = FREE_focus_loc_tt_AAA LOC_TYPE = usa_free_military_industry_si_tt } }
 	}
-}
+ }
 
-USA_AN_FREE_arm_up_low = {
+ USA_AN_FREE_arm_up_low = {
 	if = {
 		limit = {
 			or = {
@@ -1740,8 +1740,8 @@ USA_AN_FREE_arm_up_low = {
 		USA_AN_check_FREE_all = yes
 		custom_override_tooltip = { tooltip = { localization_key = FREE_focus_loc_tt_A LOC_TYPE = usa_free_army_si_tt } }
 	}
-}
-USA_AN_FREE_arm_up_med = {
+ }
+ USA_AN_FREE_arm_up_med = {
 	if = {
 		limit = {
 			or = {
@@ -1757,8 +1757,8 @@ USA_AN_FREE_arm_up_med = {
 		USA_AN_check_FREE_all = yes
 		custom_override_tooltip = { tooltip = { localization_key = FREE_focus_loc_tt_AA LOC_TYPE = usa_free_army_si_tt } }
 	}
-}
-USA_AN_FREE_arm_up_hih = {
+ }
+ USA_AN_FREE_arm_up_hih = {
 	if = {
 		limit = {
 			or = {
@@ -1774,9 +1774,9 @@ USA_AN_FREE_arm_up_hih = {
 		USA_AN_check_FREE_all = yes
 		custom_override_tooltip = { tooltip = { localization_key = FREE_focus_loc_tt_AAA LOC_TYPE = usa_free_army_si_tt } }
 	}
-}
+ }
 
-USA_AN_FREE_nav_up_low = {
+ USA_AN_FREE_nav_up_low = {
 	if = {
 		limit = {
 			or = {
@@ -1791,8 +1791,8 @@ USA_AN_FREE_nav_up_low = {
 		USA_AN_check_FREE_all = yes
 		custom_override_tooltip = { tooltip = { localization_key = FREE_focus_loc_tt_A LOC_TYPE = usa_free_navy_si_tt } }
 	}
-}
-USA_AN_FREE_nav_up_med = {
+ }
+ USA_AN_FREE_nav_up_med = {
 	if = {
 		limit = {
 			or = {
@@ -1807,8 +1807,8 @@ USA_AN_FREE_nav_up_med = {
 		USA_AN_check_FREE_all = yes
 		custom_override_tooltip = { tooltip = { localization_key = FREE_focus_loc_tt_AA LOC_TYPE = usa_free_navy_si_tt } }
 	}
-}
-USA_AN_FREE_nav_up_hih = {
+ }
+ USA_AN_FREE_nav_up_hih = {
 	if = {
 		limit = {
 			or = {
@@ -1824,9 +1824,9 @@ USA_AN_FREE_nav_up_hih = {
 		USA_AN_check_FREE_all = yes
 		custom_override_tooltip = { tooltip = { localization_key = FREE_focus_loc_tt_AAA LOC_TYPE = usa_free_navy_si_tt } }
 	}
-}
+ }
 
-USA_AN_FREE_air_up_low = {
+ USA_AN_FREE_air_up_low = {
 	if = {
 		limit = {
 			or = {
@@ -1842,8 +1842,8 @@ USA_AN_FREE_air_up_low = {
 		USA_AN_check_FREE_all = yes
 		custom_override_tooltip = { tooltip = { localization_key = FREE_focus_loc_tt_A LOC_TYPE = usa_free_air_si_tt } }
 	}
-}
-USA_AN_FREE_air_up_med = {
+ }
+ USA_AN_FREE_air_up_med = {
 	if = {
 		limit = {
 			or = {
@@ -1859,8 +1859,8 @@ USA_AN_FREE_air_up_med = {
 		USA_AN_check_FREE_all = yes
 		custom_override_tooltip = { tooltip = { localization_key = FREE_focus_loc_tt_AA LOC_TYPE = usa_free_air_si_tt } }
 	}
-}
-USA_AN_FREE_air_up_hih = {
+ }
+ USA_AN_FREE_air_up_hih = {
 	if = {
 		limit = {
 			or = {
@@ -1876,9 +1876,9 @@ USA_AN_FREE_air_up_hih = {
 		USA_AN_check_FREE_all = yes
 		custom_override_tooltip = { tooltip = { localization_key = FREE_focus_loc_tt_AAA LOC_TYPE = usa_free_air_si_tt } }
 	}
-}
+ }
 
-USA_AN_FREE_sci_up_low = {
+ USA_AN_FREE_sci_up_low = {
 	if = {
 		limit = {
 			or = {
@@ -1894,8 +1894,8 @@ USA_AN_FREE_sci_up_low = {
 		USA_AN_check_FREE_all = yes
 		custom_override_tooltip = { tooltip = { localization_key = FREE_focus_loc_tt_A LOC_TYPE = usa_free_science_si_tt } }
 	}
-}
-USA_AN_FREE_sci_up_med = {
+ }
+ USA_AN_FREE_sci_up_med = {
 	if = {
 		limit = {
 			or = {
@@ -1911,8 +1911,8 @@ USA_AN_FREE_sci_up_med = {
 		USA_AN_check_FREE_all = yes
 		custom_override_tooltip = { tooltip = { localization_key = FREE_focus_loc_tt_AA LOC_TYPE = usa_free_science_si_tt } }
 	}
-}
-USA_AN_FREE_sci_up_hih = {
+ }
+ USA_AN_FREE_sci_up_hih = {
 	if = {
 		limit = {
 			or = {
@@ -1927,6 +1927,6 @@ USA_AN_FREE_sci_up_hih = {
 		USA_AN_check_FREE_all = yes
 		custom_override_tooltip = { tooltip = { localization_key = FREE_focus_loc_tt_AAA LOC_TYPE = usa_free_science_si_tt } }
 	}
-}
+ }
 
-
+#############

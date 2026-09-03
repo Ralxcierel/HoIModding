@@ -1,11 +1,6 @@
-version="1.19.2.0"
-picture="thumbnail.png"
+version="1.19.2"
 tags={
 	"National Focuses"
-	"Historical"
-	"Events"
-	"Balance"
 }
-name="Anozin's USA Reimagined"
+name="USA-R Testbed"
 supported_version="1.19.2.0"
-remote_file_id="3683330006"
