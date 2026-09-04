@@ -7669,6 +7669,57 @@ country_event = { # undoes the stealth focus [unused]
 	}
 
 ##################################################################
+# American Nationalist
+##################################################################
+ add_namespace = new_usa_an_plan_for_the_future_event
+ # USA_plan_for_the_future
+  	country_event = { # waits 250 days, then gives the timed idea
+ 		id = new_usa_an_plan_for_the_future_event.1
+
+ 		hidden = yes
+
+ 		is_triggered_only = yes
+
+ 		trigger = {
+ 			has_completed_focus = USA_plan_for_the_future
+ 		}
+
+ 		immediate = {
+			hidden_effect = {
+				country_event = { id = new_usa_an_plan_for_the_future_event.2 days = 250 }
+			}
+ 			add_timed_idea = {
+				idea = usa_plan_for_the_future_ti
+				days = 250
+			}
+ 		}
+	}
+	country_event = { # waits 250 days, then improves the economy
+ 		id = new_usa_an_plan_for_the_future_event.2
+
+ 		hidden = yes
+
+ 		is_triggered_only = yes
+
+ 		trigger = {
+ 			has_completed_focus = USA_plan_for_the_future
+ 		}
+
+ 		immediate = {
+			hidden_effect = {
+				add_to_variable = {
+					USA_eco_dy_consumer_goods_factor = -0.25
+				}
+				add_to_variable = {
+					USA_eco_dy_production_speed_buildings_factor = 0.10
+				}
+				add_to_variable = {
+					USA_eco_dy_production_factory_max_efficiency_factor = 0.10
+				}
+			}
+ 		}
+	}
+##################################################################
 
 
 

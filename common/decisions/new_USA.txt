@@ -8062,3 +8062,102 @@ USA_NC_start_civil_war_cat = {
 		}
 	}
 }
+
+USA_blue_districts_cat = {
+	USA_blue_district_decisions = {
+		icon = GFX_decision_generic_decision
+
+		ai_will_do = {
+			base = 1
+		}
+	
+		allowed = {  
+			original_tag = USA 
+		}
+	    
+	    target_trigger = {
+			FROM = {
+				state_population_k > 1500
+				#is_core_of = USA
+				is_controlled_by = USA
+			}
+	    }
+
+		state_target = yes
+		on_map_mode = map_only
+	    visible = {
+			has_completed_focus = USA_blue_districts
+			FROM = {
+				is_fully_controlled_by = USA
+			}
+		}
+	
+		available = {
+			FROM = {
+				is_fully_controlled_by = USA
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 120 
+
+		cost = 75
+
+		modifier = {
+			civilian_factory_use = 15
+		}
+
+		cancel_trigger = {
+			NOT = {
+				FROM = {
+					is_fully_controlled_by = USA
+				}
+			}
+		}
+
+		complete_effect = {
+			#add_to_variable = {
+			#	usa_western_growth_decision_var = 15
+			#}
+			USA_modify_gov = yes
+			add_to_variable = {
+				USA_gov_dy_political_power_factor = -0.015
+				tooltip = political_power_factor_tt
+			}
+			skip_line_tt = yes
+			USA_modify_eco = yes
+			add_to_variable = {
+				USA_eco_dy_consumer_goods_factor = 0.015
+				tooltip = consumer_goods_factor_tt
+			}
+			skip_line_tt = yes
+			From = {
+				set_state_flag = blue_district_in_progress_flag
+			}
+		}
+
+		remove_effect = {
+			FROM = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+				skip_line_tt = yes
+				add_dynamic_modifier = {
+					modifier = USA_blue_district_modifier
+				}
+			}
+			#custom_effect_tooltip = PtW_populated_tt
+			#skip_line_tt = yes
+			FROM = {
+				clr_state_flag = blue_district_in_progress_flag
+				set_state_flag = blue_district_flag
+			}
+			USA_AN_FREE_civ_up_low = yes
+			skip_line_tt = yes
+		}
+	}
+	
+}

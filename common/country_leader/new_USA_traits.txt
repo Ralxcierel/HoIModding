@@ -160,4 +160,11 @@ leader_traits = {
 		#command_power = @tier2_cp_cost
 	}
 
+	usa_american_architectural_administration_trait = {
+		random = no
+	}
+	usa_american_wellspring_administration_trait = {
+		random = no
+	}
+
 }

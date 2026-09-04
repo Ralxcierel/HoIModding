@@ -69,6 +69,14 @@ spriteTypes = {
 		name = "GFX_idea_usa_federal_recovery_emergency_enterprise"
 		texturefile = "gfx/interface/new_ideas/idea_usa_federal_recovery_emergency_enterprise.dds"
 	}
+	spriteType = { # idea_american_wellspring_administration_idea
+		name = "GFX_idea_american_wellspring_administration_idea"
+		texturefile = "gfx/interface/new_ideas/idea_american_wellspring_administration_idea.dds"
+	}
+	spriteType = { # idea_american_architectural_administration_idea2
+		name = "GFX_idea_american_architectural_administration_idea2"
+		texturefile = "gfx/interface/new_ideas/idea_american_architectural_administration_idea2.dds"
+	}
 
   # NEW DECISIONS
 	spriteType = { # decision_category_usa_homeland_defense

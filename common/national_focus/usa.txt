@@ -306,17 +306,18 @@ focus_tree = {
 		#}
 	}
 
-	#shortcut = { # Debug
-	 #	name = "Debug"
-	 #	target = USA_a_truly_democratic_economy
-	 #	scroll_wheel_factor = 0.65
+	#shortcut = { # Navy
+	#	name = USA_path_shortcut_navy
+	#	target = USA_naval_asset_assessment
+	#	scroll_wheel_factor = 0.65
 	#}
 
-	shortcut = { # Navy
-		name = USA_path_shortcut_navy
-		target = USA_naval_asset_assessment
+	shortcut = { # Debug
+		name = "Debug"
+		target = USA_lady_libertys_arsenal
 		scroll_wheel_factor = 0.65
 	}
+
 #
 
 # DEBUG FOCUSES
@@ -34757,7 +34758,7 @@ focus_tree = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to
+			FOCUS_FILTER_INDUSTRY FOCUS_FILTER_CONSUMER_GOODS FOCUS_FILTER_STABILITY
 		}
 		available = {
 			if = {
@@ -35140,7 +35141,7 @@ focus_tree = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to
+			FOCUS_FILTER_CONSUMER_GOODS
 		}
 		available = {
 
@@ -35194,7 +35195,7 @@ focus_tree = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to
+			FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL
 		}
 		available = {
 
@@ -35247,7 +35248,7 @@ focus_tree = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to
+			FOCUS_FILTER_CONSUMER_GOODS
 		}
 		available = {
 
@@ -35300,7 +35301,7 @@ focus_tree = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to
+			FOCUS_FILTER_CONSUMER_GOODS
 		}
 		available = {
 
@@ -35362,7 +35363,7 @@ focus_tree = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to
+			
 		}
 		available = {
 			has_completed_focus = USA_FREE_department_expansion
@@ -35405,7 +35406,7 @@ focus_tree = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to
+			
 		}
 		available = {
 
@@ -35503,7 +35504,7 @@ focus_tree = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to
+			
 		}
 		available = {
 			OR = {
@@ -35548,7 +35549,7 @@ focus_tree = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to
+			
 		}
 		available = {
 			has_completed_focus = USA_FREE_department_expansion
@@ -35596,7 +35597,7 @@ focus_tree = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to
+			
 		}
 		available = {
 
@@ -35696,7 +35697,7 @@ focus_tree = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to
+			
 		}
 		available = {
 			OR = {
@@ -35750,7 +35751,7 @@ focus_tree = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to
+			
 		}
 		available = {
 			OR = {
@@ -35803,7 +35804,7 @@ focus_tree = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to
+			
 		}
 		available = {
 			recovery_past_stage_3 = yes
@@ -36075,8 +36076,7 @@ focus_tree = {
 
 		completion_reward = {
 			if = {
-				limit = { not = { has_country_flag = set_stars_on_the_horizon_flag } }
-				set_country_flag = set_stars_on_the_horizon_flag
+				limit = { has_completed_focus = USA_ohio_mechanical_complex }
 				hidden_effect = { # start Stars on the Horizon
 					country_event = { id = new_usa_stars_on_the_horizon.1 days = 1 }
 				}
@@ -36347,7 +36347,7 @@ focus_tree = {
 
 	focus = { # Grange Auxiliary Corps
 		id = USA_grange_auxiliary_corps
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_usa_grange
 		relative_position_id = USA_crisis_of_dependency
 		prerequisite = { focus = USA_reinforce_interstate_routes }
 
@@ -36360,7 +36360,7 @@ focus_tree = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_INDUSTRY FOCUS_FILTER_Attending_to FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL
 		}
 		available = {
 		}
@@ -36537,7 +36537,7 @@ focus_tree = {
 				tooltip = consumer_goods_factor_tt
 			}
 			add_to_variable = {
-				USA_eco_dy_local_resources_factor = 0.10
+				USA_eco_dy_local_resources_factor = 0.03
 				tooltip = local_resources_factor_tt
 			}
 			USA_AN_FREE_civ_up_low = yes
@@ -36587,58 +36587,126 @@ focus_tree = {
 		x = 4
 		y = 5
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to
+			 FOCUS_FILTER_INDUSTRY
 		}
 		available = {
-
+			has_tech = excavation1
+			has_tech = basic_machine_tools
+			OR = {
+				has_tech = dispersed_industry
+				has_tech = concentrated_industry
+			}
+			has_tech = synth_oil_experiments
 		}
 
 		bypass = {
 		}
 
 		completion_reward = {
-			add_political_power = 20
 			random_owned_controlled_state = {
 				limit = {
 					is_core_of = USA
 					free_building_slots = {
-						building = infrastructure
+						building = industrial_complex
 						size > 0
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
-					type = infrastructure
-					level = 2
+					type = industrial_complex
+					level = 1
 					instant_build = yes
 				}
 			}
 			random_owned_controlled_state = {
 				limit = {
 					is_core_of = USA
-					free_building_slots = {
-						building = infrastructure
-						size > 0
+					is_controlled_by = USA
+					has_resources_amount = {
+						resource = steel
+						amount > 0
 					}
 				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
+				add_resource = {
+					type = steel
+					amount = 6
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = USA
+					is_controlled_by = USA
+					has_resources_amount = {
+						resource = steel
+						amount > 0
+					}
+				}
+				add_resource = {
+					type = steel
+					amount = 8
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = USA
+					is_controlled_by = USA
+					has_resources_amount = {
+						resource = aluminium
+						amount > 0
+					}
+				}
+				add_resource = {
+					type = aluminium
+					amount = 6
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = USA
+					is_controlled_by = USA
+					has_resources_amount = {
+						resource = coal
+						amount > 0
+					}
+				}
+				add_resource = {
+					type = coal
+					amount = 4
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = USA
+					is_controlled_by = USA
+					has_resources_amount = {
+						resource = chromium
+						amount > 0
+					}
+				}
+				add_resource = {
+					type = chromium
+					amount = 9
 				}
 			}
 			skip_line_tt = yes
 			usa_modify_eco = yes
 			add_to_variable = {
-				USA_eco_dy_global_building_slots_factor = 0.05
-				tooltip = global_building_slots_factor_tt
+				USA_eco_dy_local_resources_factor = 0.05
+				tooltip = local_resources_factor_tt
+			}
+			add_to_variable = {
+				USA_eco_dy_production_speed_synthetic_refinery_factor = 0.05
+				tooltip = production_speed_synthetic_refinery_factor_tt
+			}
+			add_to_variable = {
+				USA_eco_dy_production_lack_of_resource_penalty_factor = -0.10
+				tooltip = production_lack_of_resource_penalty_factor_tt
 			}
 			USA_AN_FREE_civ_up_med = yes
 		}
@@ -36662,7 +36730,7 @@ focus_tree = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to
+			FOCUS_FILTER_INDUSTRY
 		}
 		available = {
 
@@ -36672,7 +36740,24 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 40
+			custom_effect_tooltip = USA_american_wellspring_administration_tt
+			skip_line_tt = yes
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = USA
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
 			random_owned_controlled_state = {
 				limit = {
 					is_core_of = USA
@@ -36704,24 +36789,26 @@ focus_tree = {
 			random_owned_controlled_state = {
 				limit = {
 					is_core_of = USA
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
+					is_controlled_by = USA
+					has_resources_amount = {
+						resource = oil
+						amount > 0
 					}
 				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
+				add_resource = {
+					type = oil
+					amount = 8
 				}
 			}
 			skip_line_tt = yes
 			usa_modify_eco = yes
 			add_to_variable = {
-				USA_eco_dy_local_resources_factor = 0.10
+				USA_eco_dy_local_resources_factor = 0.17
 				tooltip = local_resources_factor_tt
+			}
+			add_to_variable = {
+				USA_eco_dy_production_lack_of_resource_penalty_factor = -0.10
+				tooltip = production_lack_of_resource_penalty_factor_tt
 			}
 			USA_AN_FREE_civ_up_hih = yes
 		}
@@ -36745,7 +36832,7 @@ focus_tree = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to
+			FOCUS_FILTER_INDUSTRY
 		}
 		available = {
 
@@ -36755,7 +36842,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 40
+			custom_effect_tooltip = USA_american_architectural_administration_tt
+			skip_line_tt = yes
 			random_owned_controlled_state = {
 				limit = {
 					is_core_of = USA
@@ -36782,6 +36870,38 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = USA
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = USA
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
 					level = 2
 					instant_build = yes
 				}
@@ -36789,10 +36909,18 @@ focus_tree = {
 			skip_line_tt = yes
 			usa_modify_eco = yes
 			add_to_variable = {
+				USA_eco_dy_production_speed_facility_factor = 0.15
+				tooltip = production_speed_facility_factor_tt
+			}
+			add_to_variable = {
 				USA_eco_dy_production_speed_buildings_factor = 0.05
 				tooltip = production_speed_buildings_factor_tt
 			}
-			USA_AN_FREE_civ_up_med = yes
+			add_to_variable = {
+				USA_eco_dy_global_building_slots_factor = 0.10
+				tooltip = global_building_slots_factor_tt
+			}
+			USA_AN_FREE_civ_up_hih = yes
 		}
 	}
 
@@ -36805,13 +36933,13 @@ focus_tree = {
 		x = -1
 		y = 2
 
-		cost = 10
+		cost = 11
 
 		ai_will_do = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to
+			FOCUS_FILTER_CONSUMER_GOODS FOCUS_FILTER_INDUSTRY
 		}
 		available = {
 
@@ -36822,51 +36950,42 @@ focus_tree = {
 
 		completion_reward = {
 			if = {
-				limit = { not = { has_country_flag = set_stars_on_the_horizon_flag } }
-				set_country_flag = set_stars_on_the_horizon_flag
+				limit = { has_completed_focus = USA_invest_in_infrastructure }
 				hidden_effect = { # start Stars on the Horizon
 					country_event = { id = new_usa_stars_on_the_horizon.1 days = 1 }
 				}
 			}
 
-			add_political_power = 15
-			random_owned_controlled_state = {
-				limit = {
-					is_core_of = USA
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
-					}
+			261 = { # Ohio
+				add_extra_state_shared_building_slots = 8
+				add_building_construction = {
+					type = industrial_complex
+					level = 6
+					instant_build = yes
 				}
-				add_extra_state_shared_building_slots = 2
+			}
+			396 = { # Indiana
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = industrial_complex
 					level = 2
 					instant_build = yes
 				}
 			}
-			random_owned_controlled_state = {
-				limit = {
-					is_core_of = USA
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 2
+			393 = { # Michigan
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = industrial_complex
 					level = 2
 					instant_build = yes
 				}
 			}
+			
 			skip_line_tt = yes
 			usa_modify_eco = yes
 			add_to_variable = {
-				USA_eco_dy_production_speed_industrial_complex_factor = 0.05
-				tooltip = production_speed_industrial_complex_factor_tt
+				USA_eco_dy_consumer_goods_factor = 0.05
+				tooltip = consumer_goods_factor_tt
 			}
 			USA_AN_FREE_civ_up_low = yes
 		}
@@ -36885,13 +37004,13 @@ focus_tree = {
 		x = 0
 		y = 3
 
-		cost = 10
+		cost = 7
 
 		ai_will_do = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to
+			FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_CONSUMER_GOODS
 		}
 		available = {
 			not = { has_idea = undisturbed_isolation }
@@ -36901,22 +37020,24 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 15
-			random_owned_controlled_state = {
-				limit = {
-					is_core_of = USA
-					free_building_slots = {
-						building = industrial_complex
-						size > 0
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
+			custom_effect_tooltip = USA_strive_for_the_present_tt
+			skip_line_tt = yes
+			add_political_power = 50
+			army_experience = 30
+			navy_experience = 30
+			air_experience = 30
+			skip_line_tt = yes
+			add_timed_idea = {
+				idea = usa_strive_for_the_present_ti
+				days = 240
 			}
+			skip_line_tt = yes
+			USA_modify_eco = yes
+			add_to_variable = {
+				USA_eco_dy_consumer_goods_factor = 0.10
+				tooltip = special_consumer_goods_factor_tt
+			}
+
 			USA_AN_FREE_civ_up_low = yes
 		}
 	}
@@ -36930,13 +37051,13 @@ focus_tree = {
 		x = 0
 		y = 6
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to
+			FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL
 		}
 		available = {
 
@@ -36947,6 +37068,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_political_power = 30
+			skip_line_tt = yes
 			random_owned_controlled_state = {
 				limit = {
 					is_core_of = USA
@@ -36982,7 +37104,11 @@ focus_tree = {
 			skip_line_tt = yes
 			usa_modify_eco = yes
 			add_to_variable = {
-				USA_eco_dy_production_factory_efficiency_gain_factor = 0.05
+				USA_eco_dy_consumer_goods_factor = 0.05
+				tooltip = consumer_goods_factor_tt
+			}
+			add_to_variable = {
+				USA_eco_dy_production_factory_efficiency_gain_factor = 0.10
 				tooltip = production_factory_efficiency_gain_factor_tt
 			}
 			USA_AN_FREE_civ_up_med = yes
@@ -37002,13 +37128,13 @@ focus_tree = {
 		x = -2
 		y = 3
 
-		cost = 10
+		cost = 7
 
 		ai_will_do = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to
+			FOCUS_FILTER_CONSUMER_GOODS FOCUS_FILTER_POLITICAL
 		}
 		available = {
 			not = { has_idea = undisturbed_isolation }
@@ -37018,21 +37144,14 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 15
-			random_owned_controlled_state = {
-				limit = {
-					is_core_of = USA
-					free_building_slots = {
-						building = infrastructure
-						size > 0
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
+			custom_effect_tooltip = USA_protect_our_tomorrow_tt
+			skip_line_tt = yes
+			add_political_power = 75
+			skip_line_tt = yes
+			USA_modify_eco = yes
+			add_to_variable = {
+				USA_eco_dy_consumer_goods_factor = -0.05
+				tooltip = special_v_consumer_goods_factor_tt
 			}
 			USA_AN_FREE_civ_up_low = yes
 		}
@@ -37047,13 +37166,13 @@ focus_tree = {
 		x = -2
 		y = 5
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to
+			FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY
 		}
 		available = {
 
@@ -37063,13 +37182,13 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 20
-			add_stability = 0.02
+			add_political_power = 100
+			add_stability = 0.05
 			skip_line_tt = yes
-			usa_modify_eco = yes
+			USA_modify_gov = yes
 			add_to_variable = {
-				USA_eco_dy_stability_factor = 0.02
-				tooltip = stability_factor_tt
+				USA_gov_dy_monthly_population = 0.05
+				tooltip = monthly_population_tt
 			}
 			USA_AN_FREE_civ_up_low = yes
 		}
@@ -37091,7 +37210,7 @@ focus_tree = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to
+			FOCUS_FILTER_CONSUMER_GOODS
 		}
 		available = {
 			recovery_past_stage_2 = yes
@@ -37101,43 +37220,17 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 30
-			random_owned_controlled_state = {
-				limit = {
-					is_core_of = USA
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				limit = {
-					is_core_of = USA
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-			skip_line_tt = yes
 			usa_modify_eco = yes
 			add_to_variable = {
-				USA_eco_dy_economy_cost_factor = -0.05
+				USA_eco_dy_consumer_goods_factor = -0.15
+				tooltip = consumer_goods_factor_tt
+			}
+			add_to_variable = {
+				USA_eco_dy_trade_laws_cost_factor = -0.15
+				tooltip = trade_laws_cost_factor_tt
+			}
+			add_to_variable = {
+				USA_eco_dy_economy_cost_factor = -0.15
 				tooltip = economy_cost_factor_tt
 			}
 			USA_AN_FREE_civ_up_med = yes
@@ -37157,13 +37250,13 @@ focus_tree = {
 		x = -4
 		y = 3
 
-		cost = 10
+		cost = 7
 
 		ai_will_do = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to
+			FOCUS_FILTER_CONSUMER_GOODS FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL
 		}
 		available = {
 			not = { has_idea = undisturbed_isolation }
@@ -37171,14 +37264,28 @@ focus_tree = {
 
 		bypass = {
 		}
-
+		
 		completion_reward = {
-			add_political_power = 15
+			hidden_effect = {
+				country_event = { id = new_usa_an_plan_for_the_future_event.1 days = 250 }
+			}
+			custom_effect_tooltip = USA_plan_for_the_future_tt_5
 			skip_line_tt = yes
-			usa_modify_eco = yes
+			add_political_power = -50
+			skip_line_tt = yes
+			custom_effect_tooltip = USA_plan_for_the_future_tt
+			#skip_line_tt = yes
+			show_ideas_tooltip = usa_plan_for_the_future_ti
+			custom_effect_tooltip = USA_plan_for_the_future_tt_4
+			skip_line_tt = yes
+			custom_effect_tooltip = USA_plan_for_the_future_tt_2
+			USA_modify_eco = yes
+			custom_effect_tooltip = USA_plan_for_the_future_tt_3
+			skip_line_tt = yes
+			USA_modify_eco = yes
 			add_to_variable = {
-				USA_eco_dy_research_speed_factor = 0.05
-				tooltip = research_speed_factor_tt
+				USA_eco_dy_consumer_goods_factor = 0.10
+				tooltip = special_consumer_goods_factor_tt
 			}
 			USA_AN_FREE_civ_up_low = yes
 		}
@@ -37193,13 +37300,13 @@ focus_tree = {
 		x = -4
 		y = 4
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to
+			FOCUS_FILTER_INDUSTRY FOCUS_FILTER_CONSUMER_GOODS
 		}
 		available = {
 
@@ -37209,7 +37316,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 15
 			random_owned_controlled_state = {
 				limit = {
 					is_core_of = USA
@@ -37222,7 +37328,7 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -37238,9 +37344,19 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 1
 					instant_build = yes
 				}
+			}
+			skip_line_tt = yes
+			USA_modify_eco = yes
+			add_to_variable = {
+				USA_eco_dy_consumer_goods_factor = -0.05
+				tooltip = special_v_consumer_goods_factor_tt
+			}
+			add_to_variable = {
+				USA_eco_dy_global_building_slots_factor = 0.05
+				tooltip = global_building_slots_factor_tt
 			}
 			USA_AN_FREE_civ_up_low = yes
 		}
@@ -37256,13 +37372,13 @@ focus_tree = {
 		x = -4
 		y = 5
 
-		cost = 10
+		cost = 9
 
 		ai_will_do = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to
+			FOCUS_FILTER_INDUSTRY FOCUS_FILTER_CONSUMER_GOODS FOCUS_FILTER_POLITICAL
 		}
 		available = {
 			recovery_past_stage_2 = yes
@@ -37272,43 +37388,13 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			random_owned_controlled_state = {
-				limit = {
-					is_core_of = USA
-					free_building_slots = {
-						building = infrastructure
-						size > 0
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				limit = {
-					is_core_of = USA
-					free_building_slots = {
-						building = infrastructure
-						size > 0
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			skip_line_tt = yes
-			usa_modify_eco = yes
-			add_to_variable = {
-				USA_eco_dy_local_resources_factor = 0.05
-				tooltip = local_resources_factor_tt
-			}
+			custom_effect_tooltip = USA_blue_districts_tt
+			#skip_line_tt = yes
+			#usa_modify_eco = yes
+			#add_to_variable = {
+			#	USA_eco_dy_local_resources_factor = 0.05
+			#	tooltip = local_resources_factor_tt
+			#}
 			USA_AN_FREE_civ_up_med = yes
 		}
 	}
@@ -37323,13 +37409,13 @@ focus_tree = {
 		x = -4
 		y = 6
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to
+			FOCUS_FILTER_RESEARCH
 		}
 		available = {
 			recovery_past_stage_3 = yes
@@ -37339,11 +37425,17 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 30
+			add_tech_bonus = {
+				name = "Increase Technological Funding"
+				bonus = 0.5
+				#ahead_reduction = 1
+				uses = 2
+				category = industry
+			}
 			skip_line_tt = yes
 			usa_modify_eco = yes
 			add_to_variable = {
-				USA_eco_dy_research_speed_factor = 0.05
+				USA_eco_dy_research_speed_factor = 0.03
 				tooltip = research_speed_factor_tt
 			}
 			USA_AN_FREE_sci_up_low = yes
@@ -37366,7 +37458,7 @@ focus_tree = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to
+			FOCUS_FILTER_POLITICAL FOCUS_FILTER_CONSUMER_GOODS FOCUS_FILTER_INDUSTRY
 		}
 		available = {
 
@@ -37377,6 +37469,134 @@ focus_tree = {
 
 		completion_reward = {
 			# effects scale based on which timing path was completed
+			custom_effect_tooltip = USA_north_american_autarky_tt_1
+			skip_line_tt = yes
+			add_political_power = 100
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.10
+			}
+			# Quick
+			if = {
+				limit = {
+					NOT = {
+						has_completed_focus = USA_protect_our_tomorrow
+						has_completed_focus = USA_plan_for_the_future
+					}
+				}
+				skip_line_tt = yes
+				#if = { limit = { has_completed_focus = USA_strive_for_the_present } custom_effect_tooltip = USA_north_american_autarky_tt_2_y }
+				#else_if = { limit = { OR = { has_completed_focus = USA_protect_our_tomorrow has_completed_focus = USA_plan_for_the_future } } custom_effect_tooltip = USA_north_american_autarky_tt_2_n }
+				#else = { custom_effect_tooltip = USA_north_american_autarky_tt_2 }
+				if = {
+					limit = {
+						NOT = { has_completed_focus = USA_strive_for_the_present }
+					}
+					custom_effect_tooltip = USA_north_american_autarky_tt_2_i
+				}
+				else = {
+					custom_effect_tooltip = USA_north_american_autarky_tt_2_c
+				}
+
+				USA_modify_eco = yes
+				add_to_variable = {
+					USA_eco_dy_consumer_goods_factor = -0.05
+					tooltip = special_v_consumer_goods_factor_tt
+				}
+				add_to_variable = {
+					USA_eco_dy_production_speed_buildings_factor = 0.05
+					tooltip = production_speed_buildings_factor_tt
+				}
+			}
+			# Medium
+			if = {
+				limit = {
+					NOT = {
+						has_completed_focus = USA_strive_for_the_present
+						has_completed_focus = USA_plan_for_the_future
+					}
+				}
+				skip_line_tt = yes
+				#if = { limit = { has_completed_focus = USA_protect_our_tomorrow } custom_effect_tooltip = USA_north_american_autarky_tt_3_y }
+				#else_if = { limit = { OR = { has_completed_focus = USA_strive_for_the_present has_completed_focus = USA_plan_for_the_future } } custom_effect_tooltip = USA_north_american_autarky_tt_3_n }
+				#else = { custom_effect_tooltip = USA_north_american_autarky_tt_3 }
+				if = {
+					limit = {
+						NOT = { has_completed_focus = USA_protect_our_tomorrow }
+					}
+					custom_effect_tooltip = USA_north_american_autarky_tt_3_i
+				}
+				else = {
+					custom_effect_tooltip = USA_north_american_autarky_tt_3_c
+				}
+
+				USA_modify_eco = yes
+				add_to_variable = {
+					USA_eco_dy_consumer_goods_factor = -0.15
+					tooltip = special_v_consumer_goods_factor_tt
+				}
+				add_to_variable = {
+					USA_eco_dy_production_speed_buildings_factor = 0.10
+					tooltip = production_speed_buildings_factor_tt
+				}
+				add_to_variable = {
+					USA_eco_dy_local_resources_factor = 0.05
+					tooltip = local_resources_factor_tt
+				}
+				add_to_variable = {
+					USA_eco_dy_production_factory_start_efficiency_factor = 0.05
+					tooltip = production_factory_start_efficiency_factor_tt
+				}
+			}
+			# Long
+			if = {
+				limit = {
+					NOT = {
+						has_completed_focus = USA_strive_for_the_present
+						has_completed_focus = USA_protect_our_tomorrow
+					}
+				}
+				skip_line_tt = yes
+				#if = { limit = { has_completed_focus = USA_plan_for_the_future } custom_effect_tooltip = USA_north_american_autarky_tt_4_y }
+				#else_if = { limit = { OR = { has_completed_focus = USA_strive_for_the_present has_completed_focus = USA_protect_our_tomorrow } } custom_effect_tooltip = USA_north_american_autarky_tt_4_n }
+				#else = { custom_effect_tooltip = USA_north_american_autarky_tt_4 }
+				if = {
+					limit = {
+						NOT = { has_completed_focus = USA_plan_for_the_future }
+					}
+					custom_effect_tooltip = USA_north_american_autarky_tt_4_i
+				}
+				else = {
+					custom_effect_tooltip = USA_north_american_autarky_tt_4_c
+				}
+				
+				USA_modify_eco = yes
+				add_to_variable = {
+					USA_eco_dy_local_resources_factor = 0.10
+					tooltip = local_resources_factor_tt
+				}
+				add_to_variable = {
+					USA_eco_dy_consumer_goods_factor = -0.25
+					tooltip = special_v_consumer_goods_factor_tt
+				}
+				add_to_variable = {
+					USA_eco_dy_production_speed_buildings_factor = 0.15
+					tooltip = production_speed_buildings_factor_tt
+				}
+				add_to_variable = {
+					USA_eco_dy_production_factory_max_efficiency_factor = 0.05
+					tooltip = production_factory_max_efficiency_factor_tt
+				}
+				add_to_variable = {
+					USA_eco_dy_production_factory_efficiency_gain_factor = 0.05
+					tooltip = production_factory_efficiency_gain_factor_tt
+				}
+				add_to_variable = {
+					USA_eco_dy_production_factory_start_efficiency_factor = 0.05
+					tooltip = production_factory_start_efficiency_factor_tt
+				}
+			}
+			USA_AN_FREE_civ_up_hih = yes
 		}
 	}
 

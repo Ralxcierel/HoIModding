@@ -2037,11 +2037,11 @@
  USA_stars_on_the_horizon_desc: "In the last several years, despair has gripped the American people, but they did not give up- they held out and persevered. Now we are beginning to see the full fruits of that perseverance, which is not satisfied with a return to the status quo but which will only be satiated by the charting of a new, more glorious course."
 
  USA_the_eagle_lifts_its_wings: "The Eagle Lifts its Wings"
- USA_the_eagle_lifts_its_wings_desc: ""
+ USA_the_eagle_lifts_its_wings_desc: "The economy is once again soaring above what anyone thought possible! The American people have fully awoken from their slumber and thrown off the pains of the Great Depression. The rest of the world watches in awe at our great resilience and grit."
  USA_the_eagle_lifts_its_wings_tt: "§YUnlocks§! the §Y$USA_general_motors$§! industrial concern."
 
  USA_lady_libertys_arsenal: "Lady Liberty's Arsenal"
- USA_lady_libertys_arsenal_desc: ""
+ USA_lady_libertys_arsenal_desc: "$TBA_TT$"
 
  USA_federal_recovery_emergency_enterprise: "Federal Recovery Emergency Enterprise"
  USA_federal_recovery_emergency_enterprise_desc: "The Federal Recovery Emergency Enterprise, or FREE, will facilitate the allocation of federal funds and the focus and attention of the people's state towards the recovery, growth, and future protection of the American economy. It will be given sweeping authority both in what it can demand and in what it can allow."
@@ -2070,46 +2070,72 @@
  USA_tap_old_gold_mines_desc: "With new tools at our disposal, we can take another look at our old quarries and mines and try accessing those resources that were, before, too difficult to extract."
 
  USA_the_continental_grid: "The Continental Grid"
- USA_the_continental_grid_desc: "§CTO-COMPLETE§!"
+ USA_the_continental_grid_desc: "As our mechanical mastery and technical knowledge increases, we are able to more effectively exploit the natural riches of the continent and use them for the benefit of the average American. By creating a unified network of resource-extraction and development entities, we will be able to coordinate the general enrichment of our national coffers."
 
  USA_american_wellspring_administration: "American Wellspring Administration"
- USA_american_wellspring_administration_desc: "§CTO-COMPLETE§!"
+ USA_american_wellspring_administration_desc: "FREE will develop a sub-entity: The American Wellspring Administration. It's role will be to facilitate broad organization and partnership in the extraction, refinement, and use of natural resources."
+ USA_american_wellspring_administration_tt: "§YUnlocks§! the §Y$FREE_american_wellspring_administration$§! industrial concern."
 
  USA_american_architectural_administration: "American Architectural Administration"
- USA_american_architectural_administration_desc: "§CTO-COMPLETE§!"
+ USA_american_architectural_administration_desc: "FREE will develop a sub-entity: The American Architectural Administration. It's role will be to connect and standardize various construction practices across the country, improving the range of territories that can be developed and improving the rate at which they are able to be utilized."
+ USA_american_architectural_administration_tt: "§YUnlocks§! the §Y$FREE_american_architectural_administration$§! industrial concern."
 
  USA_ohio_mechanical_complex: "Ohio Mechanical Complex"
- USA_ohio_mechanical_complex_desc: "§CTO-COMPLETE§!"
+ USA_ohio_mechanical_complex_desc: "Huge industry sits just west of New England, waiting to be restarted and boosted. Millions of steadfast Americans are ready to be put to work building the future of America."
 
  USA_strive_for_the_present: "Strive for the Present"
- USA_strive_for_the_present_desc: "§CTO-COMPLETE§!"
+ USA_strive_for_the_present_desc: "We will focus our attention on immediately pulling the nation out of its tupor, though some of efforts will borrow credit we'll have to pay for down the line."
+ USA_strive_for_the_present_tt: "When we §Gcomplete§! the focus §Y$USA_north_american_autarky$§!, we will §Ggain§! a §Ysmall bonus§!."
 
  USA_rapid_growth: "Rapid Growth"
- USA_rapid_growth_desc: "§CTO-COMPLETE§!"
+ USA_rapid_growth_desc: "In order to get our industries moving again, it is necessary that we skip some steps in a few places and prioritize action above all else. There is no time to waste!"
 
  USA_protect_our_tomorrow: "Protect Our Tomorrow"
- USA_protect_our_tomorrow_desc: "§CTO-COMPLETE§!"
+ USA_protect_our_tomorrow_desc: "We will focus our attention on addressing the needs of the nation and preparing to get it back on its feet, fully recovered and able."
+ USA_protect_our_tomorrow_tt: "When we §Gcomplete§! the focus §Y$USA_north_american_autarky$§!, we will §Ggain§! a §Ymoderate bonus§!."
 
  USA_promote_the_national_will: "Promote the National Will"
- USA_promote_the_national_will_desc: "§CTO-COMPLETE§!"
+ USA_promote_the_national_will_desc: "We need to remember why we do what we do and whom we do it for. In time, funding will become available to assist our families and small communities, upon which our entire culture and society rests."
 
  USA_steady_economic_policies: "Steady Economic Policies"
- USA_steady_economic_policies_desc: "§CTO-COMPLETE§!"
+ USA_steady_economic_policies_desc: "Pragmatic economic policies will help shape the growth trends of the economy and ensure that savings will mature, properties will develop, resources will be available. As long as one knows they can count on a stable future, they can put in their fullest for it in the present."
 
  USA_plan_for_the_future: "Plan for the Future"
- USA_plan_for_the_future_desc: "§CTO-COMPLETE§!"
+ USA_plan_for_the_future_desc: "We will focus our attention on long-term plans that will net us the largest returns, though these will take time."
+ USA_plan_for_the_future_tt: "In §Y250 days§!, we will gain:\n"
+ USA_plan_for_the_future_tt_2: "§Y250 days§! after getting this idea, we will gain:\n"
+ USA_plan_for_the_future_tt_3: "$special_consumer_goods_factor_tt$§Y-25.0%§!\n$production_speed_buildings_factor_tt$§G+10.0%§!\n$production_factory_max_efficiency_factor_tt$§G+10.0%§!"
+ USA_plan_for_the_future_tt_4: "for §Y250§! day(s)."
+ USA_plan_for_the_future_tt_5: "When we §Gcomplete§! the focus §Y$USA_north_american_autarky$§!, we will §Ggain§! a §Ylarge bonus§!."
 
  USA_invest_in_long_term_schemes: "Invest in Long-Term Schemes"
- USA_invest_in_long_term_schemes_desc: "§CTO-COMPLETE§!"
+ USA_invest_in_long_term_schemes_desc: "By its nature, investments for the future are not expected to mature immediately. We must be patient as we build towards that hoped-for tomorrow."
 
  USA_blue_districts: "Blue Districts"
- USA_blue_districts_desc: "§CTO-COMPLETE§!"
+ USA_blue_districts_desc: "Taking a term out of Oswald Bay's work, 'Blue Districts' are state-regulated economic zones designed to maximize the efficiency and opportunity of our best and brightest. Regulations and red tape are applied in an innocent-till-proven-guilty manner, taxes and profits are required to be reinvested at high rates, and effective infrastructure is a top priority."
+ USA_blue_districts_tt: "Unlocks §Ydecisions§! to establish §YBlue Districts§! in populated states."
 
  USA_increase_technological_funding: "Increase Technological Funding"
- USA_increase_technological_funding_desc: "§CTO-COMPLETE§!"
+ USA_increase_technological_funding_desc: "Our investments into the economy and the people have already begun to pay themselves back, and we find now an excess of capital and talent ready to be deployed. As our nation's genius expands, so to does our industry, our security, and our standard of living. Putting these returns into further investments for the future will help to secure our sons and daughters a more prosperous tomorrow."
 
  USA_north_american_autarky: "North American Autarky"
- USA_north_american_autarky_desc: "§CTO-COMPLETE§!"
+ USA_north_american_autarky_desc: "We have built an eden for our own posterity. Between our two coasts now lies a self-sufficient people capable of withstanding the world's fiercest storms. Our industry has rocketed upwards to new heights, empowering America to build whatever her heart yearns after."
+ USA_north_american_autarky_tt_1: "This focus will be §Ymore valuable§! depending on what §Yinvestment timescale§! was chosen."
+ #USA_north_american_autarky_tt_2: "If §Y$USA_strive_for_the_present$§! was taken:"
+ USA_north_american_autarky_tt_2_i: "If §Y$USA_strive_for_the_present$§! is taken:"
+ USA_north_american_autarky_tt_2_c: "§Y$USA_strive_for_the_present$§! grants:"
+ #USA_north_american_autarky_tt_2_y: "§3If $USA_strive_for_the_present$ was taken:§!"
+ #USA_north_american_autarky_tt_2_n: "§gIf $USA_strive_for_the_present$ was taken:§!"
+ #USA_north_american_autarky_tt_3: "If §Y$USA_protect_our_tomorrow$§! was taken:"
+ USA_north_american_autarky_tt_3_i: "If §Y$USA_protect_our_tomorrow$§! is taken:"
+ USA_north_american_autarky_tt_3_c: "§Y$USA_protect_our_tomorrow$§! grants:"
+ #USA_north_american_autarky_tt_3_y: "§3If §Y$USA_protect_our_tomorrow$§! was taken:§!"
+ #USA_north_american_autarky_tt_3_n: "§gIf $USA_protect_our_tomorrow$ was taken:§!"
+ #USA_north_american_autarky_tt_4: "If §Y$USA_plan_for_the_future$§! was taken:"
+ USA_north_american_autarky_tt_4_i: "If §Y$USA_plan_for_the_future$§! is taken:"
+ USA_north_american_autarky_tt_4_c: "§Y$USA_plan_for_the_future$§! grants:"
+ #USA_north_american_autarky_tt_4_y: "§3If §Y$USA_plan_for_the_future$§! was taken:§!"
+ #USA_north_american_autarky_tt_4_n: "§gIf $USA_plan_for_the_future$ was taken:§!"
 
  USA_kickstart_the_steel_belt: "Kickstart the Steel Belt"
  USA_kickstart_the_steel_belt_desc: ""
@@ -2169,54 +2195,57 @@
  USA_confederalized_asset_procurement_desc: ""
 
  USA_FREE_improved_focus: "Improved Focus"
- USA_FREE_improved_focus_desc: ""
+ USA_FREE_improved_focus_desc: "When FREE invests time and resources into some Sector, it requires the mobilization of hundreds of thousands of people. These large-scale operations are difficult to coordinate, but as the department works and acts, it and its leadership will become more effective."
  USA_FREE_improved_focus_tt: "§GImproves the value§! of [USAGetFREETitle]'s §Yfocus§! by §Y(+1§!,§Y+2§!,§Y+3)§! respectively going forward.\n§R(Does not modify existing funds)§!"
 
  USA_FREE_recovery_funds: "Recovery Funds"
- USA_FREE_recovery_funds_desc: ""
+ USA_FREE_recovery_funds_desc: "With the funding and attention from the Federal Government being directed primarily by FREE, areas of special interest not in its focus tend to be forgotten on the periphery. Therefore, a new subcommittee is necessary to properly account for those Sectors that have been accidentally left behind."
  USA_FREE_recovery_funds_tt: "Every §9Sector§! that is currently §Ysuffering§! under [USAGetFREETitle] will receive §Gadditional funding§! §Y(+[?FREE_recovery_funds_S])§! (§G$S_LOC$§!). \n§9Sectors§! that are currently §Yprospering§! will receive a §Gsmall amount of funding§! §Y(+[?FREE_recovery_funds_P])§! (§G$P_LOC$§!)."
 
  USA_FREE_expert_guidance: "Expert Guidance"
- USA_FREE_expert_guidance_desc: ""
+ USA_FREE_expert_guidance_desc: "Especially for a large government agency, it is impossible to know exactly how to operate in the finest details of every single aspect of an entire country's actions. Therefore, whenever dealing in a particular Sector, FREE will contract out specialists and experts in that field to offer direction."
  USA_FREE_expert_guidance_tt: "Every §9Sector§! that is currently §Yprospering§! under [USAGetFREETitle] will receive §Gadditional funding§! §Y(+[?FREE_expert_guidance_P])§! (§G$P_LOC$§!). \n§9Sectors§! that are currently §Ysuffering§! will receive a §Gsmall amount of funding§! §Y(+[?FREE_expert_guidance_S])§! (§G$S_LOC$§!)."
 
  USA_FREE_improved_focus_II: "Improved Focus II"
- USA_FREE_improved_focus_II_desc: ""
+ USA_FREE_improved_focus_II_desc: "The effort that goes into promoting a Sector can be further improved by creating independent groups of contractors and experts to oversee the distribution of funds and the apportionment of talent and resources within their fields."
  USA_FREE_improved_focus_II_tt: "§GFurther improves the value§! of [USAGetFREETitle]'s §Yfocus§! by §Y(+1§!,§Y+2§!,§Y+3)§! respectively going forward.\n§R(Does not modify existing funds)§!"
 
  USA_FREE_funds_management: "Funds Management"
- USA_FREE_funds_management_desc: ""
+ USA_FREE_funds_management_desc: "In an organization as grandiose as FREE, there is bound to be a significant amount of money that ends up going nowhere for one reason or another. Paying mind to this at the outset of every new project will help to reduce overall waste."
  USA_FREE_funds_management_tt: "§GReduces the severe penalty§! of [USAGetFREETitle]'s §Yfocus§! by §Y(-1)§! going forward.\n§R(Does not modify existing funds)§!"
 
  USA_FREE_top_end_funds_management: "Top-End Funds Management"
- USA_FREE_top_end_funds_management_desc: ""
+ USA_FREE_top_end_funds_management_desc: "The administration of FREE will focus their attention on the proper allocation of funds and resources to the organization's grandest endeavors."
  USA_FREE_top_end_funds_management_tt: "§GFurther reduces the severe penalty§! of [USAGetFREETitle]'s §Yfocus§! by §Y(-1)§! going forward.\n§R(Does not modify existing funds)§!"
 
  USA_FREE_lower_end_funds_management: "Lower-End Funds Management"
- USA_FREE_lower_end_funds_management_desc: ""
+ USA_FREE_lower_end_funds_management_desc: "The administration of FREE will focus their attention on the proper distribution and deligation of roles and resources to those projects that make up the bulk of the organization's output."
  USA_FREE_lower_end_funds_management_tt: "§GReduces the sizeable penalty§! of [USAGetFREETitle]'s §Yfocus§! by §Y(-1)§! going forward.\n§R(Does not modify existing funds)§!"
 
  USA_FREE_department_expansion: "Department Expansion"
- USA_FREE_department_expansion_desc: ""
+ USA_FREE_department_expansion_desc: "With new offices, new personnel, and new bounds, FREE will be able to broaden its reach and its effects."
  USA_FREE_department_expansion_tt: "Allows for [USAGetFREETitle] to have its §Yfocus§! or its §Yfunds management§! §Gimproved§!.\n\nAll §9Sectors§! suffer a §Rslight penalty§! §Y([?FREE_points_V])§!."
  USA_FREE_department_expansion_tt_2: "§YUnlocks§! the §YFREE§! industrial concern."
 
  USA_FREE_raise_taxes_for_reinvestment: "Raise Taxes for Reinvestment"
- USA_FREE_raise_taxes_for_reinvestment_desc: ""
+ USA_FREE_raise_taxes_for_reinvestment_desc: "The Federal Government will improve and expand the capabilities and capacity of FREE by raising taxes to pay for it. While this won't be the most popular choice, it will be the most responsible."
  USA_FREE_raise_taxes_for_reinvestment_tt: "Allows for [USAGetFREETitle] to have its §Yfocus§! or its §Yfunds management§! §Gfurther improved§!."
  USA_FREE_raise_taxes_for_reinvestment_tt_2: "§GImproves§! the §YFREE§! industrial concern."
 
  USA_FREE_print_money_to_fund_FREE: "Print Money to Fund FREE"
- USA_FREE_print_money_to_fund_FREE_desc: ""
+ USA_FREE_print_money_to_fund_FREE_desc: "The Federal Government will simply print money to pay for FREE's new systems and workforce. This will be more effective in the short run, though its negative effects might be felt later on, in which case FREE will just have to make itself valuable to that further extent."
  USA_FREE_print_money_to_fund_FREE_tt: "Allows for [USAGetFREETitle] to have its §Yfocus§! or its §Yfunds management§! §Gfurther improved§!."
  USA_FREE_print_money_to_fund_FREE_tt_2: "§GImproves§! the §YFREE§! industrial concern."
 
  USA_FREE_undersecretariat_for_sectoral_administration: "Undersecretariat for Sectoral Administration"
- USA_FREE_undersecretariat_for_sectoral_administration_desc: ""
+ USA_FREE_undersecretariat_for_sectoral_administration_desc: "FREE's influence and scale has grown to the point that it has become unwieldly. In response, the Undersecretariat for Sectoral Administration will be founded in order to act as a further layer of direction and management that will permit FREE to operate effectively at its current and still-expanding scope."
  USA_FREE_undersecretariat_for_sectoral_administration_tt: "The §Y$USA_FREE_dynamic_modifier$§! becomes the §Y$USA_FREE_dynamic_modifier_2$§!.\n\nAllows for [USAGetFREETitle] to have its §Yfocus§! and its §Yfunds management§! §Gfully improved§!.\n\nAll §9Sectors§! suffer a §Rslight penalty§! §Y([?FREE_points_V])§!."
  USA_FREE_undersecretariat_for_sectoral_administration_tt_2: "§GImproves§! the §YFREE§! industrial concern."
 
  USA_FREE_recovery_achieved: "Recovery Achieved"
- USA_FREE_recovery_achieved_desc: ""
+ USA_FREE_recovery_achieved_desc: "The economy is flourishing, the American people have recovered, money flows freely once again! Now that we don't need to keep such a tight hold over our purse strings, FREE is free to promote Sectors at a greater pace and with more resources behind every proposal."
  USA_FREE_recovery_achieved_tt: "This focus will give §Ylarger benefits§! the more §Ypositive funding§! from [USAGetFREETitle] is in play.\n\n"
  USA_FREE_recovery_achieved_tt_2: "§GImproves all values§! of [USAGetFREETitle]'s §Yfocus§! by §Y(+1)§! going forward.\n§GRemoves all slight penalties§! of [USAGetFREETitle]'s §Yfocus§! going forward.\n§R(Does not modify existing funds)§!"
+
+ USA_grange_auxiliary_corps: "Grange Auxiliary Corps"
+ USA_grange_auxiliary_corps_desc: "The Grange has been a longstanding boon to rural elements of the country for a very long time- they know their stuff. We could employ them to repair our infrastructure and fix up our towns and streets, and they already have the resources necessary for much of that work."

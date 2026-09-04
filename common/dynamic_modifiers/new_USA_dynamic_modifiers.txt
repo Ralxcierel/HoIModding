@@ -795,3 +795,17 @@ USA_infrastructure_projects_decisions_modifier = {
     production_speed_buildings_factor = 0.05
     production_speed_rail_way_factor = 0.10
 }
+
+USA_blue_district_modifier = {
+	enable = { always = yes }
+	icon = GFX_modifiers_CZE_subsidies_in_state
+
+    production_speed_buildings_factor = 0.05
+    production_speed_infrastructure_factor = 0.05
+    production_speed_rail_way_factor = 0.10
+    production_speed_facility_factor = 0.10
+    production_speed_industrial_complex_factor = 0.10
+    local_resources_factor = 0.10
+    local_factory_energy_consumption_per_infrastructure = -0.05
+    local_building_slots_factor = 0.20
+}

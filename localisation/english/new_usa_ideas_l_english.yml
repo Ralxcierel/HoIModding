@@ -217,6 +217,8 @@
   usa_reinforce_interstate_routes_ti: "Reinforce Interstate Routes"
   usa_finance_new_mines_and_refineries_ti: "Finance New Mines and Refineries"
   usa_banner_clubs_ti: "Banner Clubs"
+  usa_strive_for_the_present_ti: "Strive for the Present"
+  usa_plan_for_the_future_ti: "Plan for the Future"
 
  # Federal Recovery Emegency Enterprise (FREE)
   NL_2s_tt: "\n  "
@@ -353,6 +355,7 @@
   USA_regional_strategic_command_modifier: "Regional Strategic Command"
   USA_tva_expansion_modifier: "TVA Expansion"
   USA_infrastructure_projects_decisions_modifier: "Infrastructure Projects"
+  USA_blue_district_modifier: "Blue Districts"
 
  # OPINION MODIFIERS
   usa_reconciliation_opinion_modifier: "USA Reconciliation"
@@ -526,7 +529,7 @@
   USA_NC_civil_war_is_over: " The Nationalist Communist civil war is over"
 
   USA_stars_on_the_horizon_in_progress_tt: "The nation is charting its new course. \nProgress: §Y$FLAG_DAYS$§!/$TIME_DAYS$ days"
-  USA_stars_on_the_horizon_cant_do_tt: "This focus will complete §Gautomatically§! once either §Y$USA_invest_in_infrastructure$§! or §Y$USA_ohio_mechanical_complex$§! is §Ycompleted§!."
+  USA_stars_on_the_horizon_cant_do_tt: "This focus will complete §Gautomatically§! once both §Y$USA_invest_in_infrastructure$§! and §Y$USA_ohio_mechanical_complex$§! are §Ycompleted§!."
   USA_the_eagle_lifts_its_wings_in_progress_tt: "The nation is charting its new course. \nProgress: §Y$FLAG_DAYS$§!/$TIME_DAYS$ days"
   USA_the_eagle_lifts_its_wings_cant_do_tt: "This focus will complete §Gautomatically§! once its §Yprerequisite§! focus is §Ycompleted§!."
   USA_southern_crisis_in_progress_tt: "The American people are striving forward. \nProgress: §Y$FLAG_DAYS$§!/$TIME_DAYS$ days"
@@ -868,6 +871,9 @@
   USA_start_civil_war_decision: "Light the Torch"
   USA_start_civil_war_decision_desc: "We will §Rignite the civil war early§!, taking the anti-communists by surprise and giving us the upper edge in what's to come. We shall rally the people of America behind our vision, and we will achieve it through force.\n\nThe other side will §Ystart with a malice§! whose intensity is increased depending on how low §Yconservative resistance§! is."
 
+  USA_blue_districts_cat: "Blue Districts"
+  USA_blue_district_decisions: "Establish a Blue District in [FROM.getName]"
+
  # BALANCE OF POWER
   usa_defense_readiness_bop: "Defense Readiness Factor"
   usa_ready_not_side: "Unprepared"
@@ -936,6 +942,11 @@
   FREE_federal_industry_trust_2_remove_tt: "All §9Sectors§! §Rlose§! a small amount of funding §Y(-9)§!.\n"
   FREE_federal_industry_trust_3_add_tt: "§YEffects when added:§!\nAll §9Sectors§! §Greceive§! a small amount of funding §Y(+12)§!."
   FREE_federal_industry_trust_3_remove_tt: "All §9Sectors§! §Rlose§! a small amount of funding §Y(-12)§!.\n"
+
+  FREE_american_wellspring_administration: "American Wellspring Administration"
+  FREE_american_architectural_administration: "American Architectural Administration"
+  usa_american_architectural_administration_trait: "FREE Sub-Entity"
+  usa_american_wellspring_administration_trait: "FREE Sub-Entity"
 
  # ECONOMIES
   the_eagles_might_economy: "The Eagle's Might"

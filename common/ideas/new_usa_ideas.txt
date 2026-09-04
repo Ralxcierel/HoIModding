@@ -5162,7 +5162,7 @@ ideas = {
             }
 
             modifier = {
-                political_power_factor = -0.05
+                political_power_factor = -0.10
                 industry_free_repair_factor = 0.30
                 industry_repair_factor = 0.30
             }
@@ -5246,6 +5246,50 @@ ideas = {
                 war_support_factor = 0.05
                 compliance_growth = 0.01
                 army_core_defence_factor = 0.05
+            }
+        }
+
+        usa_strive_for_the_present_ti = { # Strive for the Present Timed Idea
+            picture = FRA_matignon_agreements
+
+            allowed = {
+            }
+
+            available = {
+            }
+
+            cancel = {
+            }
+
+            allowed_civil_war = {
+            }
+
+            modifier = {
+                production_speed_buildings_factor = 0.10
+                mobilization_speed = 0.25
+                training_time_factor = -0.15
+                research_speed_factor = 0.03
+            }
+        }
+
+        usa_plan_for_the_future_ti = { # Plan for the Future Timed Idea
+            picture = FRA_matignon_agreements
+
+            allowed = {
+            }
+
+            available = {
+            }
+
+            cancel = {
+            }
+
+            allowed_civil_war = {
+            }
+
+            modifier = {
+                consumer_goods_factor = -0.05
+                production_speed_industrial_complex_factor = 0.05
             }
         }
     }
@@ -6070,6 +6114,61 @@ ideas = {
                 production_factory_efficiency_gain_factor = 0.05
                 political_power_factor = -0.12
                 
+			}
+		}
+
+        FREE_american_architectural_administration = {
+			picture = american_architectural_administration_idea2
+
+			allowed = { original_tag = USA }
+
+			visible = {
+                #always = yes
+                has_completed_focus = USA_american_architectural_administration
+			}
+
+			available = {
+				has_completed_focus = USA_american_architectural_administration
+			}
+
+			research_bonus = {
+                construction_tech = 0.05
+			}
+
+			ai_will_do = { base = 1 }
+		
+			traits = { usa_american_architectural_administration_trait } 
+
+			modifier = {
+                production_speed_buildings_factor = 0.10
+                supply_combat_penalties_on_core_factor = -0.15
+			}
+		}
+        FREE_american_wellspring_administration = {
+			picture = american_wellspring_administration_idea
+
+			allowed = { original_tag = USA }
+
+			visible = {
+                #always = yes
+                has_completed_focus = USA_american_wellspring_administration
+			}
+
+			available = {
+				has_completed_focus = USA_american_wellspring_administration
+			}
+
+			research_bonus = {
+                excavation_tech = 0.05
+			}
+
+			ai_will_do = { base = 1 }
+		
+			traits = { usa_american_architectural_administration_trait } 
+
+			modifier = {
+                local_resources_factor = 0.15
+                production_lack_of_resource_penalty_factor = -0.15
 			}
 		}
     }
