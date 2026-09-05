@@ -101,11 +101,21 @@ ideas = {
             }
 
             modifier = {
-                communism_acceptance = 25
-                enemy_declare_war_tension = 0.50
-                monthly_population = 1
-                improve_relations_maintain_cost_factor = 1
-                civil_war_involvement_tension = 1
+                supply_combat_penalties_on_core_factor = 1
+                no_supply_grace = 1
+                supply_node_range = 1
+                #supply_factor = 1
+                supply_consumption_factor = 1
+                out_of_supply_factor = 1
+                critical_receive_chance = 1
+                repair_speed_factor = 1
+                dig_in_speed_factor = 1
+                coordination_bonus = 1
+                army_armor_attack_factor = 1
+                army_artillery_attack_factor = 1
+                experience_gain_navy_unit_factor = 1
+                naval_doctrine_cost_factor = 1
+                experience_gain_navy = 1
             }
         }
 
@@ -5290,6 +5300,31 @@ ideas = {
             modifier = {
                 consumer_goods_factor = -0.05
                 production_speed_industrial_complex_factor = 0.05
+            }
+        }
+
+        usa_industrial_funding_ti = { # Industrial Funding Timed Idea
+            picture = generic_improved_industries
+
+            allowed = {
+            }
+
+            available = {
+            }
+
+            cancel = {
+            }
+
+            allowed_civil_war = {
+            }
+
+            research_bonus = {
+                industry = 0.05
+            }
+
+            modifier = {
+                production_speed_industrial_complex_factor = 0.1
+                production_factory_efficiency_gain_factor = 0.15
             }
         }
     }

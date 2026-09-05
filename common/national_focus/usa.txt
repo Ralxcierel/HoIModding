@@ -5480,8 +5480,8 @@ focus_tree = {
 
   ###########################################
   # Atomic Arcadia / Pax Atomica (Macarthur Containment - Multi-way civil war) [Not just Macarthur- include others like Oppenheimer. A parent state. Maybe gets super early nukes?]
-	focus = { # A Fallen Roost Among the Cinders
-		id = USA_a_fallen_roost_among_the_cinders
+	focus = { # The Bordeaux Conferance
+		id = USA_the_bordeaux_conferance
 		icon = GFX_focus_SWE_attack_landsorganisationen
 		overlay = GFX_new_focus_overlay_ideo_arcadian
 
@@ -15180,7 +15180,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 20
 		}
-		search_filters = { FOCUS_FILTER_Attending_to }
+		search_filters = { FOCUS_FILTER_Attending_to FOCUS_FILTER_HOMELAND_DEFENSE }
 		available = {
 			recovery_past_stage_1 = yes
 			has_civil_war = no
@@ -15191,8 +15191,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			custom_effect_tooltip = policy_focus_lock_tt
-			skip_line_tt = yes
 			hidden_effect = {
 				set_country_flag = {
 					flag = policy_focus_lock_flag
@@ -15203,15 +15201,15 @@ focus_tree = {
 			add_command_power = 25
 			skip_line_tt = yes
 			set_power_balance = {
-					id = usa_defense_readiness_bop
-					left_side = usa_low_preparedness_side
-					right_side = usa_high_preparedness_side
-					set_value = -1
-				}
+				id = usa_defense_readiness_bop
+				left_side = usa_low_preparedness_side
+				right_side = usa_high_preparedness_side
+				set_value = -1
+			}
 			skip_line_tt = yes
 			add_power_balance_modifier = {
 				id = usa_defense_readiness_bop
-				modifier = USA_militia_readiness_act_bop_mod
+				modifier = USA_county_militias_bop_mod
 			}
 			custom_override_tooltip = { tooltip = { REMOVE_YEARS = 4 localization_key = remove_timed_bop_mod_years_tt } }
 			hidden_effect = {
@@ -15239,7 +15237,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		search_filters = { FOCUS_FILTER_Attending_to }
+		search_filters = { FOCUS_FILTER_Attending_to FOCUS_FILTER_HOMELAND_DEFENSE FOCUS_FILTER_INDUSTRY }
 		available = {has_civil_war = no}
 		
 		bypass = {
@@ -15248,7 +15246,24 @@ focus_tree = {
 
 
 		completion_reward = {
-
+			add_offsite_building = {
+				type = arms_factory
+				level = 4
+			}
+			skip_line_tt = yes
+			USA_modify_army = yes
+			add_to_variable = {
+				USA_dy_arm_modifier_army_sub_unit_militia_attack_factor = 0.05
+				tooltip = modifier_army_sub_unit_militia_attack_factor_tt
+			}
+			skip_line_tt = yes
+			add_power_balance_modifier = {
+				id = usa_defense_readiness_bop
+				modifier = USA_independently_funded_armories_bop_mod
+			}
+			custom_override_tooltip = { tooltip = { REMOVE_YEARS = 3 localization_key = remove_timed_bop_mod_years_tt } }
+			skip_line_tt = yes
+			USA_defense_readiness_boost_small = yes
 		}
 	}
 
@@ -15261,19 +15276,41 @@ focus_tree = {
 		x = -2
 		y = 1
 
-		cost = 3
+		cost = 7
 
 		ai_will_do = {
 			factor = 10
 		}
-		search_filters = { FOCUS_FILTER_Attending_to }
+		search_filters = { FOCUS_FILTER_Attending_to FOCUS_FILTER_HOMELAND_DEFENSE }
 		available = {has_civil_war = no}
 		
 		bypass = {
 		}
 
 		completion_reward = {
+			USA_modify_army = yes
+			add_to_variable = {
+				USA_dy_arm_supply_consumption_factor = -0.05
+				tooltip = supply_consumption_factor_tt
+			}
+			add_to_variable = {
+				USA_dy_arm_no_supply_grace = 6
+				tooltip = no_supply_grace_tt
+			}
+			add_to_variable = {
+				USA_dy_arm_supply_combat_penalties_on_core_factor = -0.10
+				tooltip = supply_combat_penalties_on_core_factor_tt
+			}
 
+			skip_line_tt = yes
+
+			add_power_balance_modifier = {
+				id = usa_defense_readiness_bop
+				modifier = USA_civilian_logistics_contracts_bop_mod
+			}
+			custom_override_tooltip = { tooltip = { REMOVE_YEARS = 3 localization_key = remove_timed_bop_mod_years_tt } }
+			skip_line_tt = yes
+			USA_defense_readiness_boost_small = yes
 		}
 	}
 
@@ -15291,13 +15328,35 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		search_filters = { FOCUS_FILTER_Attending_to }
+		search_filters = { FOCUS_FILTER_Attending_to FOCUS_FILTER_RESEARCH FOCUS_FILTER_HOMELAND_DEFENSE }
 		available = {has_civil_war = no}
 		
 		bypass = {
 		}
 
-		completion_reward = {}
+		completion_reward = {
+			add_tech_bonus = {
+				name = "Terrain Navigation Courses"
+				bonus = 0.3
+				#ahead_reduction = 1
+				uses = 2
+				category = recon_tech
+			}
+			skip_line_tt = yes
+			USA_modify_army = yes
+			add_to_variable = {
+				USA_dy_arm_army_speed_factor = 0.10
+				tooltip = army_speed_factor_tt
+			}
+			skip_line_tt = yes
+			add_power_balance_modifier = {
+				id = usa_defense_readiness_bop
+				modifier = USA_terrain_navigation_courses_bop_mod
+			}
+			custom_override_tooltip = { tooltip = { REMOVE_YEARS = 2 localization_key = remove_timed_bop_mod_years_tt } }
+			skip_line_tt = yes
+			USA_defense_readiness_boost_small = yes
+		}
 	}
 
 	focus = { # Cloth and Rope Ramparts
@@ -15314,7 +15373,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		search_filters = { FOCUS_FILTER_HOMELAND_DEFENSE }
+		search_filters = { FOCUS_FILTER_HOMELAND_DEFENSE FOCUS_FILTER_Attending_to }
 		available = {has_civil_war = no}
 		
 		bypass = {
@@ -15323,7 +15382,23 @@ focus_tree = {
 
 
 		completion_reward = {
-
+			USA_modify_army = yes
+			add_to_variable = {
+				USA_dy_arm_army_core_defence_factor = 0.03
+				tooltip = army_core_defence_factor_tt
+			}
+			add_to_variable = {
+				USA_dy_arm_modifier_army_sub_unit_militia_defence_factor = 0.05
+				tooltip = modifier_army_sub_unit_militia_defence_factor_tt
+			}
+			skip_line_tt = yes
+			add_power_balance_modifier = {
+				id = usa_defense_readiness_bop
+				modifier = USA_cloth_and_rope_ramparts_bop_mod
+			}
+			custom_override_tooltip = { tooltip = { REMOVE_YEARS = 2 localization_key = remove_timed_bop_mod_years_tt } }
+			skip_line_tt = yes
+			USA_defense_readiness_boost_medium = yes
 		}
 	}
 
@@ -15336,19 +15411,46 @@ focus_tree = {
 		x = -1
 		y = 2
 
-		cost = 4
+		cost = 10
 
 		ai_will_do = {
 			factor = 10
 		}
-		search_filters = { FOCUS_FILTER_Attending_to }
+		search_filters = { FOCUS_FILTER_Attending_to FOCUS_FILTER_CONSUMER_GOODS FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH FOCUS_FILTER_HOMELAND_DEFENSE }
 		available = { has_civil_war = no }
 		
 		bypass = {
 		}
 
 		completion_reward = {
-
+			add_offsite_building = {
+				type = industrial_complex
+				level = 1
+			}
+			add_offsite_building = {
+				type = arms_factory
+				level = 1
+			}
+			skip_line_tt = yes
+			set_technology = { militia_tech = 1 }
+			skip_line_tt = yes
+			USA_modify_eco = yes
+			add_to_variable = {
+				USA_eco_dy_consumer_goods_factor = 0.075
+				tooltip = consumer_goods_factor_tt
+			}
+			add_to_variable = {
+				USA_eco_dy_production_speed_arms_factory_factor = 0.10
+				tooltip = production_speed_arms_factory_factor_tt
+			}
+			skip_line_tt = yes
+			add_power_balance_modifier = {
+				id = usa_defense_readiness_bop
+				modifier = USA_confederalized_asset_procurement_bop_mod
+			}
+			custom_override_tooltip = { tooltip = { REMOVE_YEARS = 3 localization_key = remove_timed_bop_mod_years_tt } }
+			skip_line_tt = yes
+			USA_defense_readiness_boost_large = yes
 		}
 	}
 
@@ -15981,7 +16083,7 @@ focus_tree = {
 		}
 	}
 
-	focus = { # Defend Our Homeland
+	focus = { # Defend Our Homeland!
 		id = USA_defend_our_homeland
 		icon = GFX_focus_generic_strike_at_democracy3
 		prerequisite = { focus = USA_launch_the_counteroffensive_AN focus = USA_spirit_of_defiance_AN }
@@ -35036,15 +35138,16 @@ focus_tree = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to
+			FOCUS_FILTER_Attending_to FOCUS_FILTER_CONSUMER_GOODS FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL
 		}
 		available = {
 			has_government = fascism
 			has_completed_focus = USA_FREE_recovery_achieved
 			has_completed_focus = USA_north_american_autarky
 			OR = {
-				has_completed_focus = USA_special_investments_in_annapolis
-				has_completed_focus = USA_special_investments_in_westpoint
+				has_completed_focus = USA_increase_naval_funding
+				has_completed_focus = USA_increase_army_funding
+				has_completed_focus = USA_wonder_workshops
 			}
 		}
 		
@@ -35052,7 +35155,37 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			add_political_power = 50
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.10
+			}
+			skip_line_tt = yes
+			usa_modify_eco = yes
+			add_to_variable = {
+				USA_eco_dy_local_resources_factor = 0.10
+				tooltip = local_resources_factor_tt
+			}
+			add_to_variable = {
+				USA_eco_dy_consumer_goods_factor = -0.10
+				tooltip = special_v_consumer_goods_factor_tt
+			}
+			add_to_variable = {
+				USA_eco_dy_production_factory_start_efficiency_factor = 0.10
+				tooltip = production_factory_start_efficiency_factor_tt
+			}
+			add_to_variable = {
+				USA_eco_dy_industrial_capacity_factory = 0.05
+				tooltip = industrial_capacity_factory_tt
+			}
+			add_to_variable = {
+				USA_eco_dy_industrial_capacity_dockyard = 0.05
+				tooltip = industrial_capacity_dockyard_tt
+			}
+			add_to_variable = {
+				USA_eco_dy_production_speed_arms_factory_factor = 0.10
+				tooltip = production_speed_arms_factory_factor_tt
+			}
 		}
 	}
 
@@ -37611,13 +37744,13 @@ focus_tree = {
 		x = -7
 		y = 3
 
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to
+			FOCUS_FILTER_Attending_to FOCUS_FILTER_INDUSTRY	FOCUS_FILTER_CONSUMER_GOODS
 		}
 		allow_branch = {
 			if = {
@@ -37640,7 +37773,69 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			360 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			261 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			393 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			396 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			816 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			skip_line_tt = yes
+			USA_modify_eco = yes
+			add_to_variable = {
+				USA_eco_dy_consumer_goods_factor = 0.03
+				tooltip = consumer_goods_factor_tt
+			}
+			USA_AN_FREE_mil_up_low = yes
 		}
 	}
 
@@ -37653,13 +37848,13 @@ focus_tree = {
 		x = -2
 		y = 1
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to
+			FOCUS_FILTER_Attending_to FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY
 		}
 		available = {
 
@@ -37669,7 +37864,45 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			navy_experience = 35
+			skip_line_tt = yes
+			custom_effect_tooltip = USA_focus_on_our_fleets_tt
+			USA_modify_eco = yes
+			custom_effect_tooltip = USA_focus_on_our_fleets_tt_2
+			USA_modify_eco = yes
+			custom_effect_tooltip = USA_focus_on_our_fleets_tt_3
 
+			hidden_effect = {
+				if = {
+					limit = { not = { has_completed_focus = USA_focus_on_our_army } }
+					add_tech_bonus = {
+						name = "USA_focus_on_our_fleets"
+						bonus = 1
+						#ahead_reduction = 1
+						uses = 1
+						category = naval_equipment
+					}
+					add_to_variable = {
+						USA_eco_dy_industrial_capacity_dockyard = 0.05
+						tooltip = industrial_capacity_dockyard_tt
+					}
+				}
+				else = {
+					add_tech_bonus = {
+						name = "USA_focus_on_our_fleets"
+						bonus = 0.5
+						#ahead_reduction = 1
+						uses = 1
+						category = naval_equipment
+					}
+					add_to_variable = {
+						USA_eco_dy_industrial_capacity_dockyard = 0.02
+						tooltip = industrial_capacity_dockyard_tt
+					}
+				}
+			}
+
+			USA_AN_FREE_nav_up_low = yes
 		}
 	}
 
@@ -37683,13 +37916,13 @@ focus_tree = {
 		x = -2
 		y = 3
 
-		cost = 10
+		cost = 4
 
 		ai_will_do = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to
+			FOCUS_FILTER_Attending_to FOCUS_FILTER_INDUSTRY
 		}
 		available = {
 
@@ -37699,7 +37932,40 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			if = {
+				limit = { has_completed_focus = USA_focus_on_our_fleets }
+				navy_experience = 75
+				skip_line_tt = yes
+				USA_modify_navy = yes
+				add_to_variable = {
+					USA_dy_nav_naval_doctrine_cost_factor = -0.20
+					tooltip = naval_doctrine_cost_factor_tt
+				}
+				skip_line_tt = yes
+				USA_modify_eco = yes
+				add_to_variable = {
+					USA_eco_dy_production_speed_dockyard_factor = 0.05
+					tooltip = production_speed_dockyard_factor_tt
+				}
+				USA_AN_FREE_nav_up_hih = yes
+			}
+			else = {
+				custom_effect_tooltip = USA_increase_naval_funding_tt
+				navy_experience = 15
+				skip_line_tt = yes
+				USA_modify_navy = yes
+				add_to_variable = {
+					USA_dy_nav_naval_doctrine_cost_factor = -0.05
+					tooltip = naval_doctrine_cost_factor_tt
+				}
+				skip_line_tt = yes
+				USA_modify_eco = yes
+				add_to_variable = {
+					USA_eco_dy_production_speed_dockyard_factor = 0.02
+					tooltip = production_speed_dockyard_factor_tt
+				}
+				USA_AN_FREE_nav_up_med = yes
+			}
 		}
 	}
 
@@ -37708,12 +37974,12 @@ focus_tree = {
 		icon = GFX_EUYL_generic_ship_repair_icon
 		relative_position_id = USA_kickstart_the_steel_belt
 		prerequisite = { focus = USA_increase_naval_funding focus = USA_increase_army_funding }
-		prerequisite = { focus = USA_yeomen_associations }
+		prerequisite = { focus = USA_wonder_workshops }
 
 		x = -2
 		y = 5
 
-		cost = 10
+		cost = 6
 
 		ai_will_do = {
 			factor = 1
@@ -37729,7 +37995,16 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			USA_modify_navy = yes
+			add_to_variable = {
+				USA_dy_nav_critical_receive_chance = -0.05
+				tooltip = critical_receive_chance_tt
+			}
+			add_to_variable = {
+				USA_dy_nav_repair_speed_factor = 0.15
+				tooltip = repair_speed_factor_tt
+			}
+			USA_AN_FREE_nav_up_low = yes
 		}
 	}
 
@@ -37743,7 +38018,7 @@ focus_tree = {
 		x = -2
 		y = 7
 
-		cost = 10
+		cost = 4
 
 		ai_will_do = {
 			factor = 1
@@ -37752,14 +38027,44 @@ focus_tree = {
 			FOCUS_FILTER_Attending_to
 		}
 		available = {
-
+			OR = {
+				has_mastery = {
+					amount = 350
+					track = submarines
+				}
+				has_mastery = {
+					amount = 350
+					track = screens
+				}
+				has_mastery = {
+					amount = 350
+					track = carriers
+				}
+				has_mastery = {
+					amount = 350
+					track = capital_ships
+				}
+			}
 		}
 		
 		bypass = {
 		}
 
 		completion_reward = {
-
+			USA_modify_navy = yes
+			add_to_variable = {
+				USA_dy_nav_experience_gain_navy = 0.03
+				tooltip = experience_gain_navy_tt
+			}
+			add_to_variable = {
+				USA_dy_nav_experience_gain_navy_unit_factor = 0.10
+				tooltip = experience_gain_navy_unit_factor_tt
+			}
+			add_to_variable = {
+				USA_dy_nav_naval_doctrine_cost_factor = -0.10
+				tooltip = naval_doctrine_cost_factor_tt
+			}
+			USA_AN_FREE_nav_up_med = yes
 		}
 	}
 
@@ -37772,13 +38077,13 @@ focus_tree = {
 		x = -0
 		y = 1
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to
+			FOCUS_FILTER_Attending_to FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY
 		}
 		available = {
 
@@ -37788,7 +38093,47 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			army_experience = 35
+			skip_line_tt = yes
+			custom_effect_tooltip = USA_focus_on_our_army_tt
+			USA_modify_eco = yes
+			custom_effect_tooltip = USA_focus_on_our_army_tt_2
+			USA_modify_eco = yes
+			custom_effect_tooltip = USA_focus_on_our_army_tt_3
 
+			hidden_effect = {
+				if = {
+					limit = { not = { has_completed_focus = USA_focus_on_our_fleets } }
+					add_tech_bonus = {
+						name = "$USA_focus_on_our_army$"
+						bonus = 1
+						#ahead_reduction = 1
+						uses = 1
+						category = infantry_tech
+						category = motorized_equipment
+					}
+					add_to_variable = {
+						USA_eco_dy_industrial_capacity_factory = 0.05
+						tooltip = industrial_capacity_factory_tt
+					}
+				}
+				else = {
+					add_tech_bonus = {
+						name = "$USA_focus_on_our_army$"
+						bonus = 0.5
+						#ahead_reduction = 1
+						uses = 1
+						category = infantry_tech
+						category = motorized_equipment
+					}
+					add_to_variable = {
+						USA_eco_dy_industrial_capacity_factory = 0.02
+						tooltip = industrial_capacity_factory_tt
+					}
+				}
+			}
+
+			USA_AN_FREE_arm_up_low = yes
 		}
 	}
 
@@ -37808,7 +38153,7 @@ focus_tree = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to
+			FOCUS_FILTER_Attending_to FOCUS_FILTER_INDUSTRY
 		}
 		available = {
 
@@ -37818,6 +38163,40 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			if = {
+				limit = { has_completed_focus = USA_focus_on_our_army }
+				army_experience = 75
+				skip_line_tt = yes
+				USA_modify_army = yes
+				add_to_variable = {
+					USA_dy_arm_land_doctrine_cost_factor = -0.20
+					tooltip = land_doctrine_cost_factor_tt
+				}
+				skip_line_tt = yes
+				USA_modify_eco = yes
+				add_to_variable = {
+					USA_eco_dy_production_speed_arms_factory_factor = 0.05
+					tooltip = production_speed_arms_factory_factor_tt
+				}
+				USA_AN_FREE_arm_up_hih = yes
+			}
+			else = {
+				custom_effect_tooltip = USA_increase_army_funding_tt
+				army_experience = 15
+				skip_line_tt = yes
+				USA_modify_army = yes
+				add_to_variable = {
+					USA_dy_arm_land_doctrine_cost_factor = -0.05
+					tooltip = land_doctrine_cost_factor_tt
+				}
+				skip_line_tt = yes
+				USA_modify_eco = yes
+				add_to_variable = {
+					USA_eco_dy_production_speed_arms_factory_factor = 0.02
+					tooltip = production_speed_arms_factory_factor_tt
+				}
+				USA_AN_FREE_arm_up_med = yes
+			}
 
 		}
 	}
@@ -37827,12 +38206,12 @@ focus_tree = {
 		icon = GFX_focus_SIA_night_time_training
 		relative_position_id = USA_kickstart_the_steel_belt
 		prerequisite = { focus = USA_increase_naval_funding focus = USA_increase_army_funding }
-		prerequisite = { focus = USA_yeomen_associations }
+		prerequisite = { focus = USA_wonder_workshops }
 
 		x = -0
 		y = 5
 
-		cost = 10
+		cost = 6
 
 		ai_will_do = {
 			factor = 1
@@ -37848,7 +38227,24 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			USA_modify_army = yes
+			add_to_variable = {
+				USA_dy_arm_dig_in_speed_factor = 0.05
+				tooltip = dig_in_speed_factor_tt
+			}
+			add_to_variable = {
+				USA_dy_arm_army_armor_attack_factor = 0.03
+				tooltip = army_armor_attack_factor_tt
+			}
+			add_to_variable = {
+				USA_dy_arm_army_artillery_attack_factor = 0.03
+				tooltip = army_artillery_attack_factor_tt
+			}
+			add_to_variable = {
+				USA_dy_arm_coordination_bonus = 0.03
+				tooltip = coordination_bonus_tt
+			}
+			USA_AN_FREE_arm_up_low = yes
 		}
 	}
 
@@ -37862,7 +38258,7 @@ focus_tree = {
 		x = -0
 		y = 7
 
-		cost = 10
+		cost = 4
 
 		ai_will_do = {
 			factor = 1
@@ -37871,6 +38267,24 @@ focus_tree = {
 			FOCUS_FILTER_Attending_to
 		}
 		available = {
+			OR = {
+				has_mastery = {
+					amount = 350
+					track = infantry
+				}
+				has_mastery = {
+					amount = 350
+					track = combat_support
+				}
+				has_mastery = {
+					amount = 350
+					track = armor
+				}
+				has_mastery = {
+					amount = 350
+					track = operations
+				}
+			}
 
 		}
 		
@@ -37878,6 +38292,20 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			USA_modify_army = yes
+			add_to_variable = {
+				USA_dy_arm_experience_gain_army = 0.03
+				tooltip = experience_gain_army_tt
+			}
+			add_to_variable = {
+				USA_dy_arm_experience_gain_army_unit_factor = 0.10
+				tooltip = experience_gain_navy_unit_factor_tt
+			}
+			add_to_variable = {
+				USA_dy_arm_land_doctrine_cost_factor = -0.10
+				tooltip = land_doctrine_cost_factor_tt
+			}
+			USA_AN_FREE_arm_up_med = yes
 
 		}
 	}
@@ -37891,13 +38319,13 @@ focus_tree = {
 		x = 2
 		y = 1
 
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to
+			FOCUS_FILTER_Attending_to FOCUS_FILTER_INDUSTRY
 		}
 		available = {
 
@@ -37907,7 +38335,28 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			378 = {
+				add_manpower = 350000
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 2
+				}
+				add_building_construction = {
+					type = air_base
+					level = 1
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+			USA_AN_FREE_civ_up_low = yes
+			USA_AN_FREE_mil_up_low = yes
 		}
 	}
 
@@ -37920,13 +38369,13 @@ focus_tree = {
 		x = 2
 		y = 2
 
-		cost = 10
+		cost = 7
 
 		ai_will_do = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to
+			FOCUS_FILTER_Attending_to FOCUS_FILTER_CONSUMER_GOODS FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH
 		}
 		available = {
 
@@ -37936,36 +38385,65 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			add_timed_idea = {
+				idea = usa_industrial_funding_ti
+				days = 210
+			}
+			skip_line_tt = yes
+			add_tech_bonus = {
+				name = "Industrial Funding"
+				bonus = 0.25
+				#ahead_reduction = 1
+				uses = 2
+				category = industry
+			}
+			skip_line_tt = yes
+			usa_modify_eco = yes
+			add_to_variable = {
+				USA_eco_dy_consumer_goods_factor = 0.03
+				tooltip = consumer_goods_factor_tt
+			}
+			USA_AN_FREE_civ_up_med = yes
 		}
 	}
 	
-	focus = { # Yeomen Associations
-		id = USA_yeomen_associations
-		icon = GFX_focus_generic_public_works
+	focus = { # Wonder Workshops
+		id = USA_wonder_workshops
+		icon = GFX_generic_improve_industry
 		relative_position_id = USA_kickstart_the_steel_belt
 		prerequisite = { focus = USA_industrial_funding }
 
 		x = 2
 		y = 4
 
-		cost = 10
+		cost = 9
 
 		ai_will_do = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to
+			FOCUS_FILTER_Attending_to FOCUS_FILTER_INDUSTRY
 		}
 		available = {
-
+			has_tech = computing_machine
+			OR = {
+				has_tech = advanced_machine_tools
+				has_tech = concentrated_industry3
+				has_tech = dispersed_industry3
+				has_tech = construction3
+			}
 		}
 		
 		bypass = {
 		}
 
 		completion_reward = {
-
+			USA_modify_eco = yes
+			add_to_variable = {
+				USA_eco_dy_production_factory_max_efficiency_factor = 0.15
+				tooltip = production_factory_max_efficiency_factor_tt
+			}
+			USA_AN_FREE_mil_up_hih = yes
 		}
 	}
 
@@ -37973,12 +38451,12 @@ focus_tree = {
 		id = USA_improve_military_training
 		icon = GFX_focus_generic_soldier_salute
 		relative_position_id = USA_kickstart_the_steel_belt
-		prerequisite = { focus = USA_yeomen_associations }
+		prerequisite = { focus = USA_wonder_workshops }
 
 		x = 2
 		y = 6
 
-		cost = 10
+		cost = 3
 
 		ai_will_do = {
 			factor = 1
@@ -37987,14 +38465,19 @@ focus_tree = {
 			FOCUS_FILTER_Attending_to
 		}
 		available = {
-
+			has_army_manpower = {
+				size > 1500000
+			}
 		}
 		
 		bypass = {
 		}
 
 		completion_reward = {
-
+			army_experience = 50
+			navy_experience = 50
+			air_experience = 50
+			USA_AN_FREE_mil_up_low = yes
 		}
 	}
 

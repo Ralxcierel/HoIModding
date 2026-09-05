@@ -88,3 +88,29 @@
 		power_balance_weekly = 0.0012
 	}
 
+  # American Nationalist
+	USA_county_militias_bop_mod = { # Gives 36% over 4 years
+		power_balance_weekly = 0.0018
+	}
+
+	USA_civilian_logistics_contracts_bop_mod = { # Gives 15% over 3 years
+		power_balance_weekly = 0.001
+	}
+
+	USA_independently_funded_armories_bop_mod = { # Gives 15% over 3 years
+		power_balance_weekly = 0.001
+	}
+
+	USA_terrain_navigation_courses_bop_mod = { # Gives 10% over 2 years
+		power_balance_weekly = 0.001
+	}
+
+	USA_confederalized_asset_procurement_bop_mod = { # Gives 15% over 3 years
+		power_balance_weekly = 0.001
+	}
+
+	USA_cloth_and_rope_ramparts_bop_mod = { # Gives 10% over 2 years
+		power_balance_weekly = 0.001
+	}
+
+

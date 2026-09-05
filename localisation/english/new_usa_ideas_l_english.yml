@@ -219,6 +219,7 @@
   usa_banner_clubs_ti: "Banner Clubs"
   usa_strive_for_the_present_ti: "Strive for the Present"
   usa_plan_for_the_future_ti: "Plan for the Future"
+  usa_industrial_funding_ti: "Industrial Funding"
 
  # Federal Recovery Emegency Enterprise (FREE)
   NL_2s_tt: "\n  "
@@ -678,6 +679,8 @@
   civil_war_involvement_tension_tt: " $MODIFIER_CIVIL_WAR_INVOLVEMENT_TENSION$: $RIGHT|-=%$"
   MODIFIER_CRITICAL_RECEIVE_CHANCE: "Chance to Receive Critical Hit"
   critical_receive_chance_tt: " $MODIFIER_CRITICAL_RECEIVE_CHANCE$: $RIGHT|-=%$"
+  MODIFIER_NO_SUPPLY_GRACE: "Supply Grace"
+  no_supply_grace_tt: " $MODIFIER_NO_SUPPLY_GRACE$: $RIGHT|+=1$ Hour(s)"
 
  # DECISIONS and DECISION CATEGORIES
   USA_coordinate_militia_defenses_decisions_prep1_small: "Raise Militia in [FROM.GetName]"
@@ -917,6 +920,12 @@
   USA_border_plans_bop_mod: "$USA_border_plans$"
   USA_shoreline_plans_bop_mod: "$USA_shoreline_plans$"
 
+  USA_county_militias_bop_mod: "$USA_county_militias$"
+  USA_civilian_logistics_contracts_bop_mod: "$USA_civilian_logistics_contracts$"
+  USA_independently_funded_armories_bop_mod: "$USA_independently_funded_armories$"
+  USA_terrain_navigation_courses_bop_mod: "$USA_terrain_navigation_courses$"
+  USA_confederalized_asset_procurement_bop_mod: "$USA_confederalized_asset_procurement$"
+  USA_cloth_and_rope_ramparts_bop_mod: "$USA_cloth_and_rope_ramparts$"
  # OCCUPATION LAWS
   apple_pie_occupation: "Apple Pie Diplomacy"
   apple_pie_occupation_2: "Apple Pie Diplomacy"
@@ -1028,11 +1037,11 @@
 
   # Effects
   run_debug_event: "Triggers a debug event"
-  USA_defense_readiness_boost_small: "Grants a small bonus to defense readiness if that BOP is active. If it's not active, then it says to do so."
-  USA_defense_readiness_boost_medium: "Grants a medium bonus to defense readiness if that BOP is active. If it's not active, then it says to do so."
-  USA_defense_readiness_boost_large: "Grants a large bonus to defense readiness if that BOP is active. If it's not active, then it says to do so."
-  USA_defense_readiness_boost_huge: "Grants a huge bonus to defense readiness if that BOP is active. If it's not active, then it says to do so."
-  USA_defense_readiness_boost_humungous: "Grants a humungous bonus to defense readiness if that BOP is active. If it's not active, then it says to do so."
+  USA_defense_readiness_boost_small: "Grants a small bonus (1%) to defense readiness if that BOP is active. If it's not active, then it says to do so."
+  USA_defense_readiness_boost_medium: "Grants a medium bonus (1.5%) to defense readiness if that BOP is active. If it's not active, then it says to do so."
+  USA_defense_readiness_boost_large: "Grants a large bonus (2%) to defense readiness if that BOP is active. If it's not active, then it says to do so."
+  USA_defense_readiness_boost_huge: "Grants a huge bonus (2.5%) to defense readiness if that BOP is active. If it's not active, then it says to do so."
+  USA_defense_readiness_boost_humungous: "Grants a humungous bonus (10%) to defense readiness if that BOP is active. If it's not active, then it says to do so."
   USA_mil_spending_increase_small: "Adds 5% consumer goods for mil spending and runs DRB-small"
   USA_mil_spending_increase_medium: "Adds 10% consumer goods for mil spending and runs DRB-medium"
   USA_mil_spending_increase_large: "Adds 15% consumer goods for mil spending and runs DRB-large"

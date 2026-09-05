@@ -537,9 +537,13 @@ USA_arm_dynamic_modifier = { # US Army
     training_time_factor =          USA_dy_arm_training_time_factor
     special_forces_no_supply_grace = USA_dy_arm_special_forces_no_supply_grace
     special_forces_training_time_factor = USA_dy_arm_special_forces_training_time_factor
-    supply_factor =                 USA_dy_arm_supply_factor
+    #supply_factor =                 USA_dy_arm_supply_factor
     defensive_war_stability_factor = USA_dy_arm_defensive_war_stability_factor
     offensive_war_stability_factor = USA_dy_arm_offensive_war_stability_factor
+    modifier_army_sub_unit_militia_attack_factor =  USA_dy_arm_modifier_army_sub_unit_militia_attack_factor
+    modifier_army_sub_unit_militia_defence_factor = USA_dy_arm_modifier_army_sub_unit_militia_defence_factor
+    modifier_army_sub_unit_militia_max_org_factor = USA_dy_arm_modifier_army_sub_unit_militia_max_org_factor
+    modifier_army_sub_unit_militia_speed_factor =   USA_dy_arm_modifier_army_sub_unit_militia_speed_factor
 
 }
 

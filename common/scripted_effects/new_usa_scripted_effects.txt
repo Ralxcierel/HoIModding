@@ -702,6 +702,7 @@ set_america_being_invaded = {
 	hidden_effect = { set_country_flag = america_is_being_invaded_flag set_country_flag = USA_has_completed_homeland_defense_emergency_act_focus_equivalent country_event = new_usa_mainland_invasion.1 }
 }
 
+#############
 ### FREE
  USA_AN_FREE_remove_civ_si = {
 	hidden_effect = {
@@ -1930,3 +1931,4 @@ set_america_being_invaded = {
  }
 
 #############
+

@@ -2142,9 +2142,13 @@
 
  USA_focus_on_our_fleets: "Focus on our Fleets"
  USA_focus_on_our_fleets_desc: ""
+ USA_focus_on_our_fleets_tt: "If this focus is taken §Gbefore§! §Y$USA_focus_on_our_army$§!:\n\n§Y1x§! §G100%§! Research bonus for: §YShips§!."
+ USA_focus_on_our_fleets_tt_2: " Dockyard Output: §G+5.0%§!\n\n---------------------------------------------------------\nIf this focus is taken §Rafter§! §Y$USA_focus_on_our_army$§!:\n\n§Y1x§! §G50%§! Research bonus for: §YShips§!."
+ USA_focus_on_our_fleets_tt_3: " Dockyard Output: §G2.0%§!"
 
  USA_increase_naval_funding: "Increase Naval Funding"
  USA_increase_naval_funding_desc: ""
+ USA_increase_naval_funding_tt: "If §Y$USA_focus_on_our_fleets$§! has been completed, this §Yfocus§! will be §Gmore effective§!.\n "
 
  USA_shipwreckers: "Shipwreckers"
  USA_shipwreckers_desc: ""
@@ -2154,9 +2158,13 @@
 
  USA_focus_on_our_army: "Focus on our Army"
  USA_focus_on_our_army_desc: ""
+ USA_focus_on_our_army_tt: "If this focus is taken §Gbefore§! §Y$USA_focus_on_our_fleets$§!:\n\n§Y1x§! §G100%§! Research bonus for: §YInfantry technology and Truck§!."
+ USA_focus_on_our_army_tt_2: " Factory Output: §G+5.0%§!\n\n---------------------------------------------------------\nIf this focus is taken §Rafter§! §Y$USA_focus_on_our_fleets$§!:\n\n§Y1x§! §G50%§! Research bonus for: §YInfantry technology and Truck§!."
+ USA_focus_on_our_army_tt_3: " Factory Output: §G+2.0%§!"
 
  USA_increase_army_funding: "Increase Army Funding"
  USA_increase_army_funding_desc: ""
+ USA_increase_army_funding_tt: "If §Y$USA_focus_on_our_army$§! has been completed, this §Yfocus§! will be §Gmore effective§!.\n "
 
  USA_precision_mechanisms: "Precision Mechanisms"
  USA_precision_mechanisms_desc: ""
@@ -2170,8 +2178,8 @@
  USA_industrial_funding: "Industrial Funding"
  USA_industrial_funding_desc: ""
 
- USA_yeomen_associations: "Yeomen Associations"
- USA_yeomen_associations_desc: ""
+ USA_wonder_workshops: "Wonder Workshops"
+ USA_wonder_workshops_desc: ""
 
  USA_improve_military_training: "Improve Military Training"
  USA_improve_military_training_desc: ""

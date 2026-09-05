@@ -7127,6 +7127,9 @@ USA_defense_preparedness_bop_cat = {
 
 		modifier = {
 			civilian_factory_use = 15
+			industrial_capacity_factory = -0.05
+			industrial_capacity_dockyard = -0.05
+			consumer_goods_factor = 0.05
 		}
 
 		complete_effect = { 
@@ -7165,7 +7168,7 @@ USA_defense_preparedness_bop_cat = {
 		days_re_enable = 120
 		#days_remove = 25
 		#fire_only_once = yes
-		cost = 50
+		cost = 150
 
 		#modifier = {
 		#	civilian_factory_use = 15
@@ -7259,10 +7262,10 @@ USA_defense_preparedness_bop_cat = {
 		available = {
 			has_war_support > 0.50
 		}
-		days_re_enable = 180
+		days_re_enable = 270
 		#days_remove = 25
 		#fire_only_once = yes
-		cost = 40
+		cost = 50
 
 		#modifier = {
 		#	civilian_factory_use = 15
@@ -7272,6 +7275,7 @@ USA_defense_preparedness_bop_cat = {
 		}
 
 		remove_effect = {
+			add_stability = -0.015
 			add_power_balance_value = {
 				id = usa_defense_readiness_bop
 				value = 0.05
