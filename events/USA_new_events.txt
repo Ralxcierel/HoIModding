@@ -2771,9 +2771,8 @@ country_event = { # undoes the stealth focus [unused]
  }
 
 #################################################
-
-#########################################################
-# Southern Crisis auto-progression chain (mirrors the Red July chain above)
+#################################################
+# Southern Crisis Core Track
  add_namespace = new_usa_southern_crisis_1 # The Question of Our National Character
  country_event = { # starts process of the Question
  	id = new_usa_southern_crisis_1.1
@@ -3641,10 +3640,420 @@ country_event = { # undoes the stealth focus [unused]
 #########################################################
 
 
+############################################################################################################################################
+#############################################                 Invisible Events                 #############################################
+############################################################################################################################################
+##################################################################
+# American Nationalist
+ add_namespace = new_usa_an_plan_for_the_future_event
+ # USA_plan_for_the_future
+  	country_event = { # waits 250 days, then gives the timed idea
+ 		id = new_usa_an_plan_for_the_future_event.1
+
+ 		hidden = yes
+
+ 		is_triggered_only = yes
+
+ 		trigger = {
+ 			has_completed_focus = USA_plan_for_the_future
+ 		}
+
+ 		immediate = {
+			hidden_effect = {
+				country_event = { id = new_usa_an_plan_for_the_future_event.2 days = 250 }
+			}
+ 			add_timed_idea = {
+				idea = usa_plan_for_the_future_ti
+				days = 250
+			}
+ 		}
+	}
+	country_event = { # waits 250 days, then improves the economy
+ 		id = new_usa_an_plan_for_the_future_event.2
+
+ 		hidden = yes
+
+ 		is_triggered_only = yes
+
+ 		trigger = {
+ 			has_completed_focus = USA_plan_for_the_future
+ 		}
+
+ 		immediate = {
+			hidden_effect = {
+				add_to_variable = {
+					USA_eco_dy_consumer_goods_factor = -0.25
+				}
+				add_to_variable = {
+					USA_eco_dy_production_speed_buildings_factor = 0.10
+				}
+				add_to_variable = {
+					USA_eco_dy_production_factory_max_efficiency_factor = 0.10
+				}
+			}
+ 		}
+	}
+ add_namespace = new_usa_an_southern_crisis_damage_event
+  	country_event = { # Causes large damage periodically
+ 		id = new_usa_an_southern_crisis_damage_event.1
+
+ 		hidden = yes
+
+ 		is_triggered_only = yes
+
+ 		trigger = {
+ 			has_completed_focus = USA_southern_crisis
+			or = {
+				has_idea = usa_under_crisis_spirit_0
+				has_idea = usa_under_crisis_spirit
+			}
+			
+ 		}
+
+ 		immediate = {
+			#fixed_random_seed = no
+			random_list = {
+				1 = {
+					country_event = { id = new_usa_an_southern_crisis_damage_event.1 days = 65 }
+				}
+				1 = {
+					country_event = { id = new_usa_an_southern_crisis_damage_event.1 days = 70 }
+				}
+				1 = {
+					country_event = { id = new_usa_an_southern_crisis_damage_event.1 days = 75 }
+				}
+				1 = {
+					country_event = { id = new_usa_an_southern_crisis_damage_event.1 days = 80 }
+					modifier = {
+						factor = 2
+						not = { has_idea = usa_under_crisis_spirit_0 }
+					}
+				}
+				1 = {
+					country_event = { id = new_usa_an_southern_crisis_damage_event.1 days = 85 }
+					modifier = {
+						factor = 2
+						not = { has_idea = usa_under_crisis_spirit_0 }
+					}
+				}
+			}
+			random_list = {
+				25 = {
+					#modifier = {
+					#	factor = 1
+					#	has_stability > 1
+					#}
+					random_core_state = {
+						limit = {
+							is_fully_controlled_by = USA
+							industrial_complex > 1
+						}
+						damage_building = {
+							type = industrial_complex
+							damage = 2
+						}
+					}
+				}
+				25 = {
+					random_core_state = {
+						limit = {
+							is_fully_controlled_by = USA
+							dockyard > 1
+						}
+						damage_building = {
+							type = dockyard
+							damage = 2
+						}
+					}
+				}
+				25 = {
+					random_core_state = {
+						limit = {
+							is_fully_controlled_by = USA
+							arms_factory > 1
+						}
+						damage_building = {
+							type = arms_factory
+							damage = 2
+						}
+					}
+				}
+				25 = {
+					random_core_state = {
+						limit = {
+							is_fully_controlled_by = USA
+							arms_factory > 0
+							dockyard > 0
+							industrial_complex > 0
+						}
+						damage_building = {
+							type = arms_factory
+							damage = 1
+						}
+						damage_building = {
+							type = dockyard
+							damage = 1
+						}
+						damage_building = {
+							type = industrial_complex
+							damage = 1
+						}
+					}
+				}
+			}
+ 		}
+	}
+	country_event = { # Causes moderate damage periodically
+ 		id = new_usa_an_southern_crisis_damage_event.2
+
+ 		hidden = yes
+
+ 		is_triggered_only = yes
+
+ 		trigger = {
+ 			has_completed_focus = USA_southern_crisis
+			or = {
+				has_idea = usa_under_crisis_spirit_0
+				has_idea = usa_under_crisis_spirit
+				has_idea = usa_under_crisis_spirit_2
+			}
+ 		}
+
+ 		immediate = {
+			#fixed_random_seed = no
+			random_list = {
+				1 = {
+					country_event = { id = new_usa_an_southern_crisis_damage_event.2 days = 70 }
+				}
+				1 = {
+					country_event = { id = new_usa_an_southern_crisis_damage_event.2 days = 75 }
+				}
+				1 = {
+					country_event = { id = new_usa_an_southern_crisis_damage_event.2 days = 80 }
+				}
+				1 = {
+					country_event = { id = new_usa_an_southern_crisis_damage_event.2 days = 85 }
+					modifier = {
+						factor = 2
+						not = { has_idea = usa_under_crisis_spirit_0 }
+					}
+				}
+				1 = {
+					country_event = { id = new_usa_an_southern_crisis_damage_event.2 days = 90 }
+					modifier = {
+						factor = 2
+						not = { has_idea = usa_under_crisis_spirit_0 }
+					}
+				}
+			}
+			random_list = {
+				1 = {
+					random_core_state = {
+						limit = {
+							is_fully_controlled_by = USA
+							industrial_complex > 0
+						}
+						damage_building = {
+							type = industrial_complex
+							damage = 1
+						}
+					}
+				}
+				1 = {
+					random_core_state = {
+						limit = {
+							is_fully_controlled_by = USA
+							dockyard > 0
+						}
+						damage_building = {
+							type = dockyard
+							damage = 1
+						}
+					}
+				}
+				1 = {
+					random_core_state = {
+						limit = {
+							is_fully_controlled_by = USA
+							arms_factory > 0
+						}
+						damage_building = {
+							type = arms_factory
+							damage = 1
+						}
+					}
+				}
+			}
+ 		}
+	}
+	country_event = { # Causes light damage periodically
+ 		id = new_usa_an_southern_crisis_damage_event.3
+
+ 		hidden = yes
+
+ 		is_triggered_only = yes
+
+ 		trigger = {
+ 			has_completed_focus = USA_southern_crisis
+			or = {
+				has_idea = usa_under_crisis_spirit_0
+				has_idea = usa_under_crisis_spirit
+				has_idea = usa_under_crisis_spirit_2
+				has_idea = usa_under_crisis_spirit_3
+			}
+ 		}
+
+ 		immediate = {
+			#fixed_random_seed = no
+			random_list = {
+				1 = {
+					country_event = { id = new_usa_an_southern_crisis_damage_event.3 days = 10 }
+				}
+				1 = {
+					country_event = { id = new_usa_an_southern_crisis_damage_event.3 days = 20 }
+				}
+				1 = {
+					country_event = { id = new_usa_an_southern_crisis_damage_event.3 days = 30 }
+				}
+				1 = {
+					country_event = { id = new_usa_an_southern_crisis_damage_event.3 days = 40 }
+				}
+				1 = {
+					country_event = { id = new_usa_an_southern_crisis_damage_event.3 days = 50 }
+				}
+				1 = {
+					country_event = { id = new_usa_an_southern_crisis_damage_event.3 days = 60 }
+				}
+			}
+			random_list = {
+				1 = {
+					random_core_state = {
+						limit = {
+							is_fully_controlled_by = USA
+							industrial_complex > 0
+						}
+						damage_building = {
+							type = industrial_complex
+							damage = 1
+						}
+					}
+				}
+				1 = {
+					random_core_state = {
+						limit = {
+							is_fully_controlled_by = USA
+							dockyard > 0
+						}
+						damage_building = {
+							type = dockyard
+							damage = 1
+						}
+					}
+				}
+				1 = {
+					random_core_state = {
+						limit = {
+							is_fully_controlled_by = USA
+							arms_factory > 0
+						}
+						damage_building = {
+							type = arms_factory
+							damage = 1
+						}
+					}
+				}
+				2 = {
+					random_core_state = {
+						limit = {
+							is_fully_controlled_by = USA
+							air_base > 0
+						}
+						damage_building = {
+							type = air_base
+							damage = 1
+						}
+					}
+				}
+				3 = {
+					random_core_state = {
+						limit = {
+							is_fully_controlled_by = USA
+							infrastructure > 1
+						}
+						damage_building = {
+							type = infrastructure
+							damage = 1
+						}
+					}
+				}
+			}
+ 		}
+	}
+ add_namespace = new_usa_an_goldstar_federation_event
+  	country_event = { # Checks if the US is still in the GSF. If so, it makes sure all US puppets have the GSF dynamic modifier.
+ 		id = new_usa_an_goldstar_federation_event.1
+
+ 		hidden = yes
+
+ 		is_triggered_only = yes
+
+ 		trigger = {
+ 			has_completed_focus = USA_the_goldstar_federation
+ 		}
+
+ 		immediate = {
+			if = {
+				limit = {
+					USA = {
+						is_faction_leader = yes
+						has_government = fascism
+						has_dynamic_modifier = USA_goldstar_dynamic_modifier
+					}
+				}
+				country_event = { id = new_usa_an_goldstar_federation_event.1 days = 10 }
+				every_country = {
+					limit = {
+						is_subject_of = USA
+						NOT = { has_dynamic_modifier = USA_goldstar_dynamic_modifier }
+					}
+					add_dynamic_modifier = {
+						modifier = USA_goldstar_dynamic_modifier
+					}
+				}
+				every_country = {
+					limit = {
+						has_dynamic_modifier = USA_goldstar_dynamic_modifier
+						NOT = {
+							original_tag = USA
+							is_subject_of = USA
+						}
+					}
+					remove_dynamic_modifier = {
+						modifier = USA_goldstar_dynamic_modifier
+					}
+				}
+			}
+			else = {
+				every_country = {
+					limit = {
+						has_dynamic_modifier = USA_goldstar_dynamic_modifier
+					}
+					remove_dynamic_modifier = {
+						modifier = USA_goldstar_dynamic_modifier
+					}
+				}
+			}
+ 		}
+	}
+
+	
+##################################################################
 
 
 ############################################################################################################################################
+#############################################                  Visible Events                  #############################################
 ############################################################################################################################################
+##################################################################
 # DEMOCRATIC
  add_namespace = new_usa_pacify_mexican_turmoil
  # USA_pacify_mexican_turmoil event
@@ -7671,54 +8080,529 @@ country_event = { # undoes the stealth focus [unused]
 ##################################################################
 # American Nationalist
 ##################################################################
- add_namespace = new_usa_an_plan_for_the_future_event
- # USA_plan_for_the_future
-  	country_event = { # waits 250 days, then gives the timed idea
- 		id = new_usa_an_plan_for_the_future_event.1
+ add_namespace = new_usa_an_establish_the_rio_grande_event
+ # USA_establish_the_new_southern_states
+	country_event = { # initial event
+		id = new_usa_an_establish_the_rio_grande_event.1
+		title = new_usa_an_establish_the_rio_grande_event.1.t
+		desc = new_usa_an_establish_the_rio_grande_event.1.desc
+		picture = GFX_report_event_DEN_denmark_surrenders
+		is_triggered_only = yes
 
- 		hidden = yes
 
- 		is_triggered_only = yes
-
- 		trigger = {
- 			has_completed_focus = USA_plan_for_the_future
- 		}
-
- 		immediate = {
-			hidden_effect = {
-				country_event = { id = new_usa_an_plan_for_the_future_event.2 days = 250 }
+		option = { # agree
+			name = new_usa_an_establish_the_rio_grande_event.1.a
+			ai_chance = {
+				base = 60
+				modifier = {
+					has_government = democratic
+					factor = 2
+				}
+				modifier = {
+					has_government = neutrality
+					factor = 1.5
+				}
+				modifier = {
+					has_opinion = {
+						target = FROM
+						value > 49
+					}
+					factor = 3
+				}
 			}
- 			add_timed_idea = {
-				idea = usa_plan_for_the_future_ti
-				days = 250
+			if = {
+				limit = {
+					not = {
+						has_idea = usa_the_new_southern_states_ti_2
+					}
+				}
+				add_timed_idea = {
+					idea = usa_the_new_southern_states_ti_2
+					days = 270
+				}
 			}
- 		}
+			FROM = {
+				country_event = new_usa_an_establish_the_rio_grande_event.2
+			}
+			# Rio Grande
+			if = {
+				limit = {
+					owns_state = 480
+				}
+				FROM = {
+					transfer_state = 480
+				}
+			}
+			if = {
+				limit = {
+					owns_state = 479
+				}
+				FROM = {
+					transfer_state = 479
+				}
+			}
+		}
+		option = { # refuse
+			name = new_usa_an_establish_the_rio_grande_event.1.b
+			ai_chance = {
+				base = 40
+				modifier = {
+					has_opinion = {
+						target = FROM
+						value < 0
+					}
+					factor = 3
+				}
+			}
+			FROM = {
+				country_event = new_usa_an_establish_the_rio_grande_event.3
+			}
+		}
 	}
-	country_event = { # waits 250 days, then improves the economy
- 		id = new_usa_an_plan_for_the_future_event.2
+	country_event = { # Country agrees!
+		id = new_usa_an_establish_the_rio_grande_event.2
+		title = new_usa_an_establish_the_rio_grande_event.2.t
+		desc = new_usa_an_establish_the_rio_grande_event.2.desc
+		picture = GFX_report_event_generic_sign_treaty3
 
- 		hidden = yes
-
- 		is_triggered_only = yes
-
- 		trigger = {
- 			has_completed_focus = USA_plan_for_the_future
- 		}
-
- 		immediate = {
-			hidden_effect = {
-				add_to_variable = {
-					USA_eco_dy_consumer_goods_factor = -0.25
+		is_triggered_only = yes
+		option = { #agree
+			name = new_usa_an_establish_the_rio_grande_event.2.a
+			custom_effect_tooltip = new_usa_an_establish_the_rio_grande_event.2.a_tt
+			skip_line_tt = yes
+			if = {
+				limit = {
+					not = {
+						has_idea = usa_the_new_southern_states_ti
+					}
 				}
-				add_to_variable = {
-					USA_eco_dy_production_speed_buildings_factor = 0.10
-				}
-				add_to_variable = {
-					USA_eco_dy_production_factory_max_efficiency_factor = 0.10
+				add_timed_idea = {
+					idea = usa_the_new_southern_states_ti
+					days = 125
 				}
 			}
- 		}
+			hidden_effect = {
+				USA_AN_create_RIG = yes
+				set_global_flag = usa_prudence_across_the_land_flag
+			}
+		}
 	}
+	country_event = { # Country refuses
+		id = new_usa_an_establish_the_rio_grande_event.3
+		title = new_usa_an_establish_the_rio_grande_event.3.t
+		desc = new_usa_an_establish_the_rio_grande_event.3.desc
+		picture = GFX_report_event_british_inspect_troops
+
+		is_triggered_only = yes
+		option = { # darn
+			name = new_usa_an_establish_the_rio_grande_event.3.a
+		}
+	}
+ add_namespace = new_usa_an_establish_sonora_event
+ # USA_establish_the_new_southern_states
+	country_event = { # initial event
+		id = new_usa_an_establish_sonora_event.1
+		title = new_usa_an_establish_sonora_event.1.t
+		desc = new_usa_an_establish_sonora_event.1.desc
+		picture = GFX_report_event_DEN_denmark_surrenders
+		is_triggered_only = yes
+
+		option = { # agree
+			name = new_usa_an_establish_sonora_event.1.a
+			ai_chance = {
+				base = 60
+				modifier = {
+					has_government = democratic
+					factor = 2
+				}
+				modifier = {
+					has_government = neutrality
+					factor = 1.5
+				}
+				modifier = {
+					has_opinion = {
+						target = FROM
+						value > 49
+					}
+					factor = 3
+				}
+			}
+			if = {
+				limit = {
+					not = {
+						has_idea = usa_the_new_southern_states_ti_2
+					}
+				}
+				add_timed_idea = {
+					idea = usa_the_new_southern_states_ti_2
+					days = 270
+				}
+			}
+			FROM = {
+				country_event = new_usa_an_establish_sonora_event.2
+			}
+			# Sonora
+			if = {
+				limit = {
+					owns_state = 482
+				}
+				FROM = {
+					transfer_state = 482
+				}
+			}
+			if = {
+				limit = {
+					owns_state = 483
+				}
+				FROM = {
+					transfer_state = 483
+				}
+			}
+			if = {
+				limit = {
+					owns_state = 484
+				}
+				FROM = {
+					transfer_state = 484
+				}
+			}
+		}
+		option = { # refuse
+			name = new_usa_an_establish_sonora_event.1.b
+			ai_chance = {
+				base = 40
+				modifier = {
+					has_opinion = {
+						target = FROM
+						value < 0
+					}
+					factor = 3
+				}
+			}
+			FROM = {
+				country_event = new_usa_an_establish_sonora_event.3
+			}
+		}
+	}
+	country_event = { # Country agrees!
+		id = new_usa_an_establish_sonora_event.2
+		title = new_usa_an_establish_sonora_event.2.t
+		desc = new_usa_an_establish_sonora_event.2.desc
+		picture = GFX_report_event_generic_sign_treaty3
+
+		is_triggered_only = yes
+		option = { #agree
+			name = new_usa_an_establish_sonora_event.2.a
+			custom_effect_tooltip = new_usa_an_establish_sonora_event.2.a_tt
+			skip_line_tt = yes
+			if = {
+				limit = {
+					not = {
+						has_idea = usa_the_new_southern_states_ti
+					}
+				}
+				add_timed_idea = {
+					idea = usa_the_new_southern_states_ti
+					days = 125
+				}
+			}
+			hidden_effect = {
+				set_global_flag = usa_prudence_across_the_land_flag
+				USA_AN_create_RNS = yes
+			}
+		}
+	}
+	country_event = { # Country refuses
+		id = new_usa_an_establish_sonora_event.3
+		title = new_usa_an_establish_sonora_event.3.t
+		desc = new_usa_an_establish_sonora_event.3.desc
+		picture = GFX_report_event_british_inspect_troops
+
+		is_triggered_only = yes
+		option = { # darn
+			name = new_usa_an_establish_sonora_event.3.a
+
+		}
+	}
+
+ add_namespace = new_usa_country_roads_through_the_north_event
+ # USA_country_roads_through_the_north
+	country_event = { # initial event
+		id = new_usa_country_roads_through_the_north_event.1
+		title = new_usa_country_roads_through_the_north_event.1.t
+		desc = new_usa_country_roads_through_the_north_event.1.desc
+		picture = GFX_report_event_aid_pact
+
+		is_triggered_only = yes
+		option = { #agree
+			name = new_usa_country_roads_through_the_north_event.1.a
+			ai_chance = {
+				base = 70
+				modifier = {
+					is_in_faction = no
+					#not = { has_global_flag = new_usa_dominate_south_america_refused_faction }
+					factor = 3
+				}
+				modifier = {
+					FROM = {
+						num_of_factories > 230
+					}
+					factor = 2
+				}
+				modifier = {
+					has_opinion = {
+						target = FROM
+						value > 49
+					}
+					factor = 2
+				}
+			}
+			FROM = {
+				country_event = new_usa_country_roads_through_the_north_event.2
+			}
+			effect_tooltip = {
+				IF = {
+					limit = {
+						owns_state = 740
+					}
+					FROM = {
+						transfer_state = 740
+					}
+					
+				}
+				IF = {
+						limit = {
+							owns_state = 473
+						}
+						FROM = {
+							transfer_state = 473
+						}
+				}
+				IF = {
+						limit = {
+							owns_state = 739
+						}
+						FROM = {
+							transfer_state = 739
+						}
+				}
+				IF = {
+						limit = {
+							owns_state = 471
+						}
+						FROM = {
+							transfer_state = 471
+						}
+				}
+				IF = {
+						limit = {
+							owns_state = 864
+						}
+						FROM = { 
+							transfer_state = 864
+						}
+				}
+
+				add_timed_idea = {
+					idea = usa_can_bribe_canada_ti
+					days = 270
+				} 
+			}
+		}
+		option = { #refuse
+			name = new_usa_country_roads_through_the_north_event.1.b
+			ai_chance = {
+				base = 30
+				modifier = {
+					has_opinion = {
+						target = FROM
+						value < 0
+					}
+					factor = 4
+				}
+			}
+			FROM = {
+				country_event = new_usa_country_roads_through_the_north_event.3
+			}
+		}
+	}
+	country_event = { # Canada agrees!
+		id = new_usa_country_roads_through_the_north_event.2
+		title = new_usa_country_roads_through_the_north_event.2.t
+		desc = new_usa_country_roads_through_the_north_event.2.desc
+		picture = GFX_report_event_generic_sign_treaty3
+
+		is_triggered_only = yes
+		option = { #agree
+			name = new_usa_country_roads_through_the_north_event.2.a
+			hidden_effect = {
+				set_global_flag = usa_prudence_across_the_land_flag
+			}
+			IF = {
+				limit = {
+					FROM = {
+						owns_state = 740
+					}
+				}
+				transfer_state = 740
+				add_state_core = 740
+			}
+			IF = {
+				limit = {
+					FROM = {
+						owns_state = 473
+					}
+				}
+				transfer_state = 473
+				add_state_core = 473
+			}
+			IF = {
+				limit = {
+					FROM = {
+						owns_state = 739
+					}
+				}
+				transfer_state = 739
+				add_state_core = 739
+			}
+			IF = {
+				limit = {
+					FROM = {
+						owns_state = 471
+					}
+				}
+				transfer_state = 471
+				add_state_core = 471
+			}
+			IF = {
+				limit = {
+					FROM = {
+						owns_state = 864
+					}
+				}
+				transfer_state = 864
+				add_state_core = 864
+			}
+			FROM = {
+				add_timed_idea = {
+					idea = usa_can_bribe_canada_ti
+					days = 270
+				} 
+			}
+			IF = {
+				limit = {
+					NOT = {
+						has_idea = usa_us_bribe_canada_ti
+					}
+				}
+				add_timed_idea = {
+					idea = usa_us_bribe_canada_ti
+					days = 180
+				} 
+			}
+			
+		}
+	}
+	country_event = { # Canada refuses
+		id = new_usa_country_roads_through_the_north_event.3
+		title = new_usa_country_roads_through_the_north_event.3.t
+		desc = new_usa_country_roads_through_the_north_event.3.desc
+		picture = GFX_report_event_british_inspect_troops
+
+		is_triggered_only = yes
+		option = { #sad
+			name = new_usa_country_roads_through_the_north_event.3.a
+			ai_chance = {
+				base = 100
+			}
+			add_political_power = -25
+		}
+	}
+
+
+ add_namespace = new_usa_an_peace_guarantees_for_neighbors_event
+ # USA_peace_guarantees_for_our_neighbors
+	country_event = { # initial event
+		id = new_usa_an_peace_guarantees_for_neighbors_event.1
+		title = new_usa_an_peace_guarantees_for_neighbors_event.1.t
+		desc = new_usa_an_peace_guarantees_for_neighbors_event.1.desc
+		picture = GFX_report_event_DEN_denmark_surrenders
+		is_triggered_only = yes
+
+
+		option = { # agree
+			name = new_usa_an_peace_guarantees_for_neighbors_event.1.a
+			ai_chance = {
+				base = 50
+				modifier = {
+					has_government = democratic
+					factor = 2
+				}
+				modifier = {
+					has_government = fascism
+					factor = 3
+				}
+			}
+			FROM = {
+				country_event = new_usa_an_peace_guarantees_for_neighbors_event.2
+			}
+			effect_tooltip = {
+				diplomatic_relation = { country = USA relation = non_aggression_pact }
+			}
+		}
+		option = { # refuse
+			name = new_usa_an_peace_guarantees_for_neighbors_event.1.b
+			ai_chance = {
+				base = 50
+				modifier = {
+					has_government = communism
+					factor = 3
+				}
+			}
+			FROM = {
+				country_event = new_usa_an_peace_guarantees_for_neighbors_event.3
+			}
+		}
+	}
+	country_event = { # Country agrees!
+		id = new_usa_an_peace_guarantees_for_neighbors_event.2
+		title = new_usa_an_peace_guarantees_for_neighbors_event.2.t
+		desc = new_usa_an_peace_guarantees_for_neighbors_event.2.desc
+		picture = GFX_report_event_generic_sign_treaty3
+
+		is_triggered_only = yes
+		option = { #agree
+			name = new_usa_an_peace_guarantees_for_neighbors_event.2.a
+			diplomatic_relation = { country = FROM relation = non_aggression_pact }
+			add_opinion_modifier = {
+				target = FROM
+				modifier = usa_peace_guarantees_modifier
+			}
+			FROM = {
+				add_opinion_modifier = {
+					target = THIS
+					modifier = usa_peace_guarantees_modifier
+				}
+			}
+		}
+	}
+	country_event = { # Country refuses
+		id = new_usa_an_peace_guarantees_for_neighbors_event.3
+		title = new_usa_an_peace_guarantees_for_neighbors_event.3.t
+		desc = new_usa_an_peace_guarantees_for_neighbors_event.3.desc
+		picture = GFX_report_event_british_inspect_troops
+
+		is_triggered_only = yes
+		option = { # darn
+			name = new_usa_an_peace_guarantees_for_neighbors_event.3.a
+			add_opinion_modifier = {
+				target = FROM
+				modifier = usa_secure_peace_guarantees_rejected_modifier
+			}
+		}
+	}
+
+
 ##################################################################
 
 

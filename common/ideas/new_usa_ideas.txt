@@ -1,7 +1,7 @@
 ideas = {
 
     country = { # USA
-        # Shared Branch Ideas
+     # Shared Branch Ideas
         ABDA_maintain_strategic_flexibility_spirit = {
 
 			allowed = {
@@ -22,7 +22,7 @@ ideas = {
 			}
 		}
 
-        # Fake spirits for 1936 "The Gathering Storm"
+     # Fake spirits for 1936 "The Gathering Storm"
         usa_army_fake_tgs1936 = { # Fake Army idea for 1936 "The Gathering Storm"
             picture = usa_army_spirit
         
@@ -84,7 +84,7 @@ ideas = {
             }
         }
 
-        # Debug spirits
+     # Debug spirits
         usa_debug_testing_idea = { # Debug Testing Idea
             picture = idea_AST_rod_hull
         
@@ -116,6 +116,8 @@ ideas = {
                 experience_gain_navy_unit_factor = 1
                 naval_doctrine_cost_factor = 1
                 experience_gain_navy = 1
+                party_popularity_stability_factor = 1
+                faction_trade_opinion_factor = 1
             }
         }
 
@@ -149,8 +151,9 @@ ideas = {
          #        production_speed_buildings_factor = 0.1
          #        industrial_capacity_factory = 0.1
          #    }
-         #}#
+        #}#
 
+     # Democratic & General
         usa_market_information_authority_idea = { # Market Information Authority
             picture = generic_flexible_foreign_policy
         
@@ -208,7 +211,7 @@ ideas = {
                 #stability_factor = 0.05
             }
         }#
-
+    
         usa_innovation_prizes_idea = { # Innovation Prizes
             picture = jap_supremacy_of_technology
         
@@ -5156,7 +5159,7 @@ ideas = {
         }
 
         usa_grange_auxiliary_corps_idea = { # Grange Auxiliary Corps Idea
-            picture = fra_deluge
+            picture = AFG_republic_idea
 
             allowed = {
             }
@@ -5327,6 +5330,268 @@ ideas = {
                 production_factory_efficiency_gain_factor = 0.15
             }
         }
+
+        usa_community_aid_programs_ti = { # Community Aid Programs Timed Idea
+            picture = BEL_traditional_family_values
+
+            allowed = {
+            }
+
+            available = {
+            }
+
+            cancel = {
+            }
+
+            allowed_civil_war = {
+            }
+
+            modifier = {
+                political_power_factor = 0.10
+                fascism_drift = 0.04
+            }
+        }
+
+        usa_under_crisis_spirit_0 = { # Under Crisis Spirit 0
+            picture = PRC_silver_dollar_promoted
+
+            allowed = {
+            }
+
+            available = {
+            }
+
+            cancel = {
+            }
+
+            allowed_civil_war = {
+            }
+
+            modifier = {
+                custom_modifier_tooltip = usa_under_crisis_spirit_tt
+            }
+        }
+        usa_under_crisis_spirit = { # Under Crisis Spirit
+            picture = PRC_silver_dollar_promoted
+
+            allowed = {
+            }
+
+            available = {
+            }
+
+            cancel = {
+            }
+
+            allowed_civil_war = {
+            }
+
+            modifier = {
+                custom_modifier_tooltip = usa_under_crisis_spirit_tt
+            }
+        }
+        usa_under_crisis_spirit_2 = { # Under Crisis Spirit 2
+            picture = PRC_silver_dollar_promoted
+
+            allowed = {
+            }
+
+            available = {
+            }
+
+            cancel = {
+            }
+
+            allowed_civil_war = {
+            }
+
+            modifier = {
+                custom_modifier_tooltip = usa_under_crisis_spirit_tt_2
+            }
+        }
+        usa_under_crisis_spirit_3 = { # Under Crisis Spirit 3
+            picture = PRC_silver_dollar_promoted
+
+            allowed = {
+            }
+
+            available = {
+            }
+
+            cancel = {
+            }
+
+            allowed_civil_war = {
+            }
+
+            modifier = {
+                custom_modifier_tooltip = usa_under_crisis_spirit_tt_3
+            }
+        }
+
+        usa_goldstar_network_idea = { # Goldstar Network Idea
+            picture = PLACEHOLDER
+
+            allowed = {
+            }
+
+            available = {
+            }
+
+            cancel = {
+            }
+
+            allowed_civil_war = {
+            }
+
+            modifier = {
+                political_power_factor = 0.03
+                stability_factor = 0.03
+                war_support_factor = 0.03
+                fascism_drift = 0.04
+                fascism_acceptance = 15
+                war_stability_factor = 0.05
+            }
+        }
+
+        usa_patriot_parades_ti = { # Patriot Parades Timed Idea
+            picture = generic_volunteer_expedition_bonus
+
+            allowed = {
+            }
+
+            available = {
+            }
+
+            cancel = {
+            }
+
+            allowed_civil_war = {
+            }
+
+            modifier = {
+                political_power_gain = 0.05
+                stability_weekly_factor = 0.004
+                fascism_drift = 0.03
+            }
+        }
+
+        usa_what_the_future_holds_ti = { # What the Future Holds Timed Idea
+            picture = generic_fascism_drift_bonus
+
+            allowed = {
+            }
+
+            available = {
+            }
+
+            cancel = {
+            }
+
+            allowed_civil_war = {
+            }
+
+            modifier = {
+                political_power_cost = 1
+                drift_defence_factor = -0.75
+                production_speed_buildings_factor = -0.5
+                stability_weekly_factor = -0.01
+                war_support_weekly_factor = -0.01
+            }
+        }
+
+        usa_the_new_southern_states_ti = { # The New Southern States Timed Idea
+            picture = generic_goods_red_bonus
+
+            allowed = {
+            }
+
+            available = {
+            }
+
+            cancel = {
+            }
+
+            allowed_civil_war = {
+            }
+
+            modifier = {
+                consumer_goods_factor = 0.15
+            }
+        }
+        usa_the_new_southern_states_ti_2 = { # The New Southern States Timed Idea 2
+            picture = generic_goods_red_bonus
+
+            allowed = {
+            }
+
+            available = {
+            }
+
+            cancel = {
+            }
+
+            allowed_civil_war = {
+            }
+
+            modifier = {
+                consumer_goods_factor = -0.25
+            }
+        }
+
+        usa_prudence_across_the_land_idea = { # Prudence Across the Land Idea
+            picture = fixed_idea_yug_federal_defense_council
+
+            allowed = {
+            }
+
+            available = {
+            }
+
+            cancel = {
+            }
+
+            allowed_civil_war = {
+            }
+
+            modifier = {
+                supply_combat_penalties_on_core_factor = -0.15
+                political_power_factor = 0.10
+                max_command_power = 30
+                war_stability_factor = 0.10
+                production_speed_bunker_factor = 0.15
+                production_speed_coastal_bunker_factor = 0.15
+                bunker_max_level_terrain_limit = 1
+                coastal_bunker_max_level_terrain_limit = 1
+            }
+        }
+
+        usa_swift_and_lethal_ti = { # Swift and Lethal Timed Idea
+            picture = generic_purge
+
+            allowed = {
+                has_civil_war = yes
+            }
+
+            available = {
+            }
+
+            cancel = {
+            }
+
+            allowed_civil_war = {
+                always = yes
+            }
+
+            modifier = {
+                org_loss_when_moving = -0.25
+                modifier_army_sub_unit_militia_attack_factor = 0.15
+                army_speed_factor = 0.15
+                breakthrough_factor = 0.15
+            }
+        }
+
+
     }
 
     hidden_ideas = {

@@ -1832,7 +1832,14 @@ add_offsite_building = {
  set_variable = { FREE_expert_guidance_S	= 1 } # The points given to negative sectors by Expert Guidance
  set_variable = { FREE_recovery_funds_P		= 1 } # The points given to positive sectors by Recovery Funds
  set_variable = { FREE_recovery_funds_S		= 2 } # The points given to negative sectors by Recovery Funds
-#
+
+# Goldstar Variables
+ set_variable = { USA_goldstar_dy_research_speed_factor = 0 }
+ set_variable = { USA_goldstar_dy_grant_medal_cost_factor = 0 }
+ set_variable = { USA_goldstar_dy_acclimatization_cold_climate_gain_factor = 0 }
+ set_variable = { USA_goldstar_dy_acclimatization_hot_climate_gain_factor = 0 }
+ set_variable = { USA_goldstar_dy_air_superiority_bonus_in_combat = 0 }
+
 
 add_dynamic_modifier = {
 	modifier = USA_economy_dynamic_modifier_great_depression

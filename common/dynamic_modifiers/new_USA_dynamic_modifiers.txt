@@ -695,6 +695,19 @@ USA_FREE_dynamic_modifier_2 = { # FREE USA Dynamic Modifier (American Nationalis
 
 }
 
+USA_goldstar_dynamic_modifier = { # Goldstar Dynamic Modifier (American Nationalist)
+	enable = { always = yes }
+
+	icon = GFX_idea_PLACEHOLDER
+
+    research_speed_factor = USA_goldstar_dy_research_speed_factor
+    grant_medal_cost_factor = USA_goldstar_dy_grant_medal_cost_factor
+    acclimatization_cold_climate_gain_factor = USA_goldstar_dy_acclimatization_cold_climate_gain_factor
+    acclimatization_hot_climate_gain_factor = USA_goldstar_dy_acclimatization_hot_climate_gain_factor
+    air_superiority_bonus_in_combat = USA_goldstar_dy_air_superiority_bonus_in_combat
+
+}
+
 #custom_modifier_tooltip = FIN_finnish_army_dynamic_modifier_tt #Bonuses applied via hidden NS or tech (molotov_cocktails_tech)
 
 ############################
@@ -812,4 +825,13 @@ USA_blue_district_modifier = {
     local_resources_factor = 0.10
     local_factory_energy_consumption_per_infrastructure = -0.05
     local_building_slots_factor = 0.20
+}
+
+USA_carpetbaggers_modifier = {
+	enable = { always = yes }
+	icon = GFX_modifiers_ETH_state_development
+
+    production_speed_buildings_factor = 0.05
+    production_speed_infrastructure_factor = 0.05
+    production_speed_rail_way_factor = 0.10
 }

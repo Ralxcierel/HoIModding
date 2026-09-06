@@ -331,7 +331,7 @@ focus_tree = {
 		factor = 0
 	}
 	allow_branch = {
-		always = no
+		always = yes
 	}
 	available = {
 	}
@@ -518,6 +518,33 @@ focus_tree = {
 		add_ideas = usa_the_people_rise_up_self_ti
 		add_ideas = usa_the_people_rise_up_opponent_ti
 		# 7-3
+		add_ideas = usa_nc_taken_by_surprise_ti_1
+		add_ideas = usa_nc_taken_by_surprise_ti_2
+		add_ideas = usa_nc_taken_by_surprise_ti_3
+		add_ideas = usa_nc_taken_by_surprise_ti_4
+		add_ideas = usa_crisis_of_dependency_ti
+		add_ideas = usa_invest_in_infrastructure_ti
+		add_ideas = usa_reinforce_interstate_routes_ti
+		add_ideas = usa_grange_auxiliary_corps_idea
+		add_ideas = usa_finance_new_mines_and_refineries_ti
+		add_ideas = usa_banner_clubs_ti
+		add_ideas = usa_golden_west_idea
+		add_ideas = usa_strive_for_the_present_ti
+		add_ideas = usa_plan_for_the_future_ti
+		add_ideas = usa_industrial_funding_ti
+		add_ideas = usa_community_aid_programs_ti
+		add_ideas = usa_under_crisis_spirit_0
+		add_ideas = usa_under_crisis_spirit
+		add_ideas = usa_under_crisis_spirit_2
+		add_ideas = usa_under_crisis_spirit_3
+		add_ideas = usa_goldstar_network_idea
+		add_ideas = usa_patriot_parades_ti
+		add_ideas = usa_what_the_future_holds_ti
+		add_ideas = usa_the_new_southern_states_ti
+		add_ideas = usa_the_new_southern_states_ti_2
+		add_ideas = usa_prudence_across_the_land_idea
+		add_ideas = usa_swift_and_lethal_ti
+		# 9-5
 	}
  }
  focus = { # USA_IDEA_TEST_ECO_MODIFIERS
@@ -4636,6 +4663,8 @@ focus_tree = {
 		completion_reward = {
 			custom_override_tooltip = { tooltip = { TEMP_PATH = ideo_path_nationalist_tt localization_key = starting_path_ideology_tt } }
 			skip_line_tt = yes
+			add_ideas = usa_under_crisis_spirit_0
+			skip_line_tt = yes
 			add_political_power = 100
 			add_stability = -0.10
 			add_popularity = {
@@ -4643,6 +4672,8 @@ focus_tree = {
 				popularity = 0.05
 			}
 			skip_line_tt = yes
+			unlock_decision_tooltip = { decision = USA_antagonize_congress show_effect_tooltip = yes }
+			#skip_line_tt = yes
 			USA_modify_eco = yes
 			add_to_variable = {
 				USA_eco_dy_stability_factor = -0.15
@@ -4661,6 +4692,11 @@ focus_tree = {
 				tooltip = local_resources_factor_tt
 			}
 			hidden_effect = { if = { limit = { has_game_rule = { rule = obsolete_focus_branches_visibility option = HIDE } } mark_focus_tree_layout_dirty = yes } }
+			hidden_effect = {
+				country_event = { id = new_usa_an_southern_crisis_damage_event.1 days = 7 }
+				country_event = { id = new_usa_an_southern_crisis_damage_event.2 days = 1 }
+				country_event = { id = new_usa_an_southern_crisis_damage_event.3 days = 4 }
+			}
 		}
 	}
 
@@ -13960,13 +13996,13 @@ focus_tree = {
 		x = 7
 		y = 5
 
-		cost = 10
+		cost = 4
 
 		ai_will_do = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to
+			FOCUS_FILTER_POLITICAL
 		}
 		allow_branch = {
 			if = {
@@ -13981,14 +14017,67 @@ focus_tree = {
 		}
 		available = {
 			recovery_past_stage_0 = yes
-			has_completed_focus = USA_federal_recovery_emergency_enterprise
+			has_completed_focus = USA_southern_crisis
+			#has_completed_focus = USA_federal_recovery_emergency_enterprise
 		}
 		
 		bypass = {
 		}
 
 		completion_reward = {
+			add_political_power = 25
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.03
+			}
+		}
+	}
 
+	focus = { # Protect Against Foreign Interference
+		id = USA_protect_against_foreign_interference
+		icon = GFX_focus_generic_secret_service_agency
+		relative_position_id = USA_tend_to_the_nation
+		prerequisite = { focus = USA_tend_to_the_nation }
+
+		x = 2
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {
+			FOCUS_FILTER_SPY_AGENCY
+		}
+		available = {
+
+		}
+		
+		bypass = {
+		}
+
+		completion_reward = {
+			if = {
+				limit = {
+					has_intelligence_agency = no
+				}
+				create_intelligence_agency = yes
+				skip_line_tt = yes
+			}
+			USA_modify_oss = yes
+			add_to_variable = {
+				USA_dy_agy_drift_defence_factor = 0.25
+				tooltip = drift_defence_factor_tt
+			}
+			add_to_variable = {
+				USA_dy_agy_resistance_target = -0.05
+				tooltip = resistance_target_tt
+			}
+			add_to_variable = {
+				USA_dy_agy_operative_slot = 1
+				tooltip = operative_slot_tt
+			}
 		}
 	}
 
@@ -14007,7 +14096,7 @@ focus_tree = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to
+			FOCUS_FILTER_Attending_to FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_USA_CONGRESS FOCUS_FILTER_POLITICAL
 		}
 		available = {
 
@@ -14017,7 +14106,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			# Gives a ticking bonus towards fascism
+			add_ideas = usa_goldstar_network_idea
+			skip_line_tt = yes
+			USA_congress_small_opposition = yes
 		}
 	}
 
@@ -14030,13 +14122,13 @@ focus_tree = {
 		x = -3
 		y = 1
 
-		cost = 10
+		cost = 4
 
 		ai_will_do = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to
+			FOCUS_FILTER_POLITICAL
 		}
 		available = {
 
@@ -14046,7 +14138,13 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			add_political_power = 30
+			skip_line_tt = yes
+			USA_AN_improve_under_crisis_spirit = yes
+			add_timed_idea = {
+				idea = usa_community_aid_programs_ti
+				days = 180
+			}
 		}
 	}
 
@@ -14059,13 +14157,13 @@ focus_tree = {
 		x = -1
 		y = 2
 
-		cost = 10
+		cost = 3
 
 		ai_will_do = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to
+			FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL
 		}
 		available = {
 
@@ -14075,7 +14173,12 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			add_stability = -0.05
+			add_war_support = 0.05
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
 		}
 	}
 
@@ -14088,13 +14191,13 @@ focus_tree = {
 		x = -5
 		y = 2
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to
+			FOCUS_FILTER_POLITICAL FOCUS_FILTER_CONSUMER_GOODS FOCUS_FILTER_INDUSTRY FOCUS_FILTER_USA_CONGRESS
 		}
 		available = {
 
@@ -14104,7 +14207,80 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			add_political_power = -25
+			skip_line_tt = yes
+			custom_effect_tooltip = USA_properly_account_for_the_carpetbaggers_tt
+			effect_tooltip = {
+				add_dynamic_modifier = {
+					modifier = USA_carpetbaggers_modifier
+				}
+			}
+			skip_line_tt = yes
+			USA_congress_medium_opposition = yes
+			skip_line_tt = yes
+			USA_modify_gov = yes
+			add_to_variable = {
+				USA_gov_dy_political_power_factor = -0.05
+				tooltip = political_power_factor_tt
+			}
+			skip_line_tt = yes
+			USA_modify_eco = yes
+			add_to_variable = {
+				USA_eco_dy_consumer_goods_factor = 0.03
+				tooltip = special_consumer_goods_factor_tt
+			}
+			hidden_effect = {
+				366 = {
+					add_dynamic_modifier = {
+						modifier = USA_carpetbaggers_modifier
+					}
+				}
+				365 = {
+					add_dynamic_modifier = {
+						modifier = USA_carpetbaggers_modifier
+					}
+				}
+				364 = {
+					add_dynamic_modifier = {
+						modifier = USA_carpetbaggers_modifier
+					}
+				}
+				363 = {
+					add_dynamic_modifier = {
+						modifier = USA_carpetbaggers_modifier
+					}
+				}
+				367 = {
+					add_dynamic_modifier = {
+						modifier = USA_carpetbaggers_modifier
+					}
+				}
+				370 = {
+					add_dynamic_modifier = {
+						modifier = USA_carpetbaggers_modifier
+					}
+				}
+				371 = {
+					add_dynamic_modifier = {
+						modifier = USA_carpetbaggers_modifier
+					}
+				}
+				368 = {
+					add_dynamic_modifier = {
+						modifier = USA_carpetbaggers_modifier
+					}
+				}
+				369 = {
+					add_dynamic_modifier = {
+						modifier = USA_carpetbaggers_modifier
+					}
+				}
+				362 = {
+					add_dynamic_modifier = {
+						modifier = USA_carpetbaggers_modifier
+					}
+				}
+			}
 		}
 	}
 
@@ -14117,23 +14293,30 @@ focus_tree = {
 		x = -6
 		y = 3
 
-		cost = 10
+		cost = 4
 
 		ai_will_do = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to
+			FOCUS_FILTER_USA_CONGRESS FOCUS_FILTER_POLITICAL
 		}
 		available = {
-
+			congress_high_support_trigger = no
 		}
 		
 		bypass = {
 		}
 
 		completion_reward = {
-
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+			skip_line_tt = yes
+			custom_effect_tooltip = USA_the_gettysburg_debate_tt
+			skip_line_tt = yes
+			USA_congress_large_opposition = yes
 		}
 	}
 
@@ -14146,23 +14329,33 @@ focus_tree = {
 		x = -3
 		y = 2
 
-		cost = 10
+		cost = 4
 
 		ai_will_do = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to
+			FOCUS_FILTER_USA_CONGRESS FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY
 		}
 		available = {
-
+			congress_medium_support_trigger = no
 		}
 		
 		bypass = {
 		}
 
 		completion_reward = {
-
+			add_stability = -0.05
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.10
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+			skip_line_tt = yes
+			USA_congress_small_opposition = yes
 		}
 	}
 
@@ -14179,24 +14372,43 @@ focus_tree = {
 		x = -4
 		y = 3
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to
+			FOCUS_FILTER_STABILITY FOCUS_FILTER_USA_CONGRESS FOCUS_FILTER_POLITICAL
 		}
 		available = {
 			recovery_past_stage_1 = yes
 			has_country_flag = SC_new_frontier_chosen_flag
+			congress_medium_support_trigger = yes
 		}
 		
 		bypass = {
 		}
 
 		completion_reward = {
-
+			add_political_power = 75
+			skip_line_tt = yes
+			USA_modify_gov = yes
+			add_to_variable = {
+				USA_gov_dy_political_power_factor = 0.10
+				tooltip = political_power_factor_tt
+			}
+			add_to_variable = {
+				USA_gov_dy_party_popularity_stability_factor = 0.05
+				tooltip = party_popularity_stability_factor_tt
+			}
+			add_to_variable = {
+				USA_gov_dy_faction_trade_opinion_factor = 0.25
+				tooltip = faction_trade_opinion_factor_tt
+			}
+			add_to_variable = {
+				USA_gov_dy_join_faction_tension = 0.15
+				tooltip = join_faction_tension_tt
+			}
 		}
 	}
 
@@ -14214,24 +14426,56 @@ focus_tree = {
 		x = -2
 		y = 3
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to
+			FOCUS_FILTER_USA_CONGRESS FOCUS_FILTER_WAR_SUPPORT
 		}
 		available = {
 			recovery_past_stage_1 = yes
 			has_country_flag = SC_new_america_chosen_flag
+			congress_medium_support_trigger = yes
 		}
 		
 		bypass = {
 		}
 
 		completion_reward = {
-
+			custom_effect_tooltip = USA_first_among_equals_tt
+			skip_line_tt = yes
+			add_war_support = 0.10
+			skip_line_tt = yes
+			every_other_country = {
+				limit = {
+					not = {
+						is_in_faction_with = USA
+					}
+					not = {
+						is_subject_of = USA
+					}
+				}
+				add_opinion_modifier = {
+					target = FROM
+					modifier = usa_first_among_equals_modifier
+				}
+			}
+			skip_line_tt = yes
+			USA_modify_gov = yes
+			add_to_variable = {
+				USA_gov_dy_enemy_justify_war_goal_time = -0.15
+				tooltip = enemy_justify_war_goal_time_tt
+			}
+			add_to_variable = {
+				USA_gov_dy_enemy_declare_war_tension = -0.15
+				tooltip = enemy_declare_war_tension_tt
+			}
+			add_to_variable = {
+				USA_gov_dy_join_faction_tension = 0.30
+				tooltip = join_faction_tension_tt
+			}
 		}
 	}
 
@@ -14244,13 +14488,13 @@ focus_tree = {
 		x = -6
 		y = 4
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to
+			FOCUS_FILTER_USA_CONGRESS FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY
 		}
 		available = {
 
@@ -14260,7 +14504,12 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			add_timed_idea = {
+				idea = usa_patriot_parades_ti
+				days = 180
+			}
+			skip_line_tt = yes
+			USA_congress_medium_support = yes
 		}
 	}
 
@@ -14273,23 +14522,36 @@ focus_tree = {
 		x = -0
 		y = 4
 
-		cost = 10
+		cost = 4
 
 		ai_will_do = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to
+			FOCUS_FILTER_Attending_to FOCUS_FILTER_POLITICAL
 		}
 		available = {
-
+			has_equipment = {
+				infantry_equipment > 4999
+			}
 		}
 		
 		bypass = {
 		}
 
 		completion_reward = {
-
+			custom_effect_tooltip = USA_patriots_stand_ready_tt
+			skip_line_tt = yes
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.03
+			}
+			skip_line_tt = yes
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -5000
+				#producer = USA
+			}
 		}
 	}
 
@@ -14302,23 +14564,29 @@ focus_tree = {
 		x = -3
 		y = 4
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to
+			FOCUS_FILTER_Attending_to FOCUS_FILTER_USA_CONGRESS FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY
 		}
 		available = {
-
+			congress_low_support_trigger = no
 		}
 		
 		bypass = {
 		}
 
 		completion_reward = {
-
+			# create an event that does the actual fiasco
+			add_political_power = -50
+			add_stability = -0.10
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.15
+			}
 		}
 	}
 
@@ -14332,26 +14600,33 @@ focus_tree = {
 		x = -5
 		y = 6
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to
+			FOCUS_FILTER_Attending_to FOCUS_FILTER_USA_CONGRESS FOCUS_FILTER_POLITICAL
 		}
 		available = {
+			fascism > 0.4
 			OR = {
 				has_completed_focus = USA_the_gettysburg_debate
 				has_completed_focus = USA_the_goldstar_network
 			}
+			congress_low_support_trigger = yes
 		}
 		
 		bypass = {
 		}
 
 		completion_reward = {
-
+			# create news events about the amendment
+			add_political_power = 100
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.15
+			}
 		}
 	}
 
@@ -14365,13 +14640,13 @@ focus_tree = {
 		x = -1
 		y = 5
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to
+			FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL
 		}
 		available = {
 
@@ -14381,7 +14656,11 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			add_stability = -0.05
+			add_war_support = 0.10
+			skip_line_tt = yes
+			add_ideas = usa_what_the_future_holds_ti
+			custom_effect_tooltip = USA_what_the_future_holds_tt
 		}
 	}
 
@@ -14394,7 +14673,7 @@ focus_tree = {
 		x = -1
 		y = 6
 
-		cost = 10
+		cost = 4
 
 		ai_will_do = {
 			factor = 1
@@ -14410,7 +14689,40 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			# Starts civil war
+		}
+	}
 
+	focus = { # Swift and Lethal
+		id = USA_swift_and_lethal
+		icon = GFX_focus_RAJ_give_me_blood_and_i_will_grant_you_freedom
+		relative_position_id = USA_tend_to_the_nation
+		prerequisite = { focus = USA_paul_revere_rides_again }
+
+		x = 1
+		y = 7
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {
+			FOCUS_FILTER_Attending_to
+		}
+		available = {
+			has_civil_war = yes
+		}
+		
+		bypass = {
+		}
+
+		completion_reward = {
+			# Grants bonuses during the civil war
+			add_timed_idea = {
+				idea = usa_swift_and_lethal_ti
+				days = 90
+			}
 		}
 	}
 
@@ -14435,6 +14747,7 @@ focus_tree = {
 			FOCUS_FILTER_Attending_to
 		}
 		available = {
+			has_civil_war = no
 			has_completed_focus = USA_the_goldstar_network
 		}
 		
@@ -14442,12 +14755,28 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = USA_the_goldstar_federation_tt_2
+			skip_line_tt = yes
+			hidden_effect = {
+				add_dynamic_modifier = {
+					modifier = USA_goldstar_dynamic_modifier
+				}
+			}
+			hidden_effect = { country_event = { id = new_usa_an_goldstar_federation_event.1 days = 2 } }
 			set_cosmetic_tag = USA_goldstar
+			skip_line_tt = yes
+			set_party_name = {
+				ideology = fascism
+				long_name = USA_AN_GOLDSTAR_FASCIST_PARTY_NAME_LONG
+				name = USA_AN_GOLDSTAR_FASCIST_PARTY_NAME_SHORT
+			}
 			set_politics = {
 				ruling_party = fascism
 				elections_allowed = yes
 				election_frequency = 48
 			}
+			skip_line_tt = yes
+			set_faction_name = USA_the_goldstar_federation_tt
 		}
 	}
 
@@ -14472,6 +14801,7 @@ focus_tree = {
 			FOCUS_FILTER_Attending_to
 		}
 		available = {
+			has_civil_war = no
 			has_completed_focus = USA_the_gettysburg_debate
 		}
 		
@@ -14480,6 +14810,7 @@ focus_tree = {
 
 		completion_reward = {
 			set_cosmetic_tag = USA_american_nationalist
+			skip_line_tt = yes
 			set_politics = {
 				ruling_party = fascism
 				elections_allowed = yes
@@ -14488,35 +14819,7 @@ focus_tree = {
 		}
 	}
 
-	focus = { # Swift and Lethal
-		id = USA_swift_and_lethal
-		icon = GFX_focus_RAJ_give_me_blood_and_i_will_grant_you_freedom
-		relative_position_id = USA_tend_to_the_nation
-		prerequisite = { focus = USA_paul_revere_rides_again }
-
-		x = 1
-		y = 7
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-		search_filters = {
-			FOCUS_FILTER_Attending_to
-		}
-		available = {
-			has_civil_war = yes
-		}
-		
-		bypass = {
-		}
-
-		completion_reward = {
-
-		}
-	}
-
+  # Post Flip
 	focus = { # Peace Guarantees for Our Neighbors
 		id = USA_peace_guarantees_for_our_neighbors
 		icon = GFX_focus_generic_world_peace
@@ -14531,23 +14834,37 @@ focus_tree = {
 		x = -8
 		y = 8
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to
+			FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT
 		}
 		available = {
-			#has_completed_focus = USA_the_parkerite_act
+			has_offensive_war = no
 		}
 		
 		bypass = {
 		}
 
 		completion_reward = {
-
+			add_political_power = 175
+			add_stability = 0.10
+			add_war_support = -0.05
+			skip_line_tt = yes
+			every_other_country = {
+				limit = {
+					OR = {
+						is_neighbor_of = USA
+						original_tag = ENG
+						original_tag = MEX
+						original_tag = DEN
+					}
+				}
+				country_event = { id = new_usa_an_peace_guarantees_for_neighbors_event.1 days = 1 random_days = 2 }
+			}
 		}
 	}
 
@@ -14691,16 +15008,19 @@ focus_tree = {
 		x = -8
 		y = 10
 
-		cost = 10
+		cost = 4
 
 		ai_will_do = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to
+			FOCUS_FILTER_POLITICAL
 		}
 		available = {
-			#has_completed_focus = USA_the_parkerite_act
+			NOT = {
+				has_war_with = CAN
+				has_war_with = MEX
+			}
 		}
 		
 		bypass = {
@@ -14708,11 +15028,35 @@ focus_tree = {
 
 		completion_reward = {
 			# gives bonuses to neighbors and makes them like us
+			add_political_power = 30
+			skip_line_tt = yes
+			every_other_country = {
+				limit = {
+					OR = {
+						original_tag = MEX
+						original_tag = CAN
+					}
+					NOT = {
+						has_government = communism
+					}
+				}
+				add_political_power = 30
+				add_opinion_modifier = {
+					target = USA
+					modifier = usa_ballads_between_brothers_modifier
+				}
+				USA = {
+					add_opinion_modifier = {
+						target = PREV
+						modifier = usa_ballads_between_brothers_modifier
+					}
+				}
+			}
 		}
 	}
 
-	focus = { # Establish the Rio Grande
-		id = USA_establish_the_rio_grande
+	focus = { # Establish the New Southern States
+		id = USA_establish_the_new_southern_states
 		icon = GFX_focus_mex_caudillo_private_armies
 		relative_position_id = USA_tend_to_the_nation
 		prerequisite = { focus = USA_peace_guarantees_for_our_neighbors }
@@ -14720,23 +15064,118 @@ focus_tree = {
 		x = -9
 		y = 11
 
-		cost = 10
+		cost = 6
 
 		ai_will_do = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to
+			FOCUS_FILTER_CONSUMER_GOODS
 		}
 		available = {
 			#has_completed_focus = USA_the_parkerite_act
 		}
 		
 		bypass = {
+			any_other_country = {
+				is_subject_of = USA
+				owns_state = 479
+				owns_state = 480
+				original_tag = RIG
+			}
+			any_other_country = {
+				is_subject_of = USA
+				owns_state = 482
+				owns_state = 483
+				owns_state = 484
+				original_tag = RSN
+			}
+		}
+		enable_automatic_bypass = no
+		bypass_effect = {
+			set_global_flag = usa_prudence_across_the_land_flag
 		}
 
 		completion_reward = {
-			# creates an integrated puppet out of Tamaulipas and Coahuila
+			# creates a pair of integrated puppets
+			if = {
+				limit = {
+					controls_state = 479
+					controls_state = 480
+				}
+				USA_AN_create_RIG = yes
+				set_global_flag = usa_prudence_across_the_land_flag
+			}
+			else_if = {
+				limit = { Or = { controls_state = 479 controls_state = 480 } }
+				USA_AN_create_RIG = yes
+				set_global_flag = usa_prudence_across_the_land_flag
+				else = {
+				every_other_country = {
+						limit = {
+							OR = {
+								owns_state = 479
+								owns_state = 480
+							}
+						}
+						country_event = { id = new_usa_an_establish_the_rio_grande_event.1 random_days = 2 }
+					}
+				}
+			}
+			else = {
+				every_other_country = {
+					limit = {
+						OR = {
+							owns_state = 479
+							owns_state = 480
+						}
+					}
+					country_event = { id = new_usa_an_establish_the_rio_grande_event.1 random_days = 2 }
+				}
+			}
+			if = {
+				limit = {
+					controls_state = 482
+					controls_state = 483
+					controls_state = 484
+				}
+				USA_AN_create_RNS = yes
+			}
+			else_if = {
+				limit = { or = { controls_state = 482 controls_state = 483 controls_state = 484 }}
+				USA_AN_create_RNS = yes
+				every_other_country = {
+					limit = {
+						OR = {
+							owns_state = 482
+							owns_state = 483
+							owns_state = 484
+						}
+					}
+					country_event = { id = new_usa_an_establish_sonora_event.1 random_days = 2 }
+				}
+			}
+			else = {
+				every_other_country = {
+					limit = {
+						OR = {
+							owns_state = 482
+							owns_state = 483
+							owns_state = 484
+						}
+					}
+					country_event = { id = new_usa_an_establish_sonora_event.1 random_days = 2 }
+				}
+			}
+			custom_effect_tooltip = USA_bribe_the_canadian_government_tt
+			custom_effect_tooltip = USA_establish_the_new_southern_states_tt
+			effect_tooltip = {
+				set_global_flag = usa_prudence_across_the_land_flag
+				add_timed_idea = {
+					idea = usa_the_new_southern_states_ti
+					days = 180
+				}
+			}
 		}
 	}
 
@@ -14749,23 +15188,106 @@ focus_tree = {
 		x = -7
 		y = 11
 
-		cost = 10
+		cost = 6
 
 		ai_will_do = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to
+			FOCUS_FILTER_CONSUMER_GOODS
 		}
 		available = {
 			#has_completed_focus = USA_the_parkerite_act
 		}
 		
 		bypass = {
+			owns_state = 864
+			864 = {
+				is_core_of = USA
+			}
+			owns_state = 471
+			471 = {
+				is_core_of = USA
+			}
+			owns_state = 739
+			739 = {
+				is_core_of = USA
+			}
+			owns_state = 740
+			740 = {
+				is_core_of = USA
+			}
+			owns_state = 473
+			473 = {
+				is_core_of = USA
+			}
+		}
+		enable_automatic_bypass = no
+		bypass_effect = {
+			set_global_flag = usa_prudence_across_the_land_flag
 		}
 
 		completion_reward = {
 			# Canadian Corridor
+			if = {
+				limit = {
+					controls_state = 864
+					controls_state = 471
+					controls_state = 739
+					controls_state = 740
+					controls_state = 473
+				}
+				if = { limit = { not = { 864 = { is_core_of = USA } } } 864 = { add_core_of = USA } }
+				if = { limit = { not = { 471 = { is_core_of = USA } } } 471 = { add_core_of = USA } }
+				if = { limit = { not = { 739 = { is_core_of = USA } } } 739 = { add_core_of = USA } }
+				if = { limit = { not = { 740 = { is_core_of = USA } } } 740 = { add_core_of = USA } }
+				if = { limit = { not = { 473 = { is_core_of = USA } } } 473 = { add_core_of = USA } }
+				set_global_flag = usa_prudence_across_the_land_flag
+			}
+			else_if = {
+				limit = { or = { controls_state = 864 controls_state = 471 controls_state = 739 controls_state = 740 controls_state = 473 } }
+				if = { limit = { controls_state = 864 not = { 864 = { is_core_of = USA } } } 864 = { add_core_of = USA } }
+				if = { limit = { controls_state = 471 not = { 471 = { is_core_of = USA } } } 471 = { add_core_of = USA } }
+				if = { limit = { controls_state = 739 not = { 739 = { is_core_of = USA } } } 739 = { add_core_of = USA } }
+				if = { limit = { controls_state = 740 not = { 740 = { is_core_of = USA } } } 740 = { add_core_of = USA } }
+				if = { limit = { controls_state = 473 not = { 473 = { is_core_of = USA } } } 473 = { add_core_of = USA } }
+				every_other_country = {
+					limit = {
+						OR = {
+							controls_state = 864
+							controls_state = 471
+							controls_state = 739
+							controls_state = 740
+							controls_state = 473
+						}
+					}
+					country_event = new_usa_country_roads_through_the_north_event.1
+				}
+				set_global_flag = usa_prudence_across_the_land_flag
+			}
+			else = {
+				every_other_country = {
+					limit = {
+						OR = {
+							controls_state = 864
+							controls_state = 471
+							controls_state = 739
+							controls_state = 740
+							controls_state = 473
+						}
+					}
+					country_event = new_usa_country_roads_through_the_north_event.1
+				}
+			}
+			custom_effect_tooltip = USA_bribe_the_canadian_government_tt
+			custom_effect_tooltip = USA_establish_the_new_southern_states_tt
+			effect_tooltip = {
+				set_global_flag = usa_prudence_across_the_land_flag
+				add_timed_idea = {
+					idea = usa_us_bribe_canada_ti
+					days = 180
+				}
+			}
 		}
 	}
 
@@ -14773,21 +15295,21 @@ focus_tree = {
 		id = USA_prudence_across_the_land
 		icon = GFX_focus_SIA_built_to_withstand_every_flame
 		relative_position_id = USA_tend_to_the_nation
-		prerequisite = { focus = USA_establish_the_rio_grande focus = USA_country_roads_through_the_north }
+		prerequisite = { focus = USA_establish_the_new_southern_states focus = USA_country_roads_through_the_north }
 
 		x = -8
 		y = 12
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to
+			FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY
 		}
 		available = {
-			#At least one of Canada and Mexico agreed
+			has_global_flag = usa_prudence_across_the_land_flag
 		}
 		
 		bypass = {
@@ -14795,6 +15317,7 @@ focus_tree = {
 
 		completion_reward = {
 			# Grant bonuses to building defenses and defense in general
+			add_ideas = usa_prudence_across_the_land_idea
 		}
 	}
 
@@ -14920,15 +15443,16 @@ focus_tree = {
 		x = 4
 		y = 9
 
-		cost = 10
+		cost = 6
 
 		ai_will_do = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to
+			FOCUS_FILTER_Attending_to FOCUS_FILTER_SPY_AGENCY
 		}
 		available = {
+			has_intelligence_agency = yes
 		}
 		
 		bypass = {
@@ -14936,6 +15460,39 @@ focus_tree = {
 
 		completion_reward = {
 			# Grants compliance bonuses, spy slots, and spy defense
+			USA_modify_oss = yes
+			add_to_variable = {
+				USA_dy_agy_agency_upgrade_time = -0.50
+				tooltip = agency_upgrade_time_tt
+			}
+			add_to_variable = {
+				USA_dy_agy_civilian_intel_to_others = -10
+				tooltip = civilian_intel_to_others_tt
+			}
+			add_to_variable = {
+				USA_dy_agy_army_intel_to_others = -10
+				tooltip = army_intel_to_others_tt
+			}
+			add_to_variable = {
+				USA_dy_agy_navy_intel_to_others = -10
+				tooltip = navy_intel_to_others_tt
+			}
+			add_to_variable = {
+				USA_dy_agy_airforce_intel_to_others = -10
+				tooltip = airforce_intel_to_others_tt
+			}
+			add_to_variable = {
+				USA_dy_agy_crypto_strength = 2
+				tooltip = crypto_strength_tt
+			}
+			add_to_variable = {
+				USA_dy_agy_enemy_operative_detection_chance_factor = 0.20
+				tooltip = enemy_operative_detection_chance_factor_tt
+			}
+			add_to_variable = {
+				USA_dy_agy_operative_slot = 2
+				tooltip = operative_slot_tt
+			}
 		}
 	}
 
@@ -15180,7 +15737,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 20
 		}
-		search_filters = { FOCUS_FILTER_Attending_to FOCUS_FILTER_HOMELAND_DEFENSE }
+		search_filters = { FOCUS_FILTER_HOMELAND_DEFENSE }
 		available = {
 			recovery_past_stage_1 = yes
 			has_civil_war = no
@@ -15237,7 +15794,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		search_filters = { FOCUS_FILTER_Attending_to FOCUS_FILTER_HOMELAND_DEFENSE FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_HOMELAND_DEFENSE FOCUS_FILTER_INDUSTRY }
 		available = {has_civil_war = no}
 		
 		bypass = {
@@ -15281,7 +15838,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		search_filters = { FOCUS_FILTER_Attending_to FOCUS_FILTER_HOMELAND_DEFENSE }
+		search_filters = { FOCUS_FILTER_HOMELAND_DEFENSE }
 		available = {has_civil_war = no}
 		
 		bypass = {
@@ -15328,7 +15885,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		search_filters = { FOCUS_FILTER_Attending_to FOCUS_FILTER_RESEARCH FOCUS_FILTER_HOMELAND_DEFENSE }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_HOMELAND_DEFENSE }
 		available = {has_civil_war = no}
 		
 		bypass = {
@@ -15373,7 +15930,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		search_filters = { FOCUS_FILTER_HOMELAND_DEFENSE FOCUS_FILTER_Attending_to }
+		search_filters = { FOCUS_FILTER_HOMELAND_DEFENSE }
 		available = {has_civil_war = no}
 		
 		bypass = {
@@ -15416,7 +15973,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		search_filters = { FOCUS_FILTER_Attending_to FOCUS_FILTER_CONSUMER_GOODS FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH FOCUS_FILTER_HOMELAND_DEFENSE }
+		search_filters = { FOCUS_FILTER_CONSUMER_GOODS FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH FOCUS_FILTER_HOMELAND_DEFENSE }
 		available = { has_civil_war = no }
 		
 		bypass = {
@@ -34832,6 +35389,12 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			hidden_effect = {
+				if = {
+					limit = { has_completed_focus = USA_american_architectural_administration has_completed_focus = USA_american_wellspring_administration has_completed_focus = USA_industrial_funding }
+					country_event = { id = new_usa_the_eagle_lifts_its_wings.1 }
+				}
+			}
 			add_popularity = {
 				ideology = fascism
 				popularity = 0.05
@@ -35138,7 +35701,7 @@ focus_tree = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to FOCUS_FILTER_CONSUMER_GOODS FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_CONSUMER_GOODS FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL
 		}
 		available = {
 			has_government = fascism
@@ -35286,10 +35849,11 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = USA_FREE_department_expansion_tt_2
 			skip_line_tt = yes
+			USA_AN_improve_under_crisis_spirit = yes
 			USA_modify_eco = yes
 			add_to_variable = {
 				USA_eco_dy_consumer_goods_factor = 0.05
-				tooltip = consumer_goods_factor_tt
+				tooltip = special_consumer_goods_factor_tt
 			}
 			skip_line_tt = yes
 			custom_effect_tooltip = USA_FREE_department_expansion_tt
@@ -35396,7 +35960,7 @@ focus_tree = {
 			USA_modify_eco = yes
 			add_to_variable = {
 				USA_eco_dy_consumer_goods_factor = 0.125
-				tooltip = consumer_goods_factor_tt
+				tooltip = special_consumer_goods_factor_tt
 			}
 			skip_line_tt = yes
 			custom_effect_tooltip = USA_FREE_print_money_to_fund_FREE_tt
@@ -35449,7 +36013,7 @@ focus_tree = {
 			USA_modify_eco = yes
 			add_to_variable = {
 				USA_eco_dy_consumer_goods_factor = 0.05
-				tooltip = consumer_goods_factor_tt
+				tooltip = special_consumer_goods_factor_tt
 			}
 			skip_line_tt = yes
 			custom_effect_tooltip = USA_FREE_undersecretariat_for_sectoral_administration_tt
@@ -36208,6 +36772,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			USA_AN_improve_under_crisis_spirit = yes
 			if = {
 				limit = { has_completed_focus = USA_ohio_mechanical_complex }
 				hidden_effect = { # start Stars on the Horizon
@@ -36667,7 +37232,7 @@ focus_tree = {
 			USA_modify_eco = yes
 			add_to_variable = {
 				USA_eco_dy_consumer_goods_factor = -0.03
-				tooltip = consumer_goods_factor_tt
+				tooltip = special_v_consumer_goods_factor_tt
 			}
 			add_to_variable = {
 				USA_eco_dy_local_resources_factor = 0.03
@@ -36873,6 +37438,12 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			hidden_effect = {
+				if = {
+					limit = { has_completed_focus = USA_american_architectural_administration has_completed_focus = USA_industrial_funding has_completed_focus = USA_stars_on_the_horizon }
+					country_event = { id = new_usa_the_eagle_lifts_its_wings.1 }
+				}
+			}
 			custom_effect_tooltip = USA_american_wellspring_administration_tt
 			skip_line_tt = yes
 			random_owned_controlled_state = {
@@ -36975,6 +37546,12 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			hidden_effect = {
+				if = {
+					limit = { has_completed_focus = USA_industrial_funding has_completed_focus = USA_american_wellspring_administration has_completed_focus = USA_stars_on_the_horizon }
+					country_event = { id = new_usa_the_eagle_lifts_its_wings.1 }
+				}
+			}
 			custom_effect_tooltip = USA_american_architectural_administration_tt
 			skip_line_tt = yes
 			random_owned_controlled_state = {
@@ -37238,7 +37815,7 @@ focus_tree = {
 			usa_modify_eco = yes
 			add_to_variable = {
 				USA_eco_dy_consumer_goods_factor = 0.05
-				tooltip = consumer_goods_factor_tt
+				tooltip = special_consumer_goods_factor_tt
 			}
 			add_to_variable = {
 				USA_eco_dy_production_factory_efficiency_gain_factor = 0.10
@@ -37356,7 +37933,7 @@ focus_tree = {
 			usa_modify_eco = yes
 			add_to_variable = {
 				USA_eco_dy_consumer_goods_factor = -0.15
-				tooltip = consumer_goods_factor_tt
+				tooltip = special_v_consumer_goods_factor_tt
 			}
 			add_to_variable = {
 				USA_eco_dy_trade_laws_cost_factor = -0.15
@@ -37750,7 +38327,7 @@ focus_tree = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to FOCUS_FILTER_INDUSTRY	FOCUS_FILTER_CONSUMER_GOODS
+			FOCUS_FILTER_INDUSTRY	FOCUS_FILTER_CONSUMER_GOODS
 		}
 		allow_branch = {
 			if = {
@@ -37833,7 +38410,7 @@ focus_tree = {
 			USA_modify_eco = yes
 			add_to_variable = {
 				USA_eco_dy_consumer_goods_factor = 0.03
-				tooltip = consumer_goods_factor_tt
+				tooltip = special_consumer_goods_factor_tt
 			}
 			USA_AN_FREE_mil_up_low = yes
 		}
@@ -37854,7 +38431,7 @@ focus_tree = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY
+			FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY
 		}
 		available = {
 
@@ -37922,7 +38499,7 @@ focus_tree = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to FOCUS_FILTER_INDUSTRY
+			FOCUS_FILTER_INDUSTRY
 		}
 		available = {
 
@@ -37984,9 +38561,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		search_filters = {
-			FOCUS_FILTER_Attending_to
-		}
+		#search_filters = {
+		#	
+		#}
 		available = {
 
 		}
@@ -38023,9 +38600,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		search_filters = {
-			FOCUS_FILTER_Attending_to
-		}
+		#search_filters = {
+		#	
+		#}
 		available = {
 			OR = {
 				has_mastery = {
@@ -38083,7 +38660,7 @@ focus_tree = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY
+			FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY
 		}
 		available = {
 
@@ -38153,7 +38730,7 @@ focus_tree = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to FOCUS_FILTER_INDUSTRY
+			FOCUS_FILTER_INDUSTRY
 		}
 		available = {
 
@@ -38216,9 +38793,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		search_filters = {
-			FOCUS_FILTER_Attending_to
-		}
+		#search_filters = {
+		#	
+		#}
 		available = {
 
 		}
@@ -38263,9 +38840,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		search_filters = {
-			FOCUS_FILTER_Attending_to
-		}
+		#search_filters = {
+		#	
+		#}
 		available = {
 			OR = {
 				has_mastery = {
@@ -38325,7 +38902,7 @@ focus_tree = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to FOCUS_FILTER_INDUSTRY
+			FOCUS_FILTER_INDUSTRY
 		}
 		available = {
 
@@ -38375,7 +38952,7 @@ focus_tree = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to FOCUS_FILTER_CONSUMER_GOODS FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH
+			FOCUS_FILTER_CONSUMER_GOODS FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH
 		}
 		available = {
 
@@ -38385,6 +38962,13 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			hidden_effect = {
+				if = {
+					limit = { has_completed_focus = USA_american_architectural_administration has_completed_focus = USA_american_wellspring_administration has_completed_focus = USA_stars_on_the_horizon }
+					country_event = { id = new_usa_the_eagle_lifts_its_wings.1 }
+				}
+			}
+			USA_AN_improve_under_crisis_spirit = yes
 			add_timed_idea = {
 				idea = usa_industrial_funding_ti
 				days = 210
@@ -38401,7 +38985,7 @@ focus_tree = {
 			usa_modify_eco = yes
 			add_to_variable = {
 				USA_eco_dy_consumer_goods_factor = 0.03
-				tooltip = consumer_goods_factor_tt
+				tooltip = special_consumer_goods_factor_tt
 			}
 			USA_AN_FREE_civ_up_med = yes
 		}
@@ -38422,7 +39006,7 @@ focus_tree = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to FOCUS_FILTER_INDUSTRY
+			FOCUS_FILTER_INDUSTRY
 		}
 		available = {
 			has_tech = computing_machine
@@ -38461,9 +39045,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		search_filters = {
-			FOCUS_FILTER_Attending_to
-		}
+		#search_filters = {
+		#	
+		#}
 		available = {
 			has_army_manpower = {
 				size > 1500000
