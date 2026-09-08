@@ -1,8 +1,8 @@
 USA_congress = {
-	USA_DEBUG = {
+	USA_DEBUG_1 = {
 		icon = generic_political_rally
 		visible = {
-			always = no
+			always = yes
 		}
 		available = {
 			always = yes
@@ -11,10 +11,185 @@ USA_congress = {
 		ai_will_do = {
 		}
 		remove_effect = {
-			RIG = {
-				set_cosmetic_tag = USA_integrated_puppet_goldstar
-			}
-			set_cosmetic_tag = USA_integrated_puppet_goldstar
+			GER = { transfer_state = 362 } # Virginia
+			GER = { transfer_state = 363 } # NC
+			GER = { transfer_state = 364 } # SC
+			GER = { transfer_state = 365 } # Georgia
+			GER = { transfer_state = 366 } # Florida
+			GER = { transfer_state = 367 } # Alabama
+			GER = { transfer_state = 370 } # Mississippi
+			GER = { transfer_state = 371 } # Louisiana
+			GER = { transfer_state = 374 } # Oklahoma
+			GER = { transfer_state = 375 } # Texas
+			GER = { transfer_state = 372 } # Arkansas
+			GER = { transfer_state = 368 } # Tennessee
+			GER = { transfer_state = 373 } # Missouri
+			GER = { transfer_state = 369 } # Kentucky
+			GER = { transfer_state = 376 } # New Mexico
+			GER = { transfer_state = 383 } # Kansas
+			GER = { transfer_state = 378 } # California
+			GER = { transfer_state = 385 } # Oregon
+			GER = { transfer_state = 379 } # Nevada
+			GER = { transfer_state = 388 } # Montana
+			GER = { transfer_state = 389 } # North Dakota
+		}
+	}
+	USA_DEBUG_1b = {
+		icon = generic_political_rally
+		visible = {
+			always = yes
+		}
+		available = {
+			always = yes
+		}
+		cost = 0
+		ai_will_do = {
+		}
+		remove_effect = {
+			USA = { transfer_state = 362 } # Virginia
+			USA = { transfer_state = 363 } # NC
+			USA = { transfer_state = 364 } # SC
+			USA = { transfer_state = 365 } # Georgia
+			USA = { transfer_state = 366 } # Florida
+			USA = { transfer_state = 367 } # Alabama
+			USA = { transfer_state = 370 } # Mississippi
+			USA = { transfer_state = 371 } # Louisiana
+			USA = { transfer_state = 374 } # Oklahoma
+			USA = { transfer_state = 375 } # Texas
+			USA = { transfer_state = 372 } # Arkansas
+			USA = { transfer_state = 368 } # Tennessee
+			USA = { transfer_state = 373 } # Missouri
+			USA = { transfer_state = 369 } # Kentucky
+			USA = { transfer_state = 376 } # New Mexico
+			USA = { transfer_state = 383 } # Kansas
+			USA = { transfer_state = 378 } # California
+			USA = { transfer_state = 385 } # Oregon
+			USA = { transfer_state = 379 } # Nevada
+			USA = { transfer_state = 388 } # Montana
+			USA = { transfer_state = 389 } # North Dakota
+		}
+	}
+	USA_DEBUG_2 = {
+		icon = generic_political_rally
+		visible = {
+			always = yes
+		}
+		available = {
+			always = yes
+		}
+		cost = 0
+		ai_will_do = {
+		}
+		remove_effect = {
+			GER = { transfer_state = 362 } # Virginia
+			GER = { transfer_state = 363 } # NC
+			GER = { transfer_state = 364 } # SC
+			GER = { transfer_state = 365 } # Georgia
+			GER = { transfer_state = 366 } # Florida
+			GER = { transfer_state = 367 } # Alabama
+			GER = { transfer_state = 370 } # Mississippi
+			GER = { transfer_state = 371 } # Louisiana
+			GER = { transfer_state = 374 } # Oklahoma
+			GER = { transfer_state = 375 } # Texas
+			GER = { transfer_state = 372 } # Arkansas
+			GER = { transfer_state = 368 } # Tennessee
+			#GER = { transfer_state = 373 } # Missouri
+			GER = { transfer_state = 369 } # Kentucky
+			#GER = { transfer_state = 376 } # New Mexico
+			#GER = { transfer_state = 383 } # Kansas
+			GER = { transfer_state = 378 } # California
+			#GER = { transfer_state = 385 } # Oregon
+			#GER = { transfer_state = 379 } # Nevada
+			#GER = { transfer_state = 388 } # Montana
+			#GER = { transfer_state = 389 } # North Dakota
+		}
+	}
+	USA_DEBUG_2b = {
+		icon = generic_political_rally
+		visible = {
+			always = yes
+		}
+		available = {
+			always = yes
+		}
+		cost = 0
+		ai_will_do = {
+		}
+		remove_effect = {
+			USA = { transfer_state = 362 } # Virginia
+			USA = { transfer_state = 363 } # NC
+			USA = { transfer_state = 364 } # SC
+			USA = { transfer_state = 365 } # Georgia
+			USA = { transfer_state = 366 } # Florida
+			USA = { transfer_state = 367 } # Alabama
+			USA = { transfer_state = 370 } # Mississippi
+			USA = { transfer_state = 371 } # Louisiana
+			USA = { transfer_state = 374 } # Oklahoma
+			USA = { transfer_state = 375 } # Texas
+			USA = { transfer_state = 372 } # Arkansas
+			USA = { transfer_state = 368 } # Tennessee
+			USA = { transfer_state = 369 } # Kentucky
+			USA = { transfer_state = 378 } # California
+		}
+	}
+	USA_DEBUG_3 = {
+		icon = generic_political_rally
+		visible = {
+			always = yes
+		}
+		available = {
+			always = yes
+		}
+		cost = 0
+		ai_will_do = {
+		}
+		remove_effect = {
+			GER = { transfer_state = 362 } # Virginia
+			GER = { transfer_state = 363 } # NC
+			GER = { transfer_state = 364 } # SC
+			GER = { transfer_state = 365 } # Georgia
+			GER = { transfer_state = 366 } # Florida
+			GER = { transfer_state = 367 } # Alabama
+			GER = { transfer_state = 370 } # Mississippi
+			GER = { transfer_state = 371 } # Louisiana
+			#GER = { transfer_state = 374 } # Oklahoma
+			GER = { transfer_state = 375 } # Texas
+			#GER = { transfer_state = 372 } # Arkansas
+			GER = { transfer_state = 368 } # Tennessee
+			#GER = { transfer_state = 373 } # Missouri
+			GER = { transfer_state = 369 } # Kentucky
+			#GER = { transfer_state = 376 } # New Mexico
+			#GER = { transfer_state = 383 } # Kansas
+			#GER = { transfer_state = 378 } # California
+			#GER = { transfer_state = 385 } # Oregon
+			#GER = { transfer_state = 379 } # Nevada
+			#GER = { transfer_state = 388 } # Montana
+			#GER = { transfer_state = 389 } # North Dakota
+		}
+	}
+	USA_DEBUG_3b = {
+		icon = generic_political_rally
+		visible = {
+			always = yes
+		}
+		available = {
+			always = yes
+		}
+		cost = 0
+		ai_will_do = {
+		}
+		remove_effect = {
+			USA = { transfer_state = 362 } # Virginia
+			USA = { transfer_state = 363 } # NC
+			USA = { transfer_state = 364 } # SC
+			USA = { transfer_state = 365 } # Georgia
+			USA = { transfer_state = 366 } # Florida
+			USA = { transfer_state = 367 } # Alabama
+			USA = { transfer_state = 370 } # Mississippi
+			USA = { transfer_state = 371 } # Louisiana
+			USA = { transfer_state = 375 } # Texas
+			USA = { transfer_state = 368 } # Tennessee
+			USA = { transfer_state = 369 } # Kentucky
 		}
 	}
 	USA_stage_a_protest = {

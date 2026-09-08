@@ -29,7 +29,7 @@
 #    Stealth / Fake / Side-Message Focuses
     USA_SM_NC_decrease_conservative_resistance: "Conservative Resistance"
 
-#    Other
+# Other
     USA_government_de_intervention: "Government De-Intervention"
     USA_government_de_intervention_desc: "The Great Depression struck hard and fast less than a decade ago, and its consequences remain stifling. However, the government response to it has not improved our situation but made it worse. In order to fix the problem, we must start by halting further harm."
 
@@ -1574,7 +1574,7 @@
 
     USA_a_fallen_roost_among_the_cinders: "A Fallen Roost Among the Cinders"
     USA_a_fallen_roost_among_the_cinders_desc: "Four years ago, the atom was split for the first time. A new danger lurks beyond the horizon and threatens to swallow up not just the US but the entire world while it is in the midst of collapse and tragedy. War is coming and humanity is not ready. Those with the eyes to see what approaches must act."
-
+# Nationalist Communist
     USA_labor_councils: "Labor Councils"
     USA_labor_councils_desc: "Across the country, labor councils will be formed in order to protect workers' rights and to coordinate a network of economic activity that will help kickstart the country back into action."
 
@@ -1886,6 +1886,7 @@
     USA_the_vision_of_1776_achieved: "The Vision of 1776 Achieved"
     USA_the_vision_of_1776_achieved_desc: "In 1776, a revolution against the old ways of Europe was officially declared. It sought to take lessons learned from the Old World and build off of them to create a New World, one where the individual is maximized and in so doing the greater community was maximized. What was started more than 150 years ago, we have now achieved! The New World will be a utopia."
 
+# American Nationalist
     USA_industrial_recovery_AN: "Industrial Recovery"
     USA_industrial_recovery_AN_desc: "The gears of industry, the steam of engines, the pace of the country is returning to a lively state once again. It has been greatly helped by those groups of Americans who have set upon themselves to work for their communities and cooperate with those groups beyond their towns."
 
@@ -1954,7 +1955,7 @@
     USA_patriots_stand_ready_tt: "When the §Ycivil war starts§!, we will gain more §Yforces§! and §Yequipment§!."
 
     USA_the_philadelphia_fiasco: "The Philadelphia Fiasco"
-    USA_the_philadelphia_fiasco_desc: "What was intended to be a large-scale community project in the heart of Philadelphia has now crumbled beyond just negligence and into outright treasonous behavior by dozens of congressmen. Embezzled funds, missing equipment, and a collapsed theater have all come together to paint a horrifying picture of our leadership's incompetence."
+    USA_the_philadelphia_fiasco_desc: "Dozens of senators and house representatives have put forward a project bill in Congress for general development in the city of Philadelphia. The jewel of the spending package is the construction of the Ambleton Theater, which will offer top-rate amenities for the city."
 
     USA_the_parkerite_act: "The Parkerite Act"
     USA_the_parkerite_act_desc: "After the tradgedy in Philadelphia, the public has been in open outcry against DC. In response, several southern senators have put forward the Parkerite Act, which will ensconse into the Constitution the 22nd Amendment, which gives states the right to an authoritative veto and oversight over all federal projects and funding within their borders or jurisdiction."
@@ -1965,10 +1966,12 @@
 
     USA_paul_revere_rides_again: "Paul Revere Rides Again"
     USA_paul_revere_rides_again_desc: "The federal government of the United States of America has lost its right to rule. It and the country as a whole must be restructured to ensure the continuity of the nation. Unfortunately, that will require a temporary schism that will have to be mended with blood and iron, but Americans love a challenge."
+    USA_paul_revere_rides_again_tt: "We will §Rstart a civil war§!!\nThe more §Yfascism support§! we have, the more §Ystates§! will side with us."
 
     USA_the_goldstar_federation: "The Goldstar Federation"
     USA_the_goldstar_federation_desc: "$TBA_TT$"
     USA_the_goldstar_federation_tt_2: "As long as the §YUSA§! remains in the §Y$USA_the_goldstar_federation_tt$§! faction, the §YUSA§! and its §Ypuppets§! will have the §Y$USA_goldstar_dynamic_modifier$§! dynamic modifier."
+    USA_the_goldstar_federation_tt_3: "Create Faction: §Y$USA_the_goldstar_federation_tt$§!."
 
     USA_the_second_confederation: "The Second Confederation"
     USA_the_second_confederation_desc: "$TBA_TT$"

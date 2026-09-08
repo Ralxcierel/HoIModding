@@ -628,6 +628,12 @@ USA_remove_all_BOP_modifiers = { # (1-18)
 		country_event = { id = new_usa_remove_bop_mod.16 }
 		country_event = { id = new_usa_remove_bop_mod.17 }
 		country_event = { id = new_usa_remove_bop_mod.18 }
+		country_event = { id = new_usa_remove_bop_mod.19 }
+		country_event = { id = new_usa_remove_bop_mod.20 }
+		country_event = { id = new_usa_remove_bop_mod.21 }
+		country_event = { id = new_usa_remove_bop_mod.22 }
+		country_event = { id = new_usa_remove_bop_mod.23 }
+		country_event = { id = new_usa_remove_bop_mod.24 }
 	}
 }
 
@@ -2148,3 +2154,27 @@ USA_AN_create_RNS = {
 
 	}
 }
+
+USA_start_AN_civil_war = {
+	hidden_effect = {
+		if = {
+			limit = { not = { has_global_flag = USA_AN_civil_war_started_flag } }
+			set_global_flag = USA_AN_civil_war_started_flag
+
+			if = {
+				limit = { fascism > 0.65 }
+				set_global_flag = USA_AN_civil_war_high_support_flag
+			}
+			else_if = {
+				limit = { fascism > 0.45 }
+				set_global_flag = USA_AN_civil_war_medium_support_flag
+			}
+			else = {
+				set_global_flag = USA_AN_civil_war_low_support_flag
+			}
+
+			country_event = { id = usa_new_an_civil_war_event.1 } # starts the civil war
+		}
+	}
+}
+

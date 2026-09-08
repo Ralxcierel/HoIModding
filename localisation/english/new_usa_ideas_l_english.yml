@@ -121,6 +121,9 @@
     usa_under_crisis_spirit_tt_3: "The country will §Rsuffer continuous disturbances§!!"
     usa_goldstar_network_idea: "Goldstar Network"
     usa_prudence_across_the_land_idea: "Prudence Across the Land"
+    usa_brotherhood_spirit_idea: "Brotherhood Spirit"
+    usa_brotherhood_spirit_other_idea: "Lack of Unity"
+    usa_swift_and_lethal_other_idea: "Unable to Properly Organize"
 
  # TIMED IDEAS
   # Democratic & General
@@ -455,6 +458,7 @@
     usa_first_among_equals_modifier: "First Among Equals"
     usa_ballads_between_brothers_modifier: "Ballads Between Brothers"
     usa_peace_guarantees_modifier: "Peace Guarantees"
+    usa_rightful_claims_opening_talks_modifier: "Opened Talks"
 
  # FLAGS & TRIGGERS
     spurred_growth_cooldown_short_flag: " The economy hasn't been recovering for over half a year"
@@ -913,6 +917,26 @@
 
     USA_blue_districts_cat: "Blue Districts"
     USA_blue_district_decisions: "Establish a Blue District in [FROM.getName]"
+    USA_americas_rightful_claims_cat: "America's Rightful Claims"
+    USA_opening_talks_decisions: "Open Talks with [FROM.getName]"
+    USA_opening_talks_decisions_tt: "We will be able to pursue §Ycloser ties§! with §Y[FROM.GetNameDefCap]§!."
+    USA_establish_trust_decisions: "Establish Trust with [FROM.getName]"
+    USA_establish_trust_decisions_tt: "They will be §Ymore likely§! to §Gaccept§! our proposals."
+    USA_intimidate_them_decisions: "Intimidate [FROM.getName]"
+    USA_intimidate_them_decisions_tt: "They will be §Ymore likely§! to §Gaccept§! our proposals."
+    USA_demand_national_annexation_decisions: "Demand the Annexation of [FROM.getName]"
+    USA_demand_national_subjugation_decisions: "Demand the Subjugation of [FROM.getName]"
+    USA_major_neighbor_opening_talks_decisions: "$USA_opening_talks_decisions$"
+    USA_major_neighbor_establish_trust_decisions: "$USA_establish_trust_decisions$"
+    USA_major_neighbor_intimidate_them_decisions: "$USA_intimidate_them_decisions$"
+    USA_major_neighbor_demand_national_subjugation_decisions: "$USA_demand_national_annexation_decisions$"
+    USA_major_neighbor_demand_national_annexation_decisions: "$USA_demand_national_subjugation_decisions$"
+    USA_colonial_power_opening_talks_decisions: "$USA_opening_talks_decisions$"
+    USA_colonial_power_opening_talks_decisions_tt: "We will be able to look into §Yacquiring§! their §YAmerican territories§!."
+    USA_colonial_power_establish_trust_decisions: "$USA_establish_trust_decisions$"
+    USA_colonial_power_intimidate_them_decisions: "$USA_intimidate_them_decisions$"
+    USA_colonial_power_demand_territorial_subjugation_decisions: "Demand the Subjugation of [FROM.getName]'s American Territories"
+    USA_colonial_power_demand_national_annexation_decisions: "Demand the Annexation of [FROM.getName]'s American Territories"
 
  # BALANCE OF POWER
     usa_defense_readiness_bop: "Defense Readiness Factor"
@@ -1123,6 +1147,7 @@
     USA_AN_improve_under_crisis_spirit: "Levels up the Under Crisis spirit, reducing its effects till it's gone."
     USA_AN_create_RIG: "Checks to see if 479 or 480 is controlled. If so, creates the Rio Grande integrated puppet there, with some bonuses. Sets the proper cosmetics based on path."
     USA_AN_create_RNS: "Checks to see if 482, 483, or 484 is controlled. If so, creates the Sonora integrated puppet there, with some bonuses. Sets the proper cosmetics based on path."
+    USA_start_AN_civil_war: "Starts an American nationalist civil war. If the flag is already present, does nothing. Checks for 'brotherhood spirit' and 'patriots stand ready'. Checks fascism support and sets global flag accordingly for the war."
 
   # Flags
     usa_nc_homeless_relief_or_stand_up_flag: "Checks if one of the focuses $USA_homeless_relief_funds$ or $USA_stand_up_for_the_unemployed$ has been taken. If so, the other one doesn't decrease conservative resistance (only one of them does)."

@@ -57,6 +57,7 @@
  # Make better icons for important items
 	# Golden West Idea
  # Make secret mini tree for A Song for the Horizon
+ # Fix the 'america_is_being_invaded' flag
 ###
 
 
@@ -13177,9 +13178,9 @@ focus_tree = {
 				id = usa_defense_readiness_bop
 				modifier = USA_community_stockpiles_bop_mod
 			}
-			custom_override_tooltip = { tooltip = { REMOVE_DAYS = 270 localization_key = remove_timed_bop_mod_tt } }
+			custom_override_tooltip = { tooltip = { REMOVE_DAYS = 180 localization_key = remove_timed_bop_mod_tt } }
 			hidden_effect = {
-				country_event = { id = new_usa_remove_bop_mod.15 days = 270 }
+				country_event = { id = new_usa_remove_bop_mod.15 days = 180 }
 			}
 			skip_line_tt = yes
 			USA_defense_readiness_boost_large = yes
@@ -13216,9 +13217,9 @@ focus_tree = {
 				id = usa_defense_readiness_bop
 				modifier = USA_rural_simeon_crucibles_bop_mod
 			}
-			custom_override_tooltip = { tooltip = { REMOVE_DAYS = 270 localization_key = remove_timed_bop_mod_tt } }
+			custom_override_tooltip = { tooltip = { REMOVE_DAYS = 180 localization_key = remove_timed_bop_mod_tt } }
 			hidden_effect = {
-				country_event = { id = new_usa_remove_bop_mod.16 days = 270 }
+				country_event = { id = new_usa_remove_bop_mod.16 days = 180 }
 			}
 			skip_line_tt = yes
 			USA_defense_readiness_boost_large = yes
@@ -14528,7 +14529,7 @@ focus_tree = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_POLITICAL
 		}
 		available = {
 			has_equipment = {
@@ -14570,7 +14571,7 @@ focus_tree = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to FOCUS_FILTER_USA_CONGRESS FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY
+			FOCUS_FILTER_USA_CONGRESS FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY
 		}
 		available = {
 			congress_low_support_trigger = no
@@ -14581,12 +14582,7 @@ focus_tree = {
 
 		completion_reward = {
 			# create an event that does the actual fiasco
-			add_political_power = -50
-			add_stability = -0.10
-			add_popularity = {
-				ideology = democratic
-				popularity = -0.15
-			}
+			country_event = { id = new_usa_an_the_philadelphia_fiasco_event.1 hours = 6 random_hours = 18 }
 		}
 	}
 
@@ -14606,7 +14602,7 @@ focus_tree = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to FOCUS_FILTER_USA_CONGRESS FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_USA_CONGRESS FOCUS_FILTER_POLITICAL
 		}
 		available = {
 			fascism > 0.4
@@ -14621,6 +14617,9 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			hidden_effect = {
+				news_event = { id = usa_new_an_parkerite_act_event.1 hours = 6 random_hours = 4 }
+			}
 			# create news events about the amendment
 			add_political_power = 100
 			add_popularity = {
@@ -14679,7 +14678,7 @@ focus_tree = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to
+			
 		}
 		available = {
 
@@ -14689,7 +14688,26 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			# Starts civil war
+			effect_tooltip = {
+				remove_ideas = usa_what_the_future_holds_ti
+			}
+			if = {
+				limit = {
+					not = { has_government = fascism }
+				}
+				# Starts civil war
+				skip_line_tt = yes
+				custom_effect_tooltip = USA_paul_revere_rides_again_tt
+				USA_start_AN_civil_war = yes
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_idea = usa_what_the_future_holds_ti
+					}
+					remove_ideas = usa_what_the_future_holds_ti
+				}
+			}
 		}
 	}
 
@@ -14708,7 +14726,7 @@ focus_tree = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to
+			
 		}
 		available = {
 			has_civil_war = yes
@@ -14723,6 +14741,20 @@ focus_tree = {
 				idea = usa_swift_and_lethal_ti
 				days = 90
 			}
+			#hidden_effect = {
+				skip_line_tt = yes
+				random_other_country = {
+					limit = {
+						has_government = democratic
+						original_tag = USA
+					}
+					add_timed_idea = {
+						idea = usa_swift_and_lethal_other_idea
+						days = 135
+					}
+					add_ideas = usa_swift_and_lethal_other_idea
+				}
+			#}
 		}
 	}
 
@@ -14755,6 +14787,14 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			if = {
+				limit = {
+					not = { has_global_flag = USA_AN_civil_war_started_flag }
+				}
+				hidden_effect = {
+					news_event = { id = usa_new_an_civil_war_event.5 hours = 8 }
+				}
+			}
 			custom_effect_tooltip = USA_the_goldstar_federation_tt_2
 			skip_line_tt = yes
 			hidden_effect = {
@@ -14776,7 +14816,22 @@ focus_tree = {
 				election_frequency = 48
 			}
 			skip_line_tt = yes
-			set_faction_name = USA_the_goldstar_federation_tt
+			if = {
+				limit = {
+					is_faction_leader = yes
+				}
+				set_faction_name = USA_the_goldstar_federation_tt
+			}
+			else_if = {
+				limit = {
+					is_in_faction = no
+				}
+				hidden_effect = {
+					create_faction_from_template = faction_template_usa_commonwealth
+					set_faction_name = USA_the_goldstar_federation_tt
+				}
+				custom_effect_tooltip = USA_the_goldstar_federation_tt_3
+			}
 		}
 	}
 
@@ -14809,6 +14864,14 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			if = {
+				limit = {
+					not = { has_global_flag = USA_AN_civil_war_started_flag }
+				}
+				hidden_effect = {
+					news_event = { id = usa_new_an_civil_war_event.5 hours = 8 }
+				}
+			}
 			set_cosmetic_tag = USA_american_nationalist
 			skip_line_tt = yes
 			set_politics = {
@@ -14823,6 +14886,7 @@ focus_tree = {
 	focus = { # Peace Guarantees for Our Neighbors
 		id = USA_peace_guarantees_for_our_neighbors
 		icon = GFX_focus_generic_world_peace
+		overlay = GFX_new_focus_fast_overlay_clock_reducer
 		relative_position_id = USA_tend_to_the_nation
 		prerequisite = { focus = USA_the_second_confederation focus = USA_the_goldstar_federation }
 		prerequisite = { focus = USA_the_parkerite_act }
@@ -14865,6 +14929,11 @@ focus_tree = {
 				}
 				country_event = { id = new_usa_an_peace_guarantees_for_neighbors_event.1 days = 1 random_days = 2 }
 			}
+			skip_line_tt = yes
+			reduce_focus_completion_cost = {
+				focus = { USA_throw_in_with_the_old }
+				cost = 35
+			}
 		}
 	}
 
@@ -14904,6 +14973,7 @@ focus_tree = {
 	focus = { # The Sun Has Already Set
 		id = USA_the_sun_has_already_set
 		icon = GFX_focus_SWE_as_the_barometer_falls
+		overlay = GFX_new_focus_fast_overlay_clock_reducer
 		relative_position_id = USA_tend_to_the_nation
 		prerequisite = { focus = USA_the_second_confederation focus = USA_the_goldstar_federation }
 		prerequisite = { focus = USA_paul_revere_rides_again }
@@ -14924,14 +14994,17 @@ focus_tree = {
 			FOCUS_FILTER_Attending_to
 		}
 		available = {
-			#has_completed_focus = USA_the_parkerite_act
 		}
 		
 		bypass = {
 		}
 
 		completion_reward = {
-
+			skip_line_tt = yes
+			reduce_focus_completion_cost = {
+				focus = { USA_pledge_for_the_new_order }
+				cost = 35
+			}
 		}
 	}
 
@@ -14956,14 +15029,19 @@ focus_tree = {
 			FOCUS_FILTER_Attending_to
 		}
 		available = {
-			#has_completed_focus = USA_the_parkerite_act
 		}
 		
 		bypass = {
 		}
 
 		completion_reward = {
-
+			# Gives decisions to target various states in the Americas and demand either subjugation or annexation. Force works better for OSBY, diplomacy works better for PGfoN
+			USA = {
+				set_autonomy = {
+					target = GUA
+					autonomy_state = autonomy_integrated_puppet
+				}
+			}
 		}
 	}
 
@@ -15499,6 +15577,7 @@ focus_tree = {
 	focus = { # Pledge for the New Order
 		id = USA_pledge_for_the_new_order
 		icon = GFX_focus_chi_mission_to_germany
+		overlay = GFX_focus_fast_overlay_generic_clock
 		relative_position_id = USA_tend_to_the_nation
 		prerequisite = { focus = USA_our_safety_before_yours focus = USA_the_sun_has_already_set focus = USA_peace_guarantees_for_our_neighbors }
 		mutually_exclusive = {
@@ -15513,6 +15592,10 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				has_completed_focus = USA_the_sun_has_already_set
+				factor = 20
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_Attending_to
@@ -15524,7 +15607,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			custom_override_tooltip = { tooltip = { TEMP_FOCUS = USA_the_sun_has_already_set TEMP_DAYS = 35 localization_key = reduce_focus_time_generic_tt } }
 		}
 	}
 
@@ -15558,6 +15641,7 @@ focus_tree = {
 	focus = { # Throw in with the Old
 		id = USA_throw_in_with_the_old
 		icon = GFX_focus_ARG_join_the_allies
+		overlay = GFX_focus_fast_overlay_generic_clock
 		relative_position_id = USA_tend_to_the_nation
 		prerequisite = { focus = USA_our_safety_before_yours focus = USA_the_sun_has_already_set focus = USA_peace_guarantees_for_our_neighbors }
 		mutually_exclusive = {
@@ -15572,6 +15656,10 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				has_completed_focus = USA_peace_guarantees_for_our_neighbors
+				factor = 20
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_Attending_to
@@ -15583,7 +15671,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			custom_override_tooltip = { tooltip = { TEMP_FOCUS = USA_peace_guarantees_for_our_neighbors TEMP_DAYS = 35 localization_key = reduce_focus_time_generic_tt } }
 		}
 	}
 
@@ -15628,7 +15716,7 @@ focus_tree = {
 		x = -3
 		y = 10
 
-		cost = 10
+		cost = 7
 
 		ai_will_do = {
 			factor = 1
@@ -15737,7 +15825,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 20
 		}
-		search_filters = { FOCUS_FILTER_HOMELAND_DEFENSE }
+		search_filters = { FOCUS_FILTER_HOMELAND_DEFENSE FOCUS_FILTER_FOCUS_TIME_REDUCTION }
 		available = {
 			recovery_past_stage_1 = yes
 			has_civil_war = no
@@ -15770,7 +15858,7 @@ focus_tree = {
 			}
 			custom_override_tooltip = { tooltip = { REMOVE_YEARS = 4 localization_key = remove_timed_bop_mod_years_tt } }
 			hidden_effect = {
-				country_event = { id = new_usa_remove_bop_mod.4 days = 1460 }
+				country_event = { id = new_usa_remove_bop_mod.19 days = 1460 }
 			}
 			skip_line_tt = yes
 			reduce_focus_completion_cost = {
@@ -15819,6 +15907,7 @@ focus_tree = {
 				modifier = USA_independently_funded_armories_bop_mod
 			}
 			custom_override_tooltip = { tooltip = { REMOVE_YEARS = 3 localization_key = remove_timed_bop_mod_years_tt } }
+			hidden_effect = { country_event = { id = new_usa_remove_bop_mod.21 days = 1095 } }
 			skip_line_tt = yes
 			USA_defense_readiness_boost_small = yes
 		}
@@ -15866,6 +15955,7 @@ focus_tree = {
 				modifier = USA_civilian_logistics_contracts_bop_mod
 			}
 			custom_override_tooltip = { tooltip = { REMOVE_YEARS = 3 localization_key = remove_timed_bop_mod_years_tt } }
+			hidden_effect = { country_event = { id = new_usa_remove_bop_mod.20 days = 1095 } }
 			skip_line_tt = yes
 			USA_defense_readiness_boost_small = yes
 		}
@@ -15911,6 +16001,7 @@ focus_tree = {
 				modifier = USA_terrain_navigation_courses_bop_mod
 			}
 			custom_override_tooltip = { tooltip = { REMOVE_YEARS = 2 localization_key = remove_timed_bop_mod_years_tt } }
+			hidden_effect = { country_event = { id = new_usa_remove_bop_mod.22 days = 730 } }
 			skip_line_tt = yes
 			USA_defense_readiness_boost_small = yes
 		}
@@ -15954,6 +16045,7 @@ focus_tree = {
 				modifier = USA_cloth_and_rope_ramparts_bop_mod
 			}
 			custom_override_tooltip = { tooltip = { REMOVE_YEARS = 2 localization_key = remove_timed_bop_mod_years_tt } }
+			hidden_effect = { country_event = { id = new_usa_remove_bop_mod.24 days = 730 } }
 			skip_line_tt = yes
 			USA_defense_readiness_boost_medium = yes
 		}
@@ -16006,6 +16098,7 @@ focus_tree = {
 				modifier = USA_confederalized_asset_procurement_bop_mod
 			}
 			custom_override_tooltip = { tooltip = { REMOVE_YEARS = 3 localization_key = remove_timed_bop_mod_years_tt } }
+			hidden_effect = { country_event = { id = new_usa_remove_bop_mod.23 days = 1095 } }
 			skip_line_tt = yes
 			USA_defense_readiness_boost_large = yes
 		}

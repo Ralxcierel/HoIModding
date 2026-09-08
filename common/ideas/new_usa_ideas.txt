@@ -5590,6 +5590,79 @@ ideas = {
                 breakthrough_factor = 0.15
             }
         }
+        usa_swift_and_lethal_other_idea = { # Swift and Lethal Other Idea
+            picture = generic_purge
+
+            allowed = {
+                has_civil_war = yes
+            }
+
+            available = {
+            }
+
+            cancel = {
+            }
+
+            allowed_civil_war = {
+                always = yes
+            }
+
+            modifier = {
+                stability_factor = -0.10
+                surrender_limit = -0.10
+            }
+        }
+
+        usa_brotherhood_spirit_idea = { # Brotherhood Spirit Idea
+            picture = generic_intel_bonus
+
+            allowed = {
+                has_civil_war = yes
+            }
+
+            available = {
+            }
+
+            cancel = {
+            }
+
+            allowed_civil_war = {
+                always = yes
+            }
+
+            modifier = {
+                modifier_army_sub_unit_militia_attack_factor = 0.10
+                modifier_army_sub_unit_militia_defence_factor = 0.10
+                army_core_attack_factor = 0.10
+                army_core_defence_factor = 0.10
+            }
+        }
+        usa_brotherhood_spirit_other_idea = { # Brotherhood Spirit Other Idea
+            picture = bul_zveno
+
+            allowed = {
+                has_civil_war = yes
+            }
+
+            available = {
+            }
+
+            cancel = {
+            }
+
+            allowed_civil_war = {
+                always = yes
+            }
+
+            modifier = {
+                army_speed_factor = -0.15
+                army_org_regain = -0.25
+                army_core_attack_factor = -0.05
+                army_core_defence_factor = -0.10
+                supply_consumption_factor = 0.10
+                surrender_limit = -0.10
+            }
+        }
 
 
     }

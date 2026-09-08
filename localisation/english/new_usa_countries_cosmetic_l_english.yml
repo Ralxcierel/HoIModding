@@ -5,6 +5,12 @@
  USA_american_nationalist_communist_communism: "United States People's Republic"
  USA_american_nationalist_communist_communism_DEF: "the United States People's Republic"
 
+ USA_american_fascist_civil_war_temp: "Free American States"
+ USA_american_fascist_civil_war_temp_DEF: "the Free American States"
+ USA_american_fascist_civil_war_temp_ADJ: "American"
+ USA_american_fascist_civil_war_temp_fascism: "Free American States"
+ USA_american_fascist_civil_war_temp_fascism_DEF: "the Free American States"
+
  USA_american_nationalist: "Second Confederation of the United States"
  USA_american_nationalist_DEF: "the Second Confederation of the United States"
  USA_american_nationalist_ADJ: "Confederate"

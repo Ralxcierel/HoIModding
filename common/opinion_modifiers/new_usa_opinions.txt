@@ -329,4 +329,9 @@ opinion_modifiers = {
 		#decay = 0.125
 	}
 
+	usa_rightful_claims_opening_talks_modifier = {
+		value = 25
+		#decay = 0.125
+	}
+
 }	
