@@ -537,9 +537,13 @@ USA_arm_dynamic_modifier = { # US Army
     training_time_factor =          USA_dy_arm_training_time_factor
     special_forces_no_supply_grace = USA_dy_arm_special_forces_no_supply_grace
     special_forces_training_time_factor = USA_dy_arm_special_forces_training_time_factor
-    supply_factor =                 USA_dy_arm_supply_factor
+    #supply_factor =                 USA_dy_arm_supply_factor
     defensive_war_stability_factor = USA_dy_arm_defensive_war_stability_factor
     offensive_war_stability_factor = USA_dy_arm_offensive_war_stability_factor
+    modifier_army_sub_unit_militia_attack_factor =  USA_dy_arm_modifier_army_sub_unit_militia_attack_factor
+    modifier_army_sub_unit_militia_defence_factor = USA_dy_arm_modifier_army_sub_unit_militia_defence_factor
+    modifier_army_sub_unit_militia_max_org_factor = USA_dy_arm_modifier_army_sub_unit_militia_max_org_factor
+    modifier_army_sub_unit_militia_speed_factor =   USA_dy_arm_modifier_army_sub_unit_militia_speed_factor
 
 }
 
@@ -691,6 +695,19 @@ USA_FREE_dynamic_modifier_2 = { # FREE USA Dynamic Modifier (American Nationalis
 
 }
 
+USA_goldstar_dynamic_modifier = { # Goldstar Dynamic Modifier (American Nationalist)
+	enable = { always = yes }
+
+	icon = GFX_idea_PLACEHOLDER
+
+    research_speed_factor = USA_goldstar_dy_research_speed_factor
+    grant_medal_cost_factor = USA_goldstar_dy_grant_medal_cost_factor
+    acclimatization_cold_climate_gain_factor = USA_goldstar_dy_acclimatization_cold_climate_gain_factor
+    acclimatization_hot_climate_gain_factor = USA_goldstar_dy_acclimatization_hot_climate_gain_factor
+    air_superiority_bonus_in_combat = USA_goldstar_dy_air_superiority_bonus_in_combat
+
+}
+
 #custom_modifier_tooltip = FIN_finnish_army_dynamic_modifier_tt #Bonuses applied via hidden NS or tech (molotov_cocktails_tech)
 
 ############################
@@ -793,5 +810,28 @@ USA_infrastructure_projects_decisions_modifier = {
 	icon = GFX_modifiers_ETH_state_development
 
     production_speed_buildings_factor = 0.05
+    production_speed_rail_way_factor = 0.10
+}
+
+USA_blue_district_modifier = {
+	enable = { always = yes }
+	icon = GFX_modifiers_CZE_subsidies_in_state
+
+    production_speed_buildings_factor = 0.05
+    production_speed_infrastructure_factor = 0.05
+    production_speed_rail_way_factor = 0.10
+    production_speed_facility_factor = 0.10
+    production_speed_industrial_complex_factor = 0.10
+    local_resources_factor = 0.10
+    local_factory_energy_consumption_per_infrastructure = -0.05
+    local_building_slots_factor = 0.20
+}
+
+USA_carpetbaggers_modifier = {
+	enable = { always = yes }
+	icon = GFX_modifiers_ETH_state_development
+
+    production_speed_buildings_factor = 0.05
+    production_speed_infrastructure_factor = 0.05
     production_speed_rail_way_factor = 0.10
 }

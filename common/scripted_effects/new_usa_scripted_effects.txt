@@ -628,6 +628,12 @@ USA_remove_all_BOP_modifiers = { # (1-18)
 		country_event = { id = new_usa_remove_bop_mod.16 }
 		country_event = { id = new_usa_remove_bop_mod.17 }
 		country_event = { id = new_usa_remove_bop_mod.18 }
+		country_event = { id = new_usa_remove_bop_mod.19 }
+		country_event = { id = new_usa_remove_bop_mod.20 }
+		country_event = { id = new_usa_remove_bop_mod.21 }
+		country_event = { id = new_usa_remove_bop_mod.22 }
+		country_event = { id = new_usa_remove_bop_mod.23 }
+		country_event = { id = new_usa_remove_bop_mod.24 }
 	}
 }
 
@@ -702,6 +708,7 @@ set_america_being_invaded = {
 	hidden_effect = { set_country_flag = america_is_being_invaded_flag set_country_flag = USA_has_completed_homeland_defense_emergency_act_focus_equivalent country_event = new_usa_mainland_invasion.1 }
 }
 
+#############
 ### FREE
  USA_AN_FREE_remove_civ_si = {
 	hidden_effect = {
@@ -1930,3 +1937,244 @@ set_america_being_invaded = {
  }
 
 #############
+
+USA_AN_improve_under_crisis_spirit = {
+	if = {
+		limit = {
+			has_idea = usa_under_crisis_spirit_0
+		}
+		custom_effect_tooltip = USA_AN_improve_under_crisis_spirit_tt_1
+		hidden_effect = {
+			swap_ideas = {
+				remove_idea = usa_under_crisis_spirit_0
+				add_idea = usa_under_crisis_spirit
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = usa_under_crisis_spirit
+		}
+		custom_effect_tooltip = USA_AN_improve_under_crisis_spirit_tt_1
+		hidden_effect = {
+			swap_ideas = {
+				remove_idea = usa_under_crisis_spirit
+				add_idea = usa_under_crisis_spirit_2
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = usa_under_crisis_spirit_2
+		}
+		custom_effect_tooltip = USA_AN_improve_under_crisis_spirit_tt_1
+		hidden_effect = {
+			swap_ideas = {
+				remove_idea = usa_under_crisis_spirit_2
+				add_idea = usa_under_crisis_spirit_3
+			}
+		}
+	}
+	else_if = {
+		limit = { has_idea = usa_under_crisis_spirit_3 }
+		custom_effect_tooltip = USA_AN_improve_under_crisis_spirit_tt_2
+		hidden_effect = {
+			remove_ideas = usa_under_crisis_spirit_3
+		}
+	}
+}
+
+USA_AN_create_RIG = {
+	if = {
+		limit = {
+			OR = {
+				controls_state = 480
+				controls_state = 479
+			}
+		}
+		if = {
+			limit = { controls_state = 480 }
+			480 = {
+				add_extra_state_shared_building_slots = 6
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+				}
+			}
+		}
+		if = {
+			limit = { controls_state = 479 }
+			479 = {
+				add_extra_state_shared_building_slots = 6
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+				}
+			}
+		}
+		release_puppet_on_controlled = RIG
+		set_autonomy = {
+			target = RIG
+			autonomy_state = autonomy_integrated_puppet
+		}
+		RIG = {
+			set_politics = {
+				ruling_party = fascism
+			}
+			set_popularities = {
+				democratic = 25
+				fascism = 60
+				communism = 0
+				neutrality = 15
+			}
+			if = {
+				limit = {
+					USA = { has_completed_focus = USA_the_goldstar_federation }
+					
+				}
+				set_cosmetic_tag = USA_goldstar_integrated_puppet_RIG
+				create_country_leader = {
+					name = RIG_austin_kinney
+					#picture = GFX_portrait_USA_franklin_delano_roosevelt
+					ideology = fascism_ideology
+					traits={ stallion_of_the_south goldstar_official }
+					expire="1947.1.1.1"
+					#id=-1
+				}
+			}
+			else_if = {
+				limit = {
+					USA = { has_completed_focus = USA_the_second_confederation }
+				}
+				set_cosmetic_tag = USA_american_nationalist_integrated_puppet_RIG
+				create_country_leader = {
+					name = RIG_maxwell_dovely
+					#picture = GFX_portrait_USA_franklin_delano_roosevelt
+					ideology = fascism_ideology
+					traits={ confederacy_president eagle_eyed }
+					expire="1947.1.1.1"
+					#id=-1
+				}
+			}
+		}
+	}
+}
+USA_AN_create_RNS = {
+	if = {
+		limit = {
+			OR = {
+				controls_state = 482
+				controls_state = 483
+				controls_state = 484
+			}
+		}
+		if = {
+			limit = { controls_state = 482 }
+			482 = {
+				add_core_of = RSN
+				add_extra_state_shared_building_slots = 6
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+				}
+			}
+		}
+		if = {
+			limit = { controls_state = 483 }
+			483 = {
+				add_core_of = RSN
+				add_extra_state_shared_building_slots = 6
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+				}
+			}
+		}
+		if = {
+			limit = { controls_state = 484 }
+			484 = {
+				add_core_of = RSN
+				add_extra_state_shared_building_slots = 6
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+				}
+			}
+		}
+		release_puppet_on_controlled = RSN
+		set_autonomy = {
+			target = RSN
+			autonomy_state = autonomy_integrated_puppet
+		}
+		RSN = {
+			set_politics = {
+				ruling_party = fascism
+			}
+			set_popularities = {
+				democratic = 25
+				fascism = 60
+				communism = 0
+				neutrality = 15
+			}
+			if = {
+				limit = {
+					USA = { has_completed_focus = USA_the_goldstar_federation }
+				}
+				set_cosmetic_tag = USA_goldstar_integrated_puppet_RSN
+			}
+			else_if = {
+				limit = { USA = { has_completed_focus = USA_the_second_confederation } }
+				set_cosmetic_tag = USA_american_nationalist_integrated_puppet_RSN
+				create_country_leader = {
+					name = RSN_timothy_graus
+					#picture = GFX_portrait_USA_franklin_delano_roosevelt
+					ideology = fascism_ideology
+					traits={ confederacy_president retired_foreign_diplomat }
+					expire="1947.1.1.1"
+					#id=-1
+				}
+			}
+		}
+
+	}
+}
+
+USA_start_AN_civil_war = {
+	hidden_effect = {
+		if = {
+			limit = { not = { has_global_flag = USA_AN_civil_war_started_flag } }
+			set_global_flag = USA_AN_civil_war_started_flag
+
+			if = {
+				limit = { fascism > 0.65 }
+				set_global_flag = USA_AN_civil_war_high_support_flag
+			}
+			else_if = {
+				limit = { fascism > 0.45 }
+				set_global_flag = USA_AN_civil_war_medium_support_flag
+			}
+			else = {
+				set_global_flag = USA_AN_civil_war_low_support_flag
+			}
+
+			country_event = { id = usa_new_an_civil_war_event.1 } # starts the civil war
+		}
+	}
+}
+

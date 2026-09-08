@@ -7,9 +7,18 @@ on_actions = {
 			if = {
 				limit = {
 					original_tag = USA
+					has_government = communism
 				}
 				set_country_flag = USA_NC_civil_war_is_over
 				set_global_flag = USA_NC_civil_war_is_over
+			}
+			if = {
+				limit = {
+					original_tag = USA
+					has_government = fascism
+				}
+				set_country_flag = USA_AN_civil_war_is_over
+				set_global_flag = USA_AN_civil_war_is_over
 			}
 			# Remove temporary militia troops after US civil war
 			if = {
@@ -36,6 +45,28 @@ on_actions = {
 				unlock_national_focus = USA_continue_the_new_deal
 				complete_national_focus = USA_continue_the_new_deal
 				set_country_flag = { flag = usa_core_recovery_flag value = 0 } # reset eco stuff and what not - won't update other variables, just ignore it.
+				remove_ideas = {
+					usa_great_depression_nc_civil_war_fake_spirit
+					usa_united_states_air_nc_civil_war_fake_spirit
+					usa_united_states_army_nc_civil_war_fake_spirit
+					usa_united_states_navy_nc_civil_war_fake_spirit
+					usa_american_mic_nc_civil_war_fake_spirit
+				}
+				add_dynamic_modifier = {
+					modifier = USA_economy_dynamic_modifier_great_depression
+				}
+				add_dynamic_modifier = {
+					modifier = USA_arm_dynamic_modifier
+				}
+				add_dynamic_modifier = {
+					modifier = USA_nav_dynamic_modifier
+				}
+				add_dynamic_modifier = {
+					modifier = USA_air_dynamic_modifier
+				}
+				add_dynamic_modifier = {
+					modifier = USA_mic_dynamic_modifier
+				}
 			}
 			# World News Events
 			if = {
@@ -48,9 +79,25 @@ on_actions = {
 			else_if = {
 				limit = {
 					original_tag = USA
+					has_government = fascism
+				}
+				hidden_effect = { news_event = { id = usa_new_an_civil_war_event.3 hours = 6 } }
+			}
+			else_if = {
+				limit = {
+					original_tag = USA
 					has_government = democratic
+					has_global_flag = USA_NC_civil_war_started_flag
 				}
 				hidden_effect = { news_event = { id = usa_new_nc_civil_war_event.6 hours = 6 } }
+			}
+			else_if = {
+				limit = {
+					original_tag = USA
+					has_government = democratic
+					has_global_flag = USA_AN_civil_war_started_flag
+				}
+				hidden_effect = { news_event = { id = usa_new_an_civil_war_event.4 hours = 6 } }
 			}
 		}
 	}

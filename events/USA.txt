@@ -297,6 +297,9 @@ country_event = {
 			}
 			add_ideas = standard_oil_california
 		}
+
+		set_country_flag = usa_an_has_landon_flag
+
 		create_country_leader = {
 			name = "Alf Landon"
 			desc = "POLITICS_ALF_LANDON_DESC"
@@ -476,6 +479,8 @@ country_event = {
 		USA_flip_support = yes
 		custom_effect_tooltip = usa_congress_elections_tt_good
 		country_event = usa.31
+
+		set_country_flag = usa_an_has_roosevelt_flag
 	}
 }
 

@@ -165,6 +165,10 @@ spriteTypes = {
 		name = "GFX_focus_usa_FREE"
 		texturefile = "gfx/interface/new_goals/focus_usa_FREE.dds"			
 	}
+	SpriteType = { # focus_usa_grange
+		name = "GFX_focus_usa_grange"
+		texturefile = "gfx/interface/new_goals/focus_usa_grange.dds"			
+	}
 
   # NEW OVERLAYS
 	# Debug overlay

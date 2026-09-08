@@ -42,6 +42,53 @@
 
 leader_traits = {
  # NEW
+	confederacy_president = { # For Confederate leaders
+		random = no
+		
+		political_power_factor = 0.10
+		production_speed_buildings_factor = 0.10
+		local_resources_factor = 0.05
+		communism_acceptance = -75
+		democratic_acceptance = -75
+	}
+	eagle_eyed = { # For RIG leader
+		random = no
+
+		army_attack_against_major_factor = 0.10
+		army_leader_cost_factor = -0.5
+	}
+	retired_foreign_diplomat = { # For RSN leader
+		random = no
+
+		improve_relations_maintain_cost_factor = -0.75
+		opinion_gain_monthly = 0.25
+		stability_factor = 0.10
+	}
+ 	goldstar_official = { # For Goldstar leaders
+		random = no
+		
+		command_power_gain_mult = 0.20
+		political_power_factor = 0.05
+		stability_factor = 0.05
+		conscription_factor = 0.10
+		communism_acceptance = -75
+		democratic_acceptance = -75
+	}
+	stallion_of_the_south = { # For RIG leader
+		random = no
+		
+		#consumer_goods_factor = -0.10
+		war_support_factor = 0.10
+		army_core_attack_factor = 0.05
+		army_core_defence_factor = 0.05
+	}
+	cunning_financier = { # For RSN leader
+		random = no
+		
+		consumer_goods_factor = -0.20
+		political_power_factor = 0.15
+	}
+
 	free_marketeer = { # For Landon Upgraded
 		random = no
 		
@@ -158,6 +205,13 @@ leader_traits = {
 
 		#command_cap_increase = @tier2_cp_cap_increase
 		#command_power = @tier2_cp_cost
+	}
+
+	usa_american_architectural_administration_trait = {
+		random = no
+	}
+	usa_american_wellspring_administration_trait = {
+		random = no
 	}
 
 }

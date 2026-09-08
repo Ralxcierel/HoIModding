@@ -5,6 +5,13 @@ USA_american_nationalist_communist = {
 	#color_ui = rgb { 0 255 0 }
 }
 
+USA_american_fascist_civil_war_temp = {
+	color = rgb { 130 190 255 }
+	color_ui = rgb { 10 10 255 }
+	#color = rgb { 225 0 0 }
+	#color_ui = rgb { 0 255 0 }
+}
+
 USA_american_nationalist = {
 	color = rgb { 0 65 180 }
 	color_ui = rgb { 10 10 255 }
@@ -12,11 +19,30 @@ USA_american_nationalist = {
 	#color_ui = rgb { 0 255 0 }
 }
 
+USA_american_nationalist_integrated_puppet_RSN = {
+	color = rgb { 0 65 180 }
+	color_ui = rgb { 10 10 255 }
+}
+USA_american_nationalist_integrated_puppet_RIG = {
+	color = rgb { 0 65 180 }
+	color_ui = rgb { 10 10 255 }
+}
+
+
 USA_goldstar = {
 	color = rgb { 255 130 0 }
 	color_ui = rgb { 20 90 255 }
 	#color = rgb { 225 0 0 }
 	#color_ui = rgb { 0 255 0 }
+}
+
+USA_goldstar_integrated_puppet_RSN = {
+	color = rgb { 255 130 0 }
+	color_ui = rgb { 20 90 255 }
+}
+USA_goldstar_integrated_puppet_RIG = {
+	color = rgb { 255 130 0 }
+	color_ui = rgb { 20 90 255 }
 }
 
 MAL_UK = {

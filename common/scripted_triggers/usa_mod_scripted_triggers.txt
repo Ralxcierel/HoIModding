@@ -875,6 +875,7 @@ USA_has_completed_homeland_defense_emergency_act_focus_equivalent = {
 	OR = {
 		has_completed_focus = USA_homeland_defense_emergency_act_focus
 		has_completed_focus = USA_homeland_defense_emergency_act_focus_NC
+		has_completed_focus = USA_homeland_defense_emergency_act_focus_AN
 	}
 }
 
