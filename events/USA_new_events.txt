@@ -9984,12 +9984,17 @@ country_event = { # undoes the stealth focus [unused]
 
 		option = { # Yay
 			name = new_usa_an_americas_rightful_claims_event.11.a
-			every_controlled_state = {
-				limit = {
-					has_state_flag = to_be_puppeted_by_USA
-				}
-				############################################# RELEASE AS NEW NATION(s)
-			}
+			
+			release_puppet_on_controlled = BAH
+			release_puppet_on_controlled = SUR
+			release_puppet_on_controlled = GYA
+			release_puppet_on_controlled = CAY
+			release_puppet_on_controlled = BLZ
+			release_puppet_on_controlled = JAM
+			release_puppet_on_controlled = BAS
+			release_puppet_on_controlled = TRI
+			release_puppet_on_controlled = CRC
+			release_puppet_on_controlled = GDL
 		}
 
 	}
@@ -10026,6 +10031,174 @@ country_event = { # undoes the stealth focus [unused]
 		}
 	}
 
+
+ add_namespace = new_usa_an_our_saftey_before_yours_event
+ # USA_our_saftey_before_yours
+	country_event = { # Demand Military Access and Trade Privileges
+		id = new_usa_an_our_saftey_before_yours_event.1
+		title = new_usa_an_our_saftey_before_yours_event.1.t
+		desc = new_usa_an_our_saftey_before_yours_event.1.desc
+		picture = GFX_report_event_ace_promoted
+		is_triggered_only = yes
+
+		option = { # This is in our interest too
+			name = new_usa_an_our_saftey_before_yours_event.1.a
+			ai_chance = {
+				base = 65
+				modifier = {
+					FROM = {
+						has_army_manpower = {
+							size > 800000
+						}
+					}
+					factor = 3
+				}
+				modifier = {
+					has_opinion = {
+						target = FROM
+						value > 49
+					}
+					factor = 2
+				}
+			}
+			effect_tooltip = {
+				diplomatic_relation = {
+					country = FROM
+					relation = offer_military_access
+				}
+			}
+			FROM = {
+				country_event = { id = new_usa_an_our_saftey_before_yours_event.2 }
+			}
+		}
+		option = { # We disagree
+			name = new_usa_an_our_saftey_before_yours_event.1.b
+			FROM = {
+				country_event = { id = new_usa_an_our_saftey_before_yours_event.3 }
+			}
+			ai_chance = {
+				base = 35
+				modifier = {
+					has_opinion = {
+						target = FROM
+						value < 0
+					}
+					factor = 2
+				}
+				modifier = {
+					FROM = {
+						has_army_manpower = {
+							size < 400000
+						}
+					}
+					factor = 2
+				}
+			}
+		}
+
+	}
+	country_event = { # They accept
+		id = new_usa_an_our_saftey_before_yours_event.2
+		title = new_usa_an_our_saftey_before_yours_event.2.t
+		desc = new_usa_an_our_saftey_before_yours_event.2.desc
+		picture = GFX_report_event_ace_promoted
+		is_triggered_only = yes
+
+		option = { # Perfect
+			name = new_usa_an_our_saftey_before_yours_event.2.a
+			FROM = {
+				add_opinion_modifier = {
+					target = USA
+					modifier = usa_our_saftey_before_yours_trade_modifier
+				}
+				add_opinion_modifier = {
+					target = USA
+					modifier = usa_our_saftey_before_yours_accepted_modifier
+				}
+				add_ideas = usa_our_safety_before_yours_trade_idea
+			}
+			add_opinion_modifier = {
+				target = FROM
+				modifier = usa_our_saftey_before_yours_accepted_modifier
+			}
+			diplomatic_relation = {
+				country = FROM
+				relation = military_access
+			}
+		}
+	}
+	country_event = { # They refuse
+		id = new_usa_an_our_saftey_before_yours_event.3
+		title = new_usa_an_our_saftey_before_yours_event.3.t
+		desc = new_usa_an_our_saftey_before_yours_event.3.desc
+		picture = GFX_report_event_ace_promoted
+		is_triggered_only = yes
+
+		option = { # Argh
+			name = new_usa_an_our_saftey_before_yours_event.3.a
+			add_opinion_modifier = {
+				target = FROM
+				modifier = usa_our_saftey_before_yours_trade_rejected_modifier
+			}
+		}
+	}
+
+ add_namespace = new_usa_an_renaissance_and_retribution_event
+ # USA_renaissance_and_retribution
+	country_event = { # Assert Authority
+		id = new_usa_an_renaissance_and_retribution_event.1
+		title = new_usa_an_renaissance_and_retribution_event.1.t
+		desc = new_usa_an_renaissance_and_retribution_event.1.desc
+		picture = GFX_report_event_ace_promoted
+		is_triggered_only = yes
+
+		option = { # We recognize your authority
+			name = new_usa_an_renaissance_and_retribution_event.1.a
+			ai_chance = {
+				base = 50
+				modifier = {
+					FROM = {
+						has_army_manpower = {
+							size > 1000000
+						}
+					}
+					factor = 3
+				}
+				modifier = {
+					has_opinion = {
+						target = FROM
+						value > 49
+					}
+					factor = 2
+				}
+			}
+		}
+		option = { # You don't have our support
+			name = new_usa_an_renaissance_and_retribution_event.1.b
+			FROM = {
+				country_event = { id = new_usa_an_our_saftey_before_yours_event.3 }
+			}
+			ai_chance = {
+				base = 50
+				modifier = {
+					has_opinion = {
+						target = FROM
+						value < 0
+					}
+					factor = 2
+				}
+				modifier = {
+					FROM = {
+						has_army_manpower = {
+							size < 600000
+						}
+					}
+					factor = 2
+				}
+			}
+		}
+
+	}
 
 ##################################################################
 

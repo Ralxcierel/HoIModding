@@ -2,7 +2,7 @@ USA_congress = {
 	USA_DEBUG_1 = {
 		icon = generic_political_rally
 		visible = {
-			always = yes
+			always = no
 		}
 		available = {
 			always = yes
@@ -37,7 +37,7 @@ USA_congress = {
 	USA_DEBUG_1b = {
 		icon = generic_political_rally
 		visible = {
-			always = yes
+			always = no
 		}
 		available = {
 			always = yes
@@ -72,7 +72,7 @@ USA_congress = {
 	USA_DEBUG_2 = {
 		icon = generic_political_rally
 		visible = {
-			always = yes
+			always = no
 		}
 		available = {
 			always = yes
@@ -107,7 +107,7 @@ USA_congress = {
 	USA_DEBUG_2b = {
 		icon = generic_political_rally
 		visible = {
-			always = yes
+			always = no
 		}
 		available = {
 			always = yes
@@ -135,7 +135,7 @@ USA_congress = {
 	USA_DEBUG_3 = {
 		icon = generic_political_rally
 		visible = {
-			always = yes
+			always = no
 		}
 		available = {
 			always = yes
@@ -170,7 +170,7 @@ USA_congress = {
 	USA_DEBUG_3b = {
 		icon = generic_political_rally
 		visible = {
-			always = yes
+			always = no
 		}
 		available = {
 			always = yes

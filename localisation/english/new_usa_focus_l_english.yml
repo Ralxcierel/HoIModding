@@ -1970,7 +1970,7 @@
 
     USA_the_goldstar_federation: "The Goldstar Federation"
     USA_the_goldstar_federation_desc: "$TBA_TT$"
-    USA_the_goldstar_federation_tt_2: "As long as the §YUSA§! remains in the §Y$USA_the_goldstar_federation_tt$§! faction, the §YUSA§! and its §Ypuppets§! will have the §Y$USA_goldstar_dynamic_modifier$§! dynamic modifier."
+    USA_the_goldstar_federation_tt_2: "As long as the §YUSA§! remains in the §Y$USA_the_goldstar_federation_tt$§! faction, the §YUSA§! and its §Ypuppets§! will have the §Y$USA_goldstar_dynamic_modifier$§! dynamic modifier.\nThis modifier will be §Rlost§! if the §YUSA§! is no longer at the head of the §Y$USA_the_goldstar_federation_tt$§! faction."
     USA_the_goldstar_federation_tt_3: "Create Faction: §Y$USA_the_goldstar_federation_tt$§!."
 
     USA_the_second_confederation: "The Second Confederation"
@@ -1990,6 +1990,7 @@
 
     USA_americas_rightful_claims: "America's Rightful Claims"
     USA_americas_rightful_claims_desc: "$TBA_TT$"
+    USA_americas_rightful_claims_tt: "Unlocks §Ydecisions§! to §Ytake control of territory§! in §YNorth§! and §YCentral America§!.\n\nIf §Y$USA_peace_guarantees_for_our_neighbors$§! is taken, we will be able to §Ybuild trust§! with our neighbors.\n\nIf §Y$USA_our_safety_before_yours$§! is taken, we will be able to §Yintimidate§! our neighbors."
 
     USA_golden_opportunities: "Golden Opportunities"
     USA_golden_opportunities_desc: "$TBA_TT$"
@@ -2027,12 +2028,16 @@
 
     USA_renaissance_and_retribution: "Renaissance and Retribution"
     USA_renaissance_and_retribution_desc: "$TBA_TT$"
+    USA_renaissance_and_retribution_tt: " - This idea will be §Rlost§! if at war with §Y[GER.getName]§!."
+    USA_renaissance_and_retribution_tt_2: "Unlocks §Ydecisions§! to usurp §Y[GER.GetName]§!'s authority and take control of the §YAxis§! or §Ydominate Germany outright§!."
 
     USA_throw_in_with_the_old: "Throw in with the Old"
     USA_throw_in_with_the_old_desc: "$TBA_TT$"
 
     USA_do_our_part: "Do Our Part"
     USA_do_our_part_desc: "$TBA_TT$"
+    USA_do_our_part_tt: "Unlocks the ABDACOM §YJoint Focus Tree§!"
+    USA_do_our_part_tt_2: "If we are in a §Yfaction§! with §Y[ENG.getName]§!, our §Yfaction members§! will gain:"
 
     USA_the_eagle_flies_alone: "The Eagle Flies Alone"
     USA_the_eagle_flies_alone_desc: "$TBA_TT$"

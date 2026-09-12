@@ -8206,8 +8206,8 @@ USA_americas_rightful_claims_cat = {
 
 		#on_map_mode = map_and_decisions_view
 	    visible = {
-			always = yes
-			#has_completed_focus = USA_americas_rightful_claims
+			#always = yes
+			has_completed_focus = USA_americas_rightful_claims
 		}
 	
 		available = {
@@ -8235,6 +8235,7 @@ USA_americas_rightful_claims_cat = {
 					set_country_flag = USA_AN_has_opened_talks_flag
 				}
 			}
+			skip_line_tt = yes
 			FROM = {
 				add_opinion_modifier = {
 					target = PREV
@@ -8285,8 +8286,8 @@ USA_americas_rightful_claims_cat = {
 			from = {
 				has_country_flag = USA_AN_has_opened_talks_flag
 			}
-			#has_completed_focus = USA_americas_rightful_claims
-			#has_completed_focus = USA_peace_guarantees_for_our_neighbors
+			has_completed_focus = USA_americas_rightful_claims
+			has_completed_focus = USA_peace_guarantees_for_our_neighbors
 			FROM = { not = { has_country_flag = usa_an_is_forcing_acceptance_flag } }
 		}
 	
@@ -8359,8 +8360,8 @@ USA_americas_rightful_claims_cat = {
 			from = {
 				has_country_flag = USA_AN_has_opened_talks_flag
 			}
-			#has_completed_focus = USA_americas_rightful_claims
-			#has_completed_focus = USA_our_safety_before_yours
+			has_completed_focus = USA_americas_rightful_claims
+			has_completed_focus = USA_our_safety_before_yours
 			FROM = { not = { has_country_flag = usa_an_is_forcing_acceptance_flag } }
 		}
 	
@@ -8383,7 +8384,7 @@ USA_americas_rightful_claims_cat = {
 		}
 
 		remove_effect = {
-			custom_effect_tooltip = USA_intimidate_them_decisions_tt
+			custom_effect_tooltip = USA_intimidate_them_decisions_tt			
 			hidden_effect = {
 				FROM = {
 					set_country_flag = USA_AN_has_intimidated_us
@@ -8433,7 +8434,7 @@ USA_americas_rightful_claims_cat = {
 			FROM = {
 				has_country_flag = USA_AN_has_opened_talks_flag
 			}
-			#has_completed_focus = USA_americas_rightful_claims
+			has_completed_focus = USA_americas_rightful_claims
 			FROM = { not = { has_country_flag = usa_an_is_forcing_acceptance_flag } }
 		}
 	
@@ -8458,6 +8459,7 @@ USA_americas_rightful_claims_cat = {
 
 		remove_effect = {
 			add_threat = 1
+			skip_line_tt = yes
 			FROM = {
 				country_event = new_usa_an_americas_rightful_claims_event.4
 			}
@@ -8505,7 +8507,7 @@ USA_americas_rightful_claims_cat = {
 			FROM = {
 				has_country_flag = USA_AN_has_opened_talks_flag
 			}
-			#has_completed_focus = USA_americas_rightful_claims
+			has_completed_focus = USA_americas_rightful_claims
 			FROM = { not = { has_country_flag = usa_an_is_forcing_acceptance_flag } }
 		}
 	
@@ -8530,6 +8532,7 @@ USA_americas_rightful_claims_cat = {
 
 		remove_effect = {
 			add_threat = 2
+			skip_line_tt = yes
 			FROM = {
 				country_event = new_usa_an_americas_rightful_claims_event.1
 			}
@@ -8573,8 +8576,8 @@ USA_americas_rightful_claims_cat = {
 	    }
 
 	    visible = {
-			always = yes
-			#has_completed_focus = USA_americas_rightful_claims
+			#always = yes
+			has_completed_focus = USA_americas_rightful_claims
 		}
 	
 		available = {
@@ -8602,6 +8605,7 @@ USA_americas_rightful_claims_cat = {
 					set_country_flag = USA_AN_has_opened_talks_flag
 				}
 			}
+			skip_line_tt = yes
 			FROM = {
 				add_opinion_modifier = {
 					target = PREV
@@ -8651,8 +8655,8 @@ USA_americas_rightful_claims_cat = {
 			from = {
 				has_country_flag = USA_AN_has_opened_talks_flag
 			}
-			#has_completed_focus = USA_americas_rightful_claims
-			#has_completed_focus = USA_peace_guarantees_for_our_neighbors
+			has_completed_focus = USA_americas_rightful_claims
+			has_completed_focus = USA_peace_guarantees_for_our_neighbors
 			FROM = { not = { has_country_flag = usa_an_is_forcing_acceptance_flag } }
 		}
 	
@@ -8724,8 +8728,8 @@ USA_americas_rightful_claims_cat = {
 			from = {
 				has_country_flag = USA_AN_has_opened_talks_flag
 			}
-			#has_completed_focus = USA_americas_rightful_claims
-			#has_completed_focus = USA_our_safety_before_yours
+			has_completed_focus = USA_americas_rightful_claims
+			has_completed_focus = USA_our_safety_before_yours
 			FROM = { not = { has_country_flag = usa_an_is_forcing_acceptance_flag } }
 		}
 	
@@ -8797,7 +8801,7 @@ USA_americas_rightful_claims_cat = {
 			FROM = {
 				has_country_flag = USA_AN_has_opened_talks_flag
 			}
-			#has_completed_focus = USA_americas_rightful_claims
+			has_completed_focus = USA_americas_rightful_claims
 			FROM = { not = { has_country_flag = usa_an_is_forcing_acceptance_flag } }
 		}
 	
@@ -8822,6 +8826,7 @@ USA_americas_rightful_claims_cat = {
 
 		remove_effect = {
 			add_threat = 3
+			skip_line_tt = yes
 			FROM = {
 				country_event = new_usa_an_americas_rightful_claims_event.4
 			}
@@ -8868,7 +8873,7 @@ USA_americas_rightful_claims_cat = {
 			FROM = {
 				has_country_flag = USA_AN_has_opened_talks_flag
 			}
-			#has_completed_focus = USA_americas_rightful_claims
+			has_completed_focus = USA_americas_rightful_claims
 			FROM = { not = { has_country_flag = usa_an_is_forcing_acceptance_flag } }
 		}
 	
@@ -8893,6 +8898,7 @@ USA_americas_rightful_claims_cat = {
 
 		remove_effect = {
 			add_threat = 5
+			skip_line_tt = yes
 			FROM = {
 				country_event = new_usa_an_americas_rightful_claims_event.1
 			}
@@ -8954,8 +8960,8 @@ USA_americas_rightful_claims_cat = {
 	    }
 
 	    visible = {
-			always = yes
-			#has_completed_focus = USA_americas_rightful_claims
+			#always = yes
+			has_completed_focus = USA_americas_rightful_claims
 		}
 	
 		available = {
@@ -8983,6 +8989,7 @@ USA_americas_rightful_claims_cat = {
 					set_country_flag = USA_AN_has_opened_talks_flag_colonial_power
 				}
 			}
+			skip_line_tt = yes
 			FROM = {
 				add_opinion_modifier = {
 					target = PREV
@@ -9013,8 +9020,8 @@ USA_americas_rightful_claims_cat = {
 			from = {
 				has_country_flag = USA_AN_has_opened_talks_flag_colonial_power
 			}
-			#has_completed_focus = USA_americas_rightful_claims
-			#has_completed_focus = USA_peace_guarantees_for_our_neighbors
+			has_completed_focus = USA_americas_rightful_claims
+			has_completed_focus = USA_peace_guarantees_for_our_neighbors
 			FROM = { not = { has_country_flag = usa_an_is_forcing_acceptance_flag } }
 		}
 	
@@ -9067,8 +9074,8 @@ USA_americas_rightful_claims_cat = {
 			from = {
 				has_country_flag = USA_AN_has_opened_talks_flag_colonial_power
 			}
-			#has_completed_focus = USA_americas_rightful_claims
-			#has_completed_focus = USA_our_safety_before_yours
+			has_completed_focus = USA_americas_rightful_claims
+			has_completed_focus = USA_our_safety_before_yours
 			FROM = { not = { has_country_flag = usa_an_is_forcing_acceptance_flag } }
 		}
 	
@@ -9121,7 +9128,7 @@ USA_americas_rightful_claims_cat = {
 			FROM = {
 				has_country_flag = USA_AN_has_opened_talks_flag_colonial_power
 			}
-			#has_completed_focus = USA_americas_rightful_claims
+			has_completed_focus = USA_americas_rightful_claims
 			FROM = { not = { has_country_flag = usa_an_is_forcing_acceptance_flag } }
 		}
 	
@@ -9146,6 +9153,7 @@ USA_americas_rightful_claims_cat = {
 
 		remove_effect = {
 			add_threat = 4
+			skip_line_tt = yes
 			FROM = {
 				country_event = new_usa_an_americas_rightful_claims_event.10
 			}
@@ -9173,7 +9181,7 @@ USA_americas_rightful_claims_cat = {
 			FROM = {
 				has_country_flag = USA_AN_has_opened_talks_flag_colonial_power
 			}
-			#has_completed_focus = USA_americas_rightful_claims
+			has_completed_focus = USA_americas_rightful_claims
 			FROM = { not = { has_country_flag = usa_an_is_forcing_acceptance_flag } }
 		}
 	
@@ -9198,8 +9206,202 @@ USA_americas_rightful_claims_cat = {
 
 		remove_effect = {
 			add_threat = 8
+			skip_line_tt = yes
 			FROM = {
 				country_event = new_usa_an_americas_rightful_claims_event.7
+			}
+		}
+	}
+}
+
+USA_renaissance_and_retribution_cat = {
+	USA_RR_usurp_axis_authority_decision = {
+		icon = GFX_decision_generic_intelligence_operation
+
+		ai_will_do = {
+			base = 1
+		}
+	
+		allowed = {  
+			original_tag = USA 
+		}
+
+		available = {
+		}
+
+		#target_trigger = {
+		#	FROM = { original_tag = LIB }
+		#}
+
+		fire_only_once = yes
+		days_remove = 14
+
+		remove_effect = {
+			custom_effect_tooltip = USA_RR_usurp_axis_authority_decision_tt
+		}
+	}
+	USA_RR_establish_closer_ties_decision = {
+		icon = GFX_decision_generic_army_support
+
+		ai_will_do = {
+			base = 1
+		}
+	
+		allowed = {  
+			original_tag = USA 
+		}
+
+		target_trigger = {
+			FROM = {
+				original_tag = ITA
+			}
+		}
+
+		available = {
+			hidden_trigger = {
+				is_in_faction_with = GER
+				GER = {
+					has_government = fascism
+				}
+			}
+			FROM = {
+				has_opinion = {
+					target = USA
+					value > 49
+				}
+			}
+		}
+
+		fire_only_once = yes
+		days_remove = 14
+
+		remove_effect = {
+			USA_RR_increase_ties = yes
+
+			custom_effect_tooltip = USA_RR_establish_closer_ties_decision_tt
+			add_to_variable = { USA_RR_current_influence = 1 }
+			USA_RR_set_german_influence = yes
+		}
+	}
+	USA_RR_provide_arms_decision = {
+		icon = GFX_decision_generic_merge_plant_aircraft
+
+		ai_will_do = {
+			base = 1
+		}
+	
+		allowed = {  
+			original_tag = USA 
+		}
+
+		target_trigger = {
+			FROM = {
+				original_tag = ITA
+			}
+		}
+
+		available = {
+		}
+
+		fire_only_once = yes
+		days_remove = 14
+
+		remove_effect = {
+			USA_RR_increase_ties = yes
+			FROM = {
+				add_offsite_building = {
+					type = industrial_complex
+					level = 1
+				}
+				add_offsite_building = {
+					type = arms_factory
+					level = 3
+				}
+			}
+
+			custom_effect_tooltip = USA_RR_provide_arms_decision_tt
+			add_to_variable = { USA_RR_current_influence = 1 }
+			USA_RR_set_german_influence = yes
+		}
+	}
+	USA_RR_assert_authority_country_decision = {
+		icon = GFX_decision_generic_army_support
+
+		ai_will_do = {
+			base = 1
+		}
+	
+		allowed = {  
+			original_tag = USA 
+		}
+
+		target_trigger = {
+			FROM = {
+				original_tag = ITA
+			}
+		}
+
+		visible = {
+			always = yes
+			#FROM = {
+			#	has_country_flag = USA_RR_close_influence
+			#}
+		}
+
+		available = {
+			hidden_trigger = {
+				is_in_faction_with = GER
+				GER = {
+					has_government = fascism
+				}
+			}
+			if = {
+				limit = {
+					FROM = { is_major = yes }
+				}
+				custom_override_tooltip = {
+					tooltip = USA_RR_assert_authority_country_decision_trigger_major_tt
+					FROM = {
+						has_country_flag = {
+							flag = USA_RR_close_influence
+							value > 2
+						}
+					}
+				}
+			}
+			else = {
+				custom_override_tooltip = {
+					tooltip = USA_RR_assert_authority_country_decision_trigger_minor_tt
+					FROM = {
+						has_country_flag = {
+							flag = USA_RR_close_influence
+							value > 1
+						}
+					}
+				}
+			}
+			#USA_RR_has_enough_influence = yes
+		}
+
+		fire_only_once = yes
+		#days_re_enable = 120
+		days_remove = 7
+
+		remove_effect = {
+			if = {
+				limit = {
+					from = {
+						is_major = yes
+					}
+				}
+				custom_effect_tooltip = USA_RR_assert_authority_country_decision_major_tt
+				add_to_variable = { USA_RR_current_influence = 5 }
+				USA_RR_set_german_influence = yes
+			}
+			else = {
+				custom_effect_tooltip = USA_RR_assert_authority_country_decision_minor_tt
+				add_to_variable = { USA_RR_current_influence = 3 }
+				USA_RR_set_german_influence = yes
 			}
 		}
 	}

@@ -14631,7 +14631,7 @@ focus_tree = {
 
 	focus = { # What the Future Holds
 		id = USA_what_the_future_holds
-		icon = GFX_focus_SIA_united_against_aggresion
+		icon = GFX_focus_usa_what_the_future_holds
 		relative_position_id = USA_tend_to_the_nation
 		prerequisite = { focus = USA_the_philadelphia_fiasco }
 		prerequisite = { focus = USA_first_among_equals }
@@ -14794,28 +14794,6 @@ focus_tree = {
 				hidden_effect = {
 					news_event = { id = usa_new_an_civil_war_event.5 hours = 8 }
 				}
-			}
-			custom_effect_tooltip = USA_the_goldstar_federation_tt_2
-			skip_line_tt = yes
-			hidden_effect = {
-				add_dynamic_modifier = {
-					modifier = USA_goldstar_dynamic_modifier
-				}
-			}
-			hidden_effect = { country_event = { id = new_usa_an_goldstar_federation_event.1 days = 2 } }
-			set_cosmetic_tag = USA_goldstar
-			skip_line_tt = yes
-			set_party_name = {
-				ideology = fascism
-				long_name = USA_AN_GOLDSTAR_FASCIST_PARTY_NAME_LONG
-				name = USA_AN_GOLDSTAR_FASCIST_PARTY_NAME_SHORT
-			}
-			set_politics = {
-				ruling_party = fascism
-				elections_allowed = yes
-				election_frequency = 48
-			}
-			skip_line_tt = yes
 			if = {
 				limit = {
 					is_faction_leader = yes
@@ -14831,6 +14809,28 @@ focus_tree = {
 					set_faction_name = USA_the_goldstar_federation_tt
 				}
 				custom_effect_tooltip = USA_the_goldstar_federation_tt_3
+			}
+			}
+			skip_line_tt = yes
+			custom_effect_tooltip = USA_the_goldstar_federation_tt_2
+			skip_line_tt = yes
+			hidden_effect = {
+				add_dynamic_modifier = {
+					modifier = USA_goldstar_dynamic_modifier
+				}
+			}
+			hidden_effect = { country_event = { id = new_usa_an_goldstar_federation_event.1 days = 2 } } # Checks for the Goldstar DM for puppets
+			set_cosmetic_tag = USA_goldstar
+			skip_line_tt = yes
+			set_party_name = {
+				ideology = fascism
+				long_name = USA_AN_GOLDSTAR_FASCIST_PARTY_NAME_LONG
+				name = USA_AN_GOLDSTAR_FASCIST_PARTY_NAME_SHORT
+			}
+			set_politics = {
+				ruling_party = fascism
+				elections_allowed = yes
+				election_frequency = 48
 			}
 		}
 	}
@@ -14904,7 +14904,7 @@ focus_tree = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT
+			FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_FOCUS_TIME_REDUCTION
 		}
 		available = {
 			has_offensive_war = no
@@ -14940,6 +14940,7 @@ focus_tree = {
 	focus = { # Our Safety Before Yours
 		id = USA_our_safety_before_yours
 		icon = GFX_focus_GER_establish_protectorates_in_america
+		overlay = GFX_new_focus_fast_overlay_clock_reducer
 		relative_position_id = USA_tend_to_the_nation
 		prerequisite = { focus = USA_the_second_confederation focus = USA_the_goldstar_federation }
 		mutually_exclusive = {
@@ -14950,13 +14951,13 @@ focus_tree = {
 		x = -3
 		y = 8
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to
+			FOCUS_FILTER_Attending_to FOCUS_FILTER_FOCUS_TIME_REDUCTION FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL FOCUS_FILTER_SPY_AGENCY
 		}
 		available = {
 			#has_completed_focus = USA_the_parkerite_act
@@ -14966,7 +14967,49 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			add_war_support = 0.05
+			skip_line_tt = yes
+			every_other_country = {
+				limit = {
+					is_major = yes
+				}
+				add_opinion_modifier = {
+					target = USA
+					modifier = usa_our_saftey_before_yours_far_modifier
+				}
+			}
+			every_other_country = {
+				limit = {
+					is_major = no
+					is_american_nation = yes
+				}
+				add_opinion_modifier = {
+					target = USA
+					modifier = usa_our_saftey_before_yours_close_modifier
+				}
+				country_event = { id = new_usa_an_our_saftey_before_yours_event.1 hours = 6 random_hours = 8 }
+			}
+			skip_line_tt = yes
+			USA_modify_gov = yes
+			add_to_variable = {
+				USA_gov_dy_political_power_factor = 0.10
+				tooltip = political_power_factor_tt
+			}
+			add_to_variable = {
+				USA_gov_dy_defensive_war_stability_factor = 0.05
+				tooltip = defensive_war_stability_factor_tt
+			}
+			skip_line_tt = yes
+			USA_modify_oss = yes
+			add_to_variable = {
+				USA_dy_agy_foreign_subversive_activites = -0.15
+				tooltip = foreign_subversive_activites_tt
+			}
+			skip_line_tt = yes
+			reduce_focus_completion_cost = {
+				focus = { USA_americas_rightful_claims USA_golden_opportunities }
+				cost = 14
+			}
 		}
 	}
 
@@ -14991,7 +15034,7 @@ focus_tree = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to
+			FOCUS_FILTER_Attending_to FOCUS_FILTER_FOCUS_TIME_REDUCTION
 		}
 		available = {
 		}
@@ -15011,6 +15054,7 @@ focus_tree = {
 	focus = { # America's Rightful Claims
 		id = USA_americas_rightful_claims
 		icon = GFX_focus_usa_manifest_destiny
+		overlay = GFX_focus_fast_overlay_generic_clock
 		relative_position_id = USA_tend_to_the_nation
 		prerequisite = { focus = USA_peace_guarantees_for_our_neighbors focus = USA_our_safety_before_yours }
 		mutually_exclusive = {
@@ -15020,7 +15064,7 @@ focus_tree = {
 		x = -6
 		y = 9
 
-		cost = 10
+		cost = 7
 
 		ai_will_do = {
 			factor = 1
@@ -15036,12 +15080,9 @@ focus_tree = {
 
 		completion_reward = {
 			# Gives decisions to target various states in the Americas and demand either subjugation or annexation. Force works better for OSBY, diplomacy works better for PGfoN
-			USA = {
-				set_autonomy = {
-					target = GUA
-					autonomy_state = autonomy_integrated_puppet
-				}
-			}
+			custom_effect_tooltip = USA_americas_rightful_claims_tt
+			skip_line_tt = yes
+			custom_override_tooltip = { tooltip = { TEMP_FOCUS = USA_our_safety_before_yours TEMP_DAYS = 14 localization_key = reduce_focus_time_generic_tt } }
 		}
 	}
 
@@ -15049,6 +15090,7 @@ focus_tree = {
 		id = USA_golden_opportunities
 		icon = GFX_focus_NOR_lurk_in_the_shadows
 		relative_position_id = USA_tend_to_the_nation
+		overlay = GFX_focus_fast_overlay_generic_clock
 		prerequisite = { focus = USA_the_sun_has_already_set focus = USA_our_safety_before_yours }
 		mutually_exclusive = {
 			focus = USA_americas_rightful_claims
@@ -15073,7 +15115,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			skip_line_tt = yes
+			custom_override_tooltip = { tooltip = { TEMP_FOCUS = USA_our_safety_before_yours TEMP_DAYS = 14 localization_key = reduce_focus_time_generic_tt } }
 		}
 	}
 
@@ -15598,15 +15641,48 @@ focus_tree = {
 			}
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to
+			FOCUS_FILTER_Attending_to FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH
 		}
 		available = {
+			GER = {
+				NOT = { has_war_with = USA }
+				is_faction_leader = yes
+				has_government = fascism
+				has_opinion = {
+					target = USA
+					value > 49
+				}
+			}
 		}
 		
 		bypass = {
 		}
 
 		completion_reward = {
+			add_political_power = 30
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+			skip_line_tt = yes
+			add_ideas = usa_pledge_for_the_new_order_idea
+			skip_line_tt = yes
+			every_other_country = {
+				limit = {
+					OR = {
+						is_in_faction_with = GER
+						original_tag = GER
+					}
+				}
+				add_opinion_modifier = {
+					target = USA
+					modifier = usa_pledge_for_the_new_order_modifier
+				}
+			}
+			GER = {
+				country_event = { id = generic.2 hours = 4 }
+			}
+			skip_line_tt = yes
 			custom_override_tooltip = { tooltip = { TEMP_FOCUS = USA_the_sun_has_already_set TEMP_DAYS = 35 localization_key = reduce_focus_time_generic_tt } }
 		}
 	}
@@ -15629,12 +15705,59 @@ focus_tree = {
 			FOCUS_FILTER_Attending_to
 		}
 		available = {
+			is_in_faction_with = GER
+			GER = {
+				has_government = fascism
+			}
 		}
 		
 		bypass = {
 		}
 
 		completion_reward = {
+			# Minigame within the Axis.
+			# Get influence by doing work, making stuff, researching, etc, or getting it out of other members
+			# With enough influence, can usurp faction leadership and get a bonus while giving Germany a malice
+			# With enough, make Germany a puppet
+			# With enough over a particular country, make them a puppet (if a minor. if a major, have to be faction leader)
+			# High enough, can start a faction civil war
+
+			set_variable = { USA_RR_total_influence = 0 }
+			set_variable = { USA_RR_current_influence = 0 }
+			set_variable = { USA_RR_major_influence = 8 }
+			set_variable = { USA_RR_minor_influence = 5 }
+			every_country = {
+				limit = {
+					or = {
+						is_in_faction_with = GER
+					}
+				}
+				if = {
+					limit = {
+						is_major = yes
+					}
+					USA = { add_to_variable = { USA_RR_total_influence = USA_RR_major_influence } }
+				}
+				else = {
+					USA = { add_to_variable = { USA_RR_total_influence = USA_RR_minor_influence } }
+				}
+			}
+			add_to_variable = { USA_RR_total_influence = 15 } # Baseline for Germany
+			USA_RR_set_german_influence = yes
+			set_variable = { USA_RR_influence_to_usurp = USA_RR_total_influence }
+			set_variable = { USA_RR_influence_to_puppet = USA_RR_total_influence }
+			multiply_variable = { USA_RR_influence_to_usurp = 0.7 }
+			multiply_variable = { USA_RR_influence_to_puppet = 0.95 }
+			round_variable = USA_RR_influence_to_usurp
+			round_variable = USA_RR_influence_to_puppet
+
+
+			custom_effect_tooltip = USA_renaissance_and_retribution_tt_2
+			skip_line_tt = yes
+			add_ideas = usa_renaissance_and_retribution_idea
+			skip_line_tt = yes
+			add_ideas = usa_german_doctrine_advisors_idea
+			custom_effect_tooltip = USA_renaissance_and_retribution_tt
 		}
 	}
 
@@ -15662,15 +15785,48 @@ focus_tree = {
 			}
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to
+			FOCUS_FILTER_Attending_to FOCUS_FILTER_POLITICAL FOCUS_FILTER_INTERNATIONAL_TRADE
 		}
 		available = {
+			ENG = {
+				NOT = { has_war_with = USA }
+				is_faction_leader = yes
+				has_government = democratic
+				has_opinion = {
+					target = USA
+					value > 49
+				}
+			}
 		}
 		
 		bypass = {
 		}
 
 		completion_reward = {
+			add_political_power = 30
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
+			skip_line_tt = yes
+			add_ideas = usa_throw_in_with_the_old_idea
+			skip_line_tt = yes
+			every_other_country = {
+				limit = {
+					OR = {
+						is_in_faction_with = ENG
+						original_tag = ENG
+					}
+				}
+				add_opinion_modifier = {
+					target = USA
+					modifier = usa_throw_in_with_the_old_modifier
+				}
+			}
+			ENG = {
+				country_event = { id = generic.2 hours = 4 }
+			}
+			skip_line_tt = yes
 			custom_override_tooltip = { tooltip = { TEMP_FOCUS = USA_peace_guarantees_for_our_neighbors TEMP_DAYS = 35 localization_key = reduce_focus_time_generic_tt } }
 		}
 	}
@@ -15690,16 +15846,43 @@ focus_tree = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to
+			FOCUS_FILTER_Attending_to FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_INDUSTRY
 		}
 		available = {
+			OR = {
+				has_war_together_with = ENG
+				is_in_faction_with = ENG
+			}
 		}
 		
 		bypass = {
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = USA_do_our_part_tt
+			mark_focus_tree_layout_dirty = yes
 			
+			skip_line_tt = yes
+			add_political_power = 100
+			add_war_support = 0.05
+			skip_line_tt = yes
+			add_ideas = usa_do_our_part_idea
+			skip_line_tt = yes
+			if = {
+				limit = { is_in_faction_with = ENG }
+				every_other_country = {
+					limit = {
+						is_in_faction_with = ENG
+					}
+					add_ideas = usa_do_our_part_other_idea
+				}
+			}
+			else = {
+				custom_effect_tooltip = USA_do_our_part_tt_2
+				effect_tooltip = {
+					add_ideas = usa_do_our_part_other_idea
+				}
+			}
 		}
 	}
 

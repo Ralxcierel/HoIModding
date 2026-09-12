@@ -118,6 +118,7 @@ ideas = {
                 experience_gain_navy = 1
                 party_popularity_stability_factor = 1
                 faction_trade_opinion_factor = 1
+                foreign_subversive_activites = 1
             }
         }
 
@@ -5516,7 +5517,7 @@ ideas = {
             }
 
             modifier = {
-                consumer_goods_factor = 0.15
+                consumer_goods_factor = 0.25
             }
         }
         usa_the_new_southern_states_ti_2 = { # The New Southern States Timed Idea 2
@@ -5664,7 +5665,184 @@ ideas = {
             }
         }
 
+        usa_our_safety_before_yours_trade_idea = { # Our Safety Before Yours Trade Idea
+            picture = usa_american_protectorate
+        
+            allowed = {
+                NOT = {
+                    tag = USA
+                }
+            }
+        
+            available = {
+        
+            }
+        
+            cancel = {
+                #has_war_with = USA
+            }
+        
+            allowed_civil_war = {
+                always = yes
+            }
 
+            targeted_modifier = {
+                tag = USA    # this can also take a variable that stores a scope
+                generate_wargoal_tension_against = 0.3
+                extra_trade_to_target_factor = 0.25
+                trade_cost_for_target_factor = -0.20
+                attack_bonus_against = -0.05
+                defense_bonus_against = -0.05
+            }
+        }
+
+        usa_throw_in_with_the_old_idea = { # Throw in with the Old Idea
+            picture = eng_guided_by_britain
+        
+            allowed = {
+            }
+        
+            available = {
+        
+            }
+        
+            cancel = {
+            }
+        
+            allowed_civil_war = {
+            }
+
+            modifier = {
+                lend_lease_tension = -0.5
+                trade_opinion_factor = 0.25
+                democratic_acceptance = 50
+            }
+        }
+
+        usa_do_our_part_idea = { # Do Our Part Idea
+            picture = generic_commission
+        
+            allowed = {
+            }
+        
+            available = {
+        
+            }
+        
+            cancel = {
+            }
+        
+            allowed_civil_war = {
+            }
+
+            targeted_modifier = {
+                tag = ENG
+                attack_bonus_against_cores = 0.10
+            }
+
+            modifier = {
+                supply_consumption_factor = -0.05
+                navy_max_range_factor = 0.10
+                air_detection = 0.10
+                industrial_capacity_factory = 0.05
+                industrial_capacity_dockyard = 0.05
+            }
+        }
+        usa_do_our_part_other_idea = { # Do Our Part Idea (Other)
+            picture = generic_commission
+        
+            allowed = {
+            }
+        
+            available = {
+        
+            }
+        
+            cancel = {
+            }
+        
+            allowed_civil_war = {
+            }
+
+            targeted_modifier = {
+                tag = ENG
+                attack_bonus_against_cores = 0.10
+            }
+
+            modifier = {
+                supply_consumption_factor = -0.05
+                navy_max_range_factor = 0.10
+                air_detection = 0.10
+            }
+        }
+
+        usa_pledge_for_the_new_order_idea = { # Pledge for the New Order Idea
+            picture = AFG_work_with_ger_intel_bonus
+        
+            allowed = {
+            }
+        
+            available = {
+        
+            }
+        
+            cancel = {
+            }
+        
+            allowed_civil_war = {
+            }
+
+            modifier = {
+                research_sharing_per_country_bonus = 0.05
+                special_project_speed_factor = 0.05
+                faction_trade_opinion_factor = 0.20
+            }
+        }
+
+        usa_renaissance_and_retribution_idea = { # Renaissance and Retribution Idea
+            picture = AFG_work_with_ger_intel_bonus
+        
+            allowed = {
+            }
+        
+            available = {
+        
+            }
+        
+            cancel = {
+            }
+        
+            allowed_civil_war = {
+            }
+
+            modifier = {
+                army_attack_against_major_factor = 0.10
+                resistance_target = -0.05
+                supply_node_range = 0.10
+            }
+        }
+        usa_german_doctrine_advisors_idea = { # German Doctrine Advisors Idea
+            picture = german_advisors
+        
+            allowed = {
+            }
+        
+            available = {
+        
+            }
+        
+            cancel = {
+                has_war_with = GER
+            }
+        
+            allowed_civil_war = {
+            }
+
+            modifier = {
+                experience_gain_army_factor = 0.20
+                land_doctrine_cost_factor = -0.20
+            }
+        }
     }
 
     hidden_ideas = {

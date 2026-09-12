@@ -958,3 +958,9 @@ USA_AN_has_FREE_sci_si = {
 	}
 }
 
+USA_RR_has_enough_influence = {
+	custom_trigger_tooltip = {
+		always = no
+		tooltip = USA_RR_has_enough_influence_tt
+	}
+}
