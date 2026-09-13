@@ -353,10 +353,17 @@ opinion_modifiers = {
 	usa_our_saftey_before_yours_accepted_modifier = {
 		value = 20
 	}
+
 	usa_throw_in_with_the_old_modifier = {
 		value = 35
 	}
+
 	usa_pledge_for_the_new_order_modifier = {
 		value = 25
 	}
+
+	usa_the_sun_has_already_set_modifier = {
+		value = -75
+	}
+
 }	

@@ -512,13 +512,21 @@ recruit_character = USA_william_francis_gibbs
 recruit_character = USA_andrew_mckee
 recruit_character = USA_john_walter_christie
 recruit_character = USA_vannevar_bush
- # New
-recruit_character = USA_william_friedman
-recruit_character = USA_ralph_van_deman
-recruit_character = USA_harry_hopkins
-recruit_character = USA_henry_kaiser
-recruit_character = USA_henry_cabot_lodge_jr
-recruit_character = USA_willis_lee
+# New
+	recruit_character = USA_william_friedman
+	recruit_character = USA_ralph_van_deman
+	recruit_character = USA_harry_hopkins
+	recruit_character = USA_henry_kaiser
+	recruit_character = USA_henry_cabot_lodge_jr
+	recruit_character = USA_willis_lee
+
+	recruit_character = USA_fritz_kuhn
+	recruit_character = USA_gerald_lk_smith
+	recruit_character = USA_lawrence_dennis
+	recruit_character = USA_smedley_butler
+	recruit_character = USA_robert_e_wood
+	recruit_character = USA_john_aubitz
+#
 
 if = {
 	limit = { not = { has_dlc = "No Compromise, No Surrender" } }

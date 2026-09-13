@@ -373,20 +373,21 @@ USA_renaissance_and_retribution_cat = {
 		original_tag = USA
 	}
 
-	visible_when_empty = yes
-	#visible_when_empty = no
+	#visible_when_empty = yes
+	visible_when_empty = no
 
 	visible = {
-		#OR = {
-		#	has_completed_focus = USA_renaissance_and_retribution
-		#}
-		#hidden_trigger = {
-		#	is_in_faction_with = GER
-		#	GER = {
-		#		has_government = fascism
-		#	}
-		#}
-		always = yes
+		not = { GER = { is_subject_of = USA } }
+		OR = {
+			has_completed_focus = USA_renaissance_and_retribution
+		}
+		hidden_trigger = {
+			is_in_faction_with = GER
+			GER = {
+				has_government = fascism
+			}
+		}
+		#always = yes
 	}
 	
 }

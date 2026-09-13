@@ -9215,6 +9215,214 @@ USA_americas_rightful_claims_cat = {
 }
 
 USA_renaissance_and_retribution_cat = {
+	USA_RR_debug_decision_1 = {
+		icon = GFX_decision_gre_paying_ifc_debt
+
+		ai_will_do = {
+			base = 1
+		}
+	
+		allowed = {  
+			original_tag = USA 
+		}
+
+		available = {
+		}
+		visible = {
+			always = no
+		}
+
+		#target_trigger = {
+		#	FROM = { original_tag = LIB }
+		#}
+
+		#fire_only_once = yes
+		days_remove = 1
+
+		remove_effect = {
+			GER = {
+				add_to_faction = USA
+			}
+		}
+	}
+
+	USA_RR_dominate_germany_decision_1 = {
+		icon = GFX_decision_new_usa_dominate_germany_1
+
+		ai_will_do = {
+			base = 1
+		}
+	
+		allowed = {  
+			original_tag = USA 
+		}
+
+		visible = {
+			has_decision = USA_RR_usurp_axis_authority_decision
+		}
+
+		available = {
+			custom_override_tooltip = {
+				tooltip = USA_RR_check_for_action_trigger_tt
+				not = { has_country_flag = RR_action_in_progress_flag }
+			}
+			is_in_faction_with = GER
+			is_faction_leader = yes
+		}
+
+		fire_only_once = yes
+		days_remove = 2
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = RR_action_in_progress_flag
+			}
+		}
+		remove_effect = {
+			clr_country_flag = RR_action_in_progress_flag
+			GER = {
+				add_ideas = usa_rr_dominate_germany_1_idea
+			}
+		}
+	}
+	USA_RR_dominate_germany_decision_2 = {
+		icon = GFX_decision_new_usa_dominate_germany_2
+
+		ai_will_do = {
+			base = 1
+		}
+	
+		allowed = {  
+			original_tag = USA 
+		}
+
+		visible = {
+			has_decision = USA_RR_dominate_germany_decision_1
+		}
+
+		available = {
+			custom_override_tooltip = {
+				tooltip = USA_RR_check_for_action_trigger_tt
+				not = { has_country_flag = RR_action_in_progress_flag }
+			}
+			is_in_faction_with = GER
+			is_faction_leader = yes
+		}
+
+
+		fire_only_once = yes
+		days_remove = 2
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = RR_action_in_progress_flag
+			}
+		}
+		remove_effect = {
+			clr_country_flag = RR_action_in_progress_flag
+			GER = {
+				swap_ideas = {
+					remove_idea = usa_rr_dominate_germany_1_idea
+					add_idea = usa_rr_dominate_germany_2_idea
+				}
+			}
+		}
+	}
+	USA_RR_dominate_germany_decision_3 = {
+		icon = GFX_decision_new_usa_dominate_germany_3
+
+		ai_will_do = {
+			base = 1
+		}
+	
+		allowed = {  
+			original_tag = USA 
+		}
+
+		visible = {
+			has_decision = USA_RR_dominate_germany_decision_2
+		}
+
+		available = {
+			custom_override_tooltip = {
+				tooltip = USA_RR_check_for_action_trigger_tt
+				not = { has_country_flag = RR_action_in_progress_flag }
+			}
+			is_in_faction_with = GER
+			is_faction_leader = yes
+		}
+
+
+		fire_only_once = yes
+		days_remove = 2
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = RR_action_in_progress_flag
+			}
+		}
+		remove_effect = {
+			clr_country_flag = RR_action_in_progress_flag
+			GER = {
+				swap_ideas = {
+					remove_idea = usa_rr_dominate_germany_2_idea
+					add_idea = usa_rr_dominate_germany_3_idea
+				}
+			}
+		}
+	}
+	USA_RR_dominate_germany_decision_4 = {
+		icon = GFX_decision_new_usa_dominate_germany_4
+
+		ai_will_do = {
+			base = 1
+		}
+	
+		allowed = {  
+			original_tag = USA 
+		}
+
+		visible = {
+			has_decision = USA_RR_dominate_germany_decision_3
+		}
+
+		available = {
+			custom_override_tooltip = {
+				tooltip = USA_RR_check_for_action_trigger_tt
+				not = { has_country_flag = RR_action_in_progress_flag }
+			}
+			custom_override_tooltip = {
+				tooltip = USA_RR_dominate_germany_decision_4_trigger_tt
+				check_variable = {
+					var = USA_RR_current_influence
+					value = USA_RR_influence_to_puppet
+					compare = greater_than_or_equals
+				}
+			}
+			is_in_faction_with = GER
+			is_faction_leader = yes
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = RR_action_in_progress_flag
+			}
+		}
+		fire_only_once = yes
+		days_remove = 2
+
+		remove_effect = {
+			clr_country_flag = RR_action_in_progress_flag
+			GER = {
+				swap_ideas = {
+					remove_idea = usa_rr_dominate_germany_3_idea
+					add_idea = usa_rr_dominate_germany_4_idea
+				}
+			}
+			#skip_line_tt = yes
+			set_autonomy = {
+				target = GER
+				autonomy_state = autonomy_puppet
+			}
+		}
+	}
 	USA_RR_usurp_axis_authority_decision = {
 		icon = GFX_decision_generic_intelligence_operation
 
@@ -9227,6 +9435,18 @@ USA_renaissance_and_retribution_cat = {
 		}
 
 		available = {
+			custom_override_tooltip = {
+				tooltip = USA_RR_check_for_action_trigger_tt
+				not = { has_country_flag = RR_action_in_progress_flag }
+			}
+			custom_override_tooltip = {
+				tooltip = USA_RR_usurp_axis_authority_decision_trigger_tt
+				check_variable = {
+					var = USA_RR_current_influence
+					value = USA_RR_influence_to_usurp
+					compare = greater_than_or_equals
+				}
+			}
 		}
 
 		#target_trigger = {
@@ -9234,14 +9454,304 @@ USA_renaissance_and_retribution_cat = {
 		#}
 
 		fire_only_once = yes
-		days_remove = 14
-
+		days_remove = 30
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = RR_action_in_progress_flag
+			}
+		}
 		remove_effect = {
+			clr_country_flag = RR_action_in_progress_flag
+			hidden_effect = {
+				set_faction_leader = yes
+				add_faction_influence_score = 750
+			}
+
 			custom_effect_tooltip = USA_RR_usurp_axis_authority_decision_tt
 		}
 	}
+	USA_RR_faction_undermine_germany_decision = { # Generic 0
+		icon = GFX_decision_generic_GER_flag
+
+		ai_will_do = {
+			base = 1
+		}
+	
+		allowed = {  
+			original_tag = USA 
+		}
+
+		available = {
+			custom_override_tooltip = {
+				tooltip = USA_RR_check_for_action_trigger_tt
+				not = { has_country_flag = RR_action_in_progress_flag }
+			}
+			custom_override_tooltip = {
+				tooltip = USA_RR_faction_undermine_germany_decision_trigger_tt
+				check_variable = {
+					var = USA_RR_german_influence
+					value = 10
+					compare = greater_than
+				}
+			}
+		}
+
+		#fire_only_once = yes
+		days_remove = 25
+		modifier = {
+			political_power_cost = 0.25
+		}
+		days_re_enable = 100
+		cost = 45
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = RR_action_in_progress_flag
+			}
+		}
+		remove_effect = {
+			clr_country_flag = RR_action_in_progress_flag
+			GER = {
+				add_timed_idea = {
+					idea = usa_rr_undermine_germany_ti
+					days = 90
+				}
+			}
+			skip_line_tt = yes
+			custom_effect_tooltip = USA_RR_faction_undermine_germany_decision_tt
+			add_to_variable = { USA_RR_current_influence = 1 }
+			USA_RR_update_influence = yes
+		}
+	}
+	USA_RR_faction_produce_resources_decision = { # Generic 1
+		icon = GFX_decision_generic_factory
+
+		ai_will_do = {
+			base = 1
+		}
+	
+		allowed = {  
+			original_tag = USA 
+		}
+
+		available = {
+			custom_override_tooltip = {
+				tooltip = USA_RR_check_for_action_trigger_tt
+				not = { has_country_flag = RR_action_in_progress_flag }
+			}
+			custom_override_tooltip = {
+				tooltip = USA_RR_general_faction_trigger_tt
+				check_variable = {
+					var = USA_RR_current_influence
+					value = USA_RR_total_influence
+					compare = less_than
+				}
+			}
+		}
+
+		#fire_only_once = yes
+		days_remove = 30
+		modifier = {
+			production_speed_buildings_factor = -0.10
+		}
+		days_re_enable = 60
+		cost = 30
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = RR_action_in_progress_flag
+			}
+		}
+		remove_effect = {
+			clr_country_flag = RR_action_in_progress_flag
+			random_other_country = {
+				limit = {
+					is_in_faction_with = USA
+				}
+				add_offsite_building = {
+					type = industrial_complex
+					level = 1
+				}
+				add_timed_idea = {
+					idea = usa_rr_produce_resources_ti
+					days = 60
+				}
+			}
+			skip_line_tt = yes
+			custom_effect_tooltip = USA_RR_faction_produce_resources_decision_tt
+			add_to_variable = { USA_RR_current_influence = 1 }
+			USA_RR_update_influence = yes
+		}
+	}
+	USA_RR_faction_general_research_decision = { # Generic 2
+		icon = GFX_decision_generic_research
+
+		ai_will_do = {
+			base = 1
+		}
+	
+		allowed = {  
+			original_tag = USA 
+		}
+
+		available = {
+			custom_override_tooltip = {
+				tooltip = USA_RR_check_for_action_trigger_tt
+				not = { has_country_flag = RR_action_in_progress_flag }
+			}
+			custom_override_tooltip = {
+				tooltip = USA_RR_general_faction_trigger_tt
+				check_variable = {
+					var = USA_RR_current_influence
+					value = USA_RR_total_influence
+					compare = less_than
+				}
+			}
+		}
+
+		#fire_only_once = yes
+		days_remove = 30
+		modifier = {
+			research_speed_factor = -0.10
+		}
+		days_re_enable = 60
+		cost = 30
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = RR_action_in_progress_flag
+			}
+		}
+		remove_effect = {
+			clr_country_flag = RR_action_in_progress_flag
+			random_other_country = {
+				limit = {
+					is_in_faction_with = USA
+				}
+				add_timed_idea = {
+					idea = usa_rr_general_research_ti
+					days = 60
+				}
+			}
+			skip_line_tt = yes
+			custom_effect_tooltip = USA_RR_faction_produce_resources_decision_tt
+			add_to_variable = { USA_RR_current_influence = 1 }
+			USA_RR_update_influence = yes
+		}
+	}
+	USA_RR_faction_military_drills_decision = { # Generic 3
+		icon = GFX_decision_generic_operation
+
+		ai_will_do = {
+			base = 1
+		}
+	
+		allowed = {  
+			original_tag = USA 
+		}
+
+		available = {
+			custom_override_tooltip = {
+				tooltip = USA_RR_check_for_action_trigger_tt
+				not = { has_country_flag = RR_action_in_progress_flag }
+			}
+			custom_override_tooltip = {
+				tooltip = USA_RR_general_faction_trigger_tt
+				check_variable = {
+					var = USA_RR_current_influence
+					value = USA_RR_total_influence
+					compare = less_than
+				}
+			}
+		}
+
+		#fire_only_once = yes
+		days_remove = 30
+		modifier = {
+			air_doctrine_cost_factor = 0.20
+			land_doctrine_cost_factor = 0.20
+			naval_doctrine_cost_factor = 0.20
+		}
+		days_re_enable = 60
+		cost = 30
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = RR_action_in_progress_flag
+			}
+		}
+		remove_effect = {
+			clr_country_flag = RR_action_in_progress_flag
+			random_other_country = {
+				limit = {
+					is_in_faction_with = USA
+				}
+				add_timed_idea = {
+					idea = usa_rr_military_drills_ti
+					days = 60
+				}
+			}
+			skip_line_tt = yes
+			custom_effect_tooltip = USA_RR_faction_produce_resources_decision_tt
+			add_to_variable = { USA_RR_current_influence = 1 }
+			USA_RR_update_influence = yes
+		}
+	}
+	USA_RR_faction_provide_arms_decision = { # Generic 4
+		icon = GFX_decision_generic_protection
+
+		ai_will_do = {
+			base = 1
+		}
+	
+		allowed = {  
+			original_tag = USA 
+		}
+
+		available = {
+			custom_override_tooltip = {
+				tooltip = USA_RR_check_for_action_trigger_tt
+				not = { has_country_flag = RR_action_in_progress_flag }
+			}
+			custom_override_tooltip = {
+				tooltip = USA_RR_general_faction_trigger_tt
+				check_variable = {
+					var = USA_RR_current_influence
+					value = USA_RR_total_influence
+					compare = less_than
+				}
+			}
+		}
+
+		cost = 30
+		#fire_only_once = yes
+		days_remove = 30
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = RR_action_in_progress_flag
+			}
+		}
+		modifier = {
+			industrial_capacity_factory = -0.05
+		}
+		days_re_enable = 60
+
+		remove_effect = {
+			clr_country_flag = RR_action_in_progress_flag
+			random_other_country = {
+				limit = {
+					is_in_faction_with = USA
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 5000
+					producer = USA
+				}
+			}
+			skip_line_tt = yes
+			custom_effect_tooltip = USA_RR_faction_produce_resources_decision_tt
+			add_to_variable = { USA_RR_current_influence = 1 }
+			USA_RR_update_influence = yes
+		}
+	}
 	USA_RR_establish_closer_ties_decision = {
-		icon = GFX_decision_generic_army_support
+		icon = GFX_decision_SWI_support_humanitarian_efforts
 
 		ai_will_do = {
 			base = 1
@@ -9253,11 +9763,16 @@ USA_renaissance_and_retribution_cat = {
 
 		target_trigger = {
 			FROM = {
-				original_tag = ITA
+				is_in_faction_with = GER
+				not = { original_tag = GER }
 			}
 		}
 
 		available = {
+			custom_override_tooltip = {
+				tooltip = USA_RR_check_for_action_trigger_tt
+				not = { has_country_flag = RR_action_in_progress_flag }
+			}
 			hidden_trigger = {
 				is_in_faction_with = GER
 				GER = {
@@ -9271,16 +9786,22 @@ USA_renaissance_and_retribution_cat = {
 				}
 			}
 		}
-
+		cost = 20
 		fire_only_once = yes
 		days_remove = 14
-
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = RR_action_in_progress_flag
+			}
+		}
 		remove_effect = {
-			USA_RR_increase_ties = yes
+			
+			clr_country_flag = RR_action_in_progress_flag
+			From = { USA_RR_increase_ties = yes }
 
 			custom_effect_tooltip = USA_RR_establish_closer_ties_decision_tt
 			add_to_variable = { USA_RR_current_influence = 1 }
-			USA_RR_set_german_influence = yes
+			USA_RR_update_influence = yes
 		}
 	}
 	USA_RR_provide_arms_decision = {
@@ -9296,18 +9817,37 @@ USA_renaissance_and_retribution_cat = {
 
 		target_trigger = {
 			FROM = {
-				original_tag = ITA
+				is_in_faction_with = GER
+				not = { original_tag = GER }
 			}
 		}
 
 		available = {
+			custom_override_tooltip = {
+				tooltip = USA_RR_check_for_action_trigger_tt
+				not = { has_country_flag = RR_action_in_progress_flag }
+			}
+			FROM = {
+				has_opinion = {
+					target = USA
+					value > 0
+				}
+			}
 		}
-
+		cost = 10
 		fire_only_once = yes
 		days_remove = 14
-
+		modifier = {
+			civilian_factory_use = 15
+		}
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = RR_action_in_progress_flag
+			}
+		}
 		remove_effect = {
-			USA_RR_increase_ties = yes
+			clr_country_flag = RR_action_in_progress_flag
+			From = { USA_RR_increase_ties = yes }
 			FROM = {
 				add_offsite_building = {
 					type = industrial_complex
@@ -9321,7 +9861,68 @@ USA_renaissance_and_retribution_cat = {
 
 			custom_effect_tooltip = USA_RR_provide_arms_decision_tt
 			add_to_variable = { USA_RR_current_influence = 1 }
-			USA_RR_set_german_influence = yes
+			USA_RR_update_influence = yes
+		}
+	}
+	USA_RR_conduct_joint_research_decision = {
+		icon = GFX_decision_generic_research
+
+		ai_will_do = {
+			base = 1
+		}
+	
+		allowed = {  
+			original_tag = USA 
+		}
+
+		target_trigger = {
+			FROM = {
+				is_in_faction_with = GER
+				not = { original_tag = GER }
+			}
+		}
+
+		available = {
+			custom_override_tooltip = {
+				tooltip = USA_RR_check_for_action_trigger_tt
+				not = { has_country_flag = RR_action_in_progress_flag }
+			}
+			FROM = {
+				has_opinion = {
+					target = USA
+					value > 0
+				}
+			}
+		}
+		cost = 10
+		fire_only_once = yes
+		days_remove = 21
+		modifier = {
+			research_speed_factor = -0.10
+		}
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = RR_action_in_progress_flag
+			}
+		}
+		remove_effect = {
+			clr_country_flag = RR_action_in_progress_flag
+			From = { USA_RR_increase_ties = yes }
+			FROM = {
+				add_tech_bonus = {
+					name = "American Joint Research"
+					bonus = 0.5
+					#ahead_reduction = 1
+					uses = 1
+					category = industry
+					category = infantry_tech
+					category = motorized_equipment
+				}
+			}
+
+			custom_effect_tooltip = USA_RR_conduct_joint_research_decision_tt
+			add_to_variable = { USA_RR_current_influence = 1 }
+			USA_RR_update_influence = yes
 		}
 	}
 	USA_RR_assert_authority_country_decision = {
@@ -9337,18 +9938,23 @@ USA_renaissance_and_retribution_cat = {
 
 		target_trigger = {
 			FROM = {
-				original_tag = ITA
+				is_in_faction_with = GER
+				not = { original_tag = GER }
 			}
 		}
 
 		visible = {
-			always = yes
-			#FROM = {
-			#	has_country_flag = USA_RR_close_influence
-			#}
+			#always = yes
+			FROM = {
+				has_country_flag = USA_RR_close_influence
+			}
 		}
 
 		available = {
+			custom_override_tooltip = {
+				tooltip = USA_RR_check_for_action_trigger_tt
+				not = { has_country_flag = RR_action_in_progress_flag }
+			}
 			hidden_trigger = {
 				is_in_faction_with = GER
 				GER = {
@@ -9385,9 +9991,14 @@ USA_renaissance_and_retribution_cat = {
 
 		fire_only_once = yes
 		#days_re_enable = 120
-		days_remove = 7
-
+		days_remove = 14
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = RR_action_in_progress_flag
+			}
+		}
 		remove_effect = {
+			clr_country_flag = RR_action_in_progress_flag
 			if = {
 				limit = {
 					from = {
@@ -9396,12 +10007,12 @@ USA_renaissance_and_retribution_cat = {
 				}
 				custom_effect_tooltip = USA_RR_assert_authority_country_decision_major_tt
 				add_to_variable = { USA_RR_current_influence = 5 }
-				USA_RR_set_german_influence = yes
+				USA_RR_update_influence = yes
 			}
 			else = {
 				custom_effect_tooltip = USA_RR_assert_authority_country_decision_minor_tt
-				add_to_variable = { USA_RR_current_influence = 3 }
-				USA_RR_set_german_influence = yes
+				add_to_variable = { USA_RR_current_influence = 2 }
+				USA_RR_update_influence = yes
 			}
 		}
 	}

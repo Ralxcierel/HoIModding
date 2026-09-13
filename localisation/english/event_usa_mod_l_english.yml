@@ -573,7 +573,7 @@
   usa_new_an_civil_war_event.4.desc: "In an impressive turn of events, the beleaguered American government and military have successfully quelled this second attempt at secession. Thousands lie dead after the bloody civil war, but the country is now finally able to pursue its own course once more."
   usa_new_an_civil_war_event.4.a: "Understood"
   usa_new_an_civil_war_event.5.t: "Rise of the [USA.GetNameDef]"
-  usa_new_an_civil_war_event.5.desc: "Following the political upheavals brought about by the Great Depression, the United States has moved its primary seat of authority away from the central Federal Government and towards the states. What the Confederacy was unable to do 80 years ago, the states and the new administration in DC has now accomplished."
+  usa_new_an_civil_war_event.5.desc: "\nFollowing the political upheavals brought about by the Great Depression, the United States has moved its primary seat of authority away from the central Federal Government and towards the states. What the Confederacy was unable to do 80 years ago, the states and the new administration in DC has now accomplished."
   usa_new_an_civil_war_event.5.a: "Ah..."
   usa_new_an_civil_war_event.5.b: "Understood"
 
@@ -638,6 +638,14 @@
   new_usa_an_our_saftey_before_yours_event.3.desc: "The [FROM.GetAdjective] administration has rejected our claims of hemispheric trade hegemony. They are flaunting their refusal in our face with this rejection."
   new_usa_an_our_saftey_before_yours_event.3.a: "How ungrateful..."
 
+  new_usa_an_USA_the_second_confederation_event.1.t: "The First President of the Second Confederation"
+  new_usa_an_USA_the_second_confederation_event.1.desc: "As the Confederation takes shape and the central administration of the Confederal government finishes moving into the new capital at Richmond, the first presidential election is already underway. Hundreds of candidates have stepped forward, but the two with the most momentum behind them have shown themselves to be William Dudley Pelley and Smedley Butler.\n\nPelley is putting himself forward as \"America's Fuhrer\", taking after the style and organization of Hitler's regime in Germany. He's charismatic and devoted, though a bit fanatical in some of his views compared to the average American.\n\nButler is a military commander who was nearly previously implicated in an attempted coup against the old regime, and he has now arrived once more at the precipice of the highest office, offering to be a citizen commander for the nation.\n\nAnd the winner is..."
+  new_usa_an_USA_the_second_confederation_event.1.a: "William Dudley Pelley"
+  new_usa_an_USA_the_second_confederation_event.1.b: "Smedley Butler"
+  new_usa_an_USA_the_goldstar_federation_event.1.t: "The First President of the Federation"
+  new_usa_an_USA_the_goldstar_federation_event.1.desc: "As the Federation takes shape and the new government reorganizes itself in Washington, the first presidential election is already underway. Many different candidates from across the country have stepped forward and made their play, but the two with the most momentum behind them have shown themselves to be John Aubitz and Robert E. Wood.\n\nAubitz is the recently-famous founder of the Goldstar Network itself, the spiritual backbone of our new governmental structure. A former military engineer and a burgeoning philosopher, his supporters have christened him the \"Goldstar Phoenix.\"\n\nWood is a Wallstreet figure with an impressive resume, the former Sears head, and a leading member of the America First movement. His background and connections would likely have well-prepared him for this role.\n\nAnd the winner is..."
+  new_usa_an_USA_the_goldstar_federation_event.1.a: "John Aubitz"
+  new_usa_an_USA_the_goldstar_federation_event.1.b: "Robert E. Wood"
 
 # OTHER EVENTS
   new_usa_remove_bop_mod.1.t:   "Removes Public training programs"

@@ -101,24 +101,8 @@ ideas = {
             }
 
             modifier = {
-                supply_combat_penalties_on_core_factor = 1
-                no_supply_grace = 1
-                supply_node_range = 1
-                #supply_factor = 1
-                supply_consumption_factor = 1
-                out_of_supply_factor = 1
-                critical_receive_chance = 1
-                repair_speed_factor = 1
-                dig_in_speed_factor = 1
-                coordination_bonus = 1
-                army_armor_attack_factor = 1
-                army_artillery_attack_factor = 1
-                experience_gain_navy_unit_factor = 1
-                naval_doctrine_cost_factor = 1
-                experience_gain_navy = 1
-                party_popularity_stability_factor = 1
-                faction_trade_opinion_factor = 1
-                foreign_subversive_activites = 1
+                generate_wargoal_tension = -1
+                justify_war_goal_time = -0.85
             }
         }
 
@@ -5843,6 +5827,376 @@ ideas = {
                 land_doctrine_cost_factor = -0.20
             }
         }
+
+        usa_rr_undermine_germany_ti = { # Undermine Germany Timed Idea
+            picture = chi_incompetent_officers
+        
+            allowed = {
+            }
+        
+            available = {
+        
+            }
+        
+            cancel = {
+            }
+        
+            allowed_civil_war = {
+            }
+
+            modifier = {
+                political_power_factor = -0.15
+            }
+        }
+        usa_rr_produce_resources_ti = { # Produce Resources Timed Idea
+            picture = generic_improved_industries
+        
+            allowed = {
+            }
+        
+            available = {
+        
+            }
+        
+            cancel = {
+            }
+        
+            allowed_civil_war = {
+            }
+
+            modifier = {
+                production_speed_buildings_factor = 0.10
+                local_resources_factor = 0.10
+            }
+        }
+        usa_rr_general_research_ti = { # General Research Timed Idea
+            picture = generic_research_bonus
+        
+            allowed = {
+            }
+        
+            available = {
+        
+            }
+        
+            cancel = {
+            }
+        
+            allowed_civil_war = {
+            }
+
+            modifier = {
+                research_speed_factor = 0.10
+            }
+        }
+        usa_rr_military_drills_ti = { # Military Drills Timed Idea
+            picture = generic_manpower_bonus
+        
+            allowed = {
+            }
+        
+            available = {
+        
+            }
+        
+            cancel = {
+            }
+        
+            allowed_civil_war = {
+            }
+
+            modifier = {
+                experience_gain_air_factor = 0.15
+                experience_gain_army_factor = 0.15
+                experience_gain_navy_factor = 0.15
+                #military_staff_cost_factor = -0.25
+            }
+        }
+        usa_rr_dominate_germany_1_idea = { # Dominate Germany Idea (1)
+            picture = generic_usa_conflict
+        
+            allowed = {
+            }
+        
+            available = {
+        
+            }
+        
+            cancel = {
+            }
+        
+            allowed_civil_war = {
+            }
+
+            targeted_modifier = {
+                tag = USA
+                attack_bonus_against = -0.03
+            }
+
+            modifier = {
+                political_power_factor = -0.05
+                industrial_capacity_factory = -0.03
+                industrial_capacity_dockyard = -0.03
+            }
+        }
+        usa_rr_dominate_germany_2_idea = { # Dominate Germany Idea (2)
+            picture = generic_usa_conflict
+        
+            allowed = {
+            }
+        
+            available = {
+        
+            }
+        
+            cancel = {
+            }
+        
+            allowed_civil_war = {
+            }
+
+            targeted_modifier = {
+                tag = USA
+                attack_bonus_against = -0.05
+                defense_bonus_against = -0.05
+            }
+
+            modifier = {
+                political_power_factor = -0.10
+                industrial_capacity_factory = -0.05
+                industrial_capacity_dockyard = -0.05
+                stability_factor = -0.05
+            }
+        }
+        usa_rr_dominate_germany_3_idea = { # Dominate Germany Idea (3)
+            picture = generic_usa_conflict
+        
+            allowed = {
+            }
+        
+            available = {
+        
+            }
+        
+            cancel = {
+            }
+        
+            allowed_civil_war = {
+            }
+
+            targeted_modifier = {
+                tag = USA
+                attack_bonus_against = -0.05
+                defense_bonus_against = -0.05
+                breakthrough_bonus_against = -0.05
+            }
+
+            modifier = {
+                political_power_factor = -0.20
+                industrial_capacity_factory = -0.05
+                industrial_capacity_dockyard = -0.05
+                stability_factor = -0.10
+                war_support_factor = -0.10
+            }
+        }
+        usa_rr_dominate_germany_4_idea = { # Dominate Germany Idea (4)
+            picture = generic_usa_conflict
+        
+            allowed = {
+            }
+        
+            available = {
+        
+            }
+        
+            cancel = {
+            }
+        
+            allowed_civil_war = {
+            }
+
+            targeted_modifier = {
+                tag = USA
+                attack_bonus_against = -0.05
+                defense_bonus_against = -0.05
+                breakthrough_bonus_against = -0.05
+                extra_trade_to_target_factor = 0.25
+                trade_cost_for_target_factor = -0.20
+            }
+
+        }
+
+        usa_secure_the_gulf_ti = { # Secure the Gulf Timed Idea
+            picture = PHI_island_nation
+        
+            allowed = {
+            }
+        
+            available = {
+        
+            }
+        
+            cancel = {
+            }
+        
+            allowed_civil_war = {
+            }
+
+            modifier = {
+                naval_invasion_penalty = -0.3
+                naval_invasion_capacity = 1
+                naval_invasion_prep_speed = 0.5
+                naval_invasion_division_cap = 4
+                shore_bombardment_bonus = 0.25
+                convoy_escort_efficiency = 0.15
+            }
+        }
+
+        usa_rush_for_the_canal_ti = { # Rush for the Canal Timed Idea
+            picture = generic_supply_line
+        
+            allowed = {
+            }
+        
+            available = {
+        
+            }
+        
+            cancel = {
+            }
+        
+            allowed_civil_war = {
+            }
+
+            modifier = {
+                naval_invasion_penalty = -0.15
+                naval_invasion_prep_speed = 0.15
+                naval_detection = 0.25
+                navy_weather_penalty = -0.15
+                navy_submarine_detection_factor = 0.1
+                army_speed_factor = 0.1
+            }
+        }
+
+        usa_seize_the_great_flanks_ti = { # Seize the Great Flanks Timed Idea
+            picture = generic_navy_cruiser_warfare
+        
+            allowed = {
+            }
+        
+            available = {
+        
+            }
+        
+            cancel = {
+            }
+        
+            allowed_civil_war = {
+            }
+
+            modifier = {
+                navy_max_range_factor = 0.25
+                navy_org_factor = 0.15
+                navy_weather_penalty = -0.25
+                acclimatization_cold_climate_gain_factor = 0.25
+                army_speed_factor = 0.10
+            }
+        }
+
+        usa_the_sun_has_already_set_idea = { # The Sun Has Already Set Idea
+            picture = PLACEHOLDER
+        
+            allowed = {
+            }
+        
+            available = {
+        
+            }
+        
+            cancel = {
+            }
+        
+            allowed_civil_war = {
+            }
+
+            rule = {
+                can_declare_war_without_wargoal_when_in_war = yes
+                can_join_factions = no
+                can_use_kamikaze_pilots = yes
+            }
+
+            modifier = {
+                improve_relations_maintain_cost_factor = 10
+                generate_wargoal_tension = -0.5
+                justify_war_goal_time = -0.3
+                offensive_war_stability_factor = 0.05
+                war_support_factor = 0.10
+                #army_attack_factor = 0.05
+                #army_speed_factor = 0.05
+                #ace_effectiveness_factor = 0.10
+                #air_superiority_bonus_in_combat = 0.05
+                #air_range_factor = 0.10
+                #naval_speed_factor = 0.10
+                #navy_max_range_factor = 0.15
+                #supply_consumption_factor = -0.10
+                political_power_factor = 0.10
+                conscription = 0.005
+                resistance_target = -0.05
+                #compliance_gain = 0.08
+                puppet_cost_factor = -0.25
+                annex_cost_factor = -0.25
+                annex_subject_cost_factor = -0.5
+                naval_invasion_penalty = -0.10
+            }
+        }
+
+        usa_a_song_for_the_horizon_idea = { # A Song for the Horizon
+            picture = PLACEHOLDER
+        
+            allowed = {
+            }
+        
+            available = {
+        
+            }
+        
+            cancel = {
+            }
+        
+            allowed_civil_war = {
+            }
+
+            rule = {
+                can_declare_war_without_wargoal_when_in_war = yes
+                can_join_factions = no
+                can_use_kamikaze_pilots = yes
+            }
+
+            modifier = {
+                improve_relations_maintain_cost_factor = 10
+                generate_wargoal_tension = -1
+                justify_war_goal_time = -0.85
+                offensive_war_stability_factor = 0.15
+                war_support_factor = 0.15
+                #army_attack_factor = 0.05
+                army_speed_factor = 0.10
+                ace_effectiveness_factor = 0.10
+                air_superiority_bonus_in_combat = 0.05
+                air_range_factor = 0.10
+                naval_speed_factor = 0.10
+                navy_max_range_factor = 0.15
+                supply_consumption_factor = -0.10
+                political_power_factor = 0.15
+                conscription = 0.01
+                resistance_target = -0.10
+                compliance_gain = 0.08
+                puppet_cost_factor = -0.25
+                annex_cost_factor = -0.25
+                annex_subject_cost_factor = -0.5
+                naval_invasion_penalty = -0.15
+            }
+        }
+
     }
 
     hidden_ideas = {

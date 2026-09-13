@@ -4748,6 +4748,48 @@ country_event = { # undoes the stealth focus [unused]
 	}
 
 	
+ add_namespace = new_usa_rr_germany_influence_event
+  	country_event = { # Slowly ticks up german influence within the axis over time. Stops if no longer in the axis or if germany is a USA puppet
+ 		id = new_usa_rr_germany_influence_event.1
+
+ 		hidden = yes
+
+ 		is_triggered_only = yes
+
+ 		trigger = {
+ 			has_completed_focus = USA_renaissance_and_retribution
+ 		}
+
+ 		immediate = {
+			#random_list = {
+				#1 = {
+				#}
+			#}
+			if = {
+				limit = {
+					GER = {
+						is_in_faction_with = USA
+						not = { is_subject_of = USA }
+					}
+				}
+				country_event = { id = new_usa_rr_germany_influence_event.1 days = 25 random_days = 40 }
+				if = {
+					limit = {
+						check_variable = {
+							var = USA_RR_current_influence
+							value = 0
+							compare = greater_than
+						}
+					}
+					add_to_variable = { USA_RR_german_recovered_influence = 1 }
+					subtract_from_variable = { USA_RR_current_influence = 1 }
+					USA_RR_update_influence = yes
+				}
+			}
+ 		}
+	}
+
+	
 ##################################################################
 
 
@@ -10198,6 +10240,76 @@ country_event = { # undoes the stealth focus [unused]
 			}
 		}
 
+	}
+ add_namespace = new_usa_an_USA_the_second_confederation_event
+ # USA_the_second_confederation
+	country_event = { # Choose Confederacy Leader
+		id = new_usa_an_USA_the_second_confederation_event.1
+		title = new_usa_an_USA_the_second_confederation_event.1.t
+		desc = new_usa_an_USA_the_second_confederation_event.1.desc
+		picture = GFX_report_event_usa_election_generic
+		is_triggered_only = yes
+
+		option = { # Take William Dudley Pelley
+			name = new_usa_an_USA_the_second_confederation_event.1.a
+			effect_tooltip = {
+				create_country_leader = {
+					name = USA_william_dudley_pelley
+					picture = GFX_portrait_USA_william_dudley_pelley
+					expire = "1965.1.1"
+					ideology = fascism_ideology
+					traits = {
+						american_fuhrer
+					}
+				}
+			}
+		}
+		option = { # Take Smedley Butler
+			name = new_usa_an_USA_the_second_confederation_event.1.b
+			create_country_leader = {
+				name = USA_smedley_butler
+				picture = GFX_portrait_USA_smedley_butler
+				expire = "1965.1.1"
+				ideology = fascism_ideology
+				traits = {
+					american_generalissimo
+				}
+			}
+		}
+	}
+ add_namespace = new_usa_an_USA_the_goldstar_federation_event
+ # USA_the_goldstar_federation
+	country_event = { # Choose Goldstar Leader
+		id = new_usa_an_USA_the_goldstar_federation_event.1
+		title = new_usa_an_USA_the_goldstar_federation_event.1.t
+		desc = new_usa_an_USA_the_goldstar_federation_event.1.desc
+		picture = GFX_report_event_usa_election_generic
+		is_triggered_only = yes
+
+		option = { # Take John Aubitz
+			name = new_usa_an_USA_the_goldstar_federation_event.1.a
+			create_country_leader = {
+				name = USA_john_aubitz
+				picture = GFX_portrait_USA_john_aubitz
+				expire = "1965.1.1"
+				ideology = fascism_ideology
+				traits = {
+					goldstar_phoenix
+				}
+			}
+		}
+		option = { # Take Robert E. Wood
+			name = new_usa_an_USA_the_goldstar_federation_event.1.b
+			create_country_leader = {
+				name = USA_robert_e_wood
+				picture = GFX_portrait_USA_robert_e_wood
+				expire = "1965.1.1"
+				ideology = fascism_ideology
+				traits = {
+					wallstreet_leader america_first
+				}
+			}
+		}
 	}
 
 ##################################################################

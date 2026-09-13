@@ -92,6 +92,38 @@ spriteTypes = {
 		name = "GFX_decision_category_partner_in_arms"
 		texturefile = "gfx/interface/new_decisions/decision_category_partner_in_arms.dds"
 	}
+	spriteType = { # decision_new_usa_congress
+		name = "GFX_decision_new_usa_congress"
+		texturefile = "gfx/interface/new_decisions/decision_new_usa_congress.dds"
+	}
+	spriteType = { # decision_new_usa_congress_1
+		name = "GFX_decision_new_usa_congress_1"
+		texturefile = "gfx/interface/new_decisions/decision_new_usa_congress_1.dds"
+	}
+	spriteType = { # decision_new_usa_congress_2
+		name = "GFX_decision_new_usa_congress_2"
+		texturefile = "gfx/interface/new_decisions/decision_new_usa_congress_2.dds"
+	}
+	spriteType = { # decision_new_usa_congress_3
+		name = "GFX_decision_new_usa_congress_3"
+		texturefile = "gfx/interface/new_decisions/decision_new_usa_congress_3.dds"
+	}
+	spriteType = { # decision_new_usa_dominate_germany_1
+		name = "GFX_decision_new_usa_dominate_germany_1"
+		texturefile = "gfx/interface/new_decisions/decision_new_usa_dominate_germany_1.dds"
+	}
+	spriteType = { # decision_new_usa_dominate_germany_2
+		name = "GFX_decision_new_usa_dominate_germany_2"
+		texturefile = "gfx/interface/new_decisions/decision_new_usa_dominate_germany_2.dds"
+	}
+	spriteType = { # decision_new_usa_dominate_germany_3
+		name = "GFX_decision_new_usa_dominate_germany_3"
+		texturefile = "gfx/interface/new_decisions/decision_new_usa_dominate_germany_3.dds"
+	}
+	spriteType = { # decision_new_usa_dominate_germany_4
+		name = "GFX_decision_new_usa_dominate_germany_4"
+		texturefile = "gfx/interface/new_decisions/decision_new_usa_dominate_germany_4.dds"
+	}
 
   # NEW TEXT ICONS
   	spriteType = { # usa_war_credits_texticon
@@ -204,6 +236,37 @@ spriteTypes = {
 	spriteType = { # idea_willis_lee
 		name = "GFX_idea_willis_lee"
 		texturefile = "gfx/interface/new_leaders/idea_willis_lee.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = { # idea_fritz_kuhn
+		name = "GFX_idea_fritz_kuhn"
+		texturefile = "gfx/interface/new_leaders/idea_fritz_kuhn.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = { # idea_gerald_lk_smith
+		name = "GFX_idea_gerald_lk_smith"
+		texturefile = "gfx/interface/new_leaders/idea_gerald_lk_smith.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = { # idea_lawrence_dennis
+		name = "GFX_idea_lawrence_dennis"
+		texturefile = "gfx/interface/new_leaders/idea_lawrence_dennis.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = { # portrait_USA_robert_e_wood
+		name = "GFX_portrait_USA_robert_e_wood"
+		texturefile = "gfx/leaders/USA/portrait_USA_robert_e_wood.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = { # portrait_USA_smedley_butler
+		name = "GFX_portrait_USA_smedley_butler"
+		texturefile = "gfx/leaders/USA/portrait_USA_smedley_butler.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = { # portrait_USA_john_aubitz
+		name = "GFX_portrait_USA_john_aubitz"
+		texturefile = "gfx/leaders/USA/portrait_USA_john_aubitz.dds"
 		legacy_lazy_load = no
 	}
 

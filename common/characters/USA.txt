@@ -23,6 +23,57 @@ characters={
 		}
 		country_leader={
 			ideology=fascism_ideology
+			traits = {
+				american_fuhrer
+			}
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	USA_smedley_butler={
+		name=USA_smedley_butler
+		portraits={
+			civilian={
+				large=GFX_portrait_USA_smedley_butler
+			}
+		}
+		country_leader={
+			ideology=fascism_ideology
+			traits = {
+				american_generalissimo
+			}
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	USA_robert_e_wood={
+		name=USA_robert_e_wood
+		portraits={
+			civilian={
+				large=GFX_portrait_USA_robert_e_wood
+			}
+		}
+		country_leader={
+			ideology=fascism_ideology
+			traits = {
+				wallstreet_leader america_first
+			}
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	USA_john_aubitz={
+		name=USA_john_aubitz
+		portraits={
+			civilian={
+				large=GFX_portrait_USA_john_aubitz
+			}
+		}
+		country_leader={
+			ideology=fascism_ideology
+			traits = {
+				goldstar_phoenix
+			}
 			expire="1965.1.1.1"
 			id=-1
 		}
@@ -1716,36 +1767,10 @@ characters={
 				original_tag  = USA
 			}
 			visible = {
-				always = no
+				not = { has_taken_core_path_communist = yes }
 			}
 			available  = {
-				always = no
-				#if  = {
-				#	limit  = {
-				#		has_dlc = "Man the Guns"
-				#	}
-				#	has_completed_focus  = USA_america_first
-				#	NOT  = {
-				#		focus_progress  = {
-				#			focus  = USA_neutrality_act
-				#			progress > 0.000
-				#		}
-				#	}
-				#	NOT  = {
-				#		focus_progress  = {
-				#			focus  = USA_limited_intervention
-				#			progress > 0.000
-				#		}
-				#	}
-				#}
-				#if  = {
-				#	limit  = {
-				#		has_dlc = "Man the Guns"
-				#	}
-				#	NOT  = {
-				#		has_autonomy_state  = autonomy_supervised_state
-				#	}
-				#}
+				always = yes
 			}
 			traits  = {
 				fascist_demagogue
@@ -2041,6 +2066,79 @@ characters={
 		}
 	}
 
+   # AN
+	USA_fritz_kuhn = {
+		name = USA_fritz_kuhn
+		portraits = {
+			army = {
+				small="GFX_idea_fritz_kuhn"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = fritz_kuhn
+			available  = {
+				has_taken_core_path_nationalist = yes
+			}
+			allowed  = {
+				original_tag  = USA
+			}
+			traits  = {
+				leader_of_the_bund
+			}
+			visible = {
+				has_taken_core_path_non_nationalist = no
+			}
+		}
+	}
+	USA_gerald_lk_smith = {
+		name = USA_gerald_lk_smith
+		portraits = {
+			army = {
+				small="GFX_idea_gerald_lk_smith"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = gerald_lk_smith
+			available  = {
+				has_taken_core_path_nationalist = yes
+			}
+			allowed  = {
+				original_tag  = USA
+			}
+			traits  = {
+				AFP_radio_demagogue
+			}
+			visible = {
+				has_taken_core_path_non_nationalist = no
+			}
+		}
+	}
+	USA_lawrence_dennis = {
+		name = USA_lawrence_dennis
+		portraits = {
+			army = {
+				small="GFX_idea_lawrence_dennis"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = lawrence_dennis
+			available  = {
+				has_taken_core_path_nationalist = yes
+			}
+			allowed  = {
+				original_tag  = USA
+			}
+			traits  = {
+				americas_fascist_intellectual
+			}
+			visible = {
+				has_taken_core_path_non_nationalist = no
+			}
+		}
+	}
 
   #####
  #     #   ####   #  ######  #    #  #####  #   ####   #####   ####

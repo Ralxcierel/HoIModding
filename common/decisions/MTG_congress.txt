@@ -192,6 +192,39 @@ USA_congress = {
 			USA = { transfer_state = 369 } # Kentucky
 		}
 	}
+	USA_RR_debug_decision_2 = {
+		icon = GFX_decision_gre_paying_ifc_debt
+
+		ai_will_do = {
+			base = 1
+		}
+	
+		allowed = {  
+			original_tag = USA 
+		}
+
+		available = {
+		}
+		visible = {
+			always = no
+		}
+
+		#target_trigger = {
+		#	FROM = { original_tag = LIB }
+		#}
+
+		#fire_only_once = yes
+		days_remove = 1
+
+		remove_effect = {
+			GER = {
+				add_to_faction = USA
+				add_to_faction = HUN
+				add_to_faction = ITA
+				add_to_faction = ROM
+			}
+		}
+	}
 	USA_stage_a_protest = {
 		icon = generic_political_rally
 		visible = {
@@ -352,7 +385,7 @@ USA_congress = {
 		}
 	}
 	USA_small_lobby_effort = {
-		icon = generic_political_discourse
+		icon = GFX_decision_new_usa_congress_1
 		available = {
 			OR = {
 				check_variable = { senators_support < senators_total }
@@ -396,7 +429,7 @@ USA_congress = {
 		}
 	}
 	USA_medium_lobby_effort = {
-		icon = generic_political_discourse
+		icon = GFX_decision_new_usa_congress_2
 		available = {
 			OR = {
 				check_variable = { senators_support < senators_total }
@@ -440,7 +473,7 @@ USA_congress = {
 		}
 	}
 	USA_significant_lobby_effort = {
-		icon = generic_political_discourse
+		icon = GFX_decision_new_usa_congress_3
 		available = {
 			OR = {
 				check_variable = { senators_support < senators_total }
@@ -475,7 +508,7 @@ USA_congress = {
 				factor = 0
 			}
 		}
-		days_remove = 50
+		days_remove = 65
 		modifier = {
 			political_power_gain = -1.25
 		}
