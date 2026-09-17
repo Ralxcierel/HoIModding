@@ -6197,6 +6197,31 @@ ideas = {
             }
         }
 
+        usa_the_eagle_flies_alone_idea = { # The Eagle Flies Alone Idea
+            picture = PLACEHOLDER
+        
+            allowed = {
+            }
+        
+            available = {
+        
+            }
+        
+            cancel = {
+            }
+        
+            allowed_civil_war = {
+            }
+
+            rule = {
+                can_join_factions = no
+            }
+
+            modifier = {
+                faction_trade_opinion_factor = 0.25
+            }
+        }
+
     }
 
     hidden_ideas = {

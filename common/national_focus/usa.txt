@@ -15140,16 +15140,20 @@ focus_tree = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to
+			FOCUS_FILTER_Attending_to FOCUS_FILTER_SPY_AGENCY
 		}
 		available = {
-			#has_completed_focus = USA_the_parkerite_act
+			has_intelligence_agency = yes
 		}
 		
 		bypass = {
 		}
 
 		completion_reward = {
+			# Should give decisions to take over countries from within and destabilize neighbors. Bonuses to spyfare, maybe some kind of check for a certain level of spy network strength.
+			# Mostly focuses on puppets, starting civil wars, couping the government, extracting trade deals, etc.
+			# Try and give unique spy bonuses towards harming enemies in the Americas, maybe with crazy boosts to resistance and attrition, for instance.
+
 			skip_line_tt = yes
 			custom_override_tooltip = { tooltip = { TEMP_FOCUS = USA_our_safety_before_yours TEMP_DAYS = 14 localization_key = reduce_focus_time_generic_tt } }
 		}
@@ -16300,7 +16304,12 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			# Boost faction, no one else can join, bonuses to influence in America
+			add_ideas = usa_the_eagle_flies_alone_idea
+			add_faction_goal_slot = {
+				category = short_term
+				value = 1
+			}
 		}
 	}
 
@@ -16331,21 +16340,18 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
-
 			# Huge bonuses to bringing american countries into the faction or under overlordship, huge defensive bonuses
-
 
 			add_stability = 0.15
 			add_war_support = 0.05
 			skip_line_tt = yes
 			USA_modify_army = yes
 			add_to_variable = {
-				USA_dy_arm_army_core_attack_factor = 0.1
+				USA_dy_arm_army_core_attack_factor = 0.05
 				tooltip = army_core_attack_factor_tt
 			}
 			add_to_variable = {
-				USA_dy_arm_army_core_defence_factor = 0.2
+				USA_dy_arm_army_core_defence_factor = 0.1
 				tooltip = army_core_defence_factor_tt
 			}
 			add_to_variable = {
@@ -16369,7 +16375,7 @@ focus_tree = {
 				tooltip = political_power_gain_tt
 			}
 			add_to_variable = {
-				USA_gov_dy_compliance_growth = 0.15
+				USA_gov_dy_compliance_growth = 0.05
 				tooltip = compliance_growth_tt
 			}
 		}
