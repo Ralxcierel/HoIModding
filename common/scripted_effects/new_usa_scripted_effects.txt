@@ -2178,3 +2178,44 @@ USA_start_AN_civil_war = {
 	}
 }
 
+USA_RR_update_influence = {
+	set_temp_variable = { temp = USA_RR_total_influence }
+	subtract_from_temp_variable = { temp = USA_RR_current_influence }
+	set_variable = { USA_RR_german_influence = temp }
+	set_temp_variable = { percen = USA_RR_current_influence }
+	divide_temp_variable = { percen = USA_RR_total_influence }
+	set_variable = { USA_RR_current_influence_percentage = percen }
+}
+
+USA_RR_increase_ties = {
+	if = {
+		limit = {
+			not = { has_country_flag = USA_RR_close_influence }
+		}
+		set_country_flag = USA_RR_close_influence
+	}
+	else_if = {
+		limit = {
+			has_country_flag = {
+				flag = USA_RR_close_influence
+				value = 1
+			}
+		}
+		set_country_flag = {
+			flag = USA_RR_close_influence
+			value = 2
+		}				
+	}
+	else_if = {
+		limit = {
+			has_country_flag = {
+				flag = USA_RR_close_influence
+				value = 2
+			}
+		}
+		set_country_flag = {
+			flag = USA_RR_close_influence
+			value = 3
+		}				
+	}
+}

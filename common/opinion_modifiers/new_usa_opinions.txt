@@ -334,4 +334,36 @@ opinion_modifiers = {
 		#decay = 0.125
 	}
 
+	usa_our_saftey_before_yours_far_modifier = {
+		value = -10
+		#decay = 0.125
+	}
+	usa_our_saftey_before_yours_close_modifier = {
+		value = -15
+		#decay = 0.125
+	}
+	usa_our_saftey_before_yours_trade_modifier = {
+		value = 75
+		trade = yes
+	}
+	usa_our_saftey_before_yours_trade_rejected_modifier = {
+		value = -20
+		#trade = yes
+	}
+	usa_our_saftey_before_yours_accepted_modifier = {
+		value = 20
+	}
+
+	usa_throw_in_with_the_old_modifier = {
+		value = 35
+	}
+
+	usa_pledge_for_the_new_order_modifier = {
+		value = 25
+	}
+
+	usa_the_sun_has_already_set_modifier = {
+		value = -75
+	}
+
 }	

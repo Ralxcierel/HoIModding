@@ -1970,7 +1970,7 @@
 
     USA_the_goldstar_federation: "The Goldstar Federation"
     USA_the_goldstar_federation_desc: "$TBA_TT$"
-    USA_the_goldstar_federation_tt_2: "As long as the §YUSA§! remains in the §Y$USA_the_goldstar_federation_tt$§! faction, the §YUSA§! and its §Ypuppets§! will have the §Y$USA_goldstar_dynamic_modifier$§! dynamic modifier."
+    USA_the_goldstar_federation_tt_2: "As long as the §YUSA§! remains in the §Y$USA_the_goldstar_federation_tt$§! faction, the §YUSA§! and its §Ypuppets§! will have the §Y$USA_goldstar_dynamic_modifier$§! dynamic modifier.\nThis modifier will be §Rlost§! if the §YUSA§! is no longer at the head of the §Y$USA_the_goldstar_federation_tt$§! faction."
     USA_the_goldstar_federation_tt_3: "Create Faction: §Y$USA_the_goldstar_federation_tt$§!."
 
     USA_the_second_confederation: "The Second Confederation"
@@ -1983,13 +1983,14 @@
     USA_peace_guarantees_for_our_neighbors_desc: "Having resolved the brunt of our internal turbulence, it would be wise to reach out to our friends and neighbors and reassure them of our calm and homely nature. It is right to keep them from worrying, but it is equally important that we ensure our flanks do not become vulnerable."
 
     USA_our_safety_before_yours: "Our Safety Before Yours"
-    USA_our_safety_before_yours_desc: "$TBA_TT$"
+    USA_our_safety_before_yours_desc: "Our neighbors' safety is inseparable from our own — and they should be made to understand that such safety comes at a price. Garrisons, concessions, and a firm hand in their affairs are a small toll for the protection only we can offer. Our resource security will be molded by our control of this hemisphere's resources."
 
     USA_the_sun_has_already_set: "The Sun Has Already Set"
-    USA_the_sun_has_already_set_desc: "$TBA_TT$"
+    USA_the_sun_has_already_set_desc: "London and Paris cling to empires they can no longer afford to hold. Let them. While the old powers exhaust themselves, the hemisphere lies open before us — and a nation unwilling to seize its moment does not deserve one."
 
     USA_americas_rightful_claims: "America's Rightful Claims"
-    USA_americas_rightful_claims_desc: "$TBA_TT$"
+    USA_americas_rightful_claims_desc: "The destiny of the West is a path through Washington. There is no need to be tactful with what is plainly obvious. We will seize what is rightfully ours."
+    USA_americas_rightful_claims_tt: "Unlocks §Ydecisions§! to §Ytake control of territory§! in §YNorth§! and §YCentral America§!.\n\nIf §Y$USA_peace_guarantees_for_our_neighbors$§! is taken, we will be able to §Ybuild trust§! with our neighbors.\n\nIf §Y$USA_our_safety_before_yours$§! is taken, we will be able to §Yintimidate§! our neighbors."
 
     USA_golden_opportunities: "Golden Opportunities"
     USA_golden_opportunities_desc: "$TBA_TT$"
@@ -2018,21 +2019,28 @@
 
     USA_realize_the_golden_circle: "Realize the Golden Circle"
     USA_realize_the_golden_circle_desc: "$TBA_TT$"
+    USA_realize_the_golden_circle_trigger_tt_NOT: "Controls all §YNorth American§! states"
+    USA_realize_the_golden_circle_trigger_tt_2_NOT: "Controls all §YCentral American§! and §YGulf§! states"
+    USA_realize_the_golden_circle_trigger_tt_3_NOT: "Controls the §YSouthern Crest§! states"
 
     USA_no_place_for_traitors: "No Place for Traitors"
-    USA_no_place_for_traitors_desc: "$TBA_TT$"
+    USA_no_place_for_traitors_desc: "As we prepare to strike forth into the world, we cannot tolerate subversive elements already within us. Those who would wish to see the great American project fail will be given no freedom of movement. As we bring about our new dawn, we will leave them no shadow to hide in."
 
     USA_pledge_for_the_new_order: "Pledge for the New Order"
-    USA_pledge_for_the_new_order_desc: "$TBA_TT$"
+    USA_pledge_for_the_new_order_desc: "Berlin offers a partnership between equals — a New Order built on strength answering strength. There is no shame in standing beside the only powers unafraid to build a new world."
 
     USA_renaissance_and_retribution: "Renaissance and Retribution"
-    USA_renaissance_and_retribution_desc: "$TBA_TT$"
+    USA_renaissance_and_retribution_desc: "The Old World is in its death throws, but we are in the ascendency. Even as [GER.GetNameDefCap] tries to rise above Europe's stagnation one more time, we see past their futile attempt. A New World is being forged, and we will be the ones wielding the hammer; Germany will merely be our anvil."
+    USA_renaissance_and_retribution_tt: " - This idea will be §Rlost§! if at war with §Y[GER.getName]§!."
+    USA_renaissance_and_retribution_tt_2: "Unlocks §Ydecisions§! to usurp §Y[GER.GetName]§!'s authority and take control of the §YAxis§! or §Ydominate Germany outright§!."
 
     USA_throw_in_with_the_old: "Throw in with the Old"
-    USA_throw_in_with_the_old_desc: "$TBA_TT$"
+    USA_throw_in_with_the_old_desc: "We have not forgotten our roots. Our culture and history run tightly with the English and the French, and we are nothing if not steadfast. In this desperate hour, we will arrive to hold high the torch Europe can no longer carry."
 
     USA_do_our_part: "Do Our Part"
-    USA_do_our_part_desc: "$TBA_TT$"
+    USA_do_our_part_desc: "Despite our reservations, the war we face requires international cooperation on a scale never before attempted. However, we have the resources and the spirit to persevere, maintaining our own security as we stride outwards to protect that of our allies."
+    USA_do_our_part_tt: "Unlocks the ABDACOM §YJoint Focus Tree§!"
+    USA_do_our_part_tt_2: "If we are in a §Yfaction§! with §Y[ENG.getName]§!, our §Yfaction members§! will gain:"
 
     USA_the_eagle_flies_alone: "The Eagle Flies Alone"
     USA_the_eagle_flies_alone_desc: "$TBA_TT$"
