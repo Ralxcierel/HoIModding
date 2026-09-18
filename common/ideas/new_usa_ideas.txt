@@ -100,6 +100,11 @@ ideas = {
             allowed_civil_war = {
             }
 
+            targeted_modifier = {
+                tag = ENG
+                cic_to_target_factor = 1
+            }
+
             modifier = {
                 generate_wargoal_tension = -1
                 justify_war_goal_time = -0.85
@@ -6198,7 +6203,7 @@ ideas = {
         }
 
         usa_the_eagle_flies_alone_idea = { # The Eagle Flies Alone Idea
-            picture = PLACEHOLDER
+            picture = air_support_focus
         
             allowed = {
             }
@@ -6218,7 +6223,99 @@ ideas = {
             }
 
             modifier = {
-                faction_trade_opinion_factor = 0.25
+                faction_trade_opinion_factor = 0.50
+                local_resources_factor = 0.05
+                political_power_gain = 0.10
+            }
+        }
+        usa_the_eagle_flies_alone_other_idea = { # The Eagle Flies Alone Idea (Other)
+            picture = air_support_focus
+        
+            allowed = {
+            }
+        
+            available = {
+            }
+        
+            cancel = {
+            }
+        
+            allowed_civil_war = {
+            }
+
+            targeted_modifier = {
+                tag = USA
+                cic_to_target_factor = 0.05
+            }
+
+            modifier = {
+                faction_trade_opinion_factor = 0.50
+                ai_join_ally_desire_factor = 50
+                join_faction_tension = -0.75
+                ai_focus_defense_factor =  0.5
+                army_core_defence_factor = 0.05
+            }
+        }
+
+        usa_imperial_roost_idea = { # Imperial Roost Idea [unused]
+            picture = air_support_focus
+        
+            allowed = {
+            }
+        
+            available = {
+        
+            }
+        
+            cancel = {
+            }
+        
+            allowed_civil_war = {
+            }
+
+            rule = {
+                can_join_factions = no
+            }
+
+            modifier = {
+                faction_trade_opinion_factor = 0.50
+                local_resources_factor = 0.05
+                political_power_gain = 0.10
+            }
+        }
+        usa_imperial_roost_other_idea = { # Imperial Roost Idea (Other)
+            picture = air_support_focus
+        
+            allowed = {
+            }
+        
+            available = {
+            }
+        
+            cancel = {
+            }
+        
+            allowed_civil_war = {
+            }
+
+            targeted_modifier = {
+                tag = USA
+                cic_to_target_factor = 0.10
+                mic_to_target_factor = 0.10
+            }
+
+            modifier = {
+                faction_trade_opinion_factor = 0.50
+                ai_join_ally_desire_factor = 50
+                join_faction_tension = -0.75
+                ai_focus_defense_factor =  0.5
+                army_core_defence_factor = 0.10
+                ai_desired_divisions_factor = 0.50
+                war_stability_factor = 0.10
+                war_support_factor = 0.05
+                local_resources_factor = 0.10
+                conscription_factor = 0.10
+                production_speed_buildings_factor = 0.10
             }
         }
 

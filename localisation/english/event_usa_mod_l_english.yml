@@ -647,6 +647,18 @@
   new_usa_an_USA_the_goldstar_federation_event.1.a: "John Aubitz"
   new_usa_an_USA_the_goldstar_federation_event.1.b: "Robert E. Wood"
 
+  new_usa_the_eagle_flies_alone_event.1.t: "[FROM.GetNameDefCap] Moves to Secure Hegemony Over the Americas"
+  new_usa_the_eagle_flies_alone_event.1.desc: "The [FROM.GetAdjective] government has begun making overtures about its complete and total dominance in the Americas, declaring that their will is to reign absolute over the hemisphere. Following these declarations, they have sent direct signals to the [ROOT.GetAdjective] administration and leadership demanding that we comply with their control and authority, or else."
+  new_usa_the_eagle_flies_alone_event.1.a: "We will recognize their authority"
+  new_usa_the_eagle_flies_alone_event.1.b: "We will not submit"
+  new_usa_the_eagle_flies_alone_event.2.t: "[FROM.GetNameDefCap] Recognizes our Authority"
+  new_usa_the_eagle_flies_alone_event.2.desc: "The [FROM.GetAdjective] state has officially and publically recognized our position as Hegemon of the West, and they have agreed to the terms we have sent them as concerns trade and industrial cooperation and joint security."
+  new_usa_the_eagle_flies_alone_event.2.a: "Excellent"
+  new_usa_the_eagle_flies_alone_event.3.t: "[FROM.GetNameDefCap] Rejects Our Claims"
+  new_usa_the_eagle_flies_alone_event.3.desc: "The [FROM.GetAdjective] state has defied us, stating that they refuse to yield to [ROOT.GetAdjective] pressure and would rather fight to preserve their status quo."
+  new_usa_the_eagle_flies_alone_event.3.a: "They will not escape us"
+  new_usa_the_eagle_flies_alone_event.3.b: "We will remember this"
+
 # OTHER EVENTS
   new_usa_remove_bop_mod.1.t:   "Removes Public training programs"
   new_usa_remove_bop_mod.2.t:   "Removes Expand the national guard"

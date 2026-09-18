@@ -10312,6 +10312,147 @@ country_event = { # undoes the stealth focus [unused]
 		}
 	}
 
+ add_namespace = new_usa_the_eagle_flies_alone_event
+ # USA_the_eagle_flies_alone
+	country_event = { # Demand Integration into Hemispheric Block
+		id = new_usa_the_eagle_flies_alone_event.1
+		title = new_usa_the_eagle_flies_alone_event.1.t
+		desc = new_usa_the_eagle_flies_alone_event.1.desc
+		picture = GFX_report_event_ace_promoted
+		is_triggered_only = yes
+
+		option = { # They are in charge
+			name = new_usa_the_eagle_flies_alone_event.1.a
+			ai_chance = {
+				base = 65
+				modifier = {
+					FROM = {
+						has_army_manpower = {
+							size > 800000
+						}
+					}
+					factor = 3
+				}
+				modifier = {
+					has_opinion = {
+						target = FROM
+						value > 49
+					}
+					factor = 2
+				}
+				modifier = {
+					or = {
+						has_country_flag = USA_AN_has_intimidated_us
+						has_country_flag = USA_AN_has_sweetened_the_deal
+					}
+					factor = 3
+				}
+				modifier = {
+					or = {
+						has_idea = usa_our_safety_before_yours_trade_idea
+					}
+					factor = 10
+				}
+			}
+			effect_tooltip = {
+				add_ideas = usa_the_eagle_flies_alone_other_idea
+			}
+			FROM = {
+				country_event = { id = new_usa_the_eagle_flies_alone_event.2 }
+			}
+		}
+		option = { # We will not submit
+			name = new_usa_the_eagle_flies_alone_event.1.b
+			FROM = {
+				country_event = { id = new_usa_the_eagle_flies_alone_event.3 }
+			}
+			ai_chance = {
+				base = 35
+				modifier = {
+					has_opinion = {
+						target = FROM
+						value < 0
+					}
+					factor = 2
+				}
+				modifier = {
+					FROM = {
+						has_army_manpower = {
+							size < 400000
+						}
+					}
+					factor = 2
+				}
+				modifier = {
+					is_in_faction = yes
+					not = { is_in_faction_with = USA }
+					factor = 4
+				}
+				modifier = {
+					OR = {
+						is_subject_of = USA
+						has_idea = usa_our_safety_before_yours_trade_idea
+					}
+					factor = 0
+				}
+			}
+			effect_tooltip = {
+				FROM = {
+					create_wargoal = {
+						target = THIS
+						type = puppet_wargoal_focus
+					}
+				}
+			}
+		}
+
+	}
+	country_event = { # They accept
+		id = new_usa_the_eagle_flies_alone_event.2
+		title = new_usa_the_eagle_flies_alone_event.2.t
+		desc = new_usa_the_eagle_flies_alone_event.2.desc
+		picture = GFX_report_event_ace_promoted
+		is_triggered_only = yes
+
+		option = { # Perfect
+			name = new_usa_the_eagle_flies_alone_event.2.a
+			FROM = {
+				add_opinion_modifier = {
+					target = USA
+					modifier = usa_the_eagle_flies_alone_modifier
+				}
+				add_opinion_modifier = {
+					target = USA
+					modifier = usa_the_eagle_flies_alone_trade_modifier
+				}
+				add_ideas = usa_the_eagle_flies_alone_other_idea
+			}
+		}
+	}
+	country_event = { # They refuse
+		id = new_usa_the_eagle_flies_alone_event.3
+		title = new_usa_the_eagle_flies_alone_event.3.t
+		desc = new_usa_the_eagle_flies_alone_event.3.desc
+		picture = GFX_report_event_ace_promoted
+		is_triggered_only = yes
+
+		option = { # They won't get away
+			name = new_usa_the_eagle_flies_alone_event.3.a
+			create_wargoal = {
+				target = FROM
+				type = puppet_wargoal_focus
+			}
+		}
+		option = { # Argh
+			name = new_usa_the_eagle_flies_alone_event.3.b
+			add_political_power = -10
+			add_opinion_modifier = {
+				target = FROM
+				modifier = usa_the_eagle_flies_alone_rejected_modifier
+			}
+		}
+	}
+
 ##################################################################
 
 

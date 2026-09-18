@@ -366,4 +366,24 @@ opinion_modifiers = {
 		value = -75
 	}
 
+	usa_the_eagle_flies_alone_modifier = {
+		value = 50
+	}
+	usa_the_eagle_flies_alone_trade_modifier = {
+		value = 200
+		trade = yes
+	}
+	usa_the_eagle_flies_alone_rejected_modifier = {
+		value = -150
+	}
+
+	usa_imperial_roost_modifier = {
+		value = 50
+		max_trust = 25
+	}
+	usa_imperial_roost_trade_modifier = {
+		value = 200
+		trade = yes
+	}
+
 }	

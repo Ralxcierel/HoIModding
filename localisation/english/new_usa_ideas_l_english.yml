@@ -136,6 +136,9 @@
     usa_the_sun_has_already_set_idea: "The Sun Has Already Set"
     usa_a_song_for_the_horizon_idea: "A Song for the Horizon"
     usa_the_eagle_flies_alone_idea: "The Eagle Flies Alone"
+    usa_the_eagle_flies_alone_idea: "The Eagle Flies Alone"
+    usa_the_eagle_flies_alone_other_idea: "Western Hegemony"
+    usa_imperial_roost_other_idea: "[USA.GetAdjective] Hegemony"
 
  # TIMED IDEAS
   # Democratic & General
@@ -491,6 +494,11 @@
     usa_german_doctrine_advisors_idea: "German Doctrinal Advisors"
     usa_renaissance_and_retribution_idea: "Renaissance and Retribution"
     usa_the_sun_has_already_set_modifier: "The Sun Has Already Set"
+    usa_the_eagle_flies_alone_modifier: "The Eagle Flies Alone"
+    usa_the_eagle_flies_alone_trade_modifier: "The Eagle Flies Alone"
+    usa_imperial_roost_modifier: "Imperial Roost"
+    usa_imperial_roost_trade_modifier: "Imperial Roost"
+    usa_the_eagle_flies_alone_rejected_modifier: "Rejected Hegemony"
 
  # FLAGS & TRIGGERS
     spurred_growth_cooldown_short_flag: " The economy hasn't been recovering for over half a year"

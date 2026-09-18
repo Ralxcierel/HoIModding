@@ -1986,7 +1986,7 @@
     USA_our_safety_before_yours_desc: "Our neighbors' safety is inseparable from our own — and they should be made to understand that such safety comes at a price. Garrisons, concessions, and a firm hand in their affairs are a small toll for the protection only we can offer. Our resource security will be molded by our control of this hemisphere's resources."
 
     USA_the_sun_has_already_set: "The Sun Has Already Set"
-    USA_the_sun_has_already_set_desc: "London and Paris cling to empires they can no longer afford to hold. Let them. While the old powers exhaust themselves, the hemisphere lies open before us — and a nation unwilling to seize its moment does not deserve one."
+    USA_the_sun_has_already_set_desc: "London and Paris cling to empires they can no longer afford to hold. We will let them. While the old powers exhaust themselves on more fruitless wars, the hemisphere lies open before us. A nation unwilling to seize its moment does not deserve one, and we will seize the dawn itself."
 
     USA_americas_rightful_claims: "America's Rightful Claims"
     USA_americas_rightful_claims_desc: "The destiny of the West is a path through Washington. There is no need to be tactful with what is plainly obvious. We will seize what is rightfully ours."
@@ -2043,13 +2043,15 @@
     USA_do_our_part_tt_2: "If we are in a §Yfaction§! with §Y[ENG.getName]§!, our §Yfaction members§! will gain:"
 
     USA_the_eagle_flies_alone: "The Eagle Flies Alone"
-    USA_the_eagle_flies_alone_desc: "$TBA_TT$"
+    USA_the_eagle_flies_alone_desc: "We will not wait to ask for permission from the Old World before we act. Our future lies in our own hands, our destiny is ours to take hold of, and we will not let any rivals stand in our way."
 
     USA_imperial_roost: "Imperial Roost"
-    USA_imperial_roost_desc: "$TBA_TT$"
+    USA_imperial_roost_desc: "[ROOT.GetNameDefCap] is the destined inheritor of the Western Hemisphere. It is the Eagle's fief, and here it makes its roost. No enemy may be allowed to strike at it, and it holds full control and dominance over the farthest extents of its territory. The skies, lands and seas of North and South America belong to us."
+    USA_imperial_roost_tt: "Every §YAmerican§! country under our §Yhegemony§!:\n---------------------------------------------------------\n\n"
+    USA_imperial_roost_tt_2: "Becomes a §Ypuppet§! of §Y[USA.GetNameDefCap]§! if not one already.\n§YJoins§! the §Y[USA.GetAdjective]§!'s faction.\n\n---------------------------------------------------------"
 
     USA_a_song_for_the_horizon: "A Song for the Horizon"
-    USA_a_song_for_the_horizon_desc: "$TBA_TT$"
+    USA_a_song_for_the_horizon_desc: "\"...There's a line on the map where the old world ends, and the young world starts to grow — Well I've got a truck full of stars and stripes, and nowhere left to go. From the Rio Grande to the Bering Strait, from the plains to the foreign shore, if the Lord gave us this whole wide world, then I reckon we ain't done, no, we ain't done yet,\n we're just gonna go Manifest Destiny once more...\""
 
     USA_stars_on_the_horizon: "Stars on the Horizon"
     USA_stars_on_the_horizon_desc: "In the last several years, despair has gripped the American people, but they did not give up- they held out and persevered. Now we are beginning to see the full fruits of that perseverance, which is not satisfied with a return to the status quo but which will only be satiated by the charting of a new, more glorious course."

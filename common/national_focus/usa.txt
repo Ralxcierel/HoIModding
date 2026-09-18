@@ -14031,6 +14031,12 @@ focus_tree = {
 				ideology = fascism
 				popularity = 0.03
 			}
+			##hidden_effect = {
+			#	if = {
+			#		limit = { is_faction_leader = yes }
+			#		set_faction_rule = war_declaration_generated_tension_25
+			#	}
+			##}
 		}
 	}
 
@@ -15043,7 +15049,7 @@ focus_tree = {
 			factor = 5
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to  FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY FOCUS_FILTER_USA_CONGRESS
+			FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY FOCUS_FILTER_USA_CONGRESS
 		}
 		available = {
 			congress_high_support_trigger = yes
@@ -15153,7 +15159,12 @@ focus_tree = {
 			# Should give decisions to take over countries from within and destabilize neighbors. Bonuses to spyfare, maybe some kind of check for a certain level of spy network strength.
 			# Mostly focuses on puppets, starting civil wars, couping the government, extracting trade deals, etc.
 			# Try and give unique spy bonuses towards harming enemies in the Americas, maybe with crazy boosts to resistance and attrition, for instance.
-
+			skip_line_tt = yes
+			USA_modify_oss = yes
+			add_to_variable = {
+				USA_dy_agy_operative_slot = 1
+				tooltip = operative_slot_tt
+			}
 			skip_line_tt = yes
 			custom_override_tooltip = { tooltip = { TEMP_FOCUS = USA_our_safety_before_yours TEMP_DAYS = 14 localization_key = reduce_focus_time_generic_tt } }
 		}
@@ -15496,7 +15507,7 @@ focus_tree = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_WARGOALS FOCUS_FILTER_POLITICAL FOCUS_FILTER_Attending_to
+			FOCUS_FILTER_WARGOALS FOCUS_FILTER_POLITICAL
 		}
 		available = {
 		}
@@ -15596,7 +15607,7 @@ focus_tree = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to
+			FOCUS_FILTER_WARGOALS FOCUS_FILTER_POLITICAL
 		}
 		available = {
 		}
@@ -15714,7 +15725,7 @@ focus_tree = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to
+			FOCUS_FILTER_WARGOALS FOCUS_FILTER_POLITICAL
 		}
 		available = {
 		}
@@ -15846,7 +15857,7 @@ focus_tree = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY
+			FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY
 		}
 		available = {
 			# Controls all of North America, the Gulf, and the top of South America
@@ -15986,7 +15997,7 @@ focus_tree = {
 				tooltip = enemy_operative_detection_chance_factor_tt
 			}
 			add_to_variable = {
-				USA_dy_agy_operative_slot = 2
+				USA_dy_agy_operative_slot = 1 # was 2
 				tooltip = operative_slot_tt
 			}
 		}
@@ -16295,9 +16306,19 @@ focus_tree = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to
+			FOCUS_FILTER_POLITICAL FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_INDUSTRY
 		}
 		available = {
+			if = {
+				limit = {
+					is_in_faction = yes
+				}
+				is_faction_leader = yes
+			}
+			NOT = {
+				is_in_faction_with = ENG
+				is_in_faction_with = GER
+			}
 		}
 		
 		bypass = {
@@ -16306,9 +16327,27 @@ focus_tree = {
 		completion_reward = {
 			# Boost faction, no one else can join, bonuses to influence in America
 			add_ideas = usa_the_eagle_flies_alone_idea
+			skip_line_tt = yes
+			add_faction_initiative = 5
 			add_faction_goal_slot = {
 				category = short_term
 				value = 1
+			}
+			add_faction_goal_slot = {
+				category = medium_term
+				value = 1
+			}
+			add_faction_goal_slot = {
+				category = long_term
+				value = 1
+			}
+			set_faction_rule = joining_rule_americas_only
+			skip_line_tt = yes
+			every_other_country = {
+				limit = {
+					is_american_nation = yes
+				}
+				country_event = { id = new_usa_the_eagle_flies_alone_event.1 random_hours = 24 }
 			}
 		}
 	}
@@ -16331,9 +16370,10 @@ focus_tree = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to
+			FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY
 		}
 		available = {
+			america_is_being_invaded = no
 		}
 		
 		bypass = {
@@ -16344,6 +16384,60 @@ focus_tree = {
 
 			add_stability = 0.15
 			add_war_support = 0.05
+			skip_line_tt = yes
+			custom_effect_tooltip = USA_imperial_roost_tt
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = usa_the_eagle_flies_alone_other_idea
+					add_idea = usa_imperial_roost_other_idea
+				}
+			}
+			custom_effect_tooltip = USA_imperial_roost_tt_2
+			hidden_effect = {
+				every_other_country = {
+					limit = {
+						or = {
+							has_idea = usa_the_eagle_flies_alone_other_idea
+							and = {
+								is_american_nation = yes
+								is_subject_of = USA
+							}
+							and = {
+								is_american_nation = yes
+								is_in_faction_with = USA
+							}
+						}
+					}
+					swap_ideas = {
+						remove_idea = usa_the_eagle_flies_alone_other_idea
+						add_idea = usa_imperial_roost_other_idea
+					}
+					if = {
+						limit = {
+							not = {
+								is_subject_of = USA
+							}
+						}
+						USA = {
+							puppet = PREV
+							set_autonomy = {
+								target = PREV
+								autonomy_state = autonomy_puppet
+							}
+						}
+					}
+					if = {
+						limit = {
+							not = {
+								is_in_faction_with = USA
+							}
+						}
+						USA = {
+							add_to_faction = PREV
+						}
+					}
+				}
+			}
 			skip_line_tt = yes
 			USA_modify_army = yes
 			add_to_variable = {
@@ -16384,6 +16478,7 @@ focus_tree = {
 	focus = { # A Song for the Horizon
 		id = USA_a_song_for_the_horizon
 		icon = GFX_focus_new_a_song_for_the_horizon
+		overlay = GFX_new_focus_fast_overlay_endseig_2
 		relative_position_id = USA_tend_to_the_nation
 		prerequisite = { focus = USA_the_eagle_flies_alone }
 		prerequisite = {
@@ -16420,6 +16515,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			# Add a news event
 			# World conquest bonuses and decisions
 			add_threat = 30
 			skip_line_tt = yes
@@ -38167,7 +38263,7 @@ focus_tree = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_INDUSTRY
+			FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH
 		}
 		available = {
 
@@ -38253,6 +38349,8 @@ focus_tree = {
 				USA_eco_dy_production_lack_of_resource_penalty_factor = -0.10
 				tooltip = production_lack_of_resource_penalty_factor_tt
 			}
+			skip_line_tt = yes
+			add_research_slot = 1
 			USA_AN_FREE_civ_up_hih = yes
 		}
 	}
@@ -38275,7 +38373,7 @@ focus_tree = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_INDUSTRY
+			FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH
 		}
 		available = {
 
@@ -38369,6 +38467,8 @@ focus_tree = {
 				USA_eco_dy_global_building_slots_factor = 0.10
 				tooltip = global_building_slots_factor_tt
 			}
+			skip_line_tt = yes
+			add_research_slot = 1
 			USA_AN_FREE_civ_up_hih = yes
 		}
 	}
