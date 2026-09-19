@@ -225,6 +225,138 @@ USA_congress = {
 			}
 		}
 	}
+	USA_small_lobby_effort = {
+		icon = GFX_decision_new_usa_congress_1
+		available = {
+			OR = {
+				check_variable = { senators_support < senators_total }
+				check_variable = { representatives_support < representatives_total }
+			}
+			if = {
+				limit = { has_completed_focus = USA_southern_crisis }
+				not = { has_decision = USA_antagonize_congress has_decision = USA_stage_a_protest has_decision = USA_gridlock_debate }
+			}
+			not = {
+				has_decision = USA_medium_lobby_effort
+				has_decision = USA_significant_lobby_effort
+			}
+			OR = {
+				political_power_daily > 0.3
+				has_political_power > 10
+			}
+		}
+		cost = 0
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				congress_medium_support_trigger = yes
+				factor = 0.5
+			}
+			modifier = {
+				congress_low_support_trigger = yes
+				factor = 0.5
+			}
+			modifier = {
+				congress_high_support_trigger = yes
+				factor = 0
+			}
+		}
+		modifier = {
+			political_power_gain = -0.3
+		}
+		days_remove = 30
+		remove_effect = {
+			USA_congress_small_support = yes
+		}
+	}
+	USA_medium_lobby_effort = {
+		icon = GFX_decision_new_usa_congress_2
+		available = {
+			OR = {
+				check_variable = { senators_support < senators_total }
+				check_variable = { representatives_support < representatives_total }
+			}
+			if = {
+				limit = { has_completed_focus = USA_southern_crisis }
+				not = { has_decision = USA_antagonize_congress has_decision = USA_stage_a_protest has_decision = USA_gridlock_debate }
+			}
+			not = {
+				has_decision = USA_small_lobby_effort
+				has_decision = USA_significant_lobby_effort
+			}
+			OR = {
+				political_power_daily > 0.75
+				has_political_power > 35
+			}
+		}
+		cost = 0
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				congress_medium_support_trigger = yes
+				factor = 0.5
+			}
+			modifier = {
+				congress_low_support_trigger = yes
+				factor = 0.5
+			}
+			modifier = {
+				congress_high_support_trigger = yes
+				factor = 0
+			}
+		}
+		days_remove = 45
+		modifier = {
+			political_power_gain = -0.75
+		}
+		remove_effect = {
+			USA_congress_medium_support = yes
+		}
+	}
+	USA_significant_lobby_effort = {
+		icon = GFX_decision_new_usa_congress_3
+		available = {
+			OR = {
+				check_variable = { senators_support < senators_total }
+				check_variable = { representatives_support < representatives_total }
+			}
+			if = {
+				limit = { has_completed_focus = USA_southern_crisis }
+				not = { has_decision = USA_antagonize_congress has_decision = USA_stage_a_protest has_decision = USA_gridlock_debate }
+			}
+			not = {
+				has_decision = USA_small_lobby_effort
+				has_decision = USA_medium_lobby_effort
+			}
+			OR = {
+				political_power_daily > 1
+				has_political_power > 50
+			}
+		}
+		cost = 0
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				congress_medium_support_trigger = yes
+				factor = 0.5
+			}
+			modifier = {
+				congress_low_support_trigger = yes
+				factor = 0.5
+			}
+			modifier = {
+				congress_high_support_trigger = yes
+				factor = 0
+			}
+		}
+		days_remove = 65
+		modifier = {
+			political_power_gain = -1.25
+		}
+		remove_effect = {
+			USA_congress_large_support = yes
+		}
+	}
 	USA_stage_a_protest = {
 		icon = generic_political_rally
 		visible = {
@@ -246,7 +378,7 @@ USA_congress = {
 				has_decision = USA_significant_lobby_effort
 			}
 			OR = {
-				political_power_daily > 0.15
+				political_power_daily > 0.10
 				has_political_power > 10
 			}
 		}
@@ -352,7 +484,7 @@ USA_congress = {
 				has_decision = USA_significant_lobby_effort
 			}
 			OR = {
-				political_power_daily > 0.15
+				political_power_daily > 0.2
 				has_political_power > 10
 			}
 		}
@@ -373,7 +505,7 @@ USA_congress = {
 			}
 		}
 		modifier = {
-			political_power_gain = -0.15
+			political_power_gain = -0.2
 		}
 		days_remove = 30
 		remove_effect = {
@@ -382,138 +514,6 @@ USA_congress = {
 				popularity = -0.04
 			}
 			USA_congress_large_opposition = yes
-		}
-	}
-	USA_small_lobby_effort = {
-		icon = GFX_decision_new_usa_congress_1
-		available = {
-			OR = {
-				check_variable = { senators_support < senators_total }
-				check_variable = { representatives_support < representatives_total }
-			}
-			if = {
-				limit = { has_completed_focus = USA_southern_crisis }
-				not = { has_decision = USA_antagonize_congress }
-			}
-			not = {
-				has_decision = USA_medium_lobby_effort
-				has_decision = USA_significant_lobby_effort
-			}
-			OR = {
-				political_power_daily > 0.3
-				has_political_power > 10
-			}
-		}
-		cost = 0
-		ai_will_do = {
-			factor = 10
-			modifier = {
-				congress_medium_support_trigger = yes
-				factor = 0.5
-			}
-			modifier = {
-				congress_low_support_trigger = yes
-				factor = 0.5
-			}
-			modifier = {
-				congress_high_support_trigger = yes
-				factor = 0
-			}
-		}
-		modifier = {
-			political_power_gain = -0.3
-		}
-		days_remove = 30
-		remove_effect = {
-			USA_congress_small_support = yes
-		}
-	}
-	USA_medium_lobby_effort = {
-		icon = GFX_decision_new_usa_congress_2
-		available = {
-			OR = {
-				check_variable = { senators_support < senators_total }
-				check_variable = { representatives_support < representatives_total }
-			}
-			if = {
-				limit = { has_completed_focus = USA_southern_crisis }
-				not = { has_decision = USA_antagonize_congress }
-			}
-			not = {
-				has_decision = USA_small_lobby_effort
-				has_decision = USA_significant_lobby_effort
-			}
-			OR = {
-				political_power_daily > 0.75
-				has_political_power > 35
-			}
-		}
-		cost = 0
-		ai_will_do = {
-			factor = 10
-			modifier = {
-				congress_medium_support_trigger = yes
-				factor = 0.5
-			}
-			modifier = {
-				congress_low_support_trigger = yes
-				factor = 0.5
-			}
-			modifier = {
-				congress_high_support_trigger = yes
-				factor = 0
-			}
-		}
-		days_remove = 45
-		modifier = {
-			political_power_gain = -0.75
-		}
-		remove_effect = {
-			USA_congress_medium_support = yes
-		}
-	}
-	USA_significant_lobby_effort = {
-		icon = GFX_decision_new_usa_congress_3
-		available = {
-			OR = {
-				check_variable = { senators_support < senators_total }
-				check_variable = { representatives_support < representatives_total }
-			}
-			if = {
-				limit = { has_completed_focus = USA_southern_crisis }
-				not = { has_decision = USA_antagonize_congress }
-			}
-			not = {
-				has_decision = USA_small_lobby_effort
-				has_decision = USA_medium_lobby_effort
-			}
-			OR = {
-				political_power_daily > 1
-				has_political_power > 50
-			}
-		}
-		cost = 0
-		ai_will_do = {
-			factor = 10
-			modifier = {
-				congress_medium_support_trigger = yes
-				factor = 0.5
-			}
-			modifier = {
-				congress_low_support_trigger = yes
-				factor = 0.5
-			}
-			modifier = {
-				congress_high_support_trigger = yes
-				factor = 0
-			}
-		}
-		days_remove = 65
-		modifier = {
-			political_power_gain = -1.25
-		}
-		remove_effect = {
-			USA_congress_large_support = yes
 		}
 	}
 	USA_special_measures = {

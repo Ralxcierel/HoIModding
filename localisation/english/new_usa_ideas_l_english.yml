@@ -43,7 +43,8 @@
     usa_jpl_idea_4: "Jet Propulsion Laboratory"
     usa_jpl_idea_4_desc: "The JPL is a hotbed of new and innovative ideas that explode rather frequently, intentionally or otherwise."
     usa_soft_power_idea: "Soft Power Designs"
-    usa_soft_power_idea_desc: "While heavy weaponry, thick armor, fast engines, and large explosives can deliver powerful results on the battlefield, if nothing happens when you pull the trigger, any weapon becomes useless. Soft power represents a focus on ensuring reliability, ease of use, efficiency, and maintainability."
+    usa_soft_power_idea_desc: "While heavy weaponry, thick armor, fast engines, and large explosives can deliver powerful results on the battlefield, any weapon becomes useless if nothing happens when you pull the trigger. Soft power represents a focus on ensuring reliability, ease of use, efficiency, and maintainability."
+    usa_true_strategic_bombing_idea: "Strategic Bombing"
     usa_mass_production_idea: "Mass Production"
     usa_mass_production_idea_desc: "We will leverage the might of our industry to drown our opponents in a sea of steel."
     usa_south_american_protectorate_idea: "American Protectorate"
@@ -757,6 +758,8 @@
     faction_trade_opinion_factor_tt: " $MODIFIER_FACTION_TRADE_OPINION_FACTOR$: §Y+$RIGHT|%$§!"
     MODIFIER_FOREIGN_SUBVERSIVE_ACTIVITIES: "Foreign subversive activities efficiency"
     foreign_subversive_activites_tt: " $MODIFIER_FOREIGN_SUBVERSIVE_ACTIVITIES$: $RIGHT|-=%$"
+    MODIFIER_PLANNING_SPEED: "Planning Speed"
+    planning_speed_tt: " $MODIFIER_PLANNING_SPEED$: $RIGHT|+=%$"
 
     #congress_medium_support_trigger_tt_NOT: "§HYOOO§! §YYOOO§!"
     congress_low_support_trigger_tt_NOT: "Requires having the support of fewer than §Y[?USA.quorum_low] Senators§! (current: [?USA.senators_support]) and §Y174 Representatives§! (current: [?USA.representatives_support])\n"

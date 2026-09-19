@@ -101,8 +101,7 @@ ideas = {
             }
 
             modifier = {
-                generate_wargoal_tension = -1
-                justify_war_goal_time = -0.85
+                planning_speed = 0.25
             }
         }
 
@@ -477,6 +476,36 @@ ideas = {
             modifier = {
                 production_speed_radar_station_factor = 0.35
             }
+            
+        }
+
+        usa_true_strategic_bombing_idea = { # True Strategic Bombing Idea
+            picture = strategic_bombing_focus
+        
+            allowed = {
+            }
+        
+            available = {
+        
+            }
+        
+            cancel = {
+        
+            }
+        
+            allowed_civil_war = {
+            }
+
+            
+            equipment_bonus = {
+				large_plane_airframe = {
+					build_cost_ic = -0.125 instant = yes
+                    reliability_factor = 0.10
+                    fuel_consumption_factor = -0.25
+                    air_range = 0.20
+                    air_defence = 0.10
+				}
+			}
             
         }
 

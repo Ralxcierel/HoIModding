@@ -185,6 +185,10 @@ spriteTypes = {
 		name = "GFX_focus_the_goldstar_federation"
 		texturefile = "gfx/interface/new_goals/focus_the_goldstar_federation.dds"			
 	}
+	SpriteType = { # focus_a_golden_west
+		name = "GFX_focus_a_golden_west"
+		texturefile = "gfx/interface/new_goals/focus_a_golden_west.dds"			
+	}
 
   # NEW OVERLAYS
 	# Debug overlay
