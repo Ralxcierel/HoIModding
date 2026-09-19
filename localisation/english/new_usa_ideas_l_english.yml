@@ -140,6 +140,7 @@
     usa_the_eagle_flies_alone_other_idea: "Western Hegemony"
     usa_imperial_roost_other_idea: "[USA.GetAdjective] Hegemony"
     home_of_the_free_3: "Home of the Free"
+    home_of_the_free_3_desc: "$home_of_the_free_desc$"
 
  # TIMED IDEAS
   # Democratic & General
@@ -392,6 +393,7 @@
     USA_FREE_dynamic_modifier_2_desc: "FREE-USA acts in service of the central government of [USA.GetNameDefCap]. Its mission is to oversee the quick and efficient recovery of the nation's economy, culture, and stability. It is entrusted with sweeping powers in order to achieve its goals. \n$USA_federal_recovery_emergency_enterprise_tt_2$"
     USA_FREE_dynamic_modifier_tt: "Current [USAGetFREETitle] Sector §YFunds§! and Policies:[USAGetFREECivilianIndustryNL]§Y([?USA_FREE_civ_points])§! [USAGetFREECivilianIndustry][USAGetFREEMilitaryIndustryNL]§Y([?USA_FREE_mil_points])§! [USAGetFREEMilitaryIndustry][USAGetFREEArmyNL]§Y([?USA_FREE_arm_points])§! [USAGetFREEArmy][USAGetFREENavyNL]§Y([?USA_FREE_nav_points])§! [USAGetFREENavy][USAGetFREEAirNL]§Y([?USA_FREE_air_points])§! [USAGetFREEAir][USAGetFREEScienceNL]§Y([?USA_FREE_sci_points])§! [USAGetFREEScience]"
     USA_goldstar_dynamic_modifier: "Goldstar Federation Member"
+    USA_goldstar_dynamic_modifier_desc: "The more members the §Y$USA_the_goldstar_federation_tt$§! has, the more §Ypowerful§! it will become."
 
  # STATE MODIFIERS
     USA_spirit_of_resistance_cell_modifier: "Spirit of Resistance"
@@ -1248,3 +1250,4 @@
     usa_nc_homeless_relief_or_stand_up_flag: "Checks if one of the focuses $USA_homeless_relief_funds$ or $USA_stand_up_for_the_unemployed$ has been taken. If so, the other one doesn't decrease conservative resistance (only one of them does)."
     usa_nc_bottom_branch_flag: "Checks if one of the focuses $USA_protect_productive_entrepreneurs$, $USA_american_worker_guilds$, or $USA_federal_honor_programs$ has been taken. If so, the other ones don't decrease conservative resistance (only one of them does)."
     USA_NC_civil_war_started_flag: "Checks whether or not a nationalist communist civil war has already started or been started."
+    america_is_being_invaded_flag: "§YAmerica§! is being §Rinvaded§!"

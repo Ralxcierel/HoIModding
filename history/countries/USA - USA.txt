@@ -1842,12 +1842,22 @@ add_offsite_building = {
  set_variable = { FREE_recovery_funds_S		= 2 } # The points given to negative sectors by Recovery Funds
 
 # Goldstar Variables
- set_variable = { USA_goldstar_dy_research_speed_factor = 0 }
- set_variable = { USA_goldstar_dy_grant_medal_cost_factor = 0 }
- set_variable = { USA_goldstar_dy_acclimatization_cold_climate_gain_factor = 0 }
- set_variable = { USA_goldstar_dy_acclimatization_hot_climate_gain_factor = 0 }
- set_variable = { USA_goldstar_dy_air_superiority_bonus_in_combat = 0 }
-
+ set_variable = { global.USA_goldstar_dy_research_speed_factor = 0 }
+ set_variable = { global.USA_goldstar_dy_acclimatization_cold_climate_gain_factor = 0 }
+ set_variable = { global.USA_goldstar_dy_acclimatization_hot_climate_gain_factor = 0 }
+ set_variable = { global.USA_goldstar_dy_air_superiority_bonus_in_combat = 0 }
+ set_variable = { global.USA_goldstar_dy_political_power_factor = 0 }
+ set_variable = { global.USA_goldstar_dy_conscription_factor = 0 }
+ set_variable = { global.USA_goldstar_dy_stability_factor = 0 }
+ set_variable = { global.USA_goldstar_dy_war_support_factor = 0 }
+ set_variable = { global.USA_goldstar_dy_production_factory_max_efficiency_factor = 0 }
+ set_variable = { global.USA_goldstar_dy_production_factory_efficiency_gain_factor = 0 }
+ set_variable = { global.USA_goldstar_dy_grant_medal_cost_factor = 0 }
+ set_variable = { global.USA_goldstar_dy_army_core_attack_factor = 0 }
+ set_variable = { global.USA_goldstar_dy_army_core_defence_factor = 0 }
+ set_variable = { global.USA_goldstar_dy_coordination_bonus = 0 }
+ set_variable = { global.USA_goldstar_dy_max_planning_factor = 0 }
+ set_variable = { global.USA_goldstar_dy_special_forces_cap = 0 }
 
 add_dynamic_modifier = {
 	modifier = USA_economy_dynamic_modifier_great_depression
@@ -1880,4 +1890,4 @@ add_dynamic_modifier = {
 #}
 
 ########## DEBUG ##########
-add_ideas = usa_debug_testing_idea
+#add_ideas = usa_debug_testing_idea

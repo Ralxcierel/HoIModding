@@ -698,13 +698,24 @@ USA_FREE_dynamic_modifier_2 = { # FREE USA Dynamic Modifier (American Nationalis
 USA_goldstar_dynamic_modifier = { # Goldstar Dynamic Modifier (American Nationalist)
 	enable = { always = yes }
 
-	icon = GFX_idea_PLACEHOLDER
+	icon = GFX_idea_goldstar_network_graphic
 
-    research_speed_factor = USA_goldstar_dy_research_speed_factor
-    grant_medal_cost_factor = USA_goldstar_dy_grant_medal_cost_factor
-    acclimatization_cold_climate_gain_factor = USA_goldstar_dy_acclimatization_cold_climate_gain_factor
-    acclimatization_hot_climate_gain_factor = USA_goldstar_dy_acclimatization_hot_climate_gain_factor
-    air_superiority_bonus_in_combat = USA_goldstar_dy_air_superiority_bonus_in_combat
+    research_speed_factor =                             global.USA_goldstar_dy_research_speed_factor
+    grant_medal_cost_factor =                           global.USA_goldstar_dy_grant_medal_cost_factor
+    acclimatization_cold_climate_gain_factor =          global.USA_goldstar_dy_acclimatization_cold_climate_gain_factor
+    acclimatization_hot_climate_gain_factor =           global.USA_goldstar_dy_acclimatization_hot_climate_gain_factor
+    air_superiority_bonus_in_combat =                   global.USA_goldstar_dy_air_superiority_bonus_in_combat
+    political_power_factor =                            global.USA_goldstar_dy_political_power_factor
+    conscription_factor =                               global.USA_goldstar_dy_conscription_factor
+    stability_factor =                                  global.USA_goldstar_dy_stability_factor
+    war_support_factor =                                global.USA_goldstar_dy_war_support_factor
+    production_factory_max_efficiency_factor =          global.USA_goldstar_dy_production_factory_max_efficiency_factor
+    production_factory_efficiency_gain_factor =         global.USA_goldstar_dy_production_factory_efficiency_gain_factor
+    army_core_attack_factor =                           global.USA_goldstar_dy_army_core_attack_factor
+    army_core_defence_factor =                          global.USA_goldstar_dy_army_core_defence_factor
+    coordination_bonus =                                global.USA_goldstar_dy_coordination_bonus
+    max_planning_factor =                               global.USA_goldstar_dy_max_planning_factor
+    special_forces_cap =                                global.USA_goldstar_dy_special_forces_cap
 
 }
 

@@ -485,6 +485,47 @@
 	}
   }
 
+ add_namespace = new_usa_army_auto_focus_select
+	country_event = { # starts the process of finishing one of the army focus goals
+		id = new_usa_army_auto_focus_select.1
+		title = new_usa_army_auto_focus_select.1.t
+		desc = new_usa_army_auto_focus_select.1.desc
+		picture = GFX_report_event_generic_read_write
+
+		is_triggered_only = yes
+
+		trigger = {
+			USA = {
+				or = {
+					has_completed_focus = USA_westpoint_expansion
+					has_completed_focus = USA_international_armed_forces_study
+					has_completed_focus = USA_recruitment_drive
+				}
+			}
+		}
+
+		option = {
+			name = new_usa_army_auto_focus_select.1.a
+			custom_effect_tooltip = new_usa_army_auto_focus_select.1.a_tt
+			hidden_effect = {
+				country_event = { id = new_usa_joint_action.1 hours = 2 }
+			}
+		}
+		option = {
+			name = new_usa_army_auto_focus_select.1.b
+			custom_effect_tooltip = new_usa_army_auto_focus_select.1.b_tt
+			hidden_effect = {
+				country_event = { id = new_usa_officer_focus.1 hours = 2 }
+			}
+		}
+		option = {
+			name = new_usa_army_auto_focus_select.1.c
+			custom_effect_tooltip = new_usa_army_auto_focus_select.1.c_tt
+			hidden_effect = {
+				country_event = { id = new_usa_soldier_focus.1 hours = 2 }
+			}
+		}
+	}
  add_namespace = new_usa_two_ocean_navy
   country_event = { # starts process of two ocean navy act
 	id = new_usa_two_ocean_navy.1
@@ -794,227 +835,9 @@
   }
 ###########################################################
 
-add_namespace = new_usa_army_auto_focus_select
-country_event = { # starts the process of finishing one of the army focus goals
-	id = new_usa_army_auto_focus_select.1
-	title = new_usa_army_auto_focus_select.1.t
-	desc = new_usa_army_auto_focus_select.1.desc
-	picture = GFX_report_event_generic_read_write
-
-	is_triggered_only = yes
-
-	trigger = {
-		USA = {
-			or = {
-				has_completed_focus = USA_westpoint_expansion
-				has_completed_focus = USA_international_armed_forces_study
-				has_completed_focus = USA_recruitment_drive
-			}
-		}
-	}
-
-	option = {
-		name = new_usa_army_auto_focus_select.1.a
-		custom_effect_tooltip = new_usa_army_auto_focus_select.1.a_tt
-		hidden_effect = {
-			country_event = { id = new_usa_joint_action.1 hours = 2 }
-		}
-	}
-	option = {
-		name = new_usa_army_auto_focus_select.1.b
-		custom_effect_tooltip = new_usa_army_auto_focus_select.1.b_tt
-		hidden_effect = {
-			country_event = { id = new_usa_officer_focus.1 hours = 2 }
-		}
-	}
-	option = {
-		name = new_usa_army_auto_focus_select.1.c
-		custom_effect_tooltip = new_usa_army_auto_focus_select.1.c_tt
-		hidden_effect = {
-			country_event = { id = new_usa_soldier_focus.1 hours = 2 }
-		}
-	}
-}
 
 
-add_namespace = new_usa_fell_the_warring_giants
-country_event = { # gives the US wargoals against warring European majors
-	id = new_usa_fell_the_warring_giants.1
 
-	hidden = yes
-
-	is_triggered_only = yes
-
-	trigger = {
-		USA = {
-			has_completed_focus = USA_fell_the_warring_giants
-		}
-	}
-
-	immediate = {
-		USA = {
-			create_wargoal = {
-				target = ROOT
-				type = puppet_wargoal_focus
-			}
-		}
-	}
-}
-
-add_namespace = new_usa_stars_and_stripes_beyond_the_rhine
-country_event = { # gives the US wargoals against all European Nations
-	id = new_usa_stars_and_stripes_beyond_the_rhine.1
-
-	hidden = yes
-
-	is_triggered_only = yes
-
-	trigger = {
-		USA = {
-			has_completed_focus = USA_stars_and_stripes_beyond_the_rhine
-		}
-	}
-
-	immediate = {
-		USA = {
-			create_wargoal = {
-				target = ROOT
-				type = puppet_wargoal_focus
-			}
-		}
-	}
-}
-
-add_namespace = new_usa_crusade_for_freedom
-country_event = { # gives the US wargoals against every country that's generated tension
-	id = new_usa_crusade_for_freedom.1
-
-	hidden = yes
-
-	is_triggered_only = yes
-
-	trigger = {
-		USA = {
-			has_completed_focus = USA_crusade_for_freedom
-		}
-	}
-
-	immediate = {
-		USA = {
-			create_wargoal = {
-				target = ROOT
-				type = liberate_wargoal
-			}
-		}
-	}
-}
-
-add_namespace = new_partners_in_arms
-country_event = { # gives the US 1000 CIC each month for every partner in arms it has, +5 for each War Credit (more after Mutually Assured Profits is taken)
-	id = new_partners_in_arms.1
-
-	hidden = yes
-
-	is_triggered_only = yes
-
-	trigger = {
-		USA = {
-			has_completed_focus = USA_war_is_business
-		}
-	}
-
-	immediate = {
-		if = { limit = { USA = { NOT = { has_completed_focus = USA_mutually_assured_profits } } } set_temp_variable = { temp_cic_to_add = 1000 } }
-		else = { set_temp_variable = { temp_cic_to_add = 1250 } }
-		multiply_temp_variable = { temp_cic_to_add = usa_arms_partners_variable }
-
-		if = { limit = { USA = { NOT = { has_completed_focus = USA_mutually_assured_profits } } } set_temp_variable = { temp_total_war_credits = 5 } }
-		else = { set_temp_variable = { temp_total_war_credits = 10 } }
-		multiply_temp_variable = { temp_total_war_credits = usa_war_credits_var }
-
-		add_to_variable = { temp_cic_to_add = temp_total_war_credits }
-		add_to_variable = { usa_total_esc_earned_var = temp_total_war_credits }
-		USA = {
-			add_cic = temp_cic_to_add
-			country_event = { id = new_partners_in_arms.1 days = 30 }
-		}
-	}
-}
-
-add_namespace = new_nc_conservative_resistance_ticking_event
-country_event = { # sets a shine on the stealth focus [unused]
-	id = new_nc_conservative_resistance_ticking_event.0
-
-	hidden = yes
-
-	is_triggered_only = yes
-
-	trigger = {
-		USA = { has_completed_focus = USA_an_american_five_year_plan }
-	}
-
-	immediate = {
-		activate_shine_on_focus = USA_SM_NC_decrease_conservative_resistance
-		USA = { country_event = { id = new_nc_conservative_resistance_ticking_event.1 hours = 2 } }
-	}
-}
-country_event = { # sets a timer to slowly lower the conservative resistance every 210 days
-	id = new_nc_conservative_resistance_ticking_event.1
-
-	hidden = yes
-
-	is_triggered_only = yes
-
-	trigger = {
-		USA = {
-			has_completed_focus = USA_an_american_five_year_plan
-		}
-	}
-
-	immediate = {
-		if = {
-			limit = {
-				Or = {
-					has_idea = usa_conservative_resistance_idea_1
-					has_idea = usa_conservative_resistance_idea_2
-					has_idea = usa_conservative_resistance_idea_3
-					has_idea = usa_conservative_resistance_idea_4
-					has_idea = usa_conservative_resistance_idea_5
-				}
-			}
-			USA_NC_decrease_conservative_resistance = yes
-			#complete_national_focus = {
-			#	focus = USA_SM_NC_decrease_conservative_resistance
-			#	use_side_message = yes
-			#	originator_name = new_nc_conservative_resistance_ticking_event_originator_name
-			#}
-			USA = {
-				country_event = { id = new_nc_conservative_resistance_ticking_event.1 days = 210 }
-			}
-		}
-		#USA = {
-		#	country_event = { id = new_nc_conservative_resistance_ticking_event.2 days = 1 }
-		#}
-	}
-}
-country_event = { # undoes the stealth focus [unused]
-	id = new_nc_conservative_resistance_ticking_event.2
-
-	hidden = yes
-
-	is_triggered_only = yes
-
-	trigger = {
-		USA = { has_completed_focus = USA_SM_NC_decrease_conservative_resistance }
-	}
-
-	immediate = {
-		if = {
-			limit = { USA = { has_completed_focus = USA_SM_NC_decrease_conservative_resistance } }
-			hidden_effect = { uncomplete_national_focus = { focus = USA_SM_NC_decrease_conservative_resistance } }
-		}
-	}
-}
 
 #################################################
 #################################################
@@ -1042,10 +865,11 @@ country_event = { # undoes the stealth focus [unused]
 			if = { limit = { has_idea = usa_launch_the_counteroffensive_ti } remove_ideas = usa_launch_the_counteroffensive_ti }
 			if = { limit = { has_idea = usa_funds_to_reopen_factories_ti } remove_ideas = usa_funds_to_reopen_factories_ti }
 		
-			set_country_flag = {
-				flag = america_is_being_invaded_flag
-				value = 0
-			}
+			#set_country_flag = {
+			#	flag = america_is_being_invaded_flag
+			#	value = 0
+			#}
+			clr_country_flag = america_is_being_invaded_flag
 		}
 	}
  }
@@ -4345,6 +4169,189 @@ country_event = { # undoes the stealth focus [unused]
 #############################################                 Invisible Events                 #############################################
 ############################################################################################################################################
 ##################################################################
+# Democratic
+ add_namespace = new_usa_fell_the_warring_giants
+	country_event = { # gives the US wargoals against warring European majors
+		id = new_usa_fell_the_warring_giants.1
+
+		hidden = yes
+
+		is_triggered_only = yes
+
+		trigger = {
+			USA = {
+				has_completed_focus = USA_fell_the_warring_giants
+			}
+		}
+
+		immediate = {
+			USA = {
+				create_wargoal = {
+					target = ROOT
+					type = puppet_wargoal_focus
+				}
+			}
+		}
+	}
+
+ add_namespace = new_usa_stars_and_stripes_beyond_the_rhine
+	country_event = { # gives the US wargoals against all European Nations
+		id = new_usa_stars_and_stripes_beyond_the_rhine.1
+
+		hidden = yes
+
+		is_triggered_only = yes
+
+		trigger = {
+			USA = {
+				has_completed_focus = USA_stars_and_stripes_beyond_the_rhine
+			}
+		}
+
+		immediate = {
+			USA = {
+				create_wargoal = {
+					target = ROOT
+					type = puppet_wargoal_focus
+				}
+			}
+		}
+	}
+
+ add_namespace = new_usa_crusade_for_freedom
+	country_event = { # gives the US wargoals against every country that's generated tension
+		id = new_usa_crusade_for_freedom.1
+
+		hidden = yes
+
+		is_triggered_only = yes
+
+		trigger = {
+			USA = {
+				has_completed_focus = USA_crusade_for_freedom
+			}
+		}
+
+		immediate = {
+			USA = {
+				create_wargoal = {
+					target = ROOT
+					type = liberate_wargoal
+				}
+			}
+		}
+	}
+
+ add_namespace = new_partners_in_arms
+	country_event = { # gives the US 1000 CIC each month for every partner in arms it has, +5 for each War Credit (more after Mutually Assured Profits is taken)
+		id = new_partners_in_arms.1
+
+		hidden = yes
+
+		is_triggered_only = yes
+
+		trigger = {
+			USA = {
+				has_completed_focus = USA_war_is_business
+			}
+		}
+
+		immediate = {
+			if = { limit = { USA = { NOT = { has_completed_focus = USA_mutually_assured_profits } } } set_temp_variable = { temp_cic_to_add = 1000 } }
+			else = { set_temp_variable = { temp_cic_to_add = 1250 } }
+			multiply_temp_variable = { temp_cic_to_add = usa_arms_partners_variable }
+
+			if = { limit = { USA = { NOT = { has_completed_focus = USA_mutually_assured_profits } } } set_temp_variable = { temp_total_war_credits = 5 } }
+			else = { set_temp_variable = { temp_total_war_credits = 10 } }
+			multiply_temp_variable = { temp_total_war_credits = usa_war_credits_var }
+
+			add_to_variable = { temp_cic_to_add = temp_total_war_credits }
+			add_to_variable = { usa_total_esc_earned_var = temp_total_war_credits }
+			USA = {
+				add_cic = temp_cic_to_add
+				country_event = { id = new_partners_in_arms.1 days = 30 }
+			}
+		}
+	}
+
+##################################################################
+# Nationalist Communist
+ add_namespace = new_nc_conservative_resistance_ticking_event
+	country_event = { # sets a shine on the stealth focus [unused]
+		id = new_nc_conservative_resistance_ticking_event.0
+
+		hidden = yes
+
+		is_triggered_only = yes
+
+		trigger = {
+			USA = { has_completed_focus = USA_an_american_five_year_plan }
+		}
+
+		immediate = {
+			activate_shine_on_focus = USA_SM_NC_decrease_conservative_resistance
+			USA = { country_event = { id = new_nc_conservative_resistance_ticking_event.1 hours = 2 } }
+		}
+	}
+	country_event = { # sets a timer to slowly lower the conservative resistance every 210 days
+		id = new_nc_conservative_resistance_ticking_event.1
+
+		hidden = yes
+
+		is_triggered_only = yes
+
+		trigger = {
+			USA = {
+				has_completed_focus = USA_an_american_five_year_plan
+			}
+		}
+
+		immediate = {
+			if = {
+				limit = {
+					Or = {
+						has_idea = usa_conservative_resistance_idea_1
+						has_idea = usa_conservative_resistance_idea_2
+						has_idea = usa_conservative_resistance_idea_3
+						has_idea = usa_conservative_resistance_idea_4
+						has_idea = usa_conservative_resistance_idea_5
+					}
+				}
+				USA_NC_decrease_conservative_resistance = yes
+				#complete_national_focus = {
+				#	focus = USA_SM_NC_decrease_conservative_resistance
+				#	use_side_message = yes
+				#	originator_name = new_nc_conservative_resistance_ticking_event_originator_name
+				#}
+				USA = {
+					country_event = { id = new_nc_conservative_resistance_ticking_event.1 days = 210 }
+				}
+			}
+			#USA = {
+			#	country_event = { id = new_nc_conservative_resistance_ticking_event.2 days = 1 }
+			#}
+		}
+	}
+	country_event = { # undoes the stealth focus [unused]
+		id = new_nc_conservative_resistance_ticking_event.2
+
+		hidden = yes
+
+		is_triggered_only = yes
+
+		trigger = {
+			USA = { has_completed_focus = USA_SM_NC_decrease_conservative_resistance }
+		}
+
+		immediate = {
+			if = {
+				limit = { USA = { has_completed_focus = USA_SM_NC_decrease_conservative_resistance } }
+				hidden_effect = { uncomplete_national_focus = { focus = USA_SM_NC_decrease_conservative_resistance } }
+			}
+		}
+	}
+
+##################################################################
 # American Nationalist
  add_namespace = new_usa_an_plan_for_the_future_event
  # USA_plan_for_the_future
@@ -4691,7 +4698,7 @@ country_event = { # undoes the stealth focus [unused]
  		}
 	}
  add_namespace = new_usa_an_goldstar_federation_event
-  	country_event = { # Checks if the US is still in the GSF. If so, it makes sure all US puppets have the GSF dynamic modifier.
+  	country_event = { # Checks if the US is still in the GSF. If so, it makes sure all US puppets have the GSF dynamic modifier. Also sets the DM to have the right values; the more the merrier
  		id = new_usa_an_goldstar_federation_event.1
 
  		hidden = yes
@@ -4703,6 +4710,7 @@ country_event = { # undoes the stealth focus [unused]
  		}
 
  		immediate = {
+
 			if = {
 				limit = {
 					USA = {
@@ -4734,7 +4742,7 @@ country_event = { # undoes the stealth focus [unused]
 					}
 				}
 			}
-			else = {
+			else = { # remove
 				every_country = {
 					limit = {
 						has_dynamic_modifier = USA_goldstar_dynamic_modifier
@@ -4744,10 +4752,143 @@ country_event = { # undoes the stealth focus [unused]
 					}
 				}
 			}
+
+			set_temp_variable = { temp = 0 }
+			every_country = {
+				limit = { has_dynamic_modifier = USA_goldstar_dynamic_modifier }
+				add_to_temp_variable = { temp = 1 }
+			}
+			if = { limit = { check_variable = { var = temp value = 1 compare = equals } } # small buff for just the US
+				set_variable = { global.USA_goldstar_dy_research_speed_factor = 0 }
+				set_variable = { global.USA_goldstar_dy_grant_medal_cost_factor = 0 }
+				set_variable = { global.USA_goldstar_dy_acclimatization_cold_climate_gain_factor = 0 }
+				set_variable = { global.USA_goldstar_dy_acclimatization_hot_climate_gain_factor = 0 }
+				set_variable = { global.USA_goldstar_dy_air_superiority_bonus_in_combat = 0 }
+				set_variable = { global.USA_goldstar_dy_political_power_factor = 0.05 }
+				set_variable = { global.USA_goldstar_dy_conscription_factor = 0 }
+				set_variable = { global.USA_goldstar_dy_stability_factor = 0 }
+				set_variable = { global.USA_goldstar_dy_war_support_factor = 0 }
+				set_variable = { global.USA_goldstar_dy_production_factory_max_efficiency_factor = 0 }
+				set_variable = { global.USA_goldstar_dy_production_factory_efficiency_gain_factor = 0 }
+				set_variable = { global.USA_goldstar_dy_army_core_attack_factor = 0 }
+				set_variable = { global.USA_goldstar_dy_army_core_defence_factor = 0 }
+				set_variable = { global.USA_goldstar_dy_coordination_bonus = 0 }
+				set_variable = { global.USA_goldstar_dy_max_planning_factor = 0 }
+				set_variable = { global.USA_goldstar_dy_special_forces_cap = 0 }
+			}
+			else_if = { limit = { check_variable = { var = temp value = 3 compare = less_than_or_equals } } # small buff for just the US and 2 others
+				set_variable = { global.USA_goldstar_dy_research_speed_factor = 0 }
+				set_variable = { global.USA_goldstar_dy_grant_medal_cost_factor = 0 }
+				set_variable = { global.USA_goldstar_dy_acclimatization_cold_climate_gain_factor = 0 }
+				set_variable = { global.USA_goldstar_dy_acclimatization_hot_climate_gain_factor = 0 }
+				set_variable = { global.USA_goldstar_dy_air_superiority_bonus_in_combat = 0 }
+				set_variable = { global.USA_goldstar_dy_political_power_factor = 0.10 }
+				set_variable = { global.USA_goldstar_dy_conscription_factor = 0 }
+				set_variable = { global.USA_goldstar_dy_stability_factor = 0.03 }
+				set_variable = { global.USA_goldstar_dy_war_support_factor = 0 }
+				set_variable = { global.USA_goldstar_dy_production_factory_max_efficiency_factor = 0 }
+				set_variable = { global.USA_goldstar_dy_production_factory_efficiency_gain_factor = 0 }
+				set_variable = { global.USA_goldstar_dy_army_core_attack_factor = 0 }
+				set_variable = { global.USA_goldstar_dy_army_core_defence_factor = 0 }
+				set_variable = { global.USA_goldstar_dy_coordination_bonus = 0 }
+				set_variable = { global.USA_goldstar_dy_max_planning_factor = 0 }
+				set_variable = { global.USA_goldstar_dy_special_forces_cap = 0 }
+			}
+			else_if = { limit = { check_variable = { var = temp value = 5 compare = less_than_or_equals } } # medium buff for just the US and 4 others
+				set_variable = { global.USA_goldstar_dy_research_speed_factor = 0.01 }
+				set_variable = { global.USA_goldstar_dy_grant_medal_cost_factor = 0 }
+				set_variable = { global.USA_goldstar_dy_acclimatization_cold_climate_gain_factor = 0 }
+				set_variable = { global.USA_goldstar_dy_acclimatization_hot_climate_gain_factor = 0 }
+				set_variable = { global.USA_goldstar_dy_air_superiority_bonus_in_combat = 0 }
+				set_variable = { global.USA_goldstar_dy_political_power_factor = 0.10 }
+				set_variable = { global.USA_goldstar_dy_conscription_factor = 0 }
+				set_variable = { global.USA_goldstar_dy_stability_factor = 0.03 }
+				set_variable = { global.USA_goldstar_dy_war_support_factor = 0.03 }
+				set_variable = { global.USA_goldstar_dy_production_factory_max_efficiency_factor = 0 }
+				set_variable = { global.USA_goldstar_dy_production_factory_efficiency_gain_factor = 0 }
+				set_variable = { global.USA_goldstar_dy_army_core_attack_factor = 0 }
+				set_variable = { global.USA_goldstar_dy_army_core_defence_factor = 0 }
+				set_variable = { global.USA_goldstar_dy_coordination_bonus = 0 }
+				set_variable = { global.USA_goldstar_dy_max_planning_factor = 0.05 }
+				set_variable = { global.USA_goldstar_dy_special_forces_cap = 0 }
+			}
+			else_if = { limit = { check_variable = { var = temp value = 7 compare = less_than_or_equals } } # medium buff for just the US and 6 others
+				set_variable = { global.USA_goldstar_dy_research_speed_factor = 0.01 }
+				set_variable = { global.USA_goldstar_dy_grant_medal_cost_factor = 0 }
+				set_variable = { global.USA_goldstar_dy_acclimatization_cold_climate_gain_factor = 0 }
+				set_variable = { global.USA_goldstar_dy_acclimatization_hot_climate_gain_factor = 0 }
+				set_variable = { global.USA_goldstar_dy_air_superiority_bonus_in_combat = 0 }
+				set_variable = { global.USA_goldstar_dy_political_power_factor = 0.12 }
+				set_variable = { global.USA_goldstar_dy_conscription_factor = 0.05 }
+				set_variable = { global.USA_goldstar_dy_stability_factor = 0.05 }
+				set_variable = { global.USA_goldstar_dy_war_support_factor = 0.05 }
+				set_variable = { global.USA_goldstar_dy_production_factory_max_efficiency_factor = 0 }
+				set_variable = { global.USA_goldstar_dy_production_factory_efficiency_gain_factor = 0 }
+				set_variable = { global.USA_goldstar_dy_army_core_attack_factor = 0 }
+				set_variable = { global.USA_goldstar_dy_army_core_defence_factor = 0 }
+				set_variable = { global.USA_goldstar_dy_coordination_bonus = 0.01 }
+				set_variable = { global.USA_goldstar_dy_max_planning_factor = 0.05 }
+				set_variable = { global.USA_goldstar_dy_special_forces_cap = 0 }
+			}
+			else_if = { limit = { check_variable = { var = temp value = 9 compare = less_than_or_equals } } # big buff for just the US and 8 others
+				set_variable = { global.USA_goldstar_dy_research_speed_factor = 0.03 }
+				set_variable = { global.USA_goldstar_dy_grant_medal_cost_factor = 0 }
+				set_variable = { global.USA_goldstar_dy_acclimatization_cold_climate_gain_factor = 0 }
+				set_variable = { global.USA_goldstar_dy_acclimatization_hot_climate_gain_factor = 0 }
+				set_variable = { global.USA_goldstar_dy_air_superiority_bonus_in_combat = 0 }
+				set_variable = { global.USA_goldstar_dy_political_power_factor = 0.15 }
+				set_variable = { global.USA_goldstar_dy_conscription_factor = 0.05 }
+				set_variable = { global.USA_goldstar_dy_stability_factor = 0.05 }
+				set_variable = { global.USA_goldstar_dy_war_support_factor = 0.05 }
+				set_variable = { global.USA_goldstar_dy_production_factory_max_efficiency_factor = 0 }
+				set_variable = { global.USA_goldstar_dy_production_factory_efficiency_gain_factor = 0.05 }
+				set_variable = { global.USA_goldstar_dy_army_core_attack_factor = 0 }
+				set_variable = { global.USA_goldstar_dy_army_core_defence_factor = 0.03 }
+				set_variable = { global.USA_goldstar_dy_coordination_bonus = 0.01 }
+				set_variable = { global.USA_goldstar_dy_max_planning_factor = 0.10 }
+				set_variable = { global.USA_goldstar_dy_special_forces_cap = 0 }
+			}
+			else_if = { limit = { check_variable = { var = temp value = 11 compare = less_than_or_equals } } # big buff for just the US and 10 others
+				set_variable = { global.USA_goldstar_dy_research_speed_factor = 0.03 }
+				set_variable = { global.USA_goldstar_dy_grant_medal_cost_factor = 0 }
+				set_variable = { global.USA_goldstar_dy_acclimatization_cold_climate_gain_factor = 0 }
+				set_variable = { global.USA_goldstar_dy_acclimatization_hot_climate_gain_factor = 0 }
+				set_variable = { global.USA_goldstar_dy_air_superiority_bonus_in_combat = 0 }
+				set_variable = { global.USA_goldstar_dy_political_power_factor = 0.15 }
+				set_variable = { global.USA_goldstar_dy_conscription_factor = 0.10 }
+				set_variable = { global.USA_goldstar_dy_stability_factor = 0.05 }
+				set_variable = { global.USA_goldstar_dy_war_support_factor = 0.05 }
+				set_variable = { global.USA_goldstar_dy_production_factory_max_efficiency_factor = 0.05 }
+				set_variable = { global.USA_goldstar_dy_production_factory_efficiency_gain_factor = 0.05 }
+				set_variable = { global.USA_goldstar_dy_army_core_attack_factor = 0.03 }
+				set_variable = { global.USA_goldstar_dy_army_core_defence_factor = 0.05 }
+				set_variable = { global.USA_goldstar_dy_coordination_bonus = 0.01 }
+				set_variable = { global.USA_goldstar_dy_max_planning_factor = 0.10 }
+				set_variable = { global.USA_goldstar_dy_special_forces_cap = 8 }
+			}
+			else = {  # huge buff for the US and all others
+				set_variable = { global.USA_goldstar_dy_research_speed_factor = 0.03 }
+				set_variable = { global.USA_goldstar_dy_grant_medal_cost_factor = -0.25 }
+				set_variable = { global.USA_goldstar_dy_acclimatization_cold_climate_gain_factor = 0.05 }
+				set_variable = { global.USA_goldstar_dy_acclimatization_hot_climate_gain_factor = 0.05 }
+				set_variable = { global.USA_goldstar_dy_air_superiority_bonus_in_combat = 0.05 }
+				set_variable = { global.USA_goldstar_dy_political_power_factor = 0.15 }
+				set_variable = { global.USA_goldstar_dy_conscription_factor = 0.10 }
+				set_variable = { global.USA_goldstar_dy_stability_factor = 0.05 }
+				set_variable = { global.USA_goldstar_dy_war_support_factor = 0.05 }
+				set_variable = { global.USA_goldstar_dy_production_factory_max_efficiency_factor = 0.05 }
+				set_variable = { global.USA_goldstar_dy_production_factory_efficiency_gain_factor = 0.05 }
+				set_variable = { global.USA_goldstar_dy_army_core_attack_factor = 0.05 }
+				set_variable = { global.USA_goldstar_dy_army_core_defence_factor = 0.05 }
+				set_variable = { global.USA_goldstar_dy_coordination_bonus = 0.02 }
+				set_variable = { global.USA_goldstar_dy_max_planning_factor = 0.10 }
+				set_variable = { global.USA_goldstar_dy_special_forces_cap = 8 }
+			}
+
+
  		}
 	}
 
-	
  add_namespace = new_usa_rr_germany_influence_event
   	country_event = { # Slowly ticks up german influence within the axis over time. Stops if no longer in the axis or if germany is a USA puppet
  		id = new_usa_rr_germany_influence_event.1

@@ -77,6 +77,20 @@ spriteTypes = {
 		name = "GFX_idea_american_architectural_administration_idea2"
 		texturefile = "gfx/interface/new_ideas/idea_american_architectural_administration_idea2.dds"
 	}
+	spriteType = { # idea_goldstar_network_graphic
+		name = "GFX_idea_goldstar_network_graphic"
+		texturefile = "gfx/interface/new_ideas/idea_goldstar_network_graphic.dds"
+	}
+	spriteType = { # idea_the_sun_has_already_set
+		name = "GFX_idea_the_sun_has_already_set"
+		texturefile = "gfx/interface/new_ideas/idea_the_sun_has_already_set.dds"
+	}
+	spriteType = { # idea_a_song_for_the_horizon
+		name = "GFX_idea_a_song_for_the_horizon"
+		texturefile = "gfx/interface/new_ideas/idea_a_song_for_the_horizon.dds"
+	}
+
+
   # FIXED IDEAS
 	spriteType = { # fixed_idea_yug_federal_defense_council
 		name = "GFX_idea_fixed_idea_yug_federal_defense_council"

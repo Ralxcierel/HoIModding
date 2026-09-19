@@ -173,6 +173,18 @@ spriteTypes = {
 		name = "GFX_focus_usa_what_the_future_holds"
 		texturefile = "gfx/interface/new_goals/focus_usa_what_the_future_holds.dds"			
 	}
+	SpriteType = { # focus_goldstar
+		name = "GFX_focus_goldstar"
+		texturefile = "gfx/interface/new_goals/focus_goldstar.dds"			
+	}
+	SpriteType = { # focus_the_second_confederation
+		name = "GFX_focus_the_second_confederation"
+		texturefile = "gfx/interface/new_goals/focus_the_second_confederation.dds"			
+	}
+	SpriteType = { # focus_the_goldstar_federation
+		name = "GFX_focus_the_goldstar_federation"
+		texturefile = "gfx/interface/new_goals/focus_the_goldstar_federation.dds"			
+	}
 
   # NEW OVERLAYS
 	# Debug overlay

@@ -17,6 +17,12 @@
 
 
 # 10 mils, 128 civs, 22 navs --> 14 mils, 162 civs, 24 navs [done using offmap factories to maintain compatibility with map mods]
+# CIV	
+# MIL	
+# ARM	
+# NAV	
+# AIR	
+# SCI	
 
 ### General Mod To-Do List
  # Add agency icons (including CIA)
@@ -30,9 +36,7 @@
  # AI focus paths? maybe?
  # Need flavor events
 
- # Need new characters for different ideologies
  # Need to add in the marines dude (and other dudes)
- # Add characters for civil war and other ideologies - Harry White, Earl Browder, Victor Perlo, Whittaker Chambers, 
  # Shorten focus times (maybe)
  # Redefine all of the election checks and events, as well as congress. (elections won't fire if five year plan is taken)
 
@@ -41,23 +45,14 @@
  # Maybe add a NATO focus for the democratic tree
  # Fix mod-compatibility sub mods
  # Have Ching Lee added to admirals once Gunnery Innovations is taken
- # Have a FREE visual indicator that shows how funds are being distributed
- # Check the invasion event checker that it actually makes sense [seems good]
  # Add Baldwin locomotive works to focuses that mess with MIOs
- # Update def readiness text for other ideologies
- # Fix 'america_is_being_invaded flag'
  # Bury the robberbarons is causing crazy errors when hovered over
 
 ### Work To-Do List
- # Fill in Nationalist tree code
- # Fill in Nationalist tree localisation
- # Finish making focus icons
- # Make new idea icons
  # Balance testing
  # Make better icons for important items
 	# Golden West Idea
- # Make secret mini tree for A Song for the Horizon
- # Fix the 'america_is_being_invaded' flag
+ # Make secret mini tree for A Song for the Horizon [maybe not, it's already cool]
 ###
 
 
@@ -324,7 +319,7 @@ focus_tree = {
 # DEBUG FOCUSES
  focus = { # DEBUG BRANCH
 	id = USA_DEBUG_BRANCH
-	icon = GFX_focus_PLACEHOLDER
+	icon = GFX_focus_farasome_bluejay
 	x = 20
 	y = 0
 	cost = 1
@@ -546,6 +541,35 @@ focus_tree = {
 		add_ideas = usa_prudence_across_the_land_idea
 		add_ideas = usa_swift_and_lethal_ti
 		# 9-5
+		add_ideas = usa_swift_and_lethal_other_idea
+		add_ideas = usa_brotherhood_spirit_idea
+		add_ideas = usa_brotherhood_spirit_other_idea
+		add_ideas = usa_our_safety_before_yours_trade_idea
+		add_ideas = usa_throw_in_with_the_old_idea
+		add_ideas = usa_do_our_part_idea
+		add_ideas = usa_do_our_part_other_idea
+		add_ideas = usa_pledge_for_the_new_order_idea
+		add_ideas = usa_renaissance_and_retribution_idea
+		add_ideas = usa_german_doctrine_advisors_idea
+		add_ideas = usa_rr_undermine_germany_ti
+		add_ideas = usa_rr_produce_resources_ti
+		add_ideas = usa_rr_general_research_ti
+		add_ideas = usa_rr_military_drills_ti
+		add_ideas = usa_rr_dominate_germany_1_idea
+		add_ideas = usa_rr_dominate_germany_2_idea
+		add_ideas = usa_rr_dominate_germany_3_idea
+		add_ideas = usa_rr_dominate_germany_4_idea
+		add_ideas = usa_secure_the_gulf_ti
+		add_ideas = usa_rush_for_the_canal_ti
+		add_ideas = usa_seize_the_great_flanks_ti
+		add_ideas = usa_the_sun_has_already_set_idea
+		add_ideas = usa_a_song_for_the_horizon_idea
+		add_ideas = usa_the_eagle_flies_alone_idea
+		add_ideas = usa_the_eagle_flies_alone_other_idea
+		add_ideas = usa_imperial_roost_idea
+		add_ideas = usa_imperial_roost_other_idea
+		add_ideas = home_of_the_free_3
+		add_ideas = usa_go_launched_civil_war_ti
 	}
  }
  focus = { # USA_IDEA_TEST_ECO_MODIFIERS
@@ -14090,7 +14114,7 @@ focus_tree = {
 
 	focus = { # The Goldstar Network
 		id = USA_the_goldstar_network
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_goldstar
 		relative_position_id = USA_tend_to_the_nation
 		prerequisite = { focus = USA_tend_to_the_nation }
 
@@ -14683,9 +14707,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		search_filters = {
-			
-		}
+		#search_filters = {
+		#	
+		#}
 		available = {
 
 		}
@@ -14731,9 +14755,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		search_filters = {
-			
-		}
+		#search_filters = {
+		#	
+		#}
 		available = {
 			has_civil_war = yes
 		}
@@ -14766,7 +14790,7 @@ focus_tree = {
 
 	focus = { # The Goldstar Federation
 		id = USA_the_goldstar_federation
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_the_goldstar_federation
 		relative_position_id = USA_tend_to_the_nation
 		prerequisite = { focus = USA_the_parkerite_act focus = USA_paul_revere_rides_again }
 		mutually_exclusive = {
@@ -14832,7 +14856,7 @@ focus_tree = {
 					modifier = USA_goldstar_dynamic_modifier
 				}
 			}
-			hidden_effect = { country_event = { id = new_usa_an_goldstar_federation_event.1 days = 2 } } # Checks for the Goldstar DM for puppets
+			hidden_effect = { country_event = { id = new_usa_an_goldstar_federation_event.1 days = 1 } } # Checks for the Goldstar DM for puppets
 			set_cosmetic_tag = USA_goldstar
 			skip_line_tt = yes
 			set_party_name = {
@@ -14850,7 +14874,7 @@ focus_tree = {
 
 	focus = { # The Second Confederation
 		id = USA_the_second_confederation
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_the_second_confederation
 		relative_position_id = USA_tend_to_the_nation
 		prerequisite = { focus = USA_the_parkerite_act focus = USA_paul_revere_rides_again }
 		mutually_exclusive = {
@@ -14905,6 +14929,12 @@ focus_tree = {
 				ruling_party = fascism
 				elections_allowed = yes
 				election_frequency = 48
+			}
+			skip_line_tt = yes
+			usa_modify_gov = yes
+			add_to_variable = {
+				USA_gov_dy_compliance_growth = 0.10
+				tooltip = compliance_growth_tt
 			}
 		}
 	}
@@ -16683,6 +16713,7 @@ focus_tree = {
 			hidden_effect = { country_event = { id = new_usa_remove_bop_mod.21 days = 1095 } }
 			skip_line_tt = yes
 			USA_defense_readiness_boost_small = yes
+			USA_AN_FREE_mil_up_low = yes
 		}
 	}
 
@@ -16731,6 +16762,7 @@ focus_tree = {
 			hidden_effect = { country_event = { id = new_usa_remove_bop_mod.20 days = 1095 } }
 			skip_line_tt = yes
 			USA_defense_readiness_boost_small = yes
+			USA_AN_FREE_civ_up_low = yes
 		}
 	}
 
@@ -16777,6 +16809,7 @@ focus_tree = {
 			hidden_effect = { country_event = { id = new_usa_remove_bop_mod.22 days = 730 } }
 			skip_line_tt = yes
 			USA_defense_readiness_boost_small = yes
+			USA_AN_FREE_arm_up_low = yes
 		}
 	}
 
@@ -16874,6 +16907,8 @@ focus_tree = {
 			hidden_effect = { country_event = { id = new_usa_remove_bop_mod.23 days = 1095 } }
 			skip_line_tt = yes
 			USA_defense_readiness_boost_large = yes
+			USA_AN_FREE_civ_up_low = yes
+			USA_AN_FREE_mil_up_low = yes
 		}
 	}
 
@@ -36789,6 +36824,7 @@ focus_tree = {
 					add_to_variable = { USA_FREE_sci_points = 6 }
 				}
 			}
+			USA_AN_FREE_all_V = yes
 			USA_AN_check_FREE_all = yes
 		}
 	}
@@ -36845,6 +36881,7 @@ focus_tree = {
 					add_to_variable = { USA_FREE_sci_points = 6 }
 				}
 			}
+			USA_AN_FREE_all_V = yes
 			USA_AN_check_FREE_all = yes
 		}
 	}

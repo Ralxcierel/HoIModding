@@ -55,9 +55,10 @@ bookmarks = {
 			focuses = {
 				USA_fulfill_manifest_destiny
 				#USA_new_arsenal_of_democracy
+				USA_the_goldstar_network
 				USA_an_american_five_year_plan
 				#USA_the_manhattan_project
-				USA_mutually_assured_profits
+				#USA_mutually_assured_profits
 			}
 		}
 		"ENG"={

@@ -5047,7 +5047,7 @@ ideas = {
 
             modifier = {
                 training_time_factor = 0.20
-                max_organisation = -5
+                army_org_factor = -0.25
                 army_org_regain = -0.15
                 war_support_factor = -0.15
                 supply_combat_penalties_on_core_factor = 0.10
@@ -5064,7 +5064,7 @@ ideas = {
 
             modifier = {
                 training_time_factor = 0.30
-                max_organisation = -10
+                army_org_factor = -0.4
                 army_org_regain = -0.20
                 war_support_factor = -0.20
                 supply_combat_penalties_on_core_factor = 0.15
@@ -5415,7 +5415,7 @@ ideas = {
         }
 
         usa_goldstar_network_idea = { # Goldstar Network Idea
-            picture = PLACEHOLDER
+            picture = goldstar_network_graphic
 
             allowed = {
             }
@@ -5784,7 +5784,7 @@ ideas = {
         }
 
         usa_renaissance_and_retribution_idea = { # Renaissance and Retribution Idea
-            picture = AFG_work_with_ger_intel_bonus
+            picture = generic_navy_cruiser_warfare
         
             allowed = {
             }
@@ -6104,7 +6104,7 @@ ideas = {
         }
 
         usa_the_sun_has_already_set_idea = { # The Sun Has Already Set Idea
-            picture = PLACEHOLDER
+            picture = the_sun_has_already_set
         
             allowed = {
             }
@@ -6151,7 +6151,7 @@ ideas = {
         }
 
         usa_a_song_for_the_horizon_idea = { # A Song for the Horizon
-            picture = PLACEHOLDER
+            picture = a_song_for_the_horizon
         
             allowed = {
             }
@@ -6173,6 +6173,7 @@ ideas = {
             }
 
             modifier = {
+                special_project_speed_factor = 0.15
                 improve_relations_maintain_cost_factor = 10
                 generate_wargoal_tension = -1
                 justify_war_goal_time = -0.85
@@ -6353,7 +6354,7 @@ ideas = {
 
             modifier = {
                 army_core_attack_factor = 0.10
-                army_org_regain = 0.05
+                army_org_regain = 0.10
             }
         }
 
