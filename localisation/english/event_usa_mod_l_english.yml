@@ -659,6 +659,11 @@
   new_usa_the_eagle_flies_alone_event.3.a: "They will not escape us"
   new_usa_the_eagle_flies_alone_event.3.b: "We will remember this"
 
+  usa_new_an_song_for_the_horizon_event.1.t: "[FROM.GetNameDefCap] Declares Intentions for \"the Great Manifest Destiny\""
+  usa_new_an_song_for_the_horizon_event.1.desc: "\nThe [FROM.GetAdjective] government has announced a new initiative, a \"Song for the Horizon\" as they call it, which apparently sees the [FROM.GetAdjective] people extending their influence and domination across the entire world. What this will actually mean in practice is yet to be seen.\n\nThe [ENG.GetAdjective], [GER.GetAdjective], [JAP.GetAdjective], [SOV.GetAdjective], and other governments have responded with varying degrees of dismay, dismissal, or denouncement various world leaders have begun to seek preemptive solutions to this possible new threat.\n\nIf the Americans are serious, their song may be the anthem of a new, larger conflict."
+  usa_new_an_song_for_the_horizon_event.1.a: "Saddle up!"
+  usa_new_an_song_for_the_horizon_event.1.b: "God help us all..."
+
 # OTHER EVENTS
   new_usa_remove_bop_mod.1.t:   "Removes Public training programs"
   new_usa_remove_bop_mod.2.t:   "Removes Expand the national guard"

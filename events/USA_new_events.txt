@@ -39,16 +39,16 @@
  @eagle_lifts_its_wings_timer = 		140 # days
 ##########################################################
 # Constants for Southern Crisis
-# @national_character_timer = 			154 # days
-# @new_frontier_timer = 					280 # days
-# @autarky_timer = 						280 # days
-# @new_america_timer = 					280 # days
-# @brotherhood_timer = 					336 # days
- @national_character_timer = 			70 # days
- @new_frontier_timer = 					70 # days
- @autarky_timer = 						70 # days
- @new_america_timer = 					70 # days
- @brotherhood_timer = 					70 # days
+ @national_character_timer = 			154 # days
+ @new_frontier_timer = 					294 # days
+ @autarky_timer = 						294 # days
+ @new_america_timer = 					238 # days
+ @brotherhood_timer = 					252 # days
+ #@national_character_timer = 			70 # days
+ #@new_frontier_timer = 				70 # days
+ #@autarky_timer = 						70 # days
+ #@new_america_timer = 					70 # days
+ #@brotherhood_timer = 					70 # days
 ##########################################################
 # Other Constants
  @dynamism_unlocked_timer = 			210 # days
@@ -10453,6 +10453,40 @@ country_event = { # undoes the stealth focus [unused]
 		}
 	}
 
+ add_namespace = usa_new_an_song_for_the_horizon_event
+ news_event = { # A Song for the Horizon
+	id = usa_new_an_song_for_the_horizon_event.1
+	title = usa_new_an_song_for_the_horizon_event.1.t
+	desc = usa_new_an_song_for_the_horizon_event.1.desc
+	picture = GFX_news_event_020
+	is_triggered_only = yes
+	major = yes
+	fire_for_sender = yes
+
+	option = { # Let's go!
+		name = usa_new_an_song_for_the_horizon_event.1.a
+		trigger = {
+			or = {
+				original_tag = USA
+				is_subject_of = USA
+				is_in_faction_with = USA
+			}
+		}
+	}
+	option = { # Uh oh...
+		name = usa_new_an_song_for_the_horizon_event.1.b
+		trigger = {
+			not = {
+				or = {
+					original_tag = USA
+					is_subject_of = USA
+					is_in_faction_with = USA
+				}
+			}
+		}
+	}
+
+ }
 ##################################################################
 
 

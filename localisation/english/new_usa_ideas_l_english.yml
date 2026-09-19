@@ -139,6 +139,7 @@
     usa_the_eagle_flies_alone_idea: "The Eagle Flies Alone"
     usa_the_eagle_flies_alone_other_idea: "Western Hegemony"
     usa_imperial_roost_other_idea: "[USA.GetAdjective] Hegemony"
+    home_of_the_free_3: "Home of the Free"
 
  # TIMED IDEAS
   # Democratic & General
@@ -261,6 +262,7 @@
     usa_secure_the_gulf_ti: "Secure the Gulf"
     usa_rush_for_the_canal_ti: "Rush for the Canal"
     usa_seize_the_great_flanks_ti: "Seize the Great Flanks"
+    usa_go_launched_civil_war_ti: "Backed by America"
  
  # Federal Recovery Emegency Enterprise (FREE)
     NL_2s_tt: "\n  "
@@ -1017,6 +1019,16 @@
     USA_RR_faction_general_research_decision: "Shared Research"
     USA_RR_faction_military_drills_decision: "Distribute Military Theories"
     USA_RR_faction_provide_arms_decision: "Provide Arms"
+    USA_golden_opportunities_cat: "Golden Opportunities"
+    USA_infiltrate_government_decisions: "Infiltrate [FROM.GetAdjective] Government"
+    USA_infiltrate_government_decisions_tt: "We will gain access to internal assets within §Y[FROM.getName]§!."
+    USA_secure_loyalists_decisions: "Secure [FROM.GetAdjective] Loyalists"
+    usa_an_is_infiltrating_flag_tt: " §YAmerican§! spies are not busy infiltrating §Y[FROM.getName]§!"
+    USA_acquire_agents_in_the_army_decisions: "Acquire Agents in the [FROM.GetAdjective] Army"
+    USA_sway_public_opinion_decisions: "Sway the Public in [FROM.getName]"
+    USA_acquire_agents_in_the_army_decisions_tt: "§GImproves§! the §Ystrength§! of our supporters in the §Y[FROM.GetAdjective]§! army."
+    USA_GO_launch_coup_decisions: "Launch a §Rcoup§! in [FROM.getName]"
+    USA_GO_launch_coup_decisions_tt: "Depending on our §Ylevel of infiltration§!, §Yfascism support§! and §Ycollaboration strength§! in §Y[FROM.GetNameDefCap]§!, we will either §Gsuccessfully coup§! the §Y[FROM.GetAdjective]§! government and gain a new ally, or we will start a §Rcivil war§! in §Y[FROM.getName]§!.\n"
 
  # BALANCE OF POWER
     usa_defense_readiness_bop: "Defense Readiness Factor"
@@ -1230,6 +1242,7 @@
     USA_start_AN_civil_war: "Starts an American nationalist civil war. If the flag is already present, does nothing. Checks for 'brotherhood spirit' and 'patriots stand ready'. Checks fascism support and sets global flag accordingly for the war."
     USA_RR_update_influence: "Sets the different influence variables to be correct."
     USA_RR_increase_ties: "Increases the value of the ties flag by 1, or adds it if not present"
+    USA_GO_increase_infiltration: "Increases the value of the infiltration flag by 1, or adds it if not present"
 
   # Flags
     usa_nc_homeless_relief_or_stand_up_flag: "Checks if one of the focuses $USA_homeless_relief_funds$ or $USA_stand_up_for_the_unemployed$ has been taken. If so, the other one doesn't decrease conservative resistance (only one of them does)."

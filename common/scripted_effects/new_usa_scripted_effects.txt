@@ -2219,3 +2219,36 @@ USA_RR_increase_ties = {
 		}				
 	}
 }
+
+USA_GO_increase_infiltration = {
+	if = {
+		limit = {
+			not = { has_country_flag = USA_GO_infiltration_flag }
+		}
+		set_country_flag = USA_GO_infiltration_flag
+	}
+	else_if = {
+		limit = {
+			has_country_flag = {
+				flag = USA_GO_infiltration_flag
+				value = 1
+			}
+		}
+		set_country_flag = {
+			flag = USA_GO_infiltration_flag
+			value = 2
+		}				
+	}
+	else_if = {
+		limit = {
+			has_country_flag = {
+				flag = USA_GO_infiltration_flag
+				value = 2
+			}
+		}
+		set_country_flag = {
+			flag = USA_GO_infiltration_flag
+			value = 3
+		}				
+	}
+}

@@ -93,16 +93,16 @@
 	@soviet_style_timer = 			48 # weeks # was 46 weeks
  ########################################################
  # Southern Crisis Timers								# Started as copies of the Red July timers, retune later
- #	@national_character_timer = 	22 # weeks
- #	@new_frontier_timer = 			40 # weeks
- #	@autarky_timer = 				40 # weeks
- #	@new_america_timer = 			40 # weeks
- #	@brotherhood_timer = 			48 # weeks
-	@national_character_timer = 	10 # weeks
-	@new_frontier_timer = 			10 # weeks
-	@autarky_timer = 				10 # weeks
-	@new_america_timer = 			10 # weeks
-	@brotherhood_timer = 			10 # weeks
+	@national_character_timer = 	22 # weeks
+	@new_frontier_timer = 			42 # weeks
+	@autarky_timer = 				42 # weeks
+	@new_america_timer = 			34 # weeks
+	@brotherhood_timer = 			36 # weeks
+	#@national_character_timer = 	10 # weeks
+	#@new_frontier_timer = 			10 # weeks
+	#@autarky_timer = 				10 # weeks
+	#@new_america_timer = 			10 # weeks
+	#@brotherhood_timer = 			10 # weeks
  ########################################################
  # Auto Focus Timers
   # Generic
@@ -14793,6 +14793,12 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			hidden_effect = {
+				swap_ideas = {
+					remove_idea = home_of_the_free
+					add_idea = home_of_the_free_3
+				}
+			}
 			hidden_effect = { country_event = { id = new_usa_an_USA_the_goldstar_federation_event.1 hours = 2 } }
 			if = {
 				limit = {
@@ -14871,6 +14877,12 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			hidden_effect = {
+				swap_ideas = {
+					remove_idea = home_of_the_free
+					add_idea = home_of_the_free_3
+				}
+			}
 			hidden_effect = { country_event = { id = new_usa_an_USA_the_second_confederation_event.1 hours = 2 } }
 			if = {
 				limit = {
@@ -15146,7 +15158,7 @@ focus_tree = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to FOCUS_FILTER_SPY_AGENCY
+			FOCUS_FILTER_SPY_AGENCY 
 		}
 		available = {
 			has_intelligence_agency = yes
@@ -15159,8 +15171,25 @@ focus_tree = {
 			# Should give decisions to take over countries from within and destabilize neighbors. Bonuses to spyfare, maybe some kind of check for a certain level of spy network strength.
 			# Mostly focuses on puppets, starting civil wars, couping the government, extracting trade deals, etc.
 			# Try and give unique spy bonuses towards harming enemies in the Americas, maybe with crazy boosts to resistance and attrition, for instance.
+			custom_effect_tooltip = USA_golden_opportunities_tt
 			skip_line_tt = yes
 			USA_modify_oss = yes
+			add_to_variable = {
+				USA_dy_agy_boost_ideology_mission_factor = 0.25
+				tooltip = boost_ideology_mission_factor_tt
+			}
+			add_to_variable = {
+				USA_dy_agy_boost_resistance_factor = 0.15
+				tooltip = boost_resistance_factor_tt
+			}
+			add_to_variable = {
+				USA_dy_agy_control_trade_mission_factor = 0.15
+				tooltip = control_trade_mission_factor_tt
+			}
+			add_to_variable = {
+				USA_dy_agy_intel_network_gain_factor = 0.15
+				tooltip = intel_network_gain_factor_tt
+			}
 			add_to_variable = {
 				USA_dy_agy_operative_slot = 1
 				tooltip = operative_slot_tt
@@ -16497,7 +16526,7 @@ focus_tree = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_Attending_to FOCUS_FILTER_RESEARCH FOCUS_FILTER_WARGOALS FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_USA_CONGRESS
+			FOCUS_FILTER_RESEARCH FOCUS_FILTER_WARGOALS FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_USA_CONGRESS
 		}
 		available = {
 			congress_high_support_trigger = yes
@@ -16515,7 +16544,9 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			# Add a news event
+			hidden_effect = {
+				news_event = { id = usa_new_an_song_for_the_horizon_event.1 days = 1 }
+			}
 			# World conquest bonuses and decisions
 			add_threat = 30
 			skip_line_tt = yes

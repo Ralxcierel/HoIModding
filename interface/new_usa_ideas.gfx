@@ -92,6 +92,11 @@ spriteTypes = {
 		name = "GFX_decision_category_partner_in_arms"
 		texturefile = "gfx/interface/new_decisions/decision_category_partner_in_arms.dds"
 	}
+	spriteType = { # decision_category_golden_opportunities
+		name = "GFX_decision_category_golden_opportunities"
+		texturefile = "gfx/interface/new_decisions/decision_category_golden_opportunities.dds"
+	}
+
 	spriteType = { # decision_new_usa_congress
 		name = "GFX_decision_new_usa_congress"
 		texturefile = "gfx/interface/new_decisions/decision_new_usa_congress.dds"
@@ -123,6 +128,10 @@ spriteTypes = {
 	spriteType = { # decision_new_usa_dominate_germany_4
 		name = "GFX_decision_new_usa_dominate_germany_4"
 		texturefile = "gfx/interface/new_decisions/decision_new_usa_dominate_germany_4.dds"
+	}
+	spriteType = { # decision_recruit_operative_fixed
+		name = "GFX_decision_recruit_operative_fixed"
+		texturefile = "gfx/interface/new_decisions/decision_recruit_operative_fixed.dds"
 	}
 
   # NEW TEXT ICONS
