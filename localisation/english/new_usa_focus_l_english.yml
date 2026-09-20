@@ -4,7 +4,7 @@
     USA_homeland_defense_emergency_act_focus-general_desc: "The shores of America have been breached; the enemy has stepped foot on our land. We will not accept this state of affairs, nor will we allow those set against us to wage war against our people in their homes. They shall be repelled by any means necessary. The American people will rise up to throw them out!\nThe home of the brave shall remain the land of the free!"
 
     USA_coordinate_militia_defenses-general_title: "Coordinate Militia Defenses"
-    USA_coordinate_militia_defenses-general_desc: "Millions of American citizens have answered the call to arms and are already doing what they can to mobilize against the invaders, but they are presently acting independently and without a greater cohesion. We need to reach out to our people now and begin organizign their collective spirits into a singular will."
+    USA_coordinate_militia_defenses-general_desc: "Millions of American citizens have answered the call to arms and are already doing what they can to mobilize against the invaders, but they are presently acting independently and without a greater cohesion. We need to reach out to our people now and begin organizing their collective spirits into a singular will."
 
     USA_establish_strongholds_in_the_rockies-general_title: "Establish Strongholds in the Rockies"
     USA_establish_strongholds_in_the_rockies-general_desc: "The natural mountain geography we enjoy in the West will serve us well as a wall that will cut off the advance of our foes. We don't intend to let them get that far, but should some salient reach the Rockies, they will obliterate themselves against our resolve."
@@ -13,7 +13,7 @@
     USA_the_mississippi_bastions-general_desc: "Running the whole length of the Mississippi, we will establish formidable defenses that will stall any foe. The lifeline of the Midwest will be the lifeline of the republic."
 
     USA_evacuate_civilians_and_industry-general_title: "Evacuate Civilians and Industry"
-    USA_evacuate_civilians_and_industry-general_desc: "We must rapidly evacuate everything we can from those regions that are most at risk of being seiged or captured by the enemy. We can't afford to stall or lie idle, we need to act while we still can."
+    USA_evacuate_civilians_and_industry-general_desc: "We must rapidly evacuate everything we can from those regions that are most at risk of being besieged or captured by the enemy. We can't afford to stall or lie idle, we need to act while we still can."
 
     USA_launch_the_counteroffensive-general_title: "Launch the Counteroffensive"
     USA_launch_the_counteroffensive-general_desc: "It is time to retaliate and reclaim our lands and captured people. Our backs are secure, and in front of us we will destroy whatever stands in our way."
@@ -192,7 +192,7 @@
     USA_housing_reform_desc: "By providing support for design and zoning regulations across the country, we can relax the stress imposed by red tape on housing developments. When people are secure at home, their output and outlook improve."
 
     USA_engineering_grants: "Engineering Grants"
-    USA_engineering_grants_desc: "Investing in the general field of engineering and providing resources for its development and advancement will greatly assist our industrial capabilities in the future."
+    USA_engineering_grants_desc: "The bridges, dams, and engines of tomorrow are sitting in some engineers' notebooks today. Let's fund those notebooks."
 
     USA_school_of_mines: "School of Mines"
     USA_school_of_mines_desc: "The Colorado School of Mines is a long-standing, illustrious institution which produces some of our best engineers. With an ever growing need for high-quality engineers, investment in this college has the potential to pay great dividends down the line."
@@ -234,7 +234,7 @@
     USA_world_industrial_superiority_desc: "No nation has enjoyed the economic and industrial might and wealth that we now possess. Leading the world in material excellency, we stand as a bright city on a hill and an inspiration for everyone to see what is possible."
 
     USA_state_action_reduction: "State Action Reduction"
-    USA_state_action_reduction_desc: "By better utilizing the tax dollars available to the government, their negative effects on the economy can be reduced. The problems inherent in national spending patterns can be further mitigated by reducing unnecessary expenditures and concentrating funds where their impact is greatest."
+    USA_state_action_reduction_desc: "Every dollar Washington wastes is a dollar squeezed from a working man's pocket. We'll spend less and spend smarter."
 
     USA_reform_the_defense_act: "Reform the Defense Act"
     USA_reform_the_defense_act_desc: "Reviewing and modernizing America's armed forces is becoming an ever more apparent need as the situation in the world deteriorates."
@@ -243,7 +243,7 @@
     USA_westpoint_expansion_desc: "The officer corps of the USAA is the key to success on the battlefield, and having the best officers we can and having enough of them will be crucial to withstanding future conflicts."
 
     USA_recruitment_drive: "Recruitment Drive"
-    USA_recruitment_drive_desc: "The military needs a serious increase in its service size before we can consider it ready to act."
+    USA_recruitment_drive_desc: "An army on paper doesn't win wars. We need boots, and we need them by the thousand."
 
     USA_officer_focus: "Officer Focus"
     USA_officer_focus_desc: "Being the leaders on the ground, the officers of the USAA should receive top priority in doctrine design and investment."
@@ -300,7 +300,7 @@
     USA_democracys_vanguard_desc: "The people of the United States of America hold an indomitable spirit. Though war may be far from our shores, we owe it to humanity to hold their righteous struggles close to our hearts. We now call on our great people to rise to the occasion and hold the line, wherever it may be drawn."
 
     USA_kittyhawk_exhibition: "Kittyhawk Exhibition"
-    USA_kittyhawk_exhibition_desc: "The United States was first in flight, and we're remained at the cutting edge of aviation for decades. However, since the Great Depression, our spirit has been hit hard. Putting on an air show with all of our best pilots and greatest aircraft could revitalize that part of our will and provide some much needed levity for our people."
+    USA_kittyhawk_exhibition_desc: "The United States was first in flight, and we've remained at the cutting edge of aviation for decades. However, since the Great Depression, our spirit has been hit hard. Putting on an air show with all of our best pilots and greatest aircraft could revitalize that part of our will and provide some much needed levity for our people."
     USA_mastery_bonus_kittyhawk_exhibition_tt: "$USA_kittyhawk_exhibition$"
 
     USA_air_training: "Air Training"
@@ -518,13 +518,13 @@
 
     USA_address_urgent_defense_needs: "Address Urgent Defense Needs"
     USA_address_urgent_defense_needs_desc: "An active military industry is necessary at this time. We need to be able to arm troops soon, regardless of the cost."
-    USA_address_urgent_defense_needs_tt: "If the economy is£GFX_usa_star_overlay_2_texticon §Yrecovering§!, this focus will be §Gmore effective and less costly§!."
+    USA_address_urgent_defense_needs_tt: "If the economy is £GFX_usa_star_overlay_2_texticon §Yrecovering§!, this focus will be §Gmore effective and less costly§!."
 
     USA_encourage_creative_approaches: "Encourage Creative Approaches"
     USA_encourage_creative_approaches_desc: "We have some of the best minds working to equip our men, and their ability to come up with new solutions to problems we haven't even reached yet is a great boon. If we relax the regulations and requirements we have for the gear we requisition, we may find it to be far more effective."
 
     USA_defense_hardware_symposium: "Defense Hardware Symposium"
-    USA_defense_hardware_symposium_desc: "The recovery of our sciences and industry provide us with an excellent opportunity to cross over our civilian and military minds in order to draw out the best ideas from their mutual creative capacities."
+    USA_defense_hardware_symposium_desc: "Dyanmism follows in the wake of our recovering scientific and engineering institutions. Let's get our best and brightest together in the same room and see what they can come up with."
 
     USA_futuristic_military_assets: "Futuristic Military Assets"
     USA_futuristic_military_assets_desc: "Staying ahead is key to maintaining an effective defense and offense. The modern world is moving fast, so we'll have to be faster. We will accomplish this by continuing to meld together every lead we can identify in every field we can."
@@ -735,7 +735,7 @@
     USA_empower_the_guardians_desc: "Close military cooperation will be necessary in order to facilitate and effective defense against overseas foes. To this end, the US military will work closely with our other American allies in order to prop up all available capable fighting forces."
 
     USA_pursue_american_prosperity: "Pursue American Prosperity"
-    USA_pursue_american_prosperity_desc: "As the world's largest economy and the strongest military power of the region, it is encumbant on us to help those in need. We are surrounded by neighbors who have suffered much in recent decades, whether by chance, by thier own making, or even as a result of our own actions. We will aim towards supporting them."
+    USA_pursue_american_prosperity_desc: "As the world's largest economy and the strongest military power of the region, it is incumbent on us to help those in need. We are surrounded by neighbors who have suffered much in recent decades, whether by chance, by their own making, or even as a result of our own actions. We will aim towards supporting them."
 
     USA_bolster_liberty_in_the_south: "Bolster Liberty in the South"
     USA_bolster_liberty_in_the_south_desc: "We have a duty to spread the light of democracy to our neighbors and help spark the ideals of independence and freedom."
@@ -747,7 +747,7 @@
     USA_purchase_the_western_gap_desc: "The Canadian Corridor splits the continental United States from her Alaskan territories. Given the relative value of that land to us and it's relative emptiness for the Canadians, perhaps we can strike a deal with them for it."
 
     USA_the_crowns_helmet: "The Crown's Helmet"
-    USA_the_crowns_helmet_desc: "Canada has been a good ally for many years now and their presence helps to prevent any attacks from our north. We should work with them to bolster our military strengths and improve out abilities to defend North America."
+    USA_the_crowns_helmet_desc: "Canada has been a good ally for many years now and their presence helps to prevent any attacks from our north. We should work with them to bolster our military strengths and improve our abilities to defend North America."
 
     USA_purchase_colonial_holdovers: "Purchase Colonial Holdovers"
     USA_purchase_colonial_holdovers_desc: "The old powers of Europe still hold clay in the Americas, even despite being slowly pushed out of the region for years. Now, however, we have an opportunity to finish their withdrawal, but we won't make it painful. Rather, we'll pay in gold for these colonial holdovers."
@@ -808,7 +808,7 @@
     USA_the_far_eastern_realm_desc: "East Asia has held interest for America for decades, and even despite the short history of the US it has still managed to make significant impacts in the region. Now, tensions are rising fast and threats seem to loom over the horizon. The importance of our diplomatic stance here shouldn't be underestimated."
 
     USA_write_war_plan_orange: "Write War Plan Orange"
-    USA_write_war_plan_orange_desc: "[JAP.GetNameDefCap] has grown quickly and dramatically, however its recent actions and tumults have left it in a very unstable and aggressive position. Whether the Japanese will remain peaceful or become beligerant, we need to be ready."
+    USA_write_war_plan_orange_desc: "[JAP.GetNameDefCap] has grown quickly and dramatically, however its recent actions and tumults have left it in a very unstable and aggressive position. Whether the Japanese will remain peaceful or become belligerent, we need to be ready."
 
     USA_victory_act_asia: "Victory Act\n(Asian Theater)"
     USA_victory_act_asia_desc: "Asia demands a scale of warfare that is difficult to grasp, with hordes of soldiers too numerous to count, terrain which is itself hostile to troops, and distances impressive to scale. If we intend to fight a major war across the Pacific, we must not hold back- every tool available to us must be available."
@@ -897,9 +897,8 @@
     USA_liberty_over_east_asia_desc: "Eastern Asia, Oceania, the Pacific- this section of the globe has lagged behind Western civilization for centuries, and now it finds itself in significant risk of massive turmoil. Europe is too distant and turbulent, so the duty to protect these regions falls to us."
     USA_liberty_over_east_asia_tt: "Sends an §Rultimatum§! to Asian and Oceanic countries to demand overlordship, and to overlords of existing puppets in the region to transfer overlordship."
 
-
     USA_outback_offensive: "Outback Offensive"
-    USA_outback_offensive_desc: "Now that we have landed in Australia, we need to focus our combat efforts to sweep across the open plains of the outback as rapidly as possible. Speed and manuever will be our method of victory."
+    USA_outback_offensive_desc: "Now that we have landed in Australia, we need to focus our combat efforts to sweep across the open plains of the outback as rapidly as possible. Speed and maneuver will be our method of victory."
 
     USA_oceanic_dominance: "Oceanic Dominance"
     USA_oceanic_dominance_desc: "With our footholds established across Asia and Oceania, we will put our resources into subduing local resistance and improving local support. The sooner we get the good will of those living in these regions, the sooner we'll be able to securely move on and take more territory."
@@ -926,7 +925,7 @@
     USA_steppe_warfare_desc: "The longtime masters of steppe warfare, the Mongolians fight effectively with mounted warriors and excel in rapid tactics. We'll meet them on the battlefield with superior speed."
 
     USA_america_of_the_orient: "America of the Orient"
-    USA_america_of_the_orient_desc: "Ever since opening up in the 186s, Japan has demonstrated itself to be a formidable country, able to go from a medieval society and economy to a worldclass power with a mighty military. They have craeted a modern nation out of nothing but will in a tiny amount of time. We see reflected in their society a similar dynamism found in our own, and we can help fuel that drive further."
+    USA_america_of_the_orient_desc: "Ever since opening up in the 1860s, Japan has demonstrated itself to be a formidable country, able to go from a medieval society and economy to a world-class power with a mighty military. They have created a modern nation out of nothing but will in a tiny amount of time. We see reflected in their society a similar dynamism found in our own, and we can help fuel that drive further."
 
     USA_cross_pacific_alliance: "Cross-Pacific Alliance"
     USA_cross_pacific_alliance_desc: "The Japanese people have many similarities to the American people, and as our two nations grow closer together and our goals begin to align, we find a curious prospect: a cross-pacific alliance between countries. The land of the rising sun and the land of the brave may enter into a joint pact to secure our mutual interests and to protect and safeguard the whole of the Pacific."
@@ -944,11 +943,11 @@
     USA_arteries_of_the_world: "Arteries of the World"
     USA_arteries_of_the_world_desc: "Incredible amounts of trade and resources move through the waters of the Pacific. If any of these trade lanes were shut off, like in other parts of the world, we would suffer terribly. We cannot allow this scenario to play out- we must invest in escorts for merchant vessels and design flotillas that will deter any threats."
 
-    USA_the_flying_tigers: ""The Flying Tigers""
+    USA_the_flying_tigers: "\"The Flying Tigers\""
     USA_the_flying_tigers_desc: "With China under siege, various groups across America are raising funds in aid and others are wishing to get involved, to help directly. One such group is a wing of pilots who wish to assist the Chinese in the air against their aggressors. While sending forces directly would be beyond our scope of action, we could however permit a set of volunteer forces to find their way across the Pacific and into China..."
 
     USA_the_firestar_project: "The 'Firestar Project'"
-    USA_the_firestar_project_desc: "There is a proposal for bolstering the military strength of China in order to allow them to resist the aggressive powers that threaten to conquer it. This so-called 'Firestar Project' would be a drain on our resources, but we have resources to spare. Furthermore, this material support to China would give us the leverage to signifiantly sway their politics and ideals, further aligning them with us."
+    USA_the_firestar_project_desc: "There is a proposal for bolstering the military strength of China in order to allow them to resist the aggressive powers that threaten to conquer it. This so-called 'Firestar Project' would be a drain on our resources, but we have resources to spare. Furthermore, this material support to China would give us the leverage to significantly sway their politics and ideals, further aligning them with us."
 
     USA_guerilla_support: "Guerilla Support"
     USA_guerilla_support_desc: "We can aid the Chinese communists in their defensive war by sending them both material aid for their war effort, but also by sending them military advisors and volunteers who can help them push back their attackers."
@@ -964,8 +963,8 @@
     USA_mastery_bonus_trade_in_inner_asia_tt: "$USA_trade_in_inner_asia$"
 
 
-    USA_alliance_with_a_united_china: "The Dragon-Eagle Treaty"
-    USA_alliance_with_a_united_china_desc: "With our ties to China becoming closer and closer, we have drafted up a very bold and ambitious treaty that aims to cement our control over the Pacific and reaching into Asia. This treaty, which we are calling the "Dragon-Eagle Treaty", would bring the Chinese into our sphere of influence and establish between our two nations a military and economic alliance which would upset the global balance of power."
+    USA_alliance_with_a_united_china: "The \"Dragon-Eagle Treaty\""
+    USA_alliance_with_a_united_china_desc: "With our ties to China becoming closer and closer, we have drafted up a very bold and ambitious treaty that aims to cement our control over the Pacific and reaching into Asia. This treaty, which we are calling the \"Dragon-Eagle Treaty\", would bring the Chinese into our sphere of influence and establish between our two nations a military and economic alliance which would upset the global balance of power."
     USA_alliance_with_a_united_china_tt: "We will try to form an §Yalliance§! with one of the Chinese powers."
 
     USA_sino_american_order: "Sino-American Order"
@@ -1005,7 +1004,7 @@
     USA_seek_regime_change_tt: "The rest of the world will §Rdisapprove§! of this policy stance."
 
     USA_the_old_world: "The Old World"
-    USA_the_old_world_desc: "A century and a half ago, we declared our independence from the old world and established the greatest nation on Earth here in the new world. Now, the old world lies in a horrid and weakened state. Perhaps it is time the sun set on the old powers and time for the United States of America to take the reigns of Europe."
+    USA_the_old_world_desc: "A century and a half ago, we declared our independence from the old world and established the greatest nation on Earth here in the new world. Now, the old world lies in a horrid and weakened state. Perhaps it is time the sun set on the old powers and time for the United States of America to take the reins of Europe."
 
     USA_fell_the_warring_giants: "Fell the Warring Giants"
     USA_fell_the_warring_giants_desc: "The Old Powers are at it again, another grandiose war that will wipe them out for another 20 years. If not out of our own self interest, then we must consider intervening in Europe to save the Europeans themselves. Every argument that presents itself is on the side of stepping in."
@@ -1018,7 +1017,7 @@
     USA_promote_peace_desc: "In the interest of avoiding another Great War, Congress has drafted the Declaration of Enduring Peace, a proclamation stating that a country will not use force to get its way and that it will not incite conflict. We will enlist the diplomats of the nations of Europe to sign onto the declaration in order to promote peace and geniality across the continent."
 
     USA_embody_peace: "Embody Peace"
-    USA_embody_peace_desc: "By signing Congress' Declaration of Enduring Peace, we are making a public declaration to the country that this administration will not pursue conflict of any kind, that we intend to stay out of wars that don't concern us, that we aren't gungho to lose more men on another continent without a clear purpose."
+    USA_embody_peace_desc: "By signing Congress' Declaration of Enduring Peace, we are making a public declaration to the country that this administration will not pursue conflict of any kind, that we intend to stay out of wars that don't concern us, that we aren't gung-ho to lose more men on another continent without a clear purpose."
 
     USA_embargo_hostile_actors: "Embargo Hostile Actors"
     USA_embargo_hostile_actors_desc: "We won't abide by new wars in Europe. We need to distance ourselves from these violent actors. We won't let our resources fund foreign wars."
@@ -1029,7 +1028,7 @@
     USA_international_red_cross_tt: "European nations §Ycurrently at war§! will receive IRC support."
 
     USA_maintain_neutrality: "Maintain Neutrality"
-    USA_maintain_neutrality_desc: "We cannot engage in violence abroad- we are more civilized than that. Europe can have its wars, but we will not be apart of them."
+    USA_maintain_neutrality_desc: "We cannot engage in violence abroad- we are more civilized than that. Europe can have its wars, but we will not be a part of them."
 
     USA_enforce_the_naval_treaties: "Enforce the Naval Treaties"
     USA_enforce_the_naval_treaties_desc: "The London Naval Treaties are a safeguard put in place to prevent another naval arms race that could lead to yet another Great War. Those nations which flagrantly disregard it are showing their hand, revealing their latent hostilities. We must ensure the treaties are held to."
@@ -1048,13 +1047,13 @@
     USA_eastern_infiltration_desc: "Regardless of what we get from them in diplomacy, we can't really trust the [SOV.GetAdjective]s at their word. We need to have eyes on the inside that can deliver the full truth."
 
     USA_overwhelming_material_support: "Overwhelming Material Support"
-    USA_overwhelming_material_support_desc: "[SOV.GetNameDefCap] finds itself surrounded my monsterous enemies and likely won't be able to survive the onslaught coming for them. We are willing to aid them with a great amount of our material support in order to ensure their sovereignty."
+    USA_overwhelming_material_support_desc: "[SOV.GetNameDefCap] finds itself surrounded by monstrous enemies and likely won't be able to survive the onslaught coming for them. We are willing to aid them with a great amount of our material support in order to ensure their sovereignty."
 
     USA_flank_the_maginot: "Flank the Maginot"
-    USA_flank_the_maginot_desc: "In order to take the homecounties of France, we'll need to be ready to take their coastal ports and be able to strike effectively from the air."
+    USA_flank_the_maginot_desc: "In order to take the heartland of France, we'll need to be ready to take their coastal ports and be able to strike effectively from the air."
 
     USA_challenge_the_empire: "Challenge the Empire"
-    USA_challenge_the_empire_desc: "It is time for the British Empire to come to a close. It has stretched its influence across the world for long enough, but now its tyrrany can no longer be tolerated."
+    USA_challenge_the_empire_desc: "It is time for the British Empire to come to a close. It has stretched its influence across the world for long enough, but now its tyranny can no longer be tolerated."
 
     USA_shatter_the_crown: "Shatter the Crown"
     USA_shatter_the_crown_desc: "We must push this war to its final stage. The sun must set on the British Empire."
@@ -1213,7 +1212,7 @@
     USA_emphasize_trade_leverage_desc: "Our emphasis should be on getting leverage over those countries with whom we do business."
 
     USA_emphasize_trade_security: "Emphasize Trade Security"
-    USA_emphasize_trade_security_desc: "Our emphasis should be on making sure that our economy cannot be put at risk by the actions of upsets of foreign actors."
+    USA_emphasize_trade_security_desc: "Our emphasis should be on making sure that our economy cannot be put at risk by the actions or upsets of foreign actors."
 
     USA_emphasize_trade_growth: "Emphasize Trade Growth"
     USA_emphasize_trade_growth_desc: "Our emphasis should be on using foreign trade in order to maximize domestic growth."
@@ -1234,14 +1233,14 @@
     USA_develop_higher_quality_products_desc: "One of the things that the American economy does best is produce high-quality equipment. We need to reinvigorate our precision machining industries to further this standard."
 
     USA_formalize_arms_trading: "Formalize Arms Trading"
-    USA_formalize_arms_trading_desc: "With our market presence sucured, we can now fully lean our industries into selling arms to countries in need of tools of defense."
+    USA_formalize_arms_trading_desc: "With our market presence secured, we can now fully lean our industries into selling arms to countries in need of tools of defense."
 
     USA_international_industrial_tutelage: "International Industrial Tutelage"
     USA_international_industrial_tutelage_desc: "America's expertise in mass industry and production puts it in an excellent position to assist other countries who haven't developed their industries to the same degree we have. Why not assist them in growing too? It would stand to be a very popular move."
     USA_international_industrial_tutelage_tt: "Unlocks §Ydecisions§! to develop and grow the §Yindustries§! of other nations, in turn boosting public approval of the government."
 
     USA_department_of_territorial_integrity: "Department of Territorial Integrity"
-    USA_department_of_territorial_integrity_desc: "The DTI will oversee our range of actions regarding how we administer those lands which we come into possession of. This is a very critical function- we aim to promote peace and liberty, but we need to be vigilant in order to not put own people at risk."
+    USA_department_of_territorial_integrity_desc: "The DTI will oversee our range of actions regarding how we administer those lands which we come into possession of. This is a very critical function- we aim to promote peace and liberty, but we need to be vigilant in order to not put our own people at risk."
 
     USA_focus_on_civil_administration: "Focus On Civil Administration"
     USA_focus_on_civil_administration_desc: "We have a duty to improve and protect the territories we control around the world, regardless of how we came to control them. We must ensure that we design any sort of occupation policy correctly, with the aim to uphold our values and the sanctity of those we govern."
@@ -1268,7 +1267,7 @@
     USA_support_occupation_police_forces_desc: "Our occupation troops and police are constantly under threat from extremists and radicals who would wish them harm. We'll invest in providing our law enforcement abroad with the tools and funding they need to keep the peace."
 
     USA_spread_american_ideals: "Spread American Ideals"
-    USA_spread_american_ideals_desc: "We will embody the ideals we choose to hold sacred and promote them whenever and wherever we can. If we do so properly, then everyone else will see that the fruits of our labour are tied to the truths we profess."
+    USA_spread_american_ideals_desc: "We will embody the ideals we choose to hold sacred and promote them whenever and wherever we can. If we do so properly, then everyone else will see that the fruits of our labor are tied to the truths we profess."
     USA_spread_american_ideals_tt: "§GImproves§! the §Y$apple_pie_occupation$§! occupation law.\n§GImproves§! the §Y$international_development_company$§! industrial concern."
 
     USA_establish_regional_administrations: "Establish Regional Administrations"
@@ -1291,7 +1290,7 @@
     USA_joint_operations_desc: "We will work closely with the allies in order to prosecute this war with maximum efficiency. By working together with the top military leaders of our allies, we will develop new plans of action that will allow us reach victory."
 
     USA_the_united_nations_alliance: "The United Nations Alliance"
-    USA_the_united_nations_alliance_desc: "Our cause is one to wipe away destructive forces across the world. Every people on every continent may join our cause. We are the voice of humanity against the darkness of tyrrany."
+    USA_the_united_nations_alliance_desc: "Our cause is one to wipe away destructive forces across the world. Every people on every continent may join our cause. We are the voice of humanity against the darkness of tyranny."
     USA_the_united_nations_alliance_tt: "United Nations Alliance"
 
     USA_homecoming_of_liberty: "Homecoming of Liberty"
@@ -1309,7 +1308,7 @@
     USA_vanguard_of_the_atlantic_desc: "Once secure, the Atlantic will no longer be just an impenetrable wall of water for our fleets, it will be the connecting tissue that ties our two continents together. It will flow over with ships carrying people, goods, machinery, knowledge, and everything else, and all the while it will be flanked and cut through by our might navy."
 
     USA_dawn_over_europe: "Dawn Over Europe"
-    USA_dawn_over_europe_desc: "At last, Europe is under our control. Now begins the harest part- integration. However, our culture is an amalgamation of primarily European cultures, so we will have a lot of leverage to work with in helping the old world truly adapt to and enjoin with the new world."
+    USA_dawn_over_europe_desc: "At last, Europe is under our control. Now begins the hardest part- integration. However, our culture is an amalgamation of primarily European cultures, so we will have a lot of leverage to work with in helping the old world truly adapt to and enjoin with the new world."
     #USA_dawn_over_europe_trigger_tt: " We, or our Faction members, control Paris, London, Berlin, Warsaw, Rome, and Madrid and the states they reside in."
     USA_dawn_over_europe_trigger_tt: "We, or our Subjects, control §YParis§!, §YLondon§!, §YBerlin§!, §YRome§!, and §YMadrid§! and the states they reside in."
     USA_dawn_over_europe_tt: "Unlocks §Ydecisions§! to §Gcore§! §YWestern European§! states with high §Ycompliance§!."
@@ -1354,7 +1353,7 @@
     USA_new_agricultural_adjustment_act_desc: "The depression has struck all corners of society hard, but one of the hardest hit groups are the farmers. Not only are they struggling, but there is an absolute necessity that they continue to be able to produce food at this time. We need to boost their funds and ensure that our food supply continues to remain healthy, despite the pains being felt."
     agri_adj_act_tt: "Once successfully passed, it will still be §Rsome time§! before further §YNew Deal§! legislation can be passed."
 
-    USA_new_fair_labour_standards_act: "Fair Labour Standards Act"
+    USA_new_fair_labour_standards_act: "Fair Labor Standards Act"
     USA_new_fair_labour_standards_act_desc: "It is important that we make sure that the average American worker gets to benefit from the economic recovery now taking place. We must ensure that no employer takes advantage of their employees, and we will back this ideal with federal law."
     USA_new_fair_labour_standards_act_tt: "\nMore legislation will have to be drafted before the §YNew Deal§! will be in full effect, though this will §Rtake time§!."
 
@@ -1362,23 +1361,23 @@
     USA_federal_zoning_reform_desc: "Due to the economic downturn, there are far fewer houses being built than there should be. By easing building restrictions, expanding available land, and subsidizing construction, we will help ensure that there will be enough homes for every American."
 
     USA_union_defense_act: "Union Defense Act"
-    USA_union_defense_act_desc: "The pain inflicted by the Great Depression has brought many people to take desperate and unkind actions towards those around them. Workers have suffered under  desperate employers and are in need of protection in many cases. To this end, we will pass legislation that ensures the safety and effectiveness of worker unions across the country."
+    USA_union_defense_act_desc: "The pain inflicted by the Great Depression has brought many people to take desperate and unkind actions towards those around them. Workers have suffered under desperate employers and are in need of protection in many cases. To this end, we will pass legislation that ensures the safety and effectiveness of worker unions across the country."
 
     USA_new_federal_housing_act: "Federal Housing Act"
-    USA_new_federal_housing_act_desc: "The Great Depression has left millions of Americas without homes. We will spend as needed to procure new houses for our people to ensure they can at least find themselves a home. No hard-working man should need to worry about where he'll sleep at night."
+    USA_new_federal_housing_act_desc: "The Great Depression has left millions of Americans without homes. We will spend as needed to procure new houses for our people to ensure they can at least find themselves a home. No hard-working man should need to worry about where he'll sleep at night."
 
     USA_restore_the_gold_standard: "Restore the Gold Standard"
     USA_restore_the_gold_standard_desc: "Though we made the decision to abandon the gold standard in order to better find the funds necessary to recover our economy, this has not worked out as hoped. We need to backtrack and restore the gold standard to reintroduce security to the dollar."
 
     USA_rebalancing_finances: "Rebalancing Finances"
-    USA_rebalancing_finances_desc: "In restricting federal spending, we need to completely reevaulate our monetary and fiscal policies. This won't be simple, nor will it be painless, but it is necessary."
+    USA_rebalancing_finances_desc: "In restricting federal spending, we need to completely reevaluate our monetary and fiscal policies. This won't be simple, nor will it be painless, but it is necessary."
 
     USA_new_adjusted_compensation_act: "Adjusted Compensation Act"
     USA_new_adjusted_compensation_act_desc: "Though we don't intend to get too involved in the one-on-one transactions of our citizens, we have a duty to help the greater American nation as a whole and so will intervene in the market in order to ensure fair and honest payments to employees. As growth resumes, it shouldn't just go to business owners."
     adj_comp_act_tt: "Once successfully passed, it will still be §Rsome time§! before new §Ypolicies§! can be crafted."
 
     USA_new_protectionist_tariffs: "Protectionist Tariffs"
-    USA_new_protectionist_tariffs_desc: "It remains necssary to prioritize American trade before that of other countries. Once we see to our own growth and recovery, then we'll have the room necessary to start investing in other economies."
+    USA_new_protectionist_tariffs_desc: "It remains necessary to prioritize American trade before that of other countries. Once we see to our own growth and recovery, then we'll have the room necessary to start investing in other economies."
     USA_new_protectionist_tariffs_tt: "\nThe government will have to pass new §Ypolicies§! before the country will fully recover, which will still §Rtake time§!."
 
     USA_guns_and_shovels: "Guns and Shovels"
@@ -1415,10 +1414,10 @@
     USA_support_titans_of_industry_desc: "By supporting our powerful industries, we can put resources into the places where they can grow the fastest and be the most effective." 
 
     USA_audit_emergency_programs: "Audit Emergency Programs"
-    USA_audit_emergency_programs_desc: "Many different three-letter agencies and emergency programs were made in response to the crises we've faced recently, but now that we're beginning to be past those events they have begun to outlive their purpose. Though unpopular, we can't afford to hemorage millions of taxpayer dollars on schemes without reason."
+    USA_audit_emergency_programs_desc: "Many different three-letter agencies and emergency programs were made in response to the crises we've faced recently, but now that we're beginning to be past those events they have begun to outlive their purpose. Though unpopular, we can't afford to hemorrhage millions of taxpayer dollars on schemes without reason."
 
     USA_national_parks_infrastructure: "National Parks Infrastructure"
-    USA_national_parks_infrastructure_desc: "Our vast and numerous national parks could do with an upgrade in the quality of their amenities and upkeep, and we have millions of people in need of work. The federal government could fund make-work programs do satisfy both concerns at the same time."
+    USA_national_parks_infrastructure_desc: "Our vast and numerous national parks could do with an upgrade in the quality of their amenities and upkeep, and we have millions of people in need of work. The federal government could fund make-work programs to satisfy both concerns at the same time."
 
     USA_new_wpa: "WPA"
     USA_new_wpa_desc: "The Worker Protection Agency will provide services to employees across the country to protect and empower them."
@@ -1450,7 +1449,7 @@
     USA_political_funding: "Political Funding"
     USA_political_funding_desc: "Politics in the US is a messy business, like anywhere else. Sometimes all it takes to get the wheels moving is to give them some grease."
 
-    USA_support_the_phillipines: "Support the Phillipines"
+    USA_support_the_phillipines: "Support the Philippines"
     USA_support_the_phillipines_desc: "[PHI.GetNameDefCap] have been under our protection for decades, but now we are quickly approaching the time for them to set out on their own. In this process of developing independence, we will support their economy, administration, and defense, that way they can springboard into the wider world with ample opportunity."
 
     USA_new_neutrality_act: "$USA_neutrality_act$"
@@ -1478,10 +1477,10 @@
     USA_joint_wargaming_desc: "Our military leadership needs to be prepared for conflict. We have plenty of resources to empower our men to be ready for more modern combat."
 
     USA_support_democracy_around_the_world: "Support Democracy Around the World"
-    USA_support_democracy_around_the_world_desc: "Every democratic country in the world needs to be supported to ensure the continuation of freedom across the globe."
+    USA_support_democracy_around_the_world_desc: "Democracy dies alone. Wherever it still breathes, America should be standing beside it."
 
     USA_ramp_up_government_spending: "Ramp Up Government Spending"
-    USA_ramp_up_government_spending_desc: "In order to accomplish everything on our long list of goals, we'll need way more funds for the federal government."
+    USA_ramp_up_government_spending_desc: "In order to accomplish everything on our long list of goals, Washington will need far deeper pockets."
 
     USA_public_works_projects: "Public Works Projects"
     USA_public_works_projects_desc: "By employing millions of Americans in public works projects around the country, Americans will be able to quickly recover from the Great Depression while they also serve and enrich their own communities."
@@ -1498,11 +1497,11 @@
     USA_propose_canadian_unification: "Propose Canadian Unification"
     USA_propose_canadian_unification_desc: "With Canada having now gained its independence from Europe, we can make an offer to their government to join together our kindred nations and their peoples into a unified whole, a steadfast North America."
 
-    USA_rotory_innovations: "Rotory Innovations"
-    USA_propose_canadian_unification_desc: "The potentials attached to a rotorcraft which can hold a position in the air, fly slow and low, navigate terrain features, and perform close air support roles of various kinds is extremely enticing. Vehicles of this sort could fight in combat, deliver equipment, perform medical evacuations, serve as roving communication hubs and more. Though still experimental, we should put effort into maturing this technology."
+    USA_rotory_innovations: "Rotary Innovations"
+    USA_rotory_innovations_desc: "The potentials attached to a rotorcraft which can hold a position in the air, fly slow and low, navigate terrain features, and perform close air support roles of various kinds is extremely enticing. Vehicles of this sort could fight in combat, deliver equipment, perform medical evacuations, serve as roving communication hubs and more. Though still experimental, we should put effort into maturing this technology."
 
     USA_DEBUG_BRANCH: "DEBUG BRANCH"
-    USA_DEBUG_BRANCH_desc: "DEBUG"
+    USA_DEBUG_BRANCH_desc: "The most glorious debug branch that there ever was!"
 
     USA_IDEA_TEST_FOCUS: "IDEA TEST FOCUS"
     USA_IDEA_TEST_FOCUS_desc: "Tests to make sure all ideas are functioning properly."
@@ -1551,10 +1550,10 @@
     USA_the_question_of_our_national_character_desc: "As we rebuild our nation and recover from the Great Depression, we find a new purpose for the Federal Government. Whether or not it takes center stage or yields to the states now seems to favor the latter, but it's not the only new thing to consider. America is being reborn, but how shall the phoenix rise? Do we further isolate ourselves from the world, or do we dare to stake a revolutionary new claim?"
 
     USA_visions_of_a_new_frontier: "Visions of a New Frontier"
-    USA_visions_of_a_new_frontier_desc: "America's future lies in the development of a new frontier. That is, a future of excellence in service of the American people, in producing a better tomorrow for every citizen, in securing those conditions most condusive towards nurturing and maturing the American Dream for all."
+    USA_visions_of_a_new_frontier_desc: "America's future lies in the development of a new frontier. That is, a future of excellence in service of the American people, in producing a better tomorrow for every citizen, in securing those conditions most conducive towards nurturing and maturing the American Dream for all."
 
     USA_state_autarky_movement: "State Autarky Movement"
-    USA_state_autarky_movement_desc: "We will become wholly self-sufficient. A great many nations have attempted to do such a thing throughout history, but none was so blessed and prosperous as our own. North America is its own breadbasket, its rolling hills and wheat fields the pallete for a multitudinous people with an insatiable hunger for adventure and growth. The great city on the hill will rise ever higher."
+    USA_state_autarky_movement_desc: "We will become wholly self-sufficient. A great many nations have attempted to do such a thing throughout history, but none was so blessed and prosperous as our own. North America is its own breadbasket, its rolling hills and wheat fields the palette for a multitudinous people with an insatiable hunger for adventure and growth. The great city on the hill will rise ever higher."
 
     USA_a_new_america: "A New America"
     USA_a_new_america_desc: "The America of yesterday was a brilliant flame atop a flickering candle, but that old light has died out. Our eyes have adjusted at last, and we now kindle a new flame, a stronger, more permanent flame, one which will not die out when the winds come biting at it. Sparks fill the Eagle's eye, and our wings unfurl for a new flight."
@@ -1564,10 +1563,10 @@
     USA_brotherhood_spirit_tt: "If a §Rcivil war§! breaks out after this focus has been §Ycompleted§!, the fighting will §Ggreatly favor§! the §YAmerican Nationalists§!."
 
     USA_a_golden_west: "A Golden West"
-    USA_a_golden_west_desc: "The great American Eagle flies gracefull once more over its North American dominion. The New World has risen above and beyond the ashes of the Old, and a new star shines brilliantly for the whole world to see. We have dawned upon a golden west, and now all that's left to do is to ride into that glorious sunrise."
+    USA_a_golden_west_desc: "The great American Eagle flies gracefully once more over its North American dominion. The New World has risen above and beyond the ashes of the Old, and a new star shines brilliantly for the whole world to see. We have dawned upon a golden west, and now all that's left to do is to ride into that glorious sunrise."
 
     USA_the_george_may_proposal: "The George-May Proposal"
-    USA_the_george_may_proposal_desc: "Despite the general collapse of both the American and world banking systems, Wall Street appears to have a plan for recovery. Various banks, realestate companies, fund groups, corporations and private businessmen have gathered in New York to draft a plan for the stabilization of the national economy, though the plan is, at best, experimental. Is it worth a shot?"
+    USA_the_george_may_proposal_desc: "Despite the general collapse of both the American and world banking systems, Wall Street appears to have a plan for recovery. Various banks, real estate companies, fund groups, corporations and private businessmen have gathered in New York to draft a plan for the stabilization of the national economy, though the plan is, at best, experimental. Is it worth a shot?"
 
     USA_the_capitol_hill_disaster: "The Capitol Hill Disaster"
     USA_the_capitol_hill_disaster_desc: "America is being choked out. Irresponsible banks, foolish politicians, bad policies, inflammatory media, crony influence and more have broken the back of the American economy and her people. Now, a new debacle has hit Capitol Hill and resulted in fights breaking out between our representatives. The American people need stronger, smarter, sturdier leadership."
@@ -1588,7 +1587,7 @@
     USA_american_economic_industrial_organization_desc: "Private industry and banking was at fault for the Great Depression, but it isn't all bad. Amongst the weeds there are a few healthy stalks. As for the rest of the private sector, however, their affairs and their conduct will be closely monitored and guided by the watchful guardian of the people."
 
     USA_industrial_recovery_NC: "Industrial Recovery"
-    USA_industrial_recovery_NC_desc: "The nation is slowly beginning to recover from the Great Depression, and thanks to the new spending programs of the government and the hardwork of the people, America's industrial capabilities are coming back online."
+    USA_industrial_recovery_NC_desc: "The nation is slowly beginning to recover from the Great Depression, and thanks to the new spending programs of the government and the hard work of the people, America's industrial capabilities are coming back online."
 
     USA_red_july: "Red July"
     USA_red_july_desc: "America has recovered from the Great Depression and has found a new path forward into the future. The United States People's Republic will now take on the mantle of the USA before it and guide her people to a greater, more prosperous tomorrow!"
@@ -1652,7 +1651,7 @@
     USA_the_frontier_sandbox_tt: "Unlocks additional, §Gmore powerful§! §Ydecisions§! to develop the American Midwest."
 
     USA_state_labor_associations: "State Labor Associations"
-    USA_state_labor_associations_desc: "A great many workers in this country have never participated in unions and so may be unfamiliar with how to join them and affecuate their voices. By having each individual state establish its own set of standardized unions, we can help alleviate that ignorance."
+    USA_state_labor_associations_desc: "A great many workers in this country have never participated in unions and so may be unfamiliar with how to join them and make their voices heard. By having each individual state establish its own set of standardized unions, we can help alleviate that ignorance."
 
     USA_spread_expertise: "Spread Expertise"
     USA_spread_expertise_desc: "One of the problems with uncontrolled capitalism is the isolation of expertise to select figures who monopolize their knowledge and skills at everyone else's expense. By creating community programs to spread specialized knowledge to the general public, we can stop these trends."
@@ -1690,7 +1689,7 @@
     USA_american_exceptionalism_desc: "We have a long history of forward thinking and innovative problem-solving, and now that we are free from those top-down forces which would've ignorantly and fearfully repressed the creativity of the general public, we are free to pursue the technologies and methods of tomorrow!"
 
     USA_resource_security: "Resource Security"
-    USA_resource_security_desc: "There remain forces around the world which are not pleased with the pursuits of the American people, and even more forces which are jealous of our prosperity. We should make sure that none of these potential beligerants are in a position to force our hand by withholding essential goods that we need from them."
+    USA_resource_security_desc: "There remain forces around the world which are not pleased with the pursuits of the American people, and even more forces which are jealous of our prosperity. We should make sure that none of these potential belligerants are in a position to force our hand by withholding essential goods that we need from them."
 
     USA_advanced_machining: "Advanced Machining"
     USA_advanced_machining_desc: "Maintaining the edge when it comes to high-quality machine tools will ensure that American factories outproduce those who would wish to rival us."
@@ -1746,11 +1745,11 @@
     USA_protect_american_liberty: "Protect American Liberty"
     USA_protect_american_liberty_desc: "America is not chiefly concerned with what goes on in the rest of the world- we are busy building the future at home. As such, our focus will remain on building the future and ensuring our own continued peace."
 
-    USA_focus_on_domestic_prosperity: "Focus On Domestic Properity"
+    USA_focus_on_domestic_prosperity: "Focus On Domestic Prosperity"
     USA_focus_on_domestic_prosperity_desc: "America is for its people, and the people are for America. We will spare no expense in building up this country for this generation and every generation after."
 
     USA_rose_tinted_lampstand: "Rose-Tinted Lampstand"
-    USA_rose_tinted_lampstand_desc: "Immigrants have sought out America as a land of opportunity, and they were right to do so, but now we have furthered that station by adopting a more equitable set of policies and ways of living. We intend to surpass even our previous heights of fame and serve as a true example of freedom and excelence that the rest of the world may follow."
+    USA_rose_tinted_lampstand_desc: "Immigrants have sought out America as a land of opportunity, and they were right to do so, but now we have furthered that station by adopting a more equitable set of policies and ways of living. We intend to surpass even our previous heights of fame and serve as a true example of freedom and excellence that the rest of the world may follow."
 
     USA_the_eagles_bulwark: "The Eagle's Bulwark"
     USA_the_eagles_bulwark_desc: "The prosperity we now enjoy will inevitably become too tempting for foreign actors to leave well alone. We cannot simply engender greatness; we must protect what we have earned."
@@ -1826,11 +1825,11 @@
     USA_socialist_patriot_parades_desc: "We do not intend to adopt the violent revolutions that have gripped other countries around the world, nor engage in any sort of 'reign of terror'. We are Americans, proud patriots of our gleaming national legacy. The ways of yesterday were not old or wrong, they were simply incomplete; we strive to complete them in the American tradition."
 
     USA_denounce_capitalism: "Denounce Capitalism"
-    USA_denounce_capitalism_desc: "America has charted a great course up until now, but the insideous forces of capitalism has nipped at its heels until it fell. The Great Depression was the clearest sign of the failures of this form of economic organization, and we must set ourselves against it!"
+    USA_denounce_capitalism_desc: "America has charted a great course up until now, but the insidious forces of capitalism has nipped at its heels until it fell. The Great Depression was the clearest sign of the failures of this form of economic organization, and we must set ourselves against it!"
     USA_denounce_capitalism_tt: "We will gain a §Ydecision§! to §Rstart a civil war early§!. The less §Yconservative resistance§! there is, the worse it will be for them."
 
     USA_demand_government_action: "Demand Government Action"
-    USA_demand_government_action_desc: "In line with our inspiring social movements, the Roosevelt administration has put forward an amendment to the constitution to be voted on which will enshrine union representatives into Congress and increase their authority in the workplace. The common American citizen will finally have their fully voices allotted to them!"
+    USA_demand_government_action_desc: "In line with our inspiring social movements, the Roosevelt administration has put forward an amendment to the constitution to be voted on which will enshrine union representatives into Congress and increase their authority in the workplace. The common American citizen will finally have their full voice allotted to them!"
 
     USA_protect_productive_entrepreneurs: "Protect Productive Entrepreneurs"
     USA_protect_productive_entrepreneurs_desc: "Many socialists and communists will argue that everyone in the capitalist class is evil by definition, but really our problems just stem from those greedy individuals who've never actually contributed anything to get their wealth. On the other hand, those whose hard work improves everyone's lives- they should be venerated for the work they've done."
@@ -1848,10 +1847,10 @@
     USA_culmination_of_the_founding_fathers_desc: "At the founding of our country, we set out to secure peace, justice, and opportunity for all who came to America. It has been a long journey, but we have finally arrived. The Founding Fathers would be proud of what we have achieved here."
 
     USA_property_reform: "Property Reform"
-    USA_property_reform_desc: "If we are to truly heal this nation, we cannot simply act in the name of 'reform', but rather we must fundamentally alter those systems of power in this country which are responsible for our troubles. We do not wish to completely abolish private property, but we do intend to make public those items which are being unduly horded and restricted."
+    USA_property_reform_desc: "If we are to truly heal this nation, we cannot simply act in the name of 'reform', but rather we must fundamentally alter those systems of power in this country which are responsible for our troubles. We do not wish to completely abolish private property, but we do intend to make public those items which are being unduly hoarded and restricted."
 
     USA_soviet_style_policies: "Soviet-Style Policies"
-    USA_soviet_style_policies_desc: "The Soviet Union has demonstrated the economc policies necessary to run a more centralized-economy. While we aren't quite so centralized as they are, it's become clear that the capitalist class cannot be left alone to their own devices and must be managed and overseen."
+    USA_soviet_style_policies_desc: "The Soviet Union has demonstrated the economic policies necessary to run a more centralized-economy. While we aren't quite so centralized as they are, it's become clear that the capitalist class cannot be left alone to their own devices and must be managed and overseen."
 
     USA_rally_disaffected_militias: "Rally Disaffected Militias"
     USA_rally_disaffected_militias_desc: "Many communities around the country remain disillusioned with how the government has so far tried to handle their problems. Given what we are aiming for, it would be prudent to go ahead and start organizing resistance groups who will be ready to take charge if things turn hot."
@@ -1888,7 +1887,7 @@
 
 # American Nationalist
     USA_industrial_recovery_AN: "Industrial Recovery"
-    USA_industrial_recovery_AN_desc: "The gears of industry, the steam of engines, the pace of the country is returning to a lively state once again. It has been greatly helped by those groups of Americans who have set upon themselves to work for their communities and cooperate with those groups beyond their towns."
+    USA_industrial_recovery_AN_desc: "The spinning of gears, the steam of engines, the shrill of whistles- the pace of the country is returning to a lively state once again. It has been greatly helped by those groups of Americans who have set upon themselves to work for their communities and cooperate with those groups beyond their towns."
 
     USA_homeland_defense_emergency_act_focus_AN: "$USA_homeland_defense_emergency_act_focus-general_title$"
     USA_homeland_defense_emergency_act_focus_AN_desc: "$USA_homeland_defense_emergency_act_focus-general_desc$"
@@ -1921,7 +1920,7 @@
     USA_tend_to_the_nation_desc: "We need to direct our focus to the future of the nation. America's history is a grand one against the backdrop of history, and it may be the case that these most recent disasters are just the thing we need to open our eyes and chart a better course forward."
 
     USA_the_goldstar_network: "The Goldstar Network"
-    USA_the_goldstar_network_desc: "Founded in 1934 by John Aubitz, the Goldstar Network is a patriotic American newspaper and radio channel that has become a mainstay in bars, homes, worksites, and political chapters across the country. It has inspired millions of Americans in these dire times, fundraised for the needy, provides a work-worker-connector service, and has helped get future-oriented officials elected."
+    USA_the_goldstar_network_desc: "Founded in 1934 by John Aubitz, the Goldstar Network is a patriotic American newspaper and radio channel that has become a mainstay in bars, homes, worksites, and political chapters across the country. It has inspired millions of Americans in these dire times and has fundraised for the needy, provided a work-worker-connector service, and has helped get future-oriented officials elected."
 
     USA_community_aid_programs: "Community Aid Programs"
     USA_community_aid_programs_desc: "Communities across the country continue to struggle as the institutions and infrastructure they depend on continue to be unreliable. It would be best if the states themselves coordinated the efforts to recover our local regions."
@@ -1958,10 +1957,10 @@
     USA_the_philadelphia_fiasco_desc: "Dozens of senators and house representatives have put forward a project bill in Congress for general development in the city of Philadelphia. The jewel of the spending package is the construction of the Ambleton Theater, which will offer top-rate amenities for the city."
 
     USA_the_parkerite_act: "The Parkerite Act"
-    USA_the_parkerite_act_desc: "After the tradgedy in Philadelphia, the public has been in open outcry against DC. In response, several southern senators have put forward the Parkerite Act, which will ensconse into the Constitution the 22nd Amendment, which gives states the right to an authoritative veto and oversight over all federal projects and funding within their borders or jurisdiction."
+    USA_the_parkerite_act_desc: "After the tragedy in Philadelphia, the public has been in open outcry against DC. In response, several southern senators have put forward the Parkerite Act, which will ensconce into the Constitution the 22nd Amendment, which gives states the right to an authoritative veto and oversight over all federal projects and funding within their borders or jurisdiction."
 
     USA_what_the_future_holds: "What the Future Holds"
-    USA_what_the_future_holds_desc: "After the tradgedy in Philadelphia, the public has had enough of the federal government's failures. The time is fast approaching that the match will be lit. The federal government needs to be reorganized fundamentally, and those currently seated in power will never hand over their reigns willingly."
+    USA_what_the_future_holds_desc: "After the tragedy in Philadelphia, the public has had enough of the federal government's failures. The time is fast approaching that the match will be lit. The federal government needs to be reorganized fundamentally, and those currently seated in power will never hand over their reins willingly."
     USA_what_the_future_holds_tt: "\nThis §Yspirit§! will be §Yremoved§! at the start of the §Ycivil war§!."
 
     USA_paul_revere_rides_again: "Paul Revere Rides Again"
@@ -1974,7 +1973,7 @@
     USA_the_goldstar_federation_tt_3: "Create Faction: §Y$USA_the_goldstar_federation_tt$§!."
 
     USA_the_second_confederation: "The Second Confederation"
-    USA_the_second_confederation_desc: "It has become clear that the separation of powers intrinsic to our identity was not given its proper due. The rights of the states will supercede the power of the central government. It's time we lay down the groundwork for a more perfect union, rectifying the failures of the old, improving upon the spirit and the vision of the first Confederation."
+    USA_the_second_confederation_desc: "It has become clear that the separation of powers intrinsic to our identity was not given its proper due. The rights of the states will supersede the power of the central government. It's time we lay down the groundwork for a more perfect union, rectifying the failures of the old, improving upon the spirit and the vision of the first Confederation."
 
     USA_swift_and_lethal: "Swift and Lethal"
     USA_swift_and_lethal_desc: "Either we must act now or we must not act, but we cannot continue to make decisions about how and where we attack and make real our objectives. If we give our opponents time, they will reorganize and mount a more hearty defense, and we don't want to lose any more lives than is necessary."
@@ -1993,7 +1992,7 @@
     USA_americas_rightful_claims_tt: "Unlocks §Ydecisions§! to §Ytake control of territory§! in §YNorth§! and §YCentral America§!.\n\nIf §Y$USA_peace_guarantees_for_our_neighbors$§! is taken, we will be able to §Ybuild trust§! with our neighbors.\n\nIf §Y$USA_our_safety_before_yours$§! is taken, we will be able to §Yintimidate§! our neighbors."
 
     USA_golden_opportunities: "Golden Opportunities"
-    USA_golden_opportunities_desc: "The America's belong to us, and if our neighbors refuse to yield then we will take them by surprise when they least expect it. As the golden sun dawns, it will cast long shadows, and we will work in that darkness to bring the entire continent into the burgeoning light."
+    USA_golden_opportunities_desc: "The Americas belong to us, and if our neighbors refuse to yield then we will take them by surprise when they least expect it. As the golden sun dawns, it will cast long shadows, and we will work in that darkness to bring the entire continent into the burgeoning light."
     USA_golden_opportunities_tt: "Unlocks §Ydecisions§! to §Yinfiltrate American countries§! and take them over from the inside, eventually allowing the §YUS§! to §Rcoup§! their governments and §Yassert control§! over them."
 
     USA_ballads_between_brothers: "Ballads Between Brothers"
@@ -2004,7 +2003,7 @@
     USA_establish_the_new_southern_states_tt: "  Will §Ysecure§! our flank."
 
     USA_country_roads_through_the_north: "Country Roads Through the North"
-    USA_country_roads_through_the_north_desc: "The Western Gap that separates the American homeland and our Alaskan territories is extremely sparesly populated by the Canadians. We will make an effort to reach out and offer a heavy sum of cash and investments in exchange for these lands, so that we may connect our entire continental territories and secure our position in the North."
+    USA_country_roads_through_the_north_desc: "The Western Gap that separates the American homeland and our Alaskan territories is extremely sparsely populated by the Canadians. We will make an effort to reach out and offer a heavy sum of cash and investments in exchange for these lands, so that we may connect our entire continental territories and secure our position in the North."
 
     USA_prudence_across_the_land: "Prudence Across the Land"
     USA_prudence_across_the_land_desc: "With our flanks better secured, we can now pay heed to protecting our peace and making ourselves particularly prickly to any would-be aggressors."
@@ -2013,7 +2012,7 @@
     USA_secure_the_gulf_desc: "So long as the Gulf remains unsecured, our enemies can take advantage of our southern coastline. We will cover up this insecurity and take control of our rightful claims in our near waters."
 
     USA_the_rush_for_the_canal: "The Rush for the Canal"
-    USA_the_rush_for_the_canal_desc: "Whomever controls the Panama Canal controls naval power on either side of the hemisphere. Not only is it entirely necessary for us to secure it fully in order to maintain our power projection capabilities, the canal itself is our property and legacy, and we won't let it fall."
+    USA_the_rush_for_the_canal_desc: "Whoever controls the Panama Canal controls naval power on either side of the hemisphere. Not only is it entirely necessary for us to secure it fully in order to maintain our power projection capabilities, the canal itself is our property and legacy, and we won't let it fall."
 
     USA_seize_the_great_flanks: "Seize the Great Flanks"
     USA_seize_the_great_flanks_desc: "We will take those vast territories and oceans that surround America and assert our complete control over the continent."
@@ -2031,7 +2030,7 @@
     USA_pledge_for_the_new_order_desc: "Berlin offers a partnership between equals — a New Order built on strength answering strength. There is no shame in standing beside the only powers unafraid to build a new world."
 
     USA_renaissance_and_retribution: "Renaissance and Retribution"
-    USA_renaissance_and_retribution_desc: "The Old World is in its death throws, but we are in the ascendency. Even as [GER.GetNameDefCap] tries to rise above Europe's stagnation one more time, we see past their futile attempt. A New World is being forged, and we will be the ones wielding the hammer; Germany will merely be our anvil."
+    USA_renaissance_and_retribution_desc: "The Old World is in its death throes, but we are in the ascendency. Even as [GER.GetNameDefCap] tries to rise above Europe's stagnation one more time, we see past their futile attempt. A New World is being forged, and we will be the ones wielding the hammer; Germany will merely be our anvil."
     USA_renaissance_and_retribution_tt: " - This idea will be §Rlost§! if at war with §Y[GER.getName]§!."
     USA_renaissance_and_retribution_tt_2: "Unlocks §Ydecisions§! to usurp §Y[GER.GetName]§!'s authority and take control of the §YAxis§! or §Ydominate Germany outright§!."
 
@@ -2085,7 +2084,7 @@
     USA_finance_new_mines_and_refineries_desc: "As our industries recover and our economy grows once more, we'll need more resources than ever before. The world of tomorrow is made of rubber tires, oil engines, and advanced alloys of the finest materials."
 
     USA_establish_new_forestry_zones: "Establish New Forestry Zones"
-    USA_establish_new_forestry_zones_desc: "By issuing a vast amount of new forestry liscenes, we can open up a significant portion of our natural resources to industrial use and employ tens of thousands of ready Americans. Our national parks will remain sacred realms of tranquility, but we will make use of our forests besides."
+    USA_establish_new_forestry_zones_desc: "By issuing a vast amount of new forestry licenses, we can open up a significant portion of our natural resources to industrial use and employ tens of thousands of ready Americans. Our national parks will remain sacred realms of tranquility, but we will make use of our forests besides."
 
     USA_tap_old_gold_mines: "Tap Old Gold Mines"
     USA_tap_old_gold_mines_desc: "With new tools at our disposal, we can take another look at our old quarries and mines and try accessing those resources that were, before, too difficult to extract."
@@ -2105,7 +2104,7 @@
     USA_ohio_mechanical_complex_desc: "Huge industry sits just west of New England, waiting to be restarted and boosted. Millions of steadfast Americans are ready to be put to work building the future of America."
 
     USA_strive_for_the_present: "Strive for the Present"
-    USA_strive_for_the_present_desc: "We will focus our attention on immediately pulling the nation out of its tupor, though some of efforts will borrow credit we'll have to pay for down the line."
+    USA_strive_for_the_present_desc: "We will focus our attention on immediately pulling the nation out of its stupor, though some of efforts will borrow credit we'll have to pay for down the line."
     USA_strive_for_the_present_tt: "When we §Gcomplete§! the focus §Y$USA_north_american_autarky$§!, we will §Ggain§! a §Ysmall bonus§!."
 
     USA_rapid_growth: "Rapid Growth"
@@ -2137,7 +2136,7 @@
     USA_blue_districts_tt: "Unlocks §Ydecisions§! to establish §YBlue Districts§! in populated states."
 
     USA_increase_technological_funding: "Increase Technological Funding"
-    USA_increase_technological_funding_desc: "Our investments into the economy and the people have already begun to pay themselves back, and we find now an excess of capital and talent ready to be deployed. As our nation's genius expands, so to does our industry, our security, and our standard of living. Putting these returns into further investments for the future will help to secure our sons and daughters a more prosperous tomorrow."
+    USA_increase_technological_funding_desc: "Our investments into the economy and the people have already begun to pay themselves back, and we find now an excess of capital and talent ready to be deployed. As our nation's genius expands, so too does our industry, our security, and our standard of living. Putting these returns into further investments for the future will help to secure our sons and daughters a more prosperous tomorrow."
 
     USA_north_american_autarky: "North American Autarky"
     USA_north_american_autarky_desc: "We have built an eden for our own posterity. Between our two coasts now lies a self-sufficient people capable of withstanding the world's fiercest storms. Our industry has rocketed upwards to new heights, empowering America to build whatever her heart yearns after."
@@ -2184,7 +2183,7 @@
     USA_focus_on_our_army_tt_3: " Factory Output: §G+2.0%§!"
 
     USA_increase_army_funding: "Increase Army Funding"
-    USA_increase_army_funding_desc: "As always, more money and investment is needed to keep are divisions equipped with modern and effective equipment, and advanced training requires ever more extensive resources. Upkeeing a modern army is an expensive endeavor."
+    USA_increase_army_funding_desc: "As always, more money and investment is needed to keep our divisions equipped with modern and effective equipment, and advanced training requires ever more extensive resources. Maintaining a modern army is an expensive endeavor."
     USA_increase_army_funding_tt: "If §Y$USA_focus_on_our_army$§! has been completed, this §Yfocus§! will be §Gmore effective§!.\n "
 
     USA_precision_mechanisms: "Precision Mechanisms"
@@ -2197,22 +2196,22 @@
     USA_industrialize_california_desc: "Creating a large industrial base of operations in California will allow us to commit resources to the West far more efficiently. It will also help us secure our hold over our Pacific territories."
 
     USA_industrial_funding: "Industrial Funding"
-    USA_industrial_funding_desc: "We will direct significant funds to our industry."
+    USA_industrial_funding_desc: "Our factories don't run on speeches. We'll open the treasury and let industry decide what it needs."
 
     USA_wonder_workshops: "Wonder Workshops"
     USA_wonder_workshops_desc: "The manufacturies of America produce some of the most elegant and sophisticated equipment and luxuries in the world. We stand to benefit from all the world's talent, and investing further into our pinnacle designs will serve us well going forward."
 
     USA_improve_military_training: "Improve Military Training"
-    USA_improve_military_training_desc: "With such a large army fielded, we need to ensure that our training methods are not only effective but scalable."
+    USA_improve_military_training_desc: "With such a large army fielded, we need to ensure that our training methods are not only effective but also able to grow with our ranks."
 
     USA_county_militias: "County Militias"
-    USA_county_militias_desc: "If war should ever reach our shores, it will be the American people themselves who will most suredly hold the line."
+    USA_county_militias_desc: "If war should ever reach our shores, it will be the American people themselves who will most surely hold the line."
 
     USA_independently_funded_armories: "Independently-Funded Armories"
     USA_independently_funded_armories_desc: "By granting increased rights to individuals and communities to procure defensive equipment, civilian groups and state-funded militias will be able to field modern and sophisticated equipment and weaponry, allowing them to stand against even the most powerful invaders."
 
     USA_civilian_logistics_contracts: "Civilian Logistics Contracts"
-    USA_civilian_logistics_contracts_desc: "Having better logistics doesn't win wars, but whomever's logistics fail first will certainly lose. Given the scope at which we may be called upon to fight, expanding the ranks of our logistics systems to include broad civilian aparati will give us the strategic flexibility necessary to keep fighting at every hour, at every point."
+    USA_civilian_logistics_contracts_desc: "Having better logistics doesn't win wars, but whoever's logistics fail first will certainly lose. Given the scope at which we may be called upon to fight, expanding the ranks of our logistics systems to include broad civilian apparatuses will give us the strategic flexibility necessary to keep fighting at every hour, at every point."
 
     USA_terrain_navigation_courses: "Terrain Navigation Courses"
     USA_terrain_navigation_courses_desc: "Being able to navigate through dense forests, across rolling plains, and through harsh mountains gives one a tremendous advantage in war. If an army plans to fight us at home, they will have to contend with our vast diversity of environments, and our vast populations able to adeptly act across them."
@@ -2221,7 +2220,7 @@
     USA_cloth_and_rope_ramparts_desc: "Even the most basic and essential home items can be used to create fortifications and concealed positions almost anywhere. It's all about creativity, and sparking that in our people now will help them be more imaginative later."
 
     USA_confederalized_asset_procurement: "Confederalized Asset Procurement"
-    USA_confederalized_asset_procurement_desc: "Splitting the responsibility and duty for developing arms stockpiles between the federal government, state governments, and local detatchments will be an expensive and initially daunting organizational task, but once it's been fully decentralized, every group and every individual will be able to apply their own expertise and knowledge in situ to further our total readiness."
+    USA_confederalized_asset_procurement_desc: "Splitting the responsibility and duty for developing arms stockpiles between the federal government, state governments, and local detachments will be an expensive and initially daunting organizational task, but once it's been fully decentralized, every group and every individual will be able to apply their own expertise and knowledge in situ to further our total readiness."
 
     USA_FREE_improved_focus: "Improved Focus"
     USA_FREE_improved_focus_desc: "When FREE invests time and resources into some Sector, it requires the mobilization of hundreds of thousands of people. These large-scale operations are difficult to coordinate, but as the department works and acts, it and its leadership will become more effective."
@@ -2248,7 +2247,7 @@
     USA_FREE_top_end_funds_management_tt: "§GFurther reduces the severe penalty§! of [USAGetFREETitle]'s §Yfocus§! by §Y(-1)§! going forward.\n§R(Does not modify existing funds)§!"
 
     USA_FREE_lower_end_funds_management: "Lower-End Funds Management"
-    USA_FREE_lower_end_funds_management_desc: "The administration of FREE will focus their attention on the proper distribution and deligation of roles and resources to those projects that make up the bulk of the organization's output."
+    USA_FREE_lower_end_funds_management_desc: "The administration of FREE will focus their attention on the proper distribution and delegation of roles and resources to those projects that make up the bulk of the organization's output."
     USA_FREE_lower_end_funds_management_tt: "§GReduces the sizeable penalty§! of [USAGetFREETitle]'s §Yfocus§! by §Y(-1)§! going forward.\n§R(Does not modify existing funds)§!"
 
     USA_FREE_department_expansion: "Department Expansion"

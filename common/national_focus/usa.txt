@@ -26,27 +26,21 @@
 
 ### General Mod To-Do List
  # Add agency icons (including CIA)
- # Make AI simplified Chinese translation and french translation + update russian translation
  # Add new unique traits to MIOs
  # Add some more general pezaz
  # Add at least 2 more congress buttons (add stuff that gets unlocked)
  # Add to the capability of coring states using Congress
- # Add some spies?
- # Unique Formable for North America, maybe some others as well for certain paths
- # AI focus paths? maybe?
- # Need flavor events
+ # AI focus paths
+ # Need more flavor events
 
- # Need to add in the marines dude (and other dudes)
- # Shorten focus times (maybe)
+ # Need to add in the marines dude ? (and other dudes)
+ # Shorten some focus times (maybe)
  # Redefine all of the election checks and events, as well as congress. (elections won't fire if five year plan is taken)
 
  # Update localizations
  # Check 'dynamism unlocked' auto-completion (complaints that it ran for 240+ days)
  # Maybe add a NATO focus for the democratic tree
  # Fix mod-compatibility sub mods
- # Have Ching Lee added to admirals once Gunnery Innovations is taken
- # Add Baldwin locomotive works to focuses that mess with MIOs
- # Bury the robberbarons is causing crazy errors when hovered over
 
 ### Work To-Do List
  # Balance testing
@@ -3605,7 +3599,7 @@ focus_tree = {
  ##### Communist ############################
   ###########################################
   # Liberal-Socialist [currently not]
-	focus = { # Burden Lessening
+	focus = { # Burden Lessening  [Currently unused]
 		id = USA_burden_lessening
 		icon = GFX_focus_CHL_the_patagonian_giants
 		overlay = GFX_new_focus_overlay_ideo_democratic_socialist
@@ -3637,7 +3631,7 @@ focus_tree = {
 		}
 	}
 
-	focus = { # Expanded Income Tax
+	focus = { # Expanded Income Tax [Currently unused]
 		id = USA_expanded_income_tax
 		icon = GFX_focus_CHL_the_patagonian_giants
 		overlay = GFX_new_Star-Auto-overlay-0
@@ -3666,7 +3660,7 @@ focus_tree = {
 		}
 	}
 
-	focus = { # Fair Shares
+	focus = { # Fair Shares [Currently unused]
 		id = USA_fair_shares
 		icon = GFX_focus_CHL_the_patagonian_giants
 		overlay = GFX_new_Star-Auto-overlay-1
@@ -3695,7 +3689,7 @@ focus_tree = {
 		}
 	}
 
-	focus = { # General Welfare
+	focus = { # General Welfare [Currently unused]
 		id = USA_general_welfare
 		icon = GFX_focus_CHL_the_patagonian_giants
 		overlay = GFX_new_Star-Auto-overlay-2
@@ -3724,7 +3718,7 @@ focus_tree = {
 		}
 	}
 
-	focus = { # Universal Income
+	focus = { # Universal Income [Currently unused]
 		id = USA_universal_income
 		icon = GFX_focus_CHL_the_patagonian_giants
 		overlay = GFX_new_Star-Auto-overlay-3
@@ -3760,7 +3754,7 @@ focus_tree = {
 		icon = GFX_focus_NORDIC_com_selector_civilian
 		overlay = GFX_new_focus_overlay_ideo_socialist_nationalist
 		mutually_exclusive = {
-			focus = USA_an_american_five_year_plan
+			#focus = USA_an_american_five_year_plan
 			focus = USA_new_continue_the_new_deal
 			focus = USA_restore_the_gold_standard
 			focus = USA_government_de_intervention
@@ -4438,7 +4432,7 @@ focus_tree = {
 
   ###########################################
   # Scarlet Eagle (International Communist)
-	focus = { # Entertain the Radicals
+	focus = { # Entertain the Radicals [Currently unused]
 		id = USA_entertain_the_radicals
 		icon = GFX_fixed_focus_yug_pan_slavic_congress
 		overlay = GFX_new_focus_overlay_ideo_communist_internationalist
@@ -4462,7 +4456,7 @@ focus_tree = {
 		}
 	}
 
-	focus = { # Pursue a Better Tomorrow
+	focus = { # Pursue a Better Tomorrow [Currently unused]
 		id = USA_pursue_a_better_tomorrow
 		icon = GFX_focus_PLACEHOLDER
 		overlay = GFX_new_Star-Auto-overlay-0
@@ -4491,7 +4485,7 @@ focus_tree = {
 		}
 	}
 
-	focus = { # Seize Corporate Industries
+	focus = { # Seize Corporate Industries [Currently unused]
 		id = USA_seize_corporate_industries
 		icon = GFX_focus_PLACEHOLDER
 		overlay = GFX_new_Star-Auto-overlay-1
@@ -4520,7 +4514,7 @@ focus_tree = {
 		}
 	}
 
-	focus = { # For the People!
+	focus = { # For the People! [Currently unused]
 		id = USA_for_the_people
 		icon = GFX_focus_PLACEHOLDER
 		overlay = GFX_new_Star-Auto-overlay-2
@@ -4549,7 +4543,7 @@ focus_tree = {
 		}
 	}
 
-	focus = { # The Scarlet Eagle Rises
+	focus = { # The Scarlet Eagle Rises [Currently unused]
 		id = USA_the_scarlet_eagle_rises
 		icon = GFX_focus_PLACEHOLDER
 		overlay = GFX_new_Star-Auto-overlay-3
@@ -4582,7 +4576,7 @@ focus_tree = {
  ##### Neutral ##############################
   ###########################################
   # American Empire (Monarchist) [King or a Caesar?]
-	focus = { # The Capitol Hill Disaster
+	focus = { # The Capitol Hill Disaster [Currently unused]
 		id = USA_the_capitol_hill_disaster
 		icon = GFX_focus_BRA_end_the_state_of_emergency
 		overlay = GFX_new_focus_overlay_ideo_monarchist
@@ -4608,7 +4602,7 @@ focus_tree = {
 
   ###########################################
   # North American Prosperity Corporation (Megacorp) [Company towns, buying territory, renting armies, etc]
-	focus = { # The George-May Proposal
+	focus = { # The George-May Proposal [Currently unused]
 		id = USA_the_george_may_proposal
 		icon = GFX_focus_SIA_the_yellow_dossier
 		overlay = GFX_new_focus_overlay_ideo_corporatist
@@ -4650,7 +4644,7 @@ focus_tree = {
 			focus = USA_new_continue_the_new_deal
 			focus = USA_restore_the_gold_standard
 			focus = USA_government_de_intervention
-			focus = USA_southern_crisis
+			#focus = USA_southern_crisis
 		}
 
 		x = 70
@@ -5542,7 +5536,7 @@ focus_tree = {
 
   ###########################################
   # Atomic Arcadia / Pax Atomica (Macarthur Containment - Multi-way civil war) [Not just Macarthur- include others like Oppenheimer. A parent state. Maybe gets super early nukes?]
-	focus = { # The Bordeaux Conferance
+	focus = { # The Bordeaux Conferance [Currently unused]
 		id = USA_the_bordeaux_conferance
 		icon = GFX_focus_SWE_attack_landsorganisationen
 		overlay = GFX_new_focus_overlay_ideo_arcadian
@@ -6219,7 +6213,7 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					has_completed_focus = USA_neutrality_act
+					has_completed_focus = USA_new_neutrality_act
 				}
 				any_other_country = {
 					is_major = yes
@@ -6251,7 +6245,7 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					has_completed_focus = USA_limited_intervention
+					has_completed_focus = USA_new_limited_intervention
 				}
 				swap_ideas = {
 					remove_idea = USA_limited_intervention
@@ -14566,6 +14560,10 @@ focus_tree = {
 			has_equipment = {
 				infantry_equipment > 4999
 			}
+			has_civil_war = no
+			not = {
+				has_country_flag = USA_AN_civil_war_is_over
+			}
 		}
 		
 		bypass = {
@@ -17586,6 +17584,7 @@ focus_tree = {
 		}
 	}
 
+ ############################################
 # DEMOCRATIC FOREIGN POLICY
 	focus = { # Foreign Policy
 		id = USA_foreign_policy
@@ -36298,7 +36297,7 @@ focus_tree = {
 		completion_reward = {
 			hidden_effect = {
 				if = {
-					limit = { has_completed_focus = USA_american_architectural_administration has_completed_focus = USA_american_wellspring_administration has_completed_focus = USA_industrial_funding }
+					limit = { or = { has_completed_focus = USA_american_architectural_administration has_completed_focus = USA_american_wellspring_administration } has_completed_focus = USA_industrial_funding }
 					country_event = { id = new_usa_the_eagle_lifts_its_wings.1 }
 				}
 			}
@@ -36612,7 +36611,7 @@ focus_tree = {
 		}
 		available = {
 			has_government = fascism
-			has_completed_focus = USA_FREE_recovery_achieved
+			#has_completed_focus = USA_FREE_recovery_achieved # FREE RA already requires LLA
 			has_completed_focus = USA_north_american_autarky
 			OR = {
 				has_completed_focus = USA_increase_naval_funding
@@ -38340,7 +38339,7 @@ focus_tree = {
 			FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH
 		}
 		available = {
-
+			not = { has_idea = undisturbed_isolation }
 		}
 
 		bypass = {
@@ -38349,7 +38348,7 @@ focus_tree = {
 		completion_reward = {
 			hidden_effect = {
 				if = {
-					limit = { has_completed_focus = USA_american_architectural_administration has_completed_focus = USA_industrial_funding has_completed_focus = USA_stars_on_the_horizon }
+					limit = { has_completed_focus = USA_industrial_funding has_completed_focus = USA_stars_on_the_horizon }
 					country_event = { id = new_usa_the_eagle_lifts_its_wings.1 }
 				}
 			}
@@ -38450,7 +38449,7 @@ focus_tree = {
 			FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH
 		}
 		available = {
-
+			not = { has_idea = undisturbed_isolation }
 		}
 
 		bypass = {
@@ -38459,7 +38458,7 @@ focus_tree = {
 		completion_reward = {
 			hidden_effect = {
 				if = {
-					limit = { has_completed_focus = USA_industrial_funding has_completed_focus = USA_american_wellspring_administration has_completed_focus = USA_stars_on_the_horizon }
+					limit = { has_completed_focus = USA_industrial_funding has_completed_focus = USA_stars_on_the_horizon }
 					country_event = { id = new_usa_the_eagle_lifts_its_wings.1 }
 				}
 			}
@@ -39868,7 +39867,7 @@ focus_tree = {
 			FOCUS_FILTER_CONSUMER_GOODS FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH
 		}
 		available = {
-
+			not = { has_idea = undisturbed_isolation }
 		}
 		
 		bypass = {
@@ -39877,7 +39876,7 @@ focus_tree = {
 		completion_reward = {
 			hidden_effect = {
 				if = {
-					limit = { has_completed_focus = USA_american_architectural_administration has_completed_focus = USA_american_wellspring_administration has_completed_focus = USA_stars_on_the_horizon }
+					limit = { or = { has_completed_focus = USA_american_architectural_administration has_completed_focus = USA_american_wellspring_administration } has_completed_focus = USA_stars_on_the_horizon }
 					country_event = { id = new_usa_the_eagle_lifts_its_wings.1 }
 				}
 			}
