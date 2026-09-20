@@ -24,6 +24,8 @@
  USA_regional_strategic_commands-general_title: "地区战略指挥部"
  USA_regional_strategic_commands-general_desc: "为了更好地保卫我们广袤的国土并为攻击者设置不可逾越的障碍，我们将建立地区战略指挥部，以密切支持和协调当地防御行动，并为决定性的反击开辟道路。每个指挥部都将是我们领导层的堡垒，也是我们受伤士兵和平民的庇护所。"
 
+ TBA_TT: "§C待完成§!"
+
 # 隐蔽/虚假/侧面信息国策
  USA_SM_NC_decrease_conservative_resistance: "保守主义抵抗"
 
@@ -895,7 +897,6 @@
  USA_liberty_over_east_asia_desc: "东亚、大洋洲、太平洋——全球这一地区几个世纪以来一直落后于西方文明，现在发现自己处于大规模动荡的重大风险中。欧洲太遥远且动荡不安，所以保护这些地区的责任落到了我们身上。"
  USA_liberty_over_east_asia_tt: "向亚洲和大洋洲国家发送§R最后通牒§!要求宗主地位，并向该地区现有傀儡的宗主国要求转让宗主地位。"
 
-
  USA_outback_offensive: "内陆攻势"
  USA_outback_offensive_desc: "既然我们已在澳大利亚登陆，我们需要集中作战努力，尽可能快速地横扫内陆的开阔平原。速度和机动将是我们胜利的方式。"
 
@@ -1542,6 +1543,28 @@
  USA_southern_crisis: "南方危机"
  USA_southern_crisis_desc: "由沙尘暴引起的饥荒正在对全国各地的社区造成不可持续的破坏，但现在它已经收到了南方几个主要社区的回应。在这些绝望的时刻，人们开始在受影响最严重的地区暴动并制造混乱。"
 
+ USA_banner_clubs: "旗帜俱乐部"
+ USA_banner_clubs_desc: "在全国各地，各州已开始指示当地社区联合起来，组建‘旗帜俱乐部’，即地方性的互助团体，人们相互照顾并满足彼此的需求。华盛顿特区的联邦政府已失去人民的信任，各州已各自承担起填补空缺的责任。"
+
+ USA_the_question_of_our_national_character: "我们民族性格的问题"
+ USA_the_question_of_our_national_character_desc: "当我们重建国家并从大萧条中复苏时，我们为联邦政府找到了新的目标。它究竟是占据中心舞台还是让位于各州，如今似乎更倾向于后者，但这并不是唯一需要考虑的新事物。美国正在重生，但凤凰将如何崛起？我们是进一步与世界隔绝，还是敢于提出革命性的新主张？"
+
+ USA_visions_of_a_new_frontier: "新边疆的愿景"
+ USA_visions_of_a_new_frontier_desc: "美国的未来在于开发新边疆。也就是说，一个以卓越服务美国人民、为每位公民创造更美好明天、确保最有利于培育和成熟所有人美国梦的条件的未来。"
+
+ USA_state_autarky_movement: "州自给自足运动"
+ USA_state_autarky_movement_desc: "我们将变得完全自给自足。历史上许多国家都尝试过这样做，但没有一个像我们这样得天独厚和繁荣。北美本身就是自己的粮仓，其起伏的丘陵和麦田是无数渴望冒险与增长的人民的画布。山巅之城将越升越高。"
+
+ USA_a_new_america: "一个新美国"
+ USA_a_new_america_desc: "昨日的美国是闪烁烛光上的明亮火焰，但旧日的光芒已经熄灭。我们的眼睛终于适应了，现在我们点燃新的火焰，更强大、更持久的火焰，当寒风袭来时不会熄灭。火花充满鹰的眼睛，我们的翅膀展开，准备新的飞翔。"
+
+ USA_brotherhood_spirit: "兄弟情谊精神"
+ USA_brotherhood_spirit_desc: "在恢复我们昔日的决心并将其建设得比以往更强大时，我们必须团结一致。我们将在国家内部点燃一种深厚的家庭精神，使每一颗胸膛都怀有一首勇敢无畏的歌，与每一个邻居同步跳动。我们是一个由定居者、探险家、发明家、战士——兄弟组成的国家。"
+ USA_brotherhood_spirit_tt: "如果在此国策§Y完成§!后爆发§R内战§!，战斗将§G极大地有利于§!§Y美国民族主义者§!。"
+
+ USA_a_golden_west: "金色西部"
+ USA_a_golden_west_desc: "伟大的美国雄鹰再次优雅地翱翔于其北美领地之上。新世界已从旧世界的灰烬中崛起并超越，一颗新星闪耀，让全世界都能看到。我们已迎来金色西部，现在剩下要做的就是驰骋进入那辉煌的日出。"
+
  USA_the_george_may_proposal: "乔治-梅提案"
  USA_the_george_may_proposal_desc: "尽管美国和世界银行体系普遍崩溃，华尔街似乎有一个复苏计划。各种银行、房地产公司、基金集团、企业和私人商人聚集在纽约，起草一份稳定国家经济的计划，尽管该计划充其量只是实验性的。值得一试吗？"
 
@@ -1550,7 +1573,7 @@
 
  USA_a_fallen_roost_among_the_cinders: "余烬中的坠落巢穴"
  USA_a_fallen_roost_among_the_cinders_desc: "四年前，原子首次被分裂。一个新的危险潜伏在地平线之外，威胁着不仅要吞噬美国，还要吞噬整个世界，而世界正处于崩溃和悲剧之中。战争即将来临，人类尚未准备好。那些能看到即将到来之事的人必须采取行动。"
-
+# 民族主义共产主义者
  USA_labor_councils: "劳工委员会"
  USA_labor_councils_desc: "全国各地将成立劳工委员会，以保护工人权利并协调经济活动网络，帮助国家重新启动。"
 
@@ -1800,6 +1823,7 @@
 
  USA_socialist_patriot_parades: "社会主义爱国者游行"
  USA_socialist_patriot_parades_desc: "我们不打算采用席卷世界其他国家的暴力革命，也不打算参与任何形式的“恐怖统治”。我们是美国人，为我们闪闪发光的国家遗产感到自豪的爱国者。过去的方式不是旧的或错误的，它们只是不完整；我们努力在美国传统中完成它们。"
+ USA_denounce_capitalism_tt: "我们将获得一项§Y决议§!来§R提前发动内战§!。§Y保守派抵抗§!越弱，对他们就越是致命。"
 
  USA_denounce_capitalism: "谴责资本主义"
  USA_denounce_capitalism_desc: "美国至今已经走上了一条伟大的道路，但资本主义的阴险势力一直紧紧追赶，直到它跌倒。大萧条是这种经济组织形式失败的最明显标志，我们必须反对它！"
@@ -1860,3 +1884,399 @@
 
  USA_the_vision_of_1776_achieved: "1776年愿景的实现"
  USA_the_vision_of_1776_achieved_desc: "1776年，一场反对欧洲旧方式的革命被正式宣布。它试图从旧世界吸取教训，并在此基础上创建一个新世界，一个个人被最大化，从而更大的社区也被最大化的世界。150多年前开始的事业，我们现在已经实现了！新世界将是一个乌托邦。"
+
+ # 美国民族主义者
+ USA_industrial_recovery_AN: "工业复苏"
+ USA_industrial_recovery_AN_desc: "齿轮转动、引擎蒸汽、汽笛尖鸣——国家的步伐再次恢复生机。那些投身于社区工作并与其他城镇团体合作的美国人给予了极大的帮助。"
+
+ USA_homeland_defense_emergency_act_focus_AN: "$USA_homeland_defense_emergency_act_focus-general_title$"
+ USA_homeland_defense_emergency_act_focus_AN_desc: "$USA_homeland_defense_emergency_act_focus-general_desc$"
+
+ USA_coordinate_militia_defenses_AN: "$USA_coordinate_militia_defenses-general_title$"
+ USA_coordinate_militia_defenses_AN_desc: "$USA_coordinate_militia_defenses-general_desc$"
+
+ USA_establish_strongholds_in_the_rockies_AN: "$USA_establish_strongholds_in_the_rockies-general_title$"
+ USA_establish_strongholds_in_the_rockies_AN_desc: "$USA_establish_strongholds_in_the_rockies-general_desc$"
+
+ USA_the_mississippi_bastions_AN: "$USA_the_mississippi_bastions-general_title$"
+ USA_the_mississippi_bastions_AN_desc: "$USA_the_mississippi_bastions-general_desc$"
+
+ USA_evacuate_civilians_and_industry_AN: "$USA_evacuate_civilians_and_industry-general_title$"
+ USA_evacuate_civilians_and_industry_AN_desc: "$USA_evacuate_civilians_and_industry-general_desc$"
+
+ USA_launch_the_counteroffensive_AN: "$USA_launch_the_counteroffensive-general_title$"
+ USA_launch_the_counteroffensive_AN_desc: "$USA_launch_the_counteroffensive-general_desc$"
+
+ USA_spirit_of_defiance_AN: "$USA_spirit_of_defiance-general_title$"
+ USA_spirit_of_defiance_AN_desc: "$USA_spirit_of_defiance-general_desc$"
+
+ USA_regional_strategic_commands_AN: "$USA_regional_strategic_commands-general_title$"
+ USA_regional_strategic_commands_AN_desc: "$USA_regional_strategic_commands-general_desc$"
+
+ USA_defend_our_homeland: "保卫我们的家园！"
+ USA_defend_our_homeland_desc: "时刻已到：是时候将敌人从我们的家园永远驱逐出去！我们将对侵略者伸张正义，将他们淹没在我们国家两侧的海水中。他们无法抵抗我们。"
+
+ USA_tend_to_the_nation: "照料国家"
+ USA_tend_to_the_nation_desc: "我们需要将注意力转向国家的未来。在历史背景下，美国的历史是宏大的，也许最近的这些灾难正是我们睁开眼睛、开辟更好前进道路所需的东西。"
+
+ USA_the_goldstar_network: "金星网络"
+ USA_the_goldstar_network_desc: "金星网络由约翰·奥比茨于1934年创立，是一家爱国主义的美国报纸和广播频道，已成为全国各地酒吧、家庭、工地和政治分部的常客。它在这些艰难时期激励了数百万美国人，为贫困者筹款，提供工作-工人连接服务，并帮助未来导向的官员当选。"
+
+ USA_community_aid_programs: "社区援助计划"
+ USA_community_aid_programs_desc: "全国各地的社区继续挣扎，因为他们所依赖的机构和基础设施仍然不可靠。最好由各州自己协调恢复我们地方地区的努力。"
+
+ USA_our_place_in_the_world: "我们在世界上的位置"
+ USA_our_place_in_the_world_desc: "当我们开始复苏时，我们的命运究竟应该是什么的问题开始清晰起来。我们是注定要仅仅作为世界上众多国家中的又一个，还是应该努力让自己与众不同，并争取某种前所未见的地位？"
+
+ USA_properly_account_for_the_carpetbaggers: "妥善清算投机客"
+ USA_properly_account_for_the_carpetbaggers_desc: "1860年代内战后的南方‘重建’是一场巨大的闹剧，它让南方的处境比傲慢的北方没有如此努力去‘帮助’时还要糟糕。我们需要清算那些我们称之为投机客的最阴险机会主义者所造成的损害。"
+ USA_properly_account_for_the_carpetbaggers_tt: "§Y[366.getName]§!、§Y[365.getName]§!、§Y[364.getName]§!、§Y[363.getName]§!、§Y[367.getName]§!、§Y[370.getName]§!、§Y[371.getName]§!、§Y[368.getName]§!、§Y[369.getName]§!、§Y[362.getName]§!："
+
+ USA_the_gettysburg_debate: "葛底斯堡辩论"
+ USA_the_gettysburg_debate_desc: "自我们革命以来，我们技术上已经尝试过两次邦联化。第一次是无知的失败，第二次诚然是形式上的失败，但第二次在自身中找到了稳定性和同志情谊，这些我们今天肯定能用上。重新审视那个失败邦联的性质，并决定是否应该再试一次，可能会有用。"
+ USA_the_gettysburg_debate_tt: "§Y美国人民§!将开始考虑§Y邦联化§!的前景。"
+
+ USA_a_question_of_confidence: "信心问题"
+ USA_a_question_of_confidence_desc: "将我们引至此刻的治理、经济和政治实践已经辜负了我们，并一再证明它们无法果断有效地行动。改变路线是唯一明智的选择。"
+
+ USA_america_on_its_own: "美国独自前行"
+ USA_america_on_its_own_desc: "美国最初是由那些被旧世界困扰并希望寻找新世界的人建立的，我们先辈的智慧继续印证着真理。外面的世界继续辜负其人民和我们。我们不能依赖他们——美国的前进道路，无论它将通向何方，都必须独自走过。"
+
+ USA_first_among_equals: "平等中的第一"
+ USA_first_among_equals_desc: "美国最初是由那些被旧世界困扰并希望寻找新世界的人建立的，我们先辈的智慧继续印证着真理。很明显，旧世界无法超越其漫长而动荡的历史和冲突，但我们能看透他们的纷争。美国将在文明的舵手位置上占据其应有的位置。"
+ USA_first_among_equals_tt: "此§Y国策§!将推动我们§Y开始§!一场§R内战§!！"
+
+ USA_patriot_parades: "爱国者游行"
+ USA_patriot_parades_desc: "在这个充满不确定性和担忧的时刻，那些身强力壮、精神饱满的人的集会将奇迹般地从这个国家的废墟中提振其灵魂。黑暗时代已经对我们施压，但通过力量和决心，我们将看到通往新黎明的道路！"
+
+ USA_patriots_stand_ready: "爱国者准备就绪"
+ USA_patriots_stand_ready_desc: "冲突正在酝酿，只有那些看到即将到来之事的人才能承担起任何责任。我们将先发制人地在全国组织民兵团体和陆军部队，以应对不可避免的爆发，因此当时刻到来时，我们将准备好出击并抓住时机。"
+ USA_patriots_stand_ready_tt: "当§Y内战开始§!时，我们将获得更多§Y部队§!和§Y装备§!。"
+
+ USA_the_philadelphia_fiasco: "费城惨败"
+ USA_the_philadelphia_fiasco_desc: "数十名参议员和众议员在国会提出了一项用于费城市总体发展的项目法案。支出方案中的明珠是建造安布尔顿剧院，它将为该市提供一流的设施。"
+
+ USA_the_parkerite_act: "帕克主义法案"
+ USA_the_parkerite_act_desc: "在费城悲剧之后，公众一直公开抗议华盛顿特区。作为回应，几位南方参议员提出了《帕克主义法案》，该法案将把第22修正案纳入宪法，赋予各州对其边界或管辖范围内所有联邦项目和资金的权威否决权和监督权。"
+
+ USA_what_the_future_holds: "未来会怎样"
+ USA_what_the_future_holds_desc: "在费城悲剧之后，公众已经受够了联邦政府的失败。火柴即将被点燃的时刻正在迅速临近。联邦政府需要从根本上重组，而目前掌权的人永远不会自愿交出他们的缰绳。"
+ USA_what_the_future_holds_tt: "\n此§Y精神§!将在§Y内战§!开始时被§Y移除§!。"
+
+ USA_paul_revere_rides_again: "保罗·里维尔再次骑行"
+ USA_paul_revere_rides_again_desc: "美利坚合众国联邦政府已经失去了其统治权。它和整个国家都必须重组，以确保国家的延续。不幸的是，这将需要一场暂时的分裂，必须用鲜血和钢铁来弥合，但美国人喜欢挑战。"
+ USA_paul_revere_rides_again_tt: "我们将§R发动内战§!！\n我们拥有的§Y法西斯主义支持§!越多，就会有越多的§Y州§!站在我们一边。"
+
+ USA_the_goldstar_federation: "金星联邦"
+ USA_the_goldstar_federation_desc: "旧制度很强大，但还不够强大——太弱，无法在危机的冲击中生存；太弱，无法抵抗旧世界的失败。必须建立新秩序，一个将美国人民及其愿景和未来置于一切和其他人之上。旧美国未能抓住其命运——我们不会再犯那个错误。"
+ USA_the_goldstar_federation_tt_2: "只要§YUSA§!仍留在§Y$USA_the_goldstar_federation_tt$§!派系中，§YUSA§!及其§Y傀儡§!将拥有§Y$USA_goldstar_dynamic_modifier$§!动态修正。\n如果§YUSA§!不再是§Y$USA_the_goldstar_federation_tt$§!派系的首领，此修正将被§R失去§!。"
+ USA_the_goldstar_federation_tt_3: "创建派系：§Y$USA_the_goldstar_federation_tt$§!。"
+
+ USA_the_second_confederation: "第二邦联"
+ USA_the_second_confederation_desc: "很明显，我们身份中固有的权力分立没有得到应有的重视。各州的权利将取代中央政府的权力。是时候我们为一个更完美的联盟奠定基础，纠正旧的失败，改进第一邦联的精神和愿景。"
+
+ USA_swift_and_lethal: "迅速而致命"
+ USA_swift_and_lethal_desc: "要么我们现在必须行动，要么我们就不行动，但我们不能继续在如何以及在哪里进攻和实现我们的目标上犹豫不决。如果我们给对手时间，他们将重组并发动更顽强的防御，而我们不想损失比必要更多的生命。"
+
+ USA_peace_guarantees_for_our_neighbors: "我们邻国的和平保障"
+ USA_peace_guarantees_for_our_neighbors_desc: "在解决了我们内部动荡的主要部分后，向我们的朋友和邻国伸出援手并让他们放心我们的平静和友善本性将是明智的。让他们不担心是正确的，但同样重要的是确保我们的侧翼不会变得脆弱。"
+
+ USA_our_safety_before_yours: "我们的安全先于你们"
+ USA_our_safety_before_yours_desc: "我们邻国的安全与我们的安全密不可分——应该让他们明白这种安全是有代价的。驻军、让步以及在其事务中的坚定掌控，是只有我们能提供的保护的小小代价。我们的资源安全将由我们对该半球资源的控制来塑造。"
+
+ USA_the_sun_has_already_set: "太阳早已落下"
+ USA_the_sun_has_already_set_desc: "伦敦和巴黎紧抓着他们再也负担不起的帝国。我们将让他们如此。当旧列强在更多无果的战争中耗尽自己时，整个半球在我们面前敞开。一个不愿抓住时机的国家不配拥有时机，而我们将抓住黎明本身。"
+
+ USA_americas_rightful_claims: "美国的合法要求"
+ USA_americas_rightful_claims_desc: "西方的命运是一条穿过华盛顿的道路。对于显而易见的事情无需委婉。我们将夺取属于我们的东西。"
+ USA_americas_rightful_claims_tt: "解锁§Y决议§!以§Y控制领土§!在§Y北美洲§!和§Y中美洲§!。\n\n如果选择了§Y$USA_peace_guarantees_for_our_neighbors$§!，我们将能够与邻国§Y建立信任§!。\n\n如果选择了§Y$USA_our_safety_before_yours$§!，我们将能够§Y恐吓§!我们的邻国。"
+
+ USA_golden_opportunities: "黄金机遇"
+ USA_golden_opportunities_desc: "美洲属于我们，如果我们的邻国拒绝屈服，那么我们将在他们最意想不到的时候给他们一个惊喜。当金色太阳升起时，它将投下长长的阴影，我们将在那黑暗中工作，将整个大陆带入新兴的光芒中。"
+ USA_golden_opportunities_tt: "解锁§Y决议§!以§Y渗透美洲国家§!并从内部接管它们，最终允许§Y美国§!§R政变§!其政府并§Y确立控制§!。"
+
+ USA_ballads_between_brothers: "兄弟之间的歌谣"
+ USA_ballads_between_brothers_desc: "由于我们的邻近以及我们国家之间丰富的文化交融，伸出援手并进一步改善我们与加拿大人和墨西哥人的关系应该不是难事。此外，两者都有我们渴望的东西，而我们选择通过和平、外交和苹果派来获得这些东西。"
+
+ USA_establish_the_new_southern_states: "建立新的南方州"
+ USA_establish_the_new_southern_states_desc: "我们将致力于在我们南方建立里奥格兰德和索诺拉，为这些地区及其人民带来更大的自治权和市场准入，同时也为自己提供一个缓冲。"
+ USA_establish_the_new_southern_states_tt: "  将§Y确保§!我们的侧翼。"
+
+ USA_country_roads_through_the_north: "穿越北方的乡村道路"
+ USA_country_roads_through_the_north_desc: "分隔美国本土和阿拉斯加领土的西部缺口人口极其稀少，只有加拿大人。我们将努力伸出援手，提供大量现金和投资以换取这些土地，以便我们能够连接我们整个大陆领土并确保我们在北方的地位。"
+
+ USA_prudence_across_the_land: "遍布大地的审慎"
+ USA_prudence_across_the_land_desc: "随着我们的侧翼得到更好的保障，我们现在可以关注保护我们的和平，并使我们对于任何潜在侵略者来说都特别棘手。"
+
+ USA_secure_the_gulf: "确保墨西哥湾"
+ USA_secure_the_gulf_desc: "只要墨西哥湾仍未得到保障，我们的敌人就能利用我们的南部海岸线。我们将掩盖这一不安全因素，并控制我们在近海地区的合法要求。"
+
+ USA_the_rush_for_the_canal: "争夺运河"
+ USA_the_rush_for_the_canal_desc: "谁控制了巴拿马运河，谁就控制了半球两侧的海军力量。不仅我们完全确保它以维持我们的力量投射能力是绝对必要的，运河本身也是我们的财产和遗产，我们不会让它沦陷。"
+
+ USA_seize_the_great_flanks: "夺取巨大的侧翼"
+ USA_seize_the_great_flanks_desc: "我们将夺取环绕美国的广阔领土和海洋，并确立我们对整个大陆的完全控制。"
+
+ USA_realize_the_golden_circle: "实现金色圆环"
+ USA_realize_the_golden_circle_desc: "很久以前，美国一个名为金色圆环骑士团的精英社团想象了一个大陆帝国，它向外延伸并统治整个北美洲。今天，我们实现那个梦想并宣告其现实。"
+ USA_realize_the_golden_circle_trigger_tt_NOT: "控制所有§Y北美洲§!地区"
+ USA_realize_the_golden_circle_trigger_tt_2_NOT: "控制所有§Y中美洲§!和§Y墨西哥湾§!地区"
+ USA_realize_the_golden_circle_trigger_tt_3_NOT: "控制§Y南方山脊§!地区"
+
+ USA_no_place_for_traitors: "叛徒无处容身"
+ USA_no_place_for_traitors_desc: "当我们准备向世界进军时，我们不能容忍已经在我们内部的颠覆分子。那些希望看到伟大美国计划失败的人将不会得到行动自由。当我们带来新黎明时，我们不会给他们留下任何可以躲藏的阴影。"
+
+ USA_pledge_for_the_new_order: "为新秩序宣誓"
+ USA_pledge_for_the_new_order_desc: "柏林提出平等伙伴关系——一个以力量回应力量的新秩序。站在唯一不怕建设新世界的大国身旁并无羞耻。"
+
+ USA_renaissance_and_retribution: "复兴与报应"
+ USA_renaissance_and_retribution_desc: "旧世界正处于垂死挣扎中，而我们正在崛起。即使[GER.GetNameDefCap]再次试图超越欧洲的停滞，我们也能看穿他们徒劳的尝试。一个新世界正在被锻造，我们将是挥舞锤子的人；德国仅仅是我们的铁砧。"
+ USA_renaissance_and_retribution_tt: " - 如果与§Y[GER.getName]§!交战，此理念将被§R失去§!。"
+ USA_renaissance_and_retribution_tt_2: "解锁§Y决议§!以篡夺§Y[GER.GetName]§!的权威并控制§Y轴心国§!或§Y直接支配德国§!。"
+
+ USA_throw_in_with_the_old: "与旧世界为伍"
+ USA_throw_in_with_the_old_desc: "我们没有忘记我们的根源。我们的文化和历史与英国人和法国人紧密相连，我们坚定不移。在这绝望的时刻，我们将到来，高举欧洲再也无法承载的火炬。"
+
+ USA_do_our_part: "尽我们的本分"
+ USA_do_our_part_desc: "尽管我们有保留意见，但我们面临的战争需要前所未有规模的国际合作。然而，我们有资源和精神去坚持，在向外迈进保护盟友安全的同时维护我们自己的安全。"
+ USA_do_our_part_tt: "解锁ABDACOM§Y联合国策树§!"
+ USA_do_our_part_tt_2: "如果我们与§Y[ENG.getName]§!在同一§Y派系§!中，我们的§Y派系成员§!将获得："
+
+ USA_the_eagle_flies_alone: "雄鹰独自飞翔"
+ USA_the_eagle_flies_alone_desc: "我们不会等待向旧世界请求许可才行动。我们的未来掌握在自己手中，我们的命运由我们掌握，我们不会让任何对手阻挡我们的道路。"
+
+ USA_imperial_roost: "帝国栖息地"
+ USA_imperial_roost_desc: "[ROOT.GetNameDefCap]是西半球的命中注定的继承者。它是雄鹰的领地，它在此栖息。不允许任何敌人攻击它，它对其领土的最远端拥有完全的控制和主导权。南北美洲的天空、陆地和海洋都属于我们。"
+ USA_imperial_roost_tt: "每一个在我们§Y霸权§!下的§Y美洲§!国家：\n---------------------------------------------------------\n\n"
+ USA_imperial_roost_tt_2: "如果尚未成为§Y[USA.GetNameDefCap]§!的§Y傀儡§!，则成为其傀儡。\n§Y加入§!§Y[USA.GetAdjective]§!的派系。\n\n---------------------------------------------------------"
+
+ USA_a_song_for_the_horizon: "地平线之歌"
+ USA_a_song_for_the_horizon_desc: "“……地图上有一条线，旧世界在那里结束，年轻世界开始生长——好吧，我有一卡车星条旗，却无处可去。从里奥格兰德到白令海峡，从平原到异国海岸，如果上帝给了我们这整个广阔世界，那么我想我们还没完，不，我们还没完，\n我们只是要再来一次天定命运……”"
+
+ USA_stars_on_the_horizon: "地平线上的星辰"
+ USA_stars_on_the_horizon_desc: "在过去几年里，绝望笼罩了美国人民，但他们没有放弃——他们坚持了下来。现在我们开始看到那种坚持的全部成果，它不满足于恢复现状，只有开辟一条新的、更光荣的道路才能使其满足。"
+
+ USA_the_eagle_lifts_its_wings: "雄鹰展翅"
+ USA_the_eagle_lifts_its_wings_desc: "经济再次翱翔于任何人认为可能的水平之上！美国人民已完全从沉睡中醒来，摆脱了大萧条的痛苦。世界其他地方敬畏地注视着我们的伟大韧性和勇气。"
+ USA_the_eagle_lifts_its_wings_tt: "§Y解锁§!§Y$USA_general_motors$§!工业关切。"
+
+ USA_lady_libertys_arsenal: "自由女神的兵工厂"
+ USA_lady_libertys_arsenal_desc: "经济已完全恢复，我们的精神再次自由。世界局势日益升温，我们现在需要更成熟和顶级的军事工业来跟上。"
+
+ USA_federal_recovery_emergency_enterprise: "联邦复苏紧急企业"
+ USA_federal_recovery_emergency_enterprise_desc: "联邦复苏紧急企业，简称FREE，将促进联邦资金的分配以及人民国家对美国经济复苏、增长和未来保护的关注。它将被赋予广泛的权力，无论是在其可以要求什么还是在其可以允许什么方面。"
+ USA_federal_recovery_emergency_enterprise_tt: "添加§Y$USA_FREE_dynamic_modifier$§!，其授予当前[USAGetFREETitle]政策：\n  §Y(-3)§! [USA_federal_recovery_emergency_enterprise_SL_a]\n  §Y(-3)§! [USA_federal_recovery_emergency_enterprise_SL_b]\n  §Y(-3)§! [USA_federal_recovery_emergency_enterprise_SL_c]\n  §Y(-3)§! [USA_federal_recovery_emergency_enterprise_SL_d]\n  §Y(-3)§! [USA_federal_recovery_emergency_enterprise_SL_e]\n  §Y(-3)§! [USA_federal_recovery_emergency_enterprise_SL_f]\n"
+ USA_federal_recovery_emergency_enterprise_tt_2: "每§Y10点§!§Y资金§!可以修改一个§9部门§!，从§R-30§!到§G+50§!点。大多数§Y国策§!将§Y转移资金§!。"
+
+ USA_crisis_of_dependency: "依赖危机"
+ USA_crisis_of_dependency_desc: "随着全球贸易和世界共享经济的崩溃，我们在国内陷入了危机。虽然保守地进行贸易有巨大好处，但很明显我们无法将我们的福祉寄托在其他人的工业上。"
+
+ USA_the_bay_otzen_plan: "贝-奥岑计划"
+ USA_the_bay_otzen_plan_desc: "经济学家奥斯瓦尔德·贝与新成立的经济学奥岑研究所合作，向国会提交了一份未来计划。它详细说明了对我们历史政策的彻底背离：限制出口、增加关税、补贴基础产业，并将FREE整合到全国各地的公共工程项目中。这个计划可能是我们实现正常和稳定的唯一希望。"
+
+ USA_invest_in_infrastructure: "投资基础设施"
+ USA_invest_in_infrastructure_desc: "国家的每一部分都通过我们共享的基础设施与每一其他部分互动。如果我们要能够依赖自己，就需要能够可靠地到达我们的邻居。"
+
+ USA_reinforce_interstate_routes: "加强州际路线"
+ USA_reinforce_interstate_routes_desc: "我们需要一个遍布全国的全面高速道路和系统网络。州际项目将提供必要的重点。"
+
+ USA_finance_new_mines_and_refineries: "资助新矿山和炼油厂"
+ USA_finance_new_mines_and_refineries_desc: "随着我们的工业复苏和经济再次增长，我们将需要比以往更多的资源。明天的世界由橡胶轮胎、石油发动机和最好材料的先进合金构成。"
+
+ USA_establish_new_forestry_zones: "建立新林业区"
+ USA_establish_new_forestry_zones_desc: "通过发放大量新林业许可证，我们可以将很大一部分自然资源开放给工业使用，并雇用数万名准备好的美国人。我们的国家公园将仍然是神圣的宁静领域，但我们也会利用我们的森林。"
+
+ USA_tap_old_gold_mines: "开采旧金矿"
+ USA_tap_old_gold_mines_desc: "有了新的工具，我们可以重新审视我们的旧采石场和矿山，并尝试获取那些以前太难开采的资源。"
+
+ USA_the_continental_grid: "大陆电网"
+ USA_the_continental_grid_desc: "随着我们机械掌握和技术知识的增加，我们能够更有效地开发大陆的自然财富并将其用于普通美国人的利益。通过创建一个统一的资源开采和发展实体网络，我们将能够协调我们国库的总体充实。"
+
+ USA_american_wellspring_administration: "美国源泉管理局"
+ USA_american_wellspring_administration_desc: "FREE将发展一个子实体：美国源泉管理局。其角色将是促进自然资源开采、精炼和使用方面的广泛组织和伙伴关系。"
+ USA_american_wellspring_administration_tt: "§Y解锁§!§Y$FREE_american_wellspring_administration$§!工业关切。"
+
+ USA_american_architectural_administration: "美国建筑管理局"
+ USA_american_architectural_administration_desc: "FREE将发展一个子实体：美国建筑管理局。其角色将是连接和标准化全国各地的各种建筑实践，改善可开发领土的范围并提高其利用速率。"
+ USA_american_architectural_administration_tt: "§Y解锁§!§Y$FREE_american_architectural_administration$§!工业关切。"
+
+ USA_ohio_mechanical_complex: "俄亥俄机械综合体"
+ USA_ohio_mechanical_complex_desc: "巨大的工业坐落在新英格兰以西，等待重启和提振。数百万坚定的美国人准备好投入建设美国未来的工作。"
+
+ USA_strive_for_the_present: "为当下奋斗"
+ USA_strive_for_the_present_desc: "我们将把注意力集中在立即将国家从昏睡中拉出来，尽管一些努力会借用我们以后必须偿还的信用。"
+ USA_strive_for_the_present_tt: "当我们§G完成§!国策§Y$USA_north_american_autarky$§!时，我们将§G获得§!一个§Y小加成§!。"
+
+ USA_rapid_growth: "快速增长"
+ USA_rapid_growth_desc: "为了让我们的工业再次运转，有必要在一些地方跳过一些步骤，并将行动优先于一切。没有时间可以浪费！"
+
+ USA_protect_our_tomorrow: "保护我们的明天"
+ USA_protect_our_tomorrow_desc: "我们将把注意力集中在解决国家的需求上，并准备让它重新站起来，完全恢复和能力充足。"
+ USA_protect_our_tomorrow_tt: "当我们§G完成§!国策§Y$USA_north_american_autarky$§!时，我们将§G获得§!一个§Y中等加成§!。"
+
+ USA_promote_the_national_will: "促进国家意志"
+ USA_promote_the_national_will_desc: "我们需要记住我们为何做我们所做的事，以及我们为谁而做。随着时间的推移，资金将可用于帮助我们的家庭和小社区，我们的整个文化和社会都建立在其上。"
+
+ USA_steady_economic_policies: "稳健的经济政策"
+ USA_steady_economic_policies_desc: "务实的经济政策将有助于塑造经济的增长趋势，并确保储蓄将成熟、财产将发展、资源将可用。只要一个人知道自己可以指望一个稳定的未来，他们就可以在当下为此付出全力。"
+
+ USA_plan_for_the_future: "为未来规划"
+ USA_plan_for_the_future_desc: "我们将把注意力集中在长期计划上，这些计划将给我们带来最大的回报，尽管这些需要时间。"
+ USA_plan_for_the_future_tt: "在§Y250天§!后，我们将获得：\n"
+ USA_plan_for_the_future_tt_2: "获得此理念§Y250天§!后，我们将获得：\n"
+ USA_plan_for_the_future_tt_3: "$special_v_consumer_goods_factor_tt$§Y-25.0%§!\n$production_speed_buildings_factor_tt$§G+10.0%§!\n$production_factory_max_efficiency_factor_tt$§G+10.0%§!"
+ USA_plan_for_the_future_tt_4: "持续§Y250§!天。"
+ USA_plan_for_the_future_tt_5: "当我们§G完成§!国策§Y$USA_north_american_autarky$§!时，我们将§G获得§!一个§Y大加成§!。"
+
+ USA_invest_in_long_term_schemes: "投资长期计划"
+ USA_invest_in_long_term_schemes_desc: "就其本质而言，未来的投资不会立即成熟。在建设我们期盼的明天时，我们必须保持耐心。"
+
+ USA_blue_districts: "蓝色区"
+ USA_blue_districts_desc: "借用奥斯瓦尔德·贝作品中的一个术语，‘蓝色区’是由州监管的经济区，旨在最大化我们最优秀和最聪明者的效率和机会。法规和繁文缛节以无罪推定方式适用，税收和利润被要求以高比率再投资，有效的基础设施是首要任务。"
+ USA_blue_districts_tt: "解锁§Y决议§!以在人口稠密的州建立§Y蓝色区§!。"
+
+ USA_increase_technological_funding: "增加技术资金"
+ USA_increase_technological_funding_desc: "我们对经济和人民的投资已经开始回本，我们现在发现有大量资本和人才准备部署。随着我们国家的天才扩展，我们的工业、安全和生活方式也随之扩展。将这些回报投入未来的进一步投资将有助于确保我们的儿女有一个更繁荣的明天。"
+
+ USA_north_american_autarky: "北美自给自足"
+ USA_north_american_autarky_desc: "我们为自己的后代建造了一个伊甸园。在我们的两个海岸之间，现在生活着一个自给自足的民族，能够抵御世界上最猛烈的风暴。我们的工业已飙升至新高度，赋予美国建造她心之所向的一切的能力。"
+ USA_north_american_autarky_tt_1: "此国策将根据所选择的§Y投资时间尺度§!而§Y更有价值§!。"
+ #USA_north_american_autarky_tt_2: "如果选择了§Y$USA_strive_for_the_present$§!："
+ USA_north_american_autarky_tt_2_i: "如果选择了§Y$USA_strive_for_the_present$§!："
+ USA_north_american_autarky_tt_2_c: "§Y$USA_strive_for_the_present$§!授予："
+ #USA_north_american_autarky_tt_2_y: "§3如果选择了$USA_strive_for_the_present$：§!"
+ #USA_north_american_autarky_tt_2_n: "§g如果选择了$USA_strive_for_the_present$：§!"
+ #USA_north_american_autarky_tt_3: "如果选择了§Y$USA_protect_our_tomorrow$§!："
+ USA_north_american_autarky_tt_3_i: "如果选择了§Y$USA_protect_our_tomorrow$§!："
+ USA_north_american_autarky_tt_3_c: "§Y$USA_protect_our_tomorrow$§!授予："
+ #USA_north_american_autarky_tt_3_y: "§3如果选择了§Y$USA_protect_our_tomorrow$§!：§!"
+ #USA_north_american_autarky_tt_3_n: "§g如果选择了$USA_protect_our_tomorrow$：§!"
+ #USA_north_american_autarky_tt_4: "如果选择了§Y$USA_plan_for_the_future$§!："
+ USA_north_american_autarky_tt_4_i: "如果选择了§Y$USA_plan_for_the_future$§!："
+ USA_north_american_autarky_tt_4_c: "§Y$USA_plan_for_the_future$§!授予："
+ #USA_north_american_autarky_tt_4_y: "§3如果选择了§Y$USA_plan_for_the_future$§!：§!"
+ #USA_north_american_autarky_tt_4_n: "§g如果选择了$USA_plan_for_the_future$：§!"
+
+ USA_kickstart_the_steel_belt: "启动钢铁带"
+ USA_kickstart_the_steel_belt_desc: "我们重工业的心脏只需要正确的推动和正确的资金，就能重新站起来并再次屹立。"
+
+ USA_focus_on_our_fleets: "关注我们的舰队"
+ USA_focus_on_our_fleets_desc: "作为一个两侧被大洋环绕的国家，我们舰队的有效性对我们的投射和安全至关重要。我们需要确保我们的舰队得到应有的关注。"
+ USA_focus_on_our_fleets_tt: "如果此国策在§Y$USA_focus_on_our_army$§!§G之前§!选择：\n\n§Y1x§!§G100%§!研究加成：§Y舰船§!。"
+ USA_focus_on_our_fleets_tt_2: " 船坞产出：§G+5.0%§!\n\n---------------------------------------------------------\n如果此国策在§Y$USA_focus_on_our_army$§!§R之后§!选择：\n\n§Y1x§!§G50%§!研究加成：§Y舰船§!。"
+ USA_focus_on_our_fleets_tt_3: " 船坞产出：§G2.0%§!"
+
+ USA_increase_naval_funding: "增加海军资金"
+ USA_increase_naval_funding_desc: "一如既往，需要更多资金和投资来使我们的舰队达到最佳状态。现代化旧船体、建造新船体以及保持船员训练和准备就绪是一项昂贵的任务。"
+ USA_increase_naval_funding_tt: "如果§Y$USA_focus_on_our_fleets$§!已完成，此§Y国策§!将§G更有效§!。\n "
+
+ USA_shipwreckers: "破船者"
+ USA_shipwreckers_desc: "训练我们的船坞专家和损害管制队处理最坏情况，将为我们的舰船做好高强度战斗的准备。"
+
+ USA_special_investments_in_annapolis: "安纳波利斯特别投资"
+ USA_special_investments_in_annapolis_desc: "随着美国海军的成熟，很明显它需要越来越多和越来越有才华的军官。"
+
+ USA_focus_on_our_army: "关注我们的陆军"
+ USA_focus_on_our_army_desc: "美国陆军已经断断续续地作战了一个多世纪，它仍然是我们国家捍卫其主张和家园能力的关键方面。我们需要确保我们的部队得到应有的关注。"
+ USA_focus_on_our_army_tt: "如果此国策在§Y$USA_focus_on_our_fleets$§!§G之前§!选择：\n\n§Y1x§!§G100%§!研究加成：§Y步兵科技和卡车§!。"
+ USA_focus_on_our_army_tt_2: " 工厂产出：§G+5.0%§!\n\n---------------------------------------------------------\n如果此国策在§Y$USA_focus_on_our_fleets$§!§R之后§!选择：\n\n§Y1x§!§G50%§!研究加成：§Y步兵科技和卡车§!。"
+ USA_focus_on_our_army_tt_3: " 工厂产出：§G2.0%§!"
+
+ USA_increase_army_funding: "增加陆军资金"
+ USA_increase_army_funding_desc: "一如既往，需要更多资金和投资来保持我们的师配备现代有效的装备，而高级训练需要越来越多的资源。维持一支现代陆军是一项昂贵的事业。"
+ USA_increase_army_funding_tt: "如果§Y$USA_focus_on_our_army$§!已完成，此§Y国策§!将§G更有效§!。\n "
+
+ USA_precision_mechanisms: "精密机械"
+ USA_precision_mechanisms_desc: "在现代战争中，胜利可能取决于技术和物质的进步。设计能够利用我们最先进成果的装备，将给我们部队最好的机会。"
+
+ USA_special_investments_in_westpoint: "西点特特别投资"
+ USA_special_investments_in_westpoint_desc: "随着美国陆军的成熟，很明显它需要越来越多和越来越有才华的军官。"
+
+ USA_industrialize_california: "工业化加利福尼亚"
+ USA_industrialize_california_desc: "在加利福尼亚创建一个大型工业行动基地将使我们能够更有效地向西部投入资源。它还将帮助我们确保对太平洋领土的控制。"
+
+ USA_industrial_funding: "工业资金"
+ USA_industrial_funding_desc: "我们的工厂不靠演讲运转。我们将打开国库，让工业决定它需要什么。"
+
+ USA_wonder_workshops: "奇迹工坊"
+ USA_wonder_workshops_desc: "美国的制造厂生产世界上一些最优雅和精密的设备和奢侈品。我们从世界所有人才中受益，进一步投资于我们的顶级设计将在未来为我们服务。"
+
+ USA_improve_military_training: "改进军事训练"
+ USA_improve_military_training_desc: "拥有如此庞大的陆军，我们需要确保我们的训练方法不仅有效，而且能够随着我们队伍的增长而增长。"
+
+ USA_county_militias: "县民兵"
+ USA_county_militias_desc: "如果战争降临到我们的海岸，最坚定守住防线的将是美国人民自己。"
+
+ USA_independently_funded_armories: "独立资助的军械库"
+ USA_independently_funded_armories_desc: "通过赋予个人和社区更多采购防御装备的权利，平民团体和州资助的民兵将能够配备现代精密的装备和武器，使他们能够对抗最强大的入侵者。"
+
+ USA_civilian_logistics_contracts: "民用后勤合同"
+ USA_civilian_logistics_contracts_desc: "拥有更好的后勤不能赢得战争，但谁的后勤先失败谁就肯定会输。鉴于我们可能被要求作战的范围，将我们的后勤系统扩展到包括广泛的民用机构，将给我们必要的战略灵活性，以在每个时刻、每个地点继续战斗。"
+
+ USA_terrain_navigation_courses: "地形导航课程"
+ USA_terrain_navigation_courses_desc: "能够穿越茂密的森林、起伏的平原和险峻的山脉，在战争中给予人巨大的优势。如果一支军队计划在我们家园与我们作战，他们将不得不面对我们环境的巨大多样性，以及我们能够在这些环境中娴熟行动的庞大人口。"
+
+ USA_cloth_and_rope_ramparts: "布绳壁垒"
+ USA_cloth_and_rope_ramparts_desc: "即使是最基本和必要的家庭物品也可以用来在任何地方建造防御工事和隐蔽阵地。关键在于创造力，现在在我们的人民中激发这种创造力将帮助他们在以后更有想象力。"
+
+ USA_confederalized_asset_procurement: "邦联化资产采购"
+ USA_confederalized_asset_procurement_desc: "在联邦政府、州政府和地方分遣队之间分配发展武器储备的责任和义务将是一项昂贵且最初令人生畏的组织任务，但一旦完全分散化，每个团体和个人都将能够就地应用自己的专业知识和知识，以促进我们的全面准备。"
+
+ USA_FREE_improved_focus: "改进重点"
+ USA_FREE_improved_focus_desc: "当FREE将时间和资源投入某个部门时，需要动员数十万人。这些大规模行动难以协调，但随着该部门的工作和行动，它及其领导层将变得更加有效。"
+ USA_FREE_improved_focus_tt: "§G提升§![USAGetFREETitle]的§Y重点§!价值，今后分别为§Y(+1§!、§Y+2§!、§Y+3)§!。\n§R（不修改现有资金）§!"
+
+ USA_FREE_recovery_funds: "复苏资金"
+ USA_FREE_recovery_funds_desc: "由于联邦政府的资金和关注主要由FREE引导，不在其重点范围内的特殊利益领域往往被遗忘在边缘。因此，需要一个新的小组委员会来妥善处理那些被意外遗漏的部门。"
+ USA_FREE_recovery_funds_tt: "每个目前在[USAGetFREETitle]下§Y困境§!中的§9部门§!将获得§G额外资金§!§Y(+[?FREE_recovery_funds_S])§!（§G$S_LOC$§!）。\n目前§Y繁荣§!的§9部门§!将获得§G少量资金§!§Y(+[?FREE_recovery_funds_P])§!（§G$P_LOC$§!）。"
+
+ USA_FREE_expert_guidance: "专家指导"
+ USA_FREE_expert_guidance_desc: "特别是对于一个大型政府机构来说，不可能确切知道如何在一个国家行动的所有方面的最细微细节中运作。因此，每当处理某个特定部门时，FREE将外包该领域的专家和行家来提供指导。"
+ USA_FREE_expert_guidance_tt: "每个目前在[USAGetFREETitle]下§Y繁荣§!的§9部门§!将获得§G额外资金§!§Y(+[?FREE_expert_guidance_P])§!（§G$P_LOC$§!）。\n目前§Y困境§!中的§9部门§!将获得§G少量资金§!§Y(+[?FREE_expert_guidance_S])§!（§G$S_LOC$§!）。"
+
+ USA_FREE_improved_focus_II: "改进重点 II"
+ USA_FREE_improved_focus_II_desc: "推动某个部门的努力可以通过创建独立的承包商和专家组来进一步改进，以监督其领域内资金的分配以及人才和资源的分配。"
+ USA_FREE_improved_focus_II_tt: "§G进一步提升§![USAGetFREETitle]的§Y重点§!价值，今后分别为§Y(+1§!、§Y+2§!、§Y+3)§!。\n§R（不修改现有资金）§!"
+
+ USA_FREE_funds_management: "资金管理"
+ USA_FREE_funds_management_desc: "在一个像FREE这样宏大的组织中，必然会有大量资金因某种原因最终无处可去。在每个新项目开始时注意这一点将有助于减少总体浪费。"
+ USA_FREE_funds_management_tt: "§G减少§![USAGetFREETitle]的§Y重点§!的§Y严重惩罚§!，今后为§Y(-1)§!。\n§R（不修改现有资金）§!"
+
+ USA_FREE_top_end_funds_management: "高端资金管理"
+ USA_FREE_top_end_funds_management_desc: "FREE的行政部门将把注意力集中在为该组织最宏大的事业妥善分配资金和资源上。"
+ USA_FREE_top_end_funds_management_tt: "§G进一步减少§![USAGetFREETitle]的§Y重点§!的§Y严重惩罚§!，今后为§Y(-1)§!。\n§R（不修改现有资金）§!"
+
+ USA_FREE_lower_end_funds_management: "低端资金管理"
+ USA_FREE_lower_end_funds_management_desc: "FREE的行政部门将把注意力集中在向那些构成该组织大部分产出的项目妥善分配和委派角色和资源上。"
+ USA_FREE_lower_end_funds_management_tt: "§G减少§![USAGetFREETitle]的§Y重点§!的§Y大幅惩罚§!，今后为§Y(-1)§!。\n§R（不修改现有资金）§!"
+
+ USA_FREE_department_expansion: "部门扩展"
+ USA_FREE_department_expansion_desc: "有了新办公室、新人员和新范围，FREE将能够扩大其影响力和效果。"
+ USA_FREE_department_expansion_tt: "允许[USAGetFREETitle]的§Y重点§!或§Y资金管理§!§G改进§!。\n\n所有§9部门§!遭受§R轻微惩罚§!§Y([?FREE_points_V])§!。"
+ USA_FREE_department_expansion_tt_2: "§Y解锁§!§YFREE§!工业关切。"
+
+ USA_FREE_raise_taxes_for_reinvestment: "提高税收以再投资"
+ USA_FREE_raise_taxes_for_reinvestment_desc: "联邦政府将通过提高税收来改善和扩大FREE的能力和容量。虽然这不是最受欢迎的选择，但它将是最负责任的。"
+ USA_FREE_raise_taxes_for_reinvestment_tt: "允许[USAGetFREETitle]的§Y重点§!或§Y资金管理§!§G进一步改进§!。\n\n所有§9部门§!遭受§R轻微惩罚§!§Y([?FREE_points_V])§!。"
+ USA_FREE_raise_taxes_for_reinvestment_tt_2: "§G改进§!§YFREE§!工业关切。"
+
+ USA_FREE_print_money_to_fund_FREE: "印钞资助FREE"
+ USA_FREE_print_money_to_fund_FREE_desc: "联邦政府将简单地印钞来支付FREE的新系统和工作队伍。这在短期内会更有效，尽管其负面影响可能会在以后感受到，届时FREE只需让自己有价值到那种程度。"
+ USA_FREE_print_money_to_fund_FREE_tt: "允许[USAGetFREETitle]的§Y重点§!或§Y资金管理§!§G进一步改进§!。\n\n所有§9部门§!遭受§R轻微惩罚§!§Y([?FREE_points_V])§!。"
+ USA_FREE_print_money_to_fund_FREE_tt_2: "§G改进§!§YFREE§!工业关切。"
+
+ USA_FREE_undersecretariat_for_sectoral_administration: "部门行政副秘书处"
+ USA_FREE_undersecretariat_for_sectoral_administration_desc: "FREE的影响力和规模已增长到变得笨拙的程度。作为回应，将成立部门行政副秘书处，以作为进一步的指导和管理层，使FREE能够在其当前和仍在扩大的范围内有效运作。"
+ USA_FREE_undersecretariat_for_sectoral_administration_tt: "§Y$USA_FREE_dynamic_modifier$§!变为§Y$USA_FREE_dynamic_modifier_2$§!。\n\n允许[USAGetFREETitle]的§Y重点§!和§Y资金管理§!§G完全改进§!。\n\n所有§9部门§!遭受§R轻微惩罚§!§Y([?FREE_points_V])§!。"
+ USA_FREE_undersecretariat_for_sectoral_administration_tt_2: "§G改进§!§YFREE§!工业关切。"
+
+ USA_FREE_recovery_achieved: "实现复苏"
+ USA_FREE_recovery_achieved_desc: "经济繁荣，美国人民已经恢复，金钱再次自由流动！既然我们不再需要对我们的钱袋保持如此严格的控制，FREE就可以以更快的速度和每个提案背后更多的资源来推动各部门。"
+ USA_FREE_recovery_achieved_tt: "此国策将给予§Y更大的好处§!，[USAGetFREETitle]的§Y正资金§!越多。\n\n"
+ USA_FREE_recovery_achieved_tt_2: "§G提升§![USAGetFREETitle]的§Y重点§!的所有价值§Y(+1)§!。\n§G移除§![USAGetFREETitle]的§Y重点§!的所有轻微惩罚§!。\n§R（不修改现有资金）§!"
+
+ USA_grange_auxiliary_corps: "农会辅助队"
+ USA_grange_auxiliary_corps_desc: "农会长期以来一直是该国农村地区的长期福音——他们懂行。我们可以雇用他们来修复我们的基础设施，修缮我们的城镇和街道，而且他们已经拥有完成大部分工作所需的资源。"
+
+ USA_protect_against_foreign_interference: "防范外国干涉"
+ USA_protect_against_foreign_interference_desc: "有许多外部势力试图为了自己的利益而侵蚀我们的山巅之城，甚至毒害其水井并从内部使其崩溃。我们不能允许美国人民受到任何颠覆性外国影响。"
