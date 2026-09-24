@@ -1823,12 +1823,12 @@ add_offsite_building = {
  set_variable = { USA_dy_air_strategic_bomb_visibility = 0 }
 
 # FREE Variables
- set_variable = { USA_FREE_civ_points 	= -3 } # They all start at (-1), able to be improved with a single small boost
- set_variable = { USA_FREE_mil_points 	= -3 }
- set_variable = { USA_FREE_arm_points 	= -3 }
- set_variable = { USA_FREE_nav_points 	= -3 }
- set_variable = { USA_FREE_air_points 	= -3 }
- set_variable = { USA_FREE_sci_points 	= -3 }
+ set_variable = { USA_FREE_civ_points 	= -6 } # They all start at (-1), able to be improved with a single small boost
+ set_variable = { USA_FREE_mil_points 	= -6 } # 9-23: They all start at (-1) --> (-6) from (-3)
+ set_variable = { USA_FREE_arm_points 	= -6 }
+ set_variable = { USA_FREE_nav_points 	= -6 }
+ set_variable = { USA_FREE_air_points 	= -6 }
+ set_variable = { USA_FREE_sci_points 	= -6 }
  set_variable = { FREE_points_A 	= 5 }
  set_variable = { FREE_points_AA 	= 10 }
  set_variable = { FREE_points_AAA	= 15 }

@@ -47,6 +47,21 @@
  # Make better icons for important items
 	# Golden West Idea
  # Make secret mini tree for A Song for the Horizon [maybe not, it's already cool]
+### Playtesting Notes
+ # Recovery Achieved can hit -134% consumer goods. Either cap it or introduce diminishing returns
+ # AI should at least focus on its military when at war and after a certain point
+ # Blue District decisions should have a visible decision category so that it can be hidden
+ # Make the mutual exclusivity in the army branch at the bottom more apparent
+ # The names of the decisions for subjugation/annexation of Canada are flipped
+ # Focuses that modify factions (Intercontinental Vigilance Pact, American Alliance, The United Nations Alliance) need to have checks for not causing mutual problems
+ # Look into the effects of just referenduming-fascism in the civil war path
+### Walking Updates
+ # 9-23
+	# Fixed leader portraits
+	# Set initial FREE to -6 from -3
+	# Set FREE penalties in DepExp, PriMon, RaiTax, UndSec to -3 from -1
+	# Added small FREE penalty to Funds Management and Improved Focus
+	# Modified Recovery Achieved so each point now gives -0.002% CG and 1 PP from -0.005% CG and 2 PP
 ###
 
 
@@ -328,6 +343,7 @@ focus_tree = {
 	bypass = {
 	}
 	completion_reward = {
+		custom_effect_tooltip = "Yeehaw"
 		add_ideas = usa_debug_testing_idea
 	}
  }
@@ -36762,8 +36778,10 @@ focus_tree = {
 				tooltip = special_consumer_goods_factor_tt
 			}
 			skip_line_tt = yes
-			custom_effect_tooltip = USA_FREE_department_expansion_tt
-			USA_AN_FREE_all_V = yes
+			custom_effect_tooltip = USA_FREE_department_expansion_tt_3
+			#USA_AN_FREE_all_V = yes
+			USA_AN_FREE_all_VVV = yes
+			custom_effect_tooltip = USA_AN_FREE_ALL_VVV_tt
 			USA_AN_check_FREE_all = yes
 
 			#custom_override_tooltip = {
@@ -36829,7 +36847,9 @@ focus_tree = {
 					add_to_variable = { USA_FREE_sci_points = 6 }
 				}
 			}
-			USA_AN_FREE_all_V = yes
+			#USA_AN_FREE_all_V = yes
+			USA_AN_FREE_all_VVV = yes
+			custom_effect_tooltip = USA_AN_FREE_ALL_VVV_tt
 			USA_AN_check_FREE_all = yes
 		}
 	}
@@ -36886,7 +36906,9 @@ focus_tree = {
 					add_to_variable = { USA_FREE_sci_points = 6 }
 				}
 			}
-			USA_AN_FREE_all_V = yes
+			#USA_AN_FREE_all_V = yes
+			USA_AN_FREE_all_VVV = yes
+			custom_effect_tooltip = USA_AN_FREE_ALL_VVV_tt
 			USA_AN_check_FREE_all = yes
 		}
 	}
@@ -36933,7 +36955,9 @@ focus_tree = {
 					modifier = USA_FREE_dynamic_modifier_2
 				}
 			}
-			USA_AN_FREE_all_V = yes
+			#USA_AN_FREE_all_V = yes
+			USA_AN_FREE_all_VVV = yes
+			custom_effect_tooltip = USA_AN_FREE_ALL_VVV_tt
 			if = {
 				limit = { has_idea = FREE_federal_industry_trust_2 }
 				hidden_effect = {
@@ -36993,6 +37017,9 @@ focus_tree = {
 			add_to_variable = {
 				FREE_points_AAA = 3
 			}
+			USA_AN_FREE_all_V = yes
+			custom_effect_tooltip = USA_AN_FREE_ALL_V_tt
+			USA_AN_check_FREE_all = yes
 		}
 	}
 
@@ -37184,6 +37211,9 @@ focus_tree = {
 			add_to_variable = {
 				FREE_points_VVV = 1
 			}
+			USA_AN_FREE_all_V = yes
+			custom_effect_tooltip = USA_AN_FREE_ALL_V_tt
+			USA_AN_check_FREE_all = yes
 		}
 	}
 
@@ -37457,11 +37487,11 @@ focus_tree = {
 					limit = { check_variable = { var = USA_FREE_sci_points value = 0 compare = greater_than_or_equals } } add_to_temp_variable = { POSITIVE_POINTS = USA_FREE_sci_points }
 				}
 				set_temp_variable = { NEW_PP = POSITIVE_POINTS }
-				multiply_temp_variable = { NEW_PP = 2 }
+				multiply_temp_variable = { NEW_PP = 1 } # was 2, now 1
 				add_political_power = NEW_PP
 				skip_line_tt = yes
 				set_temp_variable = { NEW_CC = TOTAL_POINTS }
-				multiply_temp_variable = { NEW_CC = -0.005 }
+				multiply_temp_variable = { NEW_CC = -0.002 } # was -0.005, now -0.002
 				USA_modify_eco = yes
 				add_to_variable = {
 					USA_eco_dy_consumer_goods_factor = NEW_CC

@@ -26,6 +26,10 @@
 
     TBA_TT: "§CTO-COMPLETE§!"
 
+    USA_AN_FREE_ALL_V_tt: "\nAll §9Sectors§! suffer a §Rslight penalty§! §Y([?FREE_points_V])§!."
+    USA_AN_FREE_ALL_VV_tt: "\nAll §9Sectors§! suffer a §Rsizeable penalty§! §Y([?FREE_points_VV])§!."
+    USA_AN_FREE_ALL_VVV_tt: "\nAll §9Sectors§! suffer a §Rsevere penalty§! §Y([?FREE_points_VVV])§!."
+
 #    Stealth / Fake / Side-Message Focuses
     USA_SM_NC_decrease_conservative_resistance: "Conservative Resistance"
 
@@ -1940,10 +1944,10 @@
     USA_a_question_of_confidence_desc: "The governing, economic, and political practices that led us to this point have failed us and have repeatedly demonstrated their inability to act decisively and effectively. A change in course is the only wise option."
 
     USA_america_on_its_own: "America On Its Own"
-    USA_america_on_its_own_desc: "America was originally founded by those who were distressed by the Old World and wished to seek out a New, and the wisdom of our forefathers continues to bear truth. The world outside continues to fail its people and us. We cannot rely on them- America's path forward, wherever it shall lead, must be walked alone."
+    USA_america_on_its_own_desc: "America was originally founded by those who were distressed by the Old World and wished to seek out a New one, and the wisdom of our forefathers continues to bear truth. The world outside continues to fail its people and us. We cannot rely on them- America's path forward, wherever it shall lead, must be walked alone."
 
     USA_first_among_equals: "First Among Equals"
-    USA_first_among_equals_desc: "America was originally founded by those who were distressed by the Old World and wished to seek out a New, and the wisdom of our forefathers continues to bear truth. It's clear that the Old World is not capable of rising above its long and troubled histories and conflicts, but we see over their tumults. America will take its place at the helm of civilization."
+    USA_first_among_equals_desc: "America was originally founded by those who were distressed by the Old World and wished to seek out a New one, and the wisdom of our forefathers continues to bear truth. It's clear that the Old World is not capable of rising above its long and troubled histories and conflicts, but we can see beyond their tumults. America will take its place at the helm of civilization."
     USA_first_among_equals_tt: "This §Yfocus§! will push us towards §Ystarting§! a §Rcivil war§!!"
 
     USA_patriot_parades: "Patriot Parades"
@@ -2065,7 +2069,7 @@
 
     USA_federal_recovery_emergency_enterprise: "Federal Recovery Emergency Enterprise"
     USA_federal_recovery_emergency_enterprise_desc: "The Federal Recovery Emergency Enterprise, or FREE, will facilitate the allocation of federal funds and the focus and attention of the people's state towards the recovery, growth, and future protection of the American economy. It will be given sweeping authority both in what it can demand and in what it can allow."
-    USA_federal_recovery_emergency_enterprise_tt: "Adds §Y$USA_FREE_dynamic_modifier$§!, which grants the current [USAGetFREETitle] policies:\n  §Y(-3)§! [USA_federal_recovery_emergency_enterprise_SL_a]\n  §Y(-3)§! [USA_federal_recovery_emergency_enterprise_SL_b]\n  §Y(-3)§! [USA_federal_recovery_emergency_enterprise_SL_c]\n  §Y(-3)§! [USA_federal_recovery_emergency_enterprise_SL_d]\n  §Y(-3)§! [USA_federal_recovery_emergency_enterprise_SL_e]\n  §Y(-3)§! [USA_federal_recovery_emergency_enterprise_SL_f]\n"
+    USA_federal_recovery_emergency_enterprise_tt: "Adds §Y$USA_FREE_dynamic_modifier$§!, which grants the current [USAGetFREETitle] policies:\n  §Y(-6)§! [USA_federal_recovery_emergency_enterprise_SL_a]\n  §Y(-6)§! [USA_federal_recovery_emergency_enterprise_SL_b]\n  §Y(-6)§! [USA_federal_recovery_emergency_enterprise_SL_c]\n  §Y(-6)§! [USA_federal_recovery_emergency_enterprise_SL_d]\n  §Y(-6)§! [USA_federal_recovery_emergency_enterprise_SL_e]\n  §Y(-6)§! [USA_federal_recovery_emergency_enterprise_SL_f]\n"
     USA_federal_recovery_emergency_enterprise_tt_2: "Every §Y10 points§! of §Yfunding§! can modify a §9Sector§!, from §R-30§! to §G+50§! points. Most §Yfocuses§! will §Yshift funding§!."
 
     USA_crisis_of_dependency: "Crisis of Dependency"
@@ -2253,21 +2257,22 @@
     USA_FREE_department_expansion: "Department Expansion"
     USA_FREE_department_expansion_desc: "With new offices, new personnel, and new bounds, FREE will be able to broaden its reach and its effects."
     USA_FREE_department_expansion_tt: "Allows for [USAGetFREETitle] to have its §Yfocus§! or its §Yfunds management§! §Gimproved§!.\n\nAll §9Sectors§! suffer a §Rslight penalty§! §Y([?FREE_points_V])§!."
+    USA_FREE_department_expansion_tt_3: "Allows for [USAGetFREETitle] to have its §Yfocus§! or its §Yfunds management§! §Gimproved§!."
     USA_FREE_department_expansion_tt_2: "§YUnlocks§! the §YFREE§! industrial concern."
 
     USA_FREE_raise_taxes_for_reinvestment: "Raise Taxes for Reinvestment"
     USA_FREE_raise_taxes_for_reinvestment_desc: "The Federal Government will improve and expand the capabilities and capacity of FREE by raising taxes to pay for it. While this won't be the most popular choice, it will be the most responsible."
-    USA_FREE_raise_taxes_for_reinvestment_tt: "Allows for [USAGetFREETitle] to have its §Yfocus§! or its §Yfunds management§! §Gfurther improved§!.\n\nAll §9Sectors§! suffer a §Rslight penalty§! §Y([?FREE_points_V])§!."
+    USA_FREE_raise_taxes_for_reinvestment_tt: "Allows for [USAGetFREETitle] to have its §Yfocus§! or its §Yfunds management§! §Gfurther improved§!."
     USA_FREE_raise_taxes_for_reinvestment_tt_2: "§GImproves§! the §YFREE§! industrial concern."
 
     USA_FREE_print_money_to_fund_FREE: "Print Money to Fund FREE"
     USA_FREE_print_money_to_fund_FREE_desc: "The Federal Government will simply print money to pay for FREE's new systems and workforce. This will be more effective in the short run, though its negative effects might be felt later on, in which case FREE will just have to make itself valuable to that further extent."
-    USA_FREE_print_money_to_fund_FREE_tt: "Allows for [USAGetFREETitle] to have its §Yfocus§! or its §Yfunds management§! §Gfurther improved§!.\n\nAll §9Sectors§! suffer a §Rslight penalty§! §Y([?FREE_points_V])§!."
+    USA_FREE_print_money_to_fund_FREE_tt: "Allows for [USAGetFREETitle] to have its §Yfocus§! or its §Yfunds management§! §Gfurther improved§!."
     USA_FREE_print_money_to_fund_FREE_tt_2: "§GImproves§! the §YFREE§! industrial concern."
 
     USA_FREE_undersecretariat_for_sectoral_administration: "Undersecretariat for Sectoral Administration"
     USA_FREE_undersecretariat_for_sectoral_administration_desc: "FREE's influence and scale has grown to the point that it has become unwieldly. In response, the Undersecretariat for Sectoral Administration will be founded in order to act as a further layer of direction and management that will permit FREE to operate effectively at its current and still-expanding scope."
-    USA_FREE_undersecretariat_for_sectoral_administration_tt: "The §Y$USA_FREE_dynamic_modifier$§! becomes the §Y$USA_FREE_dynamic_modifier_2$§!.\n\nAllows for [USAGetFREETitle] to have its §Yfocus§! and its §Yfunds management§! §Gfully improved§!.\n\nAll §9Sectors§! suffer a §Rslight penalty§! §Y([?FREE_points_V])§!."
+    USA_FREE_undersecretariat_for_sectoral_administration_tt: "The §Y$USA_FREE_dynamic_modifier$§! becomes the §Y$USA_FREE_dynamic_modifier_2$§!.\n\nAllows for [USAGetFREETitle] to have its §Yfocus§! and its §Yfunds management§! §Gfully improved§!."
     USA_FREE_undersecretariat_for_sectoral_administration_tt_2: "§GImproves§! the §YFREE§! industrial concern."
 
     USA_FREE_recovery_achieved: "Recovery Achieved"
