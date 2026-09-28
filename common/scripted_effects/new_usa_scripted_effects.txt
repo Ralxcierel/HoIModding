@@ -2258,3 +2258,11 @@ USA_GO_increase_infiltration = {
 		}				
 	}
 }
+
+USA_FREE_set_flag = {
+	set_country_flag = {
+		flag = FREE_focus_flag
+		days = 70
+		value = 1
+	}
+}

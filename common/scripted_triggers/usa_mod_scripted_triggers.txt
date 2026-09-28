@@ -964,3 +964,37 @@ USA_RR_has_enough_influence = {
 		tooltip = USA_RR_has_enough_influence_tt
 	}
 }
+
+USA_FREE_flag_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = FREE_focus_flag_tt
+		hidden_trigger = {
+			not = {
+				has_country_flag = FREE_focus_flag
+			}
+		}
+	}
+}
+
+USA_faction_focus_exclusivity_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = USA_faction_focus_exclusivity_trigger_tt
+		hidden_trigger = {
+			not = {
+				or = {
+					has_completed_focus = USA_the_united_nations_alliance
+					has_completed_focus = USA_a_world_split_in_two
+					has_completed_focus = USA_new_world_market_system
+					has_completed_focus = USA_continental_citadel
+					has_completed_focus = USA_intercontinental_vigilance_pact
+					has_completed_focus = USA_american_alliance
+					has_completed_focus = USA_cross_pacific_alliance
+					has_completed_focus = USA_alliance_with_a_united_china
+					has_completed_focus = USA_the_second_confederation
+					has_completed_focus = USA_the_goldstar_federation
+					has_completed_focus = USA_the_western_peoples_coalition
+				}
+			}
+		}
+	}
+}

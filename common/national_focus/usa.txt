@@ -42,19 +42,15 @@
  # Maybe add a NATO focus for the democratic tree
  # Fix mod-compatibility sub mods
 
-### Work To-Do List
- # Balance testing
- # Make better icons for important items
-	# Golden West Idea
+ # Maybe more content for dealing with Germany and Japan specifically down the line
  # Make secret mini tree for A Song for the Horizon [maybe not, it's already cool]
+ 
 ### Playtesting Notes
- # Recovery Achieved can hit -134% consumer goods. Either cap it or introduce diminishing returns
- # AI should at least focus on its military when at war and after a certain point
- # Blue District decisions should have a visible decision category so that it can be hidden
- # Make the mutual exclusivity in the army branch at the bottom more apparent
- # The names of the decisions for subjugation/annexation of Canada are flipped
- # Focuses that modify factions (Intercontinental Vigilance Pact, American Alliance, The United Nations Alliance) need to have checks for not causing mutual problems
  # Look into the effects of just referenduming-fascism in the civil war path
+ # Apparently the focuses for FREE can show values of (0) for some reason, and Detroit Arsenal sometimes doesn't get unlocked
+ # Maybe workshop "The Goldstar Federation of North America"
+ # Perhaps switch from Goldstar --> Silverstar
+ # America-First Party
 ### Walking Updates
  # 9-23
 	# Fixed leader portraits
@@ -62,6 +58,12 @@
 	# Set FREE penalties in DepExp, PriMon, RaiTax, UndSec to -3 from -1
 	# Added small FREE penalty to Funds Management and Improved Focus
 	# Modified Recovery Achieved so each point now gives -0.002% CG and 1 PP from -0.005% CG and 2 PP
+ # 9-28
+	# Did some slight localisation changes
+	# Changes the FREE focuses to have 70-day gaps, so you can still rush it, but not rush rush it.
+	# Changed the visual layout of the bottom army tree so it's clearer visually that there is a split
+	# Created checks and triggers for the focuses (11) that significantly meddle with factions, to avoid conflicts
+	# Gave AI incentives to take military focuses when at war or late.
 ###
 
 
@@ -12915,8 +12917,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_INDUSTRY FOCUS_FILTER_USA_CONGRESS }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_INDUSTRY FOCUS_FILTER_USA_CONGRESS FOCUS_FILTER_FACTION_MEDDLING }
 		available = {
+			USA_faction_focus_exclusivity_trigger = yes
 			congress_high_support_trigger = yes
 		}
 		
@@ -14821,9 +14824,10 @@ focus_tree = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_POLITICAL FOCUS_FILTER_FACTION_MEDDLING
 		}
 		available = {
+			USA_faction_focus_exclusivity_trigger = yes
 			has_civil_war = no
 			has_completed_focus = USA_the_goldstar_network
 		}
@@ -14905,9 +14909,10 @@ focus_tree = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY
+			FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_FACTION_MEDDLING
 		}
 		available = {
+			USA_faction_focus_exclusivity_trigger = yes
 			has_civil_war = no
 			has_completed_focus = USA_the_gettysburg_debate
 		}
@@ -18262,10 +18267,10 @@ focus_tree = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_POLITICAL FOCUS_FILTER_FACTION_MEDDLING
 		}
 		available = {
-
+			USA_faction_focus_exclusivity_trigger = yes
 		}
 		
 		bypass = {
@@ -18352,9 +18357,10 @@ focus_tree = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_POLITICAL FOCUS_FILTER_FACTION_MEDDLING
 		}
 		available = {
+			USA_faction_focus_exclusivity_trigger = yes
 			is_not_pacifist = yes
 
 		}
@@ -18683,9 +18689,10 @@ focus_tree = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_POLITICAL FOCUS_FILTER_FACTION_MEDDLING
 		}
 		available = {
+			USA_faction_focus_exclusivity_trigger = yes
 		}
 		
 		bypass = {
@@ -18755,10 +18762,10 @@ focus_tree = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_POLITICAL FOCUS_FILTER_FACTION_MEDDLING
 		}
 		available = {
-
+			USA_faction_focus_exclusivity_trigger = yes
 		}
 		
 		bypass = {
@@ -22957,8 +22964,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_FACTION_MEDDLING }
 		available = {
+			USA_faction_focus_exclusivity_trigger = yes
 			NOT = { OR = { has_completed_focus = USA_arising_opportunities has_completed_focus = USA_the_old_world } }
 			is_not_pacifist = yes
 			is_in_faction_with = ENG
@@ -23135,8 +23143,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		search_filters = { FOCUS_FILTER_WARGOALS FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_WARGOALS FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL FOCUS_FILTER_FACTION_MEDDLING }
 		available = {
+			USA_faction_focus_exclusivity_trigger = yes
 			NOT = { OR = { has_completed_focus = USA_arising_opportunities has_completed_focus = USA_the_old_world } }
 			is_not_pacifist = yes
 			is_in_faction_with = GER
@@ -24567,8 +24576,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_FACTION_MEDDLING }
 		available = {
+			USA_faction_focus_exclusivity_trigger = yes
 			JAP = {
 				has_opinion = {
 					target = USA
@@ -25257,8 +25267,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_FACTION_MEDDLING }
 		available = {
+			USA_faction_focus_exclusivity_trigger = yes
 			is_faction_leader = yes
 			if = {
 				limit = {
@@ -27003,7 +27014,16 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		available = {
-
+			or = {
+				638 = { is_controlled_by = USA }
+				632 = { is_controlled_by = USA }
+				631 = { is_controlled_by = USA }
+				630 = { is_controlled_by = USA }
+				PHI = {
+					exists = yes
+					is_subject_of = USA
+				}
+			}
 		}
 		
 		bypass = {
@@ -36717,6 +36737,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			USA_FREE_set_flag = yes
 			#add_dynamic_modifier = {
 			#	modifier = USA_FREE_dynamic_modifier
 			#}
@@ -36762,13 +36783,14 @@ focus_tree = {
 			FOCUS_FILTER_CONSUMER_GOODS
 		}
 		available = {
-
+			USA_FREE_flag_trigger = yes
 		}
 		
 		bypass = {
 		}
 
 		completion_reward = {
+			USA_FREE_set_flag = yes
 			custom_effect_tooltip = USA_FREE_department_expansion_tt_2
 			skip_line_tt = yes
 			USA_AN_improve_under_crisis_spirit = yes
@@ -36819,13 +36841,14 @@ focus_tree = {
 			FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL
 		}
 		available = {
-
+			USA_FREE_flag_trigger = yes
 		}
 		
 		bypass = {
 		}
 
 		completion_reward = {
+			USA_FREE_set_flag = yes
 			add_political_power = -25
 			add_stability = -0.05
 			skip_line_tt = yes
@@ -36875,13 +36898,14 @@ focus_tree = {
 			FOCUS_FILTER_CONSUMER_GOODS
 		}
 		available = {
-
+			USA_FREE_flag_trigger = yes
 		}
 		
 		bypass = {
 		}
 
 		completion_reward = {
+			USA_FREE_set_flag = yes
 			custom_effect_tooltip = USA_FREE_print_money_to_fund_FREE_tt_2
 			skip_line_tt = yes
 			USA_modify_eco = yes
@@ -36931,13 +36955,14 @@ focus_tree = {
 			FOCUS_FILTER_CONSUMER_GOODS
 		}
 		available = {
-
+			USA_FREE_flag_trigger = yes
 		}
 		
 		bypass = {
 		}
 
 		completion_reward = {
+			USA_FREE_set_flag = yes
 			custom_effect_tooltip = USA_FREE_undersecretariat_for_sectoral_administration_tt_2
 			skip_line_tt = yes
 			USA_modify_eco = yes
@@ -36992,9 +37017,9 @@ focus_tree = {
 			factor = 1
 		}
 		search_filters = {
-			
 		}
 		available = {
+			USA_FREE_flag_trigger = yes
 			has_completed_focus = USA_FREE_department_expansion
 			OR = {
 				NOT = { has_completed_focus = USA_FREE_funds_management }
@@ -37007,6 +37032,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			USA_FREE_set_flag = yes
 			custom_effect_tooltip = USA_FREE_improved_focus_tt
 			add_to_variable = {
 				FREE_points_A = 1
@@ -37041,13 +37067,14 @@ focus_tree = {
 			
 		}
 		available = {
-
+			USA_FREE_flag_trigger = yes
 		}
 		
 		bypass = {
 		}
 
 		completion_reward = {
+			USA_FREE_set_flag = yes
 			add_political_power = 50
 			skip_line_tt = yes
 			set_temp_variable = { PROSPER = 0 }
@@ -37139,6 +37166,7 @@ focus_tree = {
 			
 		}
 		available = {
+			USA_FREE_flag_trigger = yes
 			OR = {
 				has_completed_focus = USA_FREE_raise_taxes_for_reinvestment
 				has_completed_focus = USA_FREE_print_money_to_fund_FREE
@@ -37153,6 +37181,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			USA_FREE_set_flag = yes
 			custom_effect_tooltip = USA_FREE_improved_focus_II_tt
 			add_to_variable = {
 				FREE_points_A = 1
@@ -37184,6 +37213,7 @@ focus_tree = {
 			
 		}
 		available = {
+			USA_FREE_flag_trigger = yes
 			has_completed_focus = USA_FREE_department_expansion
 			OR = {
 				NOT = { has_completed_focus = USA_FREE_improved_focus}
@@ -37195,6 +37225,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			USA_FREE_set_flag = yes
 			add_political_power = 25
 			add_popularity = {
 				ideology = fascism
@@ -37235,13 +37266,14 @@ focus_tree = {
 			
 		}
 		available = {
-
+			USA_FREE_flag_trigger = yes
 		}
 		
 		bypass = {
 		}
 
 		completion_reward = {
+			USA_FREE_set_flag = yes
 			add_political_power = 50
 			skip_line_tt = yes
 			set_temp_variable = { PROSPER = 0 }
@@ -37335,6 +37367,7 @@ focus_tree = {
 			
 		}
 		available = {
+			USA_FREE_flag_trigger = yes
 			OR = {
 				has_completed_focus = USA_FREE_raise_taxes_for_reinvestment
 				has_completed_focus = USA_FREE_print_money_to_fund_FREE
@@ -37349,6 +37382,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			USA_FREE_set_flag = yes
 			add_political_power = 25
 			add_popularity = {
 				ideology = fascism
@@ -37389,6 +37423,7 @@ focus_tree = {
 			
 		}
 		available = {
+			USA_FREE_flag_trigger = yes
 			OR = {
 				has_completed_focus = USA_FREE_raise_taxes_for_reinvestment
 				has_completed_focus = USA_FREE_print_money_to_fund_FREE
@@ -37403,6 +37438,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			USA_FREE_set_flag = yes
 			add_political_power = 25
 			add_popularity = {
 				ideology = fascism
@@ -37442,6 +37478,7 @@ focus_tree = {
 			
 		}
 		available = {
+			USA_FREE_flag_trigger = yes
 			recovery_past_stage_3 = yes
 			has_completed_focus = USA_lady_libertys_arsenal
 			has_government = fascism
@@ -37455,7 +37492,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			# Get 0.5% consumer goods per point, 2 pp per positive point, remove slight penalty from FREE-USA focus
+			# Get -0.2% consumer goods per point, 1 pp per positive point, remove slight penalty from FREE-USA focus
 			custom_effect_tooltip = USA_FREE_recovery_achieved_tt
 			if = {
 				limit = { or = { has_dynamic_modifier = USA_FREE_dynamic_modifier has_dynamic_modifier = USA_FREE_dynamic_modifier_2 } }
@@ -40025,6 +40062,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 
 		available = {
@@ -40073,6 +40122,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 
 		available = {
@@ -40172,6 +40233,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
@@ -40218,6 +40291,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 
 		available = {
@@ -40326,6 +40411,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 
 		allow_branch = {
@@ -40415,6 +40512,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
@@ -40489,6 +40598,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
@@ -40532,6 +40653,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 		search_filters = { FOCUS_FILTER_MILITARY_SPENDING FOCUS_FILTER_RESEARCH }
 		available = {
@@ -40578,6 +40711,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
@@ -40662,6 +40807,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
@@ -40721,6 +40878,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
@@ -40780,6 +40949,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
@@ -40834,6 +41015,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 
 		available = {
@@ -40902,6 +41095,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
@@ -40946,6 +41151,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 50 # historical
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_RESEARCH FOCUS_FILTER_HISTORICAL
@@ -40997,6 +41214,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 50 # historical
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 		search_filters = { FOCUS_FILTER_MILITARY_SPENDING FOCUS_FILTER_RESEARCH FOCUS_FILTER_HISTORICAL }
 		available = {
@@ -41058,6 +41287,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
@@ -41132,6 +41373,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 
 		available = {
@@ -41166,6 +41419,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
@@ -41207,6 +41472,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 50 # historical
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL
@@ -41256,6 +41533,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 		search_filters = { FOCUS_FILTER_MILITARY_SPENDING FOCUS_FILTER_USA_CONGRESS FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 		available = {
@@ -41381,6 +41670,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 50 # historical
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_RESEARCH FOCUS_FILTER_HISTORICAL
@@ -41441,6 +41742,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 50 # historical
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_RESEARCH FOCUS_FILTER_HISTORICAL
@@ -41482,6 +41795,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 50 # historical
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_RESEARCH FOCUS_FILTER_USA_CONGRESS FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL FOCUS_FILTER_POLITICAL
@@ -41556,6 +41881,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 
 		search_filters = {
@@ -41623,6 +41960,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 		search_filters = { FOCUS_FILTER_MILITARY_SPENDING FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH FOCUS_FILTER_USA_CONGRESS }
 		available = {
@@ -41756,6 +42105,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_USA_CONGRESS
@@ -41796,6 +42157,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 
 		available = {
@@ -41860,6 +42233,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 
 		available = {
@@ -41920,6 +42305,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 
 		available = {
@@ -41979,6 +42376,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 
 		available = {
@@ -42058,6 +42467,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 
 		available = {
@@ -42149,6 +42570,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 
 		available = {
@@ -42268,6 +42701,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 
 		available = {
@@ -42326,6 +42771,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 		search_filters = { FOCUS_FILTER_MILITARY_SPENDING }
 		available = {
@@ -42372,6 +42829,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 50 # historical
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_RESEARCH }
 		available = {
@@ -42421,6 +42890,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 
 		search_filters = {
@@ -42473,6 +42954,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 50 # historical
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 		search_filters = { FOCUS_FILTER_MILITARY_SPENDING FOCUS_FILTER_HISTORICAL FOCUS_FILTER_RESEARCH }
 
@@ -42580,6 +43073,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 		search_filters = { FOCUS_FILTER_MILITARY_SPENDING FOCUS_FILTER_RESEARCH }
 
@@ -42660,6 +43165,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 50 # historical
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 		search_filters = { FOCUS_FILTER_MILITARY_SPENDING FOCUS_FILTER_HISTORICAL FOCUS_FILTER_RESEARCH FOCUS_FILTER_USA_CONGRESS }
 
@@ -42724,6 +43241,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 		search_filters = { FOCUS_FILTER_MILITARY_SPENDING FOCUS_FILTER_RESEARCH FOCUS_FILTER_SPY_AGENCY FOCUS_FILTER_USA_CONGRESS }
 
@@ -42809,13 +43338,25 @@ focus_tree = {
 			focus = USA_democracys_vanguard
 		}
 
-		x = -1
+		x = -2 # was -1
 		y = 2
 
 		cost = 10
 
 		ai_will_do = {
 			factor = 50 # historical
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 		search_filters = { FOCUS_FILTER_MILITARY_SPENDING FOCUS_FILTER_HISTORICAL }
 		available = {
@@ -42859,13 +43400,25 @@ focus_tree = {
 			focus = USA_logistical_focus
 		}
 
-		x = 1
+		x = 2 # was 1
 		y = 5
 
 		cost = 10
 
 		ai_will_do = {
 			factor = 50 # historical
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_WAR_SUPPORT
@@ -42918,6 +43471,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 		search_filters = { FOCUS_FILTER_MILITARY_SPENDING }
 
@@ -42983,6 +43548,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 
 		available = {
@@ -43020,7 +43597,8 @@ focus_tree = {
 	focus = { # Soft-Power-Oriented Designs
 		id = USA_soft_power_oriented_designs
 		icon = GFX_focus_NORDIC_com_selector_material
-		prerequisite = { focus = USA_logistical_focus focus = USA_democracys_vanguard }
+		#prerequisite = { focus = USA_logistical_focus focus = USA_democracys_vanguard }
+		prerequisite = { focus = USA_american_excellence }
 		relative_position_id = USA_american_excellence
 		
 		x = -1
@@ -43030,10 +43608,26 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 
 		available = {
-			has_completed_focus = USA_american_excellence
+			#has_completed_focus = USA_american_excellence
+			or = {
+				has_completed_focus = USA_logistical_focus
+				has_completed_focus = USA_democracys_vanguard
+			}
 		}
 		
 		bypass = {
@@ -43070,6 +43664,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 
 		available = {
@@ -43115,6 +43721,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 
 		available = {
@@ -43177,6 +43795,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 
 		available = {
@@ -43214,6 +43844,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
@@ -43253,6 +43895,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 		search_filters = { FOCUS_FILTER_MILITARY_SPENDING FOCUS_FILTER_RESEARCH }
 
@@ -43302,6 +43956,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_WAR_SUPPORT
@@ -43375,6 +44041,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 
 		available = {
@@ -43428,7 +44106,8 @@ focus_tree = {
 	focus = { # Plains Fighting
 		id = USA_plains_fighting
 		icon = GFX_focus_PER_desert_training
-		prerequisite = { focus = USA_logistical_focus focus = USA_democracys_vanguard }
+		#prerequisite = { focus = USA_logistical_focus focus = USA_democracys_vanguard }
+		prerequisite = { focus = USA_american_juggernaught }
 		relative_position_id = USA_american_juggernaught
 		
 		mutually_exclusive = { focus = USA_rough_terrain }
@@ -43441,10 +44120,26 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 
 		available = {
-			has_completed_focus = USA_american_juggernaught
+			#has_completed_focus = USA_american_juggernaught
+			or = {
+				has_completed_focus = USA_logistical_focus
+				has_completed_focus = USA_democracys_vanguard
+			}
 		}
 		
 		bypass = {
@@ -43468,7 +44163,8 @@ focus_tree = {
 	focus = { # Close Quarters
 		id = USA_close_quarters
 		icon = GFX_focus_generic_jungle_training
-		prerequisite = { focus = USA_logistical_focus focus = USA_democracys_vanguard }
+		#prerequisite = { focus = USA_logistical_focus focus = USA_democracys_vanguard }
+		prerequisite = { focus = USA_american_juggernaught }
 		relative_position_id = USA_american_juggernaught
 		
 		mutually_exclusive = { focus = USA_plains_fighting }
@@ -43481,10 +44177,26 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 
 		available = {
-			has_completed_focus = USA_american_juggernaught
+			#has_completed_focus = USA_american_juggernaught
+			or = {
+				has_completed_focus = USA_logistical_focus
+				has_completed_focus = USA_democracys_vanguard
+			}
 		}
 		
 		bypass = {
@@ -43508,7 +44220,8 @@ focus_tree = {
 	focus = { # Rough Terrain
 		id = USA_rough_terrain
 		icon = GFX_focus_AFG_mountain_training
-		prerequisite = { focus = USA_logistical_focus focus = USA_democracys_vanguard }
+		#prerequisite = { focus = USA_logistical_focus focus = USA_democracys_vanguard }
+		prerequisite = { focus = USA_american_juggernaught }
 		relative_position_id = USA_american_juggernaught
 		
 		mutually_exclusive = { focus = USA_plains_fighting }
@@ -43521,10 +44234,26 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 
 		available = {
-			has_completed_focus = USA_american_juggernaught
+			#has_completed_focus = USA_american_juggernaught
+			or = {
+				has_completed_focus = USA_logistical_focus
+				has_completed_focus = USA_democracys_vanguard
+			}
 		}
 		
 		bypass = {
@@ -43560,6 +44289,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
@@ -43607,6 +44348,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}	
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
@@ -43659,6 +44412,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
@@ -43715,6 +44480,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 50 # historical
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_HISTORICAL
@@ -43746,6 +44523,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 
 		available = {
@@ -43791,6 +44580,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 
 		available = {
@@ -43841,6 +44642,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY FOCUS_FILTER_USA_CONGRESS
@@ -44031,6 +44844,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 50 # historical
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_HISTORICAL
@@ -44092,6 +44917,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 50 # historical
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_HISTORICAL FOCUS_FILTER_RESEARCH
@@ -44159,6 +44996,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
@@ -44199,6 +45048,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 50 # historical
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_RESEARCH FOCUS_FILTER_HISTORICAL
@@ -44262,6 +45123,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 
 		available = {
@@ -44313,6 +45186,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 
 		available = {
@@ -44368,6 +45253,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 50 # historical
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_RESEARCH FOCUS_FILTER_HISTORICAL
@@ -44426,6 +45323,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 50 # historical
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_HISTORICAL FOCUS_FILTER_RESEARCH
@@ -44527,6 +45436,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 
 		available = {
@@ -44583,6 +45504,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 
 		available = {
@@ -44620,6 +45553,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
@@ -44697,6 +45642,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 		search_filters = { FOCUS_FILTER_MILITARY_SPENDING FOCUS_FILTER_RESEARCH }
 
@@ -44754,6 +45711,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 		search_filters = { FOCUS_FILTER_MILITARY_SPENDING FOCUS_FILTER_INDUSTRY }
 
@@ -44869,6 +45838,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 		search_filters = { FOCUS_FILTER_MILITARY_SPENDING FOCUS_FILTER_INDUSTRY }
 
@@ -44980,6 +45961,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
@@ -45025,6 +46018,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
@@ -45095,6 +46100,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 50 # historical
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 		search_filters = { FOCUS_FILTER_MILITARY_SPENDING FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
 
@@ -45196,6 +46213,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 		search_filters = { FOCUS_FILTER_MILITARY_SPENDING FOCUS_FILTER_INDUSTRY }
 
@@ -45289,6 +46318,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 50 # historical
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 		search_filters = { FOCUS_FILTER_MILITARY_SPENDING FOCUS_FILTER_HISTORICAL FOCUS_FILTER_USA_CONGRESS FOCUS_FILTER_RESEARCH }
 
@@ -45345,6 +46386,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 		search_filters = { FOCUS_FILTER_MILITARY_SPENDING FOCUS_FILTER_INDUSTRY }
 
@@ -45410,6 +46463,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 		search_filters = { FOCUS_FILTER_MILITARY_SPENDING }
 
@@ -45473,6 +46538,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
@@ -45537,6 +46614,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 
 		available = {
@@ -45586,6 +46675,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
@@ -45647,6 +46748,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
@@ -45707,6 +46820,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_SPY_AGENCY
@@ -45768,6 +46893,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
@@ -45833,6 +46970,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
@@ -45999,6 +47148,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
@@ -46049,6 +47210,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
@@ -46107,6 +47280,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 
 		available = {
@@ -46260,6 +47445,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 5
+				date > 1940.04.01
+			}
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				has_war_with_major = yes
+			}
 		}
 		search_filters = { FOCUS_FILTER_MILITARY_SPENDING FOCUS_FILTER_RESEARCH }
 		available = {

@@ -608,6 +608,7 @@
     SC_new_america_chosen_flag: "Chose to forge a §YNew America§!"
     SC_new_frontier_chosen_flag: "Chose to venture into a §YNew Frontier§!"
     usa_prudence_across_the_land_flag: "At least one of our flanks is §Ysecure§!."
+    USA_faction_focus_exclusivity_trigger_tt: "Has not already taken a §Yfaction-medling§! focus"
 
  # FOCUS FILTERS
     FOCUS_FILTER_LEFT_TO_COMPLETE: "Unfinished"
@@ -618,6 +619,7 @@
     FOCUS_FILTER_HOMELAND_DEFENSE: "Homeland Defense"
     FOCUS_FILTER_WARGOALS: "Wargoals"
     FOCUS_FILTER_FREE: "FREE"
+    FOCUS_FILTER_FACTION_MEDDLING: "Faction Meddling"
 
  # FOCUS TREE SHORTCUTS
     USA_path_shortcut_industry: "Industry"
@@ -1196,6 +1198,7 @@
     USA_AN_has_FREE_air_si: "Checks if the FREE air sub idea is active."
     USA_AN_has_FREE_sci_si: "Checks if the FREE science sub idea is active."
 
+
   # Effects
     run_debug_event: "Triggers a debug event"
     USA_defense_readiness_boost_small: "Grants a small bonus (1%) to defense readiness if that BOP is active. If it's not active, then it says to do so."
@@ -1254,3 +1257,4 @@
     USA_NC_civil_war_started_flag: "Checks whether or not a nationalist communist civil war has already started or been started."
     america_is_being_invaded_flag: "§YAmerica§! is being §Rinvaded§!"
     USA_AN_civil_war_is_over: " The civil war is over"
+    FREE_focus_flag_tt: "§9FREE§! has not been §Yreworked§! in the last §Y70§! days"

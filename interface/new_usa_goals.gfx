@@ -322,6 +322,10 @@ spriteTypes = {
 		name = "GFX_FOCUS_FILTER_WARGOALS"
 		texturefile = "gfx/interface/new_filters/FOCUS_FILTER_WARGOALS.dds"			
 	}
+	SpriteType = { # FOCUS_FILTER_FACTION_MEDDLING
+		name = "GFX_FOCUS_FILTER_FACTION_MEDDLING"
+		texturefile = "gfx/interface/new_filters/FOCUS_FILTER_FACTION_MEDDLING.dds"			
+	}
 
 	
  # EN LIBERTAD GOALS
